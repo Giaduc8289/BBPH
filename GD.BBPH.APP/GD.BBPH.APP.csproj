@@ -1,0 +1,977 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A23EFF64-E4C7-4020-9464-A9B475BD68D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GD.BBPH.APP</RootNamespace>
+    <AssemblyName>GD.BBPH.APP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo-App-Ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\DLL\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.XceedZipLib">
+      <HintPath>..\DLL\Interop.XceedZipLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Janus.Data.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=21d5517571b185bf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="SD.LLBLGen.Pro.DQE.SqlServer.NET20, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\SD.LLBLGen.Pro.DQE.SqlServer.NET20.dll</HintPath>
+    </Reference>
+    <Reference Include="SD.LLBLGen.Pro.LinqSupportClasses.NET35, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\SD.LLBLGen.Pro.LinqSupportClasses.NET35.dll</HintPath>
+    </Reference>
+    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses.NET20, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DANHMUC\FRM_DMPARENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMPARENT.designer.cs" />
+    <Compile Include="HETHONG\FRM_CHONNGAYLAMVIEC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_CHONNGAYLAMVIEC.designer.cs">
+      <DependentUpon>FRM_CHONNGAYLAMVIEC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_LOGIN.designer.cs">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_MAIN.designer.cs">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_MENU.designer.cs">
+      <DependentUpon>FRM_MENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_ROLES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_ROLES.designer.cs">
+      <DependentUpon>FRM_ROLES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_ROLES_MENU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_ROLES_MENU.designer.cs">
+      <DependentUpon>FRM_ROLES_MENU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_SAOLUU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_SAOLUU.designer.cs">
+      <DependentUpon>FRM_SAOLUU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_THAMSO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_THAMSO.designer.cs">
+      <DependentUpon>FRM_THAMSO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_DOIMATKHAU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_DOIMATKHAU.designer.cs">
+      <DependentUpon>FRM_DOIMATKHAU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HETHONG\FRM_USERS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HETHONG\FRM_USERS.designer.cs">
+      <DependentUpon>FRM_USERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LIB\ChucdanhEngine.cs" />
+    <Compile Include="LIB\ConvertString.cs" />
+    <Compile Include="LIB\DataFactory.cs" />
+    <Compile Include="LIB\ExportExcel.cs" />
+    <Compile Include="LIB\GlobalFuns.cs" />
+    <Compile Include="LIB\GroupByDataTable.cs" />
+    <Compile Include="LIB\MaHoa.cs" />
+    <Compile Include="LIB\ParameterReport.cs" />
+    <Compile Include="LIB\PATH.cs" />
+    <Compile Include="LIB\Procedures.cs" />
+    <Compile Include="LIB\ReadNumber.cs" />
+    <Compile Include="LIB\RepEngine.cs" />
+    <Compile Include="LIB\SESSION_START.cs" />
+    <Compile Include="LIB\SysInfo.cs" />
+    <Compile Include="LIB\USERS.cs" />
+    <Compile Include="Manager\DmcapmaManager.cs" />
+    <Compile Include="Manager\LogbackupManager.cs" />
+    <Compile Include="Manager\MenuManager.cs" />
+    <Compile Include="Manager\MenuroleManager.cs" />
+    <Compile Include="Manager\RolesManager.cs" />
+    <Compile Include="Manager\ThamsoManager.cs" />
+    <Compile Include="Manager\UsersManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RDLC\DataSXBB.cs">
+      <DependentUpon>DataSXBB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RDLC\DataSXBB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSXBB.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DANHMUC\FRM_DMPARENT.resx" />
+    <EmbeddedResource Include="HETHONG\FRM_CHONNGAYLAMVIEC.resx">
+      <DependentUpon>FRM_CHONNGAYLAMVIEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_LOGIN.resx">
+      <DependentUpon>FRM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_MAIN.resx">
+      <DependentUpon>FRM_MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_MENU.resx">
+      <DependentUpon>FRM_MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_ROLES.resx">
+      <DependentUpon>FRM_ROLES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_ROLES_MENU.resx">
+      <DependentUpon>FRM_ROLES_MENU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_SAOLUU.resx">
+      <DependentUpon>FRM_SAOLUU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_THAMSO.resx">
+      <DependentUpon>FRM_THAMSO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_DOIMATKHAU.resx">
+      <DependentUpon>FRM_DOIMATKHAU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HETHONG\FRM_USERS.resx">
+      <DependentUpon>FRM_USERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RDLC\KQINTB.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NHAPMANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NXTONMANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NXTONKHOTHANHPHAM.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NXTONMANHTRANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NXTONMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NXTONPE.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NXTONNGUYENLIEU.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\QUYETTOANHOANTHIENPE.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\QUYETTOANTRANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\QUYETTOANHOANTHIEN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\QUYETTOANIN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\QUYETTOANMANHGOC.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\QUYETTOANPE.rdlc" />
+    <EmbeddedResource Include="RDLC\TONHANGHOA.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\TONMANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\XUATHANGHOA.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NHAPPE.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NHAPNGUYENLIEU.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NHAPMANHTRANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\QUYETTOANMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\BCLUONGHTRG.rdlc" />
+    <EmbeddedResource Include="RDLC\BCSUDUNGPE.rdlc" />
+    <EmbeddedResource Include="RDLC\BCTHLUONGHT.rdlc" />
+    <EmbeddedResource Include="RDLC\BCCTLUONGHT_Mau4.rdlc" />
+    <EmbeddedResource Include="RDLC\BCCTLUONGHT_Mau3.rdlc" />
+    <EmbeddedResource Include="RDLC\BCCTLUONGHT_Mau2.rdlc" />
+    <EmbeddedResource Include="RDLC\BCSODOMAYDET.rdlc" />
+    <EmbeddedResource Include="RDLC\CTKHHT_CD.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\CTKHHT.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQHTTRUOCCATCT_MH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQHTTRUOCCATCT_CD.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\BCCTLUONGHT_Mau1.rdlc" />
+    <EmbeddedResource Include="RDLC\KQHTTH_THEOCD.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\QUYETTOANSOI.rdlc" />
+    <EmbeddedResource Include="RDLC\KQSXTH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQSXCT.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\LENHHT.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\LENHPE.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\LUONGINRUTGON.rdlc" />
+    <EmbeddedResource Include="RDLC\LUONGINTHUCTE_Bak.rdlc" />
+    <EmbeddedResource Include="RDLC\LUONGINTHUCTE.rdlc" />
+    <EmbeddedResource Include="RDLC\THKHHT.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\DSCUONMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\BCKQSXSDSOI.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQHTTRUOCCATCT.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQHTSAUCAT.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQHTTRUOCCATTH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQSXSOIRG.rdlc" />
+    <EmbeddedResource Include="RDLC\LUONGTRANG.rdlc" />
+    <EmbeddedResource Include="RDLC\LUONGIN.rdlc" />
+    <EmbeddedResource Include="RDLC\BCTHPHECATONG.rdlc" />
+    <EmbeddedResource Include="RDLC\BCTONMANHTRENMAY.rdlc" />
+    <EmbeddedResource Include="RDLC\BCLUONGDETRG.rdlc" />
+    <EmbeddedResource Include="RDLC\BCCTLUONGDET.rdlc" />
+    <EmbeddedResource Include="RDLC\BCTHLUONGSOI.rdlc" />
+    <EmbeddedResource Include="RDLC\BCNCMANHPVIN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NCTOTAL.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NCPEPVIN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NCPE.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\THKHIN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\CTKHIN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\THKHTRANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\CTKHTRANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\CTKHSXSOI.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KHBHANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\CTKHSXMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KHSXSOI.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQDETDASX.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQINCT.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQINTH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQTRANGCT.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQTRANGTH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQDETTHEOMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQDETTHEODH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQSDNVL.rdlc" />
+    <EmbeddedResource Include="RDLC\LENHIN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\LENHTRANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\LENHSXDET.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NCIN.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NCTRANGTHANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NCNVLTHANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\TONPE.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\TONNGUYENLIEU.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\TONMANHTRANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\TONMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NHAPKHOHT.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\XUATMANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\XUATPE.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\XUATNGUYENLIEU.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\XUATMANHTRANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\XUATSOI.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\TONSOI.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\XUATMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\SSKHKQSXSOICTSOI.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\SSKHKQSXSOI.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\SSKHKQDETCTMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\SSKHKQDET.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KHSXTHEOMAYDET.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KHSXTHEOLOAIMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\LENHSXCHAYMAYKEOSOI.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQDETMAYCHITIET.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQDETRG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQSXSOI.rdlc" />
+    <EmbeddedResource Include="RDLC\THKHSXMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NCSOITHEOKHDET.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NCSOITHANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\NCMANHTHANG.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\KQDETCN.rdlc" />
+    <EmbeddedResource Include="RDLC\KQDETMAY.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\BCTHLUONGDET.rdlc" />
+    <None Include="packages.config" />
+    <None Include="RDLC\DataSXBB.xsc">
+      <DependentUpon>DataSXBB.xsd</DependentUpon>
+    </None>
+    <None Include="RDLC\DataSXBB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSXBB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RDLC\DataSXBB.xss">
+      <DependentUpon>DataSXBB.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="RDLC\KQDETTB.rdlc" />
+    <EmbeddedResource Include="RDLC\NHAPMANH.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDLC\TONMANH_CT.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Resources\Resources.resx" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accept-Male-User.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\No-entry.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IMG\BG\Ktxpt2016.jpg" />
+    <Content Include="IMG\BG\Ktxpt2016.psd" />
+    <Content Include="IMG\Icon\btBoQua.xml" />
+    <Content Include="IMG\Icon\btnchuyendulieu.xml" />
+    <Content Include="IMG\Icon\btnthemcapdinhkhoan.xml" />
+    <Content Include="IMG\Icon\btntimkiem.xml" />
+    <Content Include="IMG\Icon\btnxoadong.xml" />
+    <Content Include="IMG\Icon\btnxoagiaodich.xml" />
+    <Content Include="IMG\Icon\btn_IN.xml" />
+    <Content Include="IMG\Icon\btn_LUULAI.xml" />
+    <Content Include="IMG\Icon\btn_SUA.xml" />
+    <Content Include="IMG\Icon\btn_THEMMOI.xml" />
+    <Content Include="IMG\Icon\btn_THOAT.xml" />
+    <Content Include="IMG\Icon\btn_TIM.xml" />
+    <Content Include="IMG\Icon\btn_XOA.xml" />
+    <Content Include="IMG\Icon\btOK.xml" />
+    <Content Include="IMG\Icon\chon16.png" />
+    <Content Include="IMG\Icon\chon20.png" />
+    <Content Include="IMG\Icon\chon24.png" />
+    <Content Include="IMG\Icon\config.xml" />
+    <Content Include="IMG\Icon\Danhmuc.xml" />
+    <Content Include="IMG\Icon\DATABASE.xml" />
+    <Content Include="IMG\Icon\Exit.xml" />
+    <Content Include="IMG\Icon\frmnhacungcap.xml" />
+    <Content Include="IMG\Icon\frmnhomquyen.xml" />
+    <Content Include="IMG\Icon\frmquayhang.xml" />
+    <Content Include="IMG\Icon\frmquayhang1.xml" />
+    <Content Include="IMG\Icon\frmsetdate.xml" />
+    <Content Include="IMG\Icon\frmusers.xml" />
+    <Content Include="IMG\Icon\gach.bmp" />
+    <Content Include="IMG\Icon\Icon.ico" />
+    <Content Include="IMG\Icon\IconApp.xml" />
+    <Content Include="IMG\Icon\Intem.xml" />
+    <Content Include="IMG\Icon\key.jpg" />
+    <Content Include="IMG\Icon\khongchon16.png" />
+    <Content Include="IMG\Icon\khongchon20.png" />
+    <Content Include="IMG\Icon\khongchon24.png" />
+    <Content Include="IMG\Icon\ktxpt.ico" />
+    <Content Include="IMG\Icon\Shoppingcart.xml" />
+    <Content Include="IMG\Icon\Shopping_Full.xml" />
+    <Content Include="IMG\Icon\StartService.ico" />
+    <Content Include="IMG\Icon\storeicon.xml" />
+    <Content Include="IMG\Icon\Uninstall.ico" />
+    <Content Include="IMG\Icon\xDirectoryCopy.xml" />
+    <Content Include="IMG\TeamViewer.exe" />
+    <Content Include="IMG\waiting.xml" />
+    <Content Include="Logo-App-Ico.ico" />
+    <Content Include="XMLCONFIG\FRM_DIEUCHUYENNGUYENLIEU.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCONGNHAN_CHON.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDONGMAYDET_CHON.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDONGMAYIN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDONGMAYPE.xml" />
+    <Content Include="XMLCONFIG\FRM_DMLOAIVATTUPHU.xml" />
+    <Content Include="XMLCONFIG\FRM_DMLOAIPHE.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAUIN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAYHT.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAYHOANTHIEN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAYSOI_CHON.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAYPE.xml" />
+    <Content Include="XMLCONFIG\FRM_DMPE.xml" />
+    <Content Include="XMLCONFIG\FRM_DMPE_TIM.xml" />
+    <Content Include="XMLCONFIG\FRM_DMPHE.xml" />
+    <Content Include="XMLCONFIG\FRM_DMVATTUPHU.xml" />
+    <Content Include="XMLCONFIG\FRM_KHTRANG_EDIT_FIND.xml" />
+    <Content Include="XMLCONFIG\FRM_KHTRANG_EDIT.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEHTCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KIEMKEHT.xml" />
+    <Content Include="XMLCONFIG\FRM_DMKHOPHE.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEMANG.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEMANGCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KIEMKEPHE.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEPHECHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_LYDOXUATKHO.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPKHOMANG.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPKHOMANGCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_NHAPKHOPHE.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPKHOPHECHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOA.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOACHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATKHOMANG.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATKHOMANHTRANG.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATKHOMANGCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_XUATKHOMANHTRANGCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_DIEUCHUYENNGUYENLIEUCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_XUATKHOPHE.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATKHONGUYENLIEU.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATKHONGUYENLIEUCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_XUATKHOPE.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPKHOPE.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATKHOPECHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_NHAPKHOPECHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_XUATKHOVATTU.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPKHOVATTU.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATKHOPHECHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_XUATKHOVATTUCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_NHAPKHOVATTUCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_NHAPKHONGUYENLIEU.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPKHONGUYENLIEUCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_NHAPKHOMANHTRANG.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPKHOMANHTRANGCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KIEMKEVATTU.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEPE.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEVATTUCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KIEMKEPECHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KIEMKEMANHTRANG.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEMANH.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEMANHTRANGCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KIEMKENGUYENLIEU.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKENGUYENLIEUCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KIEMKESOICHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_LENHHT.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_LENHHT_D.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHSXCHAYMAYKEOSOI_D.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHSXCHAYMAYKEOSOI.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_LENHPE_D.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHPE.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_LUONGHT_EDIT.xml" />
+    <Content Include="XMLCONFIG\FRM_KHO.xml" />
+    <Content Include="XMLCONFIG\FRM_MENU.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEHANGHOA.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEHANGHOACHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_QCVIENMIENG.xml" />
+    <Content Include="XMLCONFIG\FRM_QCDONGKIEN.xml" />
+    <Content Include="XMLCONFIG\FRM_QCMAYDAY.xml" />
+    <Content Include="XMLCONFIG\FRM_QCGAP.xml" />
+    <Content Include="XMLCONFIG\FRM_DMQUYCACHSP.xml" />
+    <Content Include="XMLCONFIG\FRM_DONGIACONGDOAN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCONGDOAN.xml" />
+    <Content Include="XMLCONFIG\FRM_DONDATHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DONDATHANGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_DSCUONMANH.xml" />
+    <Content Include="XMLCONFIG\FRM_KHIN_EDIT.xml" />
+    <Content Include="XMLCONFIG\FRM_KHHT_EDIT.xml" />
+    <Content Include="XMLCONFIG\FRM_KHHT.xml" />
+    <Content Include="XMLCONFIG\FRM_KHIN.xml" />
+    <Content Include="XMLCONFIG\FRM_KHDETDIEUCHINH.xml" />
+    <Content Include="XMLCONFIG\FRM_KHTRANG.xml" />
+    <Content Include="XMLCONFIG\FRM_KQHTSAUCAT.xml" />
+    <Content Include="XMLCONFIG\FRM_KQHTTRUOCCAT.xml" />
+    <Content Include="XMLCONFIG\FRM_KQHTSAUCATCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KQIN.xml" />
+    <Content Include="XMLCONFIG\FRM_KQHTTRUOCCATCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KQINCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KQTRANGCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KQTRANG.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHIN.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_LENHIN_D.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHTRANG_D.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHTRANG.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_NCTRANGTHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNVLTRANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNVLTRANGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_THANHPHANPE.xml" />
+    <Content Include="XMLCONFIG\FRM_THANHPHANPECHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKEMANHCHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KIEMKESOI.xml" />
+    <Content Include="XMLCONFIG\FRM_TKTHONGTINCUONMANH.xml" />
+    <Content Include="XMLCONFIG\FRM_TKKLCUONMANH.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPKHOHT.xml" />
+    <Content Include="XMLCONFIG\FRM_TKTHONGTINCUONMANHCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_TKPHECATONG.xml" />
+    <Content Include="XMLCONFIG\FRM_CONGTHAYKHO.xml" />
+    <Content Include="XMLCONFIG\FRM_CONGTHAYKHOCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCSDETBANSOI.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCSSOIDENIER.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCSDETDENIER.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCSDETKHO.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDACDIEMMANH.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDONGIALUONG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDONGMAYHOANTHIEN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDONGMAYTRANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHINHTHUCTRANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHINHTHUCDET.xml" />
+    <Content Include="XMLCONFIG\FRM_DMLUONGBANSOI.xml" />
+    <Content Include="XMLCONFIG\FRM_DMLUONGKHO.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAYIN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAYTRANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KHBHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_KHBHANGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_KHSXDET.xml" />
+    <Content Include="XMLCONFIG\FRM_KHSXMANHTHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_KHSXMANHTHEODH.xml" />
+    <Content Include="XMLCONFIG\FRM_KHSXSOIDIEUCHINH.xml" />
+    <Content Include="XMLCONFIG\FRM_KHSXSOITHEODH.xml" />
+    <Content Include="XMLCONFIG\FRM_KHSXSOI.xml" />
+    <Content Include="XMLCONFIG\FRM_DMBANSOI.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCHATLUONG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCHUCVU.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCONGNHAN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCSMAYDET.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCSMAYSOI.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDONGMAYDET.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDONGMAYSOI.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHANGHOA.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHINHTHUC.xml" />
+    <Content Include="XMLCONFIG\FRM_DMKHACH.xml" />
+    <Content Include="XMLCONFIG\FRM_DMKHO.xml" />
+    <Content Include="XMLCONFIG\FRM_DMLOAI.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMANH.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAUSAC.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAYDET.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAYSOI.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNHAMAY.xml" />
+    <Content Include="XMLCONFIG\FRM_DMPHONGBAN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMSOI.xml" />
+    <Content Include="XMLCONFIG\FRM_DMTRONGLUONG.xml" />
+    <Content Include="XMLCONFIG\FRM_DONHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DONHANGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_KHSXSOITHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHSXDET_D.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHSXDET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_THANHPHANSOI.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KQSXSOI.xml" />
+    <Content Include="XMLCONFIG\FRM_KQDET.xml" />
+    <Content Include="XMLCONFIG\FRM_KQSXSOICHITIET.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XMLCONFIG\FRM_KQDETCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_NCMANHTHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_NCSOITHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_ROLES.xml" />
+    <Content Include="XMLCONFIG\FRM_THANHPHANSOICHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_TKKLCUONMANHCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPKHOHTCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_TKPHECATONGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_USERS.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPMANH_CHON.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATMANH_CHON.xml" />
+    <Content Include="XMLCONFIG\FRM_DIEUCHUYENMANH_D.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPMANH_D.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATMANH_D.xml" />
+    <Content Include="XMLCONFIG\FRM_DIEUCHUYENMANH_H.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPMANH_H.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATMANH_H.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATSOI_D.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATSOI_H.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GD.BBPH.BLL\GD.BBPH.BLL.csproj">
+      <Project>{d10f7ca6-3d6e-48b8-8f2f-b72115c9d49d}</Project>
+      <Name>GD.BBPH.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GD.BBPH.CONTROL\GD.BBPH.CONTROL.csproj">
+      <Project>{1583f050-4119-442f-a62b-65d97298298a}</Project>
+      <Name>GD.BBPH.CONTROL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GD.BBPH.DAL\GD.BBPH.DAL.csproj">
+      <Project>{7311254c-5b3b-43ff-a192-2ee572d24ab8}</Project>
+      <Name>GD.BBPH.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GD.BBPH.LIB\GD.BBPH.LIB.csproj">
+      <Project>{6fd4582a-9360-4bb6-9024-dab758b599b3}</Project>
+      <Name>GD.BBPH.LIB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
