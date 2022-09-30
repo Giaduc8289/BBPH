@@ -37,7 +37,7 @@
 
   <viewgrid>
     <value>1</value>
-    <name>Mahieu</name>
+    <name>Macd</name>
     <headerText>Mã công đoạn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -46,8 +46,17 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tenhieu</name>
+    <name>Tencongdoan</name>
     <headerText>Tên công đoạn</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>150</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Sothutucongdoan</name>
+    <headerText>Số thứ tự công đoạn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>150</Width>
