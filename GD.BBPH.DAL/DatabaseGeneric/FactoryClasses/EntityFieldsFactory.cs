@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 9:28:22 AM
+// Code is generated on: Friday, September 30, 2022 9:36:18 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -32,14 +32,32 @@ namespace GD.BBPH.DAL.FactoryClasses
 			IFieldInfoProvider fieldProvider = FieldInfoProviderSingleton.GetInstance();
 			switch(relatedEntityType)
 			{
+				case GD.BBPH.DAL.EntityType.DmbophanEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmbophanEntity");
+					break;
 				case GD.BBPH.DAL.EntityType.DmcapmaEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmcapmaEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmchucvuEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmchucvuEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmcongdoanEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmcongdoanEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmcongnhanEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmcongnhanEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmdongmayEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmdongmayEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.DmhangEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmhangEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.DmkhachEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmkhachEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmmayEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmmayEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "LogbackupEntity");

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 9:28:22 AM
+// Code is generated on: Friday, September 30, 2022 9:36:17 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -89,6 +89,45 @@ namespace GD.BBPH.DAL.FactoryClasses
 		}
 	}
 	
+	/// <summary>Factory to create new, empty DmbophanEntity objects.</summary>
+	[Serializable]
+	public partial class DmbophanEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public DmbophanEntityFactory() : base("DmbophanEntity", GD.BBPH.DAL.EntityType.DmbophanEntity) { }
+
+		/// <summary>Creates a new, empty DmbophanEntity object.</summary>
+		/// <returns>A new, empty DmbophanEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new DmbophanEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmbophan
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new DmbophanEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new DmbophanEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmbophanUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<DmbophanEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
 	/// <summary>Factory to create new, empty DmcapmaEntity objects.</summary>
 	[Serializable]
 	public partial class DmcapmaEntityFactory : EntityFactoryBase2 {
@@ -121,6 +160,162 @@ namespace GD.BBPH.DAL.FactoryClasses
 		public override IEntityCollection2 CreateEntityCollection()
 		{
 			return new EntityCollection<DmcapmaEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty DmchucvuEntity objects.</summary>
+	[Serializable]
+	public partial class DmchucvuEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public DmchucvuEntityFactory() : base("DmchucvuEntity", GD.BBPH.DAL.EntityType.DmchucvuEntity) { }
+
+		/// <summary>Creates a new, empty DmchucvuEntity object.</summary>
+		/// <returns>A new, empty DmchucvuEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new DmchucvuEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmchucvu
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new DmchucvuEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new DmchucvuEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmchucvuUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<DmchucvuEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty DmcongdoanEntity objects.</summary>
+	[Serializable]
+	public partial class DmcongdoanEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public DmcongdoanEntityFactory() : base("DmcongdoanEntity", GD.BBPH.DAL.EntityType.DmcongdoanEntity) { }
+
+		/// <summary>Creates a new, empty DmcongdoanEntity object.</summary>
+		/// <returns>A new, empty DmcongdoanEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new DmcongdoanEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmcongdoan
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new DmcongdoanEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new DmcongdoanEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmcongdoanUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<DmcongdoanEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty DmcongnhanEntity objects.</summary>
+	[Serializable]
+	public partial class DmcongnhanEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public DmcongnhanEntityFactory() : base("DmcongnhanEntity", GD.BBPH.DAL.EntityType.DmcongnhanEntity) { }
+
+		/// <summary>Creates a new, empty DmcongnhanEntity object.</summary>
+		/// <returns>A new, empty DmcongnhanEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new DmcongnhanEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmcongnhan
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new DmcongnhanEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new DmcongnhanEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmcongnhanUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<DmcongnhanEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty DmdongmayEntity objects.</summary>
+	[Serializable]
+	public partial class DmdongmayEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public DmdongmayEntityFactory() : base("DmdongmayEntity", GD.BBPH.DAL.EntityType.DmdongmayEntity) { }
+
+		/// <summary>Creates a new, empty DmdongmayEntity object.</summary>
+		/// <returns>A new, empty DmdongmayEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new DmdongmayEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmdongmay
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new DmdongmayEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new DmdongmayEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmdongmayUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<DmdongmayEntity>(this);
 		}
 		
 
@@ -199,6 +394,45 @@ namespace GD.BBPH.DAL.FactoryClasses
 		public override IEntityCollection2 CreateEntityCollection()
 		{
 			return new EntityCollection<DmkhachEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty DmmayEntity objects.</summary>
+	[Serializable]
+	public partial class DmmayEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public DmmayEntityFactory() : base("DmmayEntity", GD.BBPH.DAL.EntityType.DmmayEntity) { }
+
+		/// <summary>Creates a new, empty DmmayEntity object.</summary>
+		/// <returns>A new, empty DmmayEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new DmmayEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmmay
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new DmmayEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new DmmayEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmmayUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<DmmayEntity>(this);
 		}
 		
 
@@ -453,14 +687,32 @@ namespace GD.BBPH.DAL.FactoryClasses
 			IEntityFactory2 factoryToUse = null;
 			switch(entityTypeToCreate)
 			{
+				case GD.BBPH.DAL.EntityType.DmbophanEntity:
+					factoryToUse = new DmbophanEntityFactory();
+					break;
 				case GD.BBPH.DAL.EntityType.DmcapmaEntity:
 					factoryToUse = new DmcapmaEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.DmchucvuEntity:
+					factoryToUse = new DmchucvuEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.DmcongdoanEntity:
+					factoryToUse = new DmcongdoanEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.DmcongnhanEntity:
+					factoryToUse = new DmcongnhanEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.DmdongmayEntity:
+					factoryToUse = new DmdongmayEntityFactory();
 					break;
 				case GD.BBPH.DAL.EntityType.DmhangEntity:
 					factoryToUse = new DmhangEntityFactory();
 					break;
 				case GD.BBPH.DAL.EntityType.DmkhachEntity:
 					factoryToUse = new DmkhachEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.DmmayEntity:
+					factoryToUse = new DmmayEntityFactory();
 					break;
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					factoryToUse = new LogbackupEntityFactory();

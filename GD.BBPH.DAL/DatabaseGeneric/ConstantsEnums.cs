@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 9:28:22 AM
+// Code is generated on: Friday, September 30, 2022 9:36:17 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -11,6 +11,20 @@ using System;
 
 namespace GD.BBPH.DAL
 {
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmbophan.
+	/// </summary>
+	public enum DmbophanFieldIndex:int
+	{
+		///<summary>Mabp. </summary>
+		Mabp,
+		///<summary>Tenbophan. </summary>
+		Tenbophan,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
 
 	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmcapma.
@@ -23,6 +37,76 @@ namespace GD.BBPH.DAL
 		Loaima,
 		///<summary>Mastart. </summary>
 		Mastart,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmchucvu.
+	/// </summary>
+	public enum DmchucvuFieldIndex:int
+	{
+		///<summary>Macv. </summary>
+		Macv,
+		///<summary>Tenchucvu. </summary>
+		Tenchucvu,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmcongdoan.
+	/// </summary>
+	public enum DmcongdoanFieldIndex:int
+	{
+		///<summary>Macd. </summary>
+		Macd,
+		///<summary>Tencongdoan. </summary>
+		Tencongdoan,
+		///<summary>Sothutucongdoan. </summary>
+		Sothutucongdoan,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmcongnhan.
+	/// </summary>
+	public enum DmcongnhanFieldIndex:int
+	{
+		///<summary>Macn. </summary>
+		Macn,
+		///<summary>Hovatencongnhan. </summary>
+		Hovatencongnhan,
+		///<summary>Tencongnhan. </summary>
+		Tencongnhan,
+		///<summary>Mabp. </summary>
+		Mabp,
+		///<summary>Macv. </summary>
+		Macv,
+		///<summary>Sodienthoai. </summary>
+		Sodienthoai,
+		///<summary>Tinhtrang. </summary>
+		Tinhtrang,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmdongmay.
+	/// </summary>
+	public enum DmdongmayFieldIndex:int
+	{
+		///<summary>Madm. </summary>
+		Madm,
+		///<summary>Tendongmay. </summary>
+		Tendongmay,
+		///<summary>Macd. </summary>
+		Macd,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -99,6 +183,24 @@ namespace GD.BBPH.DAL
 		Sodienthoailh,
 		///<summary>Thongtinbosung. </summary>
 		Thongtinbosung,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmmay.
+	/// </summary>
+	public enum DmmayFieldIndex:int
+	{
+		///<summary>Mamay. </summary>
+		Mamay,
+		///<summary>Tenmay. </summary>
+		Tenmay,
+		///<summary>Madm. </summary>
+		Madm,
+		///<summary>Vitri. </summary>
+		Vitri,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -246,12 +348,24 @@ namespace GD.BBPH.DAL
 	/// </summary>
 	public enum EntityType:int
 	{
+		///<summary>Dmbophan</summary>
+		DmbophanEntity,
 		///<summary>Dmcapma</summary>
 		DmcapmaEntity,
+		///<summary>Dmchucvu</summary>
+		DmchucvuEntity,
+		///<summary>Dmcongdoan</summary>
+		DmcongdoanEntity,
+		///<summary>Dmcongnhan</summary>
+		DmcongnhanEntity,
+		///<summary>Dmdongmay</summary>
+		DmdongmayEntity,
 		///<summary>Dmhang</summary>
 		DmhangEntity,
 		///<summary>Dmkhach</summary>
 		DmkhachEntity,
+		///<summary>Dmmay</summary>
+		DmmayEntity,
 		///<summary>Logbackup</summary>
 		LogbackupEntity,
 		///<summary>Menu</summary>
