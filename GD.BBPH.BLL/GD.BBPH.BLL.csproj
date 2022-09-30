@@ -107,15 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessAdapterFactory.cs" />
-    <Compile Include="ManagerBase\DmbophanManagerBase.cs" />
     <Compile Include="ManagerBase\DmcapmaManagerBase.cs" />
-    <Compile Include="ManagerBase\DmchucvuManagerBase.cs" />
-    <Compile Include="ManagerBase\DmcongdoanManagerBase.cs" />
-    <Compile Include="ManagerBase\DmcongnhanManagerBase.cs" />
-    <Compile Include="ManagerBase\DmdongmayManagerBase.cs" />
     <Compile Include="ManagerBase\DmhangManagerBase.cs" />
     <Compile Include="ManagerBase\DmkhachManagerBase.cs" />
-    <Compile Include="ManagerBase\DmmayManagerBase.cs" />
     <Compile Include="ManagerBase\LogbackupManagerBase.cs" />
     <Compile Include="ManagerBase\MenuManagerBase.cs" />
     <Compile Include="ManagerBase\MenuroleManagerBase.cs" />
