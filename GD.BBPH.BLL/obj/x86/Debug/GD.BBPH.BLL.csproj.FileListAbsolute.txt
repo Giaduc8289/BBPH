@@ -1,0 +1,10 @@
+D:\Dev\BBPH\GD.BBPH.BLL\obj\x86\Debug\GD.BBPH.BLL.csprojResolveAssemblyReference.cache
+D:\Dev\BBPH\GD.BBPH.BLL\bin\x86\Debug\GD.BBPH.BLL.dll
+D:\Dev\BBPH\GD.BBPH.BLL\bin\x86\Debug\GD.BBPH.BLL.pdb
+D:\Dev\BBPH\GD.BBPH.BLL\bin\x86\Debug\GD.BBPH.DAL.dll
+D:\Dev\BBPH\GD.BBPH.BLL\bin\x86\Debug\SD.LLBLGen.Pro.DQE.SqlServer.NET20.dll
+D:\Dev\BBPH\GD.BBPH.BLL\bin\x86\Debug\SD.LLBLGen.Pro.LinqSupportClasses.NET35.dll
+D:\Dev\BBPH\GD.BBPH.BLL\bin\x86\Debug\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll
+D:\Dev\BBPH\GD.BBPH.BLL\bin\x86\Debug\GD.BBPH.DAL.pdb
+D:\Dev\BBPH\GD.BBPH.BLL\obj\x86\Debug\GD.BBPH.BLL.dll
+D:\Dev\BBPH\GD.BBPH.BLL\obj\x86\Debug\GD.BBPH.BLL.pdb
