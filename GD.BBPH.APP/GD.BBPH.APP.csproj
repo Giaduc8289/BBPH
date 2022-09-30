@@ -129,10 +129,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DANHMUC\FRM_DMBOPHAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMBOPHAN.designer.cs">
+      <DependentUpon>FRM_DMBOPHAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMKHACH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMKHACH.designer.cs">
+      <DependentUpon>FRM_DMKHACH.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMPARENT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DANHMUC\FRM_DMPARENT.designer.cs" />
+    <Compile Include="DANHMUC\FRM_DMPARENT.designer.cs">
+      <DependentUpon>FRM_DMPARENT.cs</DependentUpon>
+    </Compile>
     <Compile Include="HETHONG\FRM_CHONNGAYLAMVIEC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +224,8 @@
     <Compile Include="LIB\USERS.cs" />
     <Compile Include="Manager\DmcapmaManager.cs" />
     <Compile Include="Manager\LogbackupManager.cs" />
+    <Compile Include="Manager\DmkhachManager.cs" />
+    <Compile Include="Manager\DmbophanManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
     <Compile Include="Manager\MenuroleManager.cs" />
     <Compile Include="Manager\RolesManager.cs" />
@@ -225,7 +241,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSXBB.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DANHMUC\FRM_DMPARENT.resx" />
+    <EmbeddedResource Include="DANHMUC\FRM_DMBOPHAN.resx">
+      <DependentUpon>FRM_DMBOPHAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMKHACH.resx">
+      <DependentUpon>FRM_DMKHACH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMPARENT.resx">
+      <DependentUpon>FRM_DMPARENT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HETHONG\FRM_CHONNGAYLAMVIEC.resx">
       <DependentUpon>FRM_CHONNGAYLAMVIEC.cs</DependentUpon>
     </EmbeddedResource>
@@ -550,6 +574,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\BCTHLUONGDET.rdlc" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="RDLC\DataSXBB.xsc">
       <DependentUpon>DataSXBB.xsd</DependentUpon>
@@ -648,6 +673,7 @@
     <Content Include="XMLCONFIG\FRM_DMDONGMAYDET_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAYIN.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAYPE.xml" />
+    <Content Include="XMLCONFIG\FRM_DMBOPHAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAIVATTUPHU.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAIPHE.xml" />
     <Content Include="XMLCONFIG\FRM_DMMANG.xml" />

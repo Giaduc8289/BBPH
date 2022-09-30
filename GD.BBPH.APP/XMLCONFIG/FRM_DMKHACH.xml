@@ -37,7 +37,7 @@
 
   <viewgrid>
     <value>1</value>
-    <name>Mahieu</name>
+    <name>Makhach</name>
     <headerText>Mã KH</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -46,7 +46,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tenhieu</name>
+    <name>Tenkhach</name>
     <headerText>Tên KH</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -88,5 +88,14 @@
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+  <value>1</value>
+  <name>Tennguoilh</name>
+  <headerText>Người liên hệ</headerText>
+  <BackColor>0</BackColor>
+  <SelectionBackColor>0</SelectionBackColor>
+  <Width>250</Width>
+  <Thutu>100</Thutu>
   </viewgrid>
 </NewDataSet>

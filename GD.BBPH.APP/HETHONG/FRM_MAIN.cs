@@ -650,6 +650,20 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Danh mục
+                case "FRM_DMKHACH":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMKHACH") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMKHACH()), mmru.Text);
+                    break;
+                case "FRM_DMBOPHAN":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMBOPHAN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMBOPHAN()), mmru.Text);
+                    break;
 
                 #endregion
 
