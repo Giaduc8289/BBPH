@@ -107,6 +107,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessAdapterFactory.cs" />
+    <Compile Include="ManagerBase\CongsuatmayManagerBase.cs" />
+    <Compile Include="ManagerBase\CtptmangDManagerBase.cs" />
+    <Compile Include="ManagerBase\CtptmangHManagerBase.cs" />
+    <Compile Include="ManagerBase\DinhmuathoigianManagerBase.cs" />
     <Compile Include="ManagerBase\DmbophanManagerBase.cs" />
     <Compile Include="ManagerBase\DmcapmaManagerBase.cs" />
     <Compile Include="ManagerBase\DmchucvuManagerBase.cs" />
@@ -115,7 +119,15 @@
     <Compile Include="ManagerBase\DmdongmayManagerBase.cs" />
     <Compile Include="ManagerBase\DmhangManagerBase.cs" />
     <Compile Include="ManagerBase\DmkhachManagerBase.cs" />
+    <Compile Include="ManagerBase\DmkhoManagerBase.cs" />
+    <Compile Include="ManagerBase\DmlydonhapxuatManagerBase.cs" />
+    <Compile Include="ManagerBase\DmmangManagerBase.cs" />
+    <Compile Include="ManagerBase\DmmauManagerBase.cs" />
     <Compile Include="ManagerBase\DmmayManagerBase.cs" />
+    <Compile Include="ManagerBase\DmnguyenlieuManagerBase.cs" />
+    <Compile Include="ManagerBase\DmnhomnguyenlieuManagerBase.cs" />
+    <Compile Include="ManagerBase\DmquycachManagerBase.cs" />
+    <Compile Include="ManagerBase\DmtaikhoanManagerBase.cs" />
     <Compile Include="ManagerBase\LogbackupManagerBase.cs" />
     <Compile Include="ManagerBase\MenuManagerBase.cs" />
     <Compile Include="ManagerBase\MenuroleManagerBase.cs" />

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 9:36:18 AM
+// Code is generated on: Friday, September 30, 2022 11:37:01 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -32,6 +32,18 @@ namespace GD.BBPH.DAL.FactoryClasses
 			IFieldInfoProvider fieldProvider = FieldInfoProviderSingleton.GetInstance();
 			switch(relatedEntityType)
 			{
+				case GD.BBPH.DAL.EntityType.CongsuatmayEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "CongsuatmayEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.CtptmangDEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "CtptmangDEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.CtptmangHEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "CtptmangHEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DinhmuathoigianEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DinhmuathoigianEntity");
+					break;
 				case GD.BBPH.DAL.EntityType.DmbophanEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmbophanEntity");
 					break;
@@ -56,8 +68,32 @@ namespace GD.BBPH.DAL.FactoryClasses
 				case GD.BBPH.DAL.EntityType.DmkhachEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmkhachEntity");
 					break;
+				case GD.BBPH.DAL.EntityType.DmkhoEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmkhoEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmlydonhapxuatEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmlydonhapxuatEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmmangEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmmangEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmmauEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmmauEntity");
+					break;
 				case GD.BBPH.DAL.EntityType.DmmayEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmmayEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmnguyenlieuEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmnguyenlieuEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmnhomnguyenlieuEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmnhomnguyenlieuEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmquycachEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmquycachEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmtaikhoanEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmtaikhoanEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "LogbackupEntity");

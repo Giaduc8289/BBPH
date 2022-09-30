@@ -119,6 +119,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseGeneric\EntityClasses\CongsuatmayEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\CtptmangDEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\CtptmangHEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DinhmuathoigianEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmbophanEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmcapmaEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmchucvuEntity.cs" />
@@ -127,7 +131,15 @@
     <Compile Include="DatabaseGeneric\EntityClasses\DmdongmayEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmhangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmkhachEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmkhoEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmlydonhapxuatEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmmangEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmmauEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmmayEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmnguyenlieuEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmnhomnguyenlieuEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmquycachEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmtaikhoanEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\ThamsoEntity.cs" />
     <Compile Include="DatabaseGeneric\HelperClasses\EntityCollection.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
@@ -184,6 +196,10 @@
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
     <AppDesigner Include="Properties\" />
+    <Compile Include="DatabaseGeneric\RelationClasses\CongsuatmayRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\CtptmangDRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\CtptmangHRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DinhmuathoigianRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmbophanRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmcapmaRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmchucvuRelations.cs" />
@@ -192,7 +208,15 @@
     <Compile Include="DatabaseGeneric\RelationClasses\DmdongmayRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmhangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmkhachRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmkhoRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmlydonhapxuatRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmmangRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmmauRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmmayRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmnguyenlieuRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmnhomnguyenlieuRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmquycachRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmtaikhoanRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DynamicRelation.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\LogbackupRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuRelations.cs" />
