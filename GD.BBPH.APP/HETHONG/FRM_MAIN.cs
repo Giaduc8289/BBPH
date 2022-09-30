@@ -685,6 +685,43 @@ namespace GD.BBPH.APP.HETHONG
                     break;
                 #endregion
                 #endregion
+
+                #region Bán hàng
+                #endregion
+
+                #region Mua hàng
+                #endregion
+
+                #region Thổi
+                #endregion
+
+                #region In
+                #endregion
+
+                #region Lọc
+                #endregion
+
+                #region Ghép
+                #endregion
+
+                #region Tua
+                #endregion
+
+                #region Chia
+                #endregion
+
+                #region Hoàn thiện
+                #endregion
+
+                #region Kho
+                #endregion
+
+                #region Tính giá
+                #endregion
+
+                #region Báo cáo
+                #endregion
+
                 #region Cửa sổ
                 case "WI_LOP":
                     this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
