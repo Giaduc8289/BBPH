@@ -145,6 +145,7 @@ namespace GD.BBPH.APP.LIB
         //}
         //#endregion
 
+<<<<<<< HEAD
         #region DT_DMKHACH
         private static DataTable _DT_DMKHACH = null;
         public static DataTable DT_DMKHACH
@@ -169,8 +170,34 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMBOPHAN = value; }
         }
         #endregion
+=======
+        #region DMCONGDOAN
+        private static DataTable _DT_DMCONGDOAN = null;
+        public static DataTable DT_DMCONGDOAN
+        {
+            get
+            {
+                _DT_DMCONGDOAN = new DmcongdoanManager().SelectAllRDT();
+                return _DT_DMCONGDOAN;
+            }
+            set { _DT_DMCONGDOAN = value; }
+        }
+        #endregion
+
+        #region DMCONGNHAN
+        private static DataTable _DT_DMCONGNHAN = null;
+        public static DataTable DT_DMCONGNHAN
+        {
+            get
+            {
+                _DT_DMCONGNHAN = new DmcongnhanManager().SelectAllRDT();
+                return _DT_DMCONGNHAN;
+            }
+            set { _DT_DMCONGNHAN = value; }
+        }
+        #endregion
+
+>>>>>>> linh
 
     }
-
-
 }
