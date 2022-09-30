@@ -441,7 +441,7 @@ namespace GD.BBPH.BLL
 			return _DmcongnhanEntity;
 		}
 
-		public DmcongnhanEntity Insert(System.String Hovatencongnhan, System.String Tencongnhan, System.String Mabp, System.String Macv, System.String Sodienthoai, System.String Tinhtrang, System.String Phongban, System.String Chucvu, System.Boolean Danghi, )//ko co mahieu
+		public DmcongnhanEntity Insert(System.String Hovatencongnhan, System.String Tencongnhan, System.String Mabp, System.String Macv, System.String Sodienthoai, System.String Tinhtrang, System.String Phongban, System.String Chucvu, System.Boolean Danghi)//ko co mahieu
 		{
 			DmcongnhanEntity _DmcongnhanEntity = new DmcongnhanEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

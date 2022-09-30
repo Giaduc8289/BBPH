@@ -145,7 +145,6 @@ namespace GD.BBPH.APP.LIB
         //}
         //#endregion
 
-<<<<<<< HEAD
         #region DT_DMKHACH
         private static DataTable _DT_DMKHACH = null;
         public static DataTable DT_DMKHACH
@@ -170,7 +169,6 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMBOPHAN = value; }
         }
         #endregion
-=======
         #region DMCONGDOAN
         private static DataTable _DT_DMCONGDOAN = null;
         public static DataTable DT_DMCONGDOAN
@@ -197,7 +195,6 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
->>>>>>> linh
 
     }
 }

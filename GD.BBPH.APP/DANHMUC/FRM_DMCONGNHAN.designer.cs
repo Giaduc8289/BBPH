@@ -198,7 +198,7 @@
             this.txt_MAPHONGBAN.Regular_Expression = null;
             this.txt_MAPHONGBAN.Size = new System.Drawing.Size(83, 20);
             this.txt_MAPHONGBAN.TabIndex = 3;
-            this.txt_MAPHONGBAN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAPHONGBAN_KeyDown);
+            //this.txt_MAPHONGBAN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAPHONGBAN_KeyDown);
             this.txt_MAPHONGBAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAPHONGBAN_Validating);
             // 
             // txt_SODIENTHOAI

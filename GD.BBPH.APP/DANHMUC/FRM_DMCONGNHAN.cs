@@ -340,16 +340,16 @@ namespace GD.BBPH.APP.DANHMUC
         #endregion
 
         #region Shortcut Key
-        private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.F4)
-            {
-                FRM_DMPHONGBAN frm_Dm = new FRM_DMPHONGBAN();
-                frm_Dm.Text = "Danh mục phòng ban";
-                frm_Dm.ShowDialog();
-                DT_DMPHONGBAN = new DanhmucphongbanManager().SelectAllRDT();
-            }
-        }
+        //private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyData == Keys.F4)
+        //    {
+        //        FRM_DMPHONGBAN frm_Dm = new FRM_DMPHONGBAN();
+        //        frm_Dm.Text = "Danh mục phòng ban";
+        //        frm_Dm.ShowDialog();
+        //        DT_DMPHONGBAN = new DanhmucphongbanManager().SelectAllRDT();
+        //    }
+        //}
         #endregion
 
         private void uiPanel0_Resize(object sender, EventArgs e)

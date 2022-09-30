@@ -129,11 +129,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DANHMUC\FRM_DMBOPHAN.cs">
+    <Compile Include="DANHMUC\FRM_DMCONGDOAN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DANHMUC\FRM_DMBOPHAN.designer.cs">
-      <DependentUpon>FRM_DMBOPHAN.cs</DependentUpon>
+    <Compile Include="DANHMUC\FRM_DMCONGDOAN.designer.cs">
+      <DependentUpon>FRM_DMCONGDOAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMCONGNHAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMCONGNHAN.designer.cs">
+      <DependentUpon>FRM_DMCONGNHAN.cs</DependentUpon>
     </Compile>
     <Compile Include="DANHMUC\FRM_DMKHACH.cs">
       <SubType>Form</SubType>
@@ -228,6 +234,7 @@
     <Compile Include="Manager\DinhmuathoigianManager.cs" />
     <Compile Include="Manager\DmcapmaManager.cs" />
     <Compile Include="Manager\DmchucvuManager.cs" />
+    <Compile Include="Manager\DmcongdoanManager.cs" />
     <Compile Include="Manager\DmcongnhanManager.cs" />
     <Compile Include="Manager\DmdongmayManager.cs" />
     <Compile Include="Manager\DmkhoManager.cs" />
@@ -257,8 +264,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSXBB.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DANHMUC\FRM_DMBOPHAN.resx">
-      <DependentUpon>FRM_DMBOPHAN.cs</DependentUpon>
+    <EmbeddedResource Include="DANHMUC\FRM_DMCONGDOAN.resx">
+      <DependentUpon>FRM_DMCONGDOAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMCONGNHAN.resx">
+      <DependentUpon>FRM_DMCONGNHAN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMKHACH.resx">
       <DependentUpon>FRM_DMKHACH.cs</DependentUpon>

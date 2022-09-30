@@ -650,7 +650,6 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Danh mục
-<<<<<<< HEAD
                 case "FRM_DMKHACH":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -663,10 +662,9 @@ namespace GD.BBPH.APP.HETHONG
                     {
                         if (frm.Name == "FRM_DMBOPHAN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
                     }
-                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMBOPHAN()), mmru.Text);
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMKHACH()), mmru.Text);
                     break;
 
-=======
                 #region Danh mục công đoạn
                 case "FRM_DMCONGDOAN":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
@@ -675,7 +673,6 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMCONGDOAN()), mmru.Text);
                     break;
->>>>>>> linh
                 #endregion
 
                 #region Danh mục công nhân

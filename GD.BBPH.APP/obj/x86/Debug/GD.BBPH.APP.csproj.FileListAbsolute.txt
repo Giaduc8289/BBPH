@@ -47,3 +47,6 @@ D:\Dev\BBPH\GD.BBPH.APP\obj\x86\Debug\RdlCompile.cache
 D:\Dev\BBPH\GD.BBPH.APP\obj\x86\Debug\RdlCompile.compiled
 D:\Dev\BBPH\GD.BBPH.APP\obj\x86\Debug\GD.BBPH.APP.exe
 D:\Dev\BBPH\GD.BBPH.APP\obj\x86\Debug\GD.BBPH.APP.pdb
+D:\Dev\BBPH\GD.BBPH.APP\obj\x86\Debug\GD.BBPH.APP.DANHMUC.FRM_DMCONGDOAN.resources
+D:\Dev\BBPH\GD.BBPH.APP\obj\x86\Debug\GD.BBPH.APP.DANHMUC.FRM_DMCONGNHAN.resources
+D:\Dev\BBPH\GD.BBPH.APP\obj\x86\Debug\GD.BBPH.APP.DANHMUC.FRM_DMKHACH.resources
