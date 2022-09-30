@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 11:37:01 AM
+// Code is generated on: Friday, September 30, 2022 2:52:40 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -271,6 +271,21 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Tinhtrang
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmcongnhanFieldIndex.Tinhtrang);}
+		}
+		/// <summary>Creates a new DmcongnhanEntity.Phongban field instance</summary>
+		public static EntityField2 Phongban
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmcongnhanFieldIndex.Phongban);}
+		}
+		/// <summary>Creates a new DmcongnhanEntity.Chucvu field instance</summary>
+		public static EntityField2 Chucvu
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmcongnhanFieldIndex.Chucvu);}
+		}
+		/// <summary>Creates a new DmcongnhanEntity.Danghi field instance</summary>
+		public static EntityField2 Danghi
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmcongnhanFieldIndex.Danghi);}
 		}
 	}
 

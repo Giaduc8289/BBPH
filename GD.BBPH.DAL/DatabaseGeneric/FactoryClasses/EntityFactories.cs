@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 11:37:01 AM
+// Code is generated on: Friday, September 30, 2022 2:52:40 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -102,7 +102,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewCongsuatmay
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -114,7 +113,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewCongsuatmayUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -143,7 +141,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewCtptmangD
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -155,7 +152,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewCtptmangDUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -184,7 +180,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewCtptmangH
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -196,7 +191,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewCtptmangHUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -225,7 +219,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDinhmuathoigian
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -237,7 +230,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDinhmuathoigianUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -578,7 +570,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmkho
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -590,7 +581,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmkhoUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -619,7 +609,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmlydonhapxuat
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -631,7 +620,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmlydonhapxuatUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -660,7 +648,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmmang
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -672,7 +659,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmmangUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -701,7 +687,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmmau
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -713,7 +698,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmmauUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -781,7 +765,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmnguyenlieu
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -793,7 +776,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmnguyenlieuUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -822,7 +804,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmnhomnguyenlieu
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -834,7 +815,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmnhomnguyenlieuUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -863,7 +843,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmquycach
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -875,7 +854,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmquycachUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -904,7 +882,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmtaikhoan
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -916,7 +893,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmtaikhoanUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		

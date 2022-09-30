@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 11:37:01 AM
+// Code is generated on: Friday, September 30, 2022 2:52:40 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -528,6 +528,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tinhtrang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Phongban", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Chucvu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Danghi", fieldHashtable);
 		}
 		#endregion
 
@@ -756,6 +765,39 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmcongnhanFieldIndex.Tinhtrang, true); }
 			set	{ SetValue((int)DmcongnhanFieldIndex.Tinhtrang, value); }
+		}
+
+		/// <summary> The Phongban property of the Entity Dmcongnhan<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmcongnhan"."Phongban"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Phongban
+		{
+			get { return (System.String)GetValue((int)DmcongnhanFieldIndex.Phongban, true); }
+			set	{ SetValue((int)DmcongnhanFieldIndex.Phongban, value); }
+		}
+
+		/// <summary> The Chucvu property of the Entity Dmcongnhan<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmcongnhan"."Chucvu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Chucvu
+		{
+			get { return (System.String)GetValue((int)DmcongnhanFieldIndex.Chucvu, true); }
+			set	{ SetValue((int)DmcongnhanFieldIndex.Chucvu, value); }
+		}
+
+		/// <summary> The Danghi property of the Entity Dmcongnhan<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmcongnhan"."Danghi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Bit, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Boolean> Danghi
+		{
+			get { return (Nullable<System.Boolean>)GetValue((int)DmcongnhanFieldIndex.Danghi, false); }
+			set	{ SetValue((int)DmcongnhanFieldIndex.Danghi, value); }
 		}
 
 

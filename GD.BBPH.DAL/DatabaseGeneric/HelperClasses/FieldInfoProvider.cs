@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 11:37:00 AM
+// Code is generated on: Friday, September 30, 2022 2:52:39 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -166,6 +166,9 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmcongnhanEntity", "Macv", typeof(System.String), false, true, false, false,  (int)DmcongnhanFieldIndex.Macv, 20, 0, 0);
 			base.AddElementFieldInfo("DmcongnhanEntity", "Sodienthoai", typeof(System.String), false, false, false, true,  (int)DmcongnhanFieldIndex.Sodienthoai, 100, 0, 0);
 			base.AddElementFieldInfo("DmcongnhanEntity", "Tinhtrang", typeof(System.String), false, false, false, true,  (int)DmcongnhanFieldIndex.Tinhtrang, 100, 0, 0);
+			base.AddElementFieldInfo("DmcongnhanEntity", "Phongban", typeof(System.String), false, false, false, true,  (int)DmcongnhanFieldIndex.Phongban, 250, 0, 0);
+			base.AddElementFieldInfo("DmcongnhanEntity", "Chucvu", typeof(System.String), false, false, false, true,  (int)DmcongnhanFieldIndex.Chucvu, 250, 0, 0);
+			base.AddElementFieldInfo("DmcongnhanEntity", "Danghi", typeof(Nullable<System.Boolean>), false, false, false, true,  (int)DmcongnhanFieldIndex.Danghi, 0, 0, 0);
 		}
 		/// <summary>Inits DmdongmayEntity's FieldInfo objects</summary>
 		private void InitDmdongmayEntityInfos()
