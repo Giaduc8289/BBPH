@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 2:52:40 PM
+// Code is generated on: Saturday, October 1, 2022 1:47:05 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -39,7 +39,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		#region Class Member Declarations
 
 
-		private CtptmangHEntity _ctptmangH;
+
 
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
@@ -53,8 +53,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>All names of fields mapped onto a relation. Usable for in-memory filtering</summary>
 		public static class MemberNames
 		{
-			/// <summary>Member name CtptmangH</summary>
-			public static readonly string CtptmangH = "CtptmangH";
+
 
 
 
@@ -118,11 +117,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 
 
-				_ctptmangH = (CtptmangHEntity)info.GetValue("_ctptmangH", typeof(CtptmangHEntity));
-				if(_ctptmangH!=null)
-				{
-					_ctptmangH.AfterSave+=new EventHandler(OnEntityAfterSave);
-				}
+
 
 				base.FixupDeserialization(FieldInfoProviderSingleton.GetInstance());
 			}
@@ -138,9 +133,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch((DmmangFieldIndex)fieldIndex)
 			{
-				case DmmangFieldIndex.Mactpt:
-					DesetupSyncCtptmangH(true, false);
-					break;
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
 					break;
@@ -163,9 +155,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(propertyName)
 			{
-				case "CtptmangH":
-					this.CtptmangH = (CtptmangHEntity)entity;
-					break;
+
 
 
 
@@ -190,9 +180,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			RelationCollection toReturn = new RelationCollection();
 			switch(fieldName)
 			{
-				case "CtptmangH":
-					toReturn.Add(DmmangEntity.Relations.CtptmangHEntityUsingMactpt);
-					break;
+
 
 
 
@@ -231,9 +219,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-				case "CtptmangH":
-					SetupSyncCtptmangH(relatedEntity);
-					break;
+
 
 
 				default:
@@ -250,9 +236,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-				case "CtptmangH":
-					DesetupSyncCtptmangH(false, true);
-					break;
+
 
 
 				default:
@@ -275,10 +259,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntity2> GetDependentRelatedEntities()
 		{
 			List<IEntity2> toReturn = new List<IEntity2>();
-			if(_ctptmangH!=null)
-			{
-				toReturn.Add(_ctptmangH);
-			}
+
 
 			return toReturn;
 		}
@@ -305,7 +286,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 
 
-				info.AddValue("_ctptmangH", (!this.MarkedForDeletion?_ctptmangH:null));
+
 
 			}
 			
@@ -343,15 +324,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entity of type 'CtptmangH' to this entity. Use DataAccessAdapter.FetchNewEntity() to fetch this related entity.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoCtptmangH()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(CtptmangHFields.Mactpt, null, ComparisonOperator.Equal, this.Mactpt));
-			return bucket;
-		}
 
 	
 		
@@ -420,7 +392,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override Dictionary<string, object> GetRelatedData()
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
-			toReturn.Add("CtptmangH", _ctptmangH);
+
 
 
 
@@ -432,10 +404,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 
 
-			if(_ctptmangH!=null)
-			{
-				_ctptmangH.ActiveContext = base.ActiveContext;
-			}
+
 
 		}
 
@@ -445,7 +414,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-			_ctptmangH = null;
+
 
 			PerformDependencyInjection();
 			
@@ -486,38 +455,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		#endregion
 
-		/// <summary> Removes the sync logic for member _ctptmangH</summary>
-		/// <param name="signalRelatedEntity">If set to true, it will call the related entity's UnsetRelatedEntity method</param>
-		/// <param name="resetFKFields">if set to true it will also reset the FK fields pointing to the related entity</param>
-		private void DesetupSyncCtptmangH(bool signalRelatedEntity, bool resetFKFields)
-		{
-			base.PerformDesetupSyncRelatedEntity( _ctptmangH, new PropertyChangedEventHandler( OnCtptmangHPropertyChanged ), "CtptmangH", DmmangEntity.Relations.CtptmangHEntityUsingMactpt, true, signalRelatedEntity, "Dmmang", resetFKFields, new int[] { (int)DmmangFieldIndex.Mactpt } );		
-			_ctptmangH = null;
-		}
-
-		/// <summary> setups the sync logic for member _ctptmangH</summary>
-		/// <param name="relatedEntity">Instance to set as the related entity of type entityType</param>
-		private void SetupSyncCtptmangH(IEntity2 relatedEntity)
-		{
-			if(_ctptmangH!=relatedEntity)
-			{
-				DesetupSyncCtptmangH(true, true);
-				_ctptmangH = (CtptmangHEntity)relatedEntity;
-				base.PerformSetupSyncRelatedEntity( _ctptmangH, new PropertyChangedEventHandler( OnCtptmangHPropertyChanged ), "CtptmangH", DmmangEntity.Relations.CtptmangHEntityUsingMactpt, true, new string[] {  } );
-			}
-		}
-		
-		/// <summary>Handles property change events of properties in a related entity.</summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void OnCtptmangHPropertyChanged( object sender, PropertyChangedEventArgs e )
-		{
-			switch( e.PropertyName )
-			{
-				default:
-					break;
-			}
-		}
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
@@ -554,17 +491,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'CtptmangH' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathCtptmangH
-		{
-			get
-			{
-				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(CtptmangHEntityFactory))),
-					(IEntityRelation)GetRelationsForField("CtptmangH")[0], (int)GD.BBPH.DAL.EntityType.DmmangEntity, (int)GD.BBPH.DAL.EntityType.CtptmangHEntity, 0, null, null, null, null, "CtptmangH", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
-			}
-		}
 
 
 		/// <summary> The custom properties for the type of this entity instance.</summary>
@@ -670,40 +596,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Gets / sets related entity of type 'CtptmangHEntity' which has to be set using a fetch action earlier. If no related entity
-		/// is set for this property, null is returned. This property is not visible in databound grids.</summary>
-		[Browsable(false)]
-		public virtual CtptmangHEntity CtptmangH
-		{
-			get
-			{
-				return _ctptmangH;
-			}
-			set
-			{
-				if(base.IsDeserializing)
-				{
-					SetupSyncCtptmangH(value);
-				}
-				else
-				{
-					if(value==null)
-					{
-						if(_ctptmangH != null)
-						{
-							_ctptmangH.UnsetRelatedEntity(this, "Dmmang");
-						}
-					}
-					else
-					{
-						if(_ctptmangH!=value)
-						{
-							((IEntity2)value).SetRelatedEntity(this, "Dmmang");
-						}
-					}
-				}
-			}
-		}
 
 	
 		

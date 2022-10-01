@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 2:52:40 PM
+// Code is generated on: Saturday, October 1, 2022 1:47:05 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -378,7 +378,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public virtual IRelationPredicateBucket GetRelationInfoCtptmangH()
 		{
 			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(CtptmangHFields.Mactpt, null, ComparisonOperator.Equal, this.IdH));
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(CtptmangHFields.Id, null, ComparisonOperator.Equal, this.IdH));
 			return bucket;
 		}
 
