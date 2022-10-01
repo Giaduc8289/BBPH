@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 1:47:05 PM
+// Code is generated on: Saturday, October 1, 2022 2:38:53 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -95,7 +95,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> CTor</summary>
 		/// <param name="id">PK value for CtptmangD which data should be fetched into this CtptmangD object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public CtptmangDEntity(System.String id):base("CtptmangDEntity")
+		public CtptmangDEntity(System.Int64 id):base("CtptmangDEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 			this.Id = id;
@@ -105,7 +105,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="id">PK value for CtptmangD which data should be fetched into this CtptmangD object</param>
 		/// <param name="validator">The custom validator object for this CtptmangDEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public CtptmangDEntity(System.String id, IValidator validator):base("CtptmangDEntity")
+		public CtptmangDEntity(System.Int64 id, IValidator validator):base("CtptmangDEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 			this.Id = id;
@@ -687,22 +687,22 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Id property of the Entity CtptmangD<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "ctptmang_d"."id"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 20<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
-		public virtual System.String Id
+		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, true</remarks>
+		public virtual System.Int64 Id
 		{
-			get { return (System.String)GetValue((int)CtptmangDFieldIndex.Id, true); }
+			get { return (System.Int64)GetValue((int)CtptmangDFieldIndex.Id, true); }
 			set	{ SetValue((int)CtptmangDFieldIndex.Id, value); }
 		}
 
 		/// <summary> The IdH property of the Entity CtptmangD<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "ctptmang_d"."id_h"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 20<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String IdH
+		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Int64> IdH
 		{
-			get { return (System.String)GetValue((int)CtptmangDFieldIndex.IdH, true); }
+			get { return (Nullable<System.Int64>)GetValue((int)CtptmangDFieldIndex.IdH, false); }
 			set	{ SetValue((int)CtptmangDFieldIndex.IdH, value); }
 		}
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 1:47:04 PM
+// Code is generated on: Saturday, October 1, 2022 2:38:52 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -99,8 +99,8 @@ namespace GD.BBPH.DAL.HelperClasses
 		/// <summary>Inits CtptmangDEntity's FieldInfo objects</summary>
 		private void InitCtptmangDEntityInfos()
 		{
-			base.AddElementFieldInfo("CtptmangDEntity", "Id", typeof(System.String), true, false, false, false,  (int)CtptmangDFieldIndex.Id, 20, 0, 0);
-			base.AddElementFieldInfo("CtptmangDEntity", "IdH", typeof(System.String), false, true, false, false,  (int)CtptmangDFieldIndex.IdH, 20, 0, 0);
+			base.AddElementFieldInfo("CtptmangDEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)CtptmangDFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("CtptmangDEntity", "IdH", typeof(Nullable<System.Int64>), false, true, false, true,  (int)CtptmangDFieldIndex.IdH, 0, 0, 19);
 			base.AddElementFieldInfo("CtptmangDEntity", "Mact", typeof(System.String), false, false, false, false,  (int)CtptmangDFieldIndex.Mact, 20, 0, 0);
 			base.AddElementFieldInfo("CtptmangDEntity", "Tenct", typeof(System.String), false, false, false, false,  (int)CtptmangDFieldIndex.Tenct, 250, 0, 0);
 			base.AddElementFieldInfo("CtptmangDEntity", "Manl", typeof(System.String), false, true, false, false,  (int)CtptmangDFieldIndex.Manl, 20, 0, 0);
@@ -111,7 +111,7 @@ namespace GD.BBPH.DAL.HelperClasses
 		/// <summary>Inits CtptmangHEntity's FieldInfo objects</summary>
 		private void InitCtptmangHEntityInfos()
 		{
-			base.AddElementFieldInfo("CtptmangHEntity", "Id", typeof(System.String), true, false, false, false,  (int)CtptmangHFieldIndex.Id, 20, 0, 0);
+			base.AddElementFieldInfo("CtptmangHEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)CtptmangHFieldIndex.Id, 0, 0, 19);
 			base.AddElementFieldInfo("CtptmangHEntity", "Mactpt", typeof(System.String), false, false, false, false,  (int)CtptmangHFieldIndex.Mactpt, 20, 0, 0);
 			base.AddElementFieldInfo("CtptmangHEntity", "Tenctpt", typeof(System.String), false, false, false, false,  (int)CtptmangHFieldIndex.Tenctpt, 250, 0, 0);
 			base.AddElementFieldInfo("CtptmangHEntity", "Ngayapdung", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)CtptmangHFieldIndex.Ngayapdung, 0, 0, 0);
