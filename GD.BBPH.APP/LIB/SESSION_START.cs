@@ -182,6 +182,45 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region DMQUYCACH
+        private static DataTable _DT_DMQUYCACH = null;
+        public static DataTable DT_DMQUYCACH
+        {
+            get
+            {
+                _DT_DMQUYCACH = new DmquycachManager().SelectAllRDT();
+                return _DT_DMQUYCACH;
+            }
+            set { _DT_DMQUYCACH = value; }
+        }
+        #endregion
+
+        #region DMKHO
+        private static DataTable _DT_DMKHO = null;
+        public static DataTable DT_DMKHO
+        {
+            get
+            {
+                _DT_DMKHO = new DmkhoManager().SelectAllRDT();
+                return _DT_DMKHO;
+            }
+            set { _DT_DMKHO = value; }
+        }
+        #endregion
+
+        #region DMLYDONHAPXUAT
+        private static DataTable _DT_DMLYDONHAPXUAT = null;
+        public static DataTable DT_DMLYDONHAPXUAT
+        {
+            get
+            {
+                _DT_DMLYDONHAPXUAT = new DmlydonhapxuatManager().SelectAllRDT();
+                return _DT_DMLYDONHAPXUAT;
+            }
+            set { _DT_DMLYDONHAPXUAT = value; }
+        }
+        #endregion
+
         #region DMCONGNHAN
         private static DataTable _DT_DMCONGNHAN = null;
         public static DataTable DT_DMCONGNHAN

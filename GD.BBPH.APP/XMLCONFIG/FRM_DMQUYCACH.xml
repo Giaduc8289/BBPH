@@ -23,8 +23,8 @@
   </xs:schema>
   <viewgrid>
     <value>1</value>
-    <name>Makho</name>
-    <headerText>Makho</headerText>
+    <name>Maqc</name>
+    <headerText>Maqc</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -32,8 +32,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tenkho</name>
-    <headerText>Tenkho</headerText>
+    <name>Tenquycach</name>
+    <headerText>Tenquycach</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -41,8 +41,17 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tenrutgon</name>
-    <headerText>Tenrutgon</headerText>
+    <name>Macd</name>
+    <headerText>Macd</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Maqccha</name>
+    <headerText>Maqccha</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
