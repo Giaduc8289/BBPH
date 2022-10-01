@@ -77,9 +77,9 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Tenkhach,typeof(System.String));
 			
-			dt.Columns.Add(Field_Kichthuoc,typeof(System.Int32));
+			dt.Columns.Add(Field_Kichthuoc,typeof(System.String));
 			
-			dt.Columns.Add(Field_Khoiluongmuc,typeof(System.Int32));
+			dt.Columns.Add(Field_Khoiluongmuc,typeof(System.Decimal));
 			
 			dt.Columns.Add(Field_Sohinh,typeof(System.Int32));
 			
@@ -223,13 +223,13 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_DmhangEntity.Kichthuoc= System.Int32.Parse(r[Field_Kichthuoc].ToString());						
+				_DmhangEntity.Kichthuoc= r[Field_Kichthuoc].ToString();						
 			}
 			catch { }
 			
 			try
 			{
-				_DmhangEntity.Khoiluongmuc= System.Int32.Parse(r[Field_Khoiluongmuc].ToString());						
+				_DmhangEntity.Khoiluongmuc= System.Decimal.Parse(r[Field_Khoiluongmuc].ToString());						
 			}
 			catch { }
 			
@@ -529,7 +529,7 @@ namespace GD.BBPH.BLL
 			return DmhangEntity;
 		}
 
-		public DmhangEntity Insert(System.String  Masp, System.String  Tensp, System.String  Makhach, System.String  Tenkhach, System.Int32  Kichthuoc, System.Int32  Khoiluongmuc, System.Int32  Sohinh, System.String  Cautrucin, System.Int32  Somau, System.String  Loaimuc, System.String  Kichthuoctruc, System.String  Vitri, System.String  Quycachdonggoi, System.String  Loaithung)
+		public DmhangEntity Insert(System.String  Masp, System.String  Tensp, System.String  Makhach, System.String  Tenkhach, System.String  Kichthuoc, System.Decimal  Khoiluongmuc, System.Int32  Sohinh, System.String  Cautrucin, System.Int32  Somau, System.String  Loaimuc, System.String  Kichthuoctruc, System.String  Vitri, System.String  Quycachdonggoi, System.String  Loaithung)
 		{
 			DmhangEntity _DmhangEntity = new DmhangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -569,7 +569,7 @@ namespace GD.BBPH.BLL
 			return _DmhangEntity;
 		}
 
-		public DmhangEntity Insert(System.String Tensp, System.String Makhach, System.String Tenkhach, System.Int32 Kichthuoc, System.Int32 Khoiluongmuc, System.Int32 Sohinh, System.String Cautrucin, System.Int32 Somau, System.String Loaimuc, System.String Kichthuoctruc, System.String Vitri, System.String Quycachdonggoi, System.String Loaithung)//ko co mahieu
+		public DmhangEntity Insert(System.String Tensp, System.String Makhach, System.String Tenkhach, System.String Kichthuoc, System.Decimal Khoiluongmuc, System.Int32 Sohinh, System.String Cautrucin, System.Int32 Somau, System.String Loaimuc, System.String Kichthuoctruc, System.String Vitri, System.String Quycachdonggoi, System.String Loaithung)//ko co mahieu
 		{
 			DmhangEntity _DmhangEntity = new DmhangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -638,7 +638,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Masp, System.String Tensp, System.String Makhach, System.String Tenkhach, System.Int32 Kichthuoc, System.Int32 Khoiluongmuc, System.Int32 Sohinh, System.String Cautrucin, System.Int32 Somau, System.String Loaimuc, System.String Kichthuoctruc, System.String Vitri, System.String Quycachdonggoi, System.String Loaithung)
+		public bool Update(System.String Masp, System.String Tensp, System.String Makhach, System.String Tenkhach, System.String Kichthuoc, System.Decimal Khoiluongmuc, System.Int32 Sohinh, System.String Cautrucin, System.Int32 Somau, System.String Loaimuc, System.String Kichthuoctruc, System.String Vitri, System.String Quycachdonggoi, System.String Loaithung)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -772,7 +772,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByKichthuoc(System.Int32 Kichthuoc)
+		public int DeleteByKichthuoc(System.String Kichthuoc)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -788,7 +788,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByKhoiluongmuc(System.Int32 Khoiluongmuc)
+		public int DeleteByKhoiluongmuc(System.Decimal Khoiluongmuc)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -1109,7 +1109,7 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByKichthuoc(System.Int32 Kichthuoc)
+		public EntityCollection SelectByKichthuoc(System.String Kichthuoc)
 		{
 			EntityCollection _DmhangCollection = new EntityCollection(new DmhangEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -1125,7 +1125,7 @@ namespace GD.BBPH.BLL
 			return _DmhangCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByKichthuocRDT(System.Int32 Kichthuoc)
+		public DataTable SelectByKichthuocRDT(System.String Kichthuoc)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _DmhangCollection = new EntityCollection(new DmhangEntityFactory());
@@ -1143,7 +1143,7 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByKhoiluongmuc(System.Int32 Khoiluongmuc)
+		public EntityCollection SelectByKhoiluongmuc(System.Decimal Khoiluongmuc)
 		{
 			EntityCollection _DmhangCollection = new EntityCollection(new DmhangEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -1159,7 +1159,7 @@ namespace GD.BBPH.BLL
 			return _DmhangCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByKhoiluongmucRDT(System.Int32 Khoiluongmuc)
+		public DataTable SelectByKhoiluongmucRDT(System.Decimal Khoiluongmuc)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _DmhangCollection = new EntityCollection(new DmhangEntityFactory());

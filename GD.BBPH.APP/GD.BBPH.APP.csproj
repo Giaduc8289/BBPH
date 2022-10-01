@@ -153,11 +153,29 @@
     <Compile Include="DANHMUC\FRM_DMKHACH.designer.cs">
       <DependentUpon>FRM_DMKHACH.cs</DependentUpon>
     </Compile>
+    <Compile Include="DANHMUC\FRM_DMKHO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMKHO.designer.cs">
+      <DependentUpon>FRM_DMKHO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMLYDONHAPXUAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMLYDONHAPXUAT.designer.cs">
+      <DependentUpon>FRM_DMLYDONHAPXUAT.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMPARENT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DANHMUC\FRM_DMPARENT.designer.cs">
       <DependentUpon>FRM_DMPARENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMQUYCACH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMQUYCACH.designer.cs">
+      <DependentUpon>FRM_DMQUYCACH.cs</DependentUpon>
     </Compile>
     <Compile Include="HETHONG\FRM_CHONNGAYLAMVIEC.cs">
       <SubType>Form</SubType>
@@ -282,8 +300,17 @@
     <EmbeddedResource Include="DANHMUC\FRM_DMKHACH.resx">
       <DependentUpon>FRM_DMKHACH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMKHO.resx">
+      <DependentUpon>FRM_DMKHO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMLYDONHAPXUAT.resx">
+      <DependentUpon>FRM_DMLYDONHAPXUAT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMPARENT.resx">
       <DependentUpon>FRM_DMPARENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMQUYCACH.resx">
+      <DependentUpon>FRM_DMQUYCACH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HETHONG\FRM_CHONNGAYLAMVIEC.resx">
       <DependentUpon>FRM_CHONNGAYLAMVIEC.cs</DependentUpon>

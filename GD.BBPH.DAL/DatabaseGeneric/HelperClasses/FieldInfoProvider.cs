@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 2:38:52 PM
+// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -184,8 +184,8 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmhangEntity", "Tensp", typeof(System.String), false, false, false, false,  (int)DmhangFieldIndex.Tensp, 250, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Makhach", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Makhach, 20, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Tenkhach", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Tenkhach, 250, 0, 0);
-			base.AddElementFieldInfo("DmhangEntity", "Kichthuoc", typeof(Nullable<System.Int32>), false, false, false, true,  (int)DmhangFieldIndex.Kichthuoc, 0, 0, 10);
-			base.AddElementFieldInfo("DmhangEntity", "Khoiluongmuc", typeof(Nullable<System.Int32>), false, false, false, true,  (int)DmhangFieldIndex.Khoiluongmuc, 0, 0, 10);
+			base.AddElementFieldInfo("DmhangEntity", "Kichthuoc", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Kichthuoc, 50, 0, 0);
+			base.AddElementFieldInfo("DmhangEntity", "Khoiluongmuc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmhangFieldIndex.Khoiluongmuc, 0, 2, 20);
 			base.AddElementFieldInfo("DmhangEntity", "Sohinh", typeof(Nullable<System.Int32>), false, false, false, true,  (int)DmhangFieldIndex.Sohinh, 0, 0, 10);
 			base.AddElementFieldInfo("DmhangEntity", "Cautrucin", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Cautrucin, 250, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Somau", typeof(Nullable<System.Int32>), false, false, false, true,  (int)DmhangFieldIndex.Somau, 0, 0, 10);
