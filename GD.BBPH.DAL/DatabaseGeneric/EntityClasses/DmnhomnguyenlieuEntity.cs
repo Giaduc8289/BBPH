@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 2:52:40 PM
+// Code is generated on: Saturday, October 1, 2022 1:47:05 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -37,7 +37,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
-		private EntityCollection<DmlydonhapxuatEntity> _dmlydonhapxuat;
 		private EntityCollection<DmnguyenlieuEntity> _dmnguyenlieu;
 
 
@@ -55,8 +54,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		public static class MemberNames
 		{
 
-			/// <summary>Member name Dmlydonhapxuat</summary>
-			public static readonly string Dmlydonhapxuat = "Dmlydonhapxuat";
 			/// <summary>Member name Dmnguyenlieu</summary>
 			public static readonly string Dmnguyenlieu = "Dmnguyenlieu";
 
@@ -119,7 +116,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-				_dmlydonhapxuat = (EntityCollection<DmlydonhapxuatEntity>)info.GetValue("_dmlydonhapxuat", typeof(EntityCollection<DmlydonhapxuatEntity>));
 				_dmnguyenlieu = (EntityCollection<DmnguyenlieuEntity>)info.GetValue("_dmnguyenlieu", typeof(EntityCollection<DmnguyenlieuEntity>));
 
 
@@ -161,9 +157,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(propertyName)
 			{
 
-				case "Dmlydonhapxuat":
-					this.Dmlydonhapxuat.Add((DmlydonhapxuatEntity)entity);
-					break;
 				case "Dmnguyenlieu":
 					this.Dmnguyenlieu.Add((DmnguyenlieuEntity)entity);
 					break;
@@ -191,9 +184,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-				case "Dmlydonhapxuat":
-					toReturn.Add(DmnhomnguyenlieuEntity.Relations.DmlydonhapxuatEntityUsingManhom);
-					break;
 				case "Dmnguyenlieu":
 					toReturn.Add(DmnhomnguyenlieuEntity.Relations.DmnguyenlieuEntityUsingManhom);
 					break;
@@ -235,9 +225,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-				case "Dmlydonhapxuat":
-					this.Dmlydonhapxuat.Add((DmlydonhapxuatEntity)relatedEntity);
-					break;
 				case "Dmnguyenlieu":
 					this.Dmnguyenlieu.Add((DmnguyenlieuEntity)relatedEntity);
 					break;
@@ -257,9 +244,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-				case "Dmlydonhapxuat":
-					base.PerformRelatedEntityRemoval(this.Dmlydonhapxuat, relatedEntity, signalRelatedEntityManyToOne);
-					break;
 				case "Dmnguyenlieu":
 					base.PerformRelatedEntityRemoval(this.Dmnguyenlieu, relatedEntity, signalRelatedEntityManyToOne);
 					break;
@@ -294,7 +278,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntityCollection2> GetMemberEntityCollections()
 		{
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
-			toReturn.Add(this.Dmlydonhapxuat);
 			toReturn.Add(this.Dmnguyenlieu);
 
 			return toReturn;
@@ -310,7 +293,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-				info.AddValue("_dmlydonhapxuat", ((_dmlydonhapxuat!=null) && (_dmlydonhapxuat.Count>0) && !this.MarkedForDeletion)?_dmlydonhapxuat:null);
 				info.AddValue("_dmnguyenlieu", ((_dmnguyenlieu!=null) && (_dmnguyenlieu.Count>0) && !this.MarkedForDeletion)?_dmnguyenlieu:null);
 
 
@@ -348,16 +330,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			return new DmnhomnguyenlieuRelations().GetAllRelations();
 		}
 		
-
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entities of type 'Dmlydonhapxuat' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmlydonhapxuat()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmlydonhapxuatFields.Manhom, null, ComparisonOperator.Equal, this.Manhom));
-			return bucket;
-		}
 
 		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
 		/// the related entities of type 'Dmnguyenlieu' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
@@ -399,7 +371,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void AddToMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue) 
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
-			collectionsQueue.Enqueue(this._dmlydonhapxuat);
 			collectionsQueue.Enqueue(this._dmnguyenlieu);
 
 		}
@@ -409,7 +380,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void GetFromMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue)
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
-			this._dmlydonhapxuat = (EntityCollection<DmlydonhapxuatEntity>) collectionsQueue.Dequeue();
 			this._dmnguyenlieu = (EntityCollection<DmnguyenlieuEntity>) collectionsQueue.Dequeue();
 
 		}
@@ -418,10 +388,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>true if the entity has populated member collections.</returns>
 		protected override bool HasPopulatedMemberEntityCollections()
 		{
-			if (this._dmlydonhapxuat != null)
-			{
-				return true;
-			}
 			if (this._dmnguyenlieu != null)
 			{
 				return true;
@@ -436,7 +402,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void CreateMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue, Queue<bool> requiredQueue) 
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
-			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<DmlydonhapxuatEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmlydonhapxuatEntityFactory))) : null);
 			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<DmnguyenlieuEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmnguyenlieuEntityFactory))) : null);
 
 		}
@@ -449,7 +414,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
 
-			toReturn.Add("Dmlydonhapxuat", _dmlydonhapxuat);
 			toReturn.Add("Dmnguyenlieu", _dmnguyenlieu);
 
 
@@ -459,10 +423,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> Adds the internals to the active context. </summary>
 		protected override void AddInternalsToContext()
 		{
-			if(_dmlydonhapxuat!=null)
-			{
-				_dmlydonhapxuat.ActiveContext = base.ActiveContext;
-			}
 			if(_dmnguyenlieu!=null)
 			{
 				_dmnguyenlieu.ActiveContext = base.ActiveContext;
@@ -476,7 +436,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected virtual void InitClassMembers()
 		{
 
-			_dmlydonhapxuat = null;
 			_dmnguyenlieu = null;
 
 
@@ -542,17 +501,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return _customProperties;}
 		}
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmlydonhapxuat' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmlydonhapxuat
-		{
-			get
-			{
-				return new PrefetchPathElement2( new EntityCollection<DmlydonhapxuatEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmlydonhapxuatEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmlydonhapxuat")[0], (int)GD.BBPH.DAL.EntityType.DmnhomnguyenlieuEntity, (int)GD.BBPH.DAL.EntityType.DmlydonhapxuatEntity, 0, null, null, null, null, "Dmlydonhapxuat", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
-			}
-		}
 		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmnguyenlieu' 
 		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
 		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
@@ -623,22 +571,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmnhomnguyenlieuFieldIndex.Tenrutgon, true); }
 			set	{ SetValue((int)DmnhomnguyenlieuFieldIndex.Tenrutgon, value); }
-		}
-
-		/// <summary> Gets the EntityCollection with the related entities of type 'DmlydonhapxuatEntity' which are related to this entity via a relation of type '1:n'.
-		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
-		[TypeContainedAttribute(typeof(DmlydonhapxuatEntity))]
-		public virtual EntityCollection<DmlydonhapxuatEntity> Dmlydonhapxuat
-		{
-			get
-			{
-				if(_dmlydonhapxuat==null)
-				{
-					_dmlydonhapxuat = new EntityCollection<DmlydonhapxuatEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmlydonhapxuatEntityFactory)));
-					_dmlydonhapxuat.SetContainingEntityInfo(this, "Dmnhomnguyenlieu");
-				}
-				return _dmlydonhapxuat;
-			}
 		}
 
 		/// <summary> Gets the EntityCollection with the related entities of type 'DmnguyenlieuEntity' which are related to this entity via a relation of type '1:n'.

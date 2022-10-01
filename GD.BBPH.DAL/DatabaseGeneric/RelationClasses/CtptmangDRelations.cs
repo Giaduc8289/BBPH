@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 2:52:39 PM
+// Code is generated on: Saturday, October 1, 2022 1:47:05 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -42,14 +42,14 @@ namespace GD.BBPH.DAL.RelationClasses
 
 
 		/// <summary>Returns a new IEntityRelation object, between CtptmangDEntity and CtptmangHEntity over the m:1 relation they have, using the relation between the fields:
-		/// CtptmangD.IdH - CtptmangH.Mactpt
+		/// CtptmangD.IdH - CtptmangH.Id
 		/// </summary>
 		public virtual IEntityRelation CtptmangHEntityUsingIdH
 		{
 			get
 			{
 				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "CtptmangH", false);
-				relation.AddEntityFieldPair(CtptmangHFields.Mactpt, CtptmangDFields.IdH);
+				relation.AddEntityFieldPair(CtptmangHFields.Id, CtptmangDFields.IdH);
 				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangHEntity", false);
 				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangDEntity", true);
 				return relation;

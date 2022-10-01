@@ -129,6 +129,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DANHMUC\FRM_DMBOPHAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMBOPHAN.designer.cs">
+      <DependentUpon>FRM_DMBOPHAN.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMCONGDOAN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +270,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSXBB.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DANHMUC\FRM_DMBOPHAN.resx">
+      <DependentUpon>FRM_DMBOPHAN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMCONGDOAN.resx">
       <DependentUpon>FRM_DMCONGDOAN.cs</DependentUpon>
     </EmbeddedResource>
@@ -600,7 +609,6 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="RDLC\BCTHLUONGDET.rdlc" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="RDLC\DataSXBB.xsc">
       <DependentUpon>DataSXBB.xsd</DependentUpon>
@@ -1017,7 +1025,20 @@
       <Name>GD.BBPH.LIB</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BANHANG\" />
+    <Folder Include="BAOCAO\" />
+    <Folder Include="CHIA\" />
+    <Folder Include="GHEP\" />
+    <Folder Include="HOANTHIEN\" />
+    <Folder Include="IN\" />
+    <Folder Include="KHO\" />
+    <Folder Include="LOC\" />
+    <Folder Include="MUAHANG\" />
+    <Folder Include="THOI\" />
+    <Folder Include="TINHGIA\" />
+    <Folder Include="TUA\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

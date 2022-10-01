@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 2:52:40 PM
+// Code is generated on: Saturday, October 1, 2022 1:47:05 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -37,11 +37,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
-
-
+		private EntityCollection<DmmayEntity> _dmmay;
 
 		private DmcongdoanEntity _dmcongdoan;
-		private DmmayEntity _dmmay;
+
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
@@ -54,13 +53,12 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>All names of fields mapped onto a relation. Usable for in-memory filtering</summary>
 		public static class MemberNames
 		{
-
-
-
 			/// <summary>Member name Dmcongdoan</summary>
 			public static readonly string Dmcongdoan = "Dmcongdoan";
 			/// <summary>Member name Dmmay</summary>
 			public static readonly string Dmmay = "Dmmay";
+
+
 		}
 		#endregion
 		
@@ -119,19 +117,14 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-
-
+				_dmmay = (EntityCollection<DmmayEntity>)info.GetValue("_dmmay", typeof(EntityCollection<DmmayEntity>));
 
 				_dmcongdoan = (DmcongdoanEntity)info.GetValue("_dmcongdoan", typeof(DmcongdoanEntity));
 				if(_dmcongdoan!=null)
 				{
 					_dmcongdoan.AfterSave+=new EventHandler(OnEntityAfterSave);
 				}
-				_dmmay = (DmmayEntity)info.GetValue("_dmmay", typeof(DmmayEntity));
-				if(_dmmay!=null)
-				{
-					_dmmay.AfterSave+=new EventHandler(OnEntityAfterSave);
-				}
+
 				base.FixupDeserialization(FieldInfoProviderSingleton.GetInstance());
 			}
 			
@@ -146,7 +139,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch((DmdongmayFieldIndex)fieldIndex)
 			{
-				case DmdongmayFieldIndex.Madm:
+				case DmdongmayFieldIndex.Macd:
 					DesetupSyncDmcongdoan(true, false);
 					break;
 				default:
@@ -171,15 +164,14 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(propertyName)
 			{
-
-
-
 				case "Dmcongdoan":
 					this.Dmcongdoan = (DmcongdoanEntity)entity;
 					break;
 				case "Dmmay":
-					this.Dmmay = (DmmayEntity)entity;
+					this.Dmmay.Add((DmmayEntity)entity);
 					break;
+
+
 				default:
 					break;
 			}
@@ -201,15 +193,14 @@ namespace GD.BBPH.DAL.EntityClasses
 			RelationCollection toReturn = new RelationCollection();
 			switch(fieldName)
 			{
-
-
-
 				case "Dmcongdoan":
-					toReturn.Add(DmdongmayEntity.Relations.DmcongdoanEntityUsingMadm);
+					toReturn.Add(DmdongmayEntity.Relations.DmcongdoanEntityUsingMacd);
 					break;
 				case "Dmmay":
-					toReturn.Add(DmdongmayEntity.Relations.DmmayEntityUsingMamay);
+					toReturn.Add(DmdongmayEntity.Relations.DmmayEntityUsingMadm);
 					break;
+
+
 				default:
 
 					break;				
@@ -232,7 +223,6 @@ namespace GD.BBPH.DAL.EntityClasses
 					return ((numberOfOneWayRelations > 0) || base.CheckOneWayRelations(null));
 
 
-
 				default:
 					return base.CheckOneWayRelations(propertyName);
 			}
@@ -246,14 +236,13 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-
-
 				case "Dmcongdoan":
 					SetupSyncDmcongdoan(relatedEntity);
 					break;
 				case "Dmmay":
-					SetupSyncDmmay(relatedEntity);
+					this.Dmmay.Add((DmmayEntity)relatedEntity);
 					break;
+
 				default:
 					break;
 			}
@@ -268,14 +257,13 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-
-
 				case "Dmcongdoan":
 					DesetupSyncDmcongdoan(false, true);
 					break;
 				case "Dmmay":
-					DesetupSyncDmmay(false, true);
+					base.PerformRelatedEntityRemoval(this.Dmmay, relatedEntity, signalRelatedEntityManyToOne);
 					break;
+
 				default:
 					break;
 			}
@@ -287,12 +275,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			List<IEntity2> toReturn = new List<IEntity2>();
 
-
-			if(_dmmay!=null)
-			{
-				toReturn.Add(_dmmay);
-			}
-
 			return toReturn;
 		}
 		
@@ -302,13 +284,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntity2> GetDependentRelatedEntities()
 		{
 			List<IEntity2> toReturn = new List<IEntity2>();
-
 			if(_dmcongdoan!=null)
 			{
 				toReturn.Add(_dmcongdoan);
 			}
-
-
 
 			return toReturn;
 		}
@@ -318,7 +297,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntityCollection2> GetMemberEntityCollections()
 		{
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
-
+			toReturn.Add(this.Dmmay);
 
 			return toReturn;
 		}
@@ -333,11 +312,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-
-
+				info.AddValue("_dmmay", ((_dmmay!=null) && (_dmmay.Count>0) && !this.MarkedForDeletion)?_dmmay:null);
 
 				info.AddValue("_dmcongdoan", (!this.MarkedForDeletion?_dmcongdoan:null));
-				info.AddValue("_dmmay", (!this.MarkedForDeletion?_dmmay:null));
+
 			}
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
@@ -372,7 +350,15 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		
 
-
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Dmmay' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoDmmay()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmmayFields.Madm, null, ComparisonOperator.Equal, this.Madm));
+			return bucket;
+		}
 
 
 		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
@@ -381,19 +367,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		public virtual IRelationPredicateBucket GetRelationInfoDmcongdoan()
 		{
 			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmcongdoanFields.Macd, null, ComparisonOperator.Equal, this.Madm));
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmcongdoanFields.Macd, null, ComparisonOperator.Equal, this.Macd));
 			return bucket;
 		}
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entity of type 'Dmmay' to this entity. Use DataAccessAdapter.FetchNewEntity() to fetch this related entity.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmmay()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmmayFields.Mamay, null, ComparisonOperator.Equal, this.Madm));
-			return bucket;
-		}
 	
 		
 		/// <summary>Creates entity fields object for this entity. Used in constructor to setup this entity in a polymorphic scenario.</summary>
@@ -422,7 +399,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void AddToMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue) 
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
-
+			collectionsQueue.Enqueue(this._dmmay);
 
 		}
 		
@@ -431,7 +408,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void GetFromMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue)
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
-
+			this._dmmay = (EntityCollection<DmmayEntity>) collectionsQueue.Dequeue();
 
 		}
 		
@@ -439,7 +416,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>true if the entity has populated member collections.</returns>
 		protected override bool HasPopulatedMemberEntityCollections()
 		{
-
+			if (this._dmmay != null)
+			{
+				return true;
+			}
 
 			return base.HasPopulatedMemberEntityCollections();
 		}
@@ -450,7 +430,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void CreateMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue, Queue<bool> requiredQueue) 
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
-
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<DmmayEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmmayEntityFactory))) : null);
 
 		}
 #endif
@@ -461,39 +441,36 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override Dictionary<string, object> GetRelatedData()
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
-
-
-
 			toReturn.Add("Dmcongdoan", _dmcongdoan);
 			toReturn.Add("Dmmay", _dmmay);
+
+
 			return toReturn;
 		}
 		
 		/// <summary> Adds the internals to the active context. </summary>
 		protected override void AddInternalsToContext()
 		{
-
-
+			if(_dmmay!=null)
+			{
+				_dmmay.ActiveContext = base.ActiveContext;
+			}
 
 			if(_dmcongdoan!=null)
 			{
 				_dmcongdoan.ActiveContext = base.ActiveContext;
 			}
-			if(_dmmay!=null)
-			{
-				_dmmay.ActiveContext = base.ActiveContext;
-			}
+
 		}
 
 		/// <summary> Initializes the class members</summary>
 		protected virtual void InitClassMembers()
 		{
 
-
-
+			_dmmay = null;
 
 			_dmcongdoan = null;
-			_dmmay = null;
+
 			PerformDependencyInjection();
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
@@ -521,16 +498,15 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		#endregion
 
-
 		/// <summary> Removes the sync logic for member _dmcongdoan</summary>
 		/// <param name="signalRelatedEntity">If set to true, it will call the related entity's UnsetRelatedEntity method</param>
 		/// <param name="resetFKFields">if set to true it will also reset the FK fields pointing to the related entity</param>
 		private void DesetupSyncDmcongdoan(bool signalRelatedEntity, bool resetFKFields)
 		{
-			base.PerformDesetupSyncRelatedEntity( _dmcongdoan, new PropertyChangedEventHandler( OnDmcongdoanPropertyChanged ), "Dmcongdoan", DmdongmayEntity.Relations.DmcongdoanEntityUsingMadm, true, signalRelatedEntity, "Dmdongmay", false, new int[] { (int)DmdongmayFieldIndex.Madm } );
+			base.PerformDesetupSyncRelatedEntity( _dmcongdoan, new PropertyChangedEventHandler( OnDmcongdoanPropertyChanged ), "Dmcongdoan", DmdongmayEntity.Relations.DmcongdoanEntityUsingMacd, true, signalRelatedEntity, "Dmdongmay", resetFKFields, new int[] { (int)DmdongmayFieldIndex.Macd } );		
 			_dmcongdoan = null;
 		}
-		
+
 		/// <summary> setups the sync logic for member _dmcongdoan</summary>
 		/// <param name="relatedEntity">Instance to set as the related entity of type entityType</param>
 		private void SetupSyncDmcongdoan(IEntity2 relatedEntity)
@@ -539,7 +515,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				DesetupSyncDmcongdoan(true, true);
 				_dmcongdoan = (DmcongdoanEntity)relatedEntity;
-				base.PerformSetupSyncRelatedEntity( _dmcongdoan, new PropertyChangedEventHandler( OnDmcongdoanPropertyChanged ), "Dmcongdoan", DmdongmayEntity.Relations.DmcongdoanEntityUsingMadm, true, new string[] {  } );
+				base.PerformSetupSyncRelatedEntity( _dmcongdoan, new PropertyChangedEventHandler( OnDmcongdoanPropertyChanged ), "Dmcongdoan", DmdongmayEntity.Relations.DmcongdoanEntityUsingMacd, true, new string[] {  } );
 			}
 		}
 		
@@ -555,38 +531,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			}
 		}
 
-		/// <summary> Removes the sync logic for member _dmmay</summary>
-		/// <param name="signalRelatedEntity">If set to true, it will call the related entity's UnsetRelatedEntity method</param>
-		/// <param name="resetFKFields">if set to true it will also reset the FK fields pointing to the related entity</param>
-		private void DesetupSyncDmmay(bool signalRelatedEntity, bool resetFKFields)
-		{
-			base.PerformDesetupSyncRelatedEntity( _dmmay, new PropertyChangedEventHandler( OnDmmayPropertyChanged ), "Dmmay", DmdongmayEntity.Relations.DmmayEntityUsingMamay, false, signalRelatedEntity, "Dmdongmay", false, new int[] { (int)DmdongmayFieldIndex.Madm } );
-			_dmmay = null;
-		}
-		
-		/// <summary> setups the sync logic for member _dmmay</summary>
-		/// <param name="relatedEntity">Instance to set as the related entity of type entityType</param>
-		private void SetupSyncDmmay(IEntity2 relatedEntity)
-		{
-			if(_dmmay!=relatedEntity)
-			{
-				DesetupSyncDmmay(true, true);
-				_dmmay = (DmmayEntity)relatedEntity;
-				base.PerformSetupSyncRelatedEntity( _dmmay, new PropertyChangedEventHandler( OnDmmayPropertyChanged ), "Dmmay", DmdongmayEntity.Relations.DmmayEntityUsingMamay, false, new string[] {  } );
-			}
-		}
-		
-		/// <summary>Handles property change events of properties in a related entity.</summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void OnDmmayPropertyChanged( object sender, PropertyChangedEventArgs e )
-		{
-			switch( e.PropertyName )
-			{
-				default:
-					break;
-			}
-		}
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
 		/// <param name="validator">The validator object for this DmdongmayEntity</param>
@@ -620,7 +564,17 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return _customProperties;}
 		}
 
-
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmmay' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathDmmay
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<DmmayEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmmayEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Dmmay")[0], (int)GD.BBPH.DAL.EntityType.DmdongmayEntity, (int)GD.BBPH.DAL.EntityType.DmmayEntity, 0, null, null, null, null, "Dmmay", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
 
 
 		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmcongdoan' 
@@ -631,21 +585,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			get
 			{
 				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(DmcongdoanEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmcongdoan")[0], (int)GD.BBPH.DAL.EntityType.DmdongmayEntity, (int)GD.BBPH.DAL.EntityType.DmcongdoanEntity, 0, null, null, null, null, "Dmcongdoan", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToOne);
+					(IEntityRelation)GetRelationsForField("Dmcongdoan")[0], (int)GD.BBPH.DAL.EntityType.DmdongmayEntity, (int)GD.BBPH.DAL.EntityType.DmcongdoanEntity, 0, null, null, null, null, "Dmcongdoan", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
 			}
 		}
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmmay' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmmay
-		{
-			get
-			{
-				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(DmmayEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmmay")[0], (int)GD.BBPH.DAL.EntityType.DmdongmayEntity, (int)GD.BBPH.DAL.EntityType.DmmayEntity, 0, null, null, null, null, "Dmmay", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToOne);
-			}
-		}
 
 		/// <summary> The custom properties for the type of this entity instance.</summary>
 		/// <remarks>The data returned from this property should be considered read-only: it is not thread safe to alter this data at runtime.</remarks>
@@ -704,7 +647,21 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmdongmayFieldIndex.Macd, value); }
 		}
 
-
+		/// <summary> Gets the EntityCollection with the related entities of type 'DmmayEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(DmmayEntity))]
+		public virtual EntityCollection<DmmayEntity> Dmmay
+		{
+			get
+			{
+				if(_dmmay==null)
+				{
+					_dmmay = new EntityCollection<DmmayEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmmayEntityFactory)));
+					_dmmay.SetContainingEntityInfo(this, "Dmdongmay");
+				}
+				return _dmmay;
+			}
+		}
 
 
 		/// <summary> Gets / sets related entity of type 'DmcongdoanEntity' which has to be set using a fetch action earlier. If no related entity
@@ -721,67 +678,27 @@ namespace GD.BBPH.DAL.EntityClasses
 				if(base.IsDeserializing)
 				{
 					SetupSyncDmcongdoan(value);
-					if((SerializationHelper.Optimization == SerializationOptimization.Fast) && (value!=null))
-					{
-						value.SetRelatedEntity(this, "Dmdongmay");
-					}
 				}
 				else
 				{
 					if(value==null)
 					{
-						DesetupSyncDmcongdoan(true, true);
+						if(_dmcongdoan != null)
+						{
+							_dmcongdoan.UnsetRelatedEntity(this, "Dmdongmay");
+						}
 					}
 					else
 					{
 						if(_dmcongdoan!=value)
 						{
-							IEntity2 relatedEntity = (IEntity2)value;
-							relatedEntity.SetRelatedEntity(this, "Dmdongmay");
-							SetupSyncDmcongdoan(relatedEntity);
+							((IEntity2)value).SetRelatedEntity(this, "Dmdongmay");
 						}
 					}
 				}
 			}
 		}
 
-		/// <summary> Gets / sets related entity of type 'DmmayEntity' which has to be set using a fetch action earlier. If no related entity
-		/// is set for this property, null is returned. This property is not visible in databound grids.</summary>
-		[Browsable(false)]
-		public virtual DmmayEntity Dmmay
-		{
-			get
-			{
-				return _dmmay;
-			}
-			set
-			{
-				if(base.IsDeserializing)
-				{
-					SetupSyncDmmay(value);
-					if((SerializationHelper.Optimization == SerializationOptimization.Fast) && (value!=null))
-					{
-						value.SetRelatedEntity(this, "Dmdongmay");
-					}
-				}
-				else
-				{
-					if(value==null)
-					{
-						DesetupSyncDmmay(true, true);
-					}
-					else
-					{
-						if(_dmmay!=value)
-						{
-							IEntity2 relatedEntity = (IEntity2)value;
-							relatedEntity.SetRelatedEntity(this, "Dmdongmay");
-							SetupSyncDmmay(relatedEntity);
-						}
-					}
-				}
-			}
-		}
 	
 		
 		/// <summary> Gets the type of the hierarchy this entity is in. </summary>
