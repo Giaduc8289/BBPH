@@ -169,6 +169,30 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMBOPHAN = value; }
         }
         #endregion
+        #region DT_DMDONGMAY
+        private static DataTable _DT_DMDONGMAY = null;
+        public static DataTable DT_DMDONGMAY
+        {
+            get
+            {
+                _DT_DMDONGMAY = new DmdongmayManager().SelectAllRDT();
+                return _DT_DMDONGMAY;
+            }
+            set { _DT_DMDONGMAY = value; }
+        }
+        #endregion
+        #region DT_DMMAY
+        private static DataTable _DT_DMMAY = null;
+        public static DataTable DT_DMMAY
+        {
+            get
+            {
+                _DT_DMMAY = new DmmayManager().SelectAllRDT();
+                return _DT_DMMAY;
+            }
+            set { _DT_DMMAY = value; }
+        }
+        #endregion
         #region DMCONGDOAN
         private static DataTable _DT_DMCONGDOAN = null;
         public static DataTable DT_DMCONGDOAN
