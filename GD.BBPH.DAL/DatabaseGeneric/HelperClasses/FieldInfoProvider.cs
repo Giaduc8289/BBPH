@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 2:52:39 PM
+// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -91,16 +91,16 @@ namespace GD.BBPH.DAL.HelperClasses
 		/// <summary>Inits CongsuatmayEntity's FieldInfo objects</summary>
 		private void InitCongsuatmayEntityInfos()
 		{
-			base.AddElementFieldInfo("CongsuatmayEntity", "Macs", typeof(System.String), true, true, false, false,  (int)CongsuatmayFieldIndex.Macs, 20, 0, 0);
+			base.AddElementFieldInfo("CongsuatmayEntity", "Macs", typeof(System.String), true, false, false, false,  (int)CongsuatmayFieldIndex.Macs, 20, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Tencongsuat", typeof(System.String), false, false, false, false,  (int)CongsuatmayFieldIndex.Tencongsuat, 250, 0, 0);
-			base.AddElementFieldInfo("CongsuatmayEntity", "Macd", typeof(System.String), false, false, false, false,  (int)CongsuatmayFieldIndex.Macd, 20, 0, 0);
+			base.AddElementFieldInfo("CongsuatmayEntity", "Macd", typeof(System.String), false, true, false, false,  (int)CongsuatmayFieldIndex.Macd, 20, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Maqccha", typeof(System.String), false, false, false, false,  (int)CongsuatmayFieldIndex.Maqccha, 20, 0, 0);
 		}
 		/// <summary>Inits CtptmangDEntity's FieldInfo objects</summary>
 		private void InitCtptmangDEntityInfos()
 		{
-			base.AddElementFieldInfo("CtptmangDEntity", "Id", typeof(System.String), true, false, false, false,  (int)CtptmangDFieldIndex.Id, 20, 0, 0);
-			base.AddElementFieldInfo("CtptmangDEntity", "IdH", typeof(System.String), false, true, false, false,  (int)CtptmangDFieldIndex.IdH, 20, 0, 0);
+			base.AddElementFieldInfo("CtptmangDEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)CtptmangDFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("CtptmangDEntity", "IdH", typeof(Nullable<System.Int64>), false, true, false, true,  (int)CtptmangDFieldIndex.IdH, 0, 0, 19);
 			base.AddElementFieldInfo("CtptmangDEntity", "Mact", typeof(System.String), false, false, false, false,  (int)CtptmangDFieldIndex.Mact, 20, 0, 0);
 			base.AddElementFieldInfo("CtptmangDEntity", "Tenct", typeof(System.String), false, false, false, false,  (int)CtptmangDFieldIndex.Tenct, 250, 0, 0);
 			base.AddElementFieldInfo("CtptmangDEntity", "Manl", typeof(System.String), false, true, false, false,  (int)CtptmangDFieldIndex.Manl, 20, 0, 0);
@@ -111,8 +111,8 @@ namespace GD.BBPH.DAL.HelperClasses
 		/// <summary>Inits CtptmangHEntity's FieldInfo objects</summary>
 		private void InitCtptmangHEntityInfos()
 		{
-			base.AddElementFieldInfo("CtptmangHEntity", "Id", typeof(System.String), false, false, false, false,  (int)CtptmangHFieldIndex.Id, 20, 0, 0);
-			base.AddElementFieldInfo("CtptmangHEntity", "Mactpt", typeof(System.String), true, false, false, false,  (int)CtptmangHFieldIndex.Mactpt, 20, 0, 0);
+			base.AddElementFieldInfo("CtptmangHEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)CtptmangHFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("CtptmangHEntity", "Mactpt", typeof(System.String), false, false, false, false,  (int)CtptmangHFieldIndex.Mactpt, 20, 0, 0);
 			base.AddElementFieldInfo("CtptmangHEntity", "Tenctpt", typeof(System.String), false, false, false, false,  (int)CtptmangHFieldIndex.Tenctpt, 250, 0, 0);
 			base.AddElementFieldInfo("CtptmangHEntity", "Ngayapdung", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)CtptmangHFieldIndex.Ngayapdung, 0, 0, 0);
 		}
@@ -173,9 +173,9 @@ namespace GD.BBPH.DAL.HelperClasses
 		/// <summary>Inits DmdongmayEntity's FieldInfo objects</summary>
 		private void InitDmdongmayEntityInfos()
 		{
-			base.AddElementFieldInfo("DmdongmayEntity", "Madm", typeof(System.String), true, true, false, false,  (int)DmdongmayFieldIndex.Madm, 20, 0, 0);
+			base.AddElementFieldInfo("DmdongmayEntity", "Madm", typeof(System.String), true, false, false, false,  (int)DmdongmayFieldIndex.Madm, 20, 0, 0);
 			base.AddElementFieldInfo("DmdongmayEntity", "Tendongmay", typeof(System.String), false, false, false, false,  (int)DmdongmayFieldIndex.Tendongmay, 250, 0, 0);
-			base.AddElementFieldInfo("DmdongmayEntity", "Macd", typeof(System.String), false, false, false, false,  (int)DmdongmayFieldIndex.Macd, 20, 0, 0);
+			base.AddElementFieldInfo("DmdongmayEntity", "Macd", typeof(System.String), false, true, false, false,  (int)DmdongmayFieldIndex.Macd, 20, 0, 0);
 		}
 		/// <summary>Inits DmhangEntity's FieldInfo objects</summary>
 		private void InitDmhangEntityInfos()
@@ -184,8 +184,8 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmhangEntity", "Tensp", typeof(System.String), false, false, false, false,  (int)DmhangFieldIndex.Tensp, 250, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Makhach", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Makhach, 20, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Tenkhach", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Tenkhach, 250, 0, 0);
-			base.AddElementFieldInfo("DmhangEntity", "Kichthuoc", typeof(Nullable<System.Int32>), false, false, false, true,  (int)DmhangFieldIndex.Kichthuoc, 0, 0, 10);
-			base.AddElementFieldInfo("DmhangEntity", "Khoiluongmuc", typeof(Nullable<System.Int32>), false, false, false, true,  (int)DmhangFieldIndex.Khoiluongmuc, 0, 0, 10);
+			base.AddElementFieldInfo("DmhangEntity", "Kichthuoc", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Kichthuoc, 50, 0, 0);
+			base.AddElementFieldInfo("DmhangEntity", "Khoiluongmuc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmhangFieldIndex.Khoiluongmuc, 0, 2, 20);
 			base.AddElementFieldInfo("DmhangEntity", "Sohinh", typeof(Nullable<System.Int32>), false, false, false, true,  (int)DmhangFieldIndex.Sohinh, 0, 0, 10);
 			base.AddElementFieldInfo("DmhangEntity", "Cautrucin", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Cautrucin, 250, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Somau", typeof(Nullable<System.Int32>), false, false, false, true,  (int)DmhangFieldIndex.Somau, 0, 0, 10);
@@ -225,7 +225,7 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			base.AddElementFieldInfo("DmlydonhapxuatEntity", "Malydo", typeof(System.String), true, false, false, false,  (int)DmlydonhapxuatFieldIndex.Malydo, 20, 0, 0);
 			base.AddElementFieldInfo("DmlydonhapxuatEntity", "Tenlydo", typeof(System.String), false, false, false, false,  (int)DmlydonhapxuatFieldIndex.Tenlydo, 250, 0, 0);
-			base.AddElementFieldInfo("DmlydonhapxuatEntity", "Manhom", typeof(System.String), false, true, false, false,  (int)DmlydonhapxuatFieldIndex.Manhom, 20, 0, 0);
+			base.AddElementFieldInfo("DmlydonhapxuatEntity", "Manhom", typeof(System.String), false, false, false, false,  (int)DmlydonhapxuatFieldIndex.Manhom, 20, 0, 0);
 			base.AddElementFieldInfo("DmlydonhapxuatEntity", "Tennhom", typeof(System.String), false, false, false, false,  (int)DmlydonhapxuatFieldIndex.Tennhom, 250, 0, 0);
 		}
 		/// <summary>Inits DmmangEntity's FieldInfo objects</summary>
@@ -237,7 +237,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmmangEntity", "Tenkhach", typeof(System.String), false, false, false, false,  (int)DmmangFieldIndex.Tenkhach, 250, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Kichthuoc", typeof(System.String), false, false, false, false,  (int)DmmangFieldIndex.Kichthuoc, 250, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Trongluong", typeof(System.String), false, false, false, false,  (int)DmmangFieldIndex.Trongluong, 250, 0, 0);
-			base.AddElementFieldInfo("DmmangEntity", "Mactpt", typeof(System.String), false, true, false, false,  (int)DmmangFieldIndex.Mactpt, 20, 0, 0);
+			base.AddElementFieldInfo("DmmangEntity", "Mactpt", typeof(System.String), false, false, false, false,  (int)DmmangFieldIndex.Mactpt, 20, 0, 0);
 		}
 		/// <summary>Inits DmmauEntity's FieldInfo objects</summary>
 		private void InitDmmauEntityInfos()
@@ -249,9 +249,9 @@ namespace GD.BBPH.DAL.HelperClasses
 		/// <summary>Inits DmmayEntity's FieldInfo objects</summary>
 		private void InitDmmayEntityInfos()
 		{
-			base.AddElementFieldInfo("DmmayEntity", "Mamay", typeof(System.String), true, true, false, false,  (int)DmmayFieldIndex.Mamay, 20, 0, 0);
+			base.AddElementFieldInfo("DmmayEntity", "Mamay", typeof(System.String), true, false, false, false,  (int)DmmayFieldIndex.Mamay, 20, 0, 0);
 			base.AddElementFieldInfo("DmmayEntity", "Tenmay", typeof(System.String), false, false, false, false,  (int)DmmayFieldIndex.Tenmay, 250, 0, 0);
-			base.AddElementFieldInfo("DmmayEntity", "Madm", typeof(System.String), false, false, false, false,  (int)DmmayFieldIndex.Madm, 20, 0, 0);
+			base.AddElementFieldInfo("DmmayEntity", "Madm", typeof(System.String), false, true, false, false,  (int)DmmayFieldIndex.Madm, 20, 0, 0);
 			base.AddElementFieldInfo("DmmayEntity", "Vitri", typeof(System.String), false, false, false, false,  (int)DmmayFieldIndex.Vitri, 250, 0, 0);
 		}
 		/// <summary>Inits DmnguyenlieuEntity's FieldInfo objects</summary>
@@ -272,9 +272,9 @@ namespace GD.BBPH.DAL.HelperClasses
 		/// <summary>Inits DmquycachEntity's FieldInfo objects</summary>
 		private void InitDmquycachEntityInfos()
 		{
-			base.AddElementFieldInfo("DmquycachEntity", "Maqc", typeof(System.String), true, true, false, false,  (int)DmquycachFieldIndex.Maqc, 20, 0, 0);
+			base.AddElementFieldInfo("DmquycachEntity", "Maqc", typeof(System.String), true, false, false, false,  (int)DmquycachFieldIndex.Maqc, 20, 0, 0);
 			base.AddElementFieldInfo("DmquycachEntity", "Tenquycach", typeof(System.String), false, false, false, false,  (int)DmquycachFieldIndex.Tenquycach, 250, 0, 0);
-			base.AddElementFieldInfo("DmquycachEntity", "Macd", typeof(System.String), false, false, false, false,  (int)DmquycachFieldIndex.Macd, 20, 0, 0);
+			base.AddElementFieldInfo("DmquycachEntity", "Macd", typeof(System.String), false, true, false, false,  (int)DmquycachFieldIndex.Macd, 20, 0, 0);
 			base.AddElementFieldInfo("DmquycachEntity", "Maqccha", typeof(System.String), false, false, false, false,  (int)DmquycachFieldIndex.Maqccha, 20, 0, 0);
 		}
 		/// <summary>Inits DmtaikhoanEntity's FieldInfo objects</summary>

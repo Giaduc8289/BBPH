@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 2:52:39 PM
+// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -31,33 +31,29 @@ namespace GD.BBPH.DAL.RelationClasses
 		{
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
 
-			toReturn.Add(this.DmdongmayEntityUsingMamay);
 
+			toReturn.Add(this.DmdongmayEntityUsingMadm);
 			return toReturn;
 		}
 
 		#region Class Property Declarations
 
 
-		/// <summary>Returns a new IEntityRelation object, between DmmayEntity and DmdongmayEntity over the 1:1 relation they have, using the relation between the fields:
-		/// Dmmay.Mamay - Dmdongmay.Madm
+
+		/// <summary>Returns a new IEntityRelation object, between DmmayEntity and DmdongmayEntity over the m:1 relation they have, using the relation between the fields:
+		/// Dmmay.Madm - Dmdongmay.Madm
 		/// </summary>
-		public virtual IEntityRelation DmdongmayEntityUsingMamay
+		public virtual IEntityRelation DmdongmayEntityUsingMadm
 		{
 			get
 			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToOne, "Dmdongmay", false);
-
-
-
-				relation.AddEntityFieldPair(DmdongmayFields.Madm, DmmayFields.Mamay);
-
+				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmdongmay", false);
+				relation.AddEntityFieldPair(DmdongmayFields.Madm, DmmayFields.Madm);
 				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmdongmayEntity", false);
 				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", true);
 				return relation;
 			}
 		}
-
 
 		/// <summary>stub, not used in this entity, only for TargetPerEntity entities.</summary>
 		public virtual IEntityRelation GetSubTypeRelation(string subTypeEntityName) { return null; }

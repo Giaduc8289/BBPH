@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 2:52:40 PM
+// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -585,22 +585,22 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Kichthuoc property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."kichthuoc"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Int32> Kichthuoc
+		public virtual System.String Kichthuoc
 		{
-			get { return (Nullable<System.Int32>)GetValue((int)DmhangFieldIndex.Kichthuoc, false); }
+			get { return (System.String)GetValue((int)DmhangFieldIndex.Kichthuoc, true); }
 			set	{ SetValue((int)DmhangFieldIndex.Kichthuoc, value); }
 		}
 
 		/// <summary> The Khoiluongmuc property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Khoiluongmuc"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Int32> Khoiluongmuc
+		public virtual Nullable<System.Decimal> Khoiluongmuc
 		{
-			get { return (Nullable<System.Int32>)GetValue((int)DmhangFieldIndex.Khoiluongmuc, false); }
+			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Khoiluongmuc, false); }
 			set	{ SetValue((int)DmhangFieldIndex.Khoiluongmuc, value); }
 		}
 

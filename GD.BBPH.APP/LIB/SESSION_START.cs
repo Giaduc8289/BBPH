@@ -169,6 +169,30 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMBOPHAN = value; }
         }
         #endregion
+        #region DT_DMDONGMAY
+        private static DataTable _DT_DMDONGMAY = null;
+        public static DataTable DT_DMDONGMAY
+        {
+            get
+            {
+                _DT_DMDONGMAY = new DmdongmayManager().SelectAllRDT();
+                return _DT_DMDONGMAY;
+            }
+            set { _DT_DMDONGMAY = value; }
+        }
+        #endregion
+        #region DT_DMMAY
+        private static DataTable _DT_DMMAY = null;
+        public static DataTable DT_DMMAY
+        {
+            get
+            {
+                _DT_DMMAY = new DmmayManager().SelectAllRDT();
+                return _DT_DMMAY;
+            }
+            set { _DT_DMMAY = value; }
+        }
+        #endregion
         #region DMCONGDOAN
         private static DataTable _DT_DMCONGDOAN = null;
         public static DataTable DT_DMCONGDOAN
@@ -179,6 +203,45 @@ namespace GD.BBPH.APP.LIB
                 return _DT_DMCONGDOAN;
             }
             set { _DT_DMCONGDOAN = value; }
+        }
+        #endregion
+
+        #region DMQUYCACH
+        private static DataTable _DT_DMQUYCACH = null;
+        public static DataTable DT_DMQUYCACH
+        {
+            get
+            {
+                _DT_DMQUYCACH = new DmquycachManager().SelectAllRDT();
+                return _DT_DMQUYCACH;
+            }
+            set { _DT_DMQUYCACH = value; }
+        }
+        #endregion
+
+        #region DMKHO
+        private static DataTable _DT_DMKHO = null;
+        public static DataTable DT_DMKHO
+        {
+            get
+            {
+                _DT_DMKHO = new DmkhoManager().SelectAllRDT();
+                return _DT_DMKHO;
+            }
+            set { _DT_DMKHO = value; }
+        }
+        #endregion
+
+        #region DMLYDONHAPXUAT
+        private static DataTable _DT_DMLYDONHAPXUAT = null;
+        public static DataTable DT_DMLYDONHAPXUAT
+        {
+            get
+            {
+                _DT_DMLYDONHAPXUAT = new DmlydonhapxuatManager().SelectAllRDT();
+                return _DT_DMLYDONHAPXUAT;
+            }
+            set { _DT_DMLYDONHAPXUAT = value; }
         }
         #endregion
 

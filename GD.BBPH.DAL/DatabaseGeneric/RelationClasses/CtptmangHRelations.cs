@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 2:52:39 PM
+// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -31,7 +31,6 @@ namespace GD.BBPH.DAL.RelationClasses
 		{
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
 			toReturn.Add(this.CtptmangDEntityUsingIdH);
-			toReturn.Add(this.DmmangEntityUsingMactpt);
 
 
 			return toReturn;
@@ -40,31 +39,16 @@ namespace GD.BBPH.DAL.RelationClasses
 		#region Class Property Declarations
 
 		/// <summary>Returns a new IEntityRelation object, between CtptmangHEntity and CtptmangDEntity over the 1:n relation they have, using the relation between the fields:
-		/// CtptmangH.Mactpt - CtptmangD.IdH
+		/// CtptmangH.Id - CtptmangD.IdH
 		/// </summary>
 		public virtual IEntityRelation CtptmangDEntityUsingIdH
 		{
 			get
 			{
 				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "CtptmangD" , true);
-				relation.AddEntityFieldPair(CtptmangHFields.Mactpt, CtptmangDFields.IdH);
+				relation.AddEntityFieldPair(CtptmangHFields.Id, CtptmangDFields.IdH);
 				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangHEntity", true);
 				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangDEntity", false);
-				return relation;
-			}
-		}
-
-		/// <summary>Returns a new IEntityRelation object, between CtptmangHEntity and DmmangEntity over the 1:n relation they have, using the relation between the fields:
-		/// CtptmangH.Mactpt - Dmmang.Mactpt
-		/// </summary>
-		public virtual IEntityRelation DmmangEntityUsingMactpt
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Dmmang" , true);
-				relation.AddEntityFieldPair(CtptmangHFields.Mactpt, DmmangFields.Mactpt);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangHEntity", true);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmangEntity", false);
 				return relation;
 			}
 		}

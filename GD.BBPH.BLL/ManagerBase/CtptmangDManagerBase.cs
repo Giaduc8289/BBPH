@@ -57,9 +57,9 @@ namespace GD.BBPH.BLL
 			DataTable dt = new DataTable();
 			
 			
-			dt.Columns.Add(Field_Id,typeof(System.String));
+			dt.Columns.Add(Field_Id,typeof(System.Int64));
 			
-			dt.Columns.Add(Field_IdH,typeof(System.String));
+			dt.Columns.Add(Field_IdH,typeof(System.Int64));
 			
 			dt.Columns.Add(Field_Mact,typeof(System.String));
 			
@@ -139,13 +139,13 @@ namespace GD.BBPH.BLL
 		public CtptmangDEntity Convert(DataRow r)
 		{	
 			
-			CtptmangDEntity _CtptmangDEntity=new CtptmangDEntity(r[Field_Id].ToString());					
+			CtptmangDEntity _CtptmangDEntity=new CtptmangDEntity(System.Int64.Parse(r[Field_Id].ToString()));					
 						
 			
 			
 			try
 			{
-				_CtptmangDEntity.IdH= r[Field_IdH].ToString();						
+				_CtptmangDEntity.IdH= System.Int64.Parse(r[Field_IdH].ToString());						
 			}
 			catch { }
 			
@@ -349,7 +349,7 @@ namespace GD.BBPH.BLL
 			return CtptmangDEntity;
 		}
 
-		public CtptmangDEntity Insert(System.String  Id, System.String  IdH, System.String  Mact, System.String  Tenct, System.String  Manl, System.String  Tennguyenlieu, System.String  Trongluong, System.String  Tile)
+		public CtptmangDEntity Insert(System.Int64  Id, System.Int64  IdH, System.String  Mact, System.String  Tenct, System.String  Manl, System.String  Tennguyenlieu, System.String  Trongluong, System.String  Tile)
 		{
 			CtptmangDEntity _CtptmangDEntity = new CtptmangDEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -377,7 +377,7 @@ namespace GD.BBPH.BLL
 			return _CtptmangDEntity;
 		}
 
-		public CtptmangDEntity Insert(System.String IdH, System.String Mact, System.String Tenct, System.String Manl, System.String Tennguyenlieu, System.String Trongluong, System.String Tile)//ko co mahieu
+		public CtptmangDEntity Insert(System.Int64 IdH, System.String Mact, System.String Tenct, System.String Manl, System.String Tennguyenlieu, System.String Trongluong, System.String Tile)//ko co mahieu
 		{
 			CtptmangDEntity _CtptmangDEntity = new CtptmangDEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -434,7 +434,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Id, System.String IdH, System.String Mact, System.String Tenct, System.String Manl, System.String Tennguyenlieu, System.String Trongluong, System.String Tile)
+		public bool Update(System.Int64 Id, System.Int64 IdH, System.String Mact, System.String Tenct, System.String Manl, System.String Tennguyenlieu, System.String Trongluong, System.String Tile)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -467,7 +467,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Delete(System.String Id)
+		public bool Delete(System.Int64 Id)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -492,7 +492,7 @@ namespace GD.BBPH.BLL
 		
 		
 		
-		public int DeleteById(System.String Id)
+		public int DeleteById(System.Int64 Id)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -508,7 +508,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByIdH(System.String IdH)
+		public int DeleteByIdH(System.Int64 IdH)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -621,7 +621,7 @@ namespace GD.BBPH.BLL
 		}		
 			
 		
-		public CtptmangDEntity SelectOne(System.String Id)
+		public CtptmangDEntity SelectOne(System.Int64 Id)
 		{
 			CtptmangDEntity toReturn = null;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -661,7 +661,7 @@ namespace GD.BBPH.BLL
 		
 		
 		// Return EntityCollection
-		public EntityCollection SelectById(System.String Id)
+		public EntityCollection SelectById(System.Int64 Id)
 		{
 			EntityCollection _CtptmangDCollection = new EntityCollection(new CtptmangDEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -677,7 +677,7 @@ namespace GD.BBPH.BLL
 			return _CtptmangDCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByIdRDT(System.String Id)
+		public DataTable SelectByIdRDT(System.Int64 Id)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _CtptmangDCollection = new EntityCollection(new CtptmangDEntityFactory());
@@ -695,7 +695,7 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByIdH(System.String IdH)
+		public EntityCollection SelectByIdH(System.Int64 IdH)
 		{
 			EntityCollection _CtptmangDCollection = new EntityCollection(new CtptmangDEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -711,7 +711,7 @@ namespace GD.BBPH.BLL
 			return _CtptmangDCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByIdHRDT(System.String IdH)
+		public DataTable SelectByIdHRDT(System.Int64 IdH)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _CtptmangDCollection = new EntityCollection(new CtptmangDEntityFactory());

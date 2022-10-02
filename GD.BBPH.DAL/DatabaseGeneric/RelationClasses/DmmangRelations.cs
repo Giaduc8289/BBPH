@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, September 30, 2022 2:52:39 PM
+// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -32,7 +32,7 @@ namespace GD.BBPH.DAL.RelationClasses
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
 
 
-			toReturn.Add(this.CtptmangHEntityUsingMactpt);
+
 			return toReturn;
 		}
 
@@ -40,20 +40,6 @@ namespace GD.BBPH.DAL.RelationClasses
 
 
 
-		/// <summary>Returns a new IEntityRelation object, between DmmangEntity and CtptmangHEntity over the m:1 relation they have, using the relation between the fields:
-		/// Dmmang.Mactpt - CtptmangH.Mactpt
-		/// </summary>
-		public virtual IEntityRelation CtptmangHEntityUsingMactpt
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "CtptmangH", false);
-				relation.AddEntityFieldPair(CtptmangHFields.Mactpt, DmmangFields.Mactpt);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangHEntity", false);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmangEntity", true);
-				return relation;
-			}
-		}
 
 		/// <summary>stub, not used in this entity, only for TargetPerEntity entities.</summary>
 		public virtual IEntityRelation GetSubTypeRelation(string subTypeEntityName) { return null; }

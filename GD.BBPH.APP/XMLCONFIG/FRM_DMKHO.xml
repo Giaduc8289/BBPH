@@ -17,28 +17,14 @@
               </xs:sequence>
             </xs:complexType>
           </xs:element>
-          <xs:element name="tablename">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element name="name" type="xs:string" minOccurs="0" />
-                <xs:element name="headerText" type="xs:string" minOccurs="0" />
-              </xs:sequence>
-            </xs:complexType>
-          </xs:element>
         </xs:choice>
       </xs:complexType>
     </xs:element>
   </xs:schema>
-
-  <tablename>
-    <name>Danhmuckho</name>
-    <headerText>Danh sách khổ</headerText>
-  </tablename>
-
   <viewgrid>
     <value>1</value>
-    <name>Mahieu</name>
-    <headerText>Mã khổ</headerText>
+    <name>Makho</name>
+    <headerText>Makho</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -46,8 +32,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Dorong</name>
-    <headerText>Độ rộng</headerText>
+    <name>Tenkho</name>
+    <headerText>Tenkho</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -55,17 +41,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Muccsdet</name>
-    <headerText>Mức công suất dệt</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Mucluong</name>
-    <headerText>Mức lương</headerText>
+    <name>Tenrutgon</name>
+    <headerText>Tenrutgon</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>

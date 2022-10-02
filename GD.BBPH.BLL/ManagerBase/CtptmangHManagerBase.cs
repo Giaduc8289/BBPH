@@ -49,7 +49,7 @@ namespace GD.BBPH.BLL
 			DataTable dt = new DataTable();
 			
 			
-			dt.Columns.Add(Field_Id,typeof(System.String));
+			dt.Columns.Add(Field_Id,typeof(System.Int64));
 			
 			dt.Columns.Add(Field_Mactpt,typeof(System.String));
 			
@@ -99,15 +99,15 @@ namespace GD.BBPH.BLL
 		public CtptmangHEntity Convert(DataRow r)
 		{	
 			
-			CtptmangHEntity _CtptmangHEntity=new CtptmangHEntity(r[Field_Mactpt].ToString());					
+			CtptmangHEntity _CtptmangHEntity=new CtptmangHEntity(System.Int64.Parse(r[Field_Id].ToString()));					
 						
+			
 			
 			try
 			{
-				_CtptmangHEntity.Id= r[Field_Id].ToString();						
+				_CtptmangHEntity.Mactpt= r[Field_Mactpt].ToString();						
 			}
 			catch { }
-			
 			
 			try
 			{
@@ -145,15 +145,7 @@ namespace GD.BBPH.BLL
 		{
 		
 			
-			String id =(new CtptmangHManagerBase()).Insert(_CtptmangHEntity).Mactpt.ToString();
-			
-			
-			try
-			{
-				r.SetField(Field_Mactpt,_CtptmangHEntity.Mactpt);
-			}
-			catch { }
-			
+			String id =(new CtptmangHManagerBase()).Insert(_CtptmangHEntity).Id.ToString();
 			
 			
 			try
@@ -162,6 +154,14 @@ namespace GD.BBPH.BLL
 			}
 			catch { }
 			
+			
+			
+			
+			try
+			{
+				r.SetField(Field_Mactpt,_CtptmangHEntity.Mactpt);
+			}
+			catch { }
 			
 			try
 			{
@@ -185,16 +185,16 @@ namespace GD.BBPH.BLL
 		
 			
 			(new CtptmangHManagerBase()).Update(_CtptmangHEntity);
-			r.SetField(Field_Mactpt,_CtptmangHEntity.Mactpt);
+			r.SetField(Field_Id,_CtptmangHEntity.Id);
 									
+			
 			
 			
 			try
 			{
-				r.SetField(Field_Id,_CtptmangHEntity.Id);
+				r.SetField(Field_Mactpt,_CtptmangHEntity.Mactpt);
 			}
 			catch { }
-			
 			
 			try
 			{
@@ -229,7 +229,7 @@ namespace GD.BBPH.BLL
 			return CtptmangHEntity;
 		}
 
-		public CtptmangHEntity Insert(System.String  Id, System.String  Mactpt, System.String  Tenctpt, System.DateTime  Ngayapdung)
+		public CtptmangHEntity Insert(System.Int64  Id, System.String  Mactpt, System.String  Tenctpt, System.DateTime  Ngayapdung)
 		{
 			CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -249,14 +249,14 @@ namespace GD.BBPH.BLL
 			return _CtptmangHEntity;
 		}
 
-		public CtptmangHEntity Insert(System.String Id, System.String Tenctpt, System.DateTime Ngayapdung)//ko co mahieu
+		public CtptmangHEntity Insert(System.String Mactpt, System.String Tenctpt, System.DateTime Ngayapdung)//ko co mahieu
 		{
 			CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
 				
-				_CtptmangHEntity.Id = Id;
 				
+				_CtptmangHEntity.Mactpt = Mactpt;
 				
 				_CtptmangHEntity.Tenctpt = Tenctpt;
 				
@@ -276,7 +276,7 @@ namespace GD.BBPH.BLL
 				RelationPredicateBucket filter = new RelationPredicateBucket();
 				IPredicateExpression _PredicateExpression = new PredicateExpression();
 				
-				_PredicateExpression.Add(CtptmangHFields.Mactpt == _CtptmangHEntity.Mactpt);
+				_PredicateExpression.Add(CtptmangHFields.Id == _CtptmangHEntity.Id);
 				
 					
 				filter.PredicateExpression.Add(_PredicateExpression);
@@ -298,18 +298,18 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Id, System.String Mactpt, System.String Tenctpt, System.DateTime Ngayapdung)
+		public bool Update(System.Int64 Id, System.String Mactpt, System.String Tenctpt, System.DateTime Ngayapdung)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
-				CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity(Mactpt);
+				CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity(Id);
 				if (adapter.FetchEntity(_CtptmangHEntity))
 				{
 				
 					
-					_CtptmangHEntity.Id = Id;
 					
+					_CtptmangHEntity.Mactpt = Mactpt;
 					
 					_CtptmangHEntity.Tenctpt = Tenctpt;
 					
@@ -323,12 +323,12 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Delete(System.String Mactpt)
+		public bool Delete(System.Int64 Id)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
-				CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity(Mactpt);
+				CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity(Id);
 				if (adapter.FetchEntity(_CtptmangHEntity))
 				{
 					adapter.DeleteEntity(_CtptmangHEntity);
@@ -348,7 +348,7 @@ namespace GD.BBPH.BLL
 		
 		
 		
-		public int DeleteById(System.String Id)
+		public int DeleteById(System.Int64 Id)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -413,12 +413,12 @@ namespace GD.BBPH.BLL
 		}		
 			
 		
-		public CtptmangHEntity SelectOne(System.String Mactpt)
+		public CtptmangHEntity SelectOne(System.Int64 Id)
 		{
 			CtptmangHEntity toReturn = null;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
-				CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity(Mactpt);
+				CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity(Id);
 				if (adapter.FetchEntity(_CtptmangHEntity))
 				{
 					toReturn = _CtptmangHEntity;
@@ -453,7 +453,7 @@ namespace GD.BBPH.BLL
 		
 		
 		// Return EntityCollection
-		public EntityCollection SelectById(System.String Id)
+		public EntityCollection SelectById(System.Int64 Id)
 		{
 			EntityCollection _CtptmangHCollection = new EntityCollection(new CtptmangHEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -469,7 +469,7 @@ namespace GD.BBPH.BLL
 			return _CtptmangHCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByIdRDT(System.String Id)
+		public DataTable SelectByIdRDT(System.Int64 Id)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _CtptmangHCollection = new EntityCollection(new CtptmangHEntityFactory());
