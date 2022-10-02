@@ -19,6 +19,39 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GD.BBPH.APP", "GD.BBPH.APP\
 		{D10F7CA6-3D6E-48B8-8F2F-B72115C9D49D} = {D10F7CA6-3D6E-48B8-8F2F-B72115C9D49D}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GenSupportCode", "GenSupportCode", "{8AA91BFB-AA86-4F15-9AA8-CFDF4059FDF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{FFB521EE-43B1-4389-B393-98CC5C38EDE1}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Temp\BBPH\Entity\CongsuatmayEnt.cs = ..\..\Temp\BBPH\Entity\CongsuatmayEnt.cs
+		..\..\Temp\BBPH\Entity\CtptmangDEnt.cs = ..\..\Temp\BBPH\Entity\CtptmangDEnt.cs
+		..\..\Temp\BBPH\Entity\CtptmangHEnt.cs = ..\..\Temp\BBPH\Entity\CtptmangHEnt.cs
+		..\..\Temp\BBPH\Entity\DinhmuathoigianEnt.cs = ..\..\Temp\BBPH\Entity\DinhmuathoigianEnt.cs
+		..\..\Temp\BBPH\Entity\DmbophanEnt.cs = ..\..\Temp\BBPH\Entity\DmbophanEnt.cs
+		..\..\Temp\BBPH\Entity\DmcapmaEnt.cs = ..\..\Temp\BBPH\Entity\DmcapmaEnt.cs
+		..\..\Temp\BBPH\Entity\DmchucvuEnt.cs = ..\..\Temp\BBPH\Entity\DmchucvuEnt.cs
+		..\..\Temp\BBPH\Entity\DmcongdoanEnt.cs = ..\..\Temp\BBPH\Entity\DmcongdoanEnt.cs
+		..\..\Temp\BBPH\Entity\DmcongnhanEnt.cs = ..\..\Temp\BBPH\Entity\DmcongnhanEnt.cs
+		..\..\Temp\BBPH\Entity\DmdongmayEnt.cs = ..\..\Temp\BBPH\Entity\DmdongmayEnt.cs
+		..\..\Temp\BBPH\Entity\DmhangEnt.cs = ..\..\Temp\BBPH\Entity\DmhangEnt.cs
+		..\..\Temp\BBPH\Entity\DmkhachEnt.cs = ..\..\Temp\BBPH\Entity\DmkhachEnt.cs
+		..\..\Temp\BBPH\Entity\DmkhoEnt.cs = ..\..\Temp\BBPH\Entity\DmkhoEnt.cs
+		..\..\Temp\BBPH\Entity\DmlydonhapxuatEnt.cs = ..\..\Temp\BBPH\Entity\DmlydonhapxuatEnt.cs
+		..\..\Temp\BBPH\Entity\DmmangEnt.cs = ..\..\Temp\BBPH\Entity\DmmangEnt.cs
+		..\..\Temp\BBPH\Entity\DmmauEnt.cs = ..\..\Temp\BBPH\Entity\DmmauEnt.cs
+		..\..\Temp\BBPH\Entity\DmmayEnt.cs = ..\..\Temp\BBPH\Entity\DmmayEnt.cs
+		..\..\Temp\BBPH\Entity\DmnguyenlieuEnt.cs = ..\..\Temp\BBPH\Entity\DmnguyenlieuEnt.cs
+		..\..\Temp\BBPH\Entity\DmnhomnguyenlieuEnt.cs = ..\..\Temp\BBPH\Entity\DmnhomnguyenlieuEnt.cs
+		..\..\Temp\BBPH\Entity\DmquycachEnt.cs = ..\..\Temp\BBPH\Entity\DmquycachEnt.cs
+		..\..\Temp\BBPH\Entity\DmtaikhoanEnt.cs = ..\..\Temp\BBPH\Entity\DmtaikhoanEnt.cs
+		..\..\Temp\BBPH\Entity\LogbackupEnt.cs = ..\..\Temp\BBPH\Entity\LogbackupEnt.cs
+		..\..\Temp\BBPH\Entity\MenuEnt.cs = ..\..\Temp\BBPH\Entity\MenuEnt.cs
+		..\..\Temp\BBPH\Entity\MenuroleEnt.cs = ..\..\Temp\BBPH\Entity\MenuroleEnt.cs
+		..\..\Temp\BBPH\Entity\RolesEnt.cs = ..\..\Temp\BBPH\Entity\RolesEnt.cs
+		..\..\Temp\BBPH\Entity\ThamsoEnt.cs = ..\..\Temp\BBPH\Entity\ThamsoEnt.cs
+		..\..\Temp\BBPH\Entity\UsersEnt.cs = ..\..\Temp\BBPH\Entity\UsersEnt.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +124,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FFB521EE-43B1-4389-B393-98CC5C38EDE1} = {8AA91BFB-AA86-4F15-9AA8-CFDF4059FDF7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE3F4224-6081-4020-8225-64CF91DDE386}
