@@ -1,0 +1,77 @@
+﻿
+/*
+'===============================================================================
+'  GD.BBPH.DAL.EntityClasses.DmmauEnt
+'===============================================================================
+*/
+
+using System;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using GD.BBPH.BLL;
+using GD.BBPH.DAL;
+using GD.BBPH.DAL.EntityClasses;
+using GD.BBPH.DAL.FactoryClasses;
+using GD.BBPH.DAL.HelperClasses;
+using SD.LLBLGen.Pro.ORMSupportClasses;
+
+namespace GD.BBPH.DAL.EntityClasses
+{
+	public class DmmauEnt : DmmauEntity
+	{
+		/// <summary>
+		/// Purpose: Class constructor.
+		/// </summary>
+		public DmmauEnt()
+		{
+			// Nothing for now.
+		}
+
+		void BS_Dmmau_CurrentChanged(object sender, EventArgs e)
+		{
+			try
+			{
+				GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+				if (BS_Dmmau.Current != null)
+				{
+					DataRowView _Rowview = (DataRowView)this.BS_Dmmau.Current;
+					if (_Rowview != null)
+						MAHIEU_PK = _Rowview.Row[DmmauFields.Mamau.Name].ToString();
+					
+					txt_Mamau.Text = _Rowview.Row[DmmauFields.Mamau.Name].ToString();
+					txt_Tenmau.Text = _Rowview.Row[DmmauFields.Tenmau.Name].ToString();
+					txt_ChisoRgb.Text = _Rowview.Row[DmmauFields.ChisoRgb.Name].ToString();
+				}
+			}
+			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmmau_CurrentChanged"); }
+		}
+
+		private string Save_Data(string _str_Dmmau_PK)
+		{
+			DmmauEntity _dmmauEntity = new DmmauEntity();
+			
+			_dmmau.Mamau = txt_Mamau.Text.Trim();
+			_dmmau.Tenmau = txt_Tenmau.Text.Trim();
+			_dmmau.ChisoRgb = txt_ChisoRgb.Text.Trim();
+			
+			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
+			{
+				_str_Dmmau_PK = _DmmauManager.InsertV2(_DmmauEntity, r_Insert, DT_Dmmau, BS_Dmmau);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmauManager.Convert(_dmmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				BS_Dmmau.ResetCurrentItem();
+			}
+			else
+			{
+				_DmmauManager.Update(_dmmauEntity);
+				
+				GRID_Dmmau.CurrentRow.Cells[DmmauFields.Mamau.Name].Value = _dmmauEntity.Mamau;
+				GRID_Dmmau.CurrentRow.Cells[DmmauFields.Tenmau.Name].Value = _dmmauEntity.Tenmau;
+				GRID_Dmmau.CurrentRow.Cells[DmmauFields.ChisoRgb.Name].Value = _dmmauEntity.ChisoRgb;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmauManager.Convert(_dmmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+			}
+			return _str_Dmmau_PK;
+		}
+
+	}
+}
