@@ -17,28 +17,23 @@
               </xs:sequence>
             </xs:complexType>
           </xs:element>
-          <xs:element name="tablename">
-            <xs:complexType>
-              <xs:sequence>
-                <xs:element name="name" type="xs:string" minOccurs="0" />
-                <xs:element name="headerText" type="xs:string" minOccurs="0" />
-              </xs:sequence>
-            </xs:complexType>
-          </xs:element>
         </xs:choice>
       </xs:complexType>
     </xs:element>
   </xs:schema>
-
-  <tablename>
-    <name>Danhmucmang</name>
-    <headerText>Danh sách màng</headerText>
-  </tablename>
-
   <viewgrid>
     <value>1</value>
-    <name>Mahieu</name>
+    <name>Mamang</name>
     <headerText>Mã màng</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tenmang</name>
+    <headerText>Tên màng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -59,13 +54,13 @@
     <headerText>Tên khách</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>150</Width>
+    <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Mauin</name>
-    <headerText>Mẫu in</headerText>
+    <name>Kichthuoc</name>
+    <headerText>Kích thước</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -73,26 +68,17 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Loai</name>
-    <headerText>Loại</headerText>
+    <name>Trongluong</name>
+    <headerText>Trọng lượng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>45</Width>
-    <Thutu>100</Thutu>  
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Kichthuocbao</name>
-    <headerText>Kích thước</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>80</Width>
+    <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Mamanh</name>
-    <headerText>Mã manh</headerText>
+    <name>Mactpt</name>
+    <headerText>Mã CTPT</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>

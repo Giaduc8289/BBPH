@@ -19,19 +19,16 @@ using Janus.Windows.Common;
 
 namespace GD.BBPH.APP.DANHMUC
 {
-    public partial class FRM_DMMAY : FRM_DMPARENT
+    public partial class FRM_DMMANG : FRM_DMPARENT
     {
-        private DmmayManager _DmmayManager = new DmmayManager();
-        private DmmayEntity _DmmayEntity = new DmmayEntity();
+        private DmmangManager _DmmangManager = new DmmangManager();
+        private DmmangEntity _DmmangEntity = new DmmangEntity();
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-        private DataTable DT_DMMAY = new DataTable();
-        private BindingSource BS_DMMAY = new BindingSource();
-        private DataRow r_Insert = null, _RowViewSelect = null;
-        private GD.BBPH.CONTROL.JGridEX GRID_DMMAY = new GD.BBPH.CONTROL.JGridEX();
+        private DataTable DT_DMMANG = new DataTable();
+        private BindingSource BS_DMMANG = new BindingSource();
+        private DataRow r_Insert = null;
+        private GD.BBPH.CONTROL.JGridEX GRID_DMMANG = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
-
-        private DataTable DT_DMDONGMAY = new DataTable();
-
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -51,10 +48,8 @@ namespace GD.BBPH.APP.DANHMUC
                 {
                     if (FUNCTION == "LOAD")
                     {
-                        _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMMAY");
-                        DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
-
-                        DT_DMDONGMAY = LIB.SESSION_START.DT_DMDONGMAY;
+                        _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMMANG");
+                        DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -86,12 +81,12 @@ namespace GD.BBPH.APP.DANHMUC
             //  ErrorTrapper.ErrorHandler.HandleError(e.Exception);
         }
 
-        public FRM_DMMAY()
+        public FRM_DMMANG()
         {
             InitializeComponent();
-            DmmayManager _DmmayManager = new DmmayManager();
-            DataTable dt111 = _DmmayManager.Clone();
-            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMAY.xml");
+            DmmangManager _DmmangManager = new DmmangManager();
+            DataTable dt111 = _DmmangManager.Clone();
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANG.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -99,78 +94,77 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_XOA, btn_XOA.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_KHOIPHUC, btn_KHOIPHUC.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
-            GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMAY.xml", GRID_DMMAY, uiPanel0Container);
+            GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANG.xml", GRID_DMMANG, uiPanel0Container);
             FORM_PROCESS();
-            DataView Source_View = new DataView(DT_DMMAY);
-            BS_DMMAY = new BindingSource();
-            BS_DMMAY.DataSource = Source_View;
-            GRID_DMMAY.DataSource = BS_DMMAY;
-            BS_DMMAY.CurrentChanged += new EventHandler(BS_DMMAY_CurrentChanged);
-            BS_DMMAY_CurrentChanged((new object()), (new EventArgs()));
+            DataView Source_View = new DataView(DT_DMMANG);
+            BS_DMMANG = new BindingSource();
+            BS_DMMANG.DataSource = Source_View;
+            GRID_DMMANG.DataSource = BS_DMMANG;
+            BS_DMMANG.CurrentChanged += new EventHandler(BS_DMMANG_CurrentChanged);
+            BS_DMMANG_CurrentChanged((new object()), (new EventArgs()));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             btn_THEMMOI.Focus();
         }
 
-        void BS_DMMAY_CurrentChanged(object sender, EventArgs e)
+        void BS_DMMANG_CurrentChanged(object sender, EventArgs e)
         {
             try
             {
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-                if (BS_DMMAY.Current != null)
+                if (BS_DMMANG.Current != null)
                 {
-                    DataRowView _Rowview = (DataRowView)this.BS_DMMAY.Current;
+                    DataRowView _Rowview = (DataRowView)this.BS_DMMANG.Current;
                     if (_Rowview != null)
-                        MAHIEU_PK = _Rowview.Row[DmmayFields.Mamay.Name].ToString();
-                    txt_MAHIEU.Text = _Rowview.Row[DmmayFields.Mamay.Name].ToString();
-                    txt_TENHIEU.Text = _Rowview.Row[DmmayFields.Tenmay.Name].ToString();
-                    txt_MADONGMAY_Validating(new object(), new CancelEventArgs());
-                    //txt_MADONGMAY.Text = _Rowview.Row[DmmayFields.Madm.Name].ToString();
-                    txt_VITRIMAY.Text = _Rowview.Row[DmmayFields.Vitri.Name].ToString();
-                    
-
-                    //txt_EMAIL.Text = _Rowview.Row[DmmayFields.Email.Name].ToString();
-                    //txt_NGUOILIENHE.Text = _Rowview.Row[DmmayFields.Tennguoilh.Name].ToString();
+                        MAHIEU_PK = _Rowview.Row[DmmangFields.Mamang.Name].ToString();
+                    txt_MAHIEU.Text = _Rowview.Row[DmmangFields.Mamang.Name].ToString();
+                    txt_TENHIEU.Text = _Rowview.Row[DmmangFields.Tenmang.Name].ToString();
+                    txt_MAKHACH.Text = _Rowview.Row[DmmangFields.Makhach.Name].ToString();
+                    txt_TENKHACH.Text = _Rowview.Row[DmmangFields.Tenkhach.Name].ToString();
+                    txt_KICHTHUOC.Text = _Rowview.Row[DmmangFields.Kichthuoc.Name].ToString();
+                    txt_TRONGLUONG.Text = _Rowview.Row[DmmangFields.Trongluong.Name].ToString();
+                    txt_MACTPT.Text = _Rowview.Row[DmmangFields.Mactpt.Name].ToString();
                     //try
                     //{
-                    //    chk_TRUYENTHONG.Checked = Convert.ToBoolean(_Rowview.Row[DmmayFields.Truyenthong.Name].ToString());
+                    //    chk_TRUYENTHONG.Checked = Convert.ToBoolean(_Rowview.Row[DmmangFields.Truyenthong.Name].ToString());
                     //}
                     //catch { }
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMMAY_CurrentChanged"); }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMMANG_CurrentChanged"); }
         }
 
         private string Save_Data(string _str_DMCHUONG_PK)
         {
-            DmmayEntity _DmmayEntity = new DmmayEntity();
-            _DmmayEntity.Mamay = txt_MAHIEU.Text.Trim();
-            _DmmayEntity.Tenmay = txt_TENHIEU.Text.Trim();
-            _DmmayEntity.Madm = txt_MADONGMAY.Text.Trim();
-            _DmmayEntity.Vitri = txt_VITRIMAY.Text.Trim();
-            //_DmmayEntity.Email = txt_EMAIL.Text.Trim();
-            //_DmmayEntity.Tennguoilh = txt_NGUOILIENHE.Text.Trim();
+            DmmangEntity _DmmangEntity = new DmmangEntity();
+            _DmmangEntity.Mamang = txt_MAHIEU.Text.Trim();
+            _DmmangEntity.Tenmang = txt_TENHIEU.Text.Trim();
+            _DmmangEntity.Makhach = txt_MAKHACH.Text.Trim();
+            _DmmangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
+            _DmmangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
+            _DmmangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
+            _DmmangEntity.Mactpt = txt_MACTPT.Text.Trim();
             //if (chk_TRUYENTHONG.Checked)
-            //    _DmmayEntity.Truyenthong = true;
+            //    _DmmangEntity.Truyenthong = true;
             //else
-            //    _DmmayEntity.Truyenthong = false;
+            //    _DmmangEntity.Truyenthong = false;
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
-                _str_DMCHUONG_PK = _DmmayManager.InsertV2(_DmmayEntity, r_Insert, DT_DMMAY, BS_DMMAY);
-                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmayManager.Convert(_DmmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                BS_DMMAY.ResetCurrentItem();
+                _str_DMCHUONG_PK = _DmmangManager.InsertV2(_DmmangEntity, r_Insert, DT_DMMANG, BS_DMMANG);
+                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_DmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                BS_DMMANG.ResetCurrentItem();
             }
             else
             {
-                _DmmayManager.Update(_DmmayEntity);
-                GRID_DMMAY.CurrentRow.Cells[DmmayFields.Mamay.Name].Value = _DmmayEntity.Mamay;
-                GRID_DMMAY.CurrentRow.Cells[DmmayFields.Tenmay.Name].Value = _DmmayEntity.Tenmay;
-                GRID_DMMAY.CurrentRow.Cells[DmmayFields.Madm.Name].Value = _DmmayEntity.Madm;
-                GRID_DMMAY.CurrentRow.Cells[DmmayFields.Vitri.Name].Value = _DmmayEntity.Vitri;
-                //GRID_DMMAY.CurrentRow.Cells[DmmayFields.Email.Name].Value = _DmmayEntity.Email;
-                //GRID_DMMAY.CurrentRow.Cells[DmmayFields.Truyenthong.Name].Value = _DmmayEntity.Truyenthong;
-                //GRID_DMMAY.CurrentRow.Cells[DmmayFields.Tennguoilh.Name].Value = _DmmayEntity.Tennguoilh;
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmayManager.Convert(_DmmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                _DmmangManager.Update(_DmmangEntity);
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Mamang.Name].Value = _DmmangEntity.Mamang;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenmang.Name].Value = _DmmangEntity.Tenmang;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Makhach.Name].Value = _DmmangEntity.Makhach;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenkhach.Name].Value = _DmmangEntity.Tenkhach;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Kichthuoc.Name].Value = _DmmangEntity.Kichthuoc;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Trongluong.Name].Value = _DmmangEntity.Trongluong;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Mactpt.Name].Value = _DmmangEntity.Mactpt;
+                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_DmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;
         }
@@ -179,17 +173,17 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            DmmayManager _DmmayManager = new DmmayManager();
-            DmmayEntity _DmmayEntity = new DmmayEntity();
-            r_Insert = DT_DMMAY.NewRow();
-            DT_DMMAY.Rows.Add(r_Insert);
-            BS_DMMAY.Position = DT_DMMAY.Rows.Count;
+            DmmangManager _DmmangManager = new DmmangManager();
+            DmmangEntity _DmmangEntity = new DmmangEntity();
+            r_Insert = DT_DMMANG.NewRow();
+            DT_DMMANG.Rows.Add(r_Insert);
+            BS_DMMANG.Position = DT_DMMANG.Rows.Count;
             MAHIEU_PK = "";
             txt_MAHIEU.Focus();
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            GRID_DMMAY.Enabled = false;
+            GRID_DMMANG.Enabled = false;
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {
@@ -200,47 +194,47 @@ namespace GD.BBPH.APP.DANHMUC
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MAHIEU }));
                 txt_TENHIEU.Focus();
             }
-            GRID_DMMAY.Enabled = false;
+            GRID_DMMANG.Enabled = false;
         }
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(MAHIEU_PK) && r_Insert != null)
             {
-                DT_DMMAY.Rows.Remove(r_Insert);
+                DT_DMMANG.Rows.Remove(r_Insert);
             }
-            BS_DMMAY_CurrentChanged(new object(), new EventArgs());
+            BS_DMMANG_CurrentChanged(new object(), new EventArgs());
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
-            GRID_DMMAY.Enabled = true;
+            GRID_DMMANG.Enabled = true;
         }
         private void btn_XOA_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             if (string.IsNullOrEmpty(MAHIEU_PK)) return;
-            DmmayManager _DmmayManager = new DmmayManager();
-            DmmayEntity _DmmayEntity = new DmmayEntity();
-            _DmmayEntity = _DmmayManager.SelectOne(MAHIEU_PK);
-            if (_DmmayEntity != null && MessageBox.Show("Xóa khách hàng: " + MAHIEU_PK + " - " + txt_TENHIEU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            DmmangManager _DmmangManager = new DmmangManager();
+            DmmangEntity _DmmangEntity = new DmmangEntity();
+            _DmmangEntity = _DmmangManager.SelectOne(MAHIEU_PK);
+            if (_DmmangEntity != null && MessageBox.Show("Xóa khách hàng: " + MAHIEU_PK + " - " + txt_TENHIEU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
                 {
-                    _DmmayManager.Delete(MAHIEU_PK);
-                    GRID_DMMAY.CurrentRow.Delete();
-                    BS_DMMAY_CurrentChanged(new object(), new EventArgs());
+                    _DmmangManager.Delete(MAHIEU_PK);
+                    GRID_DMMANG.CurrentRow.Delete();
+                    BS_DMMANG_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
-                    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmayManager.Convert(_DmmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_DmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 }
                 catch
                 {
                     MessageBox.Show("Không thể xóa khách hàng " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            GRID_DMMAY.Enabled = true;
+            GRID_DMMANG.Enabled = true;
         }
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(MAHIEU_PK) && _DmmayManager.SelectOne(txt_MAHIEU.Text.Trim()) != null)
+            if (string.IsNullOrEmpty(MAHIEU_PK) && _DmmangManager.SelectOne(txt_MAHIEU.Text.Trim()) != null)
             {
                 MessageBox.Show("Mã khách hàng bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAHIEU.Focus();
@@ -263,7 +257,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
                 MAHIEU_PK = Save_Data(MAHIEU_PK);
                 GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
-                GRID_DMMAY.Enabled = true;
+                GRID_DMMANG.Enabled = true;
                 btn_THEMMOI.Focus();
             }
         }
@@ -273,46 +267,25 @@ namespace GD.BBPH.APP.DANHMUC
         }
         #endregion
 
-        #region Validate
-        private void txt_MADONGMAY_Validating(object sender, CancelEventArgs e)
-        {
-            _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_MADONGMAY.Text.Trim()) || DT_DMDONGMAY == null || DT_DMDONGMAY.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MADONGMAY.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaDongmay(Str_MASIEUTHI, DT_DMDONGMAY);
-            if (_RowViewSelect == null)
-            {
-                ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMDONGMAY.xml",
-                        DT_DMDONGMAY, DmdongmayFields.Madm.Name, Str_MASIEUTHI);
-                _frm_SingerRows_Select.ShowDialog();
-                if (_frm_SingerRows_Select._RowViewSelect == null) return;
-                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MADONGMAY.Text = _RowViewSelect[DmdongmayFields.Madm.Name].ToString();
-                txt_TENDONGMAY.Text = _RowViewSelect[DmdongmayFields.Tendongmay.Name].ToString();
-            }
-            else
-                txt_TENDONGMAY.Text = _RowViewSelect[DmdongmayFields.Tendongmay.Name].ToString();
-        }
-        private DataRow checkmaDongmay(string masieuthi, DataTable dt)
-        {
-            try
-            {
-                return dt.Select(DmdongmayFields.Madm.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
-            }
-            catch { return null; }
-        }
-        #endregion
-
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)
-                GRID_DMMAY.ColumnAutoResize = true;
+                GRID_DMMANG.ColumnAutoResize = true;
             else
-                GRID_DMMAY.ColumnAutoResize = false;
+                GRID_DMMANG.ColumnAutoResize = false;
         }
 
-        private void FRM_DMMAY_FormClosing(object sender, FormClosingEventArgs e)
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FRM_DMMANG_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (btn_LUULAI.Enabled)
             {

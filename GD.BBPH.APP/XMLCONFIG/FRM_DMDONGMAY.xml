@@ -17,10 +17,24 @@
               </xs:sequence>
             </xs:complexType>
           </xs:element>
+          <xs:element name="tablename">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="name" type="xs:string" minOccurs="0" />
+                <xs:element name="headerText" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
         </xs:choice>
       </xs:complexType>
     </xs:element>
   </xs:schema>
+
+  <tablename>
+    <name>Dmdongmay</name>
+    <headerText>Danh sách dsòng máy</headerText>
+  </tablename>
+
   <viewgrid>
     <value>1</value>
     <name>Madm</name>

@@ -205,7 +205,18 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMCONGDOAN = value; }
         }
         #endregion
-
+        #region DT_DMMANG
+        private static DataTable _DT_DMMANG = null;
+        public static DataTable DT_DMMANG
+        {
+            get
+            {
+                _DT_DMMANG = new DmmangManager().SelectAllRDT();
+                return _DT_DMMANG;
+            }
+            set { _DT_DMMANG = value; }
+        }
+        #endregion
         #region DMQUYCACH
         private static DataTable _DT_DMQUYCACH = null;
         public static DataTable DT_DMQUYCACH
