@@ -110,7 +110,7 @@
     <Compile Include="ManagerBase\CongsuatmayManagerBase.cs" />
     <Compile Include="ManagerBase\CtptmangDManagerBase.cs" />
     <Compile Include="ManagerBase\CtptmangHManagerBase.cs" />
-    <Compile Include="ManagerBase\DinhmuathoigianManagerBase.cs" />
+    <Compile Include="ManagerBase\DinhmucthoigianManagerBase.cs" />
     <Compile Include="ManagerBase\DmbophanManagerBase.cs" />
     <Compile Include="ManagerBase\DmcapmaManagerBase.cs" />
     <Compile Include="ManagerBase\DmchucvuManagerBase.cs" />

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
+// Code is generated on: Monday, October 3, 2022 9:34:19 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -28,11 +28,11 @@ namespace GD.BBPH.DAL.EntityClasses
 	// __LLBLGENPRO_USER_CODE_REGION_END
 
 	/// <summary>
-	/// Entity class which represents the entity 'Dinhmuathoigian'.<br/><br/>
+	/// Entity class which represents the entity 'Dinhmucthoigian'.<br/><br/>
 	/// 
 	/// </summary>
 	[Serializable]
-	public partial class DinhmuathoigianEntity : CommonEntityBase, ISerializable
+	public partial class DinhmucthoigianEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
@@ -61,13 +61,13 @@ namespace GD.BBPH.DAL.EntityClasses
 		#endregion
 		
 		/// <summary> Static CTor for setting up custom property hashtables. Is executed before the first instance of this entity class or derived classes is constructed. </summary>
-		static DinhmuathoigianEntity()
+		static DinhmucthoigianEntity()
 		{
 			SetupCustomPropertyHashtables();
 		}
 
 		/// <summary> CTor</summary>
-		public DinhmuathoigianEntity():base("DinhmuathoigianEntity")
+		public DinhmucthoigianEntity():base("DinhmucthoigianEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 		}
@@ -75,33 +75,33 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> CTor</summary>
 		/// <remarks>For framework usage.</remarks>
 		/// <param name="fields">Fields object to set as the fields for this entity.</param>
-		public DinhmuathoigianEntity(IEntityFields2 fields):base("DinhmuathoigianEntity")
+		public DinhmucthoigianEntity(IEntityFields2 fields):base("DinhmucthoigianEntity")
 		{
 			InitClassEmpty(null, fields);
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="validator">The custom validator object for this DinhmuathoigianEntity</param>
-		public DinhmuathoigianEntity(IValidator validator):base("DinhmuathoigianEntity")
+		/// <param name="validator">The custom validator object for this DinhmucthoigianEntity</param>
+		public DinhmucthoigianEntity(IValidator validator):base("DinhmucthoigianEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 		}
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="madmtg">PK value for Dinhmuathoigian which data should be fetched into this Dinhmuathoigian object</param>
+		/// <param name="madmtg">PK value for Dinhmucthoigian which data should be fetched into this Dinhmucthoigian object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DinhmuathoigianEntity(System.String madmtg):base("DinhmuathoigianEntity")
+		public DinhmucthoigianEntity(System.String madmtg):base("DinhmucthoigianEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 			this.Madmtg = madmtg;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="madmtg">PK value for Dinhmuathoigian which data should be fetched into this Dinhmuathoigian object</param>
-		/// <param name="validator">The custom validator object for this DinhmuathoigianEntity</param>
+		/// <param name="madmtg">PK value for Dinhmucthoigian which data should be fetched into this Dinhmucthoigian object</param>
+		/// <param name="validator">The custom validator object for this DinhmucthoigianEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DinhmuathoigianEntity(System.String madmtg, IValidator validator):base("DinhmuathoigianEntity")
+		public DinhmucthoigianEntity(System.String madmtg, IValidator validator):base("DinhmucthoigianEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 			this.Madmtg = madmtg;
@@ -111,7 +111,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="info"></param>
 		/// <param name="context"></param>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		protected DinhmuathoigianEntity(SerializationInfo info, StreamingContext context) : base(info, context)
+		protected DinhmucthoigianEntity(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
@@ -131,7 +131,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="fieldIndex">The fieldindex.</param>
 		protected override void PerformDesyncSetupFKFieldChange(int fieldIndex)
 		{
-			switch((DinhmuathoigianFieldIndex)fieldIndex)
+			switch((DinhmucthoigianFieldIndex)fieldIndex)
 			{
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
@@ -169,7 +169,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>RelationCollection with relation object(s) which represent the relation the field is maped on</returns>
 		public override RelationCollection GetRelationsForFieldOfType(string fieldName)
 		{
-			return DinhmuathoigianEntity.GetRelationsForField(fieldName);
+			return DinhmucthoigianEntity.GetRelationsForField(fieldName);
 		}
 
 		/// <summary>Gets the relation objects which represent the relation the fieldName specified is mapped on. </summary>
@@ -299,7 +299,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the current value is NULL, use <see cref="TestCurrentFieldValueForNull"/> for that.</summary>
 		/// <param name="fieldIndex">Index of the field to test if that field was NULL in the persistent storage</param>
 		/// <returns>true if the field with the passed in index was NULL in the persistent storage, false otherwise</returns>
-		public bool TestOriginalFieldValueForNull(DinhmuathoigianFieldIndex fieldIndex)
+		public bool TestOriginalFieldValueForNull(DinhmucthoigianFieldIndex fieldIndex)
 		{
 			return base.Fields[(int)fieldIndex].IsNull;
 		}
@@ -308,7 +308,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the original value (read from the db) is NULL</summary>
 		/// <param name="fieldIndex">Index of the field to test if its currentvalue is null/undefined</param>
 		/// <returns>true if the field's value isn't defined yet, false otherwise</returns>
-		public bool TestCurrentFieldValueForNull(DinhmuathoigianFieldIndex fieldIndex)
+		public bool TestCurrentFieldValueForNull(DinhmucthoigianFieldIndex fieldIndex)
 		{
 			return base.CheckIfCurrentFieldValueIsNull((int)fieldIndex);
 		}
@@ -318,7 +318,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>A list of all the EntityRelation objects the type of this instance has. Hierarchy relations are excluded.</returns>
 		public override List<IEntityRelation> GetAllRelations()
 		{
-			return new DinhmuathoigianRelations().GetAllRelations();
+			return new DinhmucthoigianRelations().GetAllRelations();
 		}
 		
 
@@ -330,7 +330,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates entity fields object for this entity. Used in constructor to setup this entity in a polymorphic scenario.</summary>
 		protected virtual IEntityFields2 CreateFields()
 		{
-			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.DinhmuathoigianEntity);
+			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.DinhmucthoigianEntity);
 		}
 
 		/// <summary>
@@ -345,7 +345,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates a new instance of the factory related to this entity</summary>
 		protected override IEntityFactory2 CreateEntityFactory()
 		{
-			return EntityFactoryCache2.GetEntityFactory(typeof(DinhmuathoigianEntityFactory));
+			return EntityFactoryCache2.GetEntityFactory(typeof(DinhmucthoigianEntityFactory));
 		}
 #if !CF
 		/// <summary>Adds the member collections to the collections queue (base first)</summary>
@@ -467,7 +467,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
-		/// <param name="validator">The validator object for this DinhmuathoigianEntity</param>
+		/// <param name="validator">The validator object for this DinhmucthoigianEntity</param>
 		/// <param name="fields">Fields of this entity</param>
 		protected virtual void InitClassEmpty(IValidator validator, IEntityFields2 fields)
 		{
@@ -486,9 +486,9 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		#region Class Property Declarations
 		/// <summary> The relations object holding all relations of this entity with other entity classes.</summary>
-		public  static DinhmuathoigianRelations Relations
+		public  static DinhmucthoigianRelations Relations
 		{
-			get	{ return new DinhmuathoigianRelations(); }
+			get	{ return new DinhmucthoigianRelations(); }
 		}
 		
 		/// <summary> The custom properties for this entity type.</summary>
@@ -507,7 +507,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, string> CustomPropertiesOfType
 		{
-			get { return DinhmuathoigianEntity.CustomProperties;}
+			get { return DinhmucthoigianEntity.CustomProperties;}
 		}
 
 		/// <summary> The custom properties for the fields of this entity type. The returned Hashtable contains per fieldname a hashtable of name-value
@@ -523,117 +523,117 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, Dictionary<string, string>> FieldsCustomPropertiesOfType
 		{
-			get { return DinhmuathoigianEntity.FieldsCustomProperties;}
+			get { return DinhmucthoigianEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The Madmtg property of the Entity Dinhmuathoigian<br/><br/>
+		/// <summary> The Madmtg property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Madmtg"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 20<br/>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Madmtg"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
 		public virtual System.String Madmtg
 		{
-			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Madmtg, true); }
-			set	{ SetValue((int)DinhmuathoigianFieldIndex.Madmtg, value); }
+			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Madmtg, true); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Madmtg, value); }
 		}
 
-		/// <summary> The Tendinhmuc property of the Entity Dinhmuathoigian<br/><br/>
+		/// <summary> The Tendinhmuc property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Tendinhmuc"<br/>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Tendinhmuc"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
 		public virtual System.String Tendinhmuc
 		{
-			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Tendinhmuc, true); }
-			set	{ SetValue((int)DinhmuathoigianFieldIndex.Tendinhmuc, value); }
+			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Tendinhmuc, true); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Tendinhmuc, value); }
 		}
 
-		/// <summary> The Mamay property of the Entity Dinhmuathoigian<br/><br/>
+		/// <summary> The Mamay property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Mamay"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 20<br/>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Mamay"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
 		public virtual System.String Mamay
 		{
-			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Mamay, true); }
-			set	{ SetValue((int)DinhmuathoigianFieldIndex.Mamay, value); }
+			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Mamay, true); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Mamay, value); }
 		}
 
-		/// <summary> The Madm property of the Entity Dinhmuathoigian<br/><br/>
+		/// <summary> The Madm property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Madm"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 20<br/>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Madm"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
 		public virtual System.String Madm
 		{
-			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Madm, true); }
-			set	{ SetValue((int)DinhmuathoigianFieldIndex.Madm, value); }
+			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Madm, true); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Madm, value); }
 		}
 
-		/// <summary> The Dauca property of the Entity Dinhmuathoigian<br/><br/>
+		/// <summary> The Dauca property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Dauca"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Dauca
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Dauca"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dauca
 		{
-			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Dauca, true); }
-			set	{ SetValue((int)DinhmuathoigianFieldIndex.Dauca, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Dauca, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Dauca, value); }
 		}
 
-		/// <summary> The Doilenh property of the Entity Dinhmuathoigian<br/><br/>
+		/// <summary> The Doilenh property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Doilenh"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Doilenh
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Doilenh"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Doilenh
 		{
-			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Doilenh, true); }
-			set	{ SetValue((int)DinhmuathoigianFieldIndex.Doilenh, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Doilenh, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Doilenh, value); }
 		}
 
-		/// <summary> The Lencuon property of the Entity Dinhmuathoigian<br/><br/>
+		/// <summary> The Lencuon property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Lencuon"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Lencuon
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Lencuon"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Lencuon
 		{
-			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Lencuon, true); }
-			set	{ SetValue((int)DinhmuathoigianFieldIndex.Lencuon, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Lencuon, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Lencuon, value); }
 		}
 
-		/// <summary> The Xuongcuon property of the Entity Dinhmuathoigian<br/><br/>
+		/// <summary> The Xuongcuon property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Xuongcuon"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Xuongcuon
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Xuongcuon"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Xuongcuon
 		{
-			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Xuongcuon, true); }
-			set	{ SetValue((int)DinhmuathoigianFieldIndex.Xuongcuon, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Xuongcuon, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Xuongcuon, value); }
 		}
 
-		/// <summary> The Thaythietbi property of the Entity Dinhmuathoigian<br/><br/>
+		/// <summary> The Thaythietbi property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Thaythietbi"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Thaythietbi
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Thaythietbi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Thaythietbi
 		{
-			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Thaythietbi, true); }
-			set	{ SetValue((int)DinhmuathoigianFieldIndex.Thaythietbi, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Thaythietbi, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Thaythietbi, value); }
 		}
 
-		/// <summary> The Dungmay property of the Entity Dinhmuathoigian<br/><br/>
+		/// <summary> The Dungmay property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Dungmay"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Dungmay
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Dungmay"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dungmay
 		{
-			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Dungmay, true); }
-			set	{ SetValue((int)DinhmuathoigianFieldIndex.Dungmay, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Dungmay, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Dungmay, value); }
 		}
 
 
@@ -657,7 +657,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override int LLBLGenProEntityTypeValue 
 		{ 
-			get { return (int)GD.BBPH.DAL.EntityType.DinhmuathoigianEntity; }
+			get { return (int)GD.BBPH.DAL.EntityType.DinhmucthoigianEntity; }
 		}
 		#endregion
 

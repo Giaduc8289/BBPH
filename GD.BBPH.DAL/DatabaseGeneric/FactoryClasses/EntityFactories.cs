@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
+// Code is generated on: Monday, October 3, 2022 9:34:20 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -206,29 +206,29 @@ namespace GD.BBPH.DAL.FactoryClasses
 
 		#endregion
 	}	
-	/// <summary>Factory to create new, empty DinhmuathoigianEntity objects.</summary>
+	/// <summary>Factory to create new, empty DinhmucthoigianEntity objects.</summary>
 	[Serializable]
-	public partial class DinhmuathoigianEntityFactory : EntityFactoryBase2 {
+	public partial class DinhmucthoigianEntityFactory : EntityFactoryBase2 {
 		/// <summary>CTor</summary>
-		public DinhmuathoigianEntityFactory() : base("DinhmuathoigianEntity", GD.BBPH.DAL.EntityType.DinhmuathoigianEntity) { }
+		public DinhmucthoigianEntityFactory() : base("DinhmucthoigianEntity", GD.BBPH.DAL.EntityType.DinhmucthoigianEntity) { }
 
-		/// <summary>Creates a new, empty DinhmuathoigianEntity object.</summary>
-		/// <returns>A new, empty DinhmuathoigianEntity object.</returns>
+		/// <summary>Creates a new, empty DinhmucthoigianEntity object.</summary>
+		/// <returns>A new, empty DinhmucthoigianEntity object.</returns>
 		public override IEntity2 Create() {
-			IEntity2 toReturn = new DinhmuathoigianEntity();
+			IEntity2 toReturn = new DinhmucthoigianEntity();
 			
-			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDinhmuathoigian
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDinhmucthoigian
 			// __LLBLGENPRO_USER_CODE_REGION_END
 			return toReturn;
 		}
 		
-		/// <summary>Creates a new DinhmuathoigianEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
 		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
 		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
 		public override IEntity2 Create(IEntityFields2 fields) {
-			IEntity2 toReturn = new DinhmuathoigianEntity(fields);
+			IEntity2 toReturn = new DinhmucthoigianEntity(fields);
 			
-			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDinhmuathoigianUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDinhmucthoigianUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
 			return toReturn;
 		}
@@ -237,7 +237,7 @@ namespace GD.BBPH.DAL.FactoryClasses
 		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
 		public override IEntityCollection2 CreateEntityCollection()
 		{
-			return new EntityCollection<DinhmuathoigianEntity>(this);
+			return new EntityCollection<DinhmucthoigianEntity>(this);
 		}
 		
 
@@ -1164,8 +1164,8 @@ namespace GD.BBPH.DAL.FactoryClasses
 				case GD.BBPH.DAL.EntityType.CtptmangHEntity:
 					factoryToUse = new CtptmangHEntityFactory();
 					break;
-				case GD.BBPH.DAL.EntityType.DinhmuathoigianEntity:
-					factoryToUse = new DinhmuathoigianEntityFactory();
+				case GD.BBPH.DAL.EntityType.DinhmucthoigianEntity:
+					factoryToUse = new DinhmucthoigianEntityFactory();
 					break;
 				case GD.BBPH.DAL.EntityType.DmbophanEntity:
 					factoryToUse = new DmbophanEntityFactory();

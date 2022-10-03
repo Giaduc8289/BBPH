@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
+// Code is generated on: Monday, October 3, 2022 9:34:19 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -17,15 +17,15 @@ using SD.LLBLGen.Pro.ORMSupportClasses;
 
 namespace GD.BBPH.DAL.RelationClasses
 {
-	/// <summary>Implements the static Relations variant for the entity: Dinhmuathoigian. </summary>
-	public partial class DinhmuathoigianRelations
+	/// <summary>Implements the static Relations variant for the entity: Dinhmucthoigian. </summary>
+	public partial class DinhmucthoigianRelations
 	{
 		/// <summary>CTor</summary>
-		public DinhmuathoigianRelations()
+		public DinhmucthoigianRelations()
 		{
 		}
 
-		/// <summary>Gets all relations of the DinhmuathoigianEntity as a list of IEntityRelation objects.</summary>
+		/// <summary>Gets all relations of the DinhmucthoigianEntity as a list of IEntityRelation objects.</summary>
 		/// <returns>a list of IEntityRelation objects</returns>
 		public virtual List<IEntityRelation> GetAllRelations()
 		{

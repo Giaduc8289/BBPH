@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
+// Code is generated on: Monday, October 3, 2022 9:34:19 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -75,9 +75,9 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
-	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dinhmuathoigian.
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dinhmucthoigian.
 	/// </summary>
-	public enum DinhmuathoigianFieldIndex:int
+	public enum DinhmucthoigianFieldIndex:int
 	{
 		///<summary>Madmtg. </summary>
 		Madmtg,
@@ -600,8 +600,8 @@ namespace GD.BBPH.DAL
 		CtptmangDEntity,
 		///<summary>CtptmangH</summary>
 		CtptmangHEntity,
-		///<summary>Dinhmuathoigian</summary>
-		DinhmuathoigianEntity,
+		///<summary>Dinhmucthoigian</summary>
+		DinhmucthoigianEntity,
 		///<summary>Dmbophan</summary>
 		DmbophanEntity,
 		///<summary>Dmcapma</summary>

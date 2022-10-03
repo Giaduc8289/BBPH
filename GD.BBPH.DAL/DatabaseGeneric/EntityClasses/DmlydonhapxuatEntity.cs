@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
+// Code is generated on: Monday, October 3, 2022 9:34:19 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -511,7 +511,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Malydo property of the Entity Dmlydonhapxuat<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmlydonhapxuat"."Malydo"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 20<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
 		public virtual System.String Malydo
 		{
@@ -533,7 +533,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Manhom property of the Entity Dmlydonhapxuat<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmlydonhapxuat"."Manhom"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 20<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
 		public virtual System.String Manhom
 		{

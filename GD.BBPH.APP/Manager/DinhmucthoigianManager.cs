@@ -1,7 +1,7 @@
 ﻿
 /*
 '===============================================================================
-'  GD.BBPH.BL.DinhmuathoigianManager
+'  GD.BBPH.DAL.BL.DinhmucthoigianManager
 '===============================================================================
 */
 
@@ -9,21 +9,21 @@ using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using GD.BBPH.BLL;
-using GD.BBPH.DAL;
-using GD.BBPH.DAL.EntityClasses;
-using GD.BBPH.DAL.FactoryClasses;
-using GD.BBPH.DAL.HelperClasses;
+using GD.BBPH.DAL.BLL;
+using GD.BBPH.DAL.DAL;
+using GD.BBPH.DAL.DAL.EntityClasses;
+using GD.BBPH.DAL.DAL.FactoryClasses;
+using GD.BBPH.DAL.DAL.HelperClasses;
 using SD.LLBLGen.Pro.ORMSupportClasses;
 
-namespace GD.BBPH.BLL
+namespace GD.BBPH.DAL.BLL
 {
-	public class DinhmuathoigianManager : DinhmuathoigianManagerBase
+	public class DinhmucthoigianManager : DinhmucthoigianManagerBase
 	{
 		/// <summary>
 		/// Purpose: Class constructor.
 		/// </summary>
-		public DinhmuathoigianManager()
+		public DinhmucthoigianManager()
 		{
 			// Nothing for now.
 		}

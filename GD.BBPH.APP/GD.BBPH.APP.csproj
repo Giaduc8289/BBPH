@@ -152,6 +152,7 @@
     </Compile>
     <Compile Include="DANHMUC\FRM_DMDONGMAY.designer.cs">
       <DependentUpon>FRM_DMDONGMAY.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMHANG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,7 +279,6 @@
     <Compile Include="Manager\CongsuatmayManager.cs" />
     <Compile Include="Manager\CtptmangDManager.cs" />
     <Compile Include="Manager\CtptmangHManager.cs" />
-    <Compile Include="Manager\DinhmuathoigianManager.cs" />
     <Compile Include="Manager\DmcapmaManager.cs" />
     <Compile Include="Manager\DmchucvuManager.cs" />
     <Compile Include="Manager\DmcongdoanManager.cs" />
@@ -323,6 +323,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMDONGMAY.resx">
       <DependentUpon>FRM_DMDONGMAY.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMHANG.resx">
       <DependentUpon>FRM_DMHANG.cs</DependentUpon>
     </EmbeddedResource>

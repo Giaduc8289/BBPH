@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
+// Code is generated on: Monday, October 3, 2022 9:34:19 PM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -70,8 +70,8 @@ namespace GD.BBPH.DAL.Linq
 				case GD.BBPH.DAL.EntityType.CtptmangHEntity:
 					toReturn = this.CtptmangH;
 					break;
-				case GD.BBPH.DAL.EntityType.DinhmuathoigianEntity:
-					toReturn = this.Dinhmuathoigian;
+				case GD.BBPH.DAL.EntityType.DinhmucthoigianEntity:
+					toReturn = this.Dinhmucthoigian;
 					break;
 				case GD.BBPH.DAL.EntityType.DmbophanEntity:
 					toReturn = this.Dmbophan;
@@ -167,10 +167,10 @@ namespace GD.BBPH.DAL.Linq
 			get { return new DataSource2<CtptmangHEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
-		/// <summary>returns the datasource to use in a Linq query when targeting DinhmuathoigianEntity instances in the database.</summary>
-		public DataSource2<DinhmuathoigianEntity> Dinhmuathoigian
+		/// <summary>returns the datasource to use in a Linq query when targeting DinhmucthoigianEntity instances in the database.</summary>
+		public DataSource2<DinhmucthoigianEntity> Dinhmucthoigian
 		{
-			get { return new DataSource2<DinhmuathoigianEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+			get { return new DataSource2<DinhmucthoigianEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting DmbophanEntity instances in the database.</summary>
