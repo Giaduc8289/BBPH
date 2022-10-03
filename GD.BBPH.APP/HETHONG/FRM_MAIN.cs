@@ -672,7 +672,7 @@ namespace GD.BBPH.APP.HETHONG
                     {
                         if (frm.Name == "FRM_DMDONGMAY") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
                     }
-                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMDONGMAY()), mmru.Text);
+                    //ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMDONGMAY()), mmru.Text);
                     break;
                 #endregion
                 #region Danh mục máy
@@ -681,7 +681,7 @@ namespace GD.BBPH.APP.HETHONG
                     {
                         if (frm.Name == "FRM_DMMAY") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
                     }
-                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMMAY()), mmru.Text);
+                    //ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMMAY()), mmru.Text);
                     break;
 
                 case "FRM_DMQUYCACH":
@@ -716,6 +716,16 @@ namespace GD.BBPH.APP.HETHONG
                         if (frm.Name == "FRM_DMCONGDOAN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMCONGDOAN()), mmru.Text);
+                    break;
+                #endregion
+
+                #region Danh mục sản phẩm
+                case "FRM_DMHANG":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMHANG") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMHANG()), mmru.Text);
                     break;
                 #endregion
 

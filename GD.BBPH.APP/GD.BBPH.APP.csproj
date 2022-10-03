@@ -147,6 +147,12 @@
     <Compile Include="DANHMUC\FRM_DMCONGNHAN.designer.cs">
       <DependentUpon>FRM_DMCONGNHAN.cs</DependentUpon>
     </Compile>
+    <Compile Include="DANHMUC\FRM_DMHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMHANG.designer.cs">
+      <DependentUpon>FRM_DMHANG.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMKHACH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,7 @@
     <Compile Include="Manager\DmcongdoanManager.cs" />
     <Compile Include="Manager\DmcongnhanManager.cs" />
     <Compile Include="Manager\DmdongmayManager.cs" />
+    <Compile Include="Manager\DmhanghoaManager.cs" />
     <Compile Include="Manager\DmkhoManager.cs" />
     <Compile Include="Manager\DmlydonhapxuatManager.cs" />
     <Compile Include="Manager\DmmangManager.cs" />
@@ -296,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMCONGNHAN.resx">
       <DependentUpon>FRM_DMCONGNHAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMHANG.resx">
+      <DependentUpon>FRM_DMHANG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMKHACH.resx">
       <DependentUpon>FRM_DMKHACH.cs</DependentUpon>
@@ -942,7 +952,7 @@
     <Content Include="XMLCONFIG\FRM_DMCSMAYSOI.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAYDET.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAYSOI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMHANGHOA.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMHINHTHUC.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHO.xml" />
