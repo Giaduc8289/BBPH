@@ -269,6 +269,18 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region HANG
+        private static DataTable _DT_HANG = null;
+        public static DataTable DM_HANG
+        {
+            get
+            {
+                _DT_HANG = new DmhangManager().SelectAllRDT();
+                return _DT_HANG;
+            }
+            set { _DT_HANG = value; }
+        }
+        #endregion
 
     }
 }
