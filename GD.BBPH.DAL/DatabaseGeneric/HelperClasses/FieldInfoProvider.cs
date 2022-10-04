@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 3, 2022 9:34:19 PM
+// Code is generated on: Tuesday, October 4, 2022 10:50:20 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -105,8 +105,9 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("CtptmangDEntity", "Tenct", typeof(System.String), false, false, false, false,  (int)CtptmangDFieldIndex.Tenct, 250, 0, 0);
 			base.AddElementFieldInfo("CtptmangDEntity", "Manl", typeof(System.String), false, true, false, false,  (int)CtptmangDFieldIndex.Manl, 50, 0, 0);
 			base.AddElementFieldInfo("CtptmangDEntity", "Tennguyenlieu", typeof(System.String), false, false, false, false,  (int)CtptmangDFieldIndex.Tennguyenlieu, 250, 0, 0);
-			base.AddElementFieldInfo("CtptmangDEntity", "Trongluong", typeof(System.String), false, false, false, false,  (int)CtptmangDFieldIndex.Trongluong, 250, 0, 0);
+			base.AddElementFieldInfo("CtptmangDEntity", "Trongluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)CtptmangDFieldIndex.Trongluong, 0, 2, 20);
 			base.AddElementFieldInfo("CtptmangDEntity", "Tile", typeof(System.String), false, false, false, false,  (int)CtptmangDFieldIndex.Tile, 250, 0, 0);
+			base.AddElementFieldInfo("CtptmangDEntity", "Tyle", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)CtptmangDFieldIndex.Tyle, 0, 2, 20);
 		}
 		/// <summary>Inits CtptmangHEntity's FieldInfo objects</summary>
 		private void InitCtptmangHEntityInfos()

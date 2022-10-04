@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 10:50:20 AM
+// Code is generated on: Saturday, October 1, 2022 3:26:08 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -14,25 +14,25 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 #endif
 using System.Xml.Serialization;
-using GD.BBPH.DAL;
-using GD.BBPH.DAL.HelperClasses;
-using GD.BBPH.DAL.FactoryClasses;
-using GD.BBPH.DAL.RelationClasses;
+using GD.BBPH;
+using GD.BBPH.HelperClasses;
+using GD.BBPH.FactoryClasses;
+using GD.BBPH.RelationClasses;
 
 using SD.LLBLGen.Pro.ORMSupportClasses;
 
-namespace GD.BBPH.DAL.EntityClasses
+namespace GD.BBPH.EntityClasses
 {
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
 
 	/// <summary>
-	/// Entity class which represents the entity 'Dmlydonhapxuat'.<br/><br/>
+	/// Entity class which represents the entity 'Dinhmuathoigian'.<br/><br/>
 	/// 
 	/// </summary>
 	[Serializable]
-	public partial class DmlydonhapxuatEntity : CommonEntityBase, ISerializable
+	public partial class DinhmuathoigianEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
@@ -61,13 +61,13 @@ namespace GD.BBPH.DAL.EntityClasses
 		#endregion
 		
 		/// <summary> Static CTor for setting up custom property hashtables. Is executed before the first instance of this entity class or derived classes is constructed. </summary>
-		static DmlydonhapxuatEntity()
+		static DinhmuathoigianEntity()
 		{
 			SetupCustomPropertyHashtables();
 		}
 
 		/// <summary> CTor</summary>
-		public DmlydonhapxuatEntity():base("DmlydonhapxuatEntity")
+		public DinhmuathoigianEntity():base("DinhmuathoigianEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 		}
@@ -75,43 +75,43 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> CTor</summary>
 		/// <remarks>For framework usage.</remarks>
 		/// <param name="fields">Fields object to set as the fields for this entity.</param>
-		public DmlydonhapxuatEntity(IEntityFields2 fields):base("DmlydonhapxuatEntity")
+		public DinhmuathoigianEntity(IEntityFields2 fields):base("DinhmuathoigianEntity")
 		{
 			InitClassEmpty(null, fields);
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="validator">The custom validator object for this DmlydonhapxuatEntity</param>
-		public DmlydonhapxuatEntity(IValidator validator):base("DmlydonhapxuatEntity")
+		/// <param name="validator">The custom validator object for this DinhmuathoigianEntity</param>
+		public DinhmuathoigianEntity(IValidator validator):base("DinhmuathoigianEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 		}
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="malydo">PK value for Dmlydonhapxuat which data should be fetched into this Dmlydonhapxuat object</param>
+		/// <param name="madmtg">PK value for Dinhmuathoigian which data should be fetched into this Dinhmuathoigian object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DmlydonhapxuatEntity(System.String malydo):base("DmlydonhapxuatEntity")
+		public DinhmuathoigianEntity(System.String madmtg):base("DinhmuathoigianEntity")
 		{
 			InitClassEmpty(null, CreateFields());
-			this.Malydo = malydo;
+			this.Madmtg = madmtg;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="malydo">PK value for Dmlydonhapxuat which data should be fetched into this Dmlydonhapxuat object</param>
-		/// <param name="validator">The custom validator object for this DmlydonhapxuatEntity</param>
+		/// <param name="madmtg">PK value for Dinhmuathoigian which data should be fetched into this Dinhmuathoigian object</param>
+		/// <param name="validator">The custom validator object for this DinhmuathoigianEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DmlydonhapxuatEntity(System.String malydo, IValidator validator):base("DmlydonhapxuatEntity")
+		public DinhmuathoigianEntity(System.String madmtg, IValidator validator):base("DinhmuathoigianEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
-			this.Malydo = malydo;
+			this.Madmtg = madmtg;
 		}
 
 		/// <summary> Protected CTor for deserialization</summary>
 		/// <param name="info"></param>
 		/// <param name="context"></param>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		protected DmlydonhapxuatEntity(SerializationInfo info, StreamingContext context) : base(info, context)
+		protected DinhmuathoigianEntity(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
@@ -131,7 +131,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="fieldIndex">The fieldindex.</param>
 		protected override void PerformDesyncSetupFKFieldChange(int fieldIndex)
 		{
-			switch((DmlydonhapxuatFieldIndex)fieldIndex)
+			switch((DinhmuathoigianFieldIndex)fieldIndex)
 			{
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
@@ -169,7 +169,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>RelationCollection with relation object(s) which represent the relation the field is maped on</returns>
 		public override RelationCollection GetRelationsForFieldOfType(string fieldName)
 		{
-			return DmlydonhapxuatEntity.GetRelationsForField(fieldName);
+			return DinhmuathoigianEntity.GetRelationsForField(fieldName);
 		}
 
 		/// <summary>Gets the relation objects which represent the relation the fieldName specified is mapped on. </summary>
@@ -299,7 +299,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the current value is NULL, use <see cref="TestCurrentFieldValueForNull"/> for that.</summary>
 		/// <param name="fieldIndex">Index of the field to test if that field was NULL in the persistent storage</param>
 		/// <returns>true if the field with the passed in index was NULL in the persistent storage, false otherwise</returns>
-		public bool TestOriginalFieldValueForNull(DmlydonhapxuatFieldIndex fieldIndex)
+		public bool TestOriginalFieldValueForNull(DinhmuathoigianFieldIndex fieldIndex)
 		{
 			return base.Fields[(int)fieldIndex].IsNull;
 		}
@@ -308,7 +308,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the original value (read from the db) is NULL</summary>
 		/// <param name="fieldIndex">Index of the field to test if its currentvalue is null/undefined</param>
 		/// <returns>true if the field's value isn't defined yet, false otherwise</returns>
-		public bool TestCurrentFieldValueForNull(DmlydonhapxuatFieldIndex fieldIndex)
+		public bool TestCurrentFieldValueForNull(DinhmuathoigianFieldIndex fieldIndex)
 		{
 			return base.CheckIfCurrentFieldValueIsNull((int)fieldIndex);
 		}
@@ -318,7 +318,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>A list of all the EntityRelation objects the type of this instance has. Hierarchy relations are excluded.</returns>
 		public override List<IEntityRelation> GetAllRelations()
 		{
-			return new DmlydonhapxuatRelations().GetAllRelations();
+			return new DinhmuathoigianRelations().GetAllRelations();
 		}
 		
 
@@ -330,7 +330,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates entity fields object for this entity. Used in constructor to setup this entity in a polymorphic scenario.</summary>
 		protected virtual IEntityFields2 CreateFields()
 		{
-			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.DmlydonhapxuatEntity);
+			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.EntityType.DinhmuathoigianEntity);
 		}
 
 		/// <summary>
@@ -345,7 +345,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates a new instance of the factory related to this entity</summary>
 		protected override IEntityFactory2 CreateEntityFactory()
 		{
-			return EntityFactoryCache2.GetEntityFactory(typeof(DmlydonhapxuatEntityFactory));
+			return EntityFactoryCache2.GetEntityFactory(typeof(DinhmuathoigianEntityFactory));
 		}
 #if !CF
 		/// <summary>Adds the member collections to the collections queue (base first)</summary>
@@ -433,23 +433,41 @@ namespace GD.BBPH.DAL.EntityClasses
 			Dictionary<string, string> fieldHashtable = null;
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Malydo", fieldHashtable);
+			_fieldsCustomProperties.Add("Madmtg", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tenlydo", fieldHashtable);
+			_fieldsCustomProperties.Add("Tendinhmuc", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Manhom", fieldHashtable);
+			_fieldsCustomProperties.Add("Mamay", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tennhom", fieldHashtable);
+			_fieldsCustomProperties.Add("Madm", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dauca", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Doilenh", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Lencuon", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Xuongcuon", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Thaythietbi", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dungmay", fieldHashtable);
 		}
 		#endregion
 
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
-		/// <param name="validator">The validator object for this DmlydonhapxuatEntity</param>
+		/// <param name="validator">The validator object for this DinhmuathoigianEntity</param>
 		/// <param name="fields">Fields of this entity</param>
 		protected virtual void InitClassEmpty(IValidator validator, IEntityFields2 fields)
 		{
@@ -468,9 +486,9 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		#region Class Property Declarations
 		/// <summary> The relations object holding all relations of this entity with other entity classes.</summary>
-		public  static DmlydonhapxuatRelations Relations
+		public  static DinhmuathoigianRelations Relations
 		{
-			get	{ return new DmlydonhapxuatRelations(); }
+			get	{ return new DinhmuathoigianRelations(); }
 		}
 		
 		/// <summary> The custom properties for this entity type.</summary>
@@ -489,7 +507,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, string> CustomPropertiesOfType
 		{
-			get { return DmlydonhapxuatEntity.CustomProperties;}
+			get { return DinhmuathoigianEntity.CustomProperties;}
 		}
 
 		/// <summary> The custom properties for the fields of this entity type. The returned Hashtable contains per fieldname a hashtable of name-value
@@ -505,51 +523,117 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, Dictionary<string, string>> FieldsCustomPropertiesOfType
 		{
-			get { return DmlydonhapxuatEntity.FieldsCustomProperties;}
+			get { return DinhmuathoigianEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The Malydo property of the Entity Dmlydonhapxuat<br/><br/>
+		/// <summary> The Madmtg property of the Entity Dinhmuathoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmlydonhapxuat"."Malydo"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Madmtg"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 20<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
-		public virtual System.String Malydo
+		public virtual System.String Madmtg
 		{
-			get { return (System.String)GetValue((int)DmlydonhapxuatFieldIndex.Malydo, true); }
-			set	{ SetValue((int)DmlydonhapxuatFieldIndex.Malydo, value); }
+			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Madmtg, true); }
+			set	{ SetValue((int)DinhmuathoigianFieldIndex.Madmtg, value); }
 		}
 
-		/// <summary> The Tenlydo property of the Entity Dmlydonhapxuat<br/><br/>
+		/// <summary> The Tendinhmuc property of the Entity Dinhmuathoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmlydonhapxuat"."Tenlydo"<br/>
+		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Tendinhmuc"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Tenlydo
+		public virtual System.String Tendinhmuc
 		{
-			get { return (System.String)GetValue((int)DmlydonhapxuatFieldIndex.Tenlydo, true); }
-			set	{ SetValue((int)DmlydonhapxuatFieldIndex.Tenlydo, value); }
+			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Tendinhmuc, true); }
+			set	{ SetValue((int)DinhmuathoigianFieldIndex.Tendinhmuc, value); }
 		}
 
-		/// <summary> The Manhom property of the Entity Dmlydonhapxuat<br/><br/>
+		/// <summary> The Mamay property of the Entity Dinhmuathoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmlydonhapxuat"."Manhom"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Mamay"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 20<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Manhom
+		public virtual System.String Mamay
 		{
-			get { return (System.String)GetValue((int)DmlydonhapxuatFieldIndex.Manhom, true); }
-			set	{ SetValue((int)DmlydonhapxuatFieldIndex.Manhom, value); }
+			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Mamay, true); }
+			set	{ SetValue((int)DinhmuathoigianFieldIndex.Mamay, value); }
 		}
 
-		/// <summary> The Tennhom property of the Entity Dmlydonhapxuat<br/><br/>
+		/// <summary> The Madm property of the Entity Dinhmuathoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmlydonhapxuat"."Tennhom"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Madm"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 20<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Tennhom
+		public virtual System.String Madm
 		{
-			get { return (System.String)GetValue((int)DmlydonhapxuatFieldIndex.Tennhom, true); }
-			set	{ SetValue((int)DmlydonhapxuatFieldIndex.Tennhom, value); }
+			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Madm, true); }
+			set	{ SetValue((int)DinhmuathoigianFieldIndex.Madm, value); }
+		}
+
+		/// <summary> The Dauca property of the Entity Dinhmuathoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Dauca"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		public virtual System.String Dauca
+		{
+			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Dauca, true); }
+			set	{ SetValue((int)DinhmuathoigianFieldIndex.Dauca, value); }
+		}
+
+		/// <summary> The Doilenh property of the Entity Dinhmuathoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Doilenh"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		public virtual System.String Doilenh
+		{
+			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Doilenh, true); }
+			set	{ SetValue((int)DinhmuathoigianFieldIndex.Doilenh, value); }
+		}
+
+		/// <summary> The Lencuon property of the Entity Dinhmuathoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Lencuon"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		public virtual System.String Lencuon
+		{
+			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Lencuon, true); }
+			set	{ SetValue((int)DinhmuathoigianFieldIndex.Lencuon, value); }
+		}
+
+		/// <summary> The Xuongcuon property of the Entity Dinhmuathoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Xuongcuon"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		public virtual System.String Xuongcuon
+		{
+			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Xuongcuon, true); }
+			set	{ SetValue((int)DinhmuathoigianFieldIndex.Xuongcuon, value); }
+		}
+
+		/// <summary> The Thaythietbi property of the Entity Dinhmuathoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Thaythietbi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		public virtual System.String Thaythietbi
+		{
+			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Thaythietbi, true); }
+			set	{ SetValue((int)DinhmuathoigianFieldIndex.Thaythietbi, value); }
+		}
+
+		/// <summary> The Dungmay property of the Entity Dinhmuathoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmuathoigian"."Dungmay"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		public virtual System.String Dungmay
+		{
+			get { return (System.String)GetValue((int)DinhmuathoigianFieldIndex.Dungmay, true); }
+			set	{ SetValue((int)DinhmuathoigianFieldIndex.Dungmay, value); }
 		}
 
 
@@ -569,11 +653,11 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return false;}
 		}
 		
-		/// <summary>Returns the GD.BBPH.DAL.EntityType enum value for this entity.</summary>
+		/// <summary>Returns the GD.BBPH.EntityType enum value for this entity.</summary>
 		[Browsable(false), XmlIgnore]
 		public override int LLBLGenProEntityTypeValue 
 		{ 
-			get { return (int)GD.BBPH.DAL.EntityType.DmlydonhapxuatEntity; }
+			get { return (int)GD.BBPH.EntityType.DinhmuathoigianEntity; }
 		}
 		#endregion
 

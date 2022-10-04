@@ -42,6 +42,8 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Tile="Tile";				
 		
+		public const String Field_Tyle="Tyle";				
+		
 				
 		#endregion	
 
@@ -69,9 +71,11 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Tennguyenlieu,typeof(System.String));
 			
-			dt.Columns.Add(Field_Trongluong,typeof(System.String));
+			dt.Columns.Add(Field_Trongluong,typeof(System.Decimal));
 			
 			dt.Columns.Add(Field_Tile,typeof(System.String));
+			
+			dt.Columns.Add(Field_Tyle,typeof(System.Decimal));
 									
 		            
 			return dt;			
@@ -130,6 +134,12 @@ namespace GD.BBPH.BLL
 				r[Field_Tile]=_CtptmangDEntity.Tile;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_Tyle]=_CtptmangDEntity.Tyle;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -175,13 +185,19 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_CtptmangDEntity.Trongluong= r[Field_Trongluong].ToString();						
+				_CtptmangDEntity.Trongluong= System.Decimal.Parse(r[Field_Trongluong].ToString());						
 			}
 			catch { }
 			
 			try
 			{
 				_CtptmangDEntity.Tile= r[Field_Tile].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_CtptmangDEntity.Tyle= System.Decimal.Parse(r[Field_Tyle].ToString());						
 			}
 			catch { }
 									
@@ -208,6 +224,8 @@ namespace GD.BBPH.BLL
 			_CtptmangDEntity.Trongluong= _CtptmangDEntity_XML.Trongluong;
 			
 			_CtptmangDEntity.Tile= _CtptmangDEntity_XML.Tile;
+			
+			_CtptmangDEntity.Tyle= _CtptmangDEntity_XML.Tyle;
 									
 				
 			return _CtptmangDEntity;
@@ -270,6 +288,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Tile,_CtptmangDEntity.Tile);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Tyle,_CtptmangDEntity.Tyle);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -327,6 +351,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Tile,_CtptmangDEntity.Tile);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Tyle,_CtptmangDEntity.Tyle);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -349,7 +379,7 @@ namespace GD.BBPH.BLL
 			return CtptmangDEntity;
 		}
 
-		public CtptmangDEntity Insert(System.Int64  Id, System.Int64  IdH, System.String  Mact, System.String  Tenct, System.String  Manl, System.String  Tennguyenlieu, System.String  Trongluong, System.String  Tile)
+		public CtptmangDEntity Insert(System.Int64  Id, System.Int64  IdH, System.String  Mact, System.String  Tenct, System.String  Manl, System.String  Tennguyenlieu, System.Decimal  Trongluong, System.String  Tile, System.Decimal  Tyle)
 		{
 			CtptmangDEntity _CtptmangDEntity = new CtptmangDEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -370,6 +400,8 @@ namespace GD.BBPH.BLL
 				_CtptmangDEntity.Trongluong = Trongluong;
 				
 				_CtptmangDEntity.Tile = Tile;
+				
+				_CtptmangDEntity.Tyle = Tyle;
 					
 					
 				adapter.SaveEntity(_CtptmangDEntity, true);
@@ -377,7 +409,7 @@ namespace GD.BBPH.BLL
 			return _CtptmangDEntity;
 		}
 
-		public CtptmangDEntity Insert(System.Int64 IdH, System.String Mact, System.String Tenct, System.String Manl, System.String Tennguyenlieu, System.String Trongluong, System.String Tile)//ko co mahieu
+		public CtptmangDEntity Insert(System.Int64 IdH, System.String Mact, System.String Tenct, System.String Manl, System.String Tennguyenlieu, System.Decimal Trongluong, System.String Tile, System.Decimal Tyle)//ko co mahieu
 		{
 			CtptmangDEntity _CtptmangDEntity = new CtptmangDEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -397,6 +429,8 @@ namespace GD.BBPH.BLL
 				_CtptmangDEntity.Trongluong = Trongluong;
 				
 				_CtptmangDEntity.Tile = Tile;
+				
+				_CtptmangDEntity.Tyle = Tyle;
 					
 
 				adapter.SaveEntity(_CtptmangDEntity, true);
@@ -434,7 +468,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.Int64 IdH, System.String Mact, System.String Tenct, System.String Manl, System.String Tennguyenlieu, System.String Trongluong, System.String Tile)
+		public bool Update(System.Int64 Id, System.Int64 IdH, System.String Mact, System.String Tenct, System.String Manl, System.String Tennguyenlieu, System.Decimal Trongluong, System.String Tile, System.Decimal Tyle)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -458,6 +492,8 @@ namespace GD.BBPH.BLL
 					_CtptmangDEntity.Trongluong = Trongluong;
 					
 					_CtptmangDEntity.Tile = Tile;
+					
+					_CtptmangDEntity.Tyle = Tyle;
 						
 
 					adapter.SaveEntity(_CtptmangDEntity, true);
@@ -588,7 +624,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByTrongluong(System.String Trongluong)
+		public int DeleteByTrongluong(System.Decimal Trongluong)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -611,6 +647,22 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(CtptmangDFields.Tile == Tile);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("CtptmangDEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByTyle(System.Decimal Tyle)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CtptmangDFields.Tyle == Tyle);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -865,7 +917,7 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByTrongluong(System.String Trongluong)
+		public EntityCollection SelectByTrongluong(System.Decimal Trongluong)
 		{
 			EntityCollection _CtptmangDCollection = new EntityCollection(new CtptmangDEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -881,7 +933,7 @@ namespace GD.BBPH.BLL
 			return _CtptmangDCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByTrongluongRDT(System.String Trongluong)
+		public DataTable SelectByTrongluongRDT(System.Decimal Trongluong)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _CtptmangDCollection = new EntityCollection(new CtptmangDEntityFactory());
@@ -923,6 +975,40 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(CtptmangDFields.Tile == Tile);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_CtptmangDCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByTyle(System.Decimal Tyle)
+		{
+			EntityCollection _CtptmangDCollection = new EntityCollection(new CtptmangDEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CtptmangDFields.Tyle == Tyle);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_CtptmangDCollection, filter, 0, null);
+			}
+			return _CtptmangDCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByTyleRDT(System.Decimal Tyle)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _CtptmangDCollection = new EntityCollection(new CtptmangDEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CtptmangDFields.Tyle == Tyle);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
