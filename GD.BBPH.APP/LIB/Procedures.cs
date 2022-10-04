@@ -1662,6 +1662,18 @@ namespace GD.BBPH.APP.LIB
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachmaysudungnguyenlieu", "Danhsachmaysudungnguyenlieu", myArr).Tables[0];
         }
 
+        #region BBPH
+        public static DataTable Danhsachctpt()
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachctpt", "Danhsachctpt", myArr).Tables[0];
+        }
+        #endregion
+
         #region Khác
         public static void Saoluudulieu(string FileName)
         {
