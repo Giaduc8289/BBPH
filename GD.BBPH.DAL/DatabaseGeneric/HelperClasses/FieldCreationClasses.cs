@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 3, 2022 9:34:20 PM
+// Code is generated on: Tuesday, October 4, 2022 10:50:21 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -81,6 +81,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Tile
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(CtptmangDFieldIndex.Tile);}
+		}
+		/// <summary>Creates a new CtptmangDEntity.Tyle field instance</summary>
+		public static EntityField2 Tyle
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(CtptmangDFieldIndex.Tyle);}
 		}
 	}
 

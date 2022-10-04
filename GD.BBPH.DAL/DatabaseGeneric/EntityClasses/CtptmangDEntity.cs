@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 3, 2022 9:34:19 PM
+// Code is generated on: Tuesday, October 4, 2022 10:50:20 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -531,6 +531,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tile", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tyle", fieldHashtable);
 		}
 		#endregion
 
@@ -753,11 +756,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Trongluong property of the Entity CtptmangD<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "ctptmang_d"."Trongluong"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Trongluong
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Trongluong
 		{
-			get { return (System.String)GetValue((int)CtptmangDFieldIndex.Trongluong, true); }
+			get { return (Nullable<System.Decimal>)GetValue((int)CtptmangDFieldIndex.Trongluong, false); }
 			set	{ SetValue((int)CtptmangDFieldIndex.Trongluong, value); }
 		}
 
@@ -770,6 +773,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)CtptmangDFieldIndex.Tile, true); }
 			set	{ SetValue((int)CtptmangDFieldIndex.Tile, value); }
+		}
+
+		/// <summary> The Tyle property of the Entity CtptmangD<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "ctptmang_d"."Tyle"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tyle
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CtptmangDFieldIndex.Tyle, false); }
+			set	{ SetValue((int)CtptmangDFieldIndex.Tyle, value); }
 		}
 
 
