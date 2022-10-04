@@ -122,10 +122,10 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_CTPTMANG_D.RecordsDeleted += GRID_CTPTMANG_D_RecordsDeleted;
             GRID_CTPTMANG_D.RecordUpdated += GRID_CTPTMANG_D_RecordUpdated;
             GRID_CTPTMANG_D.DeletingRecord += GRID_CTPTMANG_DeletingRecord;
-            GRID_CTPTMANG_D.RootTable.Columns[CtptmangDFields.Tile.Name].EditType = EditType.NoEdit;
+            GRID_CTPTMANG_D.RootTable.Columns[CtptmangDFields.Tyle.Name].EditType = EditType.NoEdit;
             GRID_CTPTMANG_D.RootTable.Columns[CtptmangDFields.Manl.Name].EditType = EditType.NoEdit;
-            //GRID_CTPTMANG_D.RootTable.Columns["Dongia"].EditType = EditType.NoEdit;
-            //GRID_CTPTMANG_D.RootTable.Columns["Thanhtien"].EditType = EditType.NoEdit;
+            GRID_CTPTMANG_D.RootTable.Columns["Dongia"].EditType = EditType.NoEdit;
+            GRID_CTPTMANG_D.RootTable.Columns["Thanhtien"].EditType = EditType.NoEdit;
             DataView Source_View = new DataView(DT_CTPTMANG_H);
             BS_CTPTMANG_H = new BindingSource();
             BS_CTPTMANG_H.DataSource = Source_View;
@@ -185,8 +185,8 @@ namespace GD.BBPH.APP.DANHMUC
                     DataRow[] arrDr = DT_DMNGUYENLIEU.Select(DmnguyenlieuFields.Manl.Name + "='" + _view[CtptmangDFields.Manl.Name].ToString() + "'");
                     if (arrDr.Length > 0)
                     {
-                        //_dongia = LIB.ConvertString.NumbertoDB(arrDr[0][DmnguyenlieuFields.Gia.Name].ToString());
-                        //_view["Dongia"] = _dongia;
+                        _dongia = LIB.ConvertString.NumbertoDB(arrDr[0][DmnguyenlieuFields.Gia.Name].ToString());
+                        _view["Dongia"] = _dongia;
                     }
                     _kluong = LIB.ConvertString.NumbertoDB(_view[CtptmangDFields.Trongluong.Name].ToString());
                     _view["Thanhtien"] = _dongia * _kluong;
@@ -201,7 +201,7 @@ namespace GD.BBPH.APP.DANHMUC
                 {
                     DataRowView _view = (DataRowView)_grid.DataRow;
                     if (_view == null) continue;
-                    _view[CtptmangDFields.Tile.Name] = LIB.ConvertString.NumbertoDB(_view[CtptmangDFields.Trongluong.Name].ToString()) / tongkl * 100;
+                    _view[CtptmangDFields.Tyle.Name] = LIB.ConvertString.NumbertoDB(_view[CtptmangDFields.Trongluong.Name].ToString()) / tongkl * 100;
                 }
             }
             catch { }
@@ -321,10 +321,10 @@ namespace GD.BBPH.APP.DANHMUC
                 //_CtptmangDEntity.Ngayapdung = _CtptmangHEntity.Ngayapdung;
                 _CtptmangDEntity.Manl = _view[CtptmangDFields.Manl.Name].ToString();
                 _CtptmangDEntity.Tennguyenlieu = _view[CtptmangDFields.Tennguyenlieu.Name].ToString();
-                //try { _CtptmangDEntity.Trongluong = Convert.ToDecimal(_view[CtptmangDFields.Trongluong.Name].ToString()); }
-                //catch { }
-                //try { _CtptmangDEntity.Tile = Convert.ToDecimal(_view[CtptmangDFields.Tile.Name].ToString()); }
-                //catch { }
+                try { _CtptmangDEntity.Trongluong = Convert.ToDecimal(_view[CtptmangDFields.Trongluong.Name].ToString()); }
+                catch { }
+                try { _CtptmangDEntity.Tyle = Convert.ToDecimal(_view[CtptmangDFields.Tyle.Name].ToString()); }
+                catch { }
                 try { _CtptmangDEntity.Id = Convert.ToInt64(_view[CtptmangDFields.Id.Name].ToString()); }
                 catch { }
 
@@ -344,11 +344,14 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_CTPTMANG_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_CTPTMANG_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_CTPTMANG_D.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Ngayapdung.Name].Value = _CtptmangHEntity.Ngayapdung;
+                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Mactpt.Name].Value = _CtptmangHEntity.Mactpt;
+                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Tenctpt.Name].Value = _CtptmangHEntity.Tenctpt;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CtptmangHManager.Convert(_CtptmangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_XOADONG.Enabled = false;
-                BS_CTPTMANG_H.ResetCurrentItem();
-                BS_CTPTMANG_H_CurrentChanged(new object(), new EventArgs());
-                BS_CTPTMANG_H.Position = DT_CTPTMANG_H.Rows.Count - 1;
+                //BS_CTPTMANG_H.ResetCurrentItem();
+                //BS_CTPTMANG_H_CurrentChanged(new object(), new EventArgs());
+                //BS_CTPTMANG_H.Position = DT_CTPTMANG_H.Rows.Count - 1;
             }
             else
             {
@@ -584,7 +587,7 @@ namespace GD.BBPH.APP.DANHMUC
                     r_Detail[CtptmangDFields.Tennguyenlieu.Name] = dr[CtptmangDFields.Tennguyenlieu.Name];
                     //r_Detail[CtptmangDFields.Ngayapdung.Name] = dr[CtptmangDFields.Ngayapdung.Name];
                     r_Detail[CtptmangDFields.Trongluong.Name] = dr[CtptmangDFields.Trongluong.Name];
-                    r_Detail[CtptmangDFields.Tile.Name] = dr[CtptmangDFields.Tile.Name];
+                    r_Detail[CtptmangDFields.Tyle.Name] = dr[CtptmangDFields.Tyle.Name];
                     DT_CTPTMANG_D.Rows.Add(r_Detail);
                 }
 

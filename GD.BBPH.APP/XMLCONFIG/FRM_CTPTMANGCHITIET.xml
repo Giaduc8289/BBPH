@@ -86,11 +86,30 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tile</name>
+    <name>Tyle</name>
     <headerText>Tỉ lệ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Thanhtien</name>
+    <headerText>Thành tiền</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Dongia</name>
+    <headerText>Đơn giá</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  
 </NewDataSet>
