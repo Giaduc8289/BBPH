@@ -269,6 +269,32 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region CTPTMANG_H
+        private static DataTable _DT_CTPTMANG_H = null;
+        public static DataTable DT_CTPTMANG_H
+        {
+            get
+            {
+                _DT_CTPTMANG_H = new DmcongnhanManager().SelectAllRDT();
+                return _DT_CTPTMANG_H;
+            }
+            set { _DT_CTPTMANG_H = value; }
+        }
+        #endregion
+
+        #region CTPTMANG_D
+        private static DataTable _DT_CTPTMANG_D = null;
+        public static DataTable DT_CTPTMANG_D
+        {
+            get
+            {
+                _DT_CTPTMANG_D = new DmcongnhanManager().SelectAllRDT();
+                return _DT_CTPTMANG_D;
+            }
+            set { _DT_CTPTMANG_D = value; }
+        }
+        #endregion
+
         #region HANG
         private static DataTable _DT_HANG = null;
         public static DataTable DM_HANG
