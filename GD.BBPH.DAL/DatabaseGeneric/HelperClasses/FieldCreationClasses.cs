@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 3:25:18 PM
+// Code is generated on: Monday, October 3, 2022 9:34:20 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -109,58 +109,58 @@ namespace GD.BBPH.DAL.HelperClasses
 		}
 	}
 
-	/// <summary>Field Creation Class for entity DinhmuathoigianEntity</summary>
-	public partial class DinhmuathoigianFields
+	/// <summary>Field Creation Class for entity DinhmucthoigianEntity</summary>
+	public partial class DinhmucthoigianFields
 	{
-		/// <summary>Creates a new DinhmuathoigianEntity.Madmtg field instance</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity.Madmtg field instance</summary>
 		public static EntityField2 Madmtg
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DinhmuathoigianFieldIndex.Madmtg);}
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Madmtg);}
 		}
-		/// <summary>Creates a new DinhmuathoigianEntity.Tendinhmuc field instance</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity.Tendinhmuc field instance</summary>
 		public static EntityField2 Tendinhmuc
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DinhmuathoigianFieldIndex.Tendinhmuc);}
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Tendinhmuc);}
 		}
-		/// <summary>Creates a new DinhmuathoigianEntity.Mamay field instance</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity.Mamay field instance</summary>
 		public static EntityField2 Mamay
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DinhmuathoigianFieldIndex.Mamay);}
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Mamay);}
 		}
-		/// <summary>Creates a new DinhmuathoigianEntity.Madm field instance</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity.Madm field instance</summary>
 		public static EntityField2 Madm
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DinhmuathoigianFieldIndex.Madm);}
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Madm);}
 		}
-		/// <summary>Creates a new DinhmuathoigianEntity.Dauca field instance</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity.Dauca field instance</summary>
 		public static EntityField2 Dauca
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DinhmuathoigianFieldIndex.Dauca);}
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Dauca);}
 		}
-		/// <summary>Creates a new DinhmuathoigianEntity.Doilenh field instance</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity.Doilenh field instance</summary>
 		public static EntityField2 Doilenh
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DinhmuathoigianFieldIndex.Doilenh);}
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Doilenh);}
 		}
-		/// <summary>Creates a new DinhmuathoigianEntity.Lencuon field instance</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity.Lencuon field instance</summary>
 		public static EntityField2 Lencuon
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DinhmuathoigianFieldIndex.Lencuon);}
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Lencuon);}
 		}
-		/// <summary>Creates a new DinhmuathoigianEntity.Xuongcuon field instance</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity.Xuongcuon field instance</summary>
 		public static EntityField2 Xuongcuon
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DinhmuathoigianFieldIndex.Xuongcuon);}
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Xuongcuon);}
 		}
-		/// <summary>Creates a new DinhmuathoigianEntity.Thaythietbi field instance</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity.Thaythietbi field instance</summary>
 		public static EntityField2 Thaythietbi
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DinhmuathoigianFieldIndex.Thaythietbi);}
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Thaythietbi);}
 		}
-		/// <summary>Creates a new DinhmuathoigianEntity.Dungmay field instance</summary>
+		/// <summary>Creates a new DinhmucthoigianEntity.Dungmay field instance</summary>
 		public static EntityField2 Dungmay
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DinhmuathoigianFieldIndex.Dungmay);}
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Dungmay);}
 		}
 	}
 

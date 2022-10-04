@@ -104,9 +104,9 @@ namespace GD.BBPH.BLL
 		{
 		
 			
-			//String id =(new MenuroleManagerBase()).Insert(_MenuroleEntity).Menuid.ToString();
+			String id =(new MenuroleManagerBase()).Insert(_MenuroleEntity).Menuid.ToString();
 			
-			String id =(new MenuroleManagerBase()).Insert(_MenuroleEntity).Rolesid.ToString();
+			//String id =(new MenuroleManagerBase()).Insert(_MenuroleEntity).Rolesid.ToString();
 			
 			
 			try
