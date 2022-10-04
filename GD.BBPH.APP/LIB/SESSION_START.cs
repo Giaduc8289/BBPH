@@ -307,5 +307,18 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMNGUYENLIEU = value; }
         }
         #endregion
+
+        #region DT_DMCHUCVU
+        private static DataTable _DT_DMCHUCVU = null;
+        public static DataTable DT_DMCHUCVU
+        {
+            get
+            {
+                _DT_DMCHUCVU = new DmchucvuManager().SelectAllRDT();
+                return _DT_DMCHUCVU;
+            }
+            set { _DT_DMCHUCVU = value; }
+        }
+        #endregion
     }
 }
