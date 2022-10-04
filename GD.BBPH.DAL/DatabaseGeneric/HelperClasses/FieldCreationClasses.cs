@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 11:24:46 AM
+// Code is generated on: Tuesday, October 4, 2022 3:05:20 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -32,10 +32,10 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Macd);}
 		}
-		/// <summary>Creates a new CongsuatmayEntity.Maqccha field instance</summary>
-		public static EntityField2 Maqccha
+		/// <summary>Creates a new CongsuatmayEntity.Maqc field instance</summary>
+		public static EntityField2 Maqc
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Maqccha);}
+			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Maqc);}
 		}
 	}
 

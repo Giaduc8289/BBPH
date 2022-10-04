@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 11:24:45 AM
+// Code is generated on: Tuesday, October 4, 2022 3:05:20 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -716,7 +716,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmcongnhan"."Tencongnhan"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tencongnhan
 		{
 			get { return (System.String)GetValue((int)DmcongnhanFieldIndex.Tencongnhan, true); }
@@ -727,7 +727,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmcongnhan"."Mabp"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Mabp
 		{
 			get { return (System.String)GetValue((int)DmcongnhanFieldIndex.Mabp, true); }
@@ -738,7 +738,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmcongnhan"."Macv"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Macv
 		{
 			get { return (System.String)GetValue((int)DmcongnhanFieldIndex.Macv, true); }

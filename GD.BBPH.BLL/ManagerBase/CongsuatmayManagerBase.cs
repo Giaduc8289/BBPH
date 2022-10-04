@@ -32,7 +32,7 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Macd="Macd";				
 		
-		public const String Field_Maqccha="Maqccha";				
+		public const String Field_Maqc="Maqc";				
 		
 				
 		#endregion	
@@ -55,7 +55,7 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Macd,typeof(System.String));
 			
-			dt.Columns.Add(Field_Maqccha,typeof(System.String));
+			dt.Columns.Add(Field_Maqc,typeof(System.String));
 									
 		            
 			return dt;			
@@ -87,7 +87,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_Maqccha]=_CongsuatmayEntity.Maqccha;
+				r[Field_Maqc]=_CongsuatmayEntity.Maqc;
 			}
 			catch { }
 									
@@ -117,7 +117,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_CongsuatmayEntity.Maqccha= r[Field_Maqccha].ToString();						
+				_CongsuatmayEntity.Maqc= r[Field_Maqc].ToString();						
 			}
 			catch { }
 									
@@ -135,7 +135,7 @@ namespace GD.BBPH.BLL
 			
 			_CongsuatmayEntity.Macd= _CongsuatmayEntity_XML.Macd;
 			
-			_CongsuatmayEntity.Maqccha= _CongsuatmayEntity_XML.Maqccha;
+			_CongsuatmayEntity.Maqc= _CongsuatmayEntity_XML.Maqc;
 									
 				
 			return _CongsuatmayEntity;
@@ -171,7 +171,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Maqccha,_CongsuatmayEntity.Maqccha);
+				r.SetField(Field_Maqc,_CongsuatmayEntity.Maqc);
 			}
 			catch { }
 									
@@ -204,7 +204,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Maqccha,_CongsuatmayEntity.Maqccha);
+				r.SetField(Field_Maqc,_CongsuatmayEntity.Maqc);
 			}
 			catch { }
 									
@@ -229,7 +229,7 @@ namespace GD.BBPH.BLL
 			return CongsuatmayEntity;
 		}
 
-		public CongsuatmayEntity Insert(System.String  Macs, System.String  Tencongsuat, System.String  Macd, System.String  Maqccha)
+		public CongsuatmayEntity Insert(System.String  Macs, System.String  Tencongsuat, System.String  Macd, System.String  Maqc)
 		{
 			CongsuatmayEntity _CongsuatmayEntity = new CongsuatmayEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -241,7 +241,7 @@ namespace GD.BBPH.BLL
 				
 				_CongsuatmayEntity.Macd = Macd;
 				
-				_CongsuatmayEntity.Maqccha = Maqccha;
+				_CongsuatmayEntity.Maqc = Maqc;
 					
 					
 				adapter.SaveEntity(_CongsuatmayEntity, true);
@@ -249,7 +249,7 @@ namespace GD.BBPH.BLL
 			return _CongsuatmayEntity;
 		}
 
-		public CongsuatmayEntity Insert(System.String Tencongsuat, System.String Macd, System.String Maqccha)//ko co mahieu
+		public CongsuatmayEntity Insert(System.String Tencongsuat, System.String Macd, System.String Maqc)//ko co mahieu
 		{
 			CongsuatmayEntity _CongsuatmayEntity = new CongsuatmayEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -260,7 +260,7 @@ namespace GD.BBPH.BLL
 				
 				_CongsuatmayEntity.Macd = Macd;
 				
-				_CongsuatmayEntity.Maqccha = Maqccha;
+				_CongsuatmayEntity.Maqc = Maqc;
 					
 
 				adapter.SaveEntity(_CongsuatmayEntity, true);
@@ -298,7 +298,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Macs, System.String Tencongsuat, System.String Macd, System.String Maqccha)
+		public bool Update(System.String Macs, System.String Tencongsuat, System.String Macd, System.String Maqc)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -313,7 +313,7 @@ namespace GD.BBPH.BLL
 					
 					_CongsuatmayEntity.Macd = Macd;
 					
-					_CongsuatmayEntity.Maqccha = Maqccha;
+					_CongsuatmayEntity.Maqc = Maqc;
 						
 
 					adapter.SaveEntity(_CongsuatmayEntity, true);
@@ -396,13 +396,13 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByMaqccha(System.String Maqccha)
+		public int DeleteByMaqc(System.String Maqc)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maqccha == Maqccha);
+			_PredicateExpression.Add(CongsuatmayFields.Maqc == Maqc);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -555,13 +555,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByMaqccha(System.String Maqccha)
+		public EntityCollection SelectByMaqc(System.String Maqc)
 		{
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maqccha == Maqccha);
+			_PredicateExpression.Add(CongsuatmayFields.Maqc == Maqc);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -571,14 +571,14 @@ namespace GD.BBPH.BLL
 			return _CongsuatmayCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByMaqcchaRDT(System.String Maqccha)
+		public DataTable SelectByMaqcRDT(System.String Maqc)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maqccha == Maqccha);
+			_PredicateExpression.Add(CongsuatmayFields.Maqc == Maqc);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

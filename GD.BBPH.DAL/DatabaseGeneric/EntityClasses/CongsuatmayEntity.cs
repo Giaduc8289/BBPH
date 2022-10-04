@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 11:24:45 AM
+// Code is generated on: Tuesday, October 4, 2022 3:05:20 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -473,7 +473,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Macd", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Maqccha", fieldHashtable);
+			_fieldsCustomProperties.Add("Maqc", fieldHashtable);
 		}
 		#endregion
 
@@ -608,22 +608,22 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "congsuatmay"."Macd"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Macd
 		{
 			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Macd, true); }
 			set	{ SetValue((int)CongsuatmayFieldIndex.Macd, value); }
 		}
 
-		/// <summary> The Maqccha property of the Entity Congsuatmay<br/><br/>
+		/// <summary> The Maqc property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Maqccha"<br/>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Maqc"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Maqccha
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maqc
 		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maqccha, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Maqccha, value); }
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maqc, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Maqc, value); }
 		}
 
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 11:24:45 AM
+// Code is generated on: Tuesday, October 4, 2022 3:05:20 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -608,7 +608,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmmay"."Madm"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Madm
 		{
 			get { return (System.String)GetValue((int)DmmayFieldIndex.Madm, true); }
@@ -619,7 +619,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmmay"."Vitri"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Vitri
 		{
 			get { return (System.String)GetValue((int)DmmayFieldIndex.Vitri, true); }

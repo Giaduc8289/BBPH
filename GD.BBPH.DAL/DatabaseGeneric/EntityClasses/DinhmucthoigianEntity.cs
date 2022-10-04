@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 11:24:45 AM
+// Code is generated on: Tuesday, October 4, 2022 3:05:19 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -552,7 +552,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Mamay"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Mamay
 		{
 			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Mamay, true); }
@@ -563,7 +563,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Madm"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Madm
 		{
 			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Madm, true); }
