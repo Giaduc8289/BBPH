@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 10:50:20 AM
+// Code is generated on: Tuesday, October 4, 2022 11:24:45 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -49,8 +49,6 @@ namespace GD.BBPH.DAL
 		Tennguyenlieu,
 		///<summary>Trongluong. </summary>
 		Trongluong,
-		///<summary>Tile. </summary>
-		Tile,
 		///<summary>Tyle. </summary>
 		Tyle,
 		/// <summary></summary>
@@ -393,6 +391,18 @@ namespace GD.BBPH.DAL
 		Manhom,
 		///<summary>Tennhom. </summary>
 		Tennhom,
+		///<summary>Tennl. </summary>
+		Tennl,
+		///<summary>Gia. </summary>
+		Gia,
+		///<summary>Ngay. </summary>
+		Ngay,
+		///<summary>Giahientai. </summary>
+		Giahientai,
+		///<summary>Tang. </summary>
+		Tang,
+		///<summary>Giam. </summary>
+		Giam,
 		/// <summary></summary>
 		AmountOfFields
 	}

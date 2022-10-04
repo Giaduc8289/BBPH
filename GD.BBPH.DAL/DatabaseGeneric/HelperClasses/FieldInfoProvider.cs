@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 10:50:20 AM
+// Code is generated on: Tuesday, October 4, 2022 11:24:45 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -106,7 +106,6 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("CtptmangDEntity", "Manl", typeof(System.String), false, true, false, false,  (int)CtptmangDFieldIndex.Manl, 50, 0, 0);
 			base.AddElementFieldInfo("CtptmangDEntity", "Tennguyenlieu", typeof(System.String), false, false, false, false,  (int)CtptmangDFieldIndex.Tennguyenlieu, 250, 0, 0);
 			base.AddElementFieldInfo("CtptmangDEntity", "Trongluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)CtptmangDFieldIndex.Trongluong, 0, 2, 20);
-			base.AddElementFieldInfo("CtptmangDEntity", "Tile", typeof(System.String), false, false, false, false,  (int)CtptmangDFieldIndex.Tile, 250, 0, 0);
 			base.AddElementFieldInfo("CtptmangDEntity", "Tyle", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)CtptmangDFieldIndex.Tyle, 0, 2, 20);
 		}
 		/// <summary>Inits CtptmangHEntity's FieldInfo objects</summary>
@@ -262,6 +261,12 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmnguyenlieuEntity", "Tenrutgon", typeof(System.String), false, false, false, false,  (int)DmnguyenlieuFieldIndex.Tenrutgon, 250, 0, 0);
 			base.AddElementFieldInfo("DmnguyenlieuEntity", "Manhom", typeof(System.String), false, true, false, false,  (int)DmnguyenlieuFieldIndex.Manhom, 50, 0, 0);
 			base.AddElementFieldInfo("DmnguyenlieuEntity", "Tennhom", typeof(System.String), false, false, false, false,  (int)DmnguyenlieuFieldIndex.Tennhom, 250, 0, 0);
+			base.AddElementFieldInfo("DmnguyenlieuEntity", "Tennl", typeof(System.String), false, false, false, true,  (int)DmnguyenlieuFieldIndex.Tennl, 100, 0, 0);
+			base.AddElementFieldInfo("DmnguyenlieuEntity", "Gia", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmnguyenlieuFieldIndex.Gia, 0, 2, 20);
+			base.AddElementFieldInfo("DmnguyenlieuEntity", "Ngay", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)DmnguyenlieuFieldIndex.Ngay, 0, 0, 0);
+			base.AddElementFieldInfo("DmnguyenlieuEntity", "Giahientai", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmnguyenlieuFieldIndex.Giahientai, 0, 2, 20);
+			base.AddElementFieldInfo("DmnguyenlieuEntity", "Tang", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmnguyenlieuFieldIndex.Tang, 0, 2, 20);
+			base.AddElementFieldInfo("DmnguyenlieuEntity", "Giam", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmnguyenlieuFieldIndex.Giam, 0, 2, 20);
 		}
 		/// <summary>Inits DmnhomnguyenlieuEntity's FieldInfo objects</summary>
 		private void InitDmnhomnguyenlieuEntityInfos()
