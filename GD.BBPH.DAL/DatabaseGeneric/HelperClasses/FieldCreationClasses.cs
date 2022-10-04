@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 10:50:21 AM
+// Code is generated on: Tuesday, October 4, 2022 11:24:46 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -76,11 +76,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Trongluong
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(CtptmangDFieldIndex.Trongluong);}
-		}
-		/// <summary>Creates a new CtptmangDEntity.Tile field instance</summary>
-		public static EntityField2 Tile
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(CtptmangDFieldIndex.Tile);}
 		}
 		/// <summary>Creates a new CtptmangDEntity.Tyle field instance</summary>
 		public static EntityField2 Tyle
@@ -616,6 +611,36 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Tennhom
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Tennhom);}
+		}
+		/// <summary>Creates a new DmnguyenlieuEntity.Tennl field instance</summary>
+		public static EntityField2 Tennl
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Tennl);}
+		}
+		/// <summary>Creates a new DmnguyenlieuEntity.Gia field instance</summary>
+		public static EntityField2 Gia
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Gia);}
+		}
+		/// <summary>Creates a new DmnguyenlieuEntity.Ngay field instance</summary>
+		public static EntityField2 Ngay
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Ngay);}
+		}
+		/// <summary>Creates a new DmnguyenlieuEntity.Giahientai field instance</summary>
+		public static EntityField2 Giahientai
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Giahientai);}
+		}
+		/// <summary>Creates a new DmnguyenlieuEntity.Tang field instance</summary>
+		public static EntityField2 Tang
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Tang);}
+		}
+		/// <summary>Creates a new DmnguyenlieuEntity.Giam field instance</summary>
+		public static EntityField2 Giam
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Giam);}
 		}
 	}
 

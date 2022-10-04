@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 10:50:20 AM
+// Code is generated on: Tuesday, October 4, 2022 11:24:45 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -522,6 +522,24 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tennhom", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tennl", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Gia", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngay", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Giahientai", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Giam", fieldHashtable);
 		}
 		#endregion
 
@@ -696,6 +714,72 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmnguyenlieuFieldIndex.Tennhom, true); }
 			set	{ SetValue((int)DmnguyenlieuFieldIndex.Tennhom, value); }
+		}
+
+		/// <summary> The Tennl property of the Entity Dmnguyenlieu<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Tennl"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tennl
+		{
+			get { return (System.String)GetValue((int)DmnguyenlieuFieldIndex.Tennl, true); }
+			set	{ SetValue((int)DmnguyenlieuFieldIndex.Tennl, value); }
+		}
+
+		/// <summary> The Gia property of the Entity Dmnguyenlieu<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Gia"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Gia
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmnguyenlieuFieldIndex.Gia, false); }
+			set	{ SetValue((int)DmnguyenlieuFieldIndex.Gia, value); }
+		}
+
+		/// <summary> The Ngay property of the Entity Dmnguyenlieu<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Ngay"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngay
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)DmnguyenlieuFieldIndex.Ngay, false); }
+			set	{ SetValue((int)DmnguyenlieuFieldIndex.Ngay, value); }
+		}
+
+		/// <summary> The Giahientai property of the Entity Dmnguyenlieu<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Giahientai"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Giahientai
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmnguyenlieuFieldIndex.Giahientai, false); }
+			set	{ SetValue((int)DmnguyenlieuFieldIndex.Giahientai, value); }
+		}
+
+		/// <summary> The Tang property of the Entity Dmnguyenlieu<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Tang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tang
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmnguyenlieuFieldIndex.Tang, false); }
+			set	{ SetValue((int)DmnguyenlieuFieldIndex.Tang, value); }
+		}
+
+		/// <summary> The Giam property of the Entity Dmnguyenlieu<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Giam"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Giam
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmnguyenlieuFieldIndex.Giam, false); }
+			set	{ SetValue((int)DmnguyenlieuFieldIndex.Giam, value); }
 		}
 
 		/// <summary> Gets the EntityCollection with the related entities of type 'CtptmangDEntity' which are related to this entity via a relation of type '1:n'.
