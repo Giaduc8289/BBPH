@@ -1077,6 +1077,14 @@ namespace GD.BBPH.LIB
 
         public static void Create_GRID_CONIG(DataTable dt, string filename)
         {
+            DataTable dtname = new DataTable("tablename");
+            dtname.Columns.Add("name");
+            dtname.Columns.Add("headerText");
+            DataRow dr = dtname.NewRow();
+            dr["name"] = "tablename";
+            dr["headerText"] = "Danh sách tendanhsach";
+            dtname.Rows.Add(dr);
+
             DataTable dtemp = new DataTable("viewgrid");
             dtemp.Columns.Add("value", typeof(String));
             dtemp.Columns.Add("name", typeof(String));
@@ -1098,6 +1106,7 @@ namespace GD.BBPH.LIB
                 dtemp.Rows.Add(r);
             }
             DataSet ds = new DataSet();
+            ds.Tables.Add(dtname);
             ds.Tables.Add(dtemp);
             IO.GenXML(filename, ds);
 
