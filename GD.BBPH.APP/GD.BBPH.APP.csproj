@@ -129,6 +129,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DANHMUC\FRM_CTPTMANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_CTPTMANG.designer.cs">
+      <DependentUpon>FRM_CTPTMANG.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMBOPHAN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +318,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSXBB.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DANHMUC\FRM_CTPTMANG.resx">
+      <DependentUpon>FRM_CTPTMANG.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMBOPHAN.resx">
       <DependentUpon>FRM_DMBOPHAN.cs</DependentUpon>
     </EmbeddedResource>
