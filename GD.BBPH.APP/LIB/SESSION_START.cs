@@ -282,5 +282,30 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region DT_DMNHOMNGUYENLIEU
+        private static DataTable _DT_DMNHOMNGUYENLIEU = null;
+        public static DataTable DT_DMNHOMNGUYENLIEU
+        {
+            get
+            {
+                _DT_DMNHOMNGUYENLIEU = new DmnhomnguyenlieuManager().SelectAllRDT();
+                return _DT_DMNHOMNGUYENLIEU;
+            }
+            set { _DT_DMNHOMNGUYENLIEU = value; }
+        }
+        #endregion
+
+        #region DT_DMNGUYENLIEU
+        private static DataTable _DT_DMNGUYENLIEU = null;
+        public static DataTable DT_DMNGUYENLIEU
+        {
+            get
+            {
+                _DT_DMNGUYENLIEU = new DmnguyenlieuManager().SelectAllRDT();
+                return _DT_DMNGUYENLIEU;
+            }
+            set { _DT_DMNGUYENLIEU = value; }
+        }
+        #endregion
     }
 }

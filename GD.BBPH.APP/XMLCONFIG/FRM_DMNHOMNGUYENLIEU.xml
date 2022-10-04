@@ -17,29 +17,24 @@
               </xs:sequence>
             </xs:complexType>
           </xs:element>
+          <xs:element name="tablename">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="name" type="xs:string" minOccurs="0" />
+                <xs:element name="headerText" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
         </xs:choice>
       </xs:complexType>
     </xs:element>
   </xs:schema>
-  
-  <viewgrid>
-    <value>1</value>
-    <name>Manl</name>
-    <headerText>Manl</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tenrutgon</name>
-    <headerText>Tenrutgon</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
+
+  <tablename>
+    <name>Dmnhomnguyenlieu</name>
+    <headerText>Danh sách nhóm nguyên liệu</headerText>
+  </tablename>
+
   <viewgrid>
     <value>1</value>
     <name>Manhom</name>
@@ -51,8 +46,17 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tennhom</name>
-    <headerText>Tennhom</headerText>
+    <name>Tennhomnguyenlieu</name>
+    <headerText>Tennhomnguyenlieu</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tenrutgon</name>
+    <headerText>Tenrutgon</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
