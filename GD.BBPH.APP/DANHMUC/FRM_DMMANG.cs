@@ -26,9 +26,11 @@ namespace GD.BBPH.APP.DANHMUC
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
         private DataTable DT_DMMANG = new DataTable();
         private BindingSource BS_DMMANG = new BindingSource();
-        private DataRow r_Insert = null;
+        private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_DMMANG = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
+
+        private DataTable DT_DMKHACH = new DataTable(), DT_CTPT = new DataTable();
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -50,6 +52,10 @@ namespace GD.BBPH.APP.DANHMUC
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMMANG");
                         DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
+
+                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+                        DT_CTPT = LIB.Procedures.Danhsachctpt();
+                        //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(DT_CTPT, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_CTPT_H.xml");
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -119,11 +125,10 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[DmmangFields.Mamang.Name].ToString();
                     txt_MAHIEU.Text = _Rowview.Row[DmmangFields.Mamang.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmmangFields.Tenmang.Name].ToString();
-                    txt_MAKHACH.Text = _Rowview.Row[DmmangFields.Makhach.Name].ToString();
-                    txt_TENKHACH.Text = _Rowview.Row[DmmangFields.Tenkhach.Name].ToString();
+                    txt_MAKHACH_Validating(new object(), new CancelEventArgs());
                     txt_KICHTHUOC.Text = _Rowview.Row[DmmangFields.Kichthuoc.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmmangFields.Trongluong.Name].ToString();
-                    txt_MACTPT.Text = _Rowview.Row[DmmangFields.Mactpt.Name].ToString();
+                    txt_MACTPT_Validating(new object(), new CancelEventArgs());
                     //try
                     //{
                     //    chk_TRUYENTHONG.Checked = Convert.ToBoolean(_Rowview.Row[DmmangFields.Truyenthong.Name].ToString());
@@ -264,6 +269,66 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        #endregion
+
+        #region Validate
+        private void txt_MAKHACH_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MAKHACH.Text.Trim()) || DT_DMKHACH == null || DT_DMKHACH.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MAKHACH.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaKhach(Str_MASIEUTHI, DT_DMKHACH);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMKHACH.xml",
+                        DT_DMKHACH, DmkhachFields.Makhach.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MAKHACH.Text = _RowViewSelect[DmkhachFields.Makhach.Name].ToString();
+                txt_TENKHACH.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
+            }
+            else
+                txt_TENKHACH.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
+        }
+        private DataRow checkmaKhach(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(DmkhachFields.Makhach.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
+
+        private void txt_MACTPT_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MACTPT.Text.Trim()) || DT_CTPT == null || DT_CTPT.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MACTPT.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaCtpt(Str_MASIEUTHI, DT_CTPT);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_CTPT_H_TK.xml",
+                        DT_CTPT, CtptmangHFields.Mactpt.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MACTPT.Text = _RowViewSelect[CtptmangHFields.Mactpt.Name].ToString();
+                txt_TENCTPT.Text = _RowViewSelect[CtptmangHFields.Tenctpt.Name].ToString();
+            }
+            else
+                txt_TENCTPT.Text = _RowViewSelect[CtptmangHFields.Tenctpt.Name].ToString();
+        }
+        private DataRow checkmaCtpt(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(CtptmangHFields.Mactpt.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
         }
         #endregion
 
