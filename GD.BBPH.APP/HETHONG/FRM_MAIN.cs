@@ -746,6 +746,26 @@ namespace GD.BBPH.APP.HETHONG
                     break;
                 #endregion
 
+                #region Danh mục nhóm nguyên liệu
+                case "FRM_DMNHOMNGUYENLIEU":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMNHOMNGUYENLIEU") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMNHOMNGUYENLIEU()), mmru.Text);
+                    break;
+                #endregion
+
+                #region Danh mục nguyên liệu
+                case "FRM_DMNGUYENLIEU":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMNGUYENLIEU") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMNGUYENLIEU()), mmru.Text);
+                    break;
+                #endregion
+
                 #region Danh mục công nhân
                 case "FRM_DMCONGNHAN":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
