@@ -235,7 +235,7 @@ namespace GD.BBPH.APP.DANHMUC
             }
             else if (txt_TENHIEU.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập tên sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_TENHIEU.Focus();
                 return;
             }
