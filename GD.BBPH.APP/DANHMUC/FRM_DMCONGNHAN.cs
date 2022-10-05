@@ -159,12 +159,16 @@ namespace GD.BBPH.APP.DANHMUC
                 _DmcongnhanEntity.Danghi = false;
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
+                _DmcongnhanEntity.Ngaytao = DateTime.Now;
+                _DmcongnhanEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _DmcongnhanManager.InsertV2(_DmcongnhanEntity, r_Insert, DT_DMCONGNHAN, BS_DMCONGNHAN);
                  GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcongnhanManager.Convert(_DmcongnhanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMCONGNHAN.ResetCurrentItem();
             }
             else
             {
+                _DmcongnhanEntity.Ngaysua = DateTime.Now;
+                _DmcongnhanEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DmcongnhanManager.Update(_DmcongnhanEntity);
                 GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Macn.Name].Value = _DmcongnhanEntity.Macn;
                 GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Hovatencongnhan.Name].Value = _DmcongnhanEntity.Hovatencongnhan;
