@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 2:27:29 PM
+// Code is generated on: Wednesday, October 5, 2022 3:24:51 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -25,6 +25,14 @@ namespace GD.BBPH.DAL
 		Macd,
 		///<summary>Maqc. </summary>
 		Maqc,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -51,6 +59,14 @@ namespace GD.BBPH.DAL
 		Trongluong,
 		///<summary>Tyle. </summary>
 		Tyle,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -69,6 +85,14 @@ namespace GD.BBPH.DAL
 		Tenctpt,
 		///<summary>Ngayapdung. </summary>
 		Ngayapdung,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -99,6 +123,14 @@ namespace GD.BBPH.DAL
 		Thaythietbi,
 		///<summary>Dungmay. </summary>
 		Dungmay,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -113,6 +145,14 @@ namespace GD.BBPH.DAL
 		Mabp,
 		///<summary>Tenbophan. </summary>
 		Tenbophan,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -143,6 +183,14 @@ namespace GD.BBPH.DAL
 		Macv,
 		///<summary>Tenchucvu. </summary>
 		Tenchucvu,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -159,6 +207,14 @@ namespace GD.BBPH.DAL
 		Tencongdoan,
 		///<summary>Sothutucongdoan. </summary>
 		Sothutucongdoan,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -189,6 +245,14 @@ namespace GD.BBPH.DAL
 		Chucvu,
 		///<summary>Danghi. </summary>
 		Danghi,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -205,6 +269,14 @@ namespace GD.BBPH.DAL
 		Tendongmay,
 		///<summary>Macd. </summary>
 		Macd,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -243,6 +315,14 @@ namespace GD.BBPH.DAL
 		Quycachdonggoi,
 		///<summary>Loaithung. </summary>
 		Loaithung,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -281,6 +361,14 @@ namespace GD.BBPH.DAL
 		Sodienthoailh,
 		///<summary>Thongtinbosung. </summary>
 		Thongtinbosung,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -297,6 +385,14 @@ namespace GD.BBPH.DAL
 		Tenkho,
 		///<summary>Tenrutgon. </summary>
 		Tenrutgon,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -315,6 +411,14 @@ namespace GD.BBPH.DAL
 		Manhom,
 		///<summary>Tennhom. </summary>
 		Tennhom,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -339,6 +443,14 @@ namespace GD.BBPH.DAL
 		Trongluong,
 		///<summary>Mactpt. </summary>
 		Mactpt,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -355,6 +467,14 @@ namespace GD.BBPH.DAL
 		Tenmau,
 		///<summary>ChisoRgb. </summary>
 		ChisoRgb,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -373,6 +493,14 @@ namespace GD.BBPH.DAL
 		Madm,
 		///<summary>Vitri. </summary>
 		Vitri,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -403,6 +531,14 @@ namespace GD.BBPH.DAL
 		Tang,
 		///<summary>Giam. </summary>
 		Giam,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -419,6 +555,14 @@ namespace GD.BBPH.DAL
 		Tennhomnguyenlieu,
 		///<summary>Tenrutgon. </summary>
 		Tenrutgon,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -437,6 +581,14 @@ namespace GD.BBPH.DAL
 		Macd,
 		///<summary>Maqccha. </summary>
 		Maqccha,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -459,6 +611,14 @@ namespace GD.BBPH.DAL
 		Matkcha,
 		///<summary>ChisoRgb. </summary>
 		ChisoRgb,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}

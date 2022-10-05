@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 2:27:30 PM
+// Code is generated on: Wednesday, October 5, 2022 3:24:51 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -443,6 +443,18 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tennhom", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nguoitao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaysua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
 		}
 		#endregion
 
@@ -550,6 +562,50 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmlydonhapxuatFieldIndex.Tennhom, true); }
 			set	{ SetValue((int)DmlydonhapxuatFieldIndex.Tennhom, value); }
+		}
+
+		/// <summary> The Ngaytao property of the Entity Dmlydonhapxuat<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmlydonhapxuat"."Ngaytao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaytao
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)DmlydonhapxuatFieldIndex.Ngaytao, false); }
+			set	{ SetValue((int)DmlydonhapxuatFieldIndex.Ngaytao, value); }
+		}
+
+		/// <summary> The Nguoitao property of the Entity Dmlydonhapxuat<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmlydonhapxuat"."Nguoitao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoitao
+		{
+			get { return (System.String)GetValue((int)DmlydonhapxuatFieldIndex.Nguoitao, true); }
+			set	{ SetValue((int)DmlydonhapxuatFieldIndex.Nguoitao, value); }
+		}
+
+		/// <summary> The Ngaysua property of the Entity Dmlydonhapxuat<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmlydonhapxuat"."Ngaysua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaysua
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)DmlydonhapxuatFieldIndex.Ngaysua, false); }
+			set	{ SetValue((int)DmlydonhapxuatFieldIndex.Ngaysua, value); }
+		}
+
+		/// <summary> The Nguoisua property of the Entity Dmlydonhapxuat<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmlydonhapxuat"."Nguoisua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoisua
+		{
+			get { return (System.String)GetValue((int)DmlydonhapxuatFieldIndex.Nguoisua, true); }
+			set	{ SetValue((int)DmlydonhapxuatFieldIndex.Nguoisua, value); }
 		}
 
 
