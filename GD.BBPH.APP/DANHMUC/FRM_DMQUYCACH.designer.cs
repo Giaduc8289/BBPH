@@ -34,6 +34,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_MAQCCHA = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label2 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MACD = new GD.BBPH.CONTROL.TEXTBOX();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
@@ -46,8 +48,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAQC = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_MAQCCHA = new GD.BBPH.CONTROL.TEXTBOX();
-            this.label2 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -124,6 +124,31 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(395, 518);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // txt_MAQCCHA
+            // 
+            this.txt_MAQCCHA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MAQCCHA.BannerText = null;
+            this.txt_MAQCCHA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_MAQCCHA.FormNametoShow = "";
+            this.txt_MAQCCHA.Is_DateTime = false;
+            this.txt_MAQCCHA.IsShowForm = false;
+            this.txt_MAQCCHA.Location = new System.Drawing.Point(136, 114);
+            this.txt_MAQCCHA.Name = "txt_MAQCCHA";
+            this.txt_MAQCCHA.Regular_Expression = null;
+            this.txt_MAQCCHA.Size = new System.Drawing.Size(138, 20);
+            this.txt_MAQCCHA.TabIndex = 123;
+            this.txt_MAQCCHA.TextChanged += new System.EventHandler(this.textbox1_TextChanged_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.TabIndex = 124;
+            this.label2.Text = "Mã quy cách cha";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // txt_MACD
             // 
             this.txt_MACD.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,6 +163,7 @@
             this.txt_MACD.Size = new System.Drawing.Size(138, 20);
             this.txt_MACD.TabIndex = 121;
             this.txt_MACD.TextChanged += new System.EventHandler(this.textbox1_TextChanged);
+            this.txt_MACD.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACD_Validating);
             // 
             // label1
             // 
@@ -272,31 +298,6 @@
             this.label22.Size = new System.Drawing.Size(69, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã quy cách";
-            // 
-            // txt_MAQCCHA
-            // 
-            this.txt_MAQCCHA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MAQCCHA.BannerText = null;
-            this.txt_MAQCCHA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_MAQCCHA.FormNametoShow = "";
-            this.txt_MAQCCHA.Is_DateTime = false;
-            this.txt_MAQCCHA.IsShowForm = false;
-            this.txt_MAQCCHA.Location = new System.Drawing.Point(136, 114);
-            this.txt_MAQCCHA.Name = "txt_MAQCCHA";
-            this.txt_MAQCCHA.Regular_Expression = null;
-            this.txt_MAQCCHA.Size = new System.Drawing.Size(138, 20);
-            this.txt_MAQCCHA.TabIndex = 123;
-            this.txt_MAQCCHA.TextChanged += new System.EventHandler(this.textbox1_TextChanged_1);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
-            this.label2.TabIndex = 124;
-            this.label2.Text = "Mã quy cách cha";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // FRM_DMQUYCACH
             // 

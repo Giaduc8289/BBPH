@@ -29,6 +29,9 @@ namespace GD.BBPH.APP.DANHMUC
         private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_DMQUYCACH = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
+
+        private DataTable DT_DMCONGDOAN = new DataTable();
+
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -50,6 +53,7 @@ namespace GD.BBPH.APP.DANHMUC
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMQUYCACH");
                         DT_DMQUYCACH = LIB.SESSION_START.DT_DMQUYCACH;
+                        DT_DMCONGDOAN = LIB.SESSION_START.DT_DMCONGDOAN;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -119,7 +123,7 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[DmquycachFields.Maqc.Name].ToString();
                     txt_MAQC.Text = _Rowview.Row[DmquycachFields.Maqc.Name].ToString();
                     txt_TENQUYCACH.Text = _Rowview.Row[DmquycachFields.Tenquycach.Name].ToString();
-                    txt_MACD.Text = _Rowview.Row[DmquycachFields.Macd.Name].ToString();
+                    txt_MACD_Validating(new object(), new CancelEventArgs());
                     txt_MAQCCHA.Text = _Rowview.Row[DmquycachFields.Maqccha.Name].ToString();
 
                     //try { chk_COSUDUNGMAY.Checked = Convert.ToBoolean(_Rowview.Row[DmquycachFields.Cosudungmay.Name].ToString()); }
@@ -228,6 +232,33 @@ namespace GD.BBPH.APP.DANHMUC
             Close();
         }
         #endregion
+
+        private void txt_MACD_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MACD.Text.Trim()) || DT_DMCONGDOAN == null || DT_DMCONGDOAN.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MACD.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaCongdoan(Str_MASIEUTHI, DT_DMCONGDOAN);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCONGDOAN.xml",
+                        DT_DMCONGDOAN, DmcongdoanFields.Macd.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MACD.Text = _RowViewSelect[DmcongdoanFields.Macd.Name].ToString();
+            }
+        }
+
+        private DataRow checkmaCongdoan(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(DmcongdoanFields.Macd.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
 
         private string Save_Data(string _str_DMCHUONG_PK)
         {
