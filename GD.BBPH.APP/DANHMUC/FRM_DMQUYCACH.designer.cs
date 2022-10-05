@@ -137,7 +137,6 @@
             this.txt_MAQCCHA.Regular_Expression = null;
             this.txt_MAQCCHA.Size = new System.Drawing.Size(138, 20);
             this.txt_MAQCCHA.TabIndex = 123;
-            this.txt_MAQCCHA.TextChanged += new System.EventHandler(this.textbox1_TextChanged_1);
             // 
             // label2
             // 
@@ -147,7 +146,6 @@
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 124;
             this.label2.Text = "Mã quy cách cha";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txt_MACD
             // 
@@ -309,7 +307,6 @@
             this.txt_MAQCCHA.Regular_Expression = null;
             this.txt_MAQCCHA.Size = new System.Drawing.Size(138, 20);
             this.txt_MAQCCHA.TabIndex = 123;
-            this.txt_MAQCCHA.TextChanged += new System.EventHandler(this.textbox1_TextChanged_1);
             // 
             // label2
             // 
@@ -319,7 +316,6 @@
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 124;
             this.label2.Text = "Mã quy cách cha";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // FRM_DMQUYCACH
             // 
