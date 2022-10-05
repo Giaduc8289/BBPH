@@ -117,7 +117,8 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_DMMANG.UpdateData();
                 if (BS_DMMANG.Current != null)
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_DMMANG.Current;
@@ -129,11 +130,6 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_KICHTHUOC.Text = _Rowview.Row[DmmangFields.Kichthuoc.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmmangFields.Trongluong.Name].ToString();
                     txt_MACTPT_Validating(new object(), new CancelEventArgs());
-                    //try
-                    //{
-                    //    chk_TRUYENTHONG.Checked = Convert.ToBoolean(_Rowview.Row[DmmangFields.Truyenthong.Name].ToString());
-                    //}
-                    //catch { }
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMMANG_CurrentChanged"); }
@@ -149,10 +145,6 @@ namespace GD.BBPH.APP.DANHMUC
             _DmmangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
             _DmmangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
             _DmmangEntity.Mactpt = txt_MACTPT.Text.Trim();
-            //if (chk_TRUYENTHONG.Checked)
-            //    _DmmangEntity.Truyenthong = true;
-            //else
-            //    _DmmangEntity.Truyenthong = false;
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _str_DMCHUONG_PK = _DmmangManager.InsertV2(_DmmangEntity, r_Insert, DT_DMMANG, BS_DMMANG);

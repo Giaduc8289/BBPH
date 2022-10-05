@@ -55,7 +55,6 @@ namespace GD.BBPH.APP.DANHMUC
                         DT_DMCHUCVU = LIB.SESSION_START.DT_DMCHUCVU;
 
                         //DT_DMPHONGBAN = LIB.SESSION_START.DT_DMPHONGBAN;
-                        //DT_DMCHUCVU = LIB.SESSION_START.DT_DMCHUCVU;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -118,7 +117,8 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_DMCHUCVU.UpdateData();
                 if (BS_DMCHUCVU.Current != null)
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_DMCHUCVU.Current;
@@ -126,16 +126,8 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[DmchucvuFields.Macv.Name].ToString();
                     txt_MAHIEU.Text = _Rowview.Row[DmchucvuFields.Macv.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmchucvuFields.Tenchucvu.Name].ToString();
-
                 }
             }
-            //    try { chk_DANGHI.Checked = Convert.ToBoolean(_Rowview.Row[DmchucvuFields.Danghi.Name].ToString()); }
-            //    catch { }
-
-            //    txt_MAPHONGBAN_Validating(new object(), new CancelEventArgs());
-            //    txt_MACHUCVU_Validating(new object(), new CancelEventArgs());
-            //}
-            //}
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMCHUCVU_CurrentChanged"); }
         }
 
@@ -259,66 +251,6 @@ namespace GD.BBPH.APP.DANHMUC
             Close();
         }
         #endregion
-
-        //#region Validate
-        //private void txt_MAPHONGBAN_Validating(object sender, CancelEventArgs e)
-        //{
-        //    _RowViewSelect = null;
-        //    if (string.IsNullOrEmpty(txt_MAPHONGBAN.Text.Trim()) || DT_DMPHONGBAN == null || DT_DMPHONGBAN.Rows.Count == 0) return;
-        //    string Str_MASIEUTHI = txt_MAPHONGBAN.Text.Trim().ToUpper();
-        //    //_RowViewSelect = checkmaPhongban(Str_MASIEUTHI, DT_DMPHONGBAN);
-        //    //    if (_RowViewSelect == null)
-        //    //    {
-        //    //        ListviewJanus _frm_SingerRows_Select =
-        //    //            new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMPHONGBAN.xml",
-        //    //                DT_DMPHONGBAN, DanhmucphongbanFields.Mahieu.Name, Str_MASIEUTHI);
-        //    //        _frm_SingerRows_Select.ShowDialog();
-        //    //        if (_frm_SingerRows_Select._RowViewSelect == null) return;
-        //    //        _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-        //    //        txt_MAPHONGBAN.Text = _RowViewSelect[DanhmucphongbanFields.Mahieu.Name].ToString();
-        //    //        txt_PHONGBAN.Text = _RowViewSelect[DanhmucphongbanFields.Tenhieu.Name].ToString();
-        //    //    }
-        //    //    else
-        //    //        txt_PHONGBAN.Text = _RowViewSelect[DanhmucphongbanFields.Tenhieu.Name].ToString();
-        //}
-        ////private DataRow checkmaPhongban(string masieuthi, DataTable dt)
-        ////{
-        ////    try
-        ////    {
-        ////        return dt.Select(DanhmucphongbanFields.Mahieu.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
-        ////    }
-        ////    catch { return null; }
-        ////}
-
-        //private void txt_MACHUCVU_Validating(object sender, CancelEventArgs e)
-        //{
-        //    _RowViewSelect = null;
-        //    if (string.IsNullOrEmpty(txt_MACHUCVU.Text.Trim()) || DT_DMCHUCVU == null || DT_DMCHUCVU.Rows.Count == 0) return;
-        //    string Str_MASIEUTHI = txt_MACHUCVU.Text.Trim().ToUpper();
-        //    //_RowViewSelect = checkMACHUCVU(Str_MASIEUTHI, DT_DMCHUCVU);
-        //    //if (_RowViewSelect == null)
-        //    //{
-        //    //    ListviewJanus _frm_SingerRows_Select =
-        //    //        new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUCVU.xml",
-        //    //            DT_DMCHUCVU, DanhmucchucvuFields.Mahieu.Name, Str_MASIEUTHI);
-        //    //    _frm_SingerRows_Select.ShowDialog();
-        //    //    if (_frm_SingerRows_Select._RowViewSelect == null) return;
-        //    //    _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-        //    //    txt_MACHUCVU.Text = _RowViewSelect[DanhmucchucvuFields.Mahieu.Name].ToString();
-        //    //    txt_CHUCVU.Text = _RowViewSelect[DanhmucchucvuFields.Tenhieu.Name].ToString();
-        //    //}
-        //    //else
-        //    //    txt_CHUCVU.Text = _RowViewSelect[DanhmucchucvuFields.Tenhieu.Name].ToString();
-        //}
-        ////private DataRow checkMACHUCVU(string masieuthi, DataTable dt)
-        ////{
-        ////    try
-        ////    {
-        ////        return dt.Select(DanhmucchucvuFields.Mahieu.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
-        ////    }
-        ////    catch { return null; }
-        ////}
-        //#endregion
 
         #region Shortcut Key
         //private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
