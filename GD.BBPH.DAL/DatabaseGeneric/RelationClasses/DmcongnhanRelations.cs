@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 3:05:19 PM
+// Code is generated on: Wednesday, October 5, 2022 2:27:29 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -32,8 +32,7 @@ namespace GD.BBPH.DAL.RelationClasses
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
 
 
-			toReturn.Add(this.DmbophanEntityUsingMabp);
-			toReturn.Add(this.DmchucvuEntityUsingMacv);
+
 			return toReturn;
 		}
 
@@ -41,34 +40,6 @@ namespace GD.BBPH.DAL.RelationClasses
 
 
 
-		/// <summary>Returns a new IEntityRelation object, between DmcongnhanEntity and DmbophanEntity over the m:1 relation they have, using the relation between the fields:
-		/// Dmcongnhan.Mabp - Dmbophan.Mabp
-		/// </summary>
-		public virtual IEntityRelation DmbophanEntityUsingMabp
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmbophan", false);
-				relation.AddEntityFieldPair(DmbophanFields.Mabp, DmcongnhanFields.Mabp);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmbophanEntity", false);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmcongnhanEntity", true);
-				return relation;
-			}
-		}
-		/// <summary>Returns a new IEntityRelation object, between DmcongnhanEntity and DmchucvuEntity over the m:1 relation they have, using the relation between the fields:
-		/// Dmcongnhan.Macv - Dmchucvu.Macv
-		/// </summary>
-		public virtual IEntityRelation DmchucvuEntityUsingMacv
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmchucvu", false);
-				relation.AddEntityFieldPair(DmchucvuFields.Macv, DmcongnhanFields.Macv);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmchucvuEntity", false);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmcongnhanEntity", true);
-				return relation;
-			}
-		}
 
 		/// <summary>stub, not used in this entity, only for TargetPerEntity entities.</summary>
 		public virtual IEntityRelation GetSubTypeRelation(string subTypeEntityName) { return null; }
