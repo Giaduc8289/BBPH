@@ -1,7 +1,7 @@
 ﻿
 /*
 '===============================================================================
-'  GD.BBPH.DAL.DAL.EntityClasses.DinhmucthoigianEnt
+'  GD.BBPH.DAL.EntityClasses.DinhmucthoigianEnt
 '===============================================================================
 */
 
@@ -9,14 +9,14 @@ using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using GD.BBPH.DAL.BLL;
-using GD.BBPH.DAL.DAL;
-using GD.BBPH.DAL.DAL.EntityClasses;
-using GD.BBPH.DAL.DAL.FactoryClasses;
-using GD.BBPH.DAL.DAL.HelperClasses;
+using GD.BBPH.BLL;
+using GD.BBPH.DAL;
+using GD.BBPH.DAL.EntityClasses;
+using GD.BBPH.DAL.FactoryClasses;
+using GD.BBPH.DAL.HelperClasses;
 using SD.LLBLGen.Pro.ORMSupportClasses;
 
-namespace GD.BBPH.DAL.DAL.EntityClasses
+namespace GD.BBPH.DAL.EntityClasses
 {
 	public class DinhmucthoigianEnt : DinhmucthoigianEntity
 	{
@@ -32,7 +32,7 @@ namespace GD.BBPH.DAL.DAL.EntityClasses
 		{
 			try
 			{
-				GD.BBPH.DAL.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.DAL.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+				GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
 				if (BS_Dinhmucthoigian.Current != null)
 				{
 					DataRowView _Rowview = (DataRowView)this.BS_Dinhmucthoigian.Current;
@@ -72,7 +72,7 @@ namespace GD.BBPH.DAL.DAL.EntityClasses
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
 				_str_Dinhmucthoigian_PK = _DinhmucthoigianManager.InsertV2(_DinhmucthoigianEntity, r_Insert, DT_Dinhmucthoigian, BS_Dinhmucthoigian);
-				GD.BBPH.DAL.BLL.MenuroleManager.set_Enable_controls(_DinhmucthoigianManager.Convert(_dinhmucthoigianEntity), GD.BBPH.DAL.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DinhmucthoigianManager.Convert(_dinhmucthoigianEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_Dinhmucthoigian.ResetCurrentItem();
 			}
 			else
@@ -89,7 +89,7 @@ namespace GD.BBPH.DAL.DAL.EntityClasses
 				GRID_Dinhmucthoigian.CurrentRow.Cells[DinhmucthoigianFields.Xuongcuon.Name].Value = _dinhmucthoigianEntity.Xuongcuon;
 				GRID_Dinhmucthoigian.CurrentRow.Cells[DinhmucthoigianFields.Thaythietbi.Name].Value = _dinhmucthoigianEntity.Thaythietbi;
 				GRID_Dinhmucthoigian.CurrentRow.Cells[DinhmucthoigianFields.Dungmay.Name].Value = _dinhmucthoigianEntity.Dungmay;
-				GD.BBPH.DAL.BLL.MenuroleManager.set_Enable_controls(_DinhmucthoigianManager.Convert(_dinhmucthoigianEntity), GD.BBPH.DAL.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DinhmucthoigianManager.Convert(_dinhmucthoigianEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Dinhmucthoigian_PK;
 		}

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 3:05:20 PM
+// Code is generated on: Wednesday, October 5, 2022 2:27:30 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -39,8 +39,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		#region Class Member Declarations
 
 
-		private DmbophanEntity _dmbophan;
-		private DmchucvuEntity _dmchucvu;
+
 
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
@@ -54,10 +53,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>All names of fields mapped onto a relation. Usable for in-memory filtering</summary>
 		public static class MemberNames
 		{
-			/// <summary>Member name Dmbophan</summary>
-			public static readonly string Dmbophan = "Dmbophan";
-			/// <summary>Member name Dmchucvu</summary>
-			public static readonly string Dmchucvu = "Dmchucvu";
+
 
 
 
@@ -121,16 +117,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 
 
-				_dmbophan = (DmbophanEntity)info.GetValue("_dmbophan", typeof(DmbophanEntity));
-				if(_dmbophan!=null)
-				{
-					_dmbophan.AfterSave+=new EventHandler(OnEntityAfterSave);
-				}
-				_dmchucvu = (DmchucvuEntity)info.GetValue("_dmchucvu", typeof(DmchucvuEntity));
-				if(_dmchucvu!=null)
-				{
-					_dmchucvu.AfterSave+=new EventHandler(OnEntityAfterSave);
-				}
+
 
 				base.FixupDeserialization(FieldInfoProviderSingleton.GetInstance());
 			}
@@ -146,12 +133,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch((DmcongnhanFieldIndex)fieldIndex)
 			{
-				case DmcongnhanFieldIndex.Mabp:
-					DesetupSyncDmbophan(true, false);
-					break;
-				case DmcongnhanFieldIndex.Macv:
-					DesetupSyncDmchucvu(true, false);
-					break;
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
 					break;
@@ -174,12 +155,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(propertyName)
 			{
-				case "Dmbophan":
-					this.Dmbophan = (DmbophanEntity)entity;
-					break;
-				case "Dmchucvu":
-					this.Dmchucvu = (DmchucvuEntity)entity;
-					break;
+
 
 
 
@@ -204,12 +180,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			RelationCollection toReturn = new RelationCollection();
 			switch(fieldName)
 			{
-				case "Dmbophan":
-					toReturn.Add(DmcongnhanEntity.Relations.DmbophanEntityUsingMabp);
-					break;
-				case "Dmchucvu":
-					toReturn.Add(DmcongnhanEntity.Relations.DmchucvuEntityUsingMacv);
-					break;
+
 
 
 
@@ -235,7 +206,6 @@ namespace GD.BBPH.DAL.EntityClasses
 					return ((numberOfOneWayRelations > 0) || base.CheckOneWayRelations(null));
 
 
-
 				default:
 					return base.CheckOneWayRelations(propertyName);
 			}
@@ -249,12 +219,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-				case "Dmbophan":
-					SetupSyncDmbophan(relatedEntity);
-					break;
-				case "Dmchucvu":
-					SetupSyncDmchucvu(relatedEntity);
-					break;
+
 
 
 				default:
@@ -271,12 +236,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-				case "Dmbophan":
-					DesetupSyncDmbophan(false, true);
-					break;
-				case "Dmchucvu":
-					DesetupSyncDmchucvu(false, true);
-					break;
+
 
 
 				default:
@@ -299,14 +259,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntity2> GetDependentRelatedEntities()
 		{
 			List<IEntity2> toReturn = new List<IEntity2>();
-			if(_dmbophan!=null)
-			{
-				toReturn.Add(_dmbophan);
-			}
-			if(_dmchucvu!=null)
-			{
-				toReturn.Add(_dmchucvu);
-			}
+
 
 			return toReturn;
 		}
@@ -333,8 +286,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 
 
-				info.AddValue("_dmbophan", (!this.MarkedForDeletion?_dmbophan:null));
-				info.AddValue("_dmchucvu", (!this.MarkedForDeletion?_dmchucvu:null));
+
 
 			}
 			
@@ -372,25 +324,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entity of type 'Dmbophan' to this entity. Use DataAccessAdapter.FetchNewEntity() to fetch this related entity.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmbophan()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmbophanFields.Mabp, null, ComparisonOperator.Equal, this.Mabp));
-			return bucket;
-		}
-
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entity of type 'Dmchucvu' to this entity. Use DataAccessAdapter.FetchNewEntity() to fetch this related entity.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmchucvu()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmchucvuFields.Macv, null, ComparisonOperator.Equal, this.Macv));
-			return bucket;
-		}
 
 	
 		
@@ -459,8 +392,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override Dictionary<string, object> GetRelatedData()
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
-			toReturn.Add("Dmbophan", _dmbophan);
-			toReturn.Add("Dmchucvu", _dmchucvu);
+
 
 
 
@@ -472,14 +404,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 
 
-			if(_dmbophan!=null)
-			{
-				_dmbophan.ActiveContext = base.ActiveContext;
-			}
-			if(_dmchucvu!=null)
-			{
-				_dmchucvu.ActiveContext = base.ActiveContext;
-			}
+
 
 		}
 
@@ -489,8 +414,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-			_dmbophan = null;
-			_dmchucvu = null;
+
 
 			PerformDependencyInjection();
 			
@@ -540,71 +464,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		#endregion
 
-		/// <summary> Removes the sync logic for member _dmbophan</summary>
-		/// <param name="signalRelatedEntity">If set to true, it will call the related entity's UnsetRelatedEntity method</param>
-		/// <param name="resetFKFields">if set to true it will also reset the FK fields pointing to the related entity</param>
-		private void DesetupSyncDmbophan(bool signalRelatedEntity, bool resetFKFields)
-		{
-			base.PerformDesetupSyncRelatedEntity( _dmbophan, new PropertyChangedEventHandler( OnDmbophanPropertyChanged ), "Dmbophan", DmcongnhanEntity.Relations.DmbophanEntityUsingMabp, true, signalRelatedEntity, "Dmcongnhan", resetFKFields, new int[] { (int)DmcongnhanFieldIndex.Mabp } );		
-			_dmbophan = null;
-		}
-
-		/// <summary> setups the sync logic for member _dmbophan</summary>
-		/// <param name="relatedEntity">Instance to set as the related entity of type entityType</param>
-		private void SetupSyncDmbophan(IEntity2 relatedEntity)
-		{
-			if(_dmbophan!=relatedEntity)
-			{
-				DesetupSyncDmbophan(true, true);
-				_dmbophan = (DmbophanEntity)relatedEntity;
-				base.PerformSetupSyncRelatedEntity( _dmbophan, new PropertyChangedEventHandler( OnDmbophanPropertyChanged ), "Dmbophan", DmcongnhanEntity.Relations.DmbophanEntityUsingMabp, true, new string[] {  } );
-			}
-		}
-		
-		/// <summary>Handles property change events of properties in a related entity.</summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void OnDmbophanPropertyChanged( object sender, PropertyChangedEventArgs e )
-		{
-			switch( e.PropertyName )
-			{
-				default:
-					break;
-			}
-		}
-
-		/// <summary> Removes the sync logic for member _dmchucvu</summary>
-		/// <param name="signalRelatedEntity">If set to true, it will call the related entity's UnsetRelatedEntity method</param>
-		/// <param name="resetFKFields">if set to true it will also reset the FK fields pointing to the related entity</param>
-		private void DesetupSyncDmchucvu(bool signalRelatedEntity, bool resetFKFields)
-		{
-			base.PerformDesetupSyncRelatedEntity( _dmchucvu, new PropertyChangedEventHandler( OnDmchucvuPropertyChanged ), "Dmchucvu", DmcongnhanEntity.Relations.DmchucvuEntityUsingMacv, true, signalRelatedEntity, "Dmcongnhan", resetFKFields, new int[] { (int)DmcongnhanFieldIndex.Macv } );		
-			_dmchucvu = null;
-		}
-
-		/// <summary> setups the sync logic for member _dmchucvu</summary>
-		/// <param name="relatedEntity">Instance to set as the related entity of type entityType</param>
-		private void SetupSyncDmchucvu(IEntity2 relatedEntity)
-		{
-			if(_dmchucvu!=relatedEntity)
-			{
-				DesetupSyncDmchucvu(true, true);
-				_dmchucvu = (DmchucvuEntity)relatedEntity;
-				base.PerformSetupSyncRelatedEntity( _dmchucvu, new PropertyChangedEventHandler( OnDmchucvuPropertyChanged ), "Dmchucvu", DmcongnhanEntity.Relations.DmchucvuEntityUsingMacv, true, new string[] {  } );
-			}
-		}
-		
-		/// <summary>Handles property change events of properties in a related entity.</summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void OnDmchucvuPropertyChanged( object sender, PropertyChangedEventArgs e )
-		{
-			switch( e.PropertyName )
-			{
-				default:
-					break;
-			}
-		}
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
@@ -641,29 +500,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmbophan' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmbophan
-		{
-			get
-			{
-				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(DmbophanEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmbophan")[0], (int)GD.BBPH.DAL.EntityType.DmcongnhanEntity, (int)GD.BBPH.DAL.EntityType.DmbophanEntity, 0, null, null, null, null, "Dmbophan", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
-			}
-		}
-
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmchucvu' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmchucvu
-		{
-			get
-			{
-				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(DmchucvuEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmchucvu")[0], (int)GD.BBPH.DAL.EntityType.DmcongnhanEntity, (int)GD.BBPH.DAL.EntityType.DmchucvuEntity, 0, null, null, null, null, "Dmchucvu", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
-			}
-		}
 
 
 		/// <summary> The custom properties for the type of this entity instance.</summary>
@@ -802,75 +638,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Gets / sets related entity of type 'DmbophanEntity' which has to be set using a fetch action earlier. If no related entity
-		/// is set for this property, null is returned. This property is not visible in databound grids.</summary>
-		[Browsable(false)]
-		public virtual DmbophanEntity Dmbophan
-		{
-			get
-			{
-				return _dmbophan;
-			}
-			set
-			{
-				if(base.IsDeserializing)
-				{
-					SetupSyncDmbophan(value);
-				}
-				else
-				{
-					if(value==null)
-					{
-						if(_dmbophan != null)
-						{
-							_dmbophan.UnsetRelatedEntity(this, "Dmcongnhan");
-						}
-					}
-					else
-					{
-						if(_dmbophan!=value)
-						{
-							((IEntity2)value).SetRelatedEntity(this, "Dmcongnhan");
-						}
-					}
-				}
-			}
-		}
-
-		/// <summary> Gets / sets related entity of type 'DmchucvuEntity' which has to be set using a fetch action earlier. If no related entity
-		/// is set for this property, null is returned. This property is not visible in databound grids.</summary>
-		[Browsable(false)]
-		public virtual DmchucvuEntity Dmchucvu
-		{
-			get
-			{
-				return _dmchucvu;
-			}
-			set
-			{
-				if(base.IsDeserializing)
-				{
-					SetupSyncDmchucvu(value);
-				}
-				else
-				{
-					if(value==null)
-					{
-						if(_dmchucvu != null)
-						{
-							_dmchucvu.UnsetRelatedEntity(this, "Dmcongnhan");
-						}
-					}
-					else
-					{
-						if(_dmchucvu!=value)
-						{
-							((IEntity2)value).SetRelatedEntity(this, "Dmcongnhan");
-						}
-					}
-				}
-			}
-		}
 
 	
 		

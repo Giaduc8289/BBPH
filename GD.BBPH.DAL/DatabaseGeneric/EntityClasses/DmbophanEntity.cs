@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 4, 2022 3:05:20 PM
+// Code is generated on: Wednesday, October 5, 2022 2:27:30 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -37,8 +37,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
-		private EntityCollection<DmcongnhanEntity> _dmcongnhan;
-		private EntityCollection<DmchucvuEntity> _dmchucvuCollectionViaDmcongnhan;
+
+
 
 
 		
@@ -54,10 +54,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		public static class MemberNames
 		{
 
-			/// <summary>Member name Dmcongnhan</summary>
-			public static readonly string Dmcongnhan = "Dmcongnhan";
-			/// <summary>Member name DmchucvuCollectionViaDmcongnhan</summary>
-			public static readonly string DmchucvuCollectionViaDmcongnhan = "DmchucvuCollectionViaDmcongnhan";
+
+
 
 		}
 		#endregion
@@ -117,8 +115,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-				_dmcongnhan = (EntityCollection<DmcongnhanEntity>)info.GetValue("_dmcongnhan", typeof(EntityCollection<DmcongnhanEntity>));
-				_dmchucvuCollectionViaDmcongnhan = (EntityCollection<DmchucvuEntity>)info.GetValue("_dmchucvuCollectionViaDmcongnhan", typeof(EntityCollection<DmchucvuEntity>));
+
+
 
 
 				base.FixupDeserialization(FieldInfoProviderSingleton.GetInstance());
@@ -158,14 +156,8 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(propertyName)
 			{
 
-				case "Dmcongnhan":
-					this.Dmcongnhan.Add((DmcongnhanEntity)entity);
-					break;
-				case "DmchucvuCollectionViaDmcongnhan":
-					this.DmchucvuCollectionViaDmcongnhan.IsReadOnly = false;
-					this.DmchucvuCollectionViaDmcongnhan.Add((DmchucvuEntity)entity);
-					this.DmchucvuCollectionViaDmcongnhan.IsReadOnly = true;
-					break;
+
+
 
 				default:
 					break;
@@ -189,13 +181,8 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-				case "Dmcongnhan":
-					toReturn.Add(DmbophanEntity.Relations.DmcongnhanEntityUsingMabp);
-					break;
-				case "DmchucvuCollectionViaDmcongnhan":
-					toReturn.Add(DmbophanEntity.Relations.DmcongnhanEntityUsingMabp, "DmbophanEntity__", "Dmcongnhan_", JoinHint.None);
-					toReturn.Add(DmcongnhanEntity.Relations.DmchucvuEntityUsingMacv, "Dmcongnhan_", string.Empty, JoinHint.None);
-					break;
+
+
 
 				default:
 
@@ -233,9 +220,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-				case "Dmcongnhan":
-					this.Dmcongnhan.Add((DmcongnhanEntity)relatedEntity);
-					break;
+
 
 				default:
 					break;
@@ -252,9 +237,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-				case "Dmcongnhan":
-					base.PerformRelatedEntityRemoval(this.Dmcongnhan, relatedEntity, signalRelatedEntityManyToOne);
-					break;
+
 
 				default:
 					break;
@@ -286,7 +269,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntityCollection2> GetMemberEntityCollections()
 		{
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
-			toReturn.Add(this.Dmcongnhan);
+
 
 			return toReturn;
 		}
@@ -301,8 +284,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-				info.AddValue("_dmcongnhan", ((_dmcongnhan!=null) && (_dmcongnhan.Count>0) && !this.MarkedForDeletion)?_dmcongnhan:null);
-				info.AddValue("_dmchucvuCollectionViaDmcongnhan", ((_dmchucvuCollectionViaDmcongnhan!=null) && (_dmchucvuCollectionViaDmcongnhan.Count>0) && !this.MarkedForDeletion)?_dmchucvuCollectionViaDmcongnhan:null);
+
+
 
 
 			}
@@ -339,26 +322,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entities of type 'Dmcongnhan' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmcongnhan()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmcongnhanFields.Mabp, null, ComparisonOperator.Equal, this.Mabp));
-			return bucket;
-		}
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entities of type 'Dmchucvu' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmchucvuCollectionViaDmcongnhan()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.Relations.AddRange(GetRelationsForFieldOfType("DmchucvuCollectionViaDmcongnhan"));
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmbophanFields.Mabp, null, ComparisonOperator.Equal, this.Mabp, "DmbophanEntity__"));
-			return bucket;
-		}
 
 
 	
@@ -389,8 +353,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void AddToMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue) 
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
-			collectionsQueue.Enqueue(this._dmcongnhan);
-			collectionsQueue.Enqueue(this._dmchucvuCollectionViaDmcongnhan);
+
+
 		}
 		
 		/// <summary>Gets the member collections queue from the queue (base first)</summary>
@@ -398,22 +362,16 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void GetFromMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue)
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
-			this._dmcongnhan = (EntityCollection<DmcongnhanEntity>) collectionsQueue.Dequeue();
-			this._dmchucvuCollectionViaDmcongnhan = (EntityCollection<DmchucvuEntity>) collectionsQueue.Dequeue();
+
+
 		}
 		
 		/// <summary>Determines whether the entity has populated member collections</summary>
 		/// <returns>true if the entity has populated member collections.</returns>
 		protected override bool HasPopulatedMemberEntityCollections()
 		{
-			if (this._dmcongnhan != null)
-			{
-				return true;
-			}
-			if (this._dmchucvuCollectionViaDmcongnhan != null)
-			{
-				return true;
-			}
+
+
 			return base.HasPopulatedMemberEntityCollections();
 		}
 		
@@ -423,8 +381,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void CreateMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue, Queue<bool> requiredQueue) 
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
-			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<DmcongnhanEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmcongnhanEntityFactory))) : null);
-			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<DmchucvuEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmchucvuEntityFactory))) : null);
+
+
 		}
 #endif
 		/// <summary>
@@ -435,8 +393,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
 
-			toReturn.Add("Dmcongnhan", _dmcongnhan);
-			toReturn.Add("DmchucvuCollectionViaDmcongnhan", _dmchucvuCollectionViaDmcongnhan);
+
+
 
 			return toReturn;
 		}
@@ -444,14 +402,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> Adds the internals to the active context. </summary>
 		protected override void AddInternalsToContext()
 		{
-			if(_dmcongnhan!=null)
-			{
-				_dmcongnhan.ActiveContext = base.ActiveContext;
-			}
-			if(_dmchucvuCollectionViaDmcongnhan!=null)
-			{
-				_dmchucvuCollectionViaDmcongnhan.ActiveContext = base.ActiveContext;
-			}
+
+
 
 
 		}
@@ -460,8 +412,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected virtual void InitClassMembers()
 		{
 
-			_dmcongnhan = null;
-			_dmchucvuCollectionViaDmcongnhan = null;
+
+
 
 
 			PerformDependencyInjection();
@@ -522,31 +474,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return _customProperties;}
 		}
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmcongnhan' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmcongnhan
-		{
-			get
-			{
-				return new PrefetchPathElement2( new EntityCollection<DmcongnhanEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmcongnhanEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmcongnhan")[0], (int)GD.BBPH.DAL.EntityType.DmbophanEntity, (int)GD.BBPH.DAL.EntityType.DmcongnhanEntity, 0, null, null, null, null, "Dmcongnhan", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
-			}
-		}
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmchucvu' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmchucvuCollectionViaDmcongnhan
-		{
-			get
-			{
-				IEntityRelation intermediateRelation = DmbophanEntity.Relations.DmcongnhanEntityUsingMabp;
-				intermediateRelation.SetAliases(string.Empty, "Dmcongnhan_");
-				return new PrefetchPathElement2(new EntityCollection<DmchucvuEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmchucvuEntityFactory))), intermediateRelation,
-					(int)GD.BBPH.DAL.EntityType.DmbophanEntity, (int)GD.BBPH.DAL.EntityType.DmchucvuEntity, 0, null, null, GetRelationsForField("DmchucvuCollectionViaDmcongnhan"), null, "DmchucvuCollectionViaDmcongnhan", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToMany);
-			}
-		}
 
 
 
@@ -596,37 +524,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmbophanFieldIndex.Tenbophan, value); }
 		}
 
-		/// <summary> Gets the EntityCollection with the related entities of type 'DmcongnhanEntity' which are related to this entity via a relation of type '1:n'.
-		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
-		[TypeContainedAttribute(typeof(DmcongnhanEntity))]
-		public virtual EntityCollection<DmcongnhanEntity> Dmcongnhan
-		{
-			get
-			{
-				if(_dmcongnhan==null)
-				{
-					_dmcongnhan = new EntityCollection<DmcongnhanEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmcongnhanEntityFactory)));
-					_dmcongnhan.SetContainingEntityInfo(this, "Dmbophan");
-				}
-				return _dmcongnhan;
-			}
-		}
 
-		/// <summary> Gets the EntityCollection with the related entities of type 'DmchucvuEntity' which are related to this entity via a relation of type 'm:n'.
-		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
-		[TypeContainedAttribute(typeof(DmchucvuEntity))]
-		public virtual EntityCollection<DmchucvuEntity> DmchucvuCollectionViaDmcongnhan
-		{
-			get
-			{
-				if(_dmchucvuCollectionViaDmcongnhan==null)
-				{
-					_dmchucvuCollectionViaDmcongnhan = new EntityCollection<DmchucvuEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmchucvuEntityFactory)));
-					_dmchucvuCollectionViaDmcongnhan.IsReadOnly=true;
-				}
-				return _dmchucvuCollectionViaDmcongnhan;
-			}
-		}
 
 
 	
