@@ -34,6 +34,7 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_TENCONGDOAN = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_CONGDOAN = new GD.BBPH.CONTROL.TEXTBOX();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
@@ -46,7 +47,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAHIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_TENCONGDOAN = new GD.BBPH.CONTROL.TEXTBOX();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -122,6 +122,22 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(512, 535);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // txt_TENCONGDOAN
+            // 
+            this.txt_TENCONGDOAN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TENCONGDOAN.BannerText = null;
+            this.txt_TENCONGDOAN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TENCONGDOAN.FormNametoShow = "";
+            this.txt_TENCONGDOAN.Is_DateTime = false;
+            this.txt_TENCONGDOAN.IsShowForm = false;
+            this.txt_TENCONGDOAN.Location = new System.Drawing.Point(255, 117);
+            this.txt_TENCONGDOAN.Name = "txt_TENCONGDOAN";
+            this.txt_TENCONGDOAN.ReadOnly = true;
+            this.txt_TENCONGDOAN.Regular_Expression = null;
+            this.txt_TENCONGDOAN.Size = new System.Drawing.Size(241, 20);
+            this.txt_TENCONGDOAN.TabIndex = 3;
+            this.txt_TENCONGDOAN.TabStop = false;
+            // 
             // txt_CONGDOAN
             // 
             this.txt_CONGDOAN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,7 +150,7 @@
             this.txt_CONGDOAN.Name = "txt_CONGDOAN";
             this.txt_CONGDOAN.Regular_Expression = null;
             this.txt_CONGDOAN.Size = new System.Drawing.Size(138, 20);
-            this.txt_CONGDOAN.TabIndex = 121;
+            this.txt_CONGDOAN.TabIndex = 2;
             this.txt_CONGDOAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_CONGDOAN_Validating);
             // 
             // label1
@@ -154,7 +170,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(421, 242);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 7;
+            this.btn_Thoat.TabIndex = 9;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -167,7 +183,7 @@
             this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 242);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 4;
+            this.btn_KHOIPHUC.TabIndex = 6;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -180,7 +196,7 @@
             this.btn_LUULAI.Location = new System.Drawing.Point(14, 242);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LUULAI.TabIndex = 2;
+            this.btn_LUULAI.TabIndex = 4;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
             this.btn_LUULAI.Click += new System.EventHandler(this.btn_LUULAI_Click);
@@ -193,7 +209,7 @@
             this.btn_XOA.Location = new System.Drawing.Point(93, 242);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 3;
+            this.btn_XOA.TabIndex = 5;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -206,7 +222,7 @@
             this.btn_THEMMOI.Location = new System.Drawing.Point(339, 242);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 6;
+            this.btn_THEMMOI.TabIndex = 8;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -219,7 +235,7 @@
             this.btn_SUA.Location = new System.Drawing.Point(258, 242);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 5;
+            this.btn_SUA.TabIndex = 7;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
@@ -269,22 +285,6 @@
             this.label22.Size = new System.Drawing.Size(71, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã dòng máy";
-            // 
-            // txt_TENCONGDOAN
-            // 
-            this.txt_TENCONGDOAN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TENCONGDOAN.BannerText = null;
-            this.txt_TENCONGDOAN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TENCONGDOAN.FormNametoShow = "";
-            this.txt_TENCONGDOAN.Is_DateTime = false;
-            this.txt_TENCONGDOAN.IsShowForm = false;
-            this.txt_TENCONGDOAN.Location = new System.Drawing.Point(255, 117);
-            this.txt_TENCONGDOAN.Name = "txt_TENCONGDOAN";
-            this.txt_TENCONGDOAN.ReadOnly = true;
-            this.txt_TENCONGDOAN.Regular_Expression = null;
-            this.txt_TENCONGDOAN.Size = new System.Drawing.Size(241, 20);
-            this.txt_TENCONGDOAN.TabIndex = 123;
-            this.txt_TENCONGDOAN.TabStop = false;
             // 
             // FRM_DMDONGMAY
             // 

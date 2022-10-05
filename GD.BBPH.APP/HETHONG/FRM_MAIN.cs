@@ -680,7 +680,7 @@ namespace GD.BBPH.APP.HETHONG
                     {
                         if (frm.Name == "FRM_DMDONGMAY") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
                     }
-                    //ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMDONGMAY()), mmru.Text);
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMDONGMAY()), mmru.Text);
                     break;
                 #endregion
                 #region Danh mục máy
@@ -689,7 +689,7 @@ namespace GD.BBPH.APP.HETHONG
                     {
                         if (frm.Name == "FRM_DMMAY") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
                     }
-                    //ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMMAY()), mmru.Text);
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMMAY()), mmru.Text);
                     break;
 
                 case "FRM_DMQUYCACH":
