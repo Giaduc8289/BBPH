@@ -116,7 +116,8 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_DMNGUYENLIEU.UpdateData();
                 if (BS_DMNGUYENLIEU.Current != null)
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_DMNGUYENLIEU.Current;
@@ -124,18 +125,9 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[DmnguyenlieuFields.Manl.Name].ToString();
                     txt_MAHIEU.Text = _Rowview.Row[DmnguyenlieuFields.Manl.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmnguyenlieuFields.Tenrutgon.Name].ToString();
-                    txt_MANHOMNGUYENLIEU_Validating(new object(), new CancelEventArgs());
-                    //txt_MAHIEU.Text = _Rowview.Row[DmnguyenlieuFields.Madm.Name].ToString();
-                    //txt_VITRIMAY.Text = _Rowview.Row[DmnguyenlieuFields.Vitri.Name].ToString();
-                    
+                    txt_MANHOM.Text = _Rowview.Row[DmnguyenlieuFields.Manhom.Name].ToString();
 
-                    //txt_EMAIL.Text = _Rowview.Row[DmnguyenlieuFields.Email.Name].ToString();
-                    //txt_NGUOILIENHE.Text = _Rowview.Row[DmnguyenlieuFields.Tennguoilh.Name].ToString();
-                    //try
-                    //{
-                    //    chk_TRUYENTHONG.Checked = Convert.ToBoolean(_Rowview.Row[DmnguyenlieuFields.Truyenthong.Name].ToString());
-                    //}
-                    //catch { }
+                    txt_MANHOMNGUYENLIEU_Validating(new object(), new CancelEventArgs());
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMNGUYENLIEU_CurrentChanged"); }
@@ -147,13 +139,6 @@ namespace GD.BBPH.APP.DANHMUC
             _DmnguyenlieuEntity.Manl = txt_MAHIEU.Text.Trim();
             _DmnguyenlieuEntity.Tenrutgon = txt_TENHIEU.Text.Trim();
             _DmnguyenlieuEntity.Manhom = txt_MAHIEU.Text.Trim();
-            //_DmnguyenlieuEntity.Vitri = txt_VITRIMAY.Text.Trim();
-            //_DmnguyenlieuEntity.Email = txt_EMAIL.Text.Trim();
-            //_DmnguyenlieuEntity.Tennguoilh = txt_NGUOILIENHE.Text.Trim();
-            //if (chk_TRUYENTHONG.Checked)
-            //    _DmnguyenlieuEntity.Truyenthong = true;
-            //else
-            //    _DmnguyenlieuEntity.Truyenthong = false;
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _str_DMCHUONG_PK = _DmnguyenlieuManager.InsertV2(_DmnguyenlieuEntity, r_Insert, DT_DMNGUYENLIEU, BS_DMNGUYENLIEU);
@@ -166,10 +151,6 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Manl.Name].Value = _DmnguyenlieuEntity.Manl;
                 GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Manhom.Name].Value = _DmnguyenlieuEntity.Manhom;
                 GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tenrutgon.Name].Value = _DmnguyenlieuEntity.Tenrutgon;
-                //GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Vitri.Name].Value = _DmnguyenlieuEntity.Vitri;
-                //GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Email.Name].Value = _DmnguyenlieuEntity.Email;
-                //GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Truyenthong.Name].Value = _DmnguyenlieuEntity.Truyenthong;
-                //GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tennguoilh.Name].Value = _DmnguyenlieuEntity.Tennguoilh;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnguyenlieuManager.Convert(_DmnguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;

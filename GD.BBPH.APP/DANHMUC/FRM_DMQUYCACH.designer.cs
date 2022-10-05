@@ -137,7 +137,6 @@
             this.txt_MACD.Regular_Expression = null;
             this.txt_MACD.Size = new System.Drawing.Size(138, 20);
             this.txt_MACD.TabIndex = 121;
-            this.txt_MACD.TextChanged += new System.EventHandler(this.textbox1_TextChanged);
             // 
             // label1
             // 
@@ -147,7 +146,6 @@
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 122;
             this.label1.Text = "Mã công đoạn";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btn_Thoat
             // 
@@ -286,7 +284,6 @@
             this.txt_MAQCCHA.Regular_Expression = null;
             this.txt_MAQCCHA.Size = new System.Drawing.Size(138, 20);
             this.txt_MAQCCHA.TabIndex = 123;
-            this.txt_MAQCCHA.TextChanged += new System.EventHandler(this.textbox1_TextChanged_1);
             // 
             // label2
             // 
@@ -296,7 +293,6 @@
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 124;
             this.label2.Text = "Mã quy cách cha";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // FRM_DMQUYCACH
             // 

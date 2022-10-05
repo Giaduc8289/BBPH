@@ -111,7 +111,8 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_DMQUYCACH.UpdateData();
                 if (BS_DMQUYCACH.Current != null)
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_DMQUYCACH.Current;
@@ -121,11 +122,6 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_TENQUYCACH.Text = _Rowview.Row[DmquycachFields.Tenquycach.Name].ToString();
                     txt_MACD.Text = _Rowview.Row[DmquycachFields.Macd.Name].ToString();
                     txt_MAQCCHA.Text = _Rowview.Row[DmquycachFields.Maqccha.Name].ToString();
-
-                    //try { chk_COSUDUNGMAY.Checked = Convert.ToBoolean(_Rowview.Row[DmquycachFields.Cosudungmay.Name].ToString()); }
-                    //catch { }
-                    //try { chk_TRUOCCAT.Checked = Convert.ToBoolean(_Rowview.Row[DmquycachFields.Truoccat.Name].ToString()); }
-                    //catch { }
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMQUYCACH_CurrentChanged"); }
@@ -255,26 +251,6 @@ namespace GD.BBPH.APP.DANHMUC
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmquycachManager.Convert(_DmquycachEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textbox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textbox1_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
 
         private void uiPanel0_Resize(object sender, EventArgs e)

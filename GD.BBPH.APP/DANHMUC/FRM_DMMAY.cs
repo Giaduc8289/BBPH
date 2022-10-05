@@ -125,18 +125,10 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[DmmayFields.Mamay.Name].ToString();
                     txt_MAHIEU.Text = _Rowview.Row[DmmayFields.Mamay.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmmayFields.Tenmay.Name].ToString();
-                    txt_MADONGMAY_Validating(new object(), new CancelEventArgs());
-                    //txt_MADONGMAY.Text = _Rowview.Row[DmmayFields.Madm.Name].ToString();
+                    txt_MADONGMAY.Text = _Rowview.Row[DmmayFields.Madm.Name].ToString();
                     txt_VITRIMAY.Text = _Rowview.Row[DmmayFields.Vitri.Name].ToString();
-                    
 
-                    //txt_EMAIL.Text = _Rowview.Row[DmmayFields.Email.Name].ToString();
-                    //txt_NGUOILIENHE.Text = _Rowview.Row[DmmayFields.Tennguoilh.Name].ToString();
-                    //try
-                    //{
-                    //    chk_TRUYENTHONG.Checked = Convert.ToBoolean(_Rowview.Row[DmmayFields.Truyenthong.Name].ToString());
-                    //}
-                    //catch { }
+                    txt_MADONGMAY_Validating(new object(), new CancelEventArgs());
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMMAY_CurrentChanged"); }
@@ -149,12 +141,6 @@ namespace GD.BBPH.APP.DANHMUC
             _DmmayEntity.Tenmay = txt_TENHIEU.Text.Trim();
             _DmmayEntity.Madm = txt_MADONGMAY.Text.Trim();
             _DmmayEntity.Vitri = txt_VITRIMAY.Text.Trim();
-            //_DmmayEntity.Email = txt_EMAIL.Text.Trim();
-            //_DmmayEntity.Tennguoilh = txt_NGUOILIENHE.Text.Trim();
-            //if (chk_TRUYENTHONG.Checked)
-            //    _DmmayEntity.Truyenthong = true;
-            //else
-            //    _DmmayEntity.Truyenthong = false;
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _str_DMCHUONG_PK = _DmmayManager.InsertV2(_DmmayEntity, r_Insert, DT_DMMAY, BS_DMMAY);
@@ -168,9 +154,6 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMMAY.CurrentRow.Cells[DmmayFields.Tenmay.Name].Value = _DmmayEntity.Tenmay;
                 GRID_DMMAY.CurrentRow.Cells[DmmayFields.Madm.Name].Value = _DmmayEntity.Madm;
                 GRID_DMMAY.CurrentRow.Cells[DmmayFields.Vitri.Name].Value = _DmmayEntity.Vitri;
-                //GRID_DMMAY.CurrentRow.Cells[DmmayFields.Email.Name].Value = _DmmayEntity.Email;
-                //GRID_DMMAY.CurrentRow.Cells[DmmayFields.Truyenthong.Name].Value = _DmmayEntity.Truyenthong;
-                //GRID_DMMAY.CurrentRow.Cells[DmmayFields.Tennguoilh.Name].Value = _DmmayEntity.Tennguoilh;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmayManager.Convert(_DmmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;
