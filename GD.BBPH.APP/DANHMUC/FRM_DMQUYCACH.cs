@@ -123,6 +123,7 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[DmquycachFields.Maqc.Name].ToString();
                     txt_MAQC.Text = _Rowview.Row[DmquycachFields.Maqc.Name].ToString();
                     txt_TENQUYCACH.Text = _Rowview.Row[DmquycachFields.Tenquycach.Name].ToString();
+                    txt_MACD.Text = _Rowview.Row[DmquycachFields.Macd.Name].ToString();
                     txt_MACD_Validating(new object(), new CancelEventArgs());
                     txt_MAQCCHA.Text = _Rowview.Row[DmquycachFields.Maqccha.Name].ToString();
 
