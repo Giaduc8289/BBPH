@@ -275,7 +275,7 @@ namespace GD.BBPH.APP.LIB
         {
             get
             {
-                _DT_CTPTMANG_H = new DmcongnhanManager().SelectAllRDT();
+                _DT_CTPTMANG_H = new CtptmangHManager().SelectAllRDT();
                 return _DT_CTPTMANG_H;
             }
             set { _DT_CTPTMANG_H = value; }
@@ -288,7 +288,7 @@ namespace GD.BBPH.APP.LIB
         {
             get
             {
-                _DT_CTPTMANG_D = new DmcongnhanManager().SelectAllRDT();
+                _DT_CTPTMANG_D = new CtptmangDManager().SelectAllRDT();
                 return _DT_CTPTMANG_D;
             }
             set { _DT_CTPTMANG_D = value; }

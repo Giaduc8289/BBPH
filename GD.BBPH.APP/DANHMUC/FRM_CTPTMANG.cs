@@ -141,13 +141,11 @@ namespace GD.BBPH.APP.DANHMUC
         #region Xử lý Grid Detail
         private void GRID_CTPTMANG_D_RecordUpdated(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
             TinhtongTrongluong();
         }
 
         private void GRID_CTPTMANG_D_RecordsDeleted(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
             TinhtongTrongluong();
         }
         private void GRID_CTPTMANG_D_CellEdited(object sender, ColumnActionEventArgs e)
@@ -220,25 +218,10 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[CtptmangHFields.Id.Name].ToString();
 
                     SHOWGRID(MAHIEU_PK);
-                    #region Load grid
-                    //try
-                    //{
-                    //    DataRow[] drArr = DT_CTPTMANG_D.Select(CtptmangDFields.Mactpt.Name + "='" + MAHIEU_PK + "'");
-                    //    if (drArr.Length != 0)
-                    //    {
-                    //        DT_CTPTMANG_D_FILL = drArr.CopyToDataTable();
-                    //    }
-                    //    else DT_CTPTMANG_D_FILL.Clear();
-                    //    GRID_CTPTMANG_D.DataSource = DT_CTPTMANG_D_FILL;
-                    //}
-                    //catch (Exception ex) { }
-                    #endregion
 
                     txt_MACONGTHUC.Text = _Rowview.Row[CtptmangHFields.Mactpt.Name].ToString();
                     txt_TENCONGTHUC.Text = _Rowview.Row[CtptmangHFields.Tenctpt.Name].ToString();
                     txt_NGAYAPDUNG.Text = _Rowview.Row[CtptmangHFields.Ngayapdung.Name].ToString();
-                    //txt_DODANDAI.Text = _Rowview.Row[CtptmangHFields.Dodandai.Name].ToString();
-                    //txt_DOBEN.Text = _Rowview.Row[CtptmangHFields.Doben.Name].ToString();
                 }
                 else 
                 {
@@ -247,7 +230,8 @@ namespace GD.BBPH.APP.DANHMUC
                 }
                 TinhtongTrongluong();
             }
-            catch {
+            catch (Exception ex)
+            {
                 MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -302,10 +286,6 @@ namespace GD.BBPH.APP.DANHMUC
             _CtptmangHEntity.Tenctpt = txt_TENCONGTHUC.Text.Trim();
             try { _CtptmangHEntity.Ngayapdung = Convert.ToDateTime(txt_NGAYAPDUNG.Text.Trim()); }
             catch { }
-            //try { _CtptmangHEntity.Dodandai = LIB.ConvertString.NumbertoDB(txt_DODANDAI.Text.Trim()); }
-            //catch { }
-            //try { _CtptmangHEntity.Doben = LIB.ConvertString.NumbertoDB(txt_DOBEN.Text.Trim()); }
-            //catch { }
             try { _CtptmangHEntity.Id = Convert.ToInt64(_str_DMCHUONG_PK); }
             catch { }
 
@@ -344,14 +324,11 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_CTPTMANG_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_CTPTMANG_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_CTPTMANG_D.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
-                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Ngayapdung.Name].Value = _CtptmangHEntity.Ngayapdung;
-                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Mactpt.Name].Value = _CtptmangHEntity.Mactpt;
-                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Tenctpt.Name].Value = _CtptmangHEntity.Tenctpt;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CtptmangHManager.Convert(_CtptmangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_XOADONG.Enabled = false;
-                //BS_CTPTMANG_H.ResetCurrentItem();
-                //BS_CTPTMANG_H_CurrentChanged(new object(), new EventArgs());
-                //BS_CTPTMANG_H.Position = DT_CTPTMANG_H.Rows.Count - 1;
+                BS_CTPTMANG_H.ResetCurrentItem();
+                BS_CTPTMANG_H_CurrentChanged(new object(), new EventArgs());
+                BS_CTPTMANG_H.Position = DT_CTPTMANG_H.Rows.Count - 1;
             }
             else
             {
@@ -371,8 +348,6 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Ngayapdung.Name].Value = _CtptmangHEntity.Ngayapdung;
                 GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Mactpt.Name].Value = _CtptmangHEntity.Mactpt;
                 GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Tenctpt.Name].Value = _CtptmangHEntity.Tenctpt;
-                //GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Dodandai.Name].Value = _CtptmangHEntity.Dodandai;
-                //GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Doben.Name].Value = _CtptmangHEntity.Doben;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CtptmangHManager.Convert(_CtptmangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_CTPTMANG_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_CTPTMANG_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -409,11 +384,6 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_CTPTMANG_H.Enabled = false;
             btn_XOADONG.Enabled = true;
             btn_SAOCHEP.Enabled = false;
-        }
-
-        private void uiPanel1Container_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_SUA_Click(object sender, EventArgs e)
@@ -577,8 +547,6 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_MACONGTHUC.Text = drCopy[0][CtptmangHFields.Mactpt.Name].ToString();
                 txt_TENCONGTHUC.Text = drCopy[0][CtptmangHFields.Tenctpt.Name].ToString();
                 txt_NGAYAPDUNG.Text = drCopy[0][CtptmangHFields.Ngayapdung.Name].ToString();
-                //txt_DODANDAI.Text = drCopy[0][CtptmangHFields.Dodandai.Name].ToString();
-                //txt_DOBEN.Text = drCopy[0][CtptmangHFields.Doben.Name].ToString();
 
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -593,8 +561,6 @@ namespace GD.BBPH.APP.DANHMUC
 
                 MAHIEU_PK = "";
                 txt_NGAYAPDUNG.Focus();
-                //TEXTBOX_Only_Control(false, null);
-                // txt_MAHIEU.Text = DmcapmaManager.GET_MA_INT(DmcapmaManager.LOAI_MA_HIEU, false, KTXPT.DATA);
                 BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
                 BBPH.BLL.MenuroleManager.set_Enable_controls(BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_CTPTMANG_H.Enabled = false;

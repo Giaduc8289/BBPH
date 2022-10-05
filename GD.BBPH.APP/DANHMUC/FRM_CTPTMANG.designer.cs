@@ -136,7 +136,6 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(839, 535);
             this.uiPanel1Container.TabIndex = 0;
-            this.uiPanel1Container.Click += new System.EventHandler(this.uiPanel1Container_Click);
             // 
             // label14
             // 

@@ -21,6 +21,7 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
+  
   <viewgrid>
     <value>2</value>
     <name>Id</name>
