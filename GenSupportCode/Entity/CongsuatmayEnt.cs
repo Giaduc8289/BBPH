@@ -42,7 +42,7 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Macs.Text = _Rowview.Row[CongsuatmayFields.Macs.Name].ToString();
 					txt_Tencongsuat.Text = _Rowview.Row[CongsuatmayFields.Tencongsuat.Name].ToString();
 					txt_Macd.Text = _Rowview.Row[CongsuatmayFields.Macd.Name].ToString();
-					txt_Maqccha.Text = _Rowview.Row[CongsuatmayFields.Maqccha.Name].ToString();
+					txt_Maqc.Text = _Rowview.Row[CongsuatmayFields.Maqc.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Congsuatmay_CurrentChanged"); }
@@ -55,7 +55,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_congsuatmay.Macs = txt_Macs.Text.Trim();
 			_congsuatmay.Tencongsuat = txt_Tencongsuat.Text.Trim();
 			_congsuatmay.Macd = txt_Macd.Text.Trim();
-			_congsuatmay.Maqccha = txt_Maqccha.Text.Trim();
+			_congsuatmay.Maqc = txt_Maqc.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -70,7 +70,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Macs.Name].Value = _congsuatmayEntity.Macs;
 				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Tencongsuat.Name].Value = _congsuatmayEntity.Tencongsuat;
 				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Macd.Name].Value = _congsuatmayEntity.Macd;
-				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Maqccha.Name].Value = _congsuatmayEntity.Maqccha;
+				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Maqc.Name].Value = _congsuatmayEntity.Maqc;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CongsuatmayManager.Convert(_congsuatmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Congsuatmay_PK;
