@@ -116,7 +116,8 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_DMDONGMAY.UpdateData();
                 if (BS_DMDONGMAY.Current != null)
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_DMDONGMAY.Current;
@@ -127,14 +128,6 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_CONGDOAN.Text = _Rowview.Row[DmdongmayFields.Macd.Name].ToString();
 
                     txt_CONGDOAN_Validating(new object(), new CancelEventArgs());
-                    //txt_SODIENTHOAI.Text = _Rowview.Row[DmdongmayFields.Sodienthoai.Name].ToString();
-                    //txt_EMAIL.Text = _Rowview.Row[DmdongmayFields.Email.Name].ToString();
-                    //txt_NGUOILIENHE.Text = _Rowview.Row[DmdongmayFields.Tennguoilh.Name].ToString();
-                    //try
-                    //{
-                    //    chk_TRUYENTHONG.Checked = Convert.ToBoolean(_Rowview.Row[DmdongmayFields.Truyenthong.Name].ToString());
-                    //}
-                    //catch { }
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMDONGMAY_CurrentChanged"); }
@@ -146,13 +139,6 @@ namespace GD.BBPH.APP.DANHMUC
             _DmdongmayEntity.Madm = txt_MAHIEU.Text.Trim();
             _DmdongmayEntity.Tendongmay = txt_TENHIEU.Text.Trim();
             _DmdongmayEntity.Macd = txt_CONGDOAN.Text.Trim();
-            //_DmdongmayEntity.Sodienthoai = txt_SODIENTHOAI.Text.Trim();
-            //_DmdongmayEntity.Email = txt_EMAIL.Text.Trim();
-            //_DmdongmayEntity.Tennguoilh = txt_NGUOILIENHE.Text.Trim();
-            //if (chk_TRUYENTHONG.Checked)
-            //    _DmdongmayEntity.Truyenthong = true;
-            //else
-            //    _DmdongmayEntity.Truyenthong = false;
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _str_DMCHUONG_PK = _DmdongmayManager.InsertV2(_DmdongmayEntity, r_Insert, DT_DMDONGMAY, BS_DMDONGMAY);
@@ -165,10 +151,6 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Madm.Name].Value = _DmdongmayEntity.Madm;
                 GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Tendongmay.Name].Value = _DmdongmayEntity.Tendongmay;
                 GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Macd.Name].Value = _DmdongmayEntity.Macd;
-                //GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Sodienthoai.Name].Value = _DmdongmayEntity.Sodienthoai;
-                //GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Email.Name].Value = _DmdongmayEntity.Email;
-                //GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Truyenthong.Name].Value = _DmdongmayEntity.Truyenthong;
-                //GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Tennguoilh.Name].Value = _DmdongmayEntity.Tennguoilh;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmdongmayManager.Convert(_DmdongmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;

@@ -111,7 +111,8 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_LYDONHAPXUAT.UpdateData();
                 if (BS_LYDONHAPXUAT.Current != null)
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_LYDONHAPXUAT.Current;
