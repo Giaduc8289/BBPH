@@ -34,13 +34,16 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.chk_DANGHI = new System.Windows.Forms.CheckBox();
             this.txt_MACHUCVU = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_CHUCVU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label4 = new GD.BBPH.CONTROL.LABEL();
             this.label3 = new GD.BBPH.CONTROL.LABEL();
             this.txt_TEN = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MAPHONGBAN = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_SODIENTHOAI = new GD.BBPH.CONTROL.TEXTBOX();
             this.label2 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_PHONGBAN = new GD.BBPH.CONTROL.TEXTBOX();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
             this.btn_KHOIPHUC = new GD.BBPH.CONTROL.BUTTON();
@@ -52,9 +55,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAHIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.chk_DANGHI = new System.Windows.Forms.CheckBox();
-            this.txt_PHONGBAN = new GD.BBPH.CONTROL.TEXTBOX();
-            this.txt_CHUCVU = new GD.BBPH.CONTROL.TEXTBOX();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -75,7 +75,7 @@
             // 
             this.uiPanelManager1.BeginPanelInfo();
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(714, 559), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(335, 559), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(499, 559), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -106,7 +106,7 @@
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(717, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(335, 559);
+            this.uiPanel1.Size = new System.Drawing.Size(499, 559);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
@@ -135,8 +135,20 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(333, 535);
+            this.uiPanel1Container.Size = new System.Drawing.Size(497, 535);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // chk_DANGHI
+            // 
+            this.chk_DANGHI.AutoSize = true;
+            this.chk_DANGHI.Location = new System.Drawing.Point(14, 196);
+            this.chk_DANGHI.Margin = new System.Windows.Forms.Padding(2);
+            this.chk_DANGHI.Name = "chk_DANGHI";
+            this.chk_DANGHI.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chk_DANGHI.Size = new System.Drawing.Size(102, 17);
+            this.chk_DANGHI.TabIndex = 8;
+            this.chk_DANGHI.Text = "             Đã nghỉ";
+            this.chk_DANGHI.UseVisualStyleBackColor = true;
             // 
             // txt_MACHUCVU
             // 
@@ -152,6 +164,22 @@
             this.txt_MACHUCVU.Size = new System.Drawing.Size(83, 20);
             this.txt_MACHUCVU.TabIndex = 5;
             this.txt_MACHUCVU.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACHUCVU_Validating);
+            // 
+            // txt_CHUCVU
+            // 
+            this.txt_CHUCVU.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CHUCVU.BannerText = null;
+            this.txt_CHUCVU.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_CHUCVU.FormNametoShow = "";
+            this.txt_CHUCVU.Is_DateTime = false;
+            this.txt_CHUCVU.IsShowForm = false;
+            this.txt_CHUCVU.Location = new System.Drawing.Point(189, 131);
+            this.txt_CHUCVU.Name = "txt_CHUCVU";
+            this.txt_CHUCVU.ReadOnly = true;
+            this.txt_CHUCVU.Regular_Expression = null;
+            this.txt_CHUCVU.Size = new System.Drawing.Size(230, 20);
+            this.txt_CHUCVU.TabIndex = 6;
+            this.txt_CHUCVU.TabStop = false;
             // 
             // label4
             // 
@@ -198,7 +226,6 @@
             this.txt_MAPHONGBAN.Regular_Expression = null;
             this.txt_MAPHONGBAN.Size = new System.Drawing.Size(83, 20);
             this.txt_MAPHONGBAN.TabIndex = 3;
-            //this.txt_MAPHONGBAN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAPHONGBAN_KeyDown);
             this.txt_MAPHONGBAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAPHONGBAN_Validating);
             // 
             // txt_SODIENTHOAI
@@ -223,6 +250,22 @@
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 124;
             this.label2.Text = "Số điện thoại";
+            // 
+            // txt_PHONGBAN
+            // 
+            this.txt_PHONGBAN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PHONGBAN.BannerText = null;
+            this.txt_PHONGBAN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_PHONGBAN.FormNametoShow = "";
+            this.txt_PHONGBAN.Is_DateTime = false;
+            this.txt_PHONGBAN.IsShowForm = false;
+            this.txt_PHONGBAN.Location = new System.Drawing.Point(189, 102);
+            this.txt_PHONGBAN.Name = "txt_PHONGBAN";
+            this.txt_PHONGBAN.ReadOnly = true;
+            this.txt_PHONGBAN.Regular_Expression = null;
+            this.txt_PHONGBAN.Size = new System.Drawing.Size(230, 20);
+            this.txt_PHONGBAN.TabIndex = 4;
+            this.txt_PHONGBAN.TabStop = false;
             // 
             // label1
             // 
@@ -357,55 +400,11 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã công nhân";
             // 
-            // chk_DANGHI
-            // 
-            this.chk_DANGHI.AutoSize = true;
-            this.chk_DANGHI.Location = new System.Drawing.Point(14, 196);
-            this.chk_DANGHI.Margin = new System.Windows.Forms.Padding(2);
-            this.chk_DANGHI.Name = "chk_DANGHI";
-            this.chk_DANGHI.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk_DANGHI.Size = new System.Drawing.Size(102, 17);
-            this.chk_DANGHI.TabIndex = 8;
-            this.chk_DANGHI.Text = "             Đã nghỉ";
-            this.chk_DANGHI.UseVisualStyleBackColor = true;
-            // 
-            // txt_PHONGBAN
-            // 
-            this.txt_PHONGBAN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_PHONGBAN.BannerText = null;
-            this.txt_PHONGBAN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_PHONGBAN.FormNametoShow = "";
-            this.txt_PHONGBAN.Is_DateTime = false;
-            this.txt_PHONGBAN.IsShowForm = false;
-            this.txt_PHONGBAN.Location = new System.Drawing.Point(189, 102);
-            this.txt_PHONGBAN.Name = "txt_PHONGBAN";
-            this.txt_PHONGBAN.ReadOnly = true;
-            this.txt_PHONGBAN.Regular_Expression = null;
-            this.txt_PHONGBAN.Size = new System.Drawing.Size(230, 20);
-            this.txt_PHONGBAN.TabIndex = 4;
-            this.txt_PHONGBAN.TabStop = false;
-            // 
-            // txt_CHUCVU
-            // 
-            this.txt_CHUCVU.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CHUCVU.BannerText = null;
-            this.txt_CHUCVU.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_CHUCVU.FormNametoShow = "";
-            this.txt_CHUCVU.Is_DateTime = false;
-            this.txt_CHUCVU.IsShowForm = false;
-            this.txt_CHUCVU.Location = new System.Drawing.Point(189, 131);
-            this.txt_CHUCVU.Name = "txt_CHUCVU";
-            this.txt_CHUCVU.ReadOnly = true;
-            this.txt_CHUCVU.Regular_Expression = null;
-            this.txt_CHUCVU.Size = new System.Drawing.Size(230, 20);
-            this.txt_CHUCVU.TabIndex = 6;
-            this.txt_CHUCVU.TabStop = false;
-            // 
             // FRM_DMCONGNHAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 565);
+            this.ClientSize = new System.Drawing.Size(1219, 565);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Margin = new System.Windows.Forms.Padding(4);
