@@ -36,7 +36,11 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Matkcha="Matkcha";				
 		
-		public const String Field_ChisoRgb="ChisoRgb";				
+		public const String Field_Trongbang="Trongbang";				
+		
+		public const String Field_Doituongtd="Doituongtd";				
+		
+		public const String Field_Khoanmuctd="Khoanmuctd";				
 		
 		public const String Field_Ngaytao="Ngaytao";				
 		
@@ -71,7 +75,11 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Matkcha,typeof(System.String));
 			
-			dt.Columns.Add(Field_ChisoRgb,typeof(System.String));
+			dt.Columns.Add(Field_Trongbang,typeof(System.Boolean));
+			
+			dt.Columns.Add(Field_Doituongtd,typeof(System.String));
+			
+			dt.Columns.Add(Field_Khoanmuctd,typeof(System.String));
 			
 			dt.Columns.Add(Field_Ngaytao,typeof(System.DateTime));
 			
@@ -123,7 +131,19 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_ChisoRgb]=_DmtaikhoanEntity.ChisoRgb;
+				r[Field_Trongbang]=_DmtaikhoanEntity.Trongbang;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Doituongtd]=_DmtaikhoanEntity.Doituongtd;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Khoanmuctd]=_DmtaikhoanEntity.Khoanmuctd;
 			}
 			catch { }
 			
@@ -189,7 +209,19 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_DmtaikhoanEntity.ChisoRgb= r[Field_ChisoRgb].ToString();						
+				_DmtaikhoanEntity.Trongbang= System.Boolean.Parse(r[Field_Trongbang].ToString());						
+			}
+			catch { }
+			
+			try
+			{
+				_DmtaikhoanEntity.Doituongtd= r[Field_Doituongtd].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_DmtaikhoanEntity.Khoanmuctd= r[Field_Khoanmuctd].ToString();						
 			}
 			catch { }
 			
@@ -235,7 +267,11 @@ namespace GD.BBPH.BLL
 			
 			_DmtaikhoanEntity.Matkcha= _DmtaikhoanEntity_XML.Matkcha;
 			
-			_DmtaikhoanEntity.ChisoRgb= _DmtaikhoanEntity_XML.ChisoRgb;
+			_DmtaikhoanEntity.Trongbang= _DmtaikhoanEntity_XML.Trongbang;
+			
+			_DmtaikhoanEntity.Doituongtd= _DmtaikhoanEntity_XML.Doituongtd;
+			
+			_DmtaikhoanEntity.Khoanmuctd= _DmtaikhoanEntity_XML.Khoanmuctd;
 			
 			_DmtaikhoanEntity.Ngaytao= _DmtaikhoanEntity_XML.Ngaytao;
 			
@@ -291,7 +327,19 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_ChisoRgb,_DmtaikhoanEntity.ChisoRgb);
+				r.SetField(Field_Trongbang,_DmtaikhoanEntity.Trongbang);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Doituongtd,_DmtaikhoanEntity.Doituongtd);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Khoanmuctd,_DmtaikhoanEntity.Khoanmuctd);
 			}
 			catch { }
 			
@@ -360,7 +408,19 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_ChisoRgb,_DmtaikhoanEntity.ChisoRgb);
+				r.SetField(Field_Trongbang,_DmtaikhoanEntity.Trongbang);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Doituongtd,_DmtaikhoanEntity.Doituongtd);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Khoanmuctd,_DmtaikhoanEntity.Khoanmuctd);
 			}
 			catch { }
 			
@@ -409,7 +469,7 @@ namespace GD.BBPH.BLL
 			return DmtaikhoanEntity;
 		}
 
-		public DmtaikhoanEntity Insert(System.String  Matk, System.String  Tentk, System.String  Bactk, System.String  Tinhchattk, System.String  Matkcha, System.String  ChisoRgb, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public DmtaikhoanEntity Insert(System.String  Matk, System.String  Tentk, System.String  Bactk, System.String  Tinhchattk, System.String  Matkcha, System.Boolean  Trongbang, System.String  Doituongtd, System.String  Khoanmuctd, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
 		{
 			DmtaikhoanEntity _DmtaikhoanEntity = new DmtaikhoanEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -425,7 +485,11 @@ namespace GD.BBPH.BLL
 				
 				_DmtaikhoanEntity.Matkcha = Matkcha;
 				
-				_DmtaikhoanEntity.ChisoRgb = ChisoRgb;
+				_DmtaikhoanEntity.Trongbang = Trongbang;
+				
+				_DmtaikhoanEntity.Doituongtd = Doituongtd;
+				
+				_DmtaikhoanEntity.Khoanmuctd = Khoanmuctd;
 				
 				_DmtaikhoanEntity.Ngaytao = Ngaytao;
 				
@@ -441,7 +505,7 @@ namespace GD.BBPH.BLL
 			return _DmtaikhoanEntity;
 		}
 
-		public DmtaikhoanEntity Insert(System.String Tentk, System.String Bactk, System.String Tinhchattk, System.String Matkcha, System.String ChisoRgb, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public DmtaikhoanEntity Insert(System.String Tentk, System.String Bactk, System.String Tinhchattk, System.String Matkcha, System.Boolean Trongbang, System.String Doituongtd, System.String Khoanmuctd, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			DmtaikhoanEntity _DmtaikhoanEntity = new DmtaikhoanEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -456,7 +520,11 @@ namespace GD.BBPH.BLL
 				
 				_DmtaikhoanEntity.Matkcha = Matkcha;
 				
-				_DmtaikhoanEntity.ChisoRgb = ChisoRgb;
+				_DmtaikhoanEntity.Trongbang = Trongbang;
+				
+				_DmtaikhoanEntity.Doituongtd = Doituongtd;
+				
+				_DmtaikhoanEntity.Khoanmuctd = Khoanmuctd;
 				
 				_DmtaikhoanEntity.Ngaytao = Ngaytao;
 				
@@ -502,7 +570,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Matk, System.String Tentk, System.String Bactk, System.String Tinhchattk, System.String Matkcha, System.String ChisoRgb, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.String Matk, System.String Tentk, System.String Bactk, System.String Tinhchattk, System.String Matkcha, System.Boolean Trongbang, System.String Doituongtd, System.String Khoanmuctd, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -521,7 +589,11 @@ namespace GD.BBPH.BLL
 					
 					_DmtaikhoanEntity.Matkcha = Matkcha;
 					
-					_DmtaikhoanEntity.ChisoRgb = ChisoRgb;
+					_DmtaikhoanEntity.Trongbang = Trongbang;
+					
+					_DmtaikhoanEntity.Doituongtd = Doituongtd;
+					
+					_DmtaikhoanEntity.Khoanmuctd = Khoanmuctd;
 					
 					_DmtaikhoanEntity.Ngaytao = Ngaytao;
 					
@@ -644,13 +716,45 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByChisoRgb(System.String ChisoRgb)
+		public int DeleteByTrongbang(System.Boolean Trongbang)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DmtaikhoanFields.ChisoRgb == ChisoRgb);
+			_PredicateExpression.Add(DmtaikhoanFields.Trongbang == Trongbang);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmtaikhoanEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByDoituongtd(System.String Doituongtd)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmtaikhoanFields.Doituongtd == Doituongtd);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmtaikhoanEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByKhoanmuctd(System.String Khoanmuctd)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmtaikhoanFields.Khoanmuctd == Khoanmuctd);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -935,13 +1039,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByChisoRgb(System.String ChisoRgb)
+		public EntityCollection SelectByTrongbang(System.Boolean Trongbang)
 		{
 			EntityCollection _DmtaikhoanCollection = new EntityCollection(new DmtaikhoanEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DmtaikhoanFields.ChisoRgb == ChisoRgb);
+			_PredicateExpression.Add(DmtaikhoanFields.Trongbang == Trongbang);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -951,14 +1055,82 @@ namespace GD.BBPH.BLL
 			return _DmtaikhoanCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByChisoRgbRDT(System.String ChisoRgb)
+		public DataTable SelectByTrongbangRDT(System.Boolean Trongbang)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _DmtaikhoanCollection = new EntityCollection(new DmtaikhoanEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DmtaikhoanFields.ChisoRgb == ChisoRgb);
+			_PredicateExpression.Add(DmtaikhoanFields.Trongbang == Trongbang);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmtaikhoanCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByDoituongtd(System.String Doituongtd)
+		{
+			EntityCollection _DmtaikhoanCollection = new EntityCollection(new DmtaikhoanEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmtaikhoanFields.Doituongtd == Doituongtd);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmtaikhoanCollection, filter, 0, null);
+			}
+			return _DmtaikhoanCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByDoituongtdRDT(System.String Doituongtd)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmtaikhoanCollection = new EntityCollection(new DmtaikhoanEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmtaikhoanFields.Doituongtd == Doituongtd);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmtaikhoanCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByKhoanmuctd(System.String Khoanmuctd)
+		{
+			EntityCollection _DmtaikhoanCollection = new EntityCollection(new DmtaikhoanEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmtaikhoanFields.Khoanmuctd == Khoanmuctd);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmtaikhoanCollection, filter, 0, null);
+			}
+			return _DmtaikhoanCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByKhoanmuctdRDT(System.String Khoanmuctd)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmtaikhoanCollection = new EntityCollection(new DmtaikhoanEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmtaikhoanFields.Khoanmuctd == Khoanmuctd);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

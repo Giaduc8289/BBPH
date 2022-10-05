@@ -107,6 +107,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessAdapterFactory.cs" />
+    <Compile Include="ManagerBase\BaogiaDManagerBase.cs" />
+    <Compile Include="ManagerBase\BaogiaHManagerBase.cs" />
     <Compile Include="ManagerBase\CongsuatmayManagerBase.cs" />
     <Compile Include="ManagerBase\CtptmangDManagerBase.cs" />
     <Compile Include="ManagerBase\CtptmangHManagerBase.cs" />
@@ -128,9 +130,14 @@
     <Compile Include="ManagerBase\DmnhomnguyenlieuManagerBase.cs" />
     <Compile Include="ManagerBase\DmquycachManagerBase.cs" />
     <Compile Include="ManagerBase\DmtaikhoanManagerBase.cs" />
+    <Compile Include="ManagerBase\DonhangDManagerBase.cs" />
+    <Compile Include="ManagerBase\DonhangHManagerBase.cs" />
+    <Compile Include="ManagerBase\HangtralaiManagerBase.cs" />
     <Compile Include="ManagerBase\LogbackupManagerBase.cs" />
     <Compile Include="ManagerBase\MenuManagerBase.cs" />
     <Compile Include="ManagerBase\MenuroleManagerBase.cs" />
+    <Compile Include="ManagerBase\PhieugiaohangDManagerBase.cs" />
+    <Compile Include="ManagerBase\PhieugiaohangHManagerBase.cs" />
     <Compile Include="ManagerBase\RolesManagerBase.cs" />
     <Compile Include="ManagerBase\ThamsoManagerBase.cs" />
     <Compile Include="ManagerBase\UsersManagerBase.cs" />

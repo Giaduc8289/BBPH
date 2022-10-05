@@ -119,6 +119,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseGeneric\EntityClasses\BaogiaDEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\BaogiaHEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CongsuatmayEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CtptmangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CtptmangHEntity.cs" />
@@ -140,6 +142,11 @@
     <Compile Include="DatabaseGeneric\EntityClasses\DmnhomnguyenlieuEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmquycachEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmtaikhoanEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DonhangDEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DonhangHEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\HangtralaiEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\PhieugiaohangDEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\PhieugiaohangHEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\ThamsoEntity.cs" />
     <Compile Include="DatabaseGeneric\HelperClasses\EntityCollection.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
@@ -196,6 +203,8 @@
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
     <AppDesigner Include="Properties\" />
+    <Compile Include="DatabaseGeneric\RelationClasses\BaogiaDRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\BaogiaHRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CongsuatmayRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CtptmangDRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CtptmangHRelations.cs" />
@@ -217,10 +226,15 @@
     <Compile Include="DatabaseGeneric\RelationClasses\DmnhomnguyenlieuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmquycachRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmtaikhoanRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DonhangDRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DonhangHRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DynamicRelation.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\HangtralaiRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\LogbackupRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuroleRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\PhieugiaohangDRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\PhieugiaohangHRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\RolesRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\ThamsoRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\UsersRelations.cs" />

@@ -43,6 +43,10 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Tencongsuat.Text = _Rowview.Row[CongsuatmayFields.Tencongsuat.Name].ToString();
 					txt_Macd.Text = _Rowview.Row[CongsuatmayFields.Macd.Name].ToString();
 					txt_Maqc.Text = _Rowview.Row[CongsuatmayFields.Maqc.Name].ToString();
+					txt_Ngaytao.Text = _Rowview.Row[CongsuatmayFields.Ngaytao.Name].ToString();
+					txt_Nguoitao.Text = _Rowview.Row[CongsuatmayFields.Nguoitao.Name].ToString();
+					txt_Ngaysua.Text = _Rowview.Row[CongsuatmayFields.Ngaysua.Name].ToString();
+					txt_Nguoisua.Text = _Rowview.Row[CongsuatmayFields.Nguoisua.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Congsuatmay_CurrentChanged"); }
@@ -56,6 +60,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			_congsuatmay.Tencongsuat = txt_Tencongsuat.Text.Trim();
 			_congsuatmay.Macd = txt_Macd.Text.Trim();
 			_congsuatmay.Maqc = txt_Maqc.Text.Trim();
+			_congsuatmay.Ngaytao = txt_Ngaytao.Text.Trim();
+			_congsuatmay.Nguoitao = txt_Nguoitao.Text.Trim();
+			_congsuatmay.Ngaysua = txt_Ngaysua.Text.Trim();
+			_congsuatmay.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -71,6 +79,10 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Tencongsuat.Name].Value = _congsuatmayEntity.Tencongsuat;
 				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Macd.Name].Value = _congsuatmayEntity.Macd;
 				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Maqc.Name].Value = _congsuatmayEntity.Maqc;
+				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Ngaytao.Name].Value = _congsuatmayEntity.Ngaytao;
+				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Nguoitao.Name].Value = _congsuatmayEntity.Nguoitao;
+				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Ngaysua.Name].Value = _congsuatmayEntity.Ngaysua;
+				GRID_Congsuatmay.CurrentRow.Cells[CongsuatmayFields.Nguoisua.Name].Value = _congsuatmayEntity.Nguoisua;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CongsuatmayManager.Convert(_congsuatmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Congsuatmay_PK;

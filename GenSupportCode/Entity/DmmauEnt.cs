@@ -42,6 +42,10 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Mamau.Text = _Rowview.Row[DmmauFields.Mamau.Name].ToString();
 					txt_Tenmau.Text = _Rowview.Row[DmmauFields.Tenmau.Name].ToString();
 					txt_ChisoRgb.Text = _Rowview.Row[DmmauFields.ChisoRgb.Name].ToString();
+					txt_Ngaytao.Text = _Rowview.Row[DmmauFields.Ngaytao.Name].ToString();
+					txt_Nguoitao.Text = _Rowview.Row[DmmauFields.Nguoitao.Name].ToString();
+					txt_Ngaysua.Text = _Rowview.Row[DmmauFields.Ngaysua.Name].ToString();
+					txt_Nguoisua.Text = _Rowview.Row[DmmauFields.Nguoisua.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmmau_CurrentChanged"); }
@@ -54,6 +58,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			_dmmau.Mamau = txt_Mamau.Text.Trim();
 			_dmmau.Tenmau = txt_Tenmau.Text.Trim();
 			_dmmau.ChisoRgb = txt_ChisoRgb.Text.Trim();
+			_dmmau.Ngaytao = txt_Ngaytao.Text.Trim();
+			_dmmau.Nguoitao = txt_Nguoitao.Text.Trim();
+			_dmmau.Ngaysua = txt_Ngaysua.Text.Trim();
+			_dmmau.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -68,6 +76,10 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Dmmau.CurrentRow.Cells[DmmauFields.Mamau.Name].Value = _dmmauEntity.Mamau;
 				GRID_Dmmau.CurrentRow.Cells[DmmauFields.Tenmau.Name].Value = _dmmauEntity.Tenmau;
 				GRID_Dmmau.CurrentRow.Cells[DmmauFields.ChisoRgb.Name].Value = _dmmauEntity.ChisoRgb;
+				GRID_Dmmau.CurrentRow.Cells[DmmauFields.Ngaytao.Name].Value = _dmmauEntity.Ngaytao;
+				GRID_Dmmau.CurrentRow.Cells[DmmauFields.Nguoitao.Name].Value = _dmmauEntity.Nguoitao;
+				GRID_Dmmau.CurrentRow.Cells[DmmauFields.Ngaysua.Name].Value = _dmmauEntity.Ngaysua;
+				GRID_Dmmau.CurrentRow.Cells[DmmauFields.Nguoisua.Name].Value = _dmmauEntity.Nguoisua;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmauManager.Convert(_dmmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Dmmau_PK;

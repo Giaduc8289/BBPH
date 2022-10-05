@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 3:24:51 PM
+// Code is generated on: Wednesday, October 5, 2022 8:29:25 PM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -61,6 +61,12 @@ namespace GD.BBPH.DAL.Linq
 			IDataSource toReturn = null;
 			switch((GD.BBPH.DAL.EntityType)typeOfEntity)
 			{
+				case GD.BBPH.DAL.EntityType.BaogiaDEntity:
+					toReturn = this.BaogiaD;
+					break;
+				case GD.BBPH.DAL.EntityType.BaogiaHEntity:
+					toReturn = this.BaogiaH;
+					break;
 				case GD.BBPH.DAL.EntityType.CongsuatmayEntity:
 					toReturn = this.Congsuatmay;
 					break;
@@ -124,6 +130,15 @@ namespace GD.BBPH.DAL.Linq
 				case GD.BBPH.DAL.EntityType.DmtaikhoanEntity:
 					toReturn = this.Dmtaikhoan;
 					break;
+				case GD.BBPH.DAL.EntityType.DonhangDEntity:
+					toReturn = this.DonhangD;
+					break;
+				case GD.BBPH.DAL.EntityType.DonhangHEntity:
+					toReturn = this.DonhangH;
+					break;
+				case GD.BBPH.DAL.EntityType.HangtralaiEntity:
+					toReturn = this.Hangtralai;
+					break;
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					toReturn = this.Logbackup;
 					break;
@@ -132,6 +147,12 @@ namespace GD.BBPH.DAL.Linq
 					break;
 				case GD.BBPH.DAL.EntityType.MenuroleEntity:
 					toReturn = this.Menurole;
+					break;
+				case GD.BBPH.DAL.EntityType.PhieugiaohangDEntity:
+					toReturn = this.PhieugiaohangD;
+					break;
+				case GD.BBPH.DAL.EntityType.PhieugiaohangHEntity:
+					toReturn = this.PhieugiaohangH;
 					break;
 				case GD.BBPH.DAL.EntityType.RolesEntity:
 					toReturn = this.Roles;
@@ -149,6 +170,18 @@ namespace GD.BBPH.DAL.Linq
 			return toReturn;
 		}
 
+		/// <summary>returns the datasource to use in a Linq query when targeting BaogiaDEntity instances in the database.</summary>
+		public DataSource2<BaogiaDEntity> BaogiaD
+		{
+			get { return new DataSource2<BaogiaDEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting BaogiaHEntity instances in the database.</summary>
+		public DataSource2<BaogiaHEntity> BaogiaH
+		{
+			get { return new DataSource2<BaogiaHEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
 		/// <summary>returns the datasource to use in a Linq query when targeting CongsuatmayEntity instances in the database.</summary>
 		public DataSource2<CongsuatmayEntity> Congsuatmay
 		{
@@ -275,6 +308,24 @@ namespace GD.BBPH.DAL.Linq
 			get { return new DataSource2<DmtaikhoanEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
+		/// <summary>returns the datasource to use in a Linq query when targeting DonhangDEntity instances in the database.</summary>
+		public DataSource2<DonhangDEntity> DonhangD
+		{
+			get { return new DataSource2<DonhangDEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting DonhangHEntity instances in the database.</summary>
+		public DataSource2<DonhangHEntity> DonhangH
+		{
+			get { return new DataSource2<DonhangHEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting HangtralaiEntity instances in the database.</summary>
+		public DataSource2<HangtralaiEntity> Hangtralai
+		{
+			get { return new DataSource2<HangtralaiEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
 		/// <summary>returns the datasource to use in a Linq query when targeting LogbackupEntity instances in the database.</summary>
 		public DataSource2<LogbackupEntity> Logbackup
 		{
@@ -291,6 +342,18 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<MenuroleEntity> Menurole
 		{
 			get { return new DataSource2<MenuroleEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting PhieugiaohangDEntity instances in the database.</summary>
+		public DataSource2<PhieugiaohangDEntity> PhieugiaohangD
+		{
+			get { return new DataSource2<PhieugiaohangDEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting PhieugiaohangHEntity instances in the database.</summary>
+		public DataSource2<PhieugiaohangHEntity> PhieugiaohangH
+		{
+			get { return new DataSource2<PhieugiaohangHEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting RolesEntity instances in the database.</summary>

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 3:24:51 PM
+// Code is generated on: Wednesday, October 5, 2022 8:29:25 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -37,7 +37,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
-
+		private EntityCollection<BaogiaHEntity> _baogiaH;
+		private EntityCollection<DonhangHEntity> _donhangH;
 
 
 
@@ -54,7 +55,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		public static class MemberNames
 		{
 
-
+			/// <summary>Member name BaogiaH</summary>
+			public static readonly string BaogiaH = "BaogiaH";
+			/// <summary>Member name DonhangH</summary>
+			public static readonly string DonhangH = "DonhangH";
 
 
 		}
@@ -115,7 +119,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-
+				_baogiaH = (EntityCollection<BaogiaHEntity>)info.GetValue("_baogiaH", typeof(EntityCollection<BaogiaHEntity>));
+				_donhangH = (EntityCollection<DonhangHEntity>)info.GetValue("_donhangH", typeof(EntityCollection<DonhangHEntity>));
 
 
 
@@ -156,7 +161,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(propertyName)
 			{
 
-
+				case "BaogiaH":
+					this.BaogiaH.Add((BaogiaHEntity)entity);
+					break;
+				case "DonhangH":
+					this.DonhangH.Add((DonhangHEntity)entity);
+					break;
 
 
 				default:
@@ -181,7 +191,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-
+				case "BaogiaH":
+					toReturn.Add(DmkhachEntity.Relations.BaogiaHEntityUsingMakhach);
+					break;
+				case "DonhangH":
+					toReturn.Add(DmkhachEntity.Relations.DonhangHEntityUsingMakhach);
+					break;
 
 
 				default:
@@ -220,7 +235,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-
+				case "BaogiaH":
+					this.BaogiaH.Add((BaogiaHEntity)relatedEntity);
+					break;
+				case "DonhangH":
+					this.DonhangH.Add((DonhangHEntity)relatedEntity);
+					break;
 
 				default:
 					break;
@@ -237,7 +257,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-
+				case "BaogiaH":
+					base.PerformRelatedEntityRemoval(this.BaogiaH, relatedEntity, signalRelatedEntityManyToOne);
+					break;
+				case "DonhangH":
+					base.PerformRelatedEntityRemoval(this.DonhangH, relatedEntity, signalRelatedEntityManyToOne);
+					break;
 
 				default:
 					break;
@@ -269,7 +294,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntityCollection2> GetMemberEntityCollections()
 		{
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
-
+			toReturn.Add(this.BaogiaH);
+			toReturn.Add(this.DonhangH);
 
 			return toReturn;
 		}
@@ -284,7 +310,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-
+				info.AddValue("_baogiaH", ((_baogiaH!=null) && (_baogiaH.Count>0) && !this.MarkedForDeletion)?_baogiaH:null);
+				info.AddValue("_donhangH", ((_donhangH!=null) && (_donhangH.Count>0) && !this.MarkedForDeletion)?_donhangH:null);
 
 
 
@@ -322,6 +349,25 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		
 
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'BaogiaH' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoBaogiaH()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(BaogiaHFields.Makhach, null, ComparisonOperator.Equal, this.Makhach));
+			return bucket;
+		}
+
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'DonhangH' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoDonhangH()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DonhangHFields.Makhach, null, ComparisonOperator.Equal, this.Makhach));
+			return bucket;
+		}
 
 
 
@@ -353,7 +399,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void AddToMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue) 
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
-
+			collectionsQueue.Enqueue(this._baogiaH);
+			collectionsQueue.Enqueue(this._donhangH);
 
 		}
 		
@@ -362,7 +409,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void GetFromMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue)
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
-
+			this._baogiaH = (EntityCollection<BaogiaHEntity>) collectionsQueue.Dequeue();
+			this._donhangH = (EntityCollection<DonhangHEntity>) collectionsQueue.Dequeue();
 
 		}
 		
@@ -370,7 +418,14 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>true if the entity has populated member collections.</returns>
 		protected override bool HasPopulatedMemberEntityCollections()
 		{
-
+			if (this._baogiaH != null)
+			{
+				return true;
+			}
+			if (this._donhangH != null)
+			{
+				return true;
+			}
 
 			return base.HasPopulatedMemberEntityCollections();
 		}
@@ -381,7 +436,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void CreateMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue, Queue<bool> requiredQueue) 
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
-
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<BaogiaHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaHEntityFactory))) : null);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<DonhangHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DonhangHEntityFactory))) : null);
 
 		}
 #endif
@@ -393,7 +449,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
 
-
+			toReturn.Add("BaogiaH", _baogiaH);
+			toReturn.Add("DonhangH", _donhangH);
 
 
 			return toReturn;
@@ -402,7 +459,14 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> Adds the internals to the active context. </summary>
 		protected override void AddInternalsToContext()
 		{
-
+			if(_baogiaH!=null)
+			{
+				_baogiaH.ActiveContext = base.ActiveContext;
+			}
+			if(_donhangH!=null)
+			{
+				_donhangH.ActiveContext = base.ActiveContext;
+			}
 
 
 
@@ -412,7 +476,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected virtual void InitClassMembers()
 		{
 
-
+			_baogiaH = null;
+			_donhangH = null;
 
 
 
@@ -522,6 +587,28 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return _customProperties;}
 		}
 
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'BaogiaH' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathBaogiaH
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<BaogiaHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaHEntityFactory))),
+					(IEntityRelation)GetRelationsForField("BaogiaH")[0], (int)GD.BBPH.DAL.EntityType.DmkhachEntity, (int)GD.BBPH.DAL.EntityType.BaogiaHEntity, 0, null, null, null, null, "BaogiaH", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'DonhangH' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathDonhangH
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<DonhangHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DonhangHEntityFactory))),
+					(IEntityRelation)GetRelationsForField("DonhangH")[0], (int)GD.BBPH.DAL.EntityType.DmkhachEntity, (int)GD.BBPH.DAL.EntityType.DonhangHEntity, 0, null, null, null, null, "DonhangH", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
 
 
 
@@ -748,6 +835,37 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmkhachFieldIndex.Nguoisua, value); }
 		}
 
+		/// <summary> Gets the EntityCollection with the related entities of type 'BaogiaHEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(BaogiaHEntity))]
+		public virtual EntityCollection<BaogiaHEntity> BaogiaH
+		{
+			get
+			{
+				if(_baogiaH==null)
+				{
+					_baogiaH = new EntityCollection<BaogiaHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaHEntityFactory)));
+					_baogiaH.SetContainingEntityInfo(this, "Dmkhach");
+				}
+				return _baogiaH;
+			}
+		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'DonhangHEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(DonhangHEntity))]
+		public virtual EntityCollection<DonhangHEntity> DonhangH
+		{
+			get
+			{
+				if(_donhangH==null)
+				{
+					_donhangH = new EntityCollection<DonhangHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DonhangHEntityFactory)));
+					_donhangH.SetContainingEntityInfo(this, "Dmkhach");
+				}
+				return _donhangH;
+			}
+		}
 
 
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 3:24:51 PM
+// Code is generated on: Wednesday, October 5, 2022 8:29:25 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -37,8 +37,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
-
-
+		private EntityCollection<BaogiaDEntity> _baogiaD;
+		private EntityCollection<BaogiaHEntity> _baogiaHcollectionViaBaogiaD;
 
 
 		
@@ -54,8 +54,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		public static class MemberNames
 		{
 
-
-
+			/// <summary>Member name BaogiaD</summary>
+			public static readonly string BaogiaD = "BaogiaD";
+			/// <summary>Member name BaogiaHcollectionViaBaogiaD</summary>
+			public static readonly string BaogiaHcollectionViaBaogiaD = "BaogiaHcollectionViaBaogiaD";
 
 		}
 		#endregion
@@ -115,8 +117,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-
-
+				_baogiaD = (EntityCollection<BaogiaDEntity>)info.GetValue("_baogiaD", typeof(EntityCollection<BaogiaDEntity>));
+				_baogiaHcollectionViaBaogiaD = (EntityCollection<BaogiaHEntity>)info.GetValue("_baogiaHcollectionViaBaogiaD", typeof(EntityCollection<BaogiaHEntity>));
 
 
 				base.FixupDeserialization(FieldInfoProviderSingleton.GetInstance());
@@ -156,8 +158,14 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(propertyName)
 			{
 
-
-
+				case "BaogiaD":
+					this.BaogiaD.Add((BaogiaDEntity)entity);
+					break;
+				case "BaogiaHcollectionViaBaogiaD":
+					this.BaogiaHcollectionViaBaogiaD.IsReadOnly = false;
+					this.BaogiaHcollectionViaBaogiaD.Add((BaogiaHEntity)entity);
+					this.BaogiaHcollectionViaBaogiaD.IsReadOnly = true;
+					break;
 
 				default:
 					break;
@@ -181,8 +189,13 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-
-
+				case "BaogiaD":
+					toReturn.Add(DmhangEntity.Relations.BaogiaDEntityUsingMasp);
+					break;
+				case "BaogiaHcollectionViaBaogiaD":
+					toReturn.Add(DmhangEntity.Relations.BaogiaDEntityUsingMasp, "DmhangEntity__", "BaogiaD_", JoinHint.None);
+					toReturn.Add(BaogiaDEntity.Relations.BaogiaHEntityUsingSobaogia, "BaogiaD_", string.Empty, JoinHint.None);
+					break;
 
 				default:
 
@@ -220,7 +233,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-
+				case "BaogiaD":
+					this.BaogiaD.Add((BaogiaDEntity)relatedEntity);
+					break;
 
 				default:
 					break;
@@ -237,7 +252,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-
+				case "BaogiaD":
+					base.PerformRelatedEntityRemoval(this.BaogiaD, relatedEntity, signalRelatedEntityManyToOne);
+					break;
 
 				default:
 					break;
@@ -269,7 +286,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntityCollection2> GetMemberEntityCollections()
 		{
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
-
+			toReturn.Add(this.BaogiaD);
 
 			return toReturn;
 		}
@@ -284,8 +301,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-
-
+				info.AddValue("_baogiaD", ((_baogiaD!=null) && (_baogiaD.Count>0) && !this.MarkedForDeletion)?_baogiaD:null);
+				info.AddValue("_baogiaHcollectionViaBaogiaD", ((_baogiaHcollectionViaBaogiaD!=null) && (_baogiaHcollectionViaBaogiaD.Count>0) && !this.MarkedForDeletion)?_baogiaHcollectionViaBaogiaD:null);
 
 
 			}
@@ -322,7 +339,26 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		
 
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'BaogiaD' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoBaogiaD()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(BaogiaDFields.Masp, null, ComparisonOperator.Equal, this.Masp));
+			return bucket;
+		}
 
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'BaogiaH' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoBaogiaHcollectionViaBaogiaD()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.Relations.AddRange(GetRelationsForFieldOfType("BaogiaHcollectionViaBaogiaD"));
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmhangFields.Masp, null, ComparisonOperator.Equal, this.Masp, "DmhangEntity__"));
+			return bucket;
+		}
 
 
 	
@@ -353,8 +389,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void AddToMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue) 
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
-
-
+			collectionsQueue.Enqueue(this._baogiaD);
+			collectionsQueue.Enqueue(this._baogiaHcollectionViaBaogiaD);
 		}
 		
 		/// <summary>Gets the member collections queue from the queue (base first)</summary>
@@ -362,16 +398,22 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void GetFromMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue)
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
-
-
+			this._baogiaD = (EntityCollection<BaogiaDEntity>) collectionsQueue.Dequeue();
+			this._baogiaHcollectionViaBaogiaD = (EntityCollection<BaogiaHEntity>) collectionsQueue.Dequeue();
 		}
 		
 		/// <summary>Determines whether the entity has populated member collections</summary>
 		/// <returns>true if the entity has populated member collections.</returns>
 		protected override bool HasPopulatedMemberEntityCollections()
 		{
-
-
+			if (this._baogiaD != null)
+			{
+				return true;
+			}
+			if (this._baogiaHcollectionViaBaogiaD != null)
+			{
+				return true;
+			}
 			return base.HasPopulatedMemberEntityCollections();
 		}
 		
@@ -381,8 +423,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void CreateMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue, Queue<bool> requiredQueue) 
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
-
-
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<BaogiaDEntity>(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaDEntityFactory))) : null);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<BaogiaHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaHEntityFactory))) : null);
 		}
 #endif
 		/// <summary>
@@ -393,8 +435,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
 
-
-
+			toReturn.Add("BaogiaD", _baogiaD);
+			toReturn.Add("BaogiaHcollectionViaBaogiaD", _baogiaHcollectionViaBaogiaD);
 
 			return toReturn;
 		}
@@ -402,8 +444,14 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> Adds the internals to the active context. </summary>
 		protected override void AddInternalsToContext()
 		{
-
-
+			if(_baogiaD!=null)
+			{
+				_baogiaD.ActiveContext = base.ActiveContext;
+			}
+			if(_baogiaHcollectionViaBaogiaD!=null)
+			{
+				_baogiaHcollectionViaBaogiaD.ActiveContext = base.ActiveContext;
+			}
 
 
 		}
@@ -412,8 +460,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected virtual void InitClassMembers()
 		{
 
-
-
+			_baogiaD = null;
+			_baogiaHcollectionViaBaogiaD = null;
 
 
 			PerformDependencyInjection();
@@ -522,7 +570,31 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return _customProperties;}
 		}
 
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'BaogiaD' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathBaogiaD
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<BaogiaDEntity>(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaDEntityFactory))),
+					(IEntityRelation)GetRelationsForField("BaogiaD")[0], (int)GD.BBPH.DAL.EntityType.DmhangEntity, (int)GD.BBPH.DAL.EntityType.BaogiaDEntity, 0, null, null, null, null, "BaogiaD", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
 
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'BaogiaH' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathBaogiaHcollectionViaBaogiaD
+		{
+			get
+			{
+				IEntityRelation intermediateRelation = DmhangEntity.Relations.BaogiaDEntityUsingMasp;
+				intermediateRelation.SetAliases(string.Empty, "BaogiaD_");
+				return new PrefetchPathElement2(new EntityCollection<BaogiaHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaHEntityFactory))), intermediateRelation,
+					(int)GD.BBPH.DAL.EntityType.DmhangEntity, (int)GD.BBPH.DAL.EntityType.BaogiaHEntity, 0, null, null, GetRelationsForField("BaogiaHcollectionViaBaogiaD"), null, "BaogiaHcollectionViaBaogiaD", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToMany);
+			}
+		}
 
 
 
@@ -748,7 +820,37 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmhangFieldIndex.Nguoisua, value); }
 		}
 
+		/// <summary> Gets the EntityCollection with the related entities of type 'BaogiaDEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(BaogiaDEntity))]
+		public virtual EntityCollection<BaogiaDEntity> BaogiaD
+		{
+			get
+			{
+				if(_baogiaD==null)
+				{
+					_baogiaD = new EntityCollection<BaogiaDEntity>(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaDEntityFactory)));
+					_baogiaD.SetContainingEntityInfo(this, "Dmhang");
+				}
+				return _baogiaD;
+			}
+		}
 
+		/// <summary> Gets the EntityCollection with the related entities of type 'BaogiaHEntity' which are related to this entity via a relation of type 'm:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(BaogiaHEntity))]
+		public virtual EntityCollection<BaogiaHEntity> BaogiaHcollectionViaBaogiaD
+		{
+			get
+			{
+				if(_baogiaHcollectionViaBaogiaD==null)
+				{
+					_baogiaHcollectionViaBaogiaD = new EntityCollection<BaogiaHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaHEntityFactory)));
+					_baogiaHcollectionViaBaogiaD.IsReadOnly=true;
+				}
+				return _baogiaHcollectionViaBaogiaD;
+			}
+		}
 
 
 	

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 3:24:51 PM
+// Code is generated on: Wednesday, October 5, 2022 8:29:25 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -32,6 +32,12 @@ namespace GD.BBPH.DAL.FactoryClasses
 			IFieldInfoProvider fieldProvider = FieldInfoProviderSingleton.GetInstance();
 			switch(relatedEntityType)
 			{
+				case GD.BBPH.DAL.EntityType.BaogiaDEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "BaogiaDEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.BaogiaHEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "BaogiaHEntity");
+					break;
 				case GD.BBPH.DAL.EntityType.CongsuatmayEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "CongsuatmayEntity");
 					break;
@@ -95,6 +101,15 @@ namespace GD.BBPH.DAL.FactoryClasses
 				case GD.BBPH.DAL.EntityType.DmtaikhoanEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmtaikhoanEntity");
 					break;
+				case GD.BBPH.DAL.EntityType.DonhangDEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DonhangDEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DonhangHEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DonhangHEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.HangtralaiEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "HangtralaiEntity");
+					break;
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "LogbackupEntity");
 					break;
@@ -103,6 +118,12 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.MenuroleEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "MenuroleEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.PhieugiaohangDEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "PhieugiaohangDEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.PhieugiaohangHEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "PhieugiaohangHEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.RolesEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "RolesEntity");

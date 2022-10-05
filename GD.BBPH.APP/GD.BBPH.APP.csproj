@@ -300,6 +300,8 @@
     <Compile Include="LIB\SESSION_START.cs" />
     <Compile Include="LIB\SysInfo.cs" />
     <Compile Include="LIB\USERS.cs" />
+    <Compile Include="Manager\BaogiaDManager.cs" />
+    <Compile Include="Manager\BaogiaHManager.cs" />
     <Compile Include="Manager\CongsuatmayManager.cs" />
     <Compile Include="Manager\CtptmangDManager.cs" />
     <Compile Include="Manager\CtptmangHManager.cs" />
@@ -318,11 +320,16 @@
     <Compile Include="Manager\DmnhomnguyenlieuManager.cs" />
     <Compile Include="Manager\DmquycachManager.cs" />
     <Compile Include="Manager\DmtaikhoanManager.cs" />
+    <Compile Include="Manager\DonhangDManager.cs" />
+    <Compile Include="Manager\DonhangHManager.cs" />
+    <Compile Include="Manager\HangtralaiManager.cs" />
     <Compile Include="Manager\LogbackupManager.cs" />
     <Compile Include="Manager\DmkhachManager.cs" />
     <Compile Include="Manager\DmbophanManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
     <Compile Include="Manager\MenuroleManager.cs" />
+    <Compile Include="Manager\PhieugiaohangDManager.cs" />
+    <Compile Include="Manager\PhieugiaohangHManager.cs" />
     <Compile Include="Manager\RolesManager.cs" />
     <Compile Include="Manager\ThamsoManager.cs" />
     <Compile Include="Manager\UsersManager.cs" />

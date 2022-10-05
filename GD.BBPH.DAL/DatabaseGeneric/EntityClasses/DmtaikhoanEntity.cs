@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 3:24:51 PM
+// Code is generated on: Wednesday, October 5, 2022 8:29:25 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -448,7 +448,13 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Matkcha", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("ChisoRgb", fieldHashtable);
+			_fieldsCustomProperties.Add("Trongbang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Doituongtd", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Khoanmuctd", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
@@ -552,7 +558,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmtaikhoan"."Bactk"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Bactk
 		{
 			get { return (System.String)GetValue((int)DmtaikhoanFieldIndex.Bactk, true); }
@@ -563,7 +569,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmtaikhoan"."Tinhchattk"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tinhchattk
 		{
 			get { return (System.String)GetValue((int)DmtaikhoanFieldIndex.Tinhchattk, true); }
@@ -574,22 +580,44 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmtaikhoan"."Matkcha"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Matkcha
 		{
 			get { return (System.String)GetValue((int)DmtaikhoanFieldIndex.Matkcha, true); }
 			set	{ SetValue((int)DmtaikhoanFieldIndex.Matkcha, value); }
 		}
 
-		/// <summary> The ChisoRgb property of the Entity Dmtaikhoan<br/><br/>
+		/// <summary> The Trongbang property of the Entity Dmtaikhoan<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmtaikhoan"."ChisoRGB"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String ChisoRgb
+		/// <remarks>Mapped on  table field: "dmtaikhoan"."Trongbang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Bit, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Boolean> Trongbang
 		{
-			get { return (System.String)GetValue((int)DmtaikhoanFieldIndex.ChisoRgb, true); }
-			set	{ SetValue((int)DmtaikhoanFieldIndex.ChisoRgb, value); }
+			get { return (Nullable<System.Boolean>)GetValue((int)DmtaikhoanFieldIndex.Trongbang, false); }
+			set	{ SetValue((int)DmtaikhoanFieldIndex.Trongbang, value); }
+		}
+
+		/// <summary> The Doituongtd property of the Entity Dmtaikhoan<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmtaikhoan"."Doituongtd"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Doituongtd
+		{
+			get { return (System.String)GetValue((int)DmtaikhoanFieldIndex.Doituongtd, true); }
+			set	{ SetValue((int)DmtaikhoanFieldIndex.Doituongtd, value); }
+		}
+
+		/// <summary> The Khoanmuctd property of the Entity Dmtaikhoan<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmtaikhoan"."Khoanmuctd"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Khoanmuctd
+		{
+			get { return (System.String)GetValue((int)DmtaikhoanFieldIndex.Khoanmuctd, true); }
+			set	{ SetValue((int)DmtaikhoanFieldIndex.Khoanmuctd, value); }
 		}
 
 		/// <summary> The Ngaytao property of the Entity Dmtaikhoan<br/><br/>
