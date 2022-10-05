@@ -146,7 +146,7 @@ namespace GD.BBPH.APP.DANHMUC
             DmnguyenlieuEntity _DmnguyenlieuEntity = new DmnguyenlieuEntity();
             _DmnguyenlieuEntity.Manl = txt_MAHIEU.Text.Trim();
             _DmnguyenlieuEntity.Tenrutgon = txt_TENHIEU.Text.Trim();
-            _DmnguyenlieuEntity.Manhom = txt_MAHIEU.Text.Trim();
+            _DmnguyenlieuEntity.Manhom = txt_MANHOM.Text.Trim();
             //_DmnguyenlieuEntity.Vitri = txt_VITRIMAY.Text.Trim();
             //_DmnguyenlieuEntity.Email = txt_EMAIL.Text.Trim();
             //_DmnguyenlieuEntity.Tennguoilh = txt_NGUOILIENHE.Text.Trim();
@@ -254,7 +254,7 @@ namespace GD.BBPH.APP.DANHMUC
             }
             else if (txt_TENHIEU.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập tên sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_TENHIEU.Focus();
                 return;
             }
