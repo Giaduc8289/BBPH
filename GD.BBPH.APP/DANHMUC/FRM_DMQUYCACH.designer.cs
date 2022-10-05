@@ -160,6 +160,7 @@
             this.txt_MACD.Regular_Expression = null;
             this.txt_MACD.Size = new System.Drawing.Size(138, 20);
             this.txt_MACD.TabIndex = 121;
+            this.txt_MACD.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACD_Validating);
             // 
             // label1
             // 
@@ -293,29 +294,6 @@
             this.label22.Size = new System.Drawing.Size(69, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã quy cách";
-            // 
-            // txt_MAQCCHA
-            // 
-            this.txt_MAQCCHA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MAQCCHA.BannerText = null;
-            this.txt_MAQCCHA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_MAQCCHA.FormNametoShow = "";
-            this.txt_MAQCCHA.Is_DateTime = false;
-            this.txt_MAQCCHA.IsShowForm = false;
-            this.txt_MAQCCHA.Location = new System.Drawing.Point(136, 114);
-            this.txt_MAQCCHA.Name = "txt_MAQCCHA";
-            this.txt_MAQCCHA.Regular_Expression = null;
-            this.txt_MAQCCHA.Size = new System.Drawing.Size(138, 20);
-            this.txt_MAQCCHA.TabIndex = 123;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
-            this.label2.TabIndex = 124;
-            this.label2.Text = "Mã quy cách cha";
             // 
             // FRM_DMQUYCACH
             // 
