@@ -34,9 +34,9 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_MADONGMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_TENDONGMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label2 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_MADONGMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_VITRIMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
@@ -106,9 +106,9 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_MADONGMAY);
             this.uiPanel1Container.Controls.Add(this.txt_TENDONGMAY);
             this.uiPanel1Container.Controls.Add(this.label2);
-            this.uiPanel1Container.Controls.Add(this.txt_MADONGMAY);
             this.uiPanel1Container.Controls.Add(this.txt_VITRIMAY);
             this.uiPanel1Container.Controls.Add(this.label1);
             this.uiPanel1Container.Controls.Add(this.btn_Thoat);
@@ -126,6 +126,21 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(512, 535);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // txt_MADONGMAY
+            // 
+            this.txt_MADONGMAY.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MADONGMAY.BannerText = null;
+            this.txt_MADONGMAY.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_MADONGMAY.FormNametoShow = "";
+            this.txt_MADONGMAY.Is_DateTime = false;
+            this.txt_MADONGMAY.IsShowForm = false;
+            this.txt_MADONGMAY.Location = new System.Drawing.Point(111, 117);
+            this.txt_MADONGMAY.Name = "txt_MADONGMAY";
+            this.txt_MADONGMAY.Regular_Expression = null;
+            this.txt_MADONGMAY.Size = new System.Drawing.Size(138, 20);
+            this.txt_MADONGMAY.TabIndex = 2;
+            this.txt_MADONGMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MADONGMAY_Validating);
+            // 
             // txt_TENDONGMAY
             // 
             this.txt_TENDONGMAY.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -139,7 +154,7 @@
             this.txt_TENDONGMAY.ReadOnly = true;
             this.txt_TENDONGMAY.Regular_Expression = null;
             this.txt_TENDONGMAY.Size = new System.Drawing.Size(138, 20);
-            this.txt_TENDONGMAY.TabIndex = 125;
+            this.txt_TENDONGMAY.TabIndex = 3;
             this.txt_TENDONGMAY.TabStop = false;
             this.txt_TENDONGMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MADONGMAY_Validating);
             // 
@@ -151,23 +166,6 @@
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 124;
             this.label2.Text = "Vị trí máy";
-            // 
-            // txt_MADONGMAY
-            // 
-            this.txt_MADONGMAY.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MADONGMAY.BannerText = null;
-            this.txt_MADONGMAY.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_MADONGMAY.FormNametoShow = "";
-            this.txt_MADONGMAY.Is_DateTime = false;
-            this.txt_MADONGMAY.IsShowForm = false;
-            this.txt_MADONGMAY.Location = new System.Drawing.Point(111, 117);
-            this.txt_MADONGMAY.Name = "txt_MADONGMAY";
-            this.txt_MADONGMAY.ReadOnly = true;
-            this.txt_MADONGMAY.Regular_Expression = null;
-            this.txt_MADONGMAY.Size = new System.Drawing.Size(138, 20);
-            this.txt_MADONGMAY.TabIndex = 123;
-            this.txt_MADONGMAY.TabStop = false;
-            this.txt_MADONGMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MADONGMAY_Validating);
             // 
             // txt_VITRIMAY
             // 
@@ -181,7 +179,7 @@
             this.txt_VITRIMAY.Name = "txt_VITRIMAY";
             this.txt_VITRIMAY.Regular_Expression = null;
             this.txt_VITRIMAY.Size = new System.Drawing.Size(241, 20);
-            this.txt_VITRIMAY.TabIndex = 121;
+            this.txt_VITRIMAY.TabIndex = 4;
             this.txt_VITRIMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MADONGMAY_Validating);
             // 
             // label1
@@ -201,7 +199,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(421, 242);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 7;
+            this.btn_Thoat.TabIndex = 10;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -214,7 +212,7 @@
             this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 242);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 4;
+            this.btn_KHOIPHUC.TabIndex = 7;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -227,7 +225,7 @@
             this.btn_LUULAI.Location = new System.Drawing.Point(14, 242);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LUULAI.TabIndex = 2;
+            this.btn_LUULAI.TabIndex = 5;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
             this.btn_LUULAI.Click += new System.EventHandler(this.btn_LUULAI_Click);
@@ -240,7 +238,7 @@
             this.btn_XOA.Location = new System.Drawing.Point(93, 242);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 3;
+            this.btn_XOA.TabIndex = 6;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -253,7 +251,7 @@
             this.btn_THEMMOI.Location = new System.Drawing.Point(339, 242);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 6;
+            this.btn_THEMMOI.TabIndex = 9;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -266,7 +264,7 @@
             this.btn_SUA.Location = new System.Drawing.Point(258, 242);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 5;
+            this.btn_SUA.TabIndex = 8;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
@@ -290,9 +288,9 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(22, 85);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(75, 13);
+            this.label21.Size = new System.Drawing.Size(48, 13);
             this.label21.TabIndex = 120;
-            this.label21.Text = "Tên dòng máy";
+            this.label21.Text = "Tên máy";
             // 
             // txt_MAHIEU
             // 
@@ -357,9 +355,9 @@
         private GD.BBPH.CONTROL.BUTTON btn_SUA;
         private GD.BBPH.CONTROL.BUTTON btn_Thoat;
         private CONTROL.TEXTBOX txt_VITRIMAY;
-        private CONTROL.TEXTBOX txt_MADONGMAY;
         private CONTROL.LABEL label2;
         private CONTROL.LABEL label1;
         private CONTROL.TEXTBOX txt_TENDONGMAY;
+        private CONTROL.TEXTBOX txt_MADONGMAY;
     }
 }
