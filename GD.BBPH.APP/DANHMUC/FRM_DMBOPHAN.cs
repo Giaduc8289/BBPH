@@ -133,12 +133,16 @@ namespace GD.BBPH.APP.DANHMUC
 
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
+                _DmbophanEntity.Ngaytao = DateTime.Now;
+                _DmbophanEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _DmbophanManager.InsertV2(_DmbophanEntity, r_Insert, DT_DMBOPHAN, BS_DMBOPHAN);
                  GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmbophanManager.Convert(_DmbophanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMBOPHAN.ResetCurrentItem();
             }
             else
             {
+                _DmbophanEntity.Ngaysua = DateTime.Now;
+                _DmbophanEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DmbophanManager.Update(_DmbophanEntity);
                 GRID_DMBOPHAN.CurrentRow.Cells[DmbophanFields.Mabp.Name].Value = _DmbophanEntity.Mabp;
                 GRID_DMBOPHAN.CurrentRow.Cells[DmbophanFields.Tenbophan.Name].Value = _DmbophanEntity.Tenbophan;

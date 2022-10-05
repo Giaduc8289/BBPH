@@ -143,12 +143,16 @@ namespace GD.BBPH.APP.DANHMUC
             _DmmayEntity.Vitri = txt_VITRIMAY.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
+                _DmmayEntity.Ngaytao = DateTime.Now;
+                _DmmayEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _DmmayManager.InsertV2(_DmmayEntity, r_Insert, DT_DMMAY, BS_DMMAY);
                  GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmayManager.Convert(_DmmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMMAY.ResetCurrentItem();
             }
             else
             {
+                _DmmayEntity.Ngaysua = DateTime.Now;
+                _DmmayEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DmmayManager.Update(_DmmayEntity);
                 GRID_DMMAY.CurrentRow.Cells[DmmayFields.Mamay.Name].Value = _DmmayEntity.Mamay;
                 GRID_DMMAY.CurrentRow.Cells[DmmayFields.Tenmay.Name].Value = _DmmayEntity.Tenmay;

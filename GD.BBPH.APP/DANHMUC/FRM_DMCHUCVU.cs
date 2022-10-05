@@ -138,12 +138,16 @@ namespace GD.BBPH.APP.DANHMUC
             _DmchucvuEntity.Tenchucvu = txt_TENHIEU.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
+                _DmchucvuEntity.Ngaytao = DateTime.Now;
+                _DmchucvuEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _DmchucvuManager.InsertV2(_DmchucvuEntity, r_Insert, DT_DMCHUCVU, BS_DMCHUCVU);
                  GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchucvuManager.Convert(_DmchucvuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMCHUCVU.ResetCurrentItem();
             }
             else
             {
+                _DmchucvuEntity.Ngaysua = DateTime.Now;
+                _DmchucvuEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DmchucvuManager.Update(_DmchucvuEntity);
                 GRID_DMCHUCVU.CurrentRow.Cells[DmchucvuFields.Macv.Name].Value = _DmchucvuEntity.Macv;
                 GRID_DMCHUCVU.CurrentRow.Cells[DmchucvuFields.Tenchucvu.Name].Value = _DmchucvuEntity.Tenchucvu;
