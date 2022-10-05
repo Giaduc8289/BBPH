@@ -257,7 +257,6 @@
             this.txt_sothutucongdoan.Regular_Expression = null;
             this.txt_sothutucongdoan.Size = new System.Drawing.Size(138, 20);
             this.txt_sothutucongdoan.TabIndex = 121;
-            this.txt_sothutucongdoan.TextChanged += new System.EventHandler(this.textbox1_TextChanged);
             // 
             // label1
             // 
@@ -267,7 +266,6 @@
             this.label1.Size = new System.Drawing.Size(105, 13);
             this.label1.TabIndex = 122;
             this.label1.Text = "Số thứ tự công đoạn";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FRM_DMCONGDOAN
             // 

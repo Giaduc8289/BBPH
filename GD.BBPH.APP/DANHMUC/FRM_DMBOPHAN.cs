@@ -111,7 +111,8 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_DMBOPHAN.UpdateData();
                 if (BS_DMBOPHAN.Current != null)
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_DMBOPHAN.Current;
@@ -119,15 +120,6 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[DmbophanFields.Mabp.Name].ToString();
                     txt_MAHIEU.Text = _Rowview.Row[DmbophanFields.Mabp.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmbophanFields.Tenbophan.Name].ToString();
-                    //txt_DIACHI.Text = _Rowview.Row[DmbophanFields.Diachi.Name].ToString();
-                    //txt_SODIENTHOAI.Text = _Rowview.Row[DmbophanFields.Sodienthoai.Name].ToString();
-                    //txt_EMAIL.Text = _Rowview.Row[DmbophanFields.Email.Name].ToString();
-                    //txt_NGUOILIENHE.Text = _Rowview.Row[DmbophanFields.Tennguoilh.Name].ToString();
-                    //try
-                    //{
-                    //    chk_TRUYENTHONG.Checked = Convert.ToBoolean(_Rowview.Row[DmbophanFields.Truyenthong.Name].ToString());
-                    //}
-                    //catch { }
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMBOPHAN_CurrentChanged"); }
@@ -138,14 +130,7 @@ namespace GD.BBPH.APP.DANHMUC
             DmbophanEntity _DmbophanEntity = new DmbophanEntity();
             _DmbophanEntity.Mabp = txt_MAHIEU.Text.Trim();
             _DmbophanEntity.Tenbophan = txt_TENHIEU.Text.Trim();
-            //_DmbophanEntity.Diachi = txt_DIACHI.Text.Trim();
-            //_DmbophanEntity.Sodienthoai = txt_SODIENTHOAI.Text.Trim();
-            //_DmbophanEntity.Email = txt_EMAIL.Text.Trim();
-            //_DmbophanEntity.Tennguoilh = txt_NGUOILIENHE.Text.Trim();
-            //if (chk_TRUYENTHONG.Checked)
-            //    _DmbophanEntity.Truyenthong = true;
-            //else
-            //    _DmbophanEntity.Truyenthong = false;
+
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _str_DMCHUONG_PK = _DmbophanManager.InsertV2(_DmbophanEntity, r_Insert, DT_DMBOPHAN, BS_DMBOPHAN);
@@ -157,11 +142,6 @@ namespace GD.BBPH.APP.DANHMUC
                 _DmbophanManager.Update(_DmbophanEntity);
                 GRID_DMBOPHAN.CurrentRow.Cells[DmbophanFields.Mabp.Name].Value = _DmbophanEntity.Mabp;
                 GRID_DMBOPHAN.CurrentRow.Cells[DmbophanFields.Tenbophan.Name].Value = _DmbophanEntity.Tenbophan;
-                //GRID_DMBOPHAN.CurrentRow.Cells[DmbophanFields.Diachi.Name].Value = _DmbophanEntity.Diachi;
-                //GRID_DMBOPHAN.CurrentRow.Cells[DmbophanFields.Sodienthoai.Name].Value = _DmbophanEntity.Sodienthoai;
-                //GRID_DMBOPHAN.CurrentRow.Cells[DmbophanFields.Email.Name].Value = _DmbophanEntity.Email;
-                //GRID_DMBOPHAN.CurrentRow.Cells[DmbophanFields.Truyenthong.Name].Value = _DmbophanEntity.Truyenthong;
-                //GRID_DMBOPHAN.CurrentRow.Cells[DmbophanFields.Tennguoilh.Name].Value = _DmbophanEntity.Tennguoilh;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmbophanManager.Convert(_DmbophanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;

@@ -118,7 +118,8 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_DMCONGNHAN.UpdateData();
                 if (BS_DMCONGNHAN.Current != null)
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_DMCONGNHAN.Current;

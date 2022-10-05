@@ -111,7 +111,8 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_DMCONGDOAN.UpdateData();
                 if (BS_DMCONGDOAN.Current != null)
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_DMCONGDOAN.Current;
@@ -120,10 +121,6 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MAHIEU.Text = _Rowview.Row[DmcongdoanFields.Macd.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmcongdoanFields.Tencongdoan.Name].ToString();
                     txt_sothutucongdoan.Text = _Rowview.Row[DmcongdoanFields.Sothutucongdoan.Name].ToString();
-                    //try { chk_COSUDUNGMAY.Checked = Convert.ToBoolean(_Rowview.Row[DmcongdoanFields.Cosudungmay.Name].ToString()); }
-                    //catch { }
-                    //try { chk_TRUOCCAT.Checked = Convert.ToBoolean(_Rowview.Row[DmcongdoanFields.Truoccat.Name].ToString()); }
-                    //catch { }
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMCONGDOAN_CurrentChanged"); }
@@ -234,14 +231,6 @@ namespace GD.BBPH.APP.DANHMUC
             _DmcongdoanEntity.Tencongdoan = txt_TENHIEU.Text.Trim();
             try { _DmcongdoanEntity.Sothutucongdoan = Int32.Parse(txt_sothutucongdoan.Text.Trim()); }
             catch { }
-            //if (chk_COSUDUNGMAY.Checked)
-            //    _DmcongdoanEntity.Cosudungmay = true;
-            //else
-            //    _DmcongdoanEntity.Cosudungmay = false;
-            //if (chk_TRUOCCAT.Checked)
-            //    _DmcongdoanEntity.Truoccat = true;
-            //else
-            //    _DmcongdoanEntity.Truoccat = false;
 
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
@@ -255,22 +244,9 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMCONGDOAN.CurrentRow.Cells[DmcongdoanFields.Macd.Name].Value = _DmcongdoanEntity.Macd;
                 GRID_DMCONGDOAN.CurrentRow.Cells[DmcongdoanFields.Tencongdoan.Name].Value = _DmcongdoanEntity.Tencongdoan;
                 GRID_DMCONGDOAN.CurrentRow.Cells[DmcongdoanFields.Sothutucongdoan.Name].Value = _DmcongdoanEntity.Sothutucongdoan;
-
-                //GRID_DMCONGDOAN.CurrentRow.Cells[DmcongdoanFields.Cosudungmay.Name].Value = _DmcongdoanEntity.Cosudungmay;
-                //GRID_DMCONGDOAN.CurrentRow.Cells[DmcongdoanFields.Truoccat.Name].Value = _DmcongdoanEntity.Truoccat;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcongdoanManager.Convert(_DmcongdoanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textbox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void uiPanel0_Resize(object sender, EventArgs e)
