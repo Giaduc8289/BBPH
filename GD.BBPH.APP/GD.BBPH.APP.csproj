@@ -810,6 +810,7 @@
     <Content Include="XMLCONFIG\FRM_DMDONGMAYIN.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAYPE.xml" />
     <Content Include="XMLCONFIG\FRM_DMBOPHAN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAIVATTUPHU.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAIPHE.xml" />
     <Content Include="XMLCONFIG\FRM_DMMANG.xml" />
@@ -819,7 +820,9 @@
     <Content Include="XMLCONFIG\FRM_DMMAYSOI_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAYPE.xml" />
     <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU.xml" />
-    <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="XMLCONFIG\FRM_DMPE.xml" />
     <Content Include="XMLCONFIG\FRM_DMPE_TIM.xml" />
     <Content Include="XMLCONFIG\FRM_DMPHE.xml" />
@@ -1016,7 +1019,6 @@
     <Content Include="XMLCONFIG\FRM_DMCSMAYSOI.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAYDET.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAYSOI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMHINHTHUC.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHO.xml" />

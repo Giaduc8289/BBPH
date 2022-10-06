@@ -56,7 +56,7 @@ namespace GD.BBPH.APP.DANHMUC
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMHANG");
                         DT_DMHANGHOA = LIB.SESSION_START.DM_HANG;
 
-                        //DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
                         //DT_DMLOAI = LIB.SESSION_START.DT_DMLOAI;
                         //DT_DMMANH = LIB.SESSION_START.DT_DMMANH;
                         //DT_DMSOI = LIB.SESSION_START.DT_DMSOI;
@@ -94,7 +94,7 @@ namespace GD.BBPH.APP.DANHMUC
 
         private void LoadDanhMuc()
         {
-            //    DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+            DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
             //    DT_DMLOAI = LIB.SESSION_START.DT_DMLOAI;
             //    DT_DMMANH = LIB.SESSION_START.DT_DMMANH;
             //    DT_DMSOI = LIB.SESSION_START.DT_DMSOI;
@@ -142,7 +142,7 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
                 GRID_DMHANGHOA.UpdateData();
                 if (BS_DMHANGHOA.Current != null)
                 {
@@ -189,7 +189,7 @@ namespace GD.BBPH.APP.DANHMUC
             _dmhangEntity.Loaithung = txt_LOAITHUNG.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
-                _str_DMCHUONG_PK = _DmhangManager.InsertV2(_DmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
+                _str_DMCHUONG_PK = _DmhangManager.InsertV2(_dmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmhangManager.Convert(_dmhangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMHANGHOA.ResetCurrentItem();
             }
@@ -229,7 +229,7 @@ namespace GD.BBPH.APP.DANHMUC
             MAHIEU_PK = "";
             txt_MASP.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH, txt_TENSP }));
+            //GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH, txt_TENSP }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_DMHANGHOA.Enabled = false;
         }
@@ -327,16 +327,25 @@ namespace GD.BBPH.APP.DANHMUC
                 DmhangEntity _DmhangEntity = new DmhangEntity();
                 r_Insert = DT_DMHANGHOA.NewRow();
                 DT_DMHANGHOA.Rows.Add(r_Insert);
-                //DataRow[] drCopy = DT_DMHANGHOA.Select(DmhangFields.Mahieu.Name + "= '" + MAHIEU_PK + "'");
-                //BS_DMHANGHOA.Position = DT_DMHANGHOA.Rows.Count;
+                DataRow[] drCopy = DT_DMHANGHOA.Select(DmhangFields.Masp.Name + "= '" + MAHIEU_PK + "'");
+                BS_DMHANGHOA.Position = DT_DMHANGHOA.Rows.Count;
 
-                //txt_MAHIEU.Text = drCopy[0][DmhangFields.Mahieu.Name].ToString();
-                //txt_TENHIEU.Text = drCopy[0][DmhangFields.Tenhieu.Name].ToString();
-                //txt_MAKHACH.Text = drCopy[0][DmhangFields.Makhach.Name].ToString();
-                //txt_MAKHACH_Validating(new object(), new CancelEventArgs());
-                //txt_MAUIN.Text = drCopy[0][DmhangFields.Mauin.Name].ToString();
-                //txt_MALOAI.Text = drCopy[0][DmhangFields.Maloai.Name].ToString();
-                //txt_MALOAI_Validating(new object(), new CancelEventArgs());
+                txt_MASP.Text = drCopy[0][DmhangFields.Masp.Name].ToString();
+                txt_TENSP.Text = drCopy[0][DmhangFields.Tensp.Name].ToString();
+                txt_MAKHACH.Text = drCopy[0][DmhangFields.Makhach.Name].ToString();
+                txt_MAKHACH_Validating(new object(), new CancelEventArgs());
+
+                txt_TENKHACH.Text = drCopy[0][DmhangFields.Tenkhach.Name].ToString();
+                txt_KICHTHUOC.Text = drCopy[0][DmhangFields.Kichthuoc.Name].ToString();
+                txt_KHOILUONGMUC.Text = drCopy[0][DmhangFields.Khoiluongmuc.Name].ToString();
+                txt_SOHINH.Text = drCopy[0][DmhangFields.Sohinh.Name].ToString();
+                txt_CAUTRUCIN.Text = drCopy[0][DmhangFields.Cautrucin.Name].ToString();
+                txt_SOMAU.Text = drCopy[0][DmhangFields.Somau.Name].ToString();
+                txt_LOAIMUC.Text = drCopy[0][DmhangFields.Loaimuc.Name].ToString();
+                txt_KICHTHUOCTRUC.Text = drCopy[0][DmhangFields.Kichthuoctruc.Name].ToString();
+                txt_VITRI.Text = drCopy[0][DmhangFields.Vitri.Name].ToString();
+                txt_QUYCACHDONGGOI.Text = drCopy[0][DmhangFields.Quycachdonggoi.Name].ToString();
+                txt_LOAITHUNG.Text = drCopy[0][DmhangFields.Loaithung.Name].ToString();
                 //try
                 //{
                 //    txt_TLPHOI.Text = double.Parse(drCopy[0][DmhangFields.Trongluongphoi.Name].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN"));
@@ -386,34 +395,34 @@ namespace GD.BBPH.APP.DANHMUC
         #endregion
 
         //#region Validate
-        //private void txt_MAKHACH_Validating(object sender, CancelEventArgs e)
-        //{
-        //    _RowViewSelect = null;
-        //    if (string.IsNullOrEmpty(txt_MAKHACH.Text.Trim()) || DT_DMKHACH == null || DT_DMKHACH.Rows.Count == 0) return;
-        //    string Str_MASIEUTHI = txt_MAKHACH.Text.Trim().ToUpper();
-        //    _RowViewSelect = checkmaKhach(Str_MASIEUTHI, DT_DMKHACH);
-        //    if (_RowViewSelect == null)
-        //    {
-        //        ListviewJanus _frm_SingerRows_Select =
-        //            new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMKHACH.xml",
-        //                DT_DMKHACH, DanhmuckhachFields.Mahieu.Name, Str_MASIEUTHI);
-        //        _frm_SingerRows_Select.ShowDialog();
-        //        if (_frm_SingerRows_Select._RowViewSelect == null) return;
-        //        _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-        //        txt_MAKHACH.Text = _RowViewSelect[DanhmuckhachFields.Mahieu.Name].ToString();
-        //        txt_TENKHACH.Text = _RowViewSelect[DanhmuckhachFields.Tenhieu.Name].ToString();
-        //    }
-        //    else
-        //        txt_TENKHACH.Text = _RowViewSelect[DanhmuckhachFields.Tenhieu.Name].ToString();
-        //}
-        //private DataRow checkmaKhach(string masieuthi, DataTable dt)
-        //{
-        //    try
-        //    {
-        //        return dt.Select(DanhmuckhachFields.Mahieu.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
-        //    }
-        //    catch { return null; }
-        //}
+        private void txt_MAKHACH_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MAKHACH.Text.Trim()) || DT_DMKHACH == null || DT_DMKHACH.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MAKHACH.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaKhach(Str_MASIEUTHI, DT_DMKHACH);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMKHACH.xml",
+                        DT_DMKHACH, DmkhachFields.Makhach.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MAKHACH.Text = _RowViewSelect[DmkhachFields.Makhach.Name].ToString();
+                txt_TENKHACH.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
+            }
+            else
+                txt_TENKHACH.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
+        }
+        private DataRow checkmaKhach(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(DmkhachFields.Makhach.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
 
         //private void txt_MALOAI_Validating(object sender, CancelEventArgs e)
         //{
