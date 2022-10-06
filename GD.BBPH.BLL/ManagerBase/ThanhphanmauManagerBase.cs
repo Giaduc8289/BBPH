@@ -441,7 +441,7 @@ namespace GD.BBPH.BLL
 			return _ThanhphanmauEntity;
 		}
 
-		public ThanhphanmauEntity Insert(System.String Mamau, System.String Tenmau, System.String Mausudung, System.String Tenmausudung, System.Decimal Tyle, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, )//ko co mahieu
+		public ThanhphanmauEntity Insert(System.String Mamau, System.String Tenmau, System.String Mausudung, System.String Tenmausudung, System.Decimal Tyle, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			ThanhphanmauEntity _ThanhphanmauEntity = new ThanhphanmauEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

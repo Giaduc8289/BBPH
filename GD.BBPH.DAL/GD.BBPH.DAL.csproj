@@ -148,6 +148,7 @@
     <Compile Include="DatabaseGeneric\EntityClasses\PhieugiaohangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\PhieugiaohangHEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\ThamsoEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\ThanhphanmauEntity.cs" />
     <Compile Include="DatabaseGeneric\HelperClasses\EntityCollection.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
@@ -237,6 +238,7 @@
     <Compile Include="DatabaseGeneric\RelationClasses\PhieugiaohangHRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\RolesRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\ThamsoRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\ThanhphanmauRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\UsersRelations.cs" />
     <Compile Include="DatabaseSpecific\ActionProcedures.cs" />
     <Compile Include="DatabaseSpecific\DataAccessAdapter.cs" />

@@ -140,6 +140,7 @@
     <Compile Include="ManagerBase\PhieugiaohangHManagerBase.cs" />
     <Compile Include="ManagerBase\RolesManagerBase.cs" />
     <Compile Include="ManagerBase\ThamsoManagerBase.cs" />
+    <Compile Include="ManagerBase\ThanhphanmauManagerBase.cs" />
     <Compile Include="ManagerBase\UsersManagerBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
