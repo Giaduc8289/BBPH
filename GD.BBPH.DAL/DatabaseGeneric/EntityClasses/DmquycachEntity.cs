@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 8:29:25 PM
+// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -486,6 +486,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tencd", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenqccha", fieldHashtable);
 		}
 		#endregion
 
@@ -680,6 +686,28 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmquycachFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)DmquycachFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Tencd property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmquycach"."Tencd"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tencd
+		{
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Tencd, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Tencd, value); }
+		}
+
+		/// <summary> The Tenqccha property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmquycach"."Tenqccha"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenqccha
+		{
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Tenqccha, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Tenqccha, value); }
 		}
 
 

@@ -332,6 +332,7 @@
     <Compile Include="Manager\PhieugiaohangHManager.cs" />
     <Compile Include="Manager\RolesManager.cs" />
     <Compile Include="Manager\ThamsoManager.cs" />
+    <Compile Include="Manager\ThanhphanmauManager.cs" />
     <Compile Include="Manager\UsersManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

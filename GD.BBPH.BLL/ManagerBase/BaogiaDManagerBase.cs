@@ -34,6 +34,8 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Masp="Masp";				
 		
+		public const String Field_Tenhang="Tenhang";				
+		
 		public const String Field_Kichthuoc="Kichthuoc";				
 		
 		public const String Field_Trongluong="Trongluong";				
@@ -74,6 +76,8 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Loaihang,typeof(System.String));
 			
 			dt.Columns.Add(Field_Masp,typeof(System.String));
+			
+			dt.Columns.Add(Field_Tenhang,typeof(System.String));
 			
 			dt.Columns.Add(Field_Kichthuoc,typeof(System.String));
 			
@@ -124,6 +128,12 @@ namespace GD.BBPH.BLL
 			try
 			{
 				r[Field_Masp]=_BaogiaDEntity.Masp;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Tenhang]=_BaogiaDEntity.Tenhang;
 			}
 			catch { }
 			
@@ -213,6 +223,12 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
+				_BaogiaDEntity.Tenhang= r[Field_Tenhang].ToString();						
+			}
+			catch { }
+			
+			try
+			{
 				_BaogiaDEntity.Kichthuoc= r[Field_Kichthuoc].ToString();						
 			}
 			catch { }
@@ -281,6 +297,8 @@ namespace GD.BBPH.BLL
 			
 			_BaogiaDEntity.Masp= _BaogiaDEntity_XML.Masp;
 			
+			_BaogiaDEntity.Tenhang= _BaogiaDEntity_XML.Tenhang;
+			
 			_BaogiaDEntity.Kichthuoc= _BaogiaDEntity_XML.Kichthuoc;
 			
 			_BaogiaDEntity.Trongluong= _BaogiaDEntity_XML.Trongluong;
@@ -334,6 +352,12 @@ namespace GD.BBPH.BLL
 			try
 			{
 				r.SetField(Field_Masp,_BaogiaDEntity.Masp);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Tenhang,_BaogiaDEntity.Tenhang);
 			}
 			catch { }
 			
@@ -426,6 +450,12 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
+				r.SetField(Field_Tenhang,_BaogiaDEntity.Tenhang);
+			}
+			catch { }
+			
+			try
+			{
 				r.SetField(Field_Kichthuoc,_BaogiaDEntity.Kichthuoc);
 			}
 			catch { }
@@ -499,7 +529,7 @@ namespace GD.BBPH.BLL
 			return BaogiaDEntity;
 		}
 
-		public BaogiaDEntity Insert(System.Int64  Id, System.String  Sobaogia, System.String  Loaihang, System.String  Masp, System.String  Kichthuoc, System.Decimal  Trongluong, System.String  Mota, System.Int32  DongiakhongVat, System.Int32  DongiaVat, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public BaogiaDEntity Insert(System.Int64  Id, System.String  Sobaogia, System.String  Loaihang, System.String  Masp, System.String  Tenhang, System.String  Kichthuoc, System.Decimal  Trongluong, System.String  Mota, System.Int32  DongiakhongVat, System.Int32  DongiaVat, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
 		{
 			BaogiaDEntity _BaogiaDEntity = new BaogiaDEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -512,6 +542,8 @@ namespace GD.BBPH.BLL
 				_BaogiaDEntity.Loaihang = Loaihang;
 				
 				_BaogiaDEntity.Masp = Masp;
+				
+				_BaogiaDEntity.Tenhang = Tenhang;
 				
 				_BaogiaDEntity.Kichthuoc = Kichthuoc;
 				
@@ -537,7 +569,7 @@ namespace GD.BBPH.BLL
 			return _BaogiaDEntity;
 		}
 
-		public BaogiaDEntity Insert(System.String Sobaogia, System.String Loaihang, System.String Masp, System.String Kichthuoc, System.Decimal Trongluong, System.String Mota, System.Int32 DongiakhongVat, System.Int32 DongiaVat, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public BaogiaDEntity Insert(System.String Sobaogia, System.String Loaihang, System.String Masp, System.String Tenhang, System.String Kichthuoc, System.Decimal Trongluong, System.String Mota, System.Int32 DongiakhongVat, System.Int32 DongiaVat, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			BaogiaDEntity _BaogiaDEntity = new BaogiaDEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -549,6 +581,8 @@ namespace GD.BBPH.BLL
 				_BaogiaDEntity.Loaihang = Loaihang;
 				
 				_BaogiaDEntity.Masp = Masp;
+				
+				_BaogiaDEntity.Tenhang = Tenhang;
 				
 				_BaogiaDEntity.Kichthuoc = Kichthuoc;
 				
@@ -604,7 +638,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.String Sobaogia, System.String Loaihang, System.String Masp, System.String Kichthuoc, System.Decimal Trongluong, System.String Mota, System.Int32 DongiakhongVat, System.Int32 DongiaVat, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.Int64 Id, System.String Sobaogia, System.String Loaihang, System.String Masp, System.String Tenhang, System.String Kichthuoc, System.Decimal Trongluong, System.String Mota, System.Int32 DongiakhongVat, System.Int32 DongiaVat, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -620,6 +654,8 @@ namespace GD.BBPH.BLL
 					_BaogiaDEntity.Loaihang = Loaihang;
 					
 					_BaogiaDEntity.Masp = Masp;
+					
+					_BaogiaDEntity.Tenhang = Tenhang;
 					
 					_BaogiaDEntity.Kichthuoc = Kichthuoc;
 					
@@ -727,6 +763,22 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(BaogiaDFields.Masp == Masp);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("BaogiaDEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByTenhang(System.String Tenhang)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(BaogiaDFields.Tenhang == Tenhang);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1047,6 +1099,40 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(BaogiaDFields.Masp == Masp);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_BaogiaDCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByTenhang(System.String Tenhang)
+		{
+			EntityCollection _BaogiaDCollection = new EntityCollection(new BaogiaDEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(BaogiaDFields.Tenhang == Tenhang);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_BaogiaDCollection, filter, 0, null);
+			}
+			return _BaogiaDCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByTenhangRDT(System.String Tenhang)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _BaogiaDCollection = new EntityCollection(new BaogiaDEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(BaogiaDFields.Tenhang == Tenhang);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
