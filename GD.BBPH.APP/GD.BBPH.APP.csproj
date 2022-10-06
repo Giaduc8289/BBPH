@@ -831,6 +831,7 @@
     <Content Include="XMLCONFIG\FRM_DMPE.xml" />
     <Content Include="XMLCONFIG\FRM_DMPE_TIM.xml" />
     <Content Include="XMLCONFIG\FRM_DMPHE.xml" />
+    <Content Include="XMLCONFIG\FRM_DMQUYCACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMVATTUPHU.xml" />
     <Content Include="XMLCONFIG\FRM_KHTRANG_EDIT_FIND.xml" />
     <Content Include="XMLCONFIG\FRM_KHTRANG_EDIT.xml" />
