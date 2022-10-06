@@ -32,7 +32,7 @@
 
   <tablename>
     <name>Dmdongmay</name>
-    <headerText>Danh sách dsòng máy</headerText>
+    <headerText>Danh sách dòng máy</headerText>
   </tablename>
 
   <viewgrid>

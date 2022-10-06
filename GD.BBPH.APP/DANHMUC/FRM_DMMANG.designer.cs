@@ -34,6 +34,7 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_TENCTPT = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MACTPT = new GD.BBPH.CONTROL.TEXTBOX();
             this.label5 = new GD.BBPH.CONTROL.LABEL();
             this.txt_TRONGLUONG = new GD.BBPH.CONTROL.TEXTBOX();
@@ -54,7 +55,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAHIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_TENCTPT = new GD.BBPH.CONTROL.TEXTBOX();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -137,6 +137,22 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(512, 535);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_TENCTPT
+            // 
+            this.txt_TENCTPT.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TENCTPT.BannerText = null;
+            this.txt_TENCTPT.Enabled = false;
+            this.txt_TENCTPT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TENCTPT.FormNametoShow = "";
+            this.txt_TENCTPT.Is_DateTime = false;
+            this.txt_TENCTPT.IsShowForm = false;
+            this.txt_TENCTPT.Location = new System.Drawing.Point(291, 167);
+            this.txt_TENCTPT.Name = "txt_TENCTPT";
+            this.txt_TENCTPT.Regular_Expression = null;
+            this.txt_TENCTPT.Size = new System.Drawing.Size(205, 20);
+            this.txt_TENCTPT.TabIndex = 131;
+            this.txt_TENCTPT.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACTPT_Validating);
             // 
             // txt_MACTPT
             // 
@@ -380,22 +396,6 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã màng";
             this.label22.Click += new System.EventHandler(this.label22_Click);
-            // 
-            // txt_TENCTPT
-            // 
-            this.txt_TENCTPT.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TENCTPT.BannerText = null;
-            this.txt_TENCTPT.Enabled = false;
-            this.txt_TENCTPT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TENCTPT.FormNametoShow = "";
-            this.txt_TENCTPT.Is_DateTime = false;
-            this.txt_TENCTPT.IsShowForm = false;
-            this.txt_TENCTPT.Location = new System.Drawing.Point(291, 167);
-            this.txt_TENCTPT.Name = "txt_TENCTPT";
-            this.txt_TENCTPT.Regular_Expression = null;
-            this.txt_TENCTPT.Size = new System.Drawing.Size(205, 20);
-            this.txt_TENCTPT.TabIndex = 131;
-            this.txt_TENCTPT.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACTPT_Validating);
             // 
             // FRM_DMMANG
             // 
