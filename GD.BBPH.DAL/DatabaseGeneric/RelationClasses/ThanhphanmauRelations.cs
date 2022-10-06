@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:15 AM
+// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -17,43 +17,43 @@ using SD.LLBLGen.Pro.ORMSupportClasses;
 
 namespace GD.BBPH.DAL.RelationClasses
 {
-	/// <summary>Implements the static Relations variant for the entity: Dmnhomnguyenlieu. </summary>
-	public partial class DmnhomnguyenlieuRelations
+	/// <summary>Implements the static Relations variant for the entity: Thanhphanmau. </summary>
+	public partial class ThanhphanmauRelations
 	{
 		/// <summary>CTor</summary>
-		public DmnhomnguyenlieuRelations()
+		public ThanhphanmauRelations()
 		{
 		}
 
-		/// <summary>Gets all relations of the DmnhomnguyenlieuEntity as a list of IEntityRelation objects.</summary>
+		/// <summary>Gets all relations of the ThanhphanmauEntity as a list of IEntityRelation objects.</summary>
 		/// <returns>a list of IEntityRelation objects</returns>
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
-			toReturn.Add(this.DmnguyenlieuEntityUsingManhom);
 
 
+			toReturn.Add(this.DmmauEntityUsingMamau);
 			return toReturn;
 		}
 
 		#region Class Property Declarations
 
-		/// <summary>Returns a new IEntityRelation object, between DmnhomnguyenlieuEntity and DmnguyenlieuEntity over the 1:n relation they have, using the relation between the fields:
-		/// Dmnhomnguyenlieu.Manhom - Dmnguyenlieu.Manhom
+
+
+		/// <summary>Returns a new IEntityRelation object, between ThanhphanmauEntity and DmmauEntity over the m:1 relation they have, using the relation between the fields:
+		/// Thanhphanmau.Mamau - Dmmau.Mamau
 		/// </summary>
-		public virtual IEntityRelation DmnguyenlieuEntityUsingManhom
+		public virtual IEntityRelation DmmauEntityUsingMamau
 		{
 			get
 			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Dmnguyenlieu" , true);
-				relation.AddEntityFieldPair(DmnhomnguyenlieuFields.Manhom, DmnguyenlieuFields.Manhom);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmnhomnguyenlieuEntity", true);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmnguyenlieuEntity", false);
+				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmmau", false);
+				relation.AddEntityFieldPair(DmmauFields.Mamau, ThanhphanmauFields.Mamau);
+				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmauEntity", false);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("ThanhphanmauEntity", true);
 				return relation;
 			}
 		}
-
-
 
 		/// <summary>stub, not used in this entity, only for TargetPerEntity entities.</summary>
 		public virtual IEntityRelation GetSubTypeRelation(string subTypeEntityName) { return null; }

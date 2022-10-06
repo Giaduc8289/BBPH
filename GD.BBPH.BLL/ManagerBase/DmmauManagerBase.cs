@@ -30,7 +30,7 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Tenmau="Tenmau";				
 		
-		public const String Field_ChisoRgb="ChisoRgb";				
+		public const String Field_Lamaugoc="Lamaugoc";				
 		
 		public const String Field_Ngaytao="Ngaytao";				
 		
@@ -59,7 +59,7 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Tenmau,typeof(System.String));
 			
-			dt.Columns.Add(Field_ChisoRgb,typeof(System.String));
+			dt.Columns.Add(Field_Lamaugoc,typeof(System.Boolean));
 			
 			dt.Columns.Add(Field_Ngaytao,typeof(System.DateTime));
 			
@@ -93,7 +93,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_ChisoRgb]=_DmmauEntity.ChisoRgb;
+				r[Field_Lamaugoc]=_DmmauEntity.Lamaugoc;
 			}
 			catch { }
 			
@@ -141,7 +141,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_DmmauEntity.ChisoRgb= r[Field_ChisoRgb].ToString();						
+				_DmmauEntity.Lamaugoc= System.Boolean.Parse(r[Field_Lamaugoc].ToString());						
 			}
 			catch { }
 			
@@ -181,7 +181,7 @@ namespace GD.BBPH.BLL
 			
 			_DmmauEntity.Tenmau= _DmmauEntity_XML.Tenmau;
 			
-			_DmmauEntity.ChisoRgb= _DmmauEntity_XML.ChisoRgb;
+			_DmmauEntity.Lamaugoc= _DmmauEntity_XML.Lamaugoc;
 			
 			_DmmauEntity.Ngaytao= _DmmauEntity_XML.Ngaytao;
 			
@@ -219,7 +219,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_ChisoRgb,_DmmauEntity.ChisoRgb);
+				r.SetField(Field_Lamaugoc,_DmmauEntity.Lamaugoc);
 			}
 			catch { }
 			
@@ -270,7 +270,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_ChisoRgb,_DmmauEntity.ChisoRgb);
+				r.SetField(Field_Lamaugoc,_DmmauEntity.Lamaugoc);
 			}
 			catch { }
 			
@@ -319,7 +319,7 @@ namespace GD.BBPH.BLL
 			return DmmauEntity;
 		}
 
-		public DmmauEntity Insert(System.String  Mamau, System.String  Tenmau, System.String  ChisoRgb, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public DmmauEntity Insert(System.String  Mamau, System.String  Tenmau, System.Boolean  Lamaugoc, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
 		{
 			DmmauEntity _DmmauEntity = new DmmauEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -329,7 +329,7 @@ namespace GD.BBPH.BLL
 				
 				_DmmauEntity.Tenmau = Tenmau;
 				
-				_DmmauEntity.ChisoRgb = ChisoRgb;
+				_DmmauEntity.Lamaugoc = Lamaugoc;
 				
 				_DmmauEntity.Ngaytao = Ngaytao;
 				
@@ -345,7 +345,7 @@ namespace GD.BBPH.BLL
 			return _DmmauEntity;
 		}
 
-		public DmmauEntity Insert(System.String Tenmau, System.String ChisoRgb, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public DmmauEntity Insert(System.String Tenmau, System.Boolean Lamaugoc, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			DmmauEntity _DmmauEntity = new DmmauEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -354,7 +354,7 @@ namespace GD.BBPH.BLL
 				
 				_DmmauEntity.Tenmau = Tenmau;
 				
-				_DmmauEntity.ChisoRgb = ChisoRgb;
+				_DmmauEntity.Lamaugoc = Lamaugoc;
 				
 				_DmmauEntity.Ngaytao = Ngaytao;
 				
@@ -400,7 +400,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Mamau, System.String Tenmau, System.String ChisoRgb, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.String Mamau, System.String Tenmau, System.Boolean Lamaugoc, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -413,7 +413,7 @@ namespace GD.BBPH.BLL
 					
 					_DmmauEntity.Tenmau = Tenmau;
 					
-					_DmmauEntity.ChisoRgb = ChisoRgb;
+					_DmmauEntity.Lamaugoc = Lamaugoc;
 					
 					_DmmauEntity.Ngaytao = Ngaytao;
 					
@@ -488,13 +488,13 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByChisoRgb(System.String ChisoRgb)
+		public int DeleteByLamaugoc(System.Boolean Lamaugoc)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DmmauFields.ChisoRgb == ChisoRgb);
+			_PredicateExpression.Add(DmmauFields.Lamaugoc == Lamaugoc);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -677,13 +677,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByChisoRgb(System.String ChisoRgb)
+		public EntityCollection SelectByLamaugoc(System.Boolean Lamaugoc)
 		{
 			EntityCollection _DmmauCollection = new EntityCollection(new DmmauEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DmmauFields.ChisoRgb == ChisoRgb);
+			_PredicateExpression.Add(DmmauFields.Lamaugoc == Lamaugoc);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -693,14 +693,14 @@ namespace GD.BBPH.BLL
 			return _DmmauCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByChisoRgbRDT(System.String ChisoRgb)
+		public DataTable SelectByLamaugocRDT(System.Boolean Lamaugoc)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _DmmauCollection = new EntityCollection(new DmmauEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DmmauFields.ChisoRgb == ChisoRgb);
+			_PredicateExpression.Add(DmmauFields.Lamaugoc == Lamaugoc);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

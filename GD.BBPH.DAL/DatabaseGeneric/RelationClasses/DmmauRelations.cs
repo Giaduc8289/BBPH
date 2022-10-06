@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 8:29:25 PM
+// Code is generated on: Thursday, October 6, 2022 9:04:15 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -30,7 +30,7 @@ namespace GD.BBPH.DAL.RelationClasses
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
-
+			toReturn.Add(this.ThanhphanmauEntityUsingMamau);
 
 
 			return toReturn;
@@ -38,6 +38,20 @@ namespace GD.BBPH.DAL.RelationClasses
 
 		#region Class Property Declarations
 
+		/// <summary>Returns a new IEntityRelation object, between DmmauEntity and ThanhphanmauEntity over the 1:n relation they have, using the relation between the fields:
+		/// Dmmau.Mamau - Thanhphanmau.Mamau
+		/// </summary>
+		public virtual IEntityRelation ThanhphanmauEntityUsingMamau
+		{
+			get
+			{
+				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Thanhphanmau" , true);
+				relation.AddEntityFieldPair(DmmauFields.Mamau, ThanhphanmauFields.Mamau);
+				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmauEntity", true);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("ThanhphanmauEntity", false);
+				return relation;
+			}
+		}
 
 
 

@@ -43,6 +43,12 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Tenquycach.Text = _Rowview.Row[DmquycachFields.Tenquycach.Name].ToString();
 					txt_Macd.Text = _Rowview.Row[DmquycachFields.Macd.Name].ToString();
 					txt_Maqccha.Text = _Rowview.Row[DmquycachFields.Maqccha.Name].ToString();
+					txt_Ngaytao.Text = _Rowview.Row[DmquycachFields.Ngaytao.Name].ToString();
+					txt_Nguoitao.Text = _Rowview.Row[DmquycachFields.Nguoitao.Name].ToString();
+					txt_Ngaysua.Text = _Rowview.Row[DmquycachFields.Ngaysua.Name].ToString();
+					txt_Nguoisua.Text = _Rowview.Row[DmquycachFields.Nguoisua.Name].ToString();
+					txt_Tencd.Text = _Rowview.Row[DmquycachFields.Tencd.Name].ToString();
+					txt_Tenqccha.Text = _Rowview.Row[DmquycachFields.Tenqccha.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmquycach_CurrentChanged"); }
@@ -56,6 +62,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			_dmquycach.Tenquycach = txt_Tenquycach.Text.Trim();
 			_dmquycach.Macd = txt_Macd.Text.Trim();
 			_dmquycach.Maqccha = txt_Maqccha.Text.Trim();
+			_dmquycach.Ngaytao = txt_Ngaytao.Text.Trim();
+			_dmquycach.Nguoitao = txt_Nguoitao.Text.Trim();
+			_dmquycach.Ngaysua = txt_Ngaysua.Text.Trim();
+			_dmquycach.Nguoisua = txt_Nguoisua.Text.Trim();
+			_dmquycach.Tencd = txt_Tencd.Text.Trim();
+			_dmquycach.Tenqccha = txt_Tenqccha.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -71,6 +83,12 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Dmquycach.CurrentRow.Cells[DmquycachFields.Tenquycach.Name].Value = _dmquycachEntity.Tenquycach;
 				GRID_Dmquycach.CurrentRow.Cells[DmquycachFields.Macd.Name].Value = _dmquycachEntity.Macd;
 				GRID_Dmquycach.CurrentRow.Cells[DmquycachFields.Maqccha.Name].Value = _dmquycachEntity.Maqccha;
+				GRID_Dmquycach.CurrentRow.Cells[DmquycachFields.Ngaytao.Name].Value = _dmquycachEntity.Ngaytao;
+				GRID_Dmquycach.CurrentRow.Cells[DmquycachFields.Nguoitao.Name].Value = _dmquycachEntity.Nguoitao;
+				GRID_Dmquycach.CurrentRow.Cells[DmquycachFields.Ngaysua.Name].Value = _dmquycachEntity.Ngaysua;
+				GRID_Dmquycach.CurrentRow.Cells[DmquycachFields.Nguoisua.Name].Value = _dmquycachEntity.Nguoisua;
+				GRID_Dmquycach.CurrentRow.Cells[DmquycachFields.Tencd.Name].Value = _dmquycachEntity.Tencd;
+				GRID_Dmquycach.CurrentRow.Cells[DmquycachFields.Tenqccha.Name].Value = _dmquycachEntity.Tenqccha;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmquycachManager.Convert(_dmquycachEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Dmquycach_PK;

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 8:29:25 PM
+// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -130,6 +130,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.ThamsoEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "ThamsoEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.ThanhphanmauEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "ThanhphanmauEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.UsersEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "UsersEntity");

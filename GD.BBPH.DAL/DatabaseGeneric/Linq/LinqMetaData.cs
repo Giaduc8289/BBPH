@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 8:29:25 PM
+// Code is generated on: Thursday, October 6, 2022 9:04:15 AM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -159,6 +159,9 @@ namespace GD.BBPH.DAL.Linq
 					break;
 				case GD.BBPH.DAL.EntityType.ThamsoEntity:
 					toReturn = this.Thamso;
+					break;
+				case GD.BBPH.DAL.EntityType.ThanhphanmauEntity:
+					toReturn = this.Thanhphanmau;
 					break;
 				case GD.BBPH.DAL.EntityType.UsersEntity:
 					toReturn = this.Users;
@@ -366,6 +369,12 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<ThamsoEntity> Thamso
 		{
 			get { return new DataSource2<ThamsoEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting ThanhphanmauEntity instances in the database.</summary>
+		public DataSource2<ThanhphanmauEntity> Thanhphanmau
+		{
+			get { return new DataSource2<ThanhphanmauEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting UsersEntity instances in the database.</summary>

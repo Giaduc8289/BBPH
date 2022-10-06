@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 8:29:24 PM
+// Code is generated on: Thursday, October 6, 2022 9:04:15 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -25,6 +25,8 @@ namespace GD.BBPH.DAL
 		Loaihang,
 		///<summary>Masp. </summary>
 		Masp,
+		///<summary>Tenhang. </summary>
+		Tenhang,
 		///<summary>Kichthuoc. </summary>
 		Kichthuoc,
 		///<summary>Trongluong. </summary>
@@ -535,8 +537,8 @@ namespace GD.BBPH.DAL
 		Mamau,
 		///<summary>Tenmau. </summary>
 		Tenmau,
-		///<summary>ChisoRgb. </summary>
-		ChisoRgb,
+		///<summary>Lamaugoc. </summary>
+		Lamaugoc,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -659,6 +661,10 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Tencd. </summary>
+		Tencd,
+		///<summary>Tenqccha. </summary>
+		Tenqccha,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1013,6 +1019,36 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Thanhphanmau.
+	/// </summary>
+	public enum ThanhphanmauFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Mamau. </summary>
+		Mamau,
+		///<summary>Tenmau. </summary>
+		Tenmau,
+		///<summary>Mausudung. </summary>
+		Mausudung,
+		///<summary>Tenmausudung. </summary>
+		Tenmausudung,
+		///<summary>Tyle. </summary>
+		Tyle,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Users.
 	/// </summary>
 	public enum UsersFieldIndex:int
@@ -1112,6 +1148,8 @@ namespace GD.BBPH.DAL
 		RolesEntity,
 		///<summary>Thamso</summary>
 		ThamsoEntity,
+		///<summary>Thanhphanmau</summary>
+		ThanhphanmauEntity,
 		///<summary>Users</summary>
 		UsersEntity
 	}
