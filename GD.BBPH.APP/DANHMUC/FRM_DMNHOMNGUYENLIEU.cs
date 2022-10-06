@@ -139,12 +139,16 @@ namespace GD.BBPH.APP.DANHMUC
             _DmnhomnguyenlieuEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
+                _DmnhomnguyenlieuEntity.Ngaytao = DateTime.Now;
+                _DmnhomnguyenlieuEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _DmnhomnguyenlieuManager.InsertV2(_DmnhomnguyenlieuEntity, r_Insert, DT_DMNHOMNGUYENLIEU, BS_DMNHOMNGUYENLIEU);
                  GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnhomnguyenlieuManager.Convert(_DmnhomnguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMNHOMNGUYENLIEU.ResetCurrentItem();
             }
             else
             {
+                _DmnhomnguyenlieuEntity.Ngaysua = DateTime.Now;
+                _DmnhomnguyenlieuEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DmnhomnguyenlieuManager.Update(_DmnhomnguyenlieuEntity);
                 GRID_DMNHOMNGUYENLIEU.CurrentRow.Cells[DmnhomnguyenlieuFields.Manhom.Name].Value = _DmnhomnguyenlieuEntity.Manhom;
                 GRID_DMNHOMNGUYENLIEU.CurrentRow.Cells[DmnhomnguyenlieuFields.Tennhomnguyenlieu.Name].Value = _DmnhomnguyenlieuEntity.Tennhomnguyenlieu;

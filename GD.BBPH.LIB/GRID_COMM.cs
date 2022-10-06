@@ -1106,8 +1106,8 @@ namespace GD.BBPH.LIB
                 dtemp.Rows.Add(r);
             }
             DataSet ds = new DataSet();
-            ds.Tables.Add(dtname);
             ds.Tables.Add(dtemp);
+            ds.Tables.Add(dtname);
             IO.GenXML(filename, ds);
 
         }

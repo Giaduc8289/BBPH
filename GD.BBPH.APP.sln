@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GenSupportCode", "GenSuppor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{8E88BCCA-CC4D-4E93-9D13-4C1704F2A390}"
 	ProjectSection(SolutionItems) = preProject
+		GenSupportCode\Entity\BaogiaDEnt.cs = GenSupportCode\Entity\BaogiaDEnt.cs
+		GenSupportCode\Entity\BaogiaHEnt.cs = GenSupportCode\Entity\BaogiaHEnt.cs
 		GenSupportCode\Entity\CongsuatmayEnt.cs = GenSupportCode\Entity\CongsuatmayEnt.cs
 		GenSupportCode\Entity\CtptmangDEnt.cs = GenSupportCode\Entity\CtptmangDEnt.cs
 		GenSupportCode\Entity\CtptmangHEnt.cs = GenSupportCode\Entity\CtptmangHEnt.cs
@@ -44,11 +46,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{8E88BC
 		GenSupportCode\Entity\DmnhomnguyenlieuEnt.cs = GenSupportCode\Entity\DmnhomnguyenlieuEnt.cs
 		GenSupportCode\Entity\DmquycachEnt.cs = GenSupportCode\Entity\DmquycachEnt.cs
 		GenSupportCode\Entity\DmtaikhoanEnt.cs = GenSupportCode\Entity\DmtaikhoanEnt.cs
+		GenSupportCode\Entity\DonhangDEnt.cs = GenSupportCode\Entity\DonhangDEnt.cs
+		GenSupportCode\Entity\DonhangHEnt.cs = GenSupportCode\Entity\DonhangHEnt.cs
+		GenSupportCode\Entity\HangtralaiEnt.cs = GenSupportCode\Entity\HangtralaiEnt.cs
 		GenSupportCode\Entity\LogbackupEnt.cs = GenSupportCode\Entity\LogbackupEnt.cs
 		GenSupportCode\Entity\MenuEnt.cs = GenSupportCode\Entity\MenuEnt.cs
 		GenSupportCode\Entity\MenuroleEnt.cs = GenSupportCode\Entity\MenuroleEnt.cs
+		GenSupportCode\Entity\PhieugiaohangDEnt.cs = GenSupportCode\Entity\PhieugiaohangDEnt.cs
+		GenSupportCode\Entity\PhieugiaohangHEnt.cs = GenSupportCode\Entity\PhieugiaohangHEnt.cs
 		GenSupportCode\Entity\RolesEnt.cs = GenSupportCode\Entity\RolesEnt.cs
 		GenSupportCode\Entity\ThamsoEnt.cs = GenSupportCode\Entity\ThamsoEnt.cs
+		GenSupportCode\Entity\ThanhphanmauEnt.cs = GenSupportCode\Entity\ThanhphanmauEnt.cs
 		GenSupportCode\Entity\UsersEnt.cs = GenSupportCode\Entity\UsersEnt.cs
 	EndProjectSection
 EndProject

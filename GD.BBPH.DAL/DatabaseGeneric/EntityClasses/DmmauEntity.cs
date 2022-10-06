@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 2:27:30 PM
+// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -37,7 +37,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
-
+		private EntityCollection<ThanhphanmauEntity> _thanhphanmau;
 
 
 
@@ -54,7 +54,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		public static class MemberNames
 		{
 
-
+			/// <summary>Member name Thanhphanmau</summary>
+			public static readonly string Thanhphanmau = "Thanhphanmau";
 
 
 		}
@@ -115,7 +116,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-
+				_thanhphanmau = (EntityCollection<ThanhphanmauEntity>)info.GetValue("_thanhphanmau", typeof(EntityCollection<ThanhphanmauEntity>));
 
 
 
@@ -156,7 +157,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(propertyName)
 			{
 
-
+				case "Thanhphanmau":
+					this.Thanhphanmau.Add((ThanhphanmauEntity)entity);
+					break;
 
 
 				default:
@@ -181,7 +184,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-
+				case "Thanhphanmau":
+					toReturn.Add(DmmauEntity.Relations.ThanhphanmauEntityUsingMamau);
+					break;
 
 
 				default:
@@ -220,7 +225,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-
+				case "Thanhphanmau":
+					this.Thanhphanmau.Add((ThanhphanmauEntity)relatedEntity);
+					break;
 
 				default:
 					break;
@@ -237,7 +244,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-
+				case "Thanhphanmau":
+					base.PerformRelatedEntityRemoval(this.Thanhphanmau, relatedEntity, signalRelatedEntityManyToOne);
+					break;
 
 				default:
 					break;
@@ -269,7 +278,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntityCollection2> GetMemberEntityCollections()
 		{
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
-
+			toReturn.Add(this.Thanhphanmau);
 
 			return toReturn;
 		}
@@ -284,7 +293,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-
+				info.AddValue("_thanhphanmau", ((_thanhphanmau!=null) && (_thanhphanmau.Count>0) && !this.MarkedForDeletion)?_thanhphanmau:null);
 
 
 
@@ -322,6 +331,15 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		
 
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Thanhphanmau' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoThanhphanmau()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(ThanhphanmauFields.Mamau, null, ComparisonOperator.Equal, this.Mamau));
+			return bucket;
+		}
 
 
 
@@ -353,7 +371,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void AddToMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue) 
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
-
+			collectionsQueue.Enqueue(this._thanhphanmau);
 
 		}
 		
@@ -362,7 +380,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void GetFromMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue)
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
-
+			this._thanhphanmau = (EntityCollection<ThanhphanmauEntity>) collectionsQueue.Dequeue();
 
 		}
 		
@@ -370,7 +388,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>true if the entity has populated member collections.</returns>
 		protected override bool HasPopulatedMemberEntityCollections()
 		{
-
+			if (this._thanhphanmau != null)
+			{
+				return true;
+			}
 
 			return base.HasPopulatedMemberEntityCollections();
 		}
@@ -381,7 +402,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void CreateMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue, Queue<bool> requiredQueue) 
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
-
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<ThanhphanmauEntity>(EntityFactoryCache2.GetEntityFactory(typeof(ThanhphanmauEntityFactory))) : null);
 
 		}
 #endif
@@ -393,7 +414,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
 
-
+			toReturn.Add("Thanhphanmau", _thanhphanmau);
 
 
 			return toReturn;
@@ -402,7 +423,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> Adds the internals to the active context. </summary>
 		protected override void AddInternalsToContext()
 		{
-
+			if(_thanhphanmau!=null)
+			{
+				_thanhphanmau.ActiveContext = base.ActiveContext;
+			}
 
 
 
@@ -412,7 +436,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected virtual void InitClassMembers()
 		{
 
-
+			_thanhphanmau = null;
 
 
 
@@ -439,7 +463,19 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Tenmau", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("ChisoRgb", fieldHashtable);
+			_fieldsCustomProperties.Add("Lamaugoc", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nguoitao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaysua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
 		}
 		#endregion
 
@@ -477,6 +513,17 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return _customProperties;}
 		}
 
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Thanhphanmau' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathThanhphanmau
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<ThanhphanmauEntity>(EntityFactoryCache2.GetEntityFactory(typeof(ThanhphanmauEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Thanhphanmau")[0], (int)GD.BBPH.DAL.EntityType.DmmauEntity, (int)GD.BBPH.DAL.EntityType.ThanhphanmauEntity, 0, null, null, null, null, "Thanhphanmau", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
 
 
 
@@ -527,17 +574,76 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmmauFieldIndex.Tenmau, value); }
 		}
 
-		/// <summary> The ChisoRgb property of the Entity Dmmau<br/><br/>
+		/// <summary> The Lamaugoc property of the Entity Dmmau<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmmau"."ChisoRGB"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String ChisoRgb
+		/// <remarks>Mapped on  table field: "dmmau"."Lamaugoc"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Bit, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Boolean> Lamaugoc
 		{
-			get { return (System.String)GetValue((int)DmmauFieldIndex.ChisoRgb, true); }
-			set	{ SetValue((int)DmmauFieldIndex.ChisoRgb, value); }
+			get { return (Nullable<System.Boolean>)GetValue((int)DmmauFieldIndex.Lamaugoc, false); }
+			set	{ SetValue((int)DmmauFieldIndex.Lamaugoc, value); }
 		}
 
+		/// <summary> The Ngaytao property of the Entity Dmmau<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmau"."Ngaytao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaytao
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)DmmauFieldIndex.Ngaytao, false); }
+			set	{ SetValue((int)DmmauFieldIndex.Ngaytao, value); }
+		}
+
+		/// <summary> The Nguoitao property of the Entity Dmmau<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmau"."Nguoitao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoitao
+		{
+			get { return (System.String)GetValue((int)DmmauFieldIndex.Nguoitao, true); }
+			set	{ SetValue((int)DmmauFieldIndex.Nguoitao, value); }
+		}
+
+		/// <summary> The Ngaysua property of the Entity Dmmau<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmau"."Ngaysua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaysua
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)DmmauFieldIndex.Ngaysua, false); }
+			set	{ SetValue((int)DmmauFieldIndex.Ngaysua, value); }
+		}
+
+		/// <summary> The Nguoisua property of the Entity Dmmau<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmau"."Nguoisua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoisua
+		{
+			get { return (System.String)GetValue((int)DmmauFieldIndex.Nguoisua, true); }
+			set	{ SetValue((int)DmmauFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'ThanhphanmauEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(ThanhphanmauEntity))]
+		public virtual EntityCollection<ThanhphanmauEntity> Thanhphanmau
+		{
+			get
+			{
+				if(_thanhphanmau==null)
+				{
+					_thanhphanmau = new EntityCollection<ThanhphanmauEntity>(EntityFactoryCache2.GetEntityFactory(typeof(ThanhphanmauEntityFactory)));
+					_thanhphanmau.SetContainingEntityInfo(this, "Dmmau");
+				}
+				return _thanhphanmau;
+			}
+		}
 
 
 

@@ -136,12 +136,16 @@ namespace GD.BBPH.APP.DANHMUC
             _DmlydonhapxuatEntity.Tennhom = txt_TENNHOM.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
+                _DmlydonhapxuatEntity.Ngaytao = DateTime.Now;
+                _DmlydonhapxuatEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _DmlydonhapxuatManager.InsertV2(_DmlydonhapxuatEntity, r_Insert, DT_DMLYDONHAPXUAT, BS_LYDONHAPXUAT);
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmlydonhapxuatManager.Convert(_DmlydonhapxuatEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_LYDONHAPXUAT.ResetCurrentItem();
             }
             else
             {
+                _DmlydonhapxuatEntity.Ngaysua = DateTime.Now;
+                _DmlydonhapxuatEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DmlydonhapxuatManager.Update(_DmlydonhapxuatEntity);
                 GRID_LYDONHAPXUAT.CurrentRow.Cells[DmlydonhapxuatFields.Malydo.Name].Value = _DmlydonhapxuatEntity.Malydo;
                 GRID_LYDONHAPXUAT.CurrentRow.Cells[DmlydonhapxuatFields.Tenlydo.Name].Value = _DmlydonhapxuatEntity.Tenlydo;

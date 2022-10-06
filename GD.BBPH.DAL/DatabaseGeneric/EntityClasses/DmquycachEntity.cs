@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 2:27:30 PM
+// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -474,6 +474,24 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Maqccha", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nguoitao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaysua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tencd", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenqccha", fieldHashtable);
 		}
 		#endregion
 
@@ -624,6 +642,72 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmquycachFieldIndex.Maqccha, true); }
 			set	{ SetValue((int)DmquycachFieldIndex.Maqccha, value); }
+		}
+
+		/// <summary> The Ngaytao property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmquycach"."Ngaytao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaytao
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)DmquycachFieldIndex.Ngaytao, false); }
+			set	{ SetValue((int)DmquycachFieldIndex.Ngaytao, value); }
+		}
+
+		/// <summary> The Nguoitao property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmquycach"."Nguoitao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoitao
+		{
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Nguoitao, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Nguoitao, value); }
+		}
+
+		/// <summary> The Ngaysua property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmquycach"."Ngaysua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaysua
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)DmquycachFieldIndex.Ngaysua, false); }
+			set	{ SetValue((int)DmquycachFieldIndex.Ngaysua, value); }
+		}
+
+		/// <summary> The Nguoisua property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmquycach"."Nguoisua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoisua
+		{
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Nguoisua, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Tencd property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmquycach"."Tencd"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tencd
+		{
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Tencd, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Tencd, value); }
+		}
+
+		/// <summary> The Tenqccha property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmquycach"."Tenqccha"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenqccha
+		{
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Tenqccha, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Tenqccha, value); }
 		}
 
 

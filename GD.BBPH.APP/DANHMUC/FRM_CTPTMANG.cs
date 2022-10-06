@@ -309,14 +309,30 @@ namespace GD.BBPH.APP.DANHMUC
                 catch { }
 
                 _CtptmangDEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
-                if (_CtptmangDEntity.IsNew && _CtptmangDManager.SelectOne(_CtptmangDEntity.Id) != null)
-                    _CtptmangDEntity.IsNew = false;
+                if (_CtptmangDEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new CtptmangDManager()).SelectById(_CtptmangDEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _CtptmangDEntity.Ngaysua = DateTime.Now;
+                        _CtptmangDEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _CtptmangDEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _CtptmangDEntity.Ngaytao = DateTime.Now;
+                        _CtptmangDEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+
 
                 _CtptmangDEntityCol.Add(_CtptmangDEntity);
             }
 
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
+                _CtptmangHEntity.Ngaytao = DateTime.Now;
+                _CtptmangHEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _CtptmangHManager.InsertV2(_CtptmangHEntity, r_Insert, DT_CTPTMANG_H, BS_CTPTMANG_H);
                 foreach (CtptmangDEntity _tpsEntity in _CtptmangDEntityCol)
                     _tpsEntity.IdH = _CtptmangHEntity.Id;
@@ -332,6 +348,8 @@ namespace GD.BBPH.APP.DANHMUC
             }
             else
             {
+                _CtptmangHEntity.Ngaysua = DateTime.Now;
+                _CtptmangHEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _CtptmangHManager.Update(_CtptmangHEntity);
                 foreach (CtptmangDEntity _tpsEntity in _CtptmangDEntityCol)
                     _tpsEntity.IdH = _CtptmangHEntity.Id;

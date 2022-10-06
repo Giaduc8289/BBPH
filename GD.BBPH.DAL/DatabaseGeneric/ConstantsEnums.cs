@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 5, 2022 2:27:29 PM
+// Code is generated on: Thursday, October 6, 2022 9:04:15 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -11,6 +11,78 @@ using System;
 
 namespace GD.BBPH.DAL
 {
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: BaogiaD.
+	/// </summary>
+	public enum BaogiaDFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Sobaogia. </summary>
+		Sobaogia,
+		///<summary>Loaihang. </summary>
+		Loaihang,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tenhang. </summary>
+		Tenhang,
+		///<summary>Kichthuoc. </summary>
+		Kichthuoc,
+		///<summary>Trongluong. </summary>
+		Trongluong,
+		///<summary>Mota. </summary>
+		Mota,
+		///<summary>DongiakhongVat. </summary>
+		DongiakhongVat,
+		///<summary>DongiaVat. </summary>
+		DongiaVat,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: BaogiaH.
+	/// </summary>
+	public enum BaogiaHFieldIndex:int
+	{
+		///<summary>Sobaogia. </summary>
+		Sobaogia,
+		///<summary>Ngaybaogia. </summary>
+		Ngaybaogia,
+		///<summary>Ngayhieuluc. </summary>
+		Ngayhieuluc,
+		///<summary>Makhach. </summary>
+		Makhach,
+		///<summary>Tenkhach. </summary>
+		Tenkhach,
+		///<summary>Noidung. </summary>
+		Noidung,
+		///<summary>Phuongthuctt. </summary>
+		Phuongthuctt,
+		///<summary>Diadiemgiao. </summary>
+		Diadiemgiao,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
 
 	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Congsuatmay.
@@ -25,6 +97,14 @@ namespace GD.BBPH.DAL
 		Macd,
 		///<summary>Maqc. </summary>
 		Maqc,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -51,6 +131,14 @@ namespace GD.BBPH.DAL
 		Trongluong,
 		///<summary>Tyle. </summary>
 		Tyle,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -69,6 +157,14 @@ namespace GD.BBPH.DAL
 		Tenctpt,
 		///<summary>Ngayapdung. </summary>
 		Ngayapdung,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -99,6 +195,14 @@ namespace GD.BBPH.DAL
 		Thaythietbi,
 		///<summary>Dungmay. </summary>
 		Dungmay,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -113,6 +217,14 @@ namespace GD.BBPH.DAL
 		Mabp,
 		///<summary>Tenbophan. </summary>
 		Tenbophan,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -143,6 +255,14 @@ namespace GD.BBPH.DAL
 		Macv,
 		///<summary>Tenchucvu. </summary>
 		Tenchucvu,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -159,6 +279,14 @@ namespace GD.BBPH.DAL
 		Tencongdoan,
 		///<summary>Sothutucongdoan. </summary>
 		Sothutucongdoan,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -189,6 +317,14 @@ namespace GD.BBPH.DAL
 		Chucvu,
 		///<summary>Danghi. </summary>
 		Danghi,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -205,6 +341,14 @@ namespace GD.BBPH.DAL
 		Tendongmay,
 		///<summary>Macd. </summary>
 		Macd,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -243,6 +387,14 @@ namespace GD.BBPH.DAL
 		Quycachdonggoi,
 		///<summary>Loaithung. </summary>
 		Loaithung,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -281,6 +433,14 @@ namespace GD.BBPH.DAL
 		Sodienthoailh,
 		///<summary>Thongtinbosung. </summary>
 		Thongtinbosung,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -297,6 +457,14 @@ namespace GD.BBPH.DAL
 		Tenkho,
 		///<summary>Tenrutgon. </summary>
 		Tenrutgon,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -315,6 +483,14 @@ namespace GD.BBPH.DAL
 		Manhom,
 		///<summary>Tennhom. </summary>
 		Tennhom,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -339,6 +515,14 @@ namespace GD.BBPH.DAL
 		Trongluong,
 		///<summary>Mactpt. </summary>
 		Mactpt,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -353,8 +537,16 @@ namespace GD.BBPH.DAL
 		Mamau,
 		///<summary>Tenmau. </summary>
 		Tenmau,
-		///<summary>ChisoRgb. </summary>
-		ChisoRgb,
+		///<summary>Lamaugoc. </summary>
+		Lamaugoc,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -373,6 +565,14 @@ namespace GD.BBPH.DAL
 		Madm,
 		///<summary>Vitri. </summary>
 		Vitri,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -403,6 +603,14 @@ namespace GD.BBPH.DAL
 		Tang,
 		///<summary>Giam. </summary>
 		Giam,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -419,6 +627,14 @@ namespace GD.BBPH.DAL
 		Tennhomnguyenlieu,
 		///<summary>Tenrutgon. </summary>
 		Tenrutgon,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -437,6 +653,18 @@ namespace GD.BBPH.DAL
 		Macd,
 		///<summary>Maqccha. </summary>
 		Maqccha,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		///<summary>Tencd. </summary>
+		Tencd,
+		///<summary>Tenqccha. </summary>
+		Tenqccha,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -457,8 +685,142 @@ namespace GD.BBPH.DAL
 		Tinhchattk,
 		///<summary>Matkcha. </summary>
 		Matkcha,
-		///<summary>ChisoRgb. </summary>
-		ChisoRgb,
+		///<summary>Trongbang. </summary>
+		Trongbang,
+		///<summary>Doituongtd. </summary>
+		Doituongtd,
+		///<summary>Khoanmuctd. </summary>
+		Khoanmuctd,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: DonhangD.
+	/// </summary>
+	public enum DonhangDFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Madon. </summary>
+		Madon,
+		///<summary>Ngaydat. </summary>
+		Ngaydat,
+		///<summary>Makhach. </summary>
+		Makhach,
+		///<summary>Sobaogia. </summary>
+		Sobaogia,
+		///<summary>Loaihang. </summary>
+		Loaihang,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tenhang. </summary>
+		Tenhang,
+		///<summary>Soluong. </summary>
+		Soluong,
+		///<summary>Dongia. </summary>
+		Dongia,
+		///<summary>Ngaygiao. </summary>
+		Ngaygiao,
+		///<summary>Ghichu. </summary>
+		Ghichu,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: DonhangH.
+	/// </summary>
+	public enum DonhangHFieldIndex:int
+	{
+		///<summary>Madon. </summary>
+		Madon,
+		///<summary>Ngaydat. </summary>
+		Ngaydat,
+		///<summary>Makhach. </summary>
+		Makhach,
+		///<summary>Tenkhach. </summary>
+		Tenkhach,
+		///<summary>Sobaogia. </summary>
+		Sobaogia,
+		///<summary>Ngaybaogia. </summary>
+		Ngaybaogia,
+		///<summary>Userid. </summary>
+		Userid,
+		///<summary>Tennv. </summary>
+		Tennv,
+		///<summary>Ghichu. </summary>
+		Ghichu,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Hangtralai.
+	/// </summary>
+	public enum HangtralaiFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Sophieugiao. </summary>
+		Sophieugiao,
+		///<summary>Ngaygiao. </summary>
+		Ngaygiao,
+		///<summary>Madon. </summary>
+		Madon,
+		///<summary>Makhach. </summary>
+		Makhach,
+		///<summary>Tenkhach. </summary>
+		Tenkhach,
+		///<summary>Ngaydat. </summary>
+		Ngaydat,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tenhang. </summary>
+		Tenhang,
+		///<summary>Soluonggiao. </summary>
+		Soluonggiao,
+		///<summary>Soluongtralai. </summary>
+		Soluongtralai,
+		///<summary>Ngaytra. </summary>
+		Ngaytra,
+		///<summary>Nguyennhan. </summary>
+		Nguyennhan,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -529,6 +891,90 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: PhieugiaohangD.
+	/// </summary>
+	public enum PhieugiaohangDFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Sophieu. </summary>
+		Sophieu,
+		///<summary>Ngaygiao. </summary>
+		Ngaygiao,
+		///<summary>Madon. </summary>
+		Madon,
+		///<summary>DonchitietId. </summary>
+		DonchitietId,
+		///<summary>Ngaydat. </summary>
+		Ngaydat,
+		///<summary>Makhach. </summary>
+		Makhach,
+		///<summary>Tenkhach. </summary>
+		Tenkhach,
+		///<summary>Loaihang. </summary>
+		Loaihang,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tenhang. </summary>
+		Tenhang,
+		///<summary>Soluong. </summary>
+		Soluong,
+		///<summary>Dongia. </summary>
+		Dongia,
+		///<summary>Thanhtien. </summary>
+		Thanhtien,
+		///<summary>Ghichu. </summary>
+		Ghichu,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: PhieugiaohangH.
+	/// </summary>
+	public enum PhieugiaohangHFieldIndex:int
+	{
+		///<summary>Sophieu. </summary>
+		Sophieu,
+		///<summary>Ngaygiao. </summary>
+		Ngaygiao,
+		///<summary>Madon. </summary>
+		Madon,
+		///<summary>Ngaydat. </summary>
+		Ngaydat,
+		///<summary>Makhach. </summary>
+		Makhach,
+		///<summary>Tenkhach. </summary>
+		Tenkhach,
+		///<summary>Tongtien. </summary>
+		Tongtien,
+		///<summary>Vat. </summary>
+		Vat,
+		///<summary>Ghichu. </summary>
+		Ghichu,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Roles.
 	/// </summary>
 	public enum RolesFieldIndex:int
@@ -573,6 +1019,36 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Thanhphanmau.
+	/// </summary>
+	public enum ThanhphanmauFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Mamau. </summary>
+		Mamau,
+		///<summary>Tenmau. </summary>
+		Tenmau,
+		///<summary>Mausudung. </summary>
+		Mausudung,
+		///<summary>Tenmausudung. </summary>
+		Tenmausudung,
+		///<summary>Tyle. </summary>
+		Tyle,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Users.
 	/// </summary>
 	public enum UsersFieldIndex:int
@@ -606,6 +1082,10 @@ namespace GD.BBPH.DAL
 	/// </summary>
 	public enum EntityType:int
 	{
+		///<summary>BaogiaD</summary>
+		BaogiaDEntity,
+		///<summary>BaogiaH</summary>
+		BaogiaHEntity,
 		///<summary>Congsuatmay</summary>
 		CongsuatmayEntity,
 		///<summary>CtptmangD</summary>
@@ -648,16 +1128,28 @@ namespace GD.BBPH.DAL
 		DmquycachEntity,
 		///<summary>Dmtaikhoan</summary>
 		DmtaikhoanEntity,
+		///<summary>DonhangD</summary>
+		DonhangDEntity,
+		///<summary>DonhangH</summary>
+		DonhangHEntity,
+		///<summary>Hangtralai</summary>
+		HangtralaiEntity,
 		///<summary>Logbackup</summary>
 		LogbackupEntity,
 		///<summary>Menu</summary>
 		MenuEntity,
 		///<summary>Menurole</summary>
 		MenuroleEntity,
+		///<summary>PhieugiaohangD</summary>
+		PhieugiaohangDEntity,
+		///<summary>PhieugiaohangH</summary>
+		PhieugiaohangHEntity,
 		///<summary>Roles</summary>
 		RolesEntity,
 		///<summary>Thamso</summary>
 		ThamsoEntity,
+		///<summary>Thanhphanmau</summary>
+		ThanhphanmauEntity,
 		///<summary>Users</summary>
 		UsersEntity
 	}
