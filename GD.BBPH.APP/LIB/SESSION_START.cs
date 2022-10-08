@@ -295,6 +295,32 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region DMMAU
+        private static DataTable _DT_DMMAU = null;
+        public static DataTable DT_DMMAU
+        {
+            get
+            {
+                _DT_DMMAU = new DmmauManager().SelectAllRDT();
+                return _DT_DMMAU;
+            }
+            set { _DT_DMMAU = value; }
+        }
+        #endregion
+
+        #region TPMAU
+        private static DataTable _DT_TPMAU = null;
+        public static DataTable DT_TPMAU
+        {
+            get
+            {
+                _DT_TPMAU = new ThanhphanmauManager().SelectAllRDT();
+                return _DT_TPMAU;
+            }
+            set { _DT_TPMAU = value; }
+        }
+        #endregion
+
         #region HANG
         private static DataTable _DT_HANG = null;
         public static DataTable DM_HANG

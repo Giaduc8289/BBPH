@@ -100,7 +100,7 @@ namespace GD.BBPH.APP.DANHMUC
             DataTable dt111 = _CtptmangHManager.Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_CTPTMANG.xml");
             CtptmangDManager _CtptmangDManager = new CtptmangDManager();
-            dt111 = _CtptmangHManager.Clone();
+            dt111 = _CtptmangDManager.Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_CTPTMANGCHITIET.xml");
 
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
