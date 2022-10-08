@@ -134,6 +134,7 @@
     </Compile>
     <Compile Include="BANHANG\FRM_DONHANG.designer.cs">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
+    </Compile>
     <Compile Include="BANHANG\FRM_HANGTRALAI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,6 +370,7 @@
     </Compile>
     <EmbeddedResource Include="BANHANG\FRM_DONHANG.resx">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BANHANG\FRM_HANGTRALAI.resx">
       <DependentUpon>FRM_HANGTRALAI.cs</DependentUpon>
     </EmbeddedResource>
