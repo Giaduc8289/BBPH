@@ -48,6 +48,10 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAQC = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_TENCD = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label3 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_TENQCCHA = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label4 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -68,7 +72,7 @@
             // 
             this.uiPanelManager1.BeginPanelInfo();
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(471, 542), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(397, 542), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(722, 542), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -99,12 +103,16 @@
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(474, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(397, 542);
+            this.uiPanel1.Size = new System.Drawing.Size(722, 542);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_TENQCCHA);
+            this.uiPanel1Container.Controls.Add(this.label4);
+            this.uiPanel1Container.Controls.Add(this.txt_TENCD);
+            this.uiPanel1Container.Controls.Add(this.label3);
             this.uiPanel1Container.Controls.Add(this.txt_MAQCCHA);
             this.uiPanel1Container.Controls.Add(this.label2);
             this.uiPanel1Container.Controls.Add(this.txt_MACD);
@@ -121,7 +129,7 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(395, 518);
+            this.uiPanel1Container.Size = new System.Drawing.Size(720, 518);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // txt_MAQCCHA
@@ -137,6 +145,7 @@
             this.txt_MAQCCHA.Regular_Expression = null;
             this.txt_MAQCCHA.Size = new System.Drawing.Size(138, 20);
             this.txt_MAQCCHA.TabIndex = 123;
+            this.txt_MAQCCHA.Validating += new System.ComponentModel.CancelEventHandler(this.txt_QCCHA_Validating);
             // 
             // label2
             // 
@@ -295,11 +304,57 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã quy cách";
             // 
+            // txt_TENCD
+            // 
+            this.txt_TENCD.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TENCD.BannerText = null;
+            this.txt_TENCD.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TENCD.FormNametoShow = "";
+            this.txt_TENCD.Is_DateTime = false;
+            this.txt_TENCD.IsShowForm = false;
+            this.txt_TENCD.Location = new System.Drawing.Point(410, 82);
+            this.txt_TENCD.Name = "txt_TENCD";
+            this.txt_TENCD.Regular_Expression = null;
+            this.txt_TENCD.Size = new System.Drawing.Size(138, 20);
+            this.txt_TENCD.TabIndex = 125;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(289, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 126;
+            this.label3.Text = "Tên công đoạn";
+            // 
+            // txt_TENQCCHA
+            // 
+            this.txt_TENQCCHA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TENQCCHA.BannerText = null;
+            this.txt_TENQCCHA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TENQCCHA.FormNametoShow = "";
+            this.txt_TENQCCHA.Is_DateTime = false;
+            this.txt_TENQCCHA.IsShowForm = false;
+            this.txt_TENQCCHA.Location = new System.Drawing.Point(410, 117);
+            this.txt_TENQCCHA.Name = "txt_TENQCCHA";
+            this.txt_TENQCCHA.Regular_Expression = null;
+            this.txt_TENQCCHA.Size = new System.Drawing.Size(138, 20);
+            this.txt_TENQCCHA.TabIndex = 127;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(289, 120);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 13);
+            this.label4.TabIndex = 128;
+            this.label4.Text = "Tên quy cách cha";
+            // 
             // FRM_DMQUYCACH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 548);
+            this.ClientSize = new System.Drawing.Size(1199, 548);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -338,5 +393,9 @@
         protected internal CONTROL.LABEL label1;
         protected internal CONTROL.TEXTBOX txt_MAQCCHA;
         protected internal CONTROL.LABEL label2;
+        protected internal CONTROL.TEXTBOX txt_TENQCCHA;
+        protected internal CONTROL.LABEL label4;
+        protected internal CONTROL.TEXTBOX txt_TENCD;
+        protected internal CONTROL.LABEL label3;
     }
 }
