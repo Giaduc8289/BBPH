@@ -59,6 +59,28 @@ namespace GD.BBPH.APP.LIB
             set { _TS_NGAYCUOITHANG = value; }
         }
         #endregion
+        #region NGAYDAUNAM
+        private static DateTime _TS_NGAYDAUNAM = DateTime.Now;
+        public static DateTime TS_NGAYDAUNAM
+        {
+            get
+            {
+                return _TS_NGAYDAUNAM;
+            }
+            set { _TS_NGAYDAUNAM = value; }
+        }
+        #endregion
+        #region NGAYCUOINAM
+        private static DateTime _TS_NGAYCUOINAM = DateTime.Now;
+        public static DateTime TS_NGAYCUOINAM
+        {
+            get
+            {
+                return _TS_NGAYCUOINAM;
+            }
+            set { _TS_NGAYCUOINAM = value; }
+        }
+        #endregion
         //#region GIOLAMVIEC
         //private static Decimal _TS_GIOLAMVIEC = Convert.ToDecimal(Procedures.Laygiatrithamso("Sogiolamviec"));
         //public static Decimal TS_GIOLAMVIEC
@@ -346,5 +368,32 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMCHUCVU = value; }
         }
         #endregion
+
+        #region DONHANG_H
+        private static DataTable _DT_DONHANG_H = null;
+        public static DataTable DT_DONHANG_H
+        {
+            get
+            {
+                _DT_DONHANG_H = new DonhangHManager().SelectAllRDT();
+                return _DT_DONHANG_H;
+            }
+            set { _DT_DONHANG_H = value; }
+        }
+        #endregion
+
+        #region DONHANG_D
+        private static DataTable _DT_DONHANG_D = null;
+        public static DataTable DT_DONHANG_D
+        {
+            get
+            {
+                _DT_DONHANG_D = new DonhangDManager().SelectAllRDT();
+                return _DT_DONHANG_D;
+            }
+            set { _DT_DONHANG_D = value; }
+        }
+        #endregion
+
     }
 }

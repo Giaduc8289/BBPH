@@ -27,5 +27,29 @@ namespace GD.BBPH.BLL
 		{
 			// Nothing for now.
 		}
-	}
+
+        public DataTable SelectPhongbanChuanghi(string[] arrPhongban)
+        {
+            DataTable toReturn = new DataTable();
+            EntityCollection _DmcongnhanCollection = new EntityCollection(new DmcongnhanEntityFactory());
+
+            RelationPredicateBucket filter = new RelationPredicateBucket();
+            IPredicateExpression _PredicateExpression = new PredicateExpression();
+            if (arrPhongban.Length > 0)
+            {
+                _PredicateExpression.Add(DmcongnhanFields.Mabp == arrPhongban[0]);
+                for (int i = 1; i < arrPhongban.Length; i++)
+                    _PredicateExpression.AddWithOr(DmcongnhanFields.Mabp == arrPhongban[i]);
+            }
+            filter.PredicateExpression.Add(_PredicateExpression);
+            filter.PredicateExpression.AddWithAnd(DmcongnhanFields.Danghi == 0);
+
+            using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+            {
+                adapter.FetchTypedList(_DmcongnhanCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+            }
+            return toReturn;
+        }
+
+    }
 }
