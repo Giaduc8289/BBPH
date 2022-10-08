@@ -29,10 +29,29 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
+  
   <viewgrid>
-    <value>1</value>
-    <name>Manhom</name>
-    <headerText>Manhom</headerText>
+    <value>2</value>
+    <name>Id</name>
+    <headerText>Id</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Mamau</name>
+    <headerText>Mamau</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Tenmau</name>
+    <headerText>Tenmau</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -40,8 +59,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tennhomnguyenlieu</name>
-    <headerText>Tennhomnguyenlieu</headerText>
+    <name>Mausudung</name>
+    <headerText>Màu sử dụng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -49,15 +68,60 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tenrutgon</name>
-    <headerText>Tenrutgon</headerText>
+    <name>Tenmausudung</name>
+    <headerText>Tên màu sử dụng</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>150</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tyle</name>
+    <headerText>Tỷ lệ</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>60</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Ngaytao</name>
+    <headerText>Ngaytao</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Nguoitao</name>
+    <headerText>Nguoitao</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Ngaysua</name>
+    <headerText>Ngaysua</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Nguoisua</name>
+    <headerText>Nguoisua</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>
-    <name>dmnhomnguyenlieu</name>
-    <headerText>Danh sách nhóm nguyên liệu</headerText>
+    <name>Thanhphanmau</name>
+    <headerText>Danh sách thành phần màu</headerText>
   </tablename>
 </NewDataSet>

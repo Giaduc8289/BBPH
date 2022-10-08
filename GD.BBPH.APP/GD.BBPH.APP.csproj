@@ -134,6 +134,11 @@
     </Compile>
     <Compile Include="BANHANG\FRM_DONHANG.designer.cs">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
+    <Compile Include="DANHMUC\FRM_DMMAU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMMAU.designer.cs">
+      <DependentUpon>FRM_DMMAU.cs</DependentUpon>
     </Compile>
     <Compile Include="DANHMUC\FRM_CTPTMANG.cs">
       <SubType>Form</SubType>
@@ -352,6 +357,8 @@
     </Compile>
     <EmbeddedResource Include="BANHANG\FRM_DONHANG.resx">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
+    <EmbeddedResource Include="DANHMUC\FRM_DMMAU.resx">
+      <DependentUpon>FRM_DMMAU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_CTPTMANG.resx">
       <DependentUpon>FRM_CTPTMANG.cs</DependentUpon>
@@ -827,16 +834,21 @@
     <Content Include="XMLCONFIG\FRM_DMDONGMAYIN.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAYPE.xml" />
     <Content Include="XMLCONFIG\FRM_DMBOPHAN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAIVATTUPHU.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAIPHE.xml" />
     <Content Include="XMLCONFIG\FRM_DMMANG.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAU_CHON.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAU.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAUIN.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAYHT.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAYHOANTHIEN.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAYSOI_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAYPE.xml" />
     <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU.xml" />
-    <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="XMLCONFIG\FRM_DMPE.xml" />
     <Content Include="XMLCONFIG\FRM_DMPE_TIM.xml" />
     <Content Include="XMLCONFIG\FRM_DMPHE.xml" />
@@ -866,6 +878,7 @@
     <Content Include="XMLCONFIG\FRM_NHAPKHOPHECHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="XMLCONFIG\FRM_TPMAU.xml" />
     <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOA.xml" />
     <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOACHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_XUATKHOMANG.xml" />
@@ -1034,7 +1047,6 @@
     <Content Include="XMLCONFIG\FRM_DMCSMAYSOI.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAYDET.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAYSOI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMHINHTHUC.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHO.xml" />

@@ -138,7 +138,8 @@ namespace GD.BBPH.APP.DANHMUC
             DmnguyenlieuEntity _DmnguyenlieuEntity = new DmnguyenlieuEntity();
             _DmnguyenlieuEntity.Manl = txt_MAHIEU.Text.Trim();
             _DmnguyenlieuEntity.Tenrutgon = txt_TENHIEU.Text.Trim();
-            _DmnguyenlieuEntity.Manhom = txt_MAHIEU.Text.Trim();
+            _DmnguyenlieuEntity.Manhom = txt_MANHOM.Text.Trim();
+            _DmnguyenlieuEntity.Tennhom = txt_TENNHOM.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _DmnguyenlieuEntity.Ngaytao = DateTime.Now;
@@ -153,8 +154,9 @@ namespace GD.BBPH.APP.DANHMUC
                 _DmnguyenlieuEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DmnguyenlieuManager.Update(_DmnguyenlieuEntity);
                 GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Manl.Name].Value = _DmnguyenlieuEntity.Manl;
-                GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Manhom.Name].Value = _DmnguyenlieuEntity.Manhom;
                 GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tenrutgon.Name].Value = _DmnguyenlieuEntity.Tenrutgon;
+                GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Manhom.Name].Value = _DmnguyenlieuEntity.Manhom;
+                GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tennhom.Name].Value = _DmnguyenlieuEntity.Tennhom;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnguyenlieuManager.Convert(_DmnguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;
@@ -264,7 +266,7 @@ namespace GD.BBPH.APP.DANHMUC
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MANHOM.Text.Trim()) || DT_DMNHOMNGUYENLIEU == null || DT_DMNHOMNGUYENLIEU.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MANHOM.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaNhomnguyenlieu(Str_MASIEUTHI, DT_DMNGUYENLIEU);
+            _RowViewSelect = checkmaNhomnguyenlieu(Str_MASIEUTHI, DT_DMNHOMNGUYENLIEU);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =

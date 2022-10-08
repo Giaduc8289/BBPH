@@ -307,7 +307,7 @@ namespace GD.BBPH.APP.DANHMUC
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_CTPT_H_TK.xml",
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_CTPTMANG.xml",
                         DT_CTPT, CtptmangHFields.Mactpt.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
@@ -317,6 +317,7 @@ namespace GD.BBPH.APP.DANHMUC
             }
             else
                 txt_TENCTPT.Text = _RowViewSelect[CtptmangHFields.Tenctpt.Name].ToString();
+
         }
         private DataRow checkmaCtpt(string masieuthi, DataTable dt)
         {
