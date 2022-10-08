@@ -134,6 +134,18 @@
     </Compile>
     <Compile Include="BANHANG\FRM_DONHANG.designer.cs">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
+    <Compile Include="BANHANG\FRM_HANGTRALAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANHANG\FRM_HANGTRALAI.designer.cs">
+      <DependentUpon>FRM_HANGTRALAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_REPORTVIEWER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_REPORTVIEWER.designer.cs">
+      <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMMAU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +369,12 @@
     </Compile>
     <EmbeddedResource Include="BANHANG\FRM_DONHANG.resx">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
+    <EmbeddedResource Include="BANHANG\FRM_HANGTRALAI.resx">
+      <DependentUpon>FRM_HANGTRALAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
+      <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMMAU.resx">
       <DependentUpon>FRM_DMMAU.cs</DependentUpon>
     </EmbeddedResource>
@@ -854,6 +872,7 @@
     <Content Include="XMLCONFIG\FRM_DMPHE.xml" />
     <Content Include="XMLCONFIG\FRM_DMQUYCACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMVATTUPHU.xml" />
+    <Content Include="XMLCONFIG\FRM_HANGTRALAI.xml" />
     <Content Include="XMLCONFIG\FRM_KHTRANG_EDIT_FIND.xml" />
     <Content Include="XMLCONFIG\FRM_KHTRANG_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEHTCHITIET.xml">

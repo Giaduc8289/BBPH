@@ -421,5 +421,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+
+        #region HANGTRALAI
+        private static DataTable _DT_HANGTRALAI = null;
+        public static DataTable DT_HANGTRALAI
+        {
+            get
+            {
+                _DT_HANGTRALAI = new HangtralaiManager().SelectAllRDT();
+                return _DT_HANGTRALAI;
+            }
+            set { _DT_HANGTRALAI = value; }
+        }
+        #endregion
+
     }
 }
