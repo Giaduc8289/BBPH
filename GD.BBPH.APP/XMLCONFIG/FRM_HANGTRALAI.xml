@@ -29,8 +29,9 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
+  
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Id</name>
     <headerText>Id</headerText>
     <BackColor>0</BackColor>
@@ -147,7 +148,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaytao</name>
     <headerText>Ngày tạo</headerText>
     <BackColor>0</BackColor>
@@ -156,7 +157,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoitao</name>
     <headerText>Người tạo</headerText>
     <BackColor>0</BackColor>
@@ -165,7 +166,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaysua</name>
     <headerText>Ngày sửa</headerText>
     <BackColor>0</BackColor>
@@ -174,7 +175,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoisua</name>
     <headerText>Người sửa</headerText>
     <BackColor>0</BackColor>

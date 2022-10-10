@@ -62,8 +62,6 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_Sophieugiao = new GD.BBPH.CONTROL.TEXTBOX();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_MAHIEU = new GD.BBPH.CONTROL.TEXTBOX();
-            this.label22 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -149,8 +147,6 @@
             this.uiPanel1Container.Controls.Add(this.btn_SUA);
             this.uiPanel1Container.Controls.Add(this.txt_Sophieugiao);
             this.uiPanel1Container.Controls.Add(this.label21);
-            this.uiPanel1Container.Controls.Add(this.txt_MAHIEU);
-            this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(618, 535);
@@ -494,29 +490,6 @@
             this.label21.TabIndex = 120;
             this.label21.Text = "Số phiếu giao";
             // 
-            // txt_MAHIEU
-            // 
-            this.txt_MAHIEU.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MAHIEU.BannerText = null;
-            this.txt_MAHIEU.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_MAHIEU.FormNametoShow = "";
-            this.txt_MAHIEU.Is_DateTime = false;
-            this.txt_MAHIEU.IsShowForm = false;
-            this.txt_MAHIEU.Location = new System.Drawing.Point(142, 24);
-            this.txt_MAHIEU.Name = "txt_MAHIEU";
-            this.txt_MAHIEU.Regular_Expression = null;
-            this.txt_MAHIEU.Size = new System.Drawing.Size(138, 20);
-            this.txt_MAHIEU.TabIndex = 0;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(39, 27);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(34, 13);
-            this.label22.TabIndex = 119;
-            this.label22.Text = "Mã Id";
-            // 
             // FRM_HANGTRALAI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -548,8 +521,6 @@
         private Janus.Windows.UI.Dock.UIPanelInnerContainer uiPanel1Container;
         private GD.BBPH.CONTROL.TEXTBOX txt_Sophieugiao;
         private GD.BBPH.CONTROL.LABEL label21;
-        private GD.BBPH.CONTROL.TEXTBOX txt_MAHIEU;
-        private GD.BBPH.CONTROL.LABEL label22;
         private GD.BBPH.CONTROL.BUTTON btn_KHOIPHUC;
         private GD.BBPH.CONTROL.BUTTON btn_LUULAI;
         private GD.BBPH.CONTROL.BUTTON btn_XOA;
