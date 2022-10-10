@@ -335,27 +335,27 @@ namespace GD.BBPH.APP.BANHANG
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_Masp.Text.Trim()) || DT_HANG == null || DT_HANG.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_Masp.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaCtpt(Str_MASIEUTHI, DT_HANG);
+            _RowViewSelect = checkMasp(Str_MASIEUTHI, DT_HANG);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_HANG.xml",
-                        DT_HANG, CtptmangHFields.Mactpt.Name, Str_MASIEUTHI);
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml",
+                        DT_HANG, DmhangFields.Masp.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_Masp.Text = _RowViewSelect[CtptmangHFields.Mactpt.Name].ToString();
-                txt_Tenhang.Text = _RowViewSelect[CtptmangHFields.Tenctpt.Name].ToString();
+                txt_Masp.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
+                txt_Tenhang.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
             }
             else
-                txt_Tenhang.Text = _RowViewSelect[CtptmangHFields.Tenctpt.Name].ToString();
+                txt_Tenhang.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
 
         }
-        private DataRow checkmaCtpt(string masieuthi, DataTable dt)
+        private DataRow checkMasp(string masieuthi, DataTable dt)
         {
             try
             {
-                return dt.Select(CtptmangHFields.Mactpt.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+                return dt.Select(DmhangFields.Masp.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
         }
