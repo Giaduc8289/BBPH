@@ -38,7 +38,6 @@
             this.label5 = new GD.BBPH.CONTROL.LABEL();
             this.chk_TRUYENTHONG = new System.Windows.Forms.CheckBox();
             this.txt_EMAIL = new GD.BBPH.CONTROL.TEXTBOX();
-            this.label4 = new GD.BBPH.CONTROL.LABEL();
             this.txt_SODIENTHOAI = new GD.BBPH.CONTROL.TEXTBOX();
             this.label3 = new GD.BBPH.CONTROL.LABEL();
             this.txt_NGUOILH = new GD.BBPH.CONTROL.TEXTBOX();
@@ -116,7 +115,6 @@
             this.uiPanel1Container.Controls.Add(this.label5);
             this.uiPanel1Container.Controls.Add(this.chk_TRUYENTHONG);
             this.uiPanel1Container.Controls.Add(this.txt_EMAIL);
-            this.uiPanel1Container.Controls.Add(this.label4);
             this.uiPanel1Container.Controls.Add(this.txt_SODIENTHOAI);
             this.uiPanel1Container.Controls.Add(this.label3);
             this.uiPanel1Container.Controls.Add(this.txt_NGUOILH);
@@ -186,14 +184,6 @@
             this.txt_EMAIL.Regular_Expression = null;
             this.txt_EMAIL.Size = new System.Drawing.Size(176, 20);
             this.txt_EMAIL.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 19);
-            this.label4.TabIndex = 7;
             // 
             // txt_SODIENTHOAI
             // 
@@ -388,7 +378,7 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã khách hàng";
             // 
-            // FRM_DMBOPHAN
+            // FRM_DMKHACH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -396,7 +386,7 @@
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FRM_DMBOPHAN";
+            this.Name = "FRM_DMKHACH";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DMKHACH_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).EndInit();
@@ -428,7 +418,6 @@
         private GD.BBPH.CONTROL.BUTTON btn_SUA;
         private GD.BBPH.CONTROL.BUTTON btn_Thoat;
         private CONTROL.TEXTBOX txt_EMAIL;
-        private CONTROL.LABEL label4;
         private CONTROL.TEXTBOX txt_SODIENTHOAI;
         private CONTROL.LABEL label3;
         private CONTROL.TEXTBOX txt_NGUOILH;
