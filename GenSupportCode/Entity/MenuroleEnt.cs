@@ -50,8 +50,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			MenuroleEntity _menuroleEntity = new MenuroleEntity();
 			
-			_menurole.Menuid = txt_Menuid.Text.Trim();
-			_menurole.Rolesid = txt_Rolesid.Text.Trim();
+			_menuroleEntity.Menuid = txt_Menuid.Text.Trim();
+			_menuroleEntity.Rolesid = txt_Rolesid.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

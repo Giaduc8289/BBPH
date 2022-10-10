@@ -52,10 +52,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			LogbackupEntity _logbackupEntity = new LogbackupEntity();
 			
-			_logbackup.Mahieu = txt_Mahieu.Text.Trim();
-			_logbackup.Nam = txt_Nam.Text.Trim();
-			_logbackup.Duongdan = txt_Duongdan.Text.Trim();
-			_logbackup.Ngay = txt_Ngay.Text.Trim();
+			_logbackupEntity.Mahieu = txt_Mahieu.Text.Trim();
+			_logbackupEntity.Nam = txt_Nam.Text.Trim();
+			_logbackupEntity.Duongdan = txt_Duongdan.Text.Trim();
+			_logbackupEntity.Ngay = txt_Ngay.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

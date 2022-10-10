@@ -61,19 +61,19 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DonhangHEntity _donhangHEntity = new DonhangHEntity();
 			
-			_donhangH.Madon = txt_Madon.Text.Trim();
-			_donhangH.Ngaydat = txt_Ngaydat.Text.Trim();
-			_donhangH.Makhach = txt_Makhach.Text.Trim();
-			_donhangH.Tenkhach = txt_Tenkhach.Text.Trim();
-			_donhangH.Sobaogia = txt_Sobaogia.Text.Trim();
-			_donhangH.Ngaybaogia = txt_Ngaybaogia.Text.Trim();
-			_donhangH.Userid = txt_Userid.Text.Trim();
-			_donhangH.Tennv = txt_Tennv.Text.Trim();
-			_donhangH.Ghichu = txt_Ghichu.Text.Trim();
-			_donhangH.Ngaytao = txt_Ngaytao.Text.Trim();
-			_donhangH.Nguoitao = txt_Nguoitao.Text.Trim();
-			_donhangH.Ngaysua = txt_Ngaysua.Text.Trim();
-			_donhangH.Nguoisua = txt_Nguoisua.Text.Trim();
+			_donhangHEntity.Madon = txt_Madon.Text.Trim();
+			_donhangHEntity.Ngaydat = txt_Ngaydat.Text.Trim();
+			_donhangHEntity.Makhach = txt_Makhach.Text.Trim();
+			_donhangHEntity.Tenkhach = txt_Tenkhach.Text.Trim();
+			_donhangHEntity.Sobaogia = txt_Sobaogia.Text.Trim();
+			_donhangHEntity.Ngaybaogia = txt_Ngaybaogia.Text.Trim();
+			_donhangHEntity.Userid = txt_Userid.Text.Trim();
+			_donhangHEntity.Tennv = txt_Tennv.Text.Trim();
+			_donhangHEntity.Ghichu = txt_Ghichu.Text.Trim();
+			_donhangHEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_donhangHEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_donhangHEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_donhangHEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

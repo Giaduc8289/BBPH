@@ -57,15 +57,15 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			ThamsoEntity _thamsoEntity = new ThamsoEntity();
 			
-			_thamso.Mahieu = txt_Mahieu.Text.Trim();
-			_thamso.Stt = txt_Stt.Text.Trim();
-			_thamso.Tenthamso = txt_Tenthamso.Text.Trim();
-			_thamso.Giatri = txt_Giatri.Text.Trim();
-			_thamso.Thaydoi = txt_Thaydoi.Text.Trim();
-			_thamso.Kieudulieu = txt_Kieudulieu.Text.Trim();
-			_thamso.Ghichu = txt_Ghichu.Text.Trim();
-			_thamso.Loaithamso = txt_Loaithamso.Text.Trim();
-			_thamso.An = txt_An.Text.Trim();
+			_thamsoEntity.Mahieu = txt_Mahieu.Text.Trim();
+			_thamsoEntity.Stt = txt_Stt.Text.Trim();
+			_thamsoEntity.Tenthamso = txt_Tenthamso.Text.Trim();
+			_thamsoEntity.Giatri = txt_Giatri.Text.Trim();
+			_thamsoEntity.Thaydoi = txt_Thaydoi.Text.Trim();
+			_thamsoEntity.Kieudulieu = txt_Kieudulieu.Text.Trim();
+			_thamsoEntity.Ghichu = txt_Ghichu.Text.Trim();
+			_thamsoEntity.Loaithamso = txt_Loaithamso.Text.Trim();
+			_thamsoEntity.An = txt_An.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

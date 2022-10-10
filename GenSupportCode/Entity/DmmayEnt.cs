@@ -43,6 +43,10 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Tenmay.Text = _Rowview.Row[DmmayFields.Tenmay.Name].ToString();
 					txt_Madm.Text = _Rowview.Row[DmmayFields.Madm.Name].ToString();
 					txt_Vitri.Text = _Rowview.Row[DmmayFields.Vitri.Name].ToString();
+					txt_Ngaytao.Text = _Rowview.Row[DmmayFields.Ngaytao.Name].ToString();
+					txt_Nguoitao.Text = _Rowview.Row[DmmayFields.Nguoitao.Name].ToString();
+					txt_Ngaysua.Text = _Rowview.Row[DmmayFields.Ngaysua.Name].ToString();
+					txt_Nguoisua.Text = _Rowview.Row[DmmayFields.Nguoisua.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmmay_CurrentChanged"); }
@@ -52,10 +56,14 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DmmayEntity _dmmayEntity = new DmmayEntity();
 			
-			_dmmay.Mamay = txt_Mamay.Text.Trim();
-			_dmmay.Tenmay = txt_Tenmay.Text.Trim();
-			_dmmay.Madm = txt_Madm.Text.Trim();
-			_dmmay.Vitri = txt_Vitri.Text.Trim();
+			_dmmayEntity.Mamay = txt_Mamay.Text.Trim();
+			_dmmayEntity.Tenmay = txt_Tenmay.Text.Trim();
+			_dmmayEntity.Madm = txt_Madm.Text.Trim();
+			_dmmayEntity.Vitri = txt_Vitri.Text.Trim();
+			_dmmayEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_dmmayEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_dmmayEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_dmmayEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -71,6 +79,10 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Dmmay.CurrentRow.Cells[DmmayFields.Tenmay.Name].Value = _dmmayEntity.Tenmay;
 				GRID_Dmmay.CurrentRow.Cells[DmmayFields.Madm.Name].Value = _dmmayEntity.Madm;
 				GRID_Dmmay.CurrentRow.Cells[DmmayFields.Vitri.Name].Value = _dmmayEntity.Vitri;
+				GRID_Dmmay.CurrentRow.Cells[DmmayFields.Ngaytao.Name].Value = _dmmayEntity.Ngaytao;
+				GRID_Dmmay.CurrentRow.Cells[DmmayFields.Nguoitao.Name].Value = _dmmayEntity.Nguoitao;
+				GRID_Dmmay.CurrentRow.Cells[DmmayFields.Ngaysua.Name].Value = _dmmayEntity.Ngaysua;
+				GRID_Dmmay.CurrentRow.Cells[DmmayFields.Nguoisua.Name].Value = _dmmayEntity.Nguoisua;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmayManager.Convert(_dmmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Dmmay_PK;

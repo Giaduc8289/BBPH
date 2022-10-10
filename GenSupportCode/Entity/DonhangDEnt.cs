@@ -64,22 +64,22 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DonhangDEntity _donhangDEntity = new DonhangDEntity();
 			
-			_donhangD.Id = txt_Id.Text.Trim();
-			_donhangD.Madon = txt_Madon.Text.Trim();
-			_donhangD.Ngaydat = txt_Ngaydat.Text.Trim();
-			_donhangD.Makhach = txt_Makhach.Text.Trim();
-			_donhangD.Sobaogia = txt_Sobaogia.Text.Trim();
-			_donhangD.Loaihang = txt_Loaihang.Text.Trim();
-			_donhangD.Masp = txt_Masp.Text.Trim();
-			_donhangD.Tenhang = txt_Tenhang.Text.Trim();
-			_donhangD.Soluong = txt_Soluong.Text.Trim();
-			_donhangD.Dongia = txt_Dongia.Text.Trim();
-			_donhangD.Ngaygiao = txt_Ngaygiao.Text.Trim();
-			_donhangD.Ghichu = txt_Ghichu.Text.Trim();
-			_donhangD.Ngaytao = txt_Ngaytao.Text.Trim();
-			_donhangD.Nguoitao = txt_Nguoitao.Text.Trim();
-			_donhangD.Ngaysua = txt_Ngaysua.Text.Trim();
-			_donhangD.Nguoisua = txt_Nguoisua.Text.Trim();
+			_donhangDEntity.Id = txt_Id.Text.Trim();
+			_donhangDEntity.Madon = txt_Madon.Text.Trim();
+			_donhangDEntity.Ngaydat = txt_Ngaydat.Text.Trim();
+			_donhangDEntity.Makhach = txt_Makhach.Text.Trim();
+			_donhangDEntity.Sobaogia = txt_Sobaogia.Text.Trim();
+			_donhangDEntity.Loaihang = txt_Loaihang.Text.Trim();
+			_donhangDEntity.Masp = txt_Masp.Text.Trim();
+			_donhangDEntity.Tenhang = txt_Tenhang.Text.Trim();
+			_donhangDEntity.Soluong = txt_Soluong.Text.Trim();
+			_donhangDEntity.Dongia = txt_Dongia.Text.Trim();
+			_donhangDEntity.Ngaygiao = txt_Ngaygiao.Text.Trim();
+			_donhangDEntity.Ghichu = txt_Ghichu.Text.Trim();
+			_donhangDEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_donhangDEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_donhangDEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_donhangDEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

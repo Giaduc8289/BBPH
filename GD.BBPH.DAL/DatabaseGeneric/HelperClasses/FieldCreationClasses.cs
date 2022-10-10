@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
+// Code is generated on: Monday, October 10, 2022 10:24:37 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -642,6 +642,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Tensp);}
 		}
+		/// <summary>Creates a new DmhangEntity.Maspcuakhach field instance</summary>
+		public static EntityField2 Maspcuakhach
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Maspcuakhach);}
+		}
 		/// <summary>Creates a new DmhangEntity.Makhach field instance</summary>
 		public static EntityField2 Makhach
 		{
@@ -657,20 +662,15 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Kichthuoc);}
 		}
-		/// <summary>Creates a new DmhangEntity.Khoiluongmuc field instance</summary>
-		public static EntityField2 Khoiluongmuc
+		/// <summary>Creates a new DmhangEntity.Trongluong field instance</summary>
+		public static EntityField2 Trongluong
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Khoiluongmuc);}
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Trongluong);}
 		}
 		/// <summary>Creates a new DmhangEntity.Sohinh field instance</summary>
 		public static EntityField2 Sohinh
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Sohinh);}
-		}
-		/// <summary>Creates a new DmhangEntity.Cautrucin field instance</summary>
-		public static EntityField2 Cautrucin
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Cautrucin);}
 		}
 		/// <summary>Creates a new DmhangEntity.Somau field instance</summary>
 		public static EntityField2 Somau
@@ -682,6 +682,61 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Loaimuc);}
 		}
+		/// <summary>Creates a new DmhangEntity.Khoiluongmuc field instance</summary>
+		public static EntityField2 Khoiluongmuc
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Khoiluongmuc);}
+		}
+		/// <summary>Creates a new DmhangEntity.Cautrucin field instance</summary>
+		public static EntityField2 Cautrucin
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Cautrucin);}
+		}
+		/// <summary>Creates a new DmhangEntity.Mamang1 field instance</summary>
+		public static EntityField2 Mamang1
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Mamang1);}
+		}
+		/// <summary>Creates a new DmhangEntity.Tenmang1 field instance</summary>
+		public static EntityField2 Tenmang1
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Tenmang1);}
+		}
+		/// <summary>Creates a new DmhangEntity.Tlmanglop1 field instance</summary>
+		public static EntityField2 Tlmanglop1
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Tlmanglop1);}
+		}
+		/// <summary>Creates a new DmhangEntity.Tlkeolop1 field instance</summary>
+		public static EntityField2 Tlkeolop1
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Tlkeolop1);}
+		}
+		/// <summary>Creates a new DmhangEntity.Mamang2 field instance</summary>
+		public static EntityField2 Mamang2
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Mamang2);}
+		}
+		/// <summary>Creates a new DmhangEntity.Tenmang2 field instance</summary>
+		public static EntityField2 Tenmang2
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Tenmang2);}
+		}
+		/// <summary>Creates a new DmhangEntity.Tlmanglop2 field instance</summary>
+		public static EntityField2 Tlmanglop2
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Tlmanglop2);}
+		}
+		/// <summary>Creates a new DmhangEntity.Tlkeolop2 field instance</summary>
+		public static EntityField2 Tlkeolop2
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Tlkeolop2);}
+		}
+		/// <summary>Creates a new DmhangEntity.Dinhluongkeo field instance</summary>
+		public static EntityField2 Dinhluongkeo
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Dinhluongkeo);}
+		}
 		/// <summary>Creates a new DmhangEntity.Kichthuoctruc field instance</summary>
 		public static EntityField2 Kichthuoctruc
 		{
@@ -692,15 +747,35 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Vitri);}
 		}
-		/// <summary>Creates a new DmhangEntity.Quycachdonggoi field instance</summary>
-		public static EntityField2 Quycachdonggoi
+		/// <summary>Creates a new DmhangEntity.Maqcdonggoi field instance</summary>
+		public static EntityField2 Maqcdonggoi
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Quycachdonggoi);}
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Maqcdonggoi);}
 		}
-		/// <summary>Creates a new DmhangEntity.Loaithung field instance</summary>
-		public static EntityField2 Loaithung
+		/// <summary>Creates a new DmhangEntity.Tenqcdonggoi field instance</summary>
+		public static EntityField2 Tenqcdonggoi
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Loaithung);}
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Tenqcdonggoi);}
+		}
+		/// <summary>Creates a new DmhangEntity.Maqcloaithung field instance</summary>
+		public static EntityField2 Maqcloaithung
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Maqcloaithung);}
+		}
+		/// <summary>Creates a new DmhangEntity.Tenqcloaithung field instance</summary>
+		public static EntityField2 Tenqcloaithung
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Tenqcloaithung);}
+		}
+		/// <summary>Creates a new DmhangEntity.Maqcthanhpham field instance</summary>
+		public static EntityField2 Maqcthanhpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Maqcthanhpham);}
+		}
+		/// <summary>Creates a new DmhangEntity.Tenqcthanhpham field instance</summary>
+		public static EntityField2 Tenqcthanhpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Tenqcthanhpham);}
 		}
 		/// <summary>Creates a new DmhangEntity.Ngaytao field instance</summary>
 		public static EntityField2 Ngaytao
@@ -1554,6 +1629,61 @@ namespace GD.BBPH.DAL.HelperClasses
 		}
 	}
 
+	/// <summary>Field Creation Class for entity MaucuahangEntity</summary>
+	public partial class MaucuahangFields
+	{
+		/// <summary>Creates a new MaucuahangEntity.Id field instance</summary>
+		public static EntityField2 Id
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Id);}
+		}
+		/// <summary>Creates a new MaucuahangEntity.Masp field instance</summary>
+		public static EntityField2 Masp
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Masp);}
+		}
+		/// <summary>Creates a new MaucuahangEntity.Tensp field instance</summary>
+		public static EntityField2 Tensp
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Tensp);}
+		}
+		/// <summary>Creates a new MaucuahangEntity.Mamau field instance</summary>
+		public static EntityField2 Mamau
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Mamau);}
+		}
+		/// <summary>Creates a new MaucuahangEntity.Tenmau field instance</summary>
+		public static EntityField2 Tenmau
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Tenmau);}
+		}
+		/// <summary>Creates a new MaucuahangEntity.Klmau field instance</summary>
+		public static EntityField2 Klmau
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Klmau);}
+		}
+		/// <summary>Creates a new MaucuahangEntity.Ngaytao field instance</summary>
+		public static EntityField2 Ngaytao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Ngaytao);}
+		}
+		/// <summary>Creates a new MaucuahangEntity.Nguoitao field instance</summary>
+		public static EntityField2 Nguoitao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Nguoitao);}
+		}
+		/// <summary>Creates a new MaucuahangEntity.Ngaysua field instance</summary>
+		public static EntityField2 Ngaysua
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Ngaysua);}
+		}
+		/// <summary>Creates a new MaucuahangEntity.Nguoisua field instance</summary>
+		public static EntityField2 Nguoisua
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Nguoisua);}
+		}
+	}
+
 	/// <summary>Field Creation Class for entity MenuEntity</summary>
 	public partial class MenuFields
 	{
@@ -1921,6 +2051,56 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(ThanhphanmauFieldIndex.Nguoisua);}
+		}
+	}
+
+	/// <summary>Field Creation Class for entity TruccuahangEntity</summary>
+	public partial class TruccuahangFields
+	{
+		/// <summary>Creates a new TruccuahangEntity.Id field instance</summary>
+		public static EntityField2 Id
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TruccuahangFieldIndex.Id);}
+		}
+		/// <summary>Creates a new TruccuahangEntity.Masp field instance</summary>
+		public static EntityField2 Masp
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TruccuahangFieldIndex.Masp);}
+		}
+		/// <summary>Creates a new TruccuahangEntity.Tensp field instance</summary>
+		public static EntityField2 Tensp
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TruccuahangFieldIndex.Tensp);}
+		}
+		/// <summary>Creates a new TruccuahangEntity.Stttruc field instance</summary>
+		public static EntityField2 Stttruc
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TruccuahangFieldIndex.Stttruc);}
+		}
+		/// <summary>Creates a new TruccuahangEntity.Matruc field instance</summary>
+		public static EntityField2 Matruc
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TruccuahangFieldIndex.Matruc);}
+		}
+		/// <summary>Creates a new TruccuahangEntity.Ngaytao field instance</summary>
+		public static EntityField2 Ngaytao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TruccuahangFieldIndex.Ngaytao);}
+		}
+		/// <summary>Creates a new TruccuahangEntity.Nguoitao field instance</summary>
+		public static EntityField2 Nguoitao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TruccuahangFieldIndex.Nguoitao);}
+		}
+		/// <summary>Creates a new TruccuahangEntity.Ngaysua field instance</summary>
+		public static EntityField2 Ngaysua
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TruccuahangFieldIndex.Ngaysua);}
+		}
+		/// <summary>Creates a new TruccuahangEntity.Nguoisua field instance</summary>
+		public static EntityField2 Nguoisua
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TruccuahangFieldIndex.Nguoisua);}
 		}
 	}
 

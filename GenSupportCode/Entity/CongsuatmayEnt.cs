@@ -56,14 +56,14 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			CongsuatmayEntity _congsuatmayEntity = new CongsuatmayEntity();
 			
-			_congsuatmay.Macs = txt_Macs.Text.Trim();
-			_congsuatmay.Tencongsuat = txt_Tencongsuat.Text.Trim();
-			_congsuatmay.Macd = txt_Macd.Text.Trim();
-			_congsuatmay.Maqc = txt_Maqc.Text.Trim();
-			_congsuatmay.Ngaytao = txt_Ngaytao.Text.Trim();
-			_congsuatmay.Nguoitao = txt_Nguoitao.Text.Trim();
-			_congsuatmay.Ngaysua = txt_Ngaysua.Text.Trim();
-			_congsuatmay.Nguoisua = txt_Nguoisua.Text.Trim();
+			_congsuatmayEntity.Macs = txt_Macs.Text.Trim();
+			_congsuatmayEntity.Tencongsuat = txt_Tencongsuat.Text.Trim();
+			_congsuatmayEntity.Macd = txt_Macd.Text.Trim();
+			_congsuatmayEntity.Maqc = txt_Maqc.Text.Trim();
+			_congsuatmayEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_congsuatmayEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_congsuatmayEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_congsuatmayEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

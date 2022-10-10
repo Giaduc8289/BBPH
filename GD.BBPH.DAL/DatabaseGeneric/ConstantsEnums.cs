@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:15 AM
+// Code is generated on: Monday, October 10, 2022 10:24:35 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -363,30 +363,60 @@ namespace GD.BBPH.DAL
 		Masp,
 		///<summary>Tensp. </summary>
 		Tensp,
+		///<summary>Maspcuakhach. </summary>
+		Maspcuakhach,
 		///<summary>Makhach. </summary>
 		Makhach,
 		///<summary>Tenkhach. </summary>
 		Tenkhach,
 		///<summary>Kichthuoc. </summary>
 		Kichthuoc,
-		///<summary>Khoiluongmuc. </summary>
-		Khoiluongmuc,
+		///<summary>Trongluong. </summary>
+		Trongluong,
 		///<summary>Sohinh. </summary>
 		Sohinh,
-		///<summary>Cautrucin. </summary>
-		Cautrucin,
 		///<summary>Somau. </summary>
 		Somau,
 		///<summary>Loaimuc. </summary>
 		Loaimuc,
+		///<summary>Khoiluongmuc. </summary>
+		Khoiluongmuc,
+		///<summary>Cautrucin. </summary>
+		Cautrucin,
+		///<summary>Mamang1. </summary>
+		Mamang1,
+		///<summary>Tenmang1. </summary>
+		Tenmang1,
+		///<summary>Tlmanglop1. </summary>
+		Tlmanglop1,
+		///<summary>Tlkeolop1. </summary>
+		Tlkeolop1,
+		///<summary>Mamang2. </summary>
+		Mamang2,
+		///<summary>Tenmang2. </summary>
+		Tenmang2,
+		///<summary>Tlmanglop2. </summary>
+		Tlmanglop2,
+		///<summary>Tlkeolop2. </summary>
+		Tlkeolop2,
+		///<summary>Dinhluongkeo. </summary>
+		Dinhluongkeo,
 		///<summary>Kichthuoctruc. </summary>
 		Kichthuoctruc,
 		///<summary>Vitri. </summary>
 		Vitri,
-		///<summary>Quycachdonggoi. </summary>
-		Quycachdonggoi,
-		///<summary>Loaithung. </summary>
-		Loaithung,
+		///<summary>Maqcdonggoi. </summary>
+		Maqcdonggoi,
+		///<summary>Tenqcdonggoi. </summary>
+		Tenqcdonggoi,
+		///<summary>Maqcloaithung. </summary>
+		Maqcloaithung,
+		///<summary>Tenqcloaithung. </summary>
+		Tenqcloaithung,
+		///<summary>Maqcthanhpham. </summary>
+		Maqcthanhpham,
+		///<summary>Tenqcthanhpham. </summary>
+		Tenqcthanhpham,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -845,6 +875,36 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Maucuahang.
+	/// </summary>
+	public enum MaucuahangFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tensp. </summary>
+		Tensp,
+		///<summary>Mamau. </summary>
+		Mamau,
+		///<summary>Tenmau. </summary>
+		Tenmau,
+		///<summary>Klmau. </summary>
+		Klmau,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Menu.
 	/// </summary>
 	public enum MenuFieldIndex:int
@@ -1049,6 +1109,34 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Truccuahang.
+	/// </summary>
+	public enum TruccuahangFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tensp. </summary>
+		Tensp,
+		///<summary>Stttruc. </summary>
+		Stttruc,
+		///<summary>Matruc. </summary>
+		Matruc,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Users.
 	/// </summary>
 	public enum UsersFieldIndex:int
@@ -1136,6 +1224,8 @@ namespace GD.BBPH.DAL
 		HangtralaiEntity,
 		///<summary>Logbackup</summary>
 		LogbackupEntity,
+		///<summary>Maucuahang</summary>
+		MaucuahangEntity,
 		///<summary>Menu</summary>
 		MenuEntity,
 		///<summary>Menurole</summary>
@@ -1150,6 +1240,8 @@ namespace GD.BBPH.DAL
 		ThamsoEntity,
 		///<summary>Thanhphanmau</summary>
 		ThanhphanmauEntity,
+		///<summary>Truccuahang</summary>
+		TruccuahangEntity,
 		///<summary>Users</summary>
 		UsersEntity
 	}

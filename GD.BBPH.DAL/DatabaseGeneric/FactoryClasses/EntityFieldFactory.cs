@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
+// Code is generated on: Monday, October 10, 2022 10:24:37 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -242,6 +242,14 @@ namespace GD.BBPH.DAL.FactoryClasses
 			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("LogbackupEntity", (int)fieldIndex));
 		}
 
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the MaucuahangEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(MaucuahangFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("MaucuahangEntity", (int)fieldIndex));
+		}
+
 		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the MenuEntity. Which EntityField is created is specified by fieldIndex</summary>
 		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
 		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
@@ -296,6 +304,14 @@ namespace GD.BBPH.DAL.FactoryClasses
 		public static IEntityField2 Create(ThanhphanmauFieldIndex fieldIndex)
 		{
 			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("ThanhphanmauEntity", (int)fieldIndex));
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the TruccuahangEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(TruccuahangFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("TruccuahangEntity", (int)fieldIndex));
 		}
 
 		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the UsersEntity. Which EntityField is created is specified by fieldIndex</summary>

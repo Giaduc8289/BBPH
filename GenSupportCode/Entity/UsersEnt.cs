@@ -56,14 +56,14 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			UsersEntity _usersEntity = new UsersEntity();
 			
-			_users.Userid = txt_Userid.Text.Trim();
-			_users.Rolesid = txt_Rolesid.Text.Trim();
-			_users.Username = txt_Username.Text.Trim();
-			_users.Fullname = txt_Fullname.Text.Trim();
-			_users.Phone = txt_Phone.Text.Trim();
-			_users.Address = txt_Address.Text.Trim();
-			_users.Password = txt_Password.Text.Trim();
-			_users.Active = txt_Active.Text.Trim();
+			_usersEntity.Userid = txt_Userid.Text.Trim();
+			_usersEntity.Rolesid = txt_Rolesid.Text.Trim();
+			_usersEntity.Username = txt_Username.Text.Trim();
+			_usersEntity.Fullname = txt_Fullname.Text.Trim();
+			_usersEntity.Phone = txt_Phone.Text.Trim();
+			_usersEntity.Address = txt_Address.Text.Trim();
+			_usersEntity.Password = txt_Password.Text.Trim();
+			_usersEntity.Active = txt_Active.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

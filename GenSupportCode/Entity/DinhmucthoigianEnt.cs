@@ -49,6 +49,10 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Xuongcuon.Text = _Rowview.Row[DinhmucthoigianFields.Xuongcuon.Name].ToString();
 					txt_Thaythietbi.Text = _Rowview.Row[DinhmucthoigianFields.Thaythietbi.Name].ToString();
 					txt_Dungmay.Text = _Rowview.Row[DinhmucthoigianFields.Dungmay.Name].ToString();
+					txt_Ngaytao.Text = _Rowview.Row[DinhmucthoigianFields.Ngaytao.Name].ToString();
+					txt_Nguoitao.Text = _Rowview.Row[DinhmucthoigianFields.Nguoitao.Name].ToString();
+					txt_Ngaysua.Text = _Rowview.Row[DinhmucthoigianFields.Ngaysua.Name].ToString();
+					txt_Nguoisua.Text = _Rowview.Row[DinhmucthoigianFields.Nguoisua.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dinhmucthoigian_CurrentChanged"); }
@@ -58,16 +62,20 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DinhmucthoigianEntity _dinhmucthoigianEntity = new DinhmucthoigianEntity();
 			
-			_dinhmucthoigian.Madmtg = txt_Madmtg.Text.Trim();
-			_dinhmucthoigian.Tendinhmuc = txt_Tendinhmuc.Text.Trim();
-			_dinhmucthoigian.Mamay = txt_Mamay.Text.Trim();
-			_dinhmucthoigian.Madm = txt_Madm.Text.Trim();
-			_dinhmucthoigian.Dauca = txt_Dauca.Text.Trim();
-			_dinhmucthoigian.Doilenh = txt_Doilenh.Text.Trim();
-			_dinhmucthoigian.Lencuon = txt_Lencuon.Text.Trim();
-			_dinhmucthoigian.Xuongcuon = txt_Xuongcuon.Text.Trim();
-			_dinhmucthoigian.Thaythietbi = txt_Thaythietbi.Text.Trim();
-			_dinhmucthoigian.Dungmay = txt_Dungmay.Text.Trim();
+			_dinhmucthoigianEntity.Madmtg = txt_Madmtg.Text.Trim();
+			_dinhmucthoigianEntity.Tendinhmuc = txt_Tendinhmuc.Text.Trim();
+			_dinhmucthoigianEntity.Mamay = txt_Mamay.Text.Trim();
+			_dinhmucthoigianEntity.Madm = txt_Madm.Text.Trim();
+			_dinhmucthoigianEntity.Dauca = txt_Dauca.Text.Trim();
+			_dinhmucthoigianEntity.Doilenh = txt_Doilenh.Text.Trim();
+			_dinhmucthoigianEntity.Lencuon = txt_Lencuon.Text.Trim();
+			_dinhmucthoigianEntity.Xuongcuon = txt_Xuongcuon.Text.Trim();
+			_dinhmucthoigianEntity.Thaythietbi = txt_Thaythietbi.Text.Trim();
+			_dinhmucthoigianEntity.Dungmay = txt_Dungmay.Text.Trim();
+			_dinhmucthoigianEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_dinhmucthoigianEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_dinhmucthoigianEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_dinhmucthoigianEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -89,6 +97,10 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Dinhmucthoigian.CurrentRow.Cells[DinhmucthoigianFields.Xuongcuon.Name].Value = _dinhmucthoigianEntity.Xuongcuon;
 				GRID_Dinhmucthoigian.CurrentRow.Cells[DinhmucthoigianFields.Thaythietbi.Name].Value = _dinhmucthoigianEntity.Thaythietbi;
 				GRID_Dinhmucthoigian.CurrentRow.Cells[DinhmucthoigianFields.Dungmay.Name].Value = _dinhmucthoigianEntity.Dungmay;
+				GRID_Dinhmucthoigian.CurrentRow.Cells[DinhmucthoigianFields.Ngaytao.Name].Value = _dinhmucthoigianEntity.Ngaytao;
+				GRID_Dinhmucthoigian.CurrentRow.Cells[DinhmucthoigianFields.Nguoitao.Name].Value = _dinhmucthoigianEntity.Nguoitao;
+				GRID_Dinhmucthoigian.CurrentRow.Cells[DinhmucthoigianFields.Ngaysua.Name].Value = _dinhmucthoigianEntity.Ngaysua;
+				GRID_Dinhmucthoigian.CurrentRow.Cells[DinhmucthoigianFields.Nguoisua.Name].Value = _dinhmucthoigianEntity.Nguoisua;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DinhmucthoigianManager.Convert(_dinhmucthoigianEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Dinhmucthoigian_PK;

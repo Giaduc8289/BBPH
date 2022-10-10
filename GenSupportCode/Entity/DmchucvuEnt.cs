@@ -41,6 +41,10 @@ namespace GD.BBPH.DAL.EntityClasses
 					
 					txt_Macv.Text = _Rowview.Row[DmchucvuFields.Macv.Name].ToString();
 					txt_Tenchucvu.Text = _Rowview.Row[DmchucvuFields.Tenchucvu.Name].ToString();
+					txt_Ngaytao.Text = _Rowview.Row[DmchucvuFields.Ngaytao.Name].ToString();
+					txt_Nguoitao.Text = _Rowview.Row[DmchucvuFields.Nguoitao.Name].ToString();
+					txt_Ngaysua.Text = _Rowview.Row[DmchucvuFields.Ngaysua.Name].ToString();
+					txt_Nguoisua.Text = _Rowview.Row[DmchucvuFields.Nguoisua.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmchucvu_CurrentChanged"); }
@@ -50,8 +54,12 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DmchucvuEntity _dmchucvuEntity = new DmchucvuEntity();
 			
-			_dmchucvu.Macv = txt_Macv.Text.Trim();
-			_dmchucvu.Tenchucvu = txt_Tenchucvu.Text.Trim();
+			_dmchucvuEntity.Macv = txt_Macv.Text.Trim();
+			_dmchucvuEntity.Tenchucvu = txt_Tenchucvu.Text.Trim();
+			_dmchucvuEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_dmchucvuEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_dmchucvuEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_dmchucvuEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -65,6 +73,10 @@ namespace GD.BBPH.DAL.EntityClasses
 				
 				GRID_Dmchucvu.CurrentRow.Cells[DmchucvuFields.Macv.Name].Value = _dmchucvuEntity.Macv;
 				GRID_Dmchucvu.CurrentRow.Cells[DmchucvuFields.Tenchucvu.Name].Value = _dmchucvuEntity.Tenchucvu;
+				GRID_Dmchucvu.CurrentRow.Cells[DmchucvuFields.Ngaytao.Name].Value = _dmchucvuEntity.Ngaytao;
+				GRID_Dmchucvu.CurrentRow.Cells[DmchucvuFields.Nguoitao.Name].Value = _dmchucvuEntity.Nguoitao;
+				GRID_Dmchucvu.CurrentRow.Cells[DmchucvuFields.Ngaysua.Name].Value = _dmchucvuEntity.Ngaysua;
+				GRID_Dmchucvu.CurrentRow.Cells[DmchucvuFields.Nguoisua.Name].Value = _dmchucvuEntity.Nguoisua;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchucvuManager.Convert(_dmchucvuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Dmchucvu_PK;

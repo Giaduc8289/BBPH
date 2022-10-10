@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:15 AM
+// Code is generated on: Monday, October 10, 2022 10:24:35 AM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -142,6 +142,9 @@ namespace GD.BBPH.DAL.Linq
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					toReturn = this.Logbackup;
 					break;
+				case GD.BBPH.DAL.EntityType.MaucuahangEntity:
+					toReturn = this.Maucuahang;
+					break;
 				case GD.BBPH.DAL.EntityType.MenuEntity:
 					toReturn = this.Menu;
 					break;
@@ -162,6 +165,9 @@ namespace GD.BBPH.DAL.Linq
 					break;
 				case GD.BBPH.DAL.EntityType.ThanhphanmauEntity:
 					toReturn = this.Thanhphanmau;
+					break;
+				case GD.BBPH.DAL.EntityType.TruccuahangEntity:
+					toReturn = this.Truccuahang;
 					break;
 				case GD.BBPH.DAL.EntityType.UsersEntity:
 					toReturn = this.Users;
@@ -335,6 +341,12 @@ namespace GD.BBPH.DAL.Linq
 			get { return new DataSource2<LogbackupEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
+		/// <summary>returns the datasource to use in a Linq query when targeting MaucuahangEntity instances in the database.</summary>
+		public DataSource2<MaucuahangEntity> Maucuahang
+		{
+			get { return new DataSource2<MaucuahangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
 		/// <summary>returns the datasource to use in a Linq query when targeting MenuEntity instances in the database.</summary>
 		public DataSource2<MenuEntity> Menu
 		{
@@ -375,6 +387,12 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<ThanhphanmauEntity> Thanhphanmau
 		{
 			get { return new DataSource2<ThanhphanmauEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting TruccuahangEntity instances in the database.</summary>
+		public DataSource2<TruccuahangEntity> Truccuahang
+		{
+			get { return new DataSource2<TruccuahangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting UsersEntity instances in the database.</summary>

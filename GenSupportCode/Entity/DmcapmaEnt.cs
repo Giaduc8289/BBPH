@@ -51,9 +51,9 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DmcapmaEntity _dmcapmaEntity = new DmcapmaEntity();
 			
-			_dmcapma.Macappk = txt_Macappk.Text.Trim();
-			_dmcapma.Loaima = txt_Loaima.Text.Trim();
-			_dmcapma.Mastart = txt_Mastart.Text.Trim();
+			_dmcapmaEntity.Macappk = txt_Macappk.Text.Trim();
+			_dmcapmaEntity.Loaima = txt_Loaima.Text.Trim();
+			_dmcapmaEntity.Mastart = txt_Mastart.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
