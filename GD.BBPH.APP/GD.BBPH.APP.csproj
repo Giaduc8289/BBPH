@@ -141,6 +141,12 @@
     <Compile Include="BANHANG\FRM_HANGTRALAI.designer.cs">
       <DependentUpon>FRM_HANGTRALAI.cs</DependentUpon>
     </Compile>
+    <Compile Include="BANHANG\FRM_PHIEUGIAOHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANHANG\FRM_PHIEUGIAOHANG.designer.cs">
+      <DependentUpon>FRM_PHIEUGIAOHANG.cs</DependentUpon>
+    </Compile>
     <Compile Include="BAOCAO\FRM_REPORTVIEWER.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -373,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BANHANG\FRM_HANGTRALAI.resx">
       <DependentUpon>FRM_HANGTRALAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BANHANG\FRM_PHIEUGIAOHANG.resx">
+      <DependentUpon>FRM_PHIEUGIAOHANG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
@@ -899,6 +908,8 @@
     <Content Include="XMLCONFIG\FRM_NHAPKHOPHECHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="XMLCONFIG\FRM_PHIEUGIAOHANG_D.xml" />
+    <Content Include="XMLCONFIG\FRM_PHIEUGIAOHANG_H.xml" />
     <Content Include="XMLCONFIG\FRM_TPMAU.xml" />
     <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOA.xml" />
     <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOACHITIET.xml" />
@@ -1178,7 +1189,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BAOCAO\" />
     <Folder Include="CHIA\" />
     <Folder Include="GHEP\" />
     <Folder Include="HOANTHIEN\" />
