@@ -61,19 +61,19 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			PhieugiaohangHEntity _phieugiaohangHEntity = new PhieugiaohangHEntity();
 			
-			_phieugiaohangH.Sophieu = txt_Sophieu.Text.Trim();
-			_phieugiaohangH.Ngaygiao = txt_Ngaygiao.Text.Trim();
-			_phieugiaohangH.Madon = txt_Madon.Text.Trim();
-			_phieugiaohangH.Ngaydat = txt_Ngaydat.Text.Trim();
-			_phieugiaohangH.Makhach = txt_Makhach.Text.Trim();
-			_phieugiaohangH.Tenkhach = txt_Tenkhach.Text.Trim();
-			_phieugiaohangH.Tongtien = txt_Tongtien.Text.Trim();
-			_phieugiaohangH.Vat = txt_Vat.Text.Trim();
-			_phieugiaohangH.Ghichu = txt_Ghichu.Text.Trim();
-			_phieugiaohangH.Ngaytao = txt_Ngaytao.Text.Trim();
-			_phieugiaohangH.Nguoitao = txt_Nguoitao.Text.Trim();
-			_phieugiaohangH.Ngaysua = txt_Ngaysua.Text.Trim();
-			_phieugiaohangH.Nguoisua = txt_Nguoisua.Text.Trim();
+			_phieugiaohangHEntity.Sophieu = txt_Sophieu.Text.Trim();
+			_phieugiaohangHEntity.Ngaygiao = txt_Ngaygiao.Text.Trim();
+			_phieugiaohangHEntity.Madon = txt_Madon.Text.Trim();
+			_phieugiaohangHEntity.Ngaydat = txt_Ngaydat.Text.Trim();
+			_phieugiaohangHEntity.Makhach = txt_Makhach.Text.Trim();
+			_phieugiaohangHEntity.Tenkhach = txt_Tenkhach.Text.Trim();
+			_phieugiaohangHEntity.Tongtien = txt_Tongtien.Text.Trim();
+			_phieugiaohangHEntity.Vat = txt_Vat.Text.Trim();
+			_phieugiaohangHEntity.Ghichu = txt_Ghichu.Text.Trim();
+			_phieugiaohangHEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_phieugiaohangHEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_phieugiaohangHEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_phieugiaohangHEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

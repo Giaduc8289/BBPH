@@ -67,25 +67,25 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			PhieugiaohangDEntity _phieugiaohangDEntity = new PhieugiaohangDEntity();
 			
-			_phieugiaohangD.Id = txt_Id.Text.Trim();
-			_phieugiaohangD.Sophieu = txt_Sophieu.Text.Trim();
-			_phieugiaohangD.Ngaygiao = txt_Ngaygiao.Text.Trim();
-			_phieugiaohangD.Madon = txt_Madon.Text.Trim();
-			_phieugiaohangD.DonchitietId = txt_DonchitietId.Text.Trim();
-			_phieugiaohangD.Ngaydat = txt_Ngaydat.Text.Trim();
-			_phieugiaohangD.Makhach = txt_Makhach.Text.Trim();
-			_phieugiaohangD.Tenkhach = txt_Tenkhach.Text.Trim();
-			_phieugiaohangD.Loaihang = txt_Loaihang.Text.Trim();
-			_phieugiaohangD.Masp = txt_Masp.Text.Trim();
-			_phieugiaohangD.Tenhang = txt_Tenhang.Text.Trim();
-			_phieugiaohangD.Soluong = txt_Soluong.Text.Trim();
-			_phieugiaohangD.Dongia = txt_Dongia.Text.Trim();
-			_phieugiaohangD.Thanhtien = txt_Thanhtien.Text.Trim();
-			_phieugiaohangD.Ghichu = txt_Ghichu.Text.Trim();
-			_phieugiaohangD.Ngaytao = txt_Ngaytao.Text.Trim();
-			_phieugiaohangD.Nguoitao = txt_Nguoitao.Text.Trim();
-			_phieugiaohangD.Ngaysua = txt_Ngaysua.Text.Trim();
-			_phieugiaohangD.Nguoisua = txt_Nguoisua.Text.Trim();
+			_phieugiaohangDEntity.Id = txt_Id.Text.Trim();
+			_phieugiaohangDEntity.Sophieu = txt_Sophieu.Text.Trim();
+			_phieugiaohangDEntity.Ngaygiao = txt_Ngaygiao.Text.Trim();
+			_phieugiaohangDEntity.Madon = txt_Madon.Text.Trim();
+			_phieugiaohangDEntity.DonchitietId = txt_DonchitietId.Text.Trim();
+			_phieugiaohangDEntity.Ngaydat = txt_Ngaydat.Text.Trim();
+			_phieugiaohangDEntity.Makhach = txt_Makhach.Text.Trim();
+			_phieugiaohangDEntity.Tenkhach = txt_Tenkhach.Text.Trim();
+			_phieugiaohangDEntity.Loaihang = txt_Loaihang.Text.Trim();
+			_phieugiaohangDEntity.Masp = txt_Masp.Text.Trim();
+			_phieugiaohangDEntity.Tenhang = txt_Tenhang.Text.Trim();
+			_phieugiaohangDEntity.Soluong = txt_Soluong.Text.Trim();
+			_phieugiaohangDEntity.Dongia = txt_Dongia.Text.Trim();
+			_phieugiaohangDEntity.Thanhtien = txt_Thanhtien.Text.Trim();
+			_phieugiaohangDEntity.Ghichu = txt_Ghichu.Text.Trim();
+			_phieugiaohangDEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_phieugiaohangDEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_phieugiaohangDEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_phieugiaohangDEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

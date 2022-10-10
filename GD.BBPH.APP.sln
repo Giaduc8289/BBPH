@@ -50,6 +50,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{8E88BC
 		GenSupportCode\Entity\DonhangHEnt.cs = GenSupportCode\Entity\DonhangHEnt.cs
 		GenSupportCode\Entity\HangtralaiEnt.cs = GenSupportCode\Entity\HangtralaiEnt.cs
 		GenSupportCode\Entity\LogbackupEnt.cs = GenSupportCode\Entity\LogbackupEnt.cs
+		GenSupportCode\Entity\MaucuahangEnt.cs = GenSupportCode\Entity\MaucuahangEnt.cs
 		GenSupportCode\Entity\MenuEnt.cs = GenSupportCode\Entity\MenuEnt.cs
 		GenSupportCode\Entity\MenuroleEnt.cs = GenSupportCode\Entity\MenuroleEnt.cs
 		GenSupportCode\Entity\PhieugiaohangDEnt.cs = GenSupportCode\Entity\PhieugiaohangDEnt.cs
@@ -57,6 +58,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{8E88BC
 		GenSupportCode\Entity\RolesEnt.cs = GenSupportCode\Entity\RolesEnt.cs
 		GenSupportCode\Entity\ThamsoEnt.cs = GenSupportCode\Entity\ThamsoEnt.cs
 		GenSupportCode\Entity\ThanhphanmauEnt.cs = GenSupportCode\Entity\ThanhphanmauEnt.cs
+		GenSupportCode\Entity\TruccuahangEnt.cs = GenSupportCode\Entity\TruccuahangEnt.cs
 		GenSupportCode\Entity\UsersEnt.cs = GenSupportCode\Entity\UsersEnt.cs
 	EndProjectSection
 EndProject

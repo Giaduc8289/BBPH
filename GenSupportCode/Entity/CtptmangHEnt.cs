@@ -43,6 +43,10 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Mactpt.Text = _Rowview.Row[CtptmangHFields.Mactpt.Name].ToString();
 					txt_Tenctpt.Text = _Rowview.Row[CtptmangHFields.Tenctpt.Name].ToString();
 					txt_Ngayapdung.Text = _Rowview.Row[CtptmangHFields.Ngayapdung.Name].ToString();
+					txt_Ngaytao.Text = _Rowview.Row[CtptmangHFields.Ngaytao.Name].ToString();
+					txt_Nguoitao.Text = _Rowview.Row[CtptmangHFields.Nguoitao.Name].ToString();
+					txt_Ngaysua.Text = _Rowview.Row[CtptmangHFields.Ngaysua.Name].ToString();
+					txt_Nguoisua.Text = _Rowview.Row[CtptmangHFields.Nguoisua.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_CtptmangH_CurrentChanged"); }
@@ -52,10 +56,14 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			CtptmangHEntity _ctptmangHEntity = new CtptmangHEntity();
 			
-			_ctptmangH.Id = txt_Id.Text.Trim();
-			_ctptmangH.Mactpt = txt_Mactpt.Text.Trim();
-			_ctptmangH.Tenctpt = txt_Tenctpt.Text.Trim();
-			_ctptmangH.Ngayapdung = txt_Ngayapdung.Text.Trim();
+			_ctptmangHEntity.Id = txt_Id.Text.Trim();
+			_ctptmangHEntity.Mactpt = txt_Mactpt.Text.Trim();
+			_ctptmangHEntity.Tenctpt = txt_Tenctpt.Text.Trim();
+			_ctptmangHEntity.Ngayapdung = txt_Ngayapdung.Text.Trim();
+			_ctptmangHEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_ctptmangHEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_ctptmangHEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_ctptmangHEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -71,6 +79,10 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_CtptmangH.CurrentRow.Cells[CtptmangHFields.Mactpt.Name].Value = _ctptmangHEntity.Mactpt;
 				GRID_CtptmangH.CurrentRow.Cells[CtptmangHFields.Tenctpt.Name].Value = _ctptmangHEntity.Tenctpt;
 				GRID_CtptmangH.CurrentRow.Cells[CtptmangHFields.Ngayapdung.Name].Value = _ctptmangHEntity.Ngayapdung;
+				GRID_CtptmangH.CurrentRow.Cells[CtptmangHFields.Ngaytao.Name].Value = _ctptmangHEntity.Ngaytao;
+				GRID_CtptmangH.CurrentRow.Cells[CtptmangHFields.Nguoitao.Name].Value = _ctptmangHEntity.Nguoitao;
+				GRID_CtptmangH.CurrentRow.Cells[CtptmangHFields.Ngaysua.Name].Value = _ctptmangHEntity.Ngaysua;
+				GRID_CtptmangH.CurrentRow.Cells[CtptmangHFields.Nguoisua.Name].Value = _ctptmangHEntity.Nguoisua;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CtptmangHManager.Convert(_ctptmangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_CtptmangH_PK;

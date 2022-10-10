@@ -60,18 +60,18 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			BaogiaHEntity _baogiaHEntity = new BaogiaHEntity();
 			
-			_baogiaH.Sobaogia = txt_Sobaogia.Text.Trim();
-			_baogiaH.Ngaybaogia = txt_Ngaybaogia.Text.Trim();
-			_baogiaH.Ngayhieuluc = txt_Ngayhieuluc.Text.Trim();
-			_baogiaH.Makhach = txt_Makhach.Text.Trim();
-			_baogiaH.Tenkhach = txt_Tenkhach.Text.Trim();
-			_baogiaH.Noidung = txt_Noidung.Text.Trim();
-			_baogiaH.Phuongthuctt = txt_Phuongthuctt.Text.Trim();
-			_baogiaH.Diadiemgiao = txt_Diadiemgiao.Text.Trim();
-			_baogiaH.Ngaytao = txt_Ngaytao.Text.Trim();
-			_baogiaH.Nguoitao = txt_Nguoitao.Text.Trim();
-			_baogiaH.Ngaysua = txt_Ngaysua.Text.Trim();
-			_baogiaH.Nguoisua = txt_Nguoisua.Text.Trim();
+			_baogiaHEntity.Sobaogia = txt_Sobaogia.Text.Trim();
+			_baogiaHEntity.Ngaybaogia = txt_Ngaybaogia.Text.Trim();
+			_baogiaHEntity.Ngayhieuluc = txt_Ngayhieuluc.Text.Trim();
+			_baogiaHEntity.Makhach = txt_Makhach.Text.Trim();
+			_baogiaHEntity.Tenkhach = txt_Tenkhach.Text.Trim();
+			_baogiaHEntity.Noidung = txt_Noidung.Text.Trim();
+			_baogiaHEntity.Phuongthuctt = txt_Phuongthuctt.Text.Trim();
+			_baogiaHEntity.Diadiemgiao = txt_Diadiemgiao.Text.Trim();
+			_baogiaHEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_baogiaHEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_baogiaHEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_baogiaHEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

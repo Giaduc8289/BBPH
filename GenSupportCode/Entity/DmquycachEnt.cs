@@ -58,16 +58,16 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DmquycachEntity _dmquycachEntity = new DmquycachEntity();
 			
-			_dmquycach.Maqc = txt_Maqc.Text.Trim();
-			_dmquycach.Tenquycach = txt_Tenquycach.Text.Trim();
-			_dmquycach.Macd = txt_Macd.Text.Trim();
-			_dmquycach.Maqccha = txt_Maqccha.Text.Trim();
-			_dmquycach.Ngaytao = txt_Ngaytao.Text.Trim();
-			_dmquycach.Nguoitao = txt_Nguoitao.Text.Trim();
-			_dmquycach.Ngaysua = txt_Ngaysua.Text.Trim();
-			_dmquycach.Nguoisua = txt_Nguoisua.Text.Trim();
-			_dmquycach.Tencd = txt_Tencd.Text.Trim();
-			_dmquycach.Tenqccha = txt_Tenqccha.Text.Trim();
+			_dmquycachEntity.Maqc = txt_Maqc.Text.Trim();
+			_dmquycachEntity.Tenquycach = txt_Tenquycach.Text.Trim();
+			_dmquycachEntity.Macd = txt_Macd.Text.Trim();
+			_dmquycachEntity.Maqccha = txt_Maqccha.Text.Trim();
+			_dmquycachEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_dmquycachEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_dmquycachEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_dmquycachEntity.Nguoisua = txt_Nguoisua.Text.Trim();
+			_dmquycachEntity.Tencd = txt_Tencd.Text.Trim();
+			_dmquycachEntity.Tenqccha = txt_Tenqccha.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

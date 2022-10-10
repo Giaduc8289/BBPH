@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
+// Code is generated on: Monday, October 10, 2022 10:24:37 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -113,6 +113,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "LogbackupEntity");
 					break;
+				case GD.BBPH.DAL.EntityType.MaucuahangEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "MaucuahangEntity");
+					break;
 				case GD.BBPH.DAL.EntityType.MenuEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "MenuEntity");
 					break;
@@ -133,6 +136,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.ThanhphanmauEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "ThanhphanmauEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.TruccuahangEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "TruccuahangEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.UsersEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "UsersEntity");

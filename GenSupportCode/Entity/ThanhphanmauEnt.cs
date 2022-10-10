@@ -58,16 +58,16 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			ThanhphanmauEntity _thanhphanmauEntity = new ThanhphanmauEntity();
 			
-			_thanhphanmau.Id = txt_Id.Text.Trim();
-			_thanhphanmau.Mamau = txt_Mamau.Text.Trim();
-			_thanhphanmau.Tenmau = txt_Tenmau.Text.Trim();
-			_thanhphanmau.Mausudung = txt_Mausudung.Text.Trim();
-			_thanhphanmau.Tenmausudung = txt_Tenmausudung.Text.Trim();
-			_thanhphanmau.Tyle = txt_Tyle.Text.Trim();
-			_thanhphanmau.Ngaytao = txt_Ngaytao.Text.Trim();
-			_thanhphanmau.Nguoitao = txt_Nguoitao.Text.Trim();
-			_thanhphanmau.Ngaysua = txt_Ngaysua.Text.Trim();
-			_thanhphanmau.Nguoisua = txt_Nguoisua.Text.Trim();
+			_thanhphanmauEntity.Id = txt_Id.Text.Trim();
+			_thanhphanmauEntity.Mamau = txt_Mamau.Text.Trim();
+			_thanhphanmauEntity.Tenmau = txt_Tenmau.Text.Trim();
+			_thanhphanmauEntity.Mausudung = txt_Mausudung.Text.Trim();
+			_thanhphanmauEntity.Tenmausudung = txt_Tenmausudung.Text.Trim();
+			_thanhphanmauEntity.Tyle = txt_Tyle.Text.Trim();
+			_thanhphanmauEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_thanhphanmauEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_thanhphanmauEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_thanhphanmauEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

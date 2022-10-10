@@ -55,13 +55,13 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DmmauEntity _dmmauEntity = new DmmauEntity();
 			
-			_dmmau.Mamau = txt_Mamau.Text.Trim();
-			_dmmau.Tenmau = txt_Tenmau.Text.Trim();
-			_dmmau.Lamaugoc = txt_Lamaugoc.Text.Trim();
-			_dmmau.Ngaytao = txt_Ngaytao.Text.Trim();
-			_dmmau.Nguoitao = txt_Nguoitao.Text.Trim();
-			_dmmau.Ngaysua = txt_Ngaysua.Text.Trim();
-			_dmmau.Nguoisua = txt_Nguoisua.Text.Trim();
+			_dmmauEntity.Mamau = txt_Mamau.Text.Trim();
+			_dmmauEntity.Tenmau = txt_Tenmau.Text.Trim();
+			_dmmauEntity.Lamaugoc = txt_Lamaugoc.Text.Trim();
+			_dmmauEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_dmmauEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_dmmauEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_dmmauEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

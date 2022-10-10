@@ -65,23 +65,23 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			HangtralaiEntity _hangtralaiEntity = new HangtralaiEntity();
 			
-			_hangtralai.Id = txt_Id.Text.Trim();
-			_hangtralai.Sophieugiao = txt_Sophieugiao.Text.Trim();
-			_hangtralai.Ngaygiao = txt_Ngaygiao.Text.Trim();
-			_hangtralai.Madon = txt_Madon.Text.Trim();
-			_hangtralai.Makhach = txt_Makhach.Text.Trim();
-			_hangtralai.Tenkhach = txt_Tenkhach.Text.Trim();
-			_hangtralai.Ngaydat = txt_Ngaydat.Text.Trim();
-			_hangtralai.Masp = txt_Masp.Text.Trim();
-			_hangtralai.Tenhang = txt_Tenhang.Text.Trim();
-			_hangtralai.Soluonggiao = txt_Soluonggiao.Text.Trim();
-			_hangtralai.Soluongtralai = txt_Soluongtralai.Text.Trim();
-			_hangtralai.Ngaytra = txt_Ngaytra.Text.Trim();
-			_hangtralai.Nguyennhan = txt_Nguyennhan.Text.Trim();
-			_hangtralai.Ngaytao = txt_Ngaytao.Text.Trim();
-			_hangtralai.Nguoitao = txt_Nguoitao.Text.Trim();
-			_hangtralai.Ngaysua = txt_Ngaysua.Text.Trim();
-			_hangtralai.Nguoisua = txt_Nguoisua.Text.Trim();
+			_hangtralaiEntity.Id = txt_Id.Text.Trim();
+			_hangtralaiEntity.Sophieugiao = txt_Sophieugiao.Text.Trim();
+			_hangtralaiEntity.Ngaygiao = txt_Ngaygiao.Text.Trim();
+			_hangtralaiEntity.Madon = txt_Madon.Text.Trim();
+			_hangtralaiEntity.Makhach = txt_Makhach.Text.Trim();
+			_hangtralaiEntity.Tenkhach = txt_Tenkhach.Text.Trim();
+			_hangtralaiEntity.Ngaydat = txt_Ngaydat.Text.Trim();
+			_hangtralaiEntity.Masp = txt_Masp.Text.Trim();
+			_hangtralaiEntity.Tenhang = txt_Tenhang.Text.Trim();
+			_hangtralaiEntity.Soluonggiao = txt_Soluonggiao.Text.Trim();
+			_hangtralaiEntity.Soluongtralai = txt_Soluongtralai.Text.Trim();
+			_hangtralaiEntity.Ngaytra = txt_Ngaytra.Text.Trim();
+			_hangtralaiEntity.Nguyennhan = txt_Nguyennhan.Text.Trim();
+			_hangtralaiEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_hangtralaiEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_hangtralaiEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_hangtralaiEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
