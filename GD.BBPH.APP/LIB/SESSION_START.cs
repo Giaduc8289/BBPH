@@ -81,6 +81,29 @@ namespace GD.BBPH.APP.LIB
             set { _TS_NGAYCUOINAM = value; }
         }
         #endregion
+        #region NGAYDAUQUY
+        private static DateTime _TS_NGAYDAUQUY = DateTime.Now;
+        public static DateTime TS_NGAYDAUQUY
+        {
+            get
+            {
+                return _TS_NGAYDAUQUY;
+            }
+            set { _TS_NGAYDAUQUY = value; }
+        }
+        #endregion
+        #region NGAYCUOIQUY
+        private static DateTime _TS_NGAYCUOIQUY = DateTime.Now;
+        public static DateTime TS_NGAYCUOIQUY
+        {
+            get
+            {
+                return _TS_NGAYCUOIQUY;
+            }
+            set { _TS_NGAYCUOIQUY = value; }
+        }
+        #endregion
+
         //#region GIOLAMVIEC
         //private static Decimal _TS_GIOLAMVIEC = Convert.ToDecimal(Procedures.Laygiatrithamso("Sogiolamviec"));
         //public static Decimal TS_GIOLAMVIEC
@@ -418,6 +441,32 @@ namespace GD.BBPH.APP.LIB
                 return _DT_DONHANG_D;
             }
             set { _DT_DONHANG_D = value; }
+        }
+        #endregion
+
+         #region PHIEUGIAOHANG_H
+        private static DataTable _DT_PHIEUGIAOHANG_H = null;
+        public static DataTable DT_PHIEUGIAOHANG_H
+        {
+            get
+            {
+                _DT_PHIEUGIAOHANG_H = new PhieugiaohangHManager().SelectAllRDT();
+                return _DT_PHIEUGIAOHANG_H;
+            }
+            set { _DT_PHIEUGIAOHANG_H = value; }
+        }
+        #endregion
+
+        #region PHIEUGIAOHANG_D
+        private static DataTable _DT_PHIEUGIAOHANG_D = null;
+        public static DataTable DT_PHIEUGIAOHANG_D
+        {
+            get
+            {
+                _DT_PHIEUGIAOHANG_D = new PhieugiaohangHManager().SelectAllRDT();
+                return _DT_PHIEUGIAOHANG_D;
+            }
+            set { _DT_PHIEUGIAOHANG_D = value; }
         }
         #endregion
 
