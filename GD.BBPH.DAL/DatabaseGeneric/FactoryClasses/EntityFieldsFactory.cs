@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 11, 2022 3:09:08 PM
+// Code is generated on: Tuesday, October 11, 2022 11:43:59 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -97,6 +97,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.DmnhomnguyenlieuEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmnhomnguyenlieuEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmnhomquycachEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmnhomquycachEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.DmquycachEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmquycachEntity");

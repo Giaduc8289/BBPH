@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 11, 2022 3:09:07 PM
+// Code is generated on: Tuesday, October 11, 2022 11:43:59 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -32,7 +32,7 @@ namespace GD.BBPH.DAL.RelationClasses
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
 
 
-			toReturn.Add(this.DmcongdoanEntityUsingMacd);
+
 			return toReturn;
 		}
 
@@ -40,20 +40,6 @@ namespace GD.BBPH.DAL.RelationClasses
 
 
 
-		/// <summary>Returns a new IEntityRelation object, between CongsuatmayEntity and DmcongdoanEntity over the m:1 relation they have, using the relation between the fields:
-		/// Congsuatmay.Macd - Dmcongdoan.Macd
-		/// </summary>
-		public virtual IEntityRelation DmcongdoanEntityUsingMacd
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmcongdoan", false);
-				relation.AddEntityFieldPair(DmcongdoanFields.Macd, CongsuatmayFields.Macd);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmcongdoanEntity", false);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CongsuatmayEntity", true);
-				return relation;
-			}
-		}
 
 		/// <summary>stub, not used in this entity, only for TargetPerEntity entities.</summary>
 		public virtual IEntityRelation GetSubTypeRelation(string subTypeEntityName) { return null; }

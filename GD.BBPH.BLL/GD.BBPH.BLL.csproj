@@ -129,6 +129,7 @@
     <Compile Include="ManagerBase\DmmayManagerBase.cs" />
     <Compile Include="ManagerBase\DmnguyenlieuManagerBase.cs" />
     <Compile Include="ManagerBase\DmnhomnguyenlieuManagerBase.cs" />
+    <Compile Include="ManagerBase\DmnhomquycachManagerBase.cs" />
     <Compile Include="ManagerBase\DmquycachManagerBase.cs" />
     <Compile Include="ManagerBase\DmtaikhoanManagerBase.cs" />
     <Compile Include="ManagerBase\DonhangDManagerBase.cs" />

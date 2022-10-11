@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 11, 2022 3:09:09 PM
+// Code is generated on: Tuesday, October 11, 2022 11:44:01 PM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 

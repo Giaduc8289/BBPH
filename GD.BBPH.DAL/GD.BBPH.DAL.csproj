@@ -141,6 +141,7 @@
     <Compile Include="DatabaseGeneric\EntityClasses\DmmayEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmnguyenlieuEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmnhomnguyenlieuEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmnhomquycachEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmquycachEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmtaikhoanEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DonhangDEntity.cs" />
@@ -236,6 +237,7 @@
     <Compile Include="DatabaseGeneric\RelationClasses\DmmayRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmnguyenlieuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmnhomnguyenlieuRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmnhomquycachRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmquycachRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmtaikhoanRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DonhangDRelations.cs" />

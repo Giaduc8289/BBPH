@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 11, 2022 3:09:08 PM
+// Code is generated on: Tuesday, October 11, 2022 11:43:59 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -180,6 +180,7 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewCongsuatmay
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 			return toReturn;
 		}
 		
@@ -191,6 +192,7 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewCongsuatmayUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 			return toReturn;
 		}
 		
@@ -453,7 +455,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmchungloai
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -465,7 +466,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmchungloaiUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -949,6 +949,45 @@ namespace GD.BBPH.DAL.FactoryClasses
 
 		#endregion
 	}	
+	/// <summary>Factory to create new, empty DmnhomquycachEntity objects.</summary>
+	[Serializable]
+	public partial class DmnhomquycachEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public DmnhomquycachEntityFactory() : base("DmnhomquycachEntity", GD.BBPH.DAL.EntityType.DmnhomquycachEntity) { }
+
+		/// <summary>Creates a new, empty DmnhomquycachEntity object.</summary>
+		/// <returns>A new, empty DmnhomquycachEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new DmnhomquycachEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmnhomquycach
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new DmnhomquycachEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new DmnhomquycachEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmnhomquycachUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<DmnhomquycachEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
 	/// <summary>Factory to create new, empty DmquycachEntity objects.</summary>
 	[Serializable]
 	public partial class DmquycachEntityFactory : EntityFactoryBase2 {
@@ -1157,7 +1196,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquachia
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1169,7 +1207,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquachiaUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1198,7 +1235,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquaghep
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1210,7 +1246,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquaghepUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1239,7 +1274,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquain
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1251,7 +1285,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquainUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1280,7 +1313,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquainmau
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1292,7 +1324,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquainmauUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1321,7 +1352,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquathoi
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1333,7 +1363,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquathoiUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1362,7 +1391,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquatua
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1374,7 +1402,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquatuaUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1754,7 +1781,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewTknguyenlieuthoi
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1766,7 +1792,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewTknguyenlieuthoiUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1938,6 +1963,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.DmnhomnguyenlieuEntity:
 					factoryToUse = new DmnhomnguyenlieuEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.DmnhomquycachEntity:
+					factoryToUse = new DmnhomquycachEntityFactory();
 					break;
 				case GD.BBPH.DAL.EntityType.DmquycachEntity:
 					factoryToUse = new DmquycachEntityFactory();

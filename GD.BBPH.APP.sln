@@ -45,6 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{8E88BC
 		GenSupportCode\Entity\DmmayEnt.cs = GenSupportCode\Entity\DmmayEnt.cs
 		GenSupportCode\Entity\DmnguyenlieuEnt.cs = GenSupportCode\Entity\DmnguyenlieuEnt.cs
 		GenSupportCode\Entity\DmnhomnguyenlieuEnt.cs = GenSupportCode\Entity\DmnhomnguyenlieuEnt.cs
+		GenSupportCode\Entity\DmnhomquycachEnt.cs = GenSupportCode\Entity\DmnhomquycachEnt.cs
 		GenSupportCode\Entity\DmquycachEnt.cs = GenSupportCode\Entity\DmquycachEnt.cs
 		GenSupportCode\Entity\DmtaikhoanEnt.cs = GenSupportCode\Entity\DmtaikhoanEnt.cs
 		GenSupportCode\Entity\DonhangDEnt.cs = GenSupportCode\Entity\DonhangDEnt.cs

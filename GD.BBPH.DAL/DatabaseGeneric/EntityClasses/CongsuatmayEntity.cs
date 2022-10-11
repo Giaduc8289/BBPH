@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 11, 2022 3:09:08 PM
+// Code is generated on: Tuesday, October 11, 2022 11:43:59 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -39,7 +39,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		#region Class Member Declarations
 
 
-		private DmcongdoanEntity _dmcongdoan;
+
 
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
@@ -53,8 +53,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>All names of fields mapped onto a relation. Usable for in-memory filtering</summary>
 		public static class MemberNames
 		{
-			/// <summary>Member name Dmcongdoan</summary>
-			public static readonly string Dmcongdoan = "Dmcongdoan";
+
 
 
 
@@ -90,22 +89,22 @@ namespace GD.BBPH.DAL.EntityClasses
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="macs">PK value for Congsuatmay which data should be fetched into this Congsuatmay object</param>
+		/// <param name="macongsuat">PK value for Congsuatmay which data should be fetched into this Congsuatmay object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public CongsuatmayEntity(System.String macs):base("CongsuatmayEntity")
+		public CongsuatmayEntity(System.String macongsuat):base("CongsuatmayEntity")
 		{
 			InitClassEmpty(null, CreateFields());
-			this.Macs = macs;
+			this.Macongsuat = macongsuat;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="macs">PK value for Congsuatmay which data should be fetched into this Congsuatmay object</param>
+		/// <param name="macongsuat">PK value for Congsuatmay which data should be fetched into this Congsuatmay object</param>
 		/// <param name="validator">The custom validator object for this CongsuatmayEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public CongsuatmayEntity(System.String macs, IValidator validator):base("CongsuatmayEntity")
+		public CongsuatmayEntity(System.String macongsuat, IValidator validator):base("CongsuatmayEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
-			this.Macs = macs;
+			this.Macongsuat = macongsuat;
 		}
 
 		/// <summary> Protected CTor for deserialization</summary>
@@ -118,11 +117,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 
 
-				_dmcongdoan = (DmcongdoanEntity)info.GetValue("_dmcongdoan", typeof(DmcongdoanEntity));
-				if(_dmcongdoan!=null)
-				{
-					_dmcongdoan.AfterSave+=new EventHandler(OnEntityAfterSave);
-				}
+
 
 				base.FixupDeserialization(FieldInfoProviderSingleton.GetInstance());
 			}
@@ -138,9 +133,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch((CongsuatmayFieldIndex)fieldIndex)
 			{
-				case CongsuatmayFieldIndex.Macd:
-					DesetupSyncDmcongdoan(true, false);
-					break;
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
 					break;
@@ -163,9 +155,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(propertyName)
 			{
-				case "Dmcongdoan":
-					this.Dmcongdoan = (DmcongdoanEntity)entity;
-					break;
+
 
 
 
@@ -190,9 +180,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			RelationCollection toReturn = new RelationCollection();
 			switch(fieldName)
 			{
-				case "Dmcongdoan":
-					toReturn.Add(CongsuatmayEntity.Relations.DmcongdoanEntityUsingMacd);
-					break;
+
 
 
 
@@ -231,9 +219,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-				case "Dmcongdoan":
-					SetupSyncDmcongdoan(relatedEntity);
-					break;
+
 
 
 				default:
@@ -250,9 +236,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-				case "Dmcongdoan":
-					DesetupSyncDmcongdoan(false, true);
-					break;
+
 
 
 				default:
@@ -275,10 +259,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntity2> GetDependentRelatedEntities()
 		{
 			List<IEntity2> toReturn = new List<IEntity2>();
-			if(_dmcongdoan!=null)
-			{
-				toReturn.Add(_dmcongdoan);
-			}
+
 
 			return toReturn;
 		}
@@ -305,7 +286,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 
 
-				info.AddValue("_dmcongdoan", (!this.MarkedForDeletion?_dmcongdoan:null));
+
 
 			}
 			
@@ -343,15 +324,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entity of type 'Dmcongdoan' to this entity. Use DataAccessAdapter.FetchNewEntity() to fetch this related entity.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmcongdoan()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmcongdoanFields.Macd, null, ComparisonOperator.Equal, this.Macd));
-			return bucket;
-		}
 
 	
 		
@@ -420,7 +392,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override Dictionary<string, object> GetRelatedData()
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
-			toReturn.Add("Dmcongdoan", _dmcongdoan);
+
 
 
 
@@ -432,10 +404,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 
 
-			if(_dmcongdoan!=null)
-			{
-				_dmcongdoan.ActiveContext = base.ActiveContext;
-			}
+
 
 		}
 
@@ -445,7 +414,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-			_dmcongdoan = null;
+
 
 			PerformDependencyInjection();
 			
@@ -464,16 +433,49 @@ namespace GD.BBPH.DAL.EntityClasses
 			Dictionary<string, string> fieldHashtable = null;
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Macs", fieldHashtable);
+			_fieldsCustomProperties.Add("Macongsuat", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tencongsuat", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Macd", fieldHashtable);
+			_fieldsCustomProperties.Add("Mamay", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Maqc", fieldHashtable);
+			_fieldsCustomProperties.Add("Madongmay", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Macongdoan", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maquycach1", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maquycach2", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maquycach3", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Khotu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Khoden", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Chieudaitu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Chieudaiden", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dodaytu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dodayden", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tocdo", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
@@ -489,38 +491,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		#endregion
 
-		/// <summary> Removes the sync logic for member _dmcongdoan</summary>
-		/// <param name="signalRelatedEntity">If set to true, it will call the related entity's UnsetRelatedEntity method</param>
-		/// <param name="resetFKFields">if set to true it will also reset the FK fields pointing to the related entity</param>
-		private void DesetupSyncDmcongdoan(bool signalRelatedEntity, bool resetFKFields)
-		{
-			base.PerformDesetupSyncRelatedEntity( _dmcongdoan, new PropertyChangedEventHandler( OnDmcongdoanPropertyChanged ), "Dmcongdoan", CongsuatmayEntity.Relations.DmcongdoanEntityUsingMacd, true, signalRelatedEntity, "Congsuatmay", resetFKFields, new int[] { (int)CongsuatmayFieldIndex.Macd } );		
-			_dmcongdoan = null;
-		}
-
-		/// <summary> setups the sync logic for member _dmcongdoan</summary>
-		/// <param name="relatedEntity">Instance to set as the related entity of type entityType</param>
-		private void SetupSyncDmcongdoan(IEntity2 relatedEntity)
-		{
-			if(_dmcongdoan!=relatedEntity)
-			{
-				DesetupSyncDmcongdoan(true, true);
-				_dmcongdoan = (DmcongdoanEntity)relatedEntity;
-				base.PerformSetupSyncRelatedEntity( _dmcongdoan, new PropertyChangedEventHandler( OnDmcongdoanPropertyChanged ), "Dmcongdoan", CongsuatmayEntity.Relations.DmcongdoanEntityUsingMacd, true, new string[] {  } );
-			}
-		}
-		
-		/// <summary>Handles property change events of properties in a related entity.</summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void OnDmcongdoanPropertyChanged( object sender, PropertyChangedEventArgs e )
-		{
-			switch( e.PropertyName )
-			{
-				default:
-					break;
-			}
-		}
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
@@ -557,17 +527,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmcongdoan' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmcongdoan
-		{
-			get
-			{
-				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(DmcongdoanEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmcongdoan")[0], (int)GD.BBPH.DAL.EntityType.CongsuatmayEntity, (int)GD.BBPH.DAL.EntityType.DmcongdoanEntity, 0, null, null, null, null, "Dmcongdoan", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
-			}
-		}
 
 
 		/// <summary> The custom properties for the type of this entity instance.</summary>
@@ -594,48 +553,169 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return CongsuatmayEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The Macs property of the Entity Congsuatmay<br/><br/>
+		/// <summary> The Macongsuat property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Macs"<br/>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Macongsuat"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
-		public virtual System.String Macs
+		public virtual System.String Macongsuat
 		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Macs, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Macs, value); }
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Macongsuat, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Macongsuat, value); }
 		}
 
 		/// <summary> The Tencongsuat property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "congsuatmay"."Tencongsuat"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tencongsuat
 		{
 			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Tencongsuat, true); }
 			set	{ SetValue((int)CongsuatmayFieldIndex.Tencongsuat, value); }
 		}
 
-		/// <summary> The Macd property of the Entity Congsuatmay<br/><br/>
+		/// <summary> The Mamay property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Macd"<br/>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Mamay"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Macd
+		public virtual System.String Mamay
 		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Macd, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Macd, value); }
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Mamay, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Mamay, value); }
 		}
 
-		/// <summary> The Maqc property of the Entity Congsuatmay<br/><br/>
+		/// <summary> The Madongmay property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Maqc"<br/>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Madongmay"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Maqc
+		public virtual System.String Madongmay
 		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maqc, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Maqc, value); }
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Madongmay, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Madongmay, value); }
+		}
+
+		/// <summary> The Macongdoan property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Macongdoan"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Macongdoan
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Macongdoan, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Macongdoan, value); }
+		}
+
+		/// <summary> The Maquycach1 property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Maquycach1"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maquycach1
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maquycach1, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Maquycach1, value); }
+		}
+
+		/// <summary> The Maquycach2 property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Maquycach2"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maquycach2
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maquycach2, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Maquycach2, value); }
+		}
+
+		/// <summary> The Maquycach3 property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Maquycach3"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maquycach3
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maquycach3, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Maquycach3, value); }
+		}
+
+		/// <summary> The Khotu property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Khotu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Khotu
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Khotu, false); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Khotu, value); }
+		}
+
+		/// <summary> The Khoden property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Khoden"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Khoden
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Khoden, false); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Khoden, value); }
+		}
+
+		/// <summary> The Chieudaitu property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Chieudaitu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Chieudaitu
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Chieudaitu, false); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Chieudaitu, value); }
+		}
+
+		/// <summary> The Chieudaiden property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Chieudaiden"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Chieudaiden
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Chieudaiden, false); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Chieudaiden, value); }
+		}
+
+		/// <summary> The Dodaytu property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Dodaytu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dodaytu
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Dodaytu, false); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Dodaytu, value); }
+		}
+
+		/// <summary> The Dodayden property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Dodayden"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dodayden
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Dodayden, false); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Dodayden, value); }
+		}
+
+		/// <summary> The Tocdo property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Tocdo"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tocdo
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Tocdo, false); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Tocdo, value); }
 		}
 
 		/// <summary> The Ngaytao property of the Entity Congsuatmay<br/><br/>
@@ -684,40 +764,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Gets / sets related entity of type 'DmcongdoanEntity' which has to be set using a fetch action earlier. If no related entity
-		/// is set for this property, null is returned. This property is not visible in databound grids.</summary>
-		[Browsable(false)]
-		public virtual DmcongdoanEntity Dmcongdoan
-		{
-			get
-			{
-				return _dmcongdoan;
-			}
-			set
-			{
-				if(base.IsDeserializing)
-				{
-					SetupSyncDmcongdoan(value);
-				}
-				else
-				{
-					if(value==null)
-					{
-						if(_dmcongdoan != null)
-						{
-							_dmcongdoan.UnsetRelatedEntity(this, "Congsuatmay");
-						}
-					}
-					else
-					{
-						if(_dmcongdoan!=value)
-						{
-							((IEntity2)value).SetRelatedEntity(this, "Congsuatmay");
-						}
-					}
-				}
-			}
-		}
 
 	
 		

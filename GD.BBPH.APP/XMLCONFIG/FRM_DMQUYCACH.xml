@@ -29,11 +29,10 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
-  
   <viewgrid>
     <value>1</value>
-    <name>Maqc</name>
-    <headerText>Maqc</headerText>
+    <name>Maquycach</name>
+    <headerText>Mã QC</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -42,7 +41,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tenquycach</name>
-    <headerText>Tenquycach</headerText>
+    <headerText>Tên QC</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -50,8 +49,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Macd</name>
-    <headerText>Macd</headerText>
+    <name>Macongdoan</name>
+    <headerText>Mã CĐ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -59,8 +58,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Maqccha</name>
-    <headerText>Maqccha</headerText>
+    <name>Tencongdoan</name>
+    <headerText>Tên CĐ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -68,6 +67,24 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Manhom</name>
+    <headerText>Mã nhóm QC</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tennhom</name>
+    <headerText>Tên nhóm QC</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
     <name>Ngaytao</name>
     <headerText>Ngaytao</headerText>
     <BackColor>0</BackColor>
@@ -76,7 +93,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoitao</name>
     <headerText>Nguoitao</headerText>
     <BackColor>0</BackColor>
@@ -85,7 +102,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaysua</name>
     <headerText>Ngaysua</headerText>
     <BackColor>0</BackColor>
@@ -94,7 +111,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoisua</name>
     <headerText>Nguoisua</headerText>
     <BackColor>0</BackColor>
@@ -102,26 +119,8 @@
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tencd</name>
-    <headerText>Tencd</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tenqccha</name>
-    <headerText>Tenqccha</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
   <tablename>
-    <name>dmquycach</name>
+    <name>Dmquycach</name>
     <headerText>Danh sách quy cách</headerText>
   </tablename>
 </NewDataSet>

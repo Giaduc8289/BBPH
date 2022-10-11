@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 11, 2022 3:09:07 PM
+// Code is generated on: Tuesday, October 11, 2022 11:43:59 PM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -126,6 +126,9 @@ namespace GD.BBPH.DAL.Linq
 					break;
 				case GD.BBPH.DAL.EntityType.DmnhomnguyenlieuEntity:
 					toReturn = this.Dmnhomnguyenlieu;
+					break;
+				case GD.BBPH.DAL.EntityType.DmnhomquycachEntity:
+					toReturn = this.Dmnhomquycach;
 					break;
 				case GD.BBPH.DAL.EntityType.DmquycachEntity:
 					toReturn = this.Dmquycach;
@@ -333,6 +336,12 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<DmnhomnguyenlieuEntity> Dmnhomnguyenlieu
 		{
 			get { return new DataSource2<DmnhomnguyenlieuEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting DmnhomquycachEntity instances in the database.</summary>
+		public DataSource2<DmnhomquycachEntity> Dmnhomquycach
+		{
+			get { return new DataSource2<DmnhomquycachEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting DmquycachEntity instances in the database.</summary>
