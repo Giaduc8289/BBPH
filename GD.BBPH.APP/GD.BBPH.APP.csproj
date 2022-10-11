@@ -337,6 +337,7 @@
     <Compile Include="Manager\CtptmangHManager.cs" />
     <Compile Include="Manager\DmcapmaManager.cs" />
     <Compile Include="Manager\DmchucvuManager.cs" />
+    <Compile Include="Manager\DmchungloaiManager.cs" />
     <Compile Include="Manager\DmcongdoanManager.cs" />
     <Compile Include="Manager\DmcongnhanManager.cs" />
     <Compile Include="Manager\DmdongmayManager.cs" />
@@ -353,6 +354,12 @@
     <Compile Include="Manager\DonhangDManager.cs" />
     <Compile Include="Manager\DonhangHManager.cs" />
     <Compile Include="Manager\HangtralaiManager.cs" />
+    <Compile Include="Manager\KetquachiaManager.cs" />
+    <Compile Include="Manager\KetquaghepManager.cs" />
+    <Compile Include="Manager\KetquainManager.cs" />
+    <Compile Include="Manager\KetquainmauManager.cs" />
+    <Compile Include="Manager\KetquathoiManager.cs" />
+    <Compile Include="Manager\KetquatuaManager.cs" />
     <Compile Include="Manager\LogbackupManager.cs" />
     <Compile Include="Manager\DmkhachManager.cs" />
     <Compile Include="Manager\DmbophanManager.cs" />
@@ -364,6 +371,7 @@
     <Compile Include="Manager\RolesManager.cs" />
     <Compile Include="Manager\ThamsoManager.cs" />
     <Compile Include="Manager\ThanhphanmauManager.cs" />
+    <Compile Include="Manager\TknguyenlieuthoiManager.cs" />
     <Compile Include="Manager\TruccuahangManager.cs" />
     <Compile Include="Manager\UsersManager.cs" />
     <Compile Include="Program.cs" />

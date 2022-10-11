@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 10, 2022 10:24:37 AM
+// Code is generated on: Tuesday, October 11, 2022 3:09:08 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -59,6 +59,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 				case GD.BBPH.DAL.EntityType.DmchucvuEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmchucvuEntity");
 					break;
+				case GD.BBPH.DAL.EntityType.DmchungloaiEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmchungloaiEntity");
+					break;
 				case GD.BBPH.DAL.EntityType.DmcongdoanEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmcongdoanEntity");
 					break;
@@ -110,6 +113,24 @@ namespace GD.BBPH.DAL.FactoryClasses
 				case GD.BBPH.DAL.EntityType.HangtralaiEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "HangtralaiEntity");
 					break;
+				case GD.BBPH.DAL.EntityType.KetquachiaEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KetquachiaEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KetquaghepEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KetquaghepEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KetquainEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KetquainEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KetquainmauEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KetquainmauEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KetquathoiEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KetquathoiEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KetquatuaEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KetquatuaEntity");
+					break;
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "LogbackupEntity");
 					break;
@@ -136,6 +157,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.ThanhphanmauEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "ThanhphanmauEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.TknguyenlieuthoiEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "TknguyenlieuthoiEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.TruccuahangEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "TruccuahangEntity");

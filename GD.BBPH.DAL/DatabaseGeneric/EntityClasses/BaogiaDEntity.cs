@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 10, 2022 10:24:36 AM
+// Code is generated on: Tuesday, October 11, 2022 3:09:08 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -470,7 +470,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Sobaogia", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Loaihang", fieldHashtable);
+			_fieldsCustomProperties.Add("Machungloai", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenchungloai", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Masp", fieldHashtable);
@@ -634,15 +637,26 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)BaogiaDFieldIndex.Sobaogia, value); }
 		}
 
-		/// <summary> The Loaihang property of the Entity BaogiaD<br/><br/>
+		/// <summary> The Machungloai property of the Entity BaogiaD<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "baogia_d"."Loaihang"<br/>
+		/// <remarks>Mapped on  table field: "baogia_d"."Machungloai"<br/>
+		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Int64> Machungloai
+		{
+			get { return (Nullable<System.Int64>)GetValue((int)BaogiaDFieldIndex.Machungloai, false); }
+			set	{ SetValue((int)BaogiaDFieldIndex.Machungloai, value); }
+		}
+
+		/// <summary> The Tenchungloai property of the Entity BaogiaD<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "baogia_d"."Tenchungloai"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Loaihang
+		public virtual System.String Tenchungloai
 		{
-			get { return (System.String)GetValue((int)BaogiaDFieldIndex.Loaihang, true); }
-			set	{ SetValue((int)BaogiaDFieldIndex.Loaihang, value); }
+			get { return (System.String)GetValue((int)BaogiaDFieldIndex.Tenchungloai, true); }
+			set	{ SetValue((int)BaogiaDFieldIndex.Tenchungloai, value); }
 		}
 
 		/// <summary> The Masp property of the Entity BaogiaD<br/><br/>

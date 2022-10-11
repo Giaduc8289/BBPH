@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 10, 2022 10:24:36 AM
+// Code is generated on: Tuesday, October 11, 2022 3:09:08 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -442,6 +442,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Maspcuakhach", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
+			_fieldsCustomProperties.Add("Machungloai", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenchungloai", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
 			_fieldsCustomProperties.Add("Makhach", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -628,6 +634,28 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmhangFieldIndex.Maspcuakhach, value); }
 		}
 
+		/// <summary> The Machungloai property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Machungloai"<br/>
+		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Int64> Machungloai
+		{
+			get { return (Nullable<System.Int64>)GetValue((int)DmhangFieldIndex.Machungloai, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Machungloai, value); }
+		}
+
+		/// <summary> The Tenchungloai property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Tenchungloai"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenchungloai
+		{
+			get { return (System.String)GetValue((int)DmhangFieldIndex.Tenchungloai, true); }
+			set	{ SetValue((int)DmhangFieldIndex.Tenchungloai, value); }
+		}
+
 		/// <summary> The Makhach property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Makhach"<br/>
@@ -697,7 +725,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Loaimuc property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Loaimuc"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Loaimuc
 		{

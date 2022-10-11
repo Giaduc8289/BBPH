@@ -42,6 +42,8 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Masp.Text = _Rowview.Row[DmhangFields.Masp.Name].ToString();
 					txt_Tensp.Text = _Rowview.Row[DmhangFields.Tensp.Name].ToString();
 					txt_Maspcuakhach.Text = _Rowview.Row[DmhangFields.Maspcuakhach.Name].ToString();
+					txt_Machungloai.Text = _Rowview.Row[DmhangFields.Machungloai.Name].ToString();
+					txt_Tenchungloai.Text = _Rowview.Row[DmhangFields.Tenchungloai.Name].ToString();
 					txt_Makhach.Text = _Rowview.Row[DmhangFields.Makhach.Name].ToString();
 					txt_Tenkhach.Text = _Rowview.Row[DmhangFields.Tenkhach.Name].ToString();
 					txt_Kichthuoc.Text = _Rowview.Row[DmhangFields.Kichthuoc.Name].ToString();
@@ -84,6 +86,8 @@ namespace GD.BBPH.DAL.EntityClasses
 			_dmhangEntity.Masp = txt_Masp.Text.Trim();
 			_dmhangEntity.Tensp = txt_Tensp.Text.Trim();
 			_dmhangEntity.Maspcuakhach = txt_Maspcuakhach.Text.Trim();
+			_dmhangEntity.Machungloai = txt_Machungloai.Text.Trim();
+			_dmhangEntity.Tenchungloai = txt_Tenchungloai.Text.Trim();
 			_dmhangEntity.Makhach = txt_Makhach.Text.Trim();
 			_dmhangEntity.Tenkhach = txt_Tenkhach.Text.Trim();
 			_dmhangEntity.Kichthuoc = txt_Kichthuoc.Text.Trim();
@@ -128,6 +132,8 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Dmhang.CurrentRow.Cells[DmhangFields.Masp.Name].Value = _dmhangEntity.Masp;
 				GRID_Dmhang.CurrentRow.Cells[DmhangFields.Tensp.Name].Value = _dmhangEntity.Tensp;
 				GRID_Dmhang.CurrentRow.Cells[DmhangFields.Maspcuakhach.Name].Value = _dmhangEntity.Maspcuakhach;
+				GRID_Dmhang.CurrentRow.Cells[DmhangFields.Machungloai.Name].Value = _dmhangEntity.Machungloai;
+				GRID_Dmhang.CurrentRow.Cells[DmhangFields.Tenchungloai.Name].Value = _dmhangEntity.Tenchungloai;
 				GRID_Dmhang.CurrentRow.Cells[DmhangFields.Makhach.Name].Value = _dmhangEntity.Makhach;
 				GRID_Dmhang.CurrentRow.Cells[DmhangFields.Tenkhach.Name].Value = _dmhangEntity.Tenkhach;
 				GRID_Dmhang.CurrentRow.Cells[DmhangFields.Kichthuoc.Name].Value = _dmhangEntity.Kichthuoc;

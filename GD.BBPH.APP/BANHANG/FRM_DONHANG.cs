@@ -324,7 +324,7 @@ namespace GD.BBPH.APP.BANHANG
             foreach(DataRow dr in arrDr)
             {
                 DataRow r_Detail = DT_DONDATHANG_D_FILL.NewRow();
-                r_Detail[DonhangDFields.Loaihang.Name] = dr[BaogiaDFields.Loaihang.Name].ToString();
+                //r_Detail[DonhangDFields.Loaihang.Name] = dr[BaogiaDFields.Loaihang.Name].ToString();
                 r_Detail[DonhangDFields.Masp.Name] = dr[BaogiaDFields.Masp.Name].ToString();
                 //r_Detail[DonhangDFields.Tenhang.Name] = dr[BaogiaDFields.Tenhang.Name].ToString();
                 //r_Detail[DonhangDFields.Chungloai.Name] = dr[BaogiaDFields.Chungloai.Name].ToString();

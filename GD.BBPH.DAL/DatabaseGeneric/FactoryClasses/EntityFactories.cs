@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 10, 2022 10:24:36 AM
+// Code is generated on: Tuesday, October 11, 2022 3:09:08 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -433,6 +433,47 @@ namespace GD.BBPH.DAL.FactoryClasses
 		public override IEntityCollection2 CreateEntityCollection()
 		{
 			return new EntityCollection<DmchucvuEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty DmchungloaiEntity objects.</summary>
+	[Serializable]
+	public partial class DmchungloaiEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public DmchungloaiEntityFactory() : base("DmchungloaiEntity", GD.BBPH.DAL.EntityType.DmchungloaiEntity) { }
+
+		/// <summary>Creates a new, empty DmchungloaiEntity object.</summary>
+		/// <returns>A new, empty DmchungloaiEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new DmchungloaiEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmchungloai
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new DmchungloaiEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new DmchungloaiEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDmchungloaiUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<DmchungloaiEntity>(this);
 		}
 		
 
@@ -1103,6 +1144,252 @@ namespace GD.BBPH.DAL.FactoryClasses
 
 		#endregion
 	}	
+	/// <summary>Factory to create new, empty KetquachiaEntity objects.</summary>
+	[Serializable]
+	public partial class KetquachiaEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KetquachiaEntityFactory() : base("KetquachiaEntity", GD.BBPH.DAL.EntityType.KetquachiaEntity) { }
+
+		/// <summary>Creates a new, empty KetquachiaEntity object.</summary>
+		/// <returns>A new, empty KetquachiaEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KetquachiaEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquachia
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KetquachiaEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KetquachiaEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquachiaUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KetquachiaEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KetquaghepEntity objects.</summary>
+	[Serializable]
+	public partial class KetquaghepEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KetquaghepEntityFactory() : base("KetquaghepEntity", GD.BBPH.DAL.EntityType.KetquaghepEntity) { }
+
+		/// <summary>Creates a new, empty KetquaghepEntity object.</summary>
+		/// <returns>A new, empty KetquaghepEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KetquaghepEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquaghep
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KetquaghepEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KetquaghepEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquaghepUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KetquaghepEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KetquainEntity objects.</summary>
+	[Serializable]
+	public partial class KetquainEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KetquainEntityFactory() : base("KetquainEntity", GD.BBPH.DAL.EntityType.KetquainEntity) { }
+
+		/// <summary>Creates a new, empty KetquainEntity object.</summary>
+		/// <returns>A new, empty KetquainEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KetquainEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquain
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KetquainEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KetquainEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquainUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KetquainEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KetquainmauEntity objects.</summary>
+	[Serializable]
+	public partial class KetquainmauEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KetquainmauEntityFactory() : base("KetquainmauEntity", GD.BBPH.DAL.EntityType.KetquainmauEntity) { }
+
+		/// <summary>Creates a new, empty KetquainmauEntity object.</summary>
+		/// <returns>A new, empty KetquainmauEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KetquainmauEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquainmau
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KetquainmauEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KetquainmauEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquainmauUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KetquainmauEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KetquathoiEntity objects.</summary>
+	[Serializable]
+	public partial class KetquathoiEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KetquathoiEntityFactory() : base("KetquathoiEntity", GD.BBPH.DAL.EntityType.KetquathoiEntity) { }
+
+		/// <summary>Creates a new, empty KetquathoiEntity object.</summary>
+		/// <returns>A new, empty KetquathoiEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KetquathoiEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquathoi
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KetquathoiEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KetquathoiEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquathoiUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KetquathoiEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KetquatuaEntity objects.</summary>
+	[Serializable]
+	public partial class KetquatuaEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KetquatuaEntityFactory() : base("KetquatuaEntity", GD.BBPH.DAL.EntityType.KetquatuaEntity) { }
+
+		/// <summary>Creates a new, empty KetquatuaEntity object.</summary>
+		/// <returns>A new, empty KetquatuaEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KetquatuaEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquatua
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KetquatuaEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KetquatuaEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquatuaUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KetquatuaEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
 	/// <summary>Factory to create new, empty LogbackupEntity objects.</summary>
 	[Serializable]
 	public partial class LogbackupEntityFactory : EntityFactoryBase2 {
@@ -1155,7 +1442,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewMaucuahang
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1167,7 +1453,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewMaucuahangUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1456,6 +1741,47 @@ namespace GD.BBPH.DAL.FactoryClasses
 
 		#endregion
 	}	
+	/// <summary>Factory to create new, empty TknguyenlieuthoiEntity objects.</summary>
+	[Serializable]
+	public partial class TknguyenlieuthoiEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public TknguyenlieuthoiEntityFactory() : base("TknguyenlieuthoiEntity", GD.BBPH.DAL.EntityType.TknguyenlieuthoiEntity) { }
+
+		/// <summary>Creates a new, empty TknguyenlieuthoiEntity object.</summary>
+		/// <returns>A new, empty TknguyenlieuthoiEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new TknguyenlieuthoiEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewTknguyenlieuthoi
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new TknguyenlieuthoiEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new TknguyenlieuthoiEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewTknguyenlieuthoiUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<TknguyenlieuthoiEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
 	/// <summary>Factory to create new, empty TruccuahangEntity objects.</summary>
 	[Serializable]
 	public partial class TruccuahangEntityFactory : EntityFactoryBase2 {
@@ -1469,7 +1795,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewTruccuahang
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1481,7 +1806,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewTruccuahangUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1576,6 +1900,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 				case GD.BBPH.DAL.EntityType.DmchucvuEntity:
 					factoryToUse = new DmchucvuEntityFactory();
 					break;
+				case GD.BBPH.DAL.EntityType.DmchungloaiEntity:
+					factoryToUse = new DmchungloaiEntityFactory();
+					break;
 				case GD.BBPH.DAL.EntityType.DmcongdoanEntity:
 					factoryToUse = new DmcongdoanEntityFactory();
 					break;
@@ -1627,6 +1954,24 @@ namespace GD.BBPH.DAL.FactoryClasses
 				case GD.BBPH.DAL.EntityType.HangtralaiEntity:
 					factoryToUse = new HangtralaiEntityFactory();
 					break;
+				case GD.BBPH.DAL.EntityType.KetquachiaEntity:
+					factoryToUse = new KetquachiaEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KetquaghepEntity:
+					factoryToUse = new KetquaghepEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KetquainEntity:
+					factoryToUse = new KetquainEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KetquainmauEntity:
+					factoryToUse = new KetquainmauEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KetquathoiEntity:
+					factoryToUse = new KetquathoiEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KetquatuaEntity:
+					factoryToUse = new KetquatuaEntityFactory();
+					break;
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					factoryToUse = new LogbackupEntityFactory();
 					break;
@@ -1653,6 +1998,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.ThanhphanmauEntity:
 					factoryToUse = new ThanhphanmauEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.TknguyenlieuthoiEntity:
+					factoryToUse = new TknguyenlieuthoiEntityFactory();
 					break;
 				case GD.BBPH.DAL.EntityType.TruccuahangEntity:
 					factoryToUse = new TruccuahangEntityFactory();

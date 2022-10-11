@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 1, 2022 3:26:07 PM
+// Code is generated on: Tuesday, October 11, 2022 3:09:07 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -10,22 +10,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using GD.BBPH;
-using GD.BBPH.FactoryClasses;
-using GD.BBPH.HelperClasses;
+using GD.BBPH.DAL;
+using GD.BBPH.DAL.FactoryClasses;
+using GD.BBPH.DAL.HelperClasses;
 using SD.LLBLGen.Pro.ORMSupportClasses;
 
-namespace GD.BBPH.RelationClasses
+namespace GD.BBPH.DAL.RelationClasses
 {
-	/// <summary>Implements the static Relations variant for the entity: Dinhmuathoigian. </summary>
-	public partial class DinhmuathoigianRelations
+	/// <summary>Implements the static Relations variant for the entity: Ketquachia. </summary>
+	public partial class KetquachiaRelations
 	{
 		/// <summary>CTor</summary>
-		public DinhmuathoigianRelations()
+		public KetquachiaRelations()
 		{
 		}
 
-		/// <summary>Gets all relations of the DinhmuathoigianEntity as a list of IEntityRelation objects.</summary>
+		/// <summary>Gets all relations of the KetquachiaEntity as a list of IEntityRelation objects.</summary>
 		/// <returns>a list of IEntityRelation objects</returns>
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
