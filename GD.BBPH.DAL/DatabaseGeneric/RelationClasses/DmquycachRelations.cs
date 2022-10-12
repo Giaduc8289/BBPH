@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:15 AM
+// Code is generated on: Wednesday, October 12, 2022 3:04:16 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -32,7 +32,7 @@ namespace GD.BBPH.DAL.RelationClasses
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
 
 
-			toReturn.Add(this.DmcongdoanEntityUsingMacd);
+
 			return toReturn;
 		}
 
@@ -40,20 +40,6 @@ namespace GD.BBPH.DAL.RelationClasses
 
 
 
-		/// <summary>Returns a new IEntityRelation object, between DmquycachEntity and DmcongdoanEntity over the m:1 relation they have, using the relation between the fields:
-		/// Dmquycach.Macd - Dmcongdoan.Macd
-		/// </summary>
-		public virtual IEntityRelation DmcongdoanEntityUsingMacd
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmcongdoan", false);
-				relation.AddEntityFieldPair(DmcongdoanFields.Macd, DmquycachFields.Macd);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmcongdoanEntity", false);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmquycachEntity", true);
-				return relation;
-			}
-		}
 
 		/// <summary>stub, not used in this entity, only for TargetPerEntity entities.</summary>
 		public virtual IEntityRelation GetSubTypeRelation(string subTypeEntityName) { return null; }

@@ -51,9 +51,9 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			RolesEntity _rolesEntity = new RolesEntity();
 			
-			_roles.Rolesid = txt_Rolesid.Text.Trim();
-			_roles.Rolesname = txt_Rolesname.Text.Trim();
-			_roles.Description = txt_Description.Text.Trim();
+			_rolesEntity.Rolesid = txt_Rolesid.Text.Trim();
+			_rolesEntity.Rolesname = txt_Rolesname.Text.Trim();
+			_rolesEntity.Description = txt_Description.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

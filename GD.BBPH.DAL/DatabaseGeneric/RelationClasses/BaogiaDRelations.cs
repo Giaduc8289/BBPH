@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
+// Code is generated on: Wednesday, October 12, 2022 3:04:16 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -33,7 +33,6 @@ namespace GD.BBPH.DAL.RelationClasses
 
 
 			toReturn.Add(this.BaogiaHEntityUsingSobaogia);
-			toReturn.Add(this.DmhangEntityUsingMasp);
 			return toReturn;
 		}
 
@@ -51,20 +50,6 @@ namespace GD.BBPH.DAL.RelationClasses
 				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "BaogiaH", false);
 				relation.AddEntityFieldPair(BaogiaHFields.Sobaogia, BaogiaDFields.Sobaogia);
 				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("BaogiaHEntity", false);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("BaogiaDEntity", true);
-				return relation;
-			}
-		}
-		/// <summary>Returns a new IEntityRelation object, between BaogiaDEntity and DmhangEntity over the m:1 relation they have, using the relation between the fields:
-		/// BaogiaD.Masp - Dmhang.Masp
-		/// </summary>
-		public virtual IEntityRelation DmhangEntityUsingMasp
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmhang", false);
-				relation.AddEntityFieldPair(DmhangFields.Masp, BaogiaDFields.Masp);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmhangEntity", false);
 				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("BaogiaDEntity", true);
 				return relation;
 			}

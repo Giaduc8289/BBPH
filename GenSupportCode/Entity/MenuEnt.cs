@@ -59,17 +59,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			MenuEntity _menuEntity = new MenuEntity();
 			
-			_menu.MenuId = txt_MenuId.Text.Trim();
-			_menu.MenuName = txt_MenuName.Text.Trim();
-			_menu.Icon = txt_Icon.Text.Trim();
-			_menu.Issudung = txt_Issudung.Text.Trim();
-			_menu.Istrangthai = txt_Istrangthai.Text.Trim();
-			_menu.Menuparent = txt_Menuparent.Text.Trim();
-			_menu.Thutu = txt_Thutu.Text.Trim();
-			_menu.FormName = txt_FormName.Text.Trim();
-			_menu.LoaiMenu = txt_LoaiMenu.Text.Trim();
-			_menu.Param = txt_Param.Text.Trim();
-			_menu.Maphanhe = txt_Maphanhe.Text.Trim();
+			_menuEntity.MenuId = txt_MenuId.Text.Trim();
+			_menuEntity.MenuName = txt_MenuName.Text.Trim();
+			_menuEntity.Icon = txt_Icon.Text.Trim();
+			_menuEntity.Issudung = txt_Issudung.Text.Trim();
+			_menuEntity.Istrangthai = txt_Istrangthai.Text.Trim();
+			_menuEntity.Menuparent = txt_Menuparent.Text.Trim();
+			_menuEntity.Thutu = txt_Thutu.Text.Trim();
+			_menuEntity.FormName = txt_FormName.Text.Trim();
+			_menuEntity.LoaiMenu = txt_LoaiMenu.Text.Trim();
+			_menuEntity.Param = txt_Param.Text.Trim();
+			_menuEntity.Maphanhe = txt_Maphanhe.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

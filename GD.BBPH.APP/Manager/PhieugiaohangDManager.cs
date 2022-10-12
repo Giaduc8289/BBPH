@@ -27,5 +27,22 @@ namespace GD.BBPH.BLL
 		{
 			// Nothing for now.
 		}
-	}
+
+        public int DeleteBySophieugiao(System.String Sophieugiao)
+        {
+            int toReturn = 0;
+            RelationPredicateBucket filter = new RelationPredicateBucket();
+
+            IPredicateExpression _PredicateExpression = new PredicateExpression();
+            _PredicateExpression.Add(PhieugiaohangDFields.Sophieu == Sophieugiao);
+            filter.PredicateExpression.Add(_PredicateExpression);
+
+            using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+            {
+                toReturn = adapter.DeleteEntitiesDirectly("PhieugiaohangDEntity", filter);
+            }
+            return toReturn;
+        }
+    }
+
 }

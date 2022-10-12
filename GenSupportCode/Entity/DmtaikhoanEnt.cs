@@ -60,18 +60,18 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DmtaikhoanEntity _dmtaikhoanEntity = new DmtaikhoanEntity();
 			
-			_dmtaikhoan.Matk = txt_Matk.Text.Trim();
-			_dmtaikhoan.Tentk = txt_Tentk.Text.Trim();
-			_dmtaikhoan.Bactk = txt_Bactk.Text.Trim();
-			_dmtaikhoan.Tinhchattk = txt_Tinhchattk.Text.Trim();
-			_dmtaikhoan.Matkcha = txt_Matkcha.Text.Trim();
-			_dmtaikhoan.Trongbang = txt_Trongbang.Text.Trim();
-			_dmtaikhoan.Doituongtd = txt_Doituongtd.Text.Trim();
-			_dmtaikhoan.Khoanmuctd = txt_Khoanmuctd.Text.Trim();
-			_dmtaikhoan.Ngaytao = txt_Ngaytao.Text.Trim();
-			_dmtaikhoan.Nguoitao = txt_Nguoitao.Text.Trim();
-			_dmtaikhoan.Ngaysua = txt_Ngaysua.Text.Trim();
-			_dmtaikhoan.Nguoisua = txt_Nguoisua.Text.Trim();
+			_dmtaikhoanEntity.Matk = txt_Matk.Text.Trim();
+			_dmtaikhoanEntity.Tentk = txt_Tentk.Text.Trim();
+			_dmtaikhoanEntity.Bactk = txt_Bactk.Text.Trim();
+			_dmtaikhoanEntity.Tinhchattk = txt_Tinhchattk.Text.Trim();
+			_dmtaikhoanEntity.Matkcha = txt_Matkcha.Text.Trim();
+			_dmtaikhoanEntity.Trongbang = txt_Trongbang.Text.Trim();
+			_dmtaikhoanEntity.Doituongtd = txt_Doituongtd.Text.Trim();
+			_dmtaikhoanEntity.Khoanmuctd = txt_Khoanmuctd.Text.Trim();
+			_dmtaikhoanEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_dmtaikhoanEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_dmtaikhoanEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_dmtaikhoanEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:15 AM
+// Code is generated on: Wednesday, October 12, 2022 3:04:15 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -21,8 +21,10 @@ namespace GD.BBPH.DAL
 		Id,
 		///<summary>Sobaogia. </summary>
 		Sobaogia,
-		///<summary>Loaihang. </summary>
-		Loaihang,
+		///<summary>Machungloai. </summary>
+		Machungloai,
+		///<summary>Tenchungloai. </summary>
+		Tenchungloai,
 		///<summary>Masp. </summary>
 		Masp,
 		///<summary>Tenhang. </summary>
@@ -89,14 +91,36 @@ namespace GD.BBPH.DAL
 	/// </summary>
 	public enum CongsuatmayFieldIndex:int
 	{
-		///<summary>Macs. </summary>
-		Macs,
+		///<summary>Macongsuat. </summary>
+		Macongsuat,
 		///<summary>Tencongsuat. </summary>
 		Tencongsuat,
-		///<summary>Macd. </summary>
-		Macd,
-		///<summary>Maqc. </summary>
-		Maqc,
+		///<summary>Mamay. </summary>
+		Mamay,
+		///<summary>Madongmay. </summary>
+		Madongmay,
+		///<summary>Macongdoan. </summary>
+		Macongdoan,
+		///<summary>Maquycach1. </summary>
+		Maquycach1,
+		///<summary>Maquycach2. </summary>
+		Maquycach2,
+		///<summary>Maquycach3. </summary>
+		Maquycach3,
+		///<summary>Khotu. </summary>
+		Khotu,
+		///<summary>Khoden. </summary>
+		Khoden,
+		///<summary>Chieudaitu. </summary>
+		Chieudaitu,
+		///<summary>Chieudaiden. </summary>
+		Chieudaiden,
+		///<summary>Dodaytu. </summary>
+		Dodaytu,
+		///<summary>Dodayden. </summary>
+		Dodayden,
+		///<summary>Tocdo. </summary>
+		Tocdo,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -269,6 +293,32 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmchungloai.
+	/// </summary>
+	public enum DmchungloaiFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Tenchungloai. </summary>
+		Tenchungloai,
+		///<summary>Kichthuoc. </summary>
+		Kichthuoc,
+		///<summary>Trongluong. </summary>
+		Trongluong,
+		///<summary>Somau. </summary>
+		Somau,
+		///<summary>Sohinh. </summary>
+		Sohinh,
+		///<summary>Loaimuc. </summary>
+		Loaimuc,
+		///<summary>Ghichu. </summary>
+		Ghichu,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmcongdoan.
 	/// </summary>
 	public enum DmcongdoanFieldIndex:int
@@ -363,30 +413,64 @@ namespace GD.BBPH.DAL
 		Masp,
 		///<summary>Tensp. </summary>
 		Tensp,
+		///<summary>Maspcuakhach. </summary>
+		Maspcuakhach,
+		///<summary>Machungloai. </summary>
+		Machungloai,
+		///<summary>Tenchungloai. </summary>
+		Tenchungloai,
 		///<summary>Makhach. </summary>
 		Makhach,
 		///<summary>Tenkhach. </summary>
 		Tenkhach,
 		///<summary>Kichthuoc. </summary>
 		Kichthuoc,
-		///<summary>Khoiluongmuc. </summary>
-		Khoiluongmuc,
+		///<summary>Trongluong. </summary>
+		Trongluong,
 		///<summary>Sohinh. </summary>
 		Sohinh,
-		///<summary>Cautrucin. </summary>
-		Cautrucin,
 		///<summary>Somau. </summary>
 		Somau,
 		///<summary>Loaimuc. </summary>
 		Loaimuc,
+		///<summary>Khoiluongmuc. </summary>
+		Khoiluongmuc,
+		///<summary>Cautrucin. </summary>
+		Cautrucin,
+		///<summary>Mamang1. </summary>
+		Mamang1,
+		///<summary>Tenmang1. </summary>
+		Tenmang1,
+		///<summary>Tlmanglop1. </summary>
+		Tlmanglop1,
+		///<summary>Tlkeolop1. </summary>
+		Tlkeolop1,
+		///<summary>Mamang2. </summary>
+		Mamang2,
+		///<summary>Tenmang2. </summary>
+		Tenmang2,
+		///<summary>Tlmanglop2. </summary>
+		Tlmanglop2,
+		///<summary>Tlkeolop2. </summary>
+		Tlkeolop2,
+		///<summary>Dinhluongkeo. </summary>
+		Dinhluongkeo,
 		///<summary>Kichthuoctruc. </summary>
 		Kichthuoctruc,
 		///<summary>Vitri. </summary>
 		Vitri,
-		///<summary>Quycachdonggoi. </summary>
-		Quycachdonggoi,
-		///<summary>Loaithung. </summary>
-		Loaithung,
+		///<summary>Maqcdonggoi. </summary>
+		Maqcdonggoi,
+		///<summary>Tenqcdonggoi. </summary>
+		Tenqcdonggoi,
+		///<summary>Maqcloaithung. </summary>
+		Maqcloaithung,
+		///<summary>Tenqcloaithung. </summary>
+		Tenqcloaithung,
+		///<summary>Maqcthanhpham. </summary>
+		Maqcthanhpham,
+		///<summary>Tenqcthanhpham. </summary>
+		Tenqcthanhpham,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -641,18 +725,16 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
-	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmquycach.
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmnhomquycach.
 	/// </summary>
-	public enum DmquycachFieldIndex:int
+	public enum DmnhomquycachFieldIndex:int
 	{
-		///<summary>Maqc. </summary>
-		Maqc,
-		///<summary>Tenquycach. </summary>
-		Tenquycach,
-		///<summary>Macd. </summary>
-		Macd,
-		///<summary>Maqccha. </summary>
-		Maqccha,
+		///<summary>Manhom. </summary>
+		Manhom,
+		///<summary>Tennhom. </summary>
+		Tennhom,
+		///<summary>Tenrutgon. </summary>
+		Tenrutgon,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -661,10 +743,36 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
-		///<summary>Tencd. </summary>
-		Tencd,
-		///<summary>Tenqccha. </summary>
-		Tenqccha,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmquycach.
+	/// </summary>
+	public enum DmquycachFieldIndex:int
+	{
+		///<summary>Maquycach. </summary>
+		Maquycach,
+		///<summary>Tenquycach. </summary>
+		Tenquycach,
+		///<summary>Macongdoan. </summary>
+		Macongdoan,
+		///<summary>Tencongdoan. </summary>
+		Tencongdoan,
+		///<summary>Manhom. </summary>
+		Manhom,
+		///<summary>Tennhom. </summary>
+		Tennhom,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -827,6 +935,402 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Ketquachia.
+	/// </summary>
+	public enum KetquachiaFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Ngay. </summary>
+		Ngay,
+		///<summary>Ca. </summary>
+		Ca,
+		///<summary>Lenh. </summary>
+		Lenh,
+		///<summary>Masanpham. </summary>
+		Masanpham,
+		///<summary>Macongnhan. </summary>
+		Macongnhan,
+		///<summary>Dauraghep. </summary>
+		Dauraghep,
+		///<summary>Sometvao. </summary>
+		Sometvao,
+		///<summary>Sokgvao. </summary>
+		Sokgvao,
+		///<summary>Socon. </summary>
+		Socon,
+		///<summary>Thoigianbatdau. </summary>
+		Thoigianbatdau,
+		///<summary>Thoigianketthuc. </summary>
+		Thoigianketthuc,
+		///<summary>Thoigianlencuon. </summary>
+		Thoigianlencuon,
+		///<summary>Thoigianhacuon. </summary>
+		Thoigianhacuon,
+		///<summary>Solanhacuon. </summary>
+		Solanhacuon,
+		///<summary>Thoigiancatdau. </summary>
+		Thoigiancatdau,
+		///<summary>Thoigiandoilenh. </summary>
+		Thoigiandoilenh,
+		///<summary>Thoigiansuco. </summary>
+		Thoigiansuco,
+		///<summary>Phein. </summary>
+		Phein,
+		///<summary>Pheghep. </summary>
+		Pheghep,
+		///<summary>Phechia. </summary>
+		Phechia,
+		///<summary>PhethoiNcc. </summary>
+		PhethoiNcc,
+		///<summary>Phesx. </summary>
+		Phesx,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		///<summary>Mamay. </summary>
+		Mamay,
+		///<summary>Tensanpham. </summary>
+		Tensanpham,
+		///<summary>Tenmay. </summary>
+		Tenmay,
+		///<summary>Tencongnhan. </summary>
+		Tencongnhan,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Ketquaghep.
+	/// </summary>
+	public enum KetquaghepFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Ngay. </summary>
+		Ngay,
+		///<summary>Ca. </summary>
+		Ca,
+		///<summary>Mamay. </summary>
+		Mamay,
+		///<summary>Lenhghep. </summary>
+		Lenhghep,
+		///<summary>Masanpham. </summary>
+		Masanpham,
+		///<summary>Macongnhan. </summary>
+		Macongnhan,
+		///<summary>Dauratua. </summary>
+		Dauratua,
+		///<summary>ManginMet. </summary>
+		ManginMet,
+		///<summary>ManginKg. </summary>
+		ManginKg,
+		///<summary>MangcapMet. </summary>
+		MangcapMet,
+		///<summary>MangcapKg. </summary>
+		MangcapKg,
+		///<summary>Solopghep. </summary>
+		Solopghep,
+		///<summary>ThucteMet. </summary>
+		ThucteMet,
+		///<summary>ThucteKg. </summary>
+		ThucteKg,
+		///<summary>Thoigianbatdau. </summary>
+		Thoigianbatdau,
+		///<summary>Thoigianketthuc. </summary>
+		Thoigianketthuc,
+		///<summary>Thoigianchuanbi. </summary>
+		Thoigianchuanbi,
+		///<summary>Thoigiansuco. </summary>
+		Thoigiansuco,
+		///<summary>Thuctekeo. </summary>
+		Thuctekeo,
+		///<summary>Thuctedongran. </summary>
+		Thuctedongran,
+		///<summary>Thuctedungmoi. </summary>
+		Thuctedungmoi,
+		///<summary>Phein. </summary>
+		Phein,
+		///<summary>Pheghep. </summary>
+		Pheghep,
+		///<summary>PheNcc. </summary>
+		PheNcc,
+		///<summary>PheSx. </summary>
+		PheSx,
+		///<summary>Phethoi. </summary>
+		Phethoi,
+		///<summary>Pheintui. </summary>
+		Pheintui,
+		///<summary>Phegheptui. </summary>
+		Phegheptui,
+		///<summary>PhethoiNcc. </summary>
+		PhethoiNcc,
+		///<summary>Phesxtui. </summary>
+		Phesxtui,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		///<summary>Tensanpham. </summary>
+		Tensanpham,
+		///<summary>Tenmay. </summary>
+		Tenmay,
+		///<summary>Tencongnhan. </summary>
+		Tencongnhan,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Ketquain.
+	/// </summary>
+	public enum KetquainFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Ngay. </summary>
+		Ngay,
+		///<summary>Ca. </summary>
+		Ca,
+		///<summary>Mamay. </summary>
+		Mamay,
+		///<summary>Lenhin. </summary>
+		Lenhin,
+		///<summary>Masanpham. </summary>
+		Masanpham,
+		///<summary>Macongnhan. </summary>
+		Macongnhan,
+		///<summary>SometLsx. </summary>
+		SometLsx,
+		///<summary>Sometcap. </summary>
+		Sometcap,
+		///<summary>Sokgcap. </summary>
+		Sokgcap,
+		///<summary>Thuctein. </summary>
+		Thuctein,
+		///<summary>Sokgin. </summary>
+		Sokgin,
+		///<summary>Saihongthucte. </summary>
+		Saihongthucte,
+		///<summary>Thoigianbatdau. </summary>
+		Thoigianbatdau,
+		///<summary>Thoigianketthuc. </summary>
+		Thoigianketthuc,
+		///<summary>Thoigianchuanbi. </summary>
+		Thoigianchuanbi,
+		///<summary>Thoigiansuco. </summary>
+		Thoigiansuco,
+		///<summary>PheNcc. </summary>
+		PheNcc,
+		///<summary>PheSx. </summary>
+		PheSx,
+		///<summary>Tongm2dm. </summary>
+		Tongm2dm,
+		///<summary>M2saihongtt. </summary>
+		M2saihongtt,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		///<summary>Tensanpham. </summary>
+		Tensanpham,
+		///<summary>Tenmay. </summary>
+		Tenmay,
+		///<summary>Tencongnhan. </summary>
+		Tencongnhan,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Ketquainmau.
+	/// </summary>
+	public enum KetquainmauFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>KetquainId. </summary>
+		KetquainId,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tensp. </summary>
+		Tensp,
+		///<summary>Mamau. </summary>
+		Mamau,
+		///<summary>Tenmau. </summary>
+		Tenmau,
+		///<summary>Xuatdodang. </summary>
+		Xuatdodang,
+		///<summary>Xuatnguyen. </summary>
+		Xuatnguyen,
+		///<summary>Nhapdodang. </summary>
+		Nhapdodang,
+		///<summary>Nhapnguyen. </summary>
+		Nhapnguyen,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Ketquathoi.
+	/// </summary>
+	public enum KetquathoiFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Ngay. </summary>
+		Ngay,
+		///<summary>Ca. </summary>
+		Ca,
+		///<summary>Mamay. </summary>
+		Mamay,
+		///<summary>Lenhthoi. </summary>
+		Lenhthoi,
+		///<summary>Mamang. </summary>
+		Mamang,
+		///<summary>Macongnhan. </summary>
+		Macongnhan,
+		///<summary>Somet. </summary>
+		Somet,
+		///<summary>Sokg. </summary>
+		Sokg,
+		///<summary>Sokgquydoi. </summary>
+		Sokgquydoi,
+		///<summary>Chenhlechkg. </summary>
+		Chenhlechkg,
+		///<summary>Chatluong. </summary>
+		Chatluong,
+		///<summary>Phelieuthucte. </summary>
+		Phelieuthucte,
+		///<summary>Tongsp. </summary>
+		Tongsp,
+		///<summary>Thoigianbatdau. </summary>
+		Thoigianbatdau,
+		///<summary>Thoigianketthuc. </summary>
+		Thoigianketthuc,
+		///<summary>Thoigianchuanbi. </summary>
+		Thoigianchuanbi,
+		///<summary>Thoigiansuco. </summary>
+		Thoigiansuco,
+		///<summary>Sokgdukiendat. </summary>
+		Sokgdukiendat,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		///<summary>Tenmang. </summary>
+		Tenmang,
+		///<summary>Tenmay. </summary>
+		Tenmay,
+		///<summary>Tencongnhan. </summary>
+		Tencongnhan,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Ketquatua.
+	/// </summary>
+	public enum KetquatuaFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Ngay. </summary>
+		Ngay,
+		///<summary>Ca. </summary>
+		Ca,
+		///<summary>Mamay. </summary>
+		Mamay,
+		///<summary>Lenhtua. </summary>
+		Lenhtua,
+		///<summary>Masanpham. </summary>
+		Masanpham,
+		///<summary>Macongnhan. </summary>
+		Macongnhan,
+		///<summary>Daurain. </summary>
+		Daurain,
+		///<summary>SoMetvao. </summary>
+		SoMetvao,
+		///<summary>SoKgvao. </summary>
+		SoKgvao,
+		///<summary>SoMetra. </summary>
+		SoMetra,
+		///<summary>SoKgra. </summary>
+		SoKgra,
+		///<summary>Saihongthucte. </summary>
+		Saihongthucte,
+		///<summary>Thoigianbatdau. </summary>
+		Thoigianbatdau,
+		///<summary>Thoigianketthuc. </summary>
+		Thoigianketthuc,
+		///<summary>Thoigianchuanbi. </summary>
+		Thoigianchuanbi,
+		///<summary>Thoigianhacuon. </summary>
+		Thoigianhacuon,
+		///<summary>Thoigiancatdau. </summary>
+		Thoigiancatdau,
+		///<summary>Thoigiandoilenh. </summary>
+		Thoigiandoilenh,
+		///<summary>Thoigiansuco. </summary>
+		Thoigiansuco,
+		///<summary>Phein. </summary>
+		Phein,
+		///<summary>Pheghep. </summary>
+		Pheghep,
+		///<summary>Phethoi. </summary>
+		Phethoi,
+		///<summary>Phesx. </summary>
+		Phesx,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		///<summary>Tensanpham. </summary>
+		Tensanpham,
+		///<summary>Tenmay. </summary>
+		Tenmay,
+		///<summary>Tencongnhan. </summary>
+		Tencongnhan,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Logbackup.
 	/// </summary>
 	public enum LogbackupFieldIndex:int
@@ -839,6 +1343,36 @@ namespace GD.BBPH.DAL
 		Duongdan,
 		///<summary>Ngay. </summary>
 		Ngay,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Maucuahang.
+	/// </summary>
+	public enum MaucuahangFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tensp. </summary>
+		Tensp,
+		///<summary>Mamau. </summary>
+		Mamau,
+		///<summary>Tenmau. </summary>
+		Tenmau,
+		///<summary>Klmau. </summary>
+		Klmau,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1049,6 +1583,58 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Tknguyenlieuthoi.
+	/// </summary>
+	public enum TknguyenlieuthoiFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Ngay. </summary>
+		Ngay,
+		///<summary>Ca. </summary>
+		Ca,
+		///<summary>Manguyenlieu. </summary>
+		Manguyenlieu,
+		///<summary>Tennguyenlieu. </summary>
+		Tennguyenlieu,
+		///<summary>Klnhap. </summary>
+		Klnhap,
+		///<summary>Klxuat. </summary>
+		Klxuat,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Truccuahang.
+	/// </summary>
+	public enum TruccuahangFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tensp. </summary>
+		Tensp,
+		///<summary>Stttruc. </summary>
+		Stttruc,
+		///<summary>Matruc. </summary>
+		Matruc,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Users.
 	/// </summary>
 	public enum UsersFieldIndex:int
@@ -1100,6 +1686,8 @@ namespace GD.BBPH.DAL
 		DmcapmaEntity,
 		///<summary>Dmchucvu</summary>
 		DmchucvuEntity,
+		///<summary>Dmchungloai</summary>
+		DmchungloaiEntity,
 		///<summary>Dmcongdoan</summary>
 		DmcongdoanEntity,
 		///<summary>Dmcongnhan</summary>
@@ -1124,6 +1712,8 @@ namespace GD.BBPH.DAL
 		DmnguyenlieuEntity,
 		///<summary>Dmnhomnguyenlieu</summary>
 		DmnhomnguyenlieuEntity,
+		///<summary>Dmnhomquycach</summary>
+		DmnhomquycachEntity,
 		///<summary>Dmquycach</summary>
 		DmquycachEntity,
 		///<summary>Dmtaikhoan</summary>
@@ -1134,8 +1724,22 @@ namespace GD.BBPH.DAL
 		DonhangHEntity,
 		///<summary>Hangtralai</summary>
 		HangtralaiEntity,
+		///<summary>Ketquachia</summary>
+		KetquachiaEntity,
+		///<summary>Ketquaghep</summary>
+		KetquaghepEntity,
+		///<summary>Ketquain</summary>
+		KetquainEntity,
+		///<summary>Ketquainmau</summary>
+		KetquainmauEntity,
+		///<summary>Ketquathoi</summary>
+		KetquathoiEntity,
+		///<summary>Ketquatua</summary>
+		KetquatuaEntity,
 		///<summary>Logbackup</summary>
 		LogbackupEntity,
+		///<summary>Maucuahang</summary>
+		MaucuahangEntity,
 		///<summary>Menu</summary>
 		MenuEntity,
 		///<summary>Menurole</summary>
@@ -1150,6 +1754,10 @@ namespace GD.BBPH.DAL
 		ThamsoEntity,
 		///<summary>Thanhphanmau</summary>
 		ThanhphanmauEntity,
+		///<summary>Tknguyenlieuthoi</summary>
+		TknguyenlieuthoiEntity,
+		///<summary>Truccuahang</summary>
+		TruccuahangEntity,
 		///<summary>Users</summary>
 		UsersEntity
 	}

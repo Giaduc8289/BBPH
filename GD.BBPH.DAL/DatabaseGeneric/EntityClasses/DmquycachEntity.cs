@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
+// Code is generated on: Wednesday, October 12, 2022 3:04:17 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -39,7 +39,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		#region Class Member Declarations
 
 
-		private DmcongdoanEntity _dmcongdoan;
+
 
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
@@ -53,8 +53,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>All names of fields mapped onto a relation. Usable for in-memory filtering</summary>
 		public static class MemberNames
 		{
-			/// <summary>Member name Dmcongdoan</summary>
-			public static readonly string Dmcongdoan = "Dmcongdoan";
+
 
 
 
@@ -90,22 +89,22 @@ namespace GD.BBPH.DAL.EntityClasses
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="maqc">PK value for Dmquycach which data should be fetched into this Dmquycach object</param>
+		/// <param name="maquycach">PK value for Dmquycach which data should be fetched into this Dmquycach object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DmquycachEntity(System.String maqc):base("DmquycachEntity")
+		public DmquycachEntity(System.String maquycach):base("DmquycachEntity")
 		{
 			InitClassEmpty(null, CreateFields());
-			this.Maqc = maqc;
+			this.Maquycach = maquycach;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="maqc">PK value for Dmquycach which data should be fetched into this Dmquycach object</param>
+		/// <param name="maquycach">PK value for Dmquycach which data should be fetched into this Dmquycach object</param>
 		/// <param name="validator">The custom validator object for this DmquycachEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DmquycachEntity(System.String maqc, IValidator validator):base("DmquycachEntity")
+		public DmquycachEntity(System.String maquycach, IValidator validator):base("DmquycachEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
-			this.Maqc = maqc;
+			this.Maquycach = maquycach;
 		}
 
 		/// <summary> Protected CTor for deserialization</summary>
@@ -118,11 +117,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 
 
-				_dmcongdoan = (DmcongdoanEntity)info.GetValue("_dmcongdoan", typeof(DmcongdoanEntity));
-				if(_dmcongdoan!=null)
-				{
-					_dmcongdoan.AfterSave+=new EventHandler(OnEntityAfterSave);
-				}
+
 
 				base.FixupDeserialization(FieldInfoProviderSingleton.GetInstance());
 			}
@@ -138,9 +133,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch((DmquycachFieldIndex)fieldIndex)
 			{
-				case DmquycachFieldIndex.Macd:
-					DesetupSyncDmcongdoan(true, false);
-					break;
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
 					break;
@@ -163,9 +155,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(propertyName)
 			{
-				case "Dmcongdoan":
-					this.Dmcongdoan = (DmcongdoanEntity)entity;
-					break;
+
 
 
 
@@ -190,9 +180,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			RelationCollection toReturn = new RelationCollection();
 			switch(fieldName)
 			{
-				case "Dmcongdoan":
-					toReturn.Add(DmquycachEntity.Relations.DmcongdoanEntityUsingMacd);
-					break;
+
 
 
 
@@ -231,9 +219,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-				case "Dmcongdoan":
-					SetupSyncDmcongdoan(relatedEntity);
-					break;
+
 
 
 				default:
@@ -250,9 +236,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-				case "Dmcongdoan":
-					DesetupSyncDmcongdoan(false, true);
-					break;
+
 
 
 				default:
@@ -275,10 +259,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntity2> GetDependentRelatedEntities()
 		{
 			List<IEntity2> toReturn = new List<IEntity2>();
-			if(_dmcongdoan!=null)
-			{
-				toReturn.Add(_dmcongdoan);
-			}
+
 
 			return toReturn;
 		}
@@ -305,7 +286,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 
 
-				info.AddValue("_dmcongdoan", (!this.MarkedForDeletion?_dmcongdoan:null));
+
 
 			}
 			
@@ -343,15 +324,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entity of type 'Dmcongdoan' to this entity. Use DataAccessAdapter.FetchNewEntity() to fetch this related entity.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmcongdoan()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmcongdoanFields.Macd, null, ComparisonOperator.Equal, this.Macd));
-			return bucket;
-		}
 
 	
 		
@@ -420,7 +392,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override Dictionary<string, object> GetRelatedData()
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
-			toReturn.Add("Dmcongdoan", _dmcongdoan);
+
 
 
 
@@ -432,10 +404,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 
 
-			if(_dmcongdoan!=null)
-			{
-				_dmcongdoan.ActiveContext = base.ActiveContext;
-			}
+
 
 		}
 
@@ -445,7 +414,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-			_dmcongdoan = null;
+
 
 			PerformDependencyInjection();
 			
@@ -464,16 +433,22 @@ namespace GD.BBPH.DAL.EntityClasses
 			Dictionary<string, string> fieldHashtable = null;
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Maqc", fieldHashtable);
+			_fieldsCustomProperties.Add("Maquycach", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tenquycach", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Macd", fieldHashtable);
+			_fieldsCustomProperties.Add("Macongdoan", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Maqccha", fieldHashtable);
+			_fieldsCustomProperties.Add("Tencongdoan", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Manhom", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tennhom", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
@@ -486,47 +461,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tencd", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tenqccha", fieldHashtable);
 		}
 		#endregion
 
-		/// <summary> Removes the sync logic for member _dmcongdoan</summary>
-		/// <param name="signalRelatedEntity">If set to true, it will call the related entity's UnsetRelatedEntity method</param>
-		/// <param name="resetFKFields">if set to true it will also reset the FK fields pointing to the related entity</param>
-		private void DesetupSyncDmcongdoan(bool signalRelatedEntity, bool resetFKFields)
-		{
-			base.PerformDesetupSyncRelatedEntity( _dmcongdoan, new PropertyChangedEventHandler( OnDmcongdoanPropertyChanged ), "Dmcongdoan", DmquycachEntity.Relations.DmcongdoanEntityUsingMacd, true, signalRelatedEntity, "Dmquycach", resetFKFields, new int[] { (int)DmquycachFieldIndex.Macd } );		
-			_dmcongdoan = null;
-		}
-
-		/// <summary> setups the sync logic for member _dmcongdoan</summary>
-		/// <param name="relatedEntity">Instance to set as the related entity of type entityType</param>
-		private void SetupSyncDmcongdoan(IEntity2 relatedEntity)
-		{
-			if(_dmcongdoan!=relatedEntity)
-			{
-				DesetupSyncDmcongdoan(true, true);
-				_dmcongdoan = (DmcongdoanEntity)relatedEntity;
-				base.PerformSetupSyncRelatedEntity( _dmcongdoan, new PropertyChangedEventHandler( OnDmcongdoanPropertyChanged ), "Dmcongdoan", DmquycachEntity.Relations.DmcongdoanEntityUsingMacd, true, new string[] {  } );
-			}
-		}
-		
-		/// <summary>Handles property change events of properties in a related entity.</summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void OnDmcongdoanPropertyChanged( object sender, PropertyChangedEventArgs e )
-		{
-			switch( e.PropertyName )
-			{
-				default:
-					break;
-			}
-		}
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
@@ -563,17 +500,6 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmcongdoan' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmcongdoan
-		{
-			get
-			{
-				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(DmcongdoanEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmcongdoan")[0], (int)GD.BBPH.DAL.EntityType.DmquycachEntity, (int)GD.BBPH.DAL.EntityType.DmcongdoanEntity, 0, null, null, null, null, "Dmcongdoan", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
-			}
-		}
 
 
 		/// <summary> The custom properties for the type of this entity instance.</summary>
@@ -600,20 +526,20 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return DmquycachEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The Maqc property of the Entity Dmquycach<br/><br/>
+		/// <summary> The Maquycach property of the Entity Dmquycach<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmquycach"."Maqc"<br/>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Maquycach"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
-		public virtual System.String Maqc
+		public virtual System.String Maquycach
 		{
-			get { return (System.String)GetValue((int)DmquycachFieldIndex.Maqc, true); }
-			set	{ SetValue((int)DmquycachFieldIndex.Maqc, value); }
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Maquycach, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Maquycach, value); }
 		}
 
 		/// <summary> The Tenquycach property of the Entity Dmquycach<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmquycach"."Tenquycach"<br/>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Tenquycach"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
 		public virtual System.String Tenquycach
@@ -622,31 +548,53 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmquycachFieldIndex.Tenquycach, value); }
 		}
 
-		/// <summary> The Macd property of the Entity Dmquycach<br/><br/>
+		/// <summary> The Macongdoan property of the Entity Dmquycach<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmquycach"."Macd"<br/>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Macongdoan"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Macd
+		public virtual System.String Macongdoan
 		{
-			get { return (System.String)GetValue((int)DmquycachFieldIndex.Macd, true); }
-			set	{ SetValue((int)DmquycachFieldIndex.Macd, value); }
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Macongdoan, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Macongdoan, value); }
 		}
 
-		/// <summary> The Maqccha property of the Entity Dmquycach<br/><br/>
+		/// <summary> The Tencongdoan property of the Entity Dmquycach<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmquycach"."Maqccha"<br/>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Tencongdoan"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tencongdoan
+		{
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Tencongdoan, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Tencongdoan, value); }
+		}
+
+		/// <summary> The Manhom property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Manhom"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Maqccha
+		public virtual System.String Manhom
 		{
-			get { return (System.String)GetValue((int)DmquycachFieldIndex.Maqccha, true); }
-			set	{ SetValue((int)DmquycachFieldIndex.Maqccha, value); }
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Manhom, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Manhom, value); }
+		}
+
+		/// <summary> The Tennhom property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Tennhom"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tennhom
+		{
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Tennhom, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Tennhom, value); }
 		}
 
 		/// <summary> The Ngaytao property of the Entity Dmquycach<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmquycach"."Ngaytao"<br/>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Ngaytao"<br/>
 		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngaytao
@@ -657,7 +605,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Nguoitao property of the Entity Dmquycach<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmquycach"."Nguoitao"<br/>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Nguoitao"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguoitao
@@ -668,7 +616,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Ngaysua property of the Entity Dmquycach<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmquycach"."Ngaysua"<br/>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Ngaysua"<br/>
 		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngaysua
@@ -679,7 +627,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Nguoisua property of the Entity Dmquycach<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmquycach"."Nguoisua"<br/>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Nguoisua"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguoisua
@@ -688,64 +636,8 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmquycachFieldIndex.Nguoisua, value); }
 		}
 
-		/// <summary> The Tencd property of the Entity Dmquycach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmquycach"."Tencd"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tencd
-		{
-			get { return (System.String)GetValue((int)DmquycachFieldIndex.Tencd, true); }
-			set	{ SetValue((int)DmquycachFieldIndex.Tencd, value); }
-		}
-
-		/// <summary> The Tenqccha property of the Entity Dmquycach<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmquycach"."Tenqccha"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tenqccha
-		{
-			get { return (System.String)GetValue((int)DmquycachFieldIndex.Tenqccha, true); }
-			set	{ SetValue((int)DmquycachFieldIndex.Tenqccha, value); }
-		}
 
 
-
-		/// <summary> Gets / sets related entity of type 'DmcongdoanEntity' which has to be set using a fetch action earlier. If no related entity
-		/// is set for this property, null is returned. This property is not visible in databound grids.</summary>
-		[Browsable(false)]
-		public virtual DmcongdoanEntity Dmcongdoan
-		{
-			get
-			{
-				return _dmcongdoan;
-			}
-			set
-			{
-				if(base.IsDeserializing)
-				{
-					SetupSyncDmcongdoan(value);
-				}
-				else
-				{
-					if(value==null)
-					{
-						if(_dmcongdoan != null)
-						{
-							_dmcongdoan.UnsetRelatedEntity(this, "Dmquycach");
-						}
-					}
-					else
-					{
-						if(_dmcongdoan!=value)
-						{
-							((IEntity2)value).SetRelatedEntity(this, "Dmquycach");
-						}
-					}
-				}
-			}
-		}
 
 	
 		

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
+// Code is generated on: Wednesday, October 12, 2022 3:04:17 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -26,7 +26,6 @@ namespace GD.BBPH.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 
 	/// <summary>
 	/// Entity class which represents the entity 'BaogiaD'.<br/><br/>
@@ -35,19 +34,16 @@ namespace GD.BBPH.DAL.EntityClasses
 	[Serializable]
 	public partial class BaogiaDEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END
-			
+		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
 
 
 		private BaogiaHEntity _baogiaH;
-		private DmhangEntity _dmhang;
 
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Statics
@@ -59,8 +55,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			/// <summary>Member name BaogiaH</summary>
 			public static readonly string BaogiaH = "BaogiaH";
-			/// <summary>Member name Dmhang</summary>
-			public static readonly string Dmhang = "Dmhang";
 
 
 
@@ -129,18 +123,12 @@ namespace GD.BBPH.DAL.EntityClasses
 				{
 					_baogiaH.AfterSave+=new EventHandler(OnEntityAfterSave);
 				}
-				_dmhang = (DmhangEntity)info.GetValue("_dmhang", typeof(DmhangEntity));
-				if(_dmhang!=null)
-				{
-					_dmhang.AfterSave+=new EventHandler(OnEntityAfterSave);
-				}
 
 				base.FixupDeserialization(FieldInfoProviderSingleton.GetInstance());
 			}
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 		}
 
 		
@@ -152,9 +140,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				case BaogiaDFieldIndex.Sobaogia:
 					DesetupSyncBaogiaH(true, false);
-					break;
-				case BaogiaDFieldIndex.Masp:
-					DesetupSyncDmhang(true, false);
 					break;
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
@@ -180,9 +165,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				case "BaogiaH":
 					this.BaogiaH = (BaogiaHEntity)entity;
-					break;
-				case "Dmhang":
-					this.Dmhang = (DmhangEntity)entity;
 					break;
 
 
@@ -211,9 +193,6 @@ namespace GD.BBPH.DAL.EntityClasses
 				case "BaogiaH":
 					toReturn.Add(BaogiaDEntity.Relations.BaogiaHEntityUsingSobaogia);
 					break;
-				case "Dmhang":
-					toReturn.Add(BaogiaDEntity.Relations.DmhangEntityUsingMasp);
-					break;
 
 
 
@@ -239,7 +218,6 @@ namespace GD.BBPH.DAL.EntityClasses
 					return ((numberOfOneWayRelations > 0) || base.CheckOneWayRelations(null));
 
 
-
 				default:
 					return base.CheckOneWayRelations(propertyName);
 			}
@@ -255,9 +233,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				case "BaogiaH":
 					SetupSyncBaogiaH(relatedEntity);
-					break;
-				case "Dmhang":
-					SetupSyncDmhang(relatedEntity);
 					break;
 
 
@@ -277,9 +252,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				case "BaogiaH":
 					DesetupSyncBaogiaH(false, true);
-					break;
-				case "Dmhang":
-					DesetupSyncDmhang(false, true);
 					break;
 
 
@@ -306,10 +278,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			if(_baogiaH!=null)
 			{
 				toReturn.Add(_baogiaH);
-			}
-			if(_dmhang!=null)
-			{
-				toReturn.Add(_dmhang);
 			}
 
 			return toReturn;
@@ -338,13 +306,11 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 				info.AddValue("_baogiaH", (!this.MarkedForDeletion?_baogiaH:null));
-				info.AddValue("_dmhang", (!this.MarkedForDeletion?_dmhang:null));
 
 			}
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			base.GetObjectData(info, context);
 		}
 
@@ -384,16 +350,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			IRelationPredicateBucket bucket = new RelationPredicateBucket();
 			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(BaogiaHFields.Sobaogia, null, ComparisonOperator.Equal, this.Sobaogia));
-			return bucket;
-		}
-
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entity of type 'Dmhang' to this entity. Use DataAccessAdapter.FetchNewEntity() to fetch this related entity.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmhang()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmhangFields.Masp, null, ComparisonOperator.Equal, this.Masp));
 			return bucket;
 		}
 
@@ -465,7 +421,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
 			toReturn.Add("BaogiaH", _baogiaH);
-			toReturn.Add("Dmhang", _dmhang);
 
 
 
@@ -481,10 +436,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				_baogiaH.ActiveContext = base.ActiveContext;
 			}
-			if(_dmhang!=null)
-			{
-				_dmhang.ActiveContext = base.ActiveContext;
-			}
 
 		}
 
@@ -495,13 +446,11 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 			_baogiaH = null;
-			_dmhang = null;
 
 			PerformDependencyInjection();
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			OnInitClassMembersComplete();
 		}
 
@@ -521,7 +470,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Sobaogia", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Loaihang", fieldHashtable);
+			_fieldsCustomProperties.Add("Machungloai", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenchungloai", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Masp", fieldHashtable);
@@ -591,39 +543,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			}
 		}
 
-		/// <summary> Removes the sync logic for member _dmhang</summary>
-		/// <param name="signalRelatedEntity">If set to true, it will call the related entity's UnsetRelatedEntity method</param>
-		/// <param name="resetFKFields">if set to true it will also reset the FK fields pointing to the related entity</param>
-		private void DesetupSyncDmhang(bool signalRelatedEntity, bool resetFKFields)
-		{
-			base.PerformDesetupSyncRelatedEntity( _dmhang, new PropertyChangedEventHandler( OnDmhangPropertyChanged ), "Dmhang", BaogiaDEntity.Relations.DmhangEntityUsingMasp, true, signalRelatedEntity, "BaogiaD", resetFKFields, new int[] { (int)BaogiaDFieldIndex.Masp } );		
-			_dmhang = null;
-		}
-
-		/// <summary> setups the sync logic for member _dmhang</summary>
-		/// <param name="relatedEntity">Instance to set as the related entity of type entityType</param>
-		private void SetupSyncDmhang(IEntity2 relatedEntity)
-		{
-			if(_dmhang!=relatedEntity)
-			{
-				DesetupSyncDmhang(true, true);
-				_dmhang = (DmhangEntity)relatedEntity;
-				base.PerformSetupSyncRelatedEntity( _dmhang, new PropertyChangedEventHandler( OnDmhangPropertyChanged ), "Dmhang", BaogiaDEntity.Relations.DmhangEntityUsingMasp, true, new string[] {  } );
-			}
-		}
-		
-		/// <summary>Handles property change events of properties in a related entity.</summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void OnDmhangPropertyChanged( object sender, PropertyChangedEventArgs e )
-		{
-			switch( e.PropertyName )
-			{
-				default:
-					break;
-			}
-		}
-
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
 		/// <param name="validator">The validator object for this BaogiaDEntity</param>
@@ -639,7 +558,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 
 			OnInitialized();
 		}
@@ -669,18 +587,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaHEntityFactory))),
 					(IEntityRelation)GetRelationsForField("BaogiaH")[0], (int)GD.BBPH.DAL.EntityType.BaogiaDEntity, (int)GD.BBPH.DAL.EntityType.BaogiaHEntity, 0, null, null, null, null, "BaogiaH", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
-			}
-		}
-
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmhang' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmhang
-		{
-			get
-			{
-				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(DmhangEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmhang")[0], (int)GD.BBPH.DAL.EntityType.BaogiaDEntity, (int)GD.BBPH.DAL.EntityType.DmhangEntity, 0, null, null, null, null, "Dmhang", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
 			}
 		}
 
@@ -731,15 +637,26 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)BaogiaDFieldIndex.Sobaogia, value); }
 		}
 
-		/// <summary> The Loaihang property of the Entity BaogiaD<br/><br/>
+		/// <summary> The Machungloai property of the Entity BaogiaD<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "baogia_d"."Loaihang"<br/>
+		/// <remarks>Mapped on  table field: "baogia_d"."Machungloai"<br/>
+		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Int64> Machungloai
+		{
+			get { return (Nullable<System.Int64>)GetValue((int)BaogiaDFieldIndex.Machungloai, false); }
+			set	{ SetValue((int)BaogiaDFieldIndex.Machungloai, value); }
+		}
+
+		/// <summary> The Tenchungloai property of the Entity BaogiaD<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "baogia_d"."Tenchungloai"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Loaihang
+		public virtual System.String Tenchungloai
 		{
-			get { return (System.String)GetValue((int)BaogiaDFieldIndex.Loaihang, true); }
-			set	{ SetValue((int)BaogiaDFieldIndex.Loaihang, value); }
+			get { return (System.String)GetValue((int)BaogiaDFieldIndex.Tenchungloai, true); }
+			set	{ SetValue((int)BaogiaDFieldIndex.Tenchungloai, value); }
 		}
 
 		/// <summary> The Masp property of the Entity BaogiaD<br/><br/>
@@ -900,41 +817,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			}
 		}
 
-		/// <summary> Gets / sets related entity of type 'DmhangEntity' which has to be set using a fetch action earlier. If no related entity
-		/// is set for this property, null is returned. This property is not visible in databound grids.</summary>
-		[Browsable(false)]
-		public virtual DmhangEntity Dmhang
-		{
-			get
-			{
-				return _dmhang;
-			}
-			set
-			{
-				if(base.IsDeserializing)
-				{
-					SetupSyncDmhang(value);
-				}
-				else
-				{
-					if(value==null)
-					{
-						if(_dmhang != null)
-						{
-							_dmhang.UnsetRelatedEntity(this, "BaogiaD");
-						}
-					}
-					else
-					{
-						if(_dmhang!=value)
-						{
-							((IEntity2)value).SetRelatedEntity(this, "BaogiaD");
-						}
-					}
-				}
-			}
-		}
-
 	
 		
 		/// <summary> Gets the type of the hierarchy this entity is in. </summary>
@@ -962,7 +844,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Included code

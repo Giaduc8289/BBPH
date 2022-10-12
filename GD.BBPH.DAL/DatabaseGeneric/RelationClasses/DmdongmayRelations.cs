@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
+// Code is generated on: Wednesday, October 12, 2022 3:04:16 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -30,7 +30,7 @@ namespace GD.BBPH.DAL.RelationClasses
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
-			toReturn.Add(this.DmmayEntityUsingMadm);
+
 
 			toReturn.Add(this.DmcongdoanEntityUsingMacd);
 			return toReturn;
@@ -38,20 +38,6 @@ namespace GD.BBPH.DAL.RelationClasses
 
 		#region Class Property Declarations
 
-		/// <summary>Returns a new IEntityRelation object, between DmdongmayEntity and DmmayEntity over the 1:n relation they have, using the relation between the fields:
-		/// Dmdongmay.Madm - Dmmay.Madm
-		/// </summary>
-		public virtual IEntityRelation DmmayEntityUsingMadm
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Dmmay" , true);
-				relation.AddEntityFieldPair(DmdongmayFields.Madm, DmmayFields.Madm);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmdongmayEntity", true);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", false);
-				return relation;
-			}
-		}
 
 
 		/// <summary>Returns a new IEntityRelation object, between DmdongmayEntity and DmcongdoanEntity over the m:1 relation they have, using the relation between the fields:

@@ -34,6 +34,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_sothutucongdoan = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
             this.btn_KHOIPHUC = new GD.BBPH.CONTROL.BUTTON();
             this.btn_LUULAI = new GD.BBPH.CONTROL.BUTTON();
@@ -44,8 +46,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAHIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_sothutucongdoan = new GD.BBPH.CONTROL.TEXTBOX();
-            this.label1 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -66,7 +66,7 @@
             // 
             this.uiPanelManager1.BeginPanelInfo();
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(471, 542), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(397, 542), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(508, 542), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -97,7 +97,7 @@
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(474, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(397, 542);
+            this.uiPanel1.Size = new System.Drawing.Size(508, 542);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
@@ -117,8 +117,31 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(395, 518);
+            this.uiPanel1Container.Size = new System.Drawing.Size(506, 518);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_sothutucongdoan
+            // 
+            this.txt_sothutucongdoan.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_sothutucongdoan.BannerText = null;
+            this.txt_sothutucongdoan.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_sothutucongdoan.FormNametoShow = "";
+            this.txt_sothutucongdoan.Is_DateTime = false;
+            this.txt_sothutucongdoan.IsShowForm = false;
+            this.txt_sothutucongdoan.Location = new System.Drawing.Point(136, 79);
+            this.txt_sothutucongdoan.Name = "txt_sothutucongdoan";
+            this.txt_sothutucongdoan.Regular_Expression = null;
+            this.txt_sothutucongdoan.Size = new System.Drawing.Size(138, 20);
+            this.txt_sothutucongdoan.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.TabIndex = 122;
+            this.label1.Text = "Số thứ tự công đoạn";
             // 
             // btn_Thoat
             // 
@@ -244,34 +267,11 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã công đoạn";
             // 
-            // txt_sothutucongdoan
-            // 
-            this.txt_sothutucongdoan.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_sothutucongdoan.BannerText = null;
-            this.txt_sothutucongdoan.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_sothutucongdoan.FormNametoShow = "";
-            this.txt_sothutucongdoan.Is_DateTime = false;
-            this.txt_sothutucongdoan.IsShowForm = false;
-            this.txt_sothutucongdoan.Location = new System.Drawing.Point(136, 79);
-            this.txt_sothutucongdoan.Name = "txt_sothutucongdoan";
-            this.txt_sothutucongdoan.Regular_Expression = null;
-            this.txt_sothutucongdoan.Size = new System.Drawing.Size(138, 20);
-            this.txt_sothutucongdoan.TabIndex = 121;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 13);
-            this.label1.TabIndex = 122;
-            this.label1.Text = "Số thứ tự công đoạn";
-            // 
             // FRM_DMCONGDOAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 548);
+            this.ClientSize = new System.Drawing.Size(985, 548);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Margin = new System.Windows.Forms.Padding(4);

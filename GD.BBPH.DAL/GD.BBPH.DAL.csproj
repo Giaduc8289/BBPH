@@ -128,6 +128,7 @@
     <Compile Include="DatabaseGeneric\EntityClasses\DmbophanEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmcapmaEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmchucvuEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmchungloaiEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmcongdoanEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmcongnhanEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmdongmayEntity.cs" />
@@ -140,15 +141,25 @@
     <Compile Include="DatabaseGeneric\EntityClasses\DmmayEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmnguyenlieuEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmnhomnguyenlieuEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmnhomquycachEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmquycachEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmtaikhoanEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DonhangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DonhangHEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\HangtralaiEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KetquachiaEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KetquaghepEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KetquainEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KetquainmauEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KetquathoiEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KetquatuaEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\MaucuahangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\PhieugiaohangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\PhieugiaohangHEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\ThamsoEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\ThanhphanmauEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\TknguyenlieuthoiEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\TruccuahangEntity.cs" />
     <Compile Include="DatabaseGeneric\HelperClasses\EntityCollection.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
@@ -213,6 +224,7 @@
     <Compile Include="DatabaseGeneric\RelationClasses\DmbophanRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmcapmaRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmchucvuRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmchungloaiRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmcongdoanRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmcongnhanRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmdongmayRelations.cs" />
@@ -225,13 +237,21 @@
     <Compile Include="DatabaseGeneric\RelationClasses\DmmayRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmnguyenlieuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmnhomnguyenlieuRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmnhomquycachRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmquycachRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmtaikhoanRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DonhangDRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DonhangHRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DynamicRelation.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\HangtralaiRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KetquachiaRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KetquaghepRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KetquainmauRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KetquainRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KetquathoiRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KetquatuaRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\LogbackupRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\MaucuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuroleRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\PhieugiaohangDRelations.cs" />
@@ -239,6 +259,8 @@
     <Compile Include="DatabaseGeneric\RelationClasses\RolesRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\ThamsoRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\ThanhphanmauRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\TknguyenlieuthoiRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\TruccuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\UsersRelations.cs" />
     <Compile Include="DatabaseSpecific\ActionProcedures.cs" />
     <Compile Include="DatabaseSpecific\DataAccessAdapter.cs" />

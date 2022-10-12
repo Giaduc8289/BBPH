@@ -116,6 +116,7 @@
     <Compile Include="ManagerBase\DmbophanManagerBase.cs" />
     <Compile Include="ManagerBase\DmcapmaManagerBase.cs" />
     <Compile Include="ManagerBase\DmchucvuManagerBase.cs" />
+    <Compile Include="ManagerBase\DmchungloaiManagerBase.cs" />
     <Compile Include="ManagerBase\DmcongdoanManagerBase.cs" />
     <Compile Include="ManagerBase\DmcongnhanManagerBase.cs" />
     <Compile Include="ManagerBase\DmdongmayManagerBase.cs" />
@@ -128,12 +129,20 @@
     <Compile Include="ManagerBase\DmmayManagerBase.cs" />
     <Compile Include="ManagerBase\DmnguyenlieuManagerBase.cs" />
     <Compile Include="ManagerBase\DmnhomnguyenlieuManagerBase.cs" />
+    <Compile Include="ManagerBase\DmnhomquycachManagerBase.cs" />
     <Compile Include="ManagerBase\DmquycachManagerBase.cs" />
     <Compile Include="ManagerBase\DmtaikhoanManagerBase.cs" />
     <Compile Include="ManagerBase\DonhangDManagerBase.cs" />
     <Compile Include="ManagerBase\DonhangHManagerBase.cs" />
     <Compile Include="ManagerBase\HangtralaiManagerBase.cs" />
+    <Compile Include="ManagerBase\KetquachiaManagerBase.cs" />
+    <Compile Include="ManagerBase\KetquaghepManagerBase.cs" />
+    <Compile Include="ManagerBase\KetquainManagerBase.cs" />
+    <Compile Include="ManagerBase\KetquainmauManagerBase.cs" />
+    <Compile Include="ManagerBase\KetquathoiManagerBase.cs" />
+    <Compile Include="ManagerBase\KetquatuaManagerBase.cs" />
     <Compile Include="ManagerBase\LogbackupManagerBase.cs" />
+    <Compile Include="ManagerBase\MaucuahangManagerBase.cs" />
     <Compile Include="ManagerBase\MenuManagerBase.cs" />
     <Compile Include="ManagerBase\MenuroleManagerBase.cs" />
     <Compile Include="ManagerBase\PhieugiaohangDManagerBase.cs" />
@@ -141,6 +150,8 @@
     <Compile Include="ManagerBase\RolesManagerBase.cs" />
     <Compile Include="ManagerBase\ThamsoManagerBase.cs" />
     <Compile Include="ManagerBase\ThanhphanmauManagerBase.cs" />
+    <Compile Include="ManagerBase\TknguyenlieuthoiManagerBase.cs" />
+    <Compile Include="ManagerBase\TruccuahangManagerBase.cs" />
     <Compile Include="ManagerBase\UsersManagerBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

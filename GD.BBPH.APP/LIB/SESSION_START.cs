@@ -81,6 +81,29 @@ namespace GD.BBPH.APP.LIB
             set { _TS_NGAYCUOINAM = value; }
         }
         #endregion
+        #region NGAYDAUQUY
+        private static DateTime _TS_NGAYDAUQUY = DateTime.Now;
+        public static DateTime TS_NGAYDAUQUY
+        {
+            get
+            {
+                return _TS_NGAYDAUQUY;
+            }
+            set { _TS_NGAYDAUQUY = value; }
+        }
+        #endregion
+        #region NGAYCUOIQUY
+        private static DateTime _TS_NGAYCUOIQUY = DateTime.Now;
+        public static DateTime TS_NGAYCUOIQUY
+        {
+            get
+            {
+                return _TS_NGAYCUOIQUY;
+            }
+            set { _TS_NGAYCUOIQUY = value; }
+        }
+        #endregion
+
         //#region GIOLAMVIEC
         //private static Decimal _TS_GIOLAMVIEC = Convert.ToDecimal(Procedures.Laygiatrithamso("Sogiolamviec"));
         //public static Decimal TS_GIOLAMVIEC
@@ -239,6 +262,19 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMMANG = value; }
         }
         #endregion
+
+        #region DMNHOMQUYCACH
+        private static DataTable _DT_DMNHOMQUYCACH = null;
+        public static DataTable DT_DMNHOMQUYCACH
+        {
+            get
+            {
+                _DT_DMNHOMQUYCACH = new DmnhomquycachManager().SelectAllRDT();
+                return _DT_DMNHOMQUYCACH;
+            }
+            set { _DT_DMNHOMQUYCACH = value; }
+        }
+        #endregion
         #region DMQUYCACH
         private static DataTable _DT_DMQUYCACH = null;
         public static DataTable DT_DMQUYCACH
@@ -264,7 +300,6 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMKHO = value; }
         }
         #endregion
-
         #region DMLYDONHAPXUAT
         private static DataTable _DT_DMLYDONHAPXUAT = null;
         public static DataTable DT_DMLYDONHAPXUAT
@@ -303,7 +338,6 @@ namespace GD.BBPH.APP.LIB
             set { _DT_CTPTMANG_H = value; }
         }
         #endregion
-
         #region CTPTMANG_D
         private static DataTable _DT_CTPTMANG_D = null;
         public static DataTable DT_CTPTMANG_D
@@ -329,7 +363,6 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMMAU = value; }
         }
         #endregion
-
         #region TPMAU
         private static DataTable _DT_TPMAU = null;
         public static DataTable DT_TPMAU
@@ -368,7 +401,6 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMNHOMNGUYENLIEU = value; }
         }
         #endregion
-
         #region DT_DMNGUYENLIEU
         private static DataTable _DT_DMNGUYENLIEU = null;
         public static DataTable DT_DMNGUYENLIEU
@@ -407,7 +439,6 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DONHANG_H = value; }
         }
         #endregion
-
         #region DONHANG_D
         private static DataTable _DT_DONHANG_D = null;
         public static DataTable DT_DONHANG_D
@@ -421,7 +452,43 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region PHIEUGIAOHANG_H
+        private static DataTable _DT_PHIEUGIAOHANG_H = null;
+        public static DataTable DT_PHIEUGIAOHANG_H
+        {
+            get
+            {
+                _DT_PHIEUGIAOHANG_H = new PhieugiaohangHManager().SelectAllRDT();
+                return _DT_PHIEUGIAOHANG_H;
+            }
+            set { _DT_PHIEUGIAOHANG_H = value; }
+        }
+        #endregion
+        #region PHIEUGIAOHANG_D
+        private static DataTable _DT_PHIEUGIAOHANG_D = null;
+        public static DataTable DT_PHIEUGIAOHANG_D
+        {
+            get
+            {
+                _DT_PHIEUGIAOHANG_D = new PhieugiaohangHManager().SelectAllRDT();
+                return _DT_PHIEUGIAOHANG_D;
+            }
+            set { _DT_PHIEUGIAOHANG_D = value; }
+        }
+        #endregion
 
+        #region KQTHOI
+        private static DataTable _DT_KQTHOI = null;
+        public static DataTable DT_KQTHOI
+        {
+            get
+            {
+                _DT_KQTHOI = new KetquathoiManager().SelectAllRDT();
+                return _DT_KQTHOI;
+            }
+            set { _DT_KQTHOI = value; }
+        }
+        #endregion
         #region HANGTRALAI
         private static DataTable _DT_HANGTRALAI = null;
         public static DataTable DT_HANGTRALAI

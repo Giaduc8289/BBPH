@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:15 AM
+// Code is generated on: Wednesday, October 12, 2022 3:04:16 PM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -88,6 +88,9 @@ namespace GD.BBPH.DAL.Linq
 				case GD.BBPH.DAL.EntityType.DmchucvuEntity:
 					toReturn = this.Dmchucvu;
 					break;
+				case GD.BBPH.DAL.EntityType.DmchungloaiEntity:
+					toReturn = this.Dmchungloai;
+					break;
 				case GD.BBPH.DAL.EntityType.DmcongdoanEntity:
 					toReturn = this.Dmcongdoan;
 					break;
@@ -124,6 +127,9 @@ namespace GD.BBPH.DAL.Linq
 				case GD.BBPH.DAL.EntityType.DmnhomnguyenlieuEntity:
 					toReturn = this.Dmnhomnguyenlieu;
 					break;
+				case GD.BBPH.DAL.EntityType.DmnhomquycachEntity:
+					toReturn = this.Dmnhomquycach;
+					break;
 				case GD.BBPH.DAL.EntityType.DmquycachEntity:
 					toReturn = this.Dmquycach;
 					break;
@@ -139,8 +145,29 @@ namespace GD.BBPH.DAL.Linq
 				case GD.BBPH.DAL.EntityType.HangtralaiEntity:
 					toReturn = this.Hangtralai;
 					break;
+				case GD.BBPH.DAL.EntityType.KetquachiaEntity:
+					toReturn = this.Ketquachia;
+					break;
+				case GD.BBPH.DAL.EntityType.KetquaghepEntity:
+					toReturn = this.Ketquaghep;
+					break;
+				case GD.BBPH.DAL.EntityType.KetquainEntity:
+					toReturn = this.Ketquain;
+					break;
+				case GD.BBPH.DAL.EntityType.KetquainmauEntity:
+					toReturn = this.Ketquainmau;
+					break;
+				case GD.BBPH.DAL.EntityType.KetquathoiEntity:
+					toReturn = this.Ketquathoi;
+					break;
+				case GD.BBPH.DAL.EntityType.KetquatuaEntity:
+					toReturn = this.Ketquatua;
+					break;
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					toReturn = this.Logbackup;
+					break;
+				case GD.BBPH.DAL.EntityType.MaucuahangEntity:
+					toReturn = this.Maucuahang;
 					break;
 				case GD.BBPH.DAL.EntityType.MenuEntity:
 					toReturn = this.Menu;
@@ -162,6 +189,12 @@ namespace GD.BBPH.DAL.Linq
 					break;
 				case GD.BBPH.DAL.EntityType.ThanhphanmauEntity:
 					toReturn = this.Thanhphanmau;
+					break;
+				case GD.BBPH.DAL.EntityType.TknguyenlieuthoiEntity:
+					toReturn = this.Tknguyenlieuthoi;
+					break;
+				case GD.BBPH.DAL.EntityType.TruccuahangEntity:
+					toReturn = this.Truccuahang;
 					break;
 				case GD.BBPH.DAL.EntityType.UsersEntity:
 					toReturn = this.Users;
@@ -225,6 +258,12 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<DmchucvuEntity> Dmchucvu
 		{
 			get { return new DataSource2<DmchucvuEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting DmchungloaiEntity instances in the database.</summary>
+		public DataSource2<DmchungloaiEntity> Dmchungloai
+		{
+			get { return new DataSource2<DmchungloaiEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting DmcongdoanEntity instances in the database.</summary>
@@ -299,6 +338,12 @@ namespace GD.BBPH.DAL.Linq
 			get { return new DataSource2<DmnhomnguyenlieuEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
+		/// <summary>returns the datasource to use in a Linq query when targeting DmnhomquycachEntity instances in the database.</summary>
+		public DataSource2<DmnhomquycachEntity> Dmnhomquycach
+		{
+			get { return new DataSource2<DmnhomquycachEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
 		/// <summary>returns the datasource to use in a Linq query when targeting DmquycachEntity instances in the database.</summary>
 		public DataSource2<DmquycachEntity> Dmquycach
 		{
@@ -329,10 +374,52 @@ namespace GD.BBPH.DAL.Linq
 			get { return new DataSource2<HangtralaiEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
+		/// <summary>returns the datasource to use in a Linq query when targeting KetquachiaEntity instances in the database.</summary>
+		public DataSource2<KetquachiaEntity> Ketquachia
+		{
+			get { return new DataSource2<KetquachiaEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KetquaghepEntity instances in the database.</summary>
+		public DataSource2<KetquaghepEntity> Ketquaghep
+		{
+			get { return new DataSource2<KetquaghepEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KetquainEntity instances in the database.</summary>
+		public DataSource2<KetquainEntity> Ketquain
+		{
+			get { return new DataSource2<KetquainEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KetquainmauEntity instances in the database.</summary>
+		public DataSource2<KetquainmauEntity> Ketquainmau
+		{
+			get { return new DataSource2<KetquainmauEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KetquathoiEntity instances in the database.</summary>
+		public DataSource2<KetquathoiEntity> Ketquathoi
+		{
+			get { return new DataSource2<KetquathoiEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KetquatuaEntity instances in the database.</summary>
+		public DataSource2<KetquatuaEntity> Ketquatua
+		{
+			get { return new DataSource2<KetquatuaEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
 		/// <summary>returns the datasource to use in a Linq query when targeting LogbackupEntity instances in the database.</summary>
 		public DataSource2<LogbackupEntity> Logbackup
 		{
 			get { return new DataSource2<LogbackupEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting MaucuahangEntity instances in the database.</summary>
+		public DataSource2<MaucuahangEntity> Maucuahang
+		{
+			get { return new DataSource2<MaucuahangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting MenuEntity instances in the database.</summary>
@@ -375,6 +462,18 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<ThanhphanmauEntity> Thanhphanmau
 		{
 			get { return new DataSource2<ThanhphanmauEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting TknguyenlieuthoiEntity instances in the database.</summary>
+		public DataSource2<TknguyenlieuthoiEntity> Tknguyenlieuthoi
+		{
+			get { return new DataSource2<TknguyenlieuthoiEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting TruccuahangEntity instances in the database.</summary>
+		public DataSource2<TruccuahangEntity> Truccuahang
+		{
+			get { return new DataSource2<TruccuahangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting UsersEntity instances in the database.</summary>

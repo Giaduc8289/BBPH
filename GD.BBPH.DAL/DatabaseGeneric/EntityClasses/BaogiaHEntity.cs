@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
+// Code is generated on: Wednesday, October 12, 2022 3:04:17 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -26,7 +26,6 @@ namespace GD.BBPH.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 
 	/// <summary>
 	/// Entity class which represents the entity 'BaogiaH'.<br/><br/>
@@ -35,18 +34,16 @@ namespace GD.BBPH.DAL.EntityClasses
 	[Serializable]
 	public partial class BaogiaHEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END
-			
+		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
 		private EntityCollection<BaogiaDEntity> _baogiaD;
-		private EntityCollection<DmhangEntity> _dmhangCollectionViaBaogiaD;
+
 		private DmkhachEntity _dmkhach;
 
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Statics
@@ -60,8 +57,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			public static readonly string Dmkhach = "Dmkhach";
 			/// <summary>Member name BaogiaD</summary>
 			public static readonly string BaogiaD = "BaogiaD";
-			/// <summary>Member name DmhangCollectionViaBaogiaD</summary>
-			public static readonly string DmhangCollectionViaBaogiaD = "DmhangCollectionViaBaogiaD";
+
 
 		}
 		#endregion
@@ -122,7 +118,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
 				_baogiaD = (EntityCollection<BaogiaDEntity>)info.GetValue("_baogiaD", typeof(EntityCollection<BaogiaDEntity>));
-				_dmhangCollectionViaBaogiaD = (EntityCollection<DmhangEntity>)info.GetValue("_dmhangCollectionViaBaogiaD", typeof(EntityCollection<DmhangEntity>));
+
 				_dmkhach = (DmkhachEntity)info.GetValue("_dmkhach", typeof(DmkhachEntity));
 				if(_dmkhach!=null)
 				{
@@ -134,7 +130,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 		}
 
 		
@@ -175,11 +170,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				case "BaogiaD":
 					this.BaogiaD.Add((BaogiaDEntity)entity);
 					break;
-				case "DmhangCollectionViaBaogiaD":
-					this.DmhangCollectionViaBaogiaD.IsReadOnly = false;
-					this.DmhangCollectionViaBaogiaD.Add((DmhangEntity)entity);
-					this.DmhangCollectionViaBaogiaD.IsReadOnly = true;
-					break;
+
 
 				default:
 					break;
@@ -208,10 +199,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				case "BaogiaD":
 					toReturn.Add(BaogiaHEntity.Relations.BaogiaDEntityUsingSobaogia);
 					break;
-				case "DmhangCollectionViaBaogiaD":
-					toReturn.Add(BaogiaHEntity.Relations.BaogiaDEntityUsingSobaogia, "BaogiaHEntity__", "BaogiaD_", JoinHint.None);
-					toReturn.Add(BaogiaDEntity.Relations.DmhangEntityUsingMasp, "BaogiaD_", string.Empty, JoinHint.None);
-					break;
+
 
 				default:
 
@@ -325,14 +313,13 @@ namespace GD.BBPH.DAL.EntityClasses
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
 				info.AddValue("_baogiaD", ((_baogiaD!=null) && (_baogiaD.Count>0) && !this.MarkedForDeletion)?_baogiaD:null);
-				info.AddValue("_dmhangCollectionViaBaogiaD", ((_dmhangCollectionViaBaogiaD!=null) && (_dmhangCollectionViaBaogiaD.Count>0) && !this.MarkedForDeletion)?_dmhangCollectionViaBaogiaD:null);
+
 				info.AddValue("_dmkhach", (!this.MarkedForDeletion?_dmkhach:null));
 
 			}
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			base.GetObjectData(info, context);
 		}
 
@@ -373,16 +360,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			return bucket;
 		}
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entities of type 'Dmhang' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmhangCollectionViaBaogiaD()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.Relations.AddRange(GetRelationsForFieldOfType("DmhangCollectionViaBaogiaD"));
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(BaogiaHFields.Sobaogia, null, ComparisonOperator.Equal, this.Sobaogia, "BaogiaHEntity__"));
-			return bucket;
-		}
 
 		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
 		/// the related entity of type 'Dmkhach' to this entity. Use DataAccessAdapter.FetchNewEntity() to fetch this related entity.</summary>
@@ -423,7 +400,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
 			collectionsQueue.Enqueue(this._baogiaD);
-			collectionsQueue.Enqueue(this._dmhangCollectionViaBaogiaD);
+
 		}
 		
 		/// <summary>Gets the member collections queue from the queue (base first)</summary>
@@ -432,7 +409,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
 			this._baogiaD = (EntityCollection<BaogiaDEntity>) collectionsQueue.Dequeue();
-			this._dmhangCollectionViaBaogiaD = (EntityCollection<DmhangEntity>) collectionsQueue.Dequeue();
+
 		}
 		
 		/// <summary>Determines whether the entity has populated member collections</summary>
@@ -443,10 +420,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				return true;
 			}
-			if (this._dmhangCollectionViaBaogiaD != null)
-			{
-				return true;
-			}
+
 			return base.HasPopulatedMemberEntityCollections();
 		}
 		
@@ -457,7 +431,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
 			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<BaogiaDEntity>(EntityFactoryCache2.GetEntityFactory(typeof(BaogiaDEntityFactory))) : null);
-			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<DmhangEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmhangEntityFactory))) : null);
+
 		}
 #endif
 		/// <summary>
@@ -469,7 +443,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
 			toReturn.Add("Dmkhach", _dmkhach);
 			toReturn.Add("BaogiaD", _baogiaD);
-			toReturn.Add("DmhangCollectionViaBaogiaD", _dmhangCollectionViaBaogiaD);
+
 
 			return toReturn;
 		}
@@ -481,10 +455,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				_baogiaD.ActiveContext = base.ActiveContext;
 			}
-			if(_dmhangCollectionViaBaogiaD!=null)
-			{
-				_dmhangCollectionViaBaogiaD.ActiveContext = base.ActiveContext;
-			}
+
 			if(_dmkhach!=null)
 			{
 				_dmkhach.ActiveContext = base.ActiveContext;
@@ -497,14 +468,13 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 
 			_baogiaD = null;
-			_dmhangCollectionViaBaogiaD = null;
+
 			_dmkhach = null;
 
 			PerformDependencyInjection();
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			OnInitClassMembersComplete();
 		}
 
@@ -603,7 +573,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 
 			OnInitialized();
 		}
@@ -634,19 +603,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			}
 		}
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmhang' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmhangCollectionViaBaogiaD
-		{
-			get
-			{
-				IEntityRelation intermediateRelation = BaogiaHEntity.Relations.BaogiaDEntityUsingSobaogia;
-				intermediateRelation.SetAliases(string.Empty, "BaogiaD_");
-				return new PrefetchPathElement2(new EntityCollection<DmhangEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmhangEntityFactory))), intermediateRelation,
-					(int)GD.BBPH.DAL.EntityType.BaogiaHEntity, (int)GD.BBPH.DAL.EntityType.DmhangEntity, 0, null, null, GetRelationsForField("DmhangCollectionViaBaogiaD"), null, "DmhangCollectionViaBaogiaD", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToMany);
-			}
-		}
 
 		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmkhach' 
 		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
@@ -833,21 +789,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			}
 		}
 
-		/// <summary> Gets the EntityCollection with the related entities of type 'DmhangEntity' which are related to this entity via a relation of type 'm:n'.
-		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
-		[TypeContainedAttribute(typeof(DmhangEntity))]
-		public virtual EntityCollection<DmhangEntity> DmhangCollectionViaBaogiaD
-		{
-			get
-			{
-				if(_dmhangCollectionViaBaogiaD==null)
-				{
-					_dmhangCollectionViaBaogiaD = new EntityCollection<DmhangEntity>(EntityFactoryCache2.GetEntityFactory(typeof(DmhangEntityFactory)));
-					_dmhangCollectionViaBaogiaD.IsReadOnly=true;
-				}
-				return _dmhangCollectionViaBaogiaD;
-			}
-		}
 
 		/// <summary> Gets / sets related entity of type 'DmkhachEntity' which has to be set using a fetch action earlier. If no related entity
 		/// is set for this property, null is returned. This property is not visible in databound grids.</summary>
@@ -911,7 +852,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Included code

@@ -121,7 +121,7 @@ namespace GD.BBPH.APP.BANHANG
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_BAOGIA_D.xml", GRID_BAOGIA_D, pne_CHITIET);
             GRID_BAOGIA_D.FilterMode = FilterMode.None;
             //GRID_BAOGIA_D.GroupByBoxVisible = false;
-            GRID_BAOGIA_D.RootTable.Groups.Add(GRID_BAOGIA_D.Tables[0].Columns[BaogiaDFields.Loaihang.Name]);
+            GRID_BAOGIA_D.RootTable.Groups.Add(GRID_BAOGIA_D.Tables[0].Columns[BaogiaDFields.Machungloai.Name]);
             FORM_PROCESS();
             GRID_BAOGIA_D.COMBO_MULTICOLUMN(GRID_BAOGIA_D, BaogiaDFields.Masp.Name, DmhangFields.Tensp.Name, DmhangFields.Masp.Name, DmhangFields.Masp.Name, DT_DMHANG);
             GRID_BAOGIA_D.RootTable.Columns["Mahang"].EditType = EditType.NoEdit;
@@ -354,7 +354,7 @@ namespace GD.BBPH.APP.BANHANG
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
             ListviewJanusC _frm_MultiRows_Select = 
-                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI_CHON.xml", DT_DMCHUNGLOAI, DanhmucchungloaiFields.Mahieu.Name, txt_MAKHACH.Text.Trim());
+                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI_CHON.xml", DT_DMCHUNGLOAI, DmchungloaiFields.Ma.Name, txt_MAKHACH.Text.Trim());
             _frm_MultiRows_Select.ShowDialog();
             if (_frm_MultiRows_Select._RowsViewSelect == null) return;
 
@@ -362,12 +362,12 @@ namespace GD.BBPH.APP.BANHANG
             { 
                 DataRow r_Detail = DT_BAOGIA_D_FILL.NewRow();
                 r_Detail[BaogiaDFields.Loaihang.Name] = 0;
-                r_Detail[BaogiaDFields.Masp.Name] = drv.Row[DanhmucchungloaiFields.Mahieu.Name].ToString();
-                r_Detail[BaogiaDFields.Loaihang.Name] = drv.Row[DanhmucchungloaiFields.Chungloai.Name].ToString();
-                r_Detail[BaogiaDFields.Kichthuoc.Name] = drv.Row[DanhmucchungloaiFields.Kichthuoc.Name].ToString();
-                try { r_Detail[BaogiaDFields.Kichthuoc.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DanhmucchungloaiFields.Trongluongbao.Name].ToString()); }
+                r_Detail[BaogiaDFields.Masp.Name] = drv.Row[DmchungloaiFields.Machungloai.Name].ToString();
+                r_Detail[BaogiaDFields.Loaihang.Name] = drv.Row[DmchungloaiFields.Chungloai.Name].ToString();
+                r_Detail[BaogiaDFields.Kichthuoc.Name] = drv.Row[DmchungloaiFields.Kichthuoc.Name].ToString();
+                try { r_Detail[BaogiaDFields.Kichthuoc.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmchungloaiFields.Trongluongbao.Name].ToString()); }
                 catch { }
-                try { r_Detail[BaogiaDFields.Trongluong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DanhmucchungloaiFields.Trongluongpe.Name].ToString()); }
+                try { r_Detail[BaogiaDFields.Trongluong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmchungloaiFields.Trongluongpe.Name].ToString()); }
                 catch { }
                 ////------------Lấy sau từ module Tinhgia (thiết kế bảng)
                 //try { _BaogiaDEntity.Giavon = LIB.ConvertString.NumbertoDB(drv.Row[DanhmuchanghoaFields.Gia.Name].ToString()); }

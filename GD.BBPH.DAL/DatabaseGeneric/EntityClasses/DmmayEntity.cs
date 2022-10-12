@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 6, 2022 9:04:16 AM
+// Code is generated on: Wednesday, October 12, 2022 3:04:17 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -37,9 +37,12 @@ namespace GD.BBPH.DAL.EntityClasses
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
+		private EntityCollection<KetquaghepEntity> _ketquaghep;
+		private EntityCollection<KetquainEntity> _ketquain;
+		private EntityCollection<KetquathoiEntity> _ketquathoi;
+		private EntityCollection<KetquatuaEntity> _ketquatua;
 
 
-		private DmdongmayEntity _dmdongmay;
 
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
@@ -53,9 +56,15 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>All names of fields mapped onto a relation. Usable for in-memory filtering</summary>
 		public static class MemberNames
 		{
-			/// <summary>Member name Dmdongmay</summary>
-			public static readonly string Dmdongmay = "Dmdongmay";
 
+			/// <summary>Member name Ketquaghep</summary>
+			public static readonly string Ketquaghep = "Ketquaghep";
+			/// <summary>Member name Ketquain</summary>
+			public static readonly string Ketquain = "Ketquain";
+			/// <summary>Member name Ketquathoi</summary>
+			public static readonly string Ketquathoi = "Ketquathoi";
+			/// <summary>Member name Ketquatua</summary>
+			public static readonly string Ketquatua = "Ketquatua";
 
 
 		}
@@ -116,13 +125,12 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
+				_ketquaghep = (EntityCollection<KetquaghepEntity>)info.GetValue("_ketquaghep", typeof(EntityCollection<KetquaghepEntity>));
+				_ketquain = (EntityCollection<KetquainEntity>)info.GetValue("_ketquain", typeof(EntityCollection<KetquainEntity>));
+				_ketquathoi = (EntityCollection<KetquathoiEntity>)info.GetValue("_ketquathoi", typeof(EntityCollection<KetquathoiEntity>));
+				_ketquatua = (EntityCollection<KetquatuaEntity>)info.GetValue("_ketquatua", typeof(EntityCollection<KetquatuaEntity>));
 
 
-				_dmdongmay = (DmdongmayEntity)info.GetValue("_dmdongmay", typeof(DmdongmayEntity));
-				if(_dmdongmay!=null)
-				{
-					_dmdongmay.AfterSave+=new EventHandler(OnEntityAfterSave);
-				}
 
 				base.FixupDeserialization(FieldInfoProviderSingleton.GetInstance());
 			}
@@ -138,9 +146,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch((DmmayFieldIndex)fieldIndex)
 			{
-				case DmmayFieldIndex.Madm:
-					DesetupSyncDmdongmay(true, false);
-					break;
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
 					break;
@@ -163,10 +168,19 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(propertyName)
 			{
-				case "Dmdongmay":
-					this.Dmdongmay = (DmdongmayEntity)entity;
-					break;
 
+				case "Ketquaghep":
+					this.Ketquaghep.Add((KetquaghepEntity)entity);
+					break;
+				case "Ketquain":
+					this.Ketquain.Add((KetquainEntity)entity);
+					break;
+				case "Ketquathoi":
+					this.Ketquathoi.Add((KetquathoiEntity)entity);
+					break;
+				case "Ketquatua":
+					this.Ketquatua.Add((KetquatuaEntity)entity);
+					break;
 
 
 				default:
@@ -190,10 +204,19 @@ namespace GD.BBPH.DAL.EntityClasses
 			RelationCollection toReturn = new RelationCollection();
 			switch(fieldName)
 			{
-				case "Dmdongmay":
-					toReturn.Add(DmmayEntity.Relations.DmdongmayEntityUsingMadm);
-					break;
 
+				case "Ketquaghep":
+					toReturn.Add(DmmayEntity.Relations.KetquaghepEntityUsingMamay);
+					break;
+				case "Ketquain":
+					toReturn.Add(DmmayEntity.Relations.KetquainEntityUsingMamay);
+					break;
+				case "Ketquathoi":
+					toReturn.Add(DmmayEntity.Relations.KetquathoiEntityUsingMamay);
+					break;
+				case "Ketquatua":
+					toReturn.Add(DmmayEntity.Relations.KetquatuaEntityUsingMamay);
+					break;
 
 
 				default:
@@ -231,10 +254,19 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-				case "Dmdongmay":
-					SetupSyncDmdongmay(relatedEntity);
-					break;
 
+				case "Ketquaghep":
+					this.Ketquaghep.Add((KetquaghepEntity)relatedEntity);
+					break;
+				case "Ketquain":
+					this.Ketquain.Add((KetquainEntity)relatedEntity);
+					break;
+				case "Ketquathoi":
+					this.Ketquathoi.Add((KetquathoiEntity)relatedEntity);
+					break;
+				case "Ketquatua":
+					this.Ketquatua.Add((KetquatuaEntity)relatedEntity);
+					break;
 
 				default:
 					break;
@@ -250,10 +282,19 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			switch(fieldName)
 			{
-				case "Dmdongmay":
-					DesetupSyncDmdongmay(false, true);
-					break;
 
+				case "Ketquaghep":
+					base.PerformRelatedEntityRemoval(this.Ketquaghep, relatedEntity, signalRelatedEntityManyToOne);
+					break;
+				case "Ketquain":
+					base.PerformRelatedEntityRemoval(this.Ketquain, relatedEntity, signalRelatedEntityManyToOne);
+					break;
+				case "Ketquathoi":
+					base.PerformRelatedEntityRemoval(this.Ketquathoi, relatedEntity, signalRelatedEntityManyToOne);
+					break;
+				case "Ketquatua":
+					base.PerformRelatedEntityRemoval(this.Ketquatua, relatedEntity, signalRelatedEntityManyToOne);
+					break;
 
 				default:
 					break;
@@ -275,10 +316,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntity2> GetDependentRelatedEntities()
 		{
 			List<IEntity2> toReturn = new List<IEntity2>();
-			if(_dmdongmay!=null)
-			{
-				toReturn.Add(_dmdongmay);
-			}
+
 
 			return toReturn;
 		}
@@ -288,7 +326,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntityCollection2> GetMemberEntityCollections()
 		{
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
-
+			toReturn.Add(this.Ketquaghep);
+			toReturn.Add(this.Ketquain);
+			toReturn.Add(this.Ketquathoi);
+			toReturn.Add(this.Ketquatua);
 
 			return toReturn;
 		}
@@ -303,9 +344,12 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
+				info.AddValue("_ketquaghep", ((_ketquaghep!=null) && (_ketquaghep.Count>0) && !this.MarkedForDeletion)?_ketquaghep:null);
+				info.AddValue("_ketquain", ((_ketquain!=null) && (_ketquain.Count>0) && !this.MarkedForDeletion)?_ketquain:null);
+				info.AddValue("_ketquathoi", ((_ketquathoi!=null) && (_ketquathoi.Count>0) && !this.MarkedForDeletion)?_ketquathoi:null);
+				info.AddValue("_ketquatua", ((_ketquatua!=null) && (_ketquatua.Count>0) && !this.MarkedForDeletion)?_ketquatua:null);
 
 
-				info.AddValue("_dmdongmay", (!this.MarkedForDeletion?_dmdongmay:null));
 
 			}
 			
@@ -341,17 +385,47 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		
 
-
-
 		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entity of type 'Dmdongmay' to this entity. Use DataAccessAdapter.FetchNewEntity() to fetch this related entity.</summary>
+		/// the related entities of type 'Ketquaghep' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
 		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoDmdongmay()
+		public virtual IRelationPredicateBucket GetRelationInfoKetquaghep()
 		{
 			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmdongmayFields.Madm, null, ComparisonOperator.Equal, this.Madm));
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(KetquaghepFields.Mamay, null, ComparisonOperator.Equal, this.Mamay));
 			return bucket;
 		}
+
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Ketquain' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoKetquain()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(KetquainFields.Mamay, null, ComparisonOperator.Equal, this.Mamay));
+			return bucket;
+		}
+
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Ketquathoi' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoKetquathoi()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(KetquathoiFields.Mamay, null, ComparisonOperator.Equal, this.Mamay));
+			return bucket;
+		}
+
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Ketquatua' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoKetquatua()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(KetquatuaFields.Mamay, null, ComparisonOperator.Equal, this.Mamay));
+			return bucket;
+		}
+
+
 
 	
 		
@@ -381,7 +455,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void AddToMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue) 
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
-
+			collectionsQueue.Enqueue(this._ketquaghep);
+			collectionsQueue.Enqueue(this._ketquain);
+			collectionsQueue.Enqueue(this._ketquathoi);
+			collectionsQueue.Enqueue(this._ketquatua);
 
 		}
 		
@@ -390,7 +467,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void GetFromMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue)
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
-
+			this._ketquaghep = (EntityCollection<KetquaghepEntity>) collectionsQueue.Dequeue();
+			this._ketquain = (EntityCollection<KetquainEntity>) collectionsQueue.Dequeue();
+			this._ketquathoi = (EntityCollection<KetquathoiEntity>) collectionsQueue.Dequeue();
+			this._ketquatua = (EntityCollection<KetquatuaEntity>) collectionsQueue.Dequeue();
 
 		}
 		
@@ -398,7 +478,22 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>true if the entity has populated member collections.</returns>
 		protected override bool HasPopulatedMemberEntityCollections()
 		{
-
+			if (this._ketquaghep != null)
+			{
+				return true;
+			}
+			if (this._ketquain != null)
+			{
+				return true;
+			}
+			if (this._ketquathoi != null)
+			{
+				return true;
+			}
+			if (this._ketquatua != null)
+			{
+				return true;
+			}
 
 			return base.HasPopulatedMemberEntityCollections();
 		}
@@ -409,7 +504,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void CreateMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue, Queue<bool> requiredQueue) 
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
-
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquaghepEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquaghepEntityFactory))) : null);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquainEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquainEntityFactory))) : null);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquathoiEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquathoiEntityFactory))) : null);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquatuaEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquatuaEntityFactory))) : null);
 
 		}
 #endif
@@ -420,8 +518,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override Dictionary<string, object> GetRelatedData()
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
-			toReturn.Add("Dmdongmay", _dmdongmay);
 
+			toReturn.Add("Ketquaghep", _ketquaghep);
+			toReturn.Add("Ketquain", _ketquain);
+			toReturn.Add("Ketquathoi", _ketquathoi);
+			toReturn.Add("Ketquatua", _ketquatua);
 
 
 			return toReturn;
@@ -430,12 +531,24 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> Adds the internals to the active context. </summary>
 		protected override void AddInternalsToContext()
 		{
-
-
-			if(_dmdongmay!=null)
+			if(_ketquaghep!=null)
 			{
-				_dmdongmay.ActiveContext = base.ActiveContext;
+				_ketquaghep.ActiveContext = base.ActiveContext;
 			}
+			if(_ketquain!=null)
+			{
+				_ketquain.ActiveContext = base.ActiveContext;
+			}
+			if(_ketquathoi!=null)
+			{
+				_ketquathoi.ActiveContext = base.ActiveContext;
+			}
+			if(_ketquatua!=null)
+			{
+				_ketquatua.ActiveContext = base.ActiveContext;
+			}
+
+
 
 		}
 
@@ -443,9 +556,12 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected virtual void InitClassMembers()
 		{
 
+			_ketquaghep = null;
+			_ketquain = null;
+			_ketquathoi = null;
+			_ketquatua = null;
 
 
-			_dmdongmay = null;
 
 			PerformDependencyInjection();
 			
@@ -489,38 +605,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		#endregion
 
-		/// <summary> Removes the sync logic for member _dmdongmay</summary>
-		/// <param name="signalRelatedEntity">If set to true, it will call the related entity's UnsetRelatedEntity method</param>
-		/// <param name="resetFKFields">if set to true it will also reset the FK fields pointing to the related entity</param>
-		private void DesetupSyncDmdongmay(bool signalRelatedEntity, bool resetFKFields)
-		{
-			base.PerformDesetupSyncRelatedEntity( _dmdongmay, new PropertyChangedEventHandler( OnDmdongmayPropertyChanged ), "Dmdongmay", DmmayEntity.Relations.DmdongmayEntityUsingMadm, true, signalRelatedEntity, "Dmmay", resetFKFields, new int[] { (int)DmmayFieldIndex.Madm } );		
-			_dmdongmay = null;
-		}
-
-		/// <summary> setups the sync logic for member _dmdongmay</summary>
-		/// <param name="relatedEntity">Instance to set as the related entity of type entityType</param>
-		private void SetupSyncDmdongmay(IEntity2 relatedEntity)
-		{
-			if(_dmdongmay!=relatedEntity)
-			{
-				DesetupSyncDmdongmay(true, true);
-				_dmdongmay = (DmdongmayEntity)relatedEntity;
-				base.PerformSetupSyncRelatedEntity( _dmdongmay, new PropertyChangedEventHandler( OnDmdongmayPropertyChanged ), "Dmdongmay", DmmayEntity.Relations.DmdongmayEntityUsingMadm, true, new string[] {  } );
-			}
-		}
-		
-		/// <summary>Handles property change events of properties in a related entity.</summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void OnDmdongmayPropertyChanged( object sender, PropertyChangedEventArgs e )
-		{
-			switch( e.PropertyName )
-			{
-				default:
-					break;
-			}
-		}
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
@@ -555,19 +639,52 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return _customProperties;}
 		}
 
-
-
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmdongmay' 
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Ketquaghep' 
 		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
 		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathDmdongmay
+		public static IPrefetchPathElement2 PrefetchPathKetquaghep
 		{
 			get
 			{
-				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(DmdongmayEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmdongmay")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.DmdongmayEntity, 0, null, null, null, null, "Dmdongmay", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
+				return new PrefetchPathElement2( new EntityCollection<KetquaghepEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquaghepEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Ketquaghep")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KetquaghepEntity, 0, null, null, null, null, "Ketquaghep", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
 			}
 		}
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Ketquain' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathKetquain
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<KetquainEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquainEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Ketquain")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KetquainEntity, 0, null, null, null, null, "Ketquain", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Ketquathoi' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathKetquathoi
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<KetquathoiEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquathoiEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Ketquathoi")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KetquathoiEntity, 0, null, null, null, null, "Ketquathoi", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Ketquatua' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathKetquatua
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<KetquatuaEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquatuaEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Ketquatua")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KetquatuaEntity, 0, null, null, null, null, "Ketquatua", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
+
+
 
 
 		/// <summary> The custom properties for the type of this entity instance.</summary>
@@ -682,42 +799,71 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmmayFieldIndex.Nguoisua, value); }
 		}
 
-
-
-		/// <summary> Gets / sets related entity of type 'DmdongmayEntity' which has to be set using a fetch action earlier. If no related entity
-		/// is set for this property, null is returned. This property is not visible in databound grids.</summary>
-		[Browsable(false)]
-		public virtual DmdongmayEntity Dmdongmay
+		/// <summary> Gets the EntityCollection with the related entities of type 'KetquaghepEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(KetquaghepEntity))]
+		public virtual EntityCollection<KetquaghepEntity> Ketquaghep
 		{
 			get
 			{
-				return _dmdongmay;
-			}
-			set
-			{
-				if(base.IsDeserializing)
+				if(_ketquaghep==null)
 				{
-					SetupSyncDmdongmay(value);
+					_ketquaghep = new EntityCollection<KetquaghepEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquaghepEntityFactory)));
+					_ketquaghep.SetContainingEntityInfo(this, "Dmmay");
 				}
-				else
-				{
-					if(value==null)
-					{
-						if(_dmdongmay != null)
-						{
-							_dmdongmay.UnsetRelatedEntity(this, "Dmmay");
-						}
-					}
-					else
-					{
-						if(_dmdongmay!=value)
-						{
-							((IEntity2)value).SetRelatedEntity(this, "Dmmay");
-						}
-					}
-				}
+				return _ketquaghep;
 			}
 		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'KetquainEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(KetquainEntity))]
+		public virtual EntityCollection<KetquainEntity> Ketquain
+		{
+			get
+			{
+				if(_ketquain==null)
+				{
+					_ketquain = new EntityCollection<KetquainEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquainEntityFactory)));
+					_ketquain.SetContainingEntityInfo(this, "Dmmay");
+				}
+				return _ketquain;
+			}
+		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'KetquathoiEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(KetquathoiEntity))]
+		public virtual EntityCollection<KetquathoiEntity> Ketquathoi
+		{
+			get
+			{
+				if(_ketquathoi==null)
+				{
+					_ketquathoi = new EntityCollection<KetquathoiEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquathoiEntityFactory)));
+					_ketquathoi.SetContainingEntityInfo(this, "Dmmay");
+				}
+				return _ketquathoi;
+			}
+		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'KetquatuaEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(KetquatuaEntity))]
+		public virtual EntityCollection<KetquatuaEntity> Ketquatua
+		{
+			get
+			{
+				if(_ketquatua==null)
+				{
+					_ketquatua = new EntityCollection<KetquatuaEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquatuaEntityFactory)));
+					_ketquatua.SetContainingEntityInfo(this, "Dmmay");
+				}
+				return _ketquatua;
+			}
+		}
+
+
 
 	
 		
