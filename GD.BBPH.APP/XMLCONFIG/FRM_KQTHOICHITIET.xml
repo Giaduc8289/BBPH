@@ -31,8 +31,8 @@
   </xs:schema>
   <viewgrid>
     <value>1</value>
-    <name>Macn</name>
-    <headerText>Macn</headerText>
+    <name>Id</name>
+    <headerText>Id</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -40,8 +40,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Hovatencongnhan</name>
-    <headerText>Hovatencongnhan</headerText>
+    <name>Ngay</name>
+    <headerText>Ngay</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -49,8 +49,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tencongnhan</name>
-    <headerText>Tencongnhan</headerText>
+    <name>Ca</name>
+    <headerText>Ca</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -58,8 +58,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Mabp</name>
-    <headerText>Mabp</headerText>
+    <name>Mamay</name>
+    <headerText>Mamay</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -67,8 +67,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Macv</name>
-    <headerText>Macv</headerText>
+    <name>Lenhthoi</name>
+    <headerText>Lenhthoi</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -76,8 +76,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Sodienthoai</name>
-    <headerText>Sodienthoai</headerText>
+    <name>Mamang</name>
+    <headerText>Mamang</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -85,8 +85,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tinhtrang</name>
-    <headerText>Tinhtrang</headerText>
+    <name>Macongnhan</name>
+    <headerText>Macongnhan</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -94,8 +94,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Phongban</name>
-    <headerText>Phongban</headerText>
+    <name>Somet</name>
+    <headerText>Somet</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -103,8 +103,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Chucvu</name>
-    <headerText>Chucvu</headerText>
+    <name>Sokg</name>
+    <headerText>Sokg</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -112,8 +112,89 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Danghi</name>
-    <headerText>Danghi</headerText>
+    <name>Sokgquydoi</name>
+    <headerText>Sokgquydoi</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Chenhlechkg</name>
+    <headerText>Chenhlechkg</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Chatluong</name>
+    <headerText>Chatluong</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Phelieuthucte</name>
+    <headerText>Phelieuthucte</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tongsp</name>
+    <headerText>Tongsp</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Thoigianbatdau</name>
+    <headerText>Thoigianbatdau</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Thoigianketthuc</name>
+    <headerText>Thoigianketthuc</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Thoigianchuanbi</name>
+    <headerText>Thoigianchuanbi</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Thoigiansuco</name>
+    <headerText>Thoigiansuco</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Sokgdukiendat</name>
+    <headerText>Sokgdukiendat</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
