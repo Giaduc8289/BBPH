@@ -1692,9 +1692,22 @@ namespace GD.BBPH.APP.LIB
         }
 
 
-        public static DataTable Danhsachbaogia(DateTime Tungay, DateTime Denngay, string Sobaogia, /*string SoPO,*/ string Makhachhang, string Mahang)
+        public static DataTable Danhsachbaogia(DateTime Tungay, DateTime Denngay, string Sobaogia, /*string SoPO,*/ string Makhachhang, string Mahang) {
 
-        public static DataTable Danhsachphieugiaohang(DateTime Tungay, DateTime Denngay, string Sophieugiao, string Madonhang, string Makhachhang, string Mahang)
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Tungay", SqlDbType.Date, 0), Tungay);
+            parameters.Add(new SqlParameter("@Denngay", SqlDbType.Date, 0), Denngay);
+            parameters.Add(new SqlParameter("@Sobaogia", SqlDbType.NVarChar, 0), Sobaogia);
+            parameters.Add(new SqlParameter("@Makhachhang", SqlDbType.NVarChar, 0), Makhachhang);
+            parameters.Add(new SqlParameter("@Mahang", SqlDbType.NVarChar, 0), Mahang);
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader("Danhsachbaogia", "Danhsachbaogia", myArr).Tables[0];
+
+        }
+
+        public static DataTable Danhsachphieugiaohang(DateTime Tungay, DateTime Denngay, string Sobaogia, string Sophieugiao, string Madonhang, string Makhachhang, string Mahang)
 
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
@@ -1717,10 +1730,20 @@ namespace GD.BBPH.APP.LIB
 
         public static DataTable Danhsachbaogiachitiet(DateTime Tungay, DateTime Denngay, string Sobaogia, /*string SoPO,*/ string Makhachhang, string Mahang) {
 
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Tungay", SqlDbType.Date, 0), Tungay);
+            parameters.Add(new SqlParameter("@Denngay", SqlDbType.Date, 0), Denngay);
+            parameters.Add(new SqlParameter("@Sobaogia", SqlDbType.NVarChar, 0), Sobaogia);
+            parameters.Add(new SqlParameter("@Makhachhang", SqlDbType.NVarChar, 0), Makhachhang);
+            parameters.Add(new SqlParameter("@Mahang", SqlDbType.NVarChar, 0), Mahang);
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+
             return _SimpleStoredProcedure.ExecuteSPReader("Danhsachphieugiaohang", "Danhsachphieugiaohang", myArr).Tables[0];
         }
 
-        public static DataTable Danhsachphieugiaohangchitiet(DateTime Tungay, DateTime Denngay, string Sophieugiao, string Madonhang, string Makhachhang, string Mahang)
+        public static DataTable Danhsachphieugiaohangchitiet(DateTime Tungay, DateTime Denngay, string Sobaogia, string Sophieugiao, string Madonhang, string Makhachhang, string Mahang)
 
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
