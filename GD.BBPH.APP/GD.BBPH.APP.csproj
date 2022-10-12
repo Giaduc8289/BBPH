@@ -129,17 +129,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BANHANG\FRM_BAOGIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANHANG\FRM_BAOGIA.designer.cs">
+      <DependentUpon>FRM_BAOGIA.cs</DependentUpon>
+    </Compile>
     <Compile Include="BANHANG\FRM_DONHANG.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BANHANG\FRM_DONHANG.designer.cs">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BANHANG\FRM_HANGTRALAI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BANHANG\FRM_HANGTRALAI.designer.cs">
-      <DependentUpon>FRM_HANGTRALAI.cs</DependentUpon>
     </Compile>
     <Compile Include="BAOCAO\FRM_REPORTVIEWER.cs">
       <SubType>Form</SubType>
@@ -368,11 +368,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSXBB.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BANHANG\FRM_BAOGIA.resx">
+      <DependentUpon>FRM_BAOGIA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BANHANG\FRM_DONHANG.resx">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BANHANG\FRM_HANGTRALAI.resx">
-      <DependentUpon>FRM_HANGTRALAI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
@@ -1178,7 +1178,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BAOCAO\" />
     <Folder Include="CHIA\" />
     <Folder Include="GHEP\" />
     <Folder Include="HOANTHIEN\" />

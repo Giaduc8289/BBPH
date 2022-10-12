@@ -797,6 +797,14 @@ namespace GD.BBPH.APP.HETHONG
 
                 #region Bán hàng
 
+                case "FRM_BAOGIA":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BAOGIA") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.BANHANG.FRM_BAOGIA()), mmru.Text);
+                    break;
+
                 case "FRM_DONHANG":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
