@@ -683,7 +683,6 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMDONGMAY()), mmru.Text);
                     break;
                 #endregion
-                #region Danh mục máy
                 case "FRM_DMMAY":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -692,6 +691,13 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMMAY()), mmru.Text);
                     break;
 
+                case "FRM_DMNHOMQUYCACH":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMNHOMQUYCACH") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMNHOMQUYCACH()), mmru.Text);
+                    break;
                 case "FRM_DMQUYCACH":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -716,7 +722,6 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_LYDONHAPXUAT()), mmru.Text);
                     break;
 
-                #endregion
                 #region Danh mục công đoạn
                 case "FRM_DMCONGDOAN":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
@@ -755,7 +760,6 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMNHOMNGUYENLIEU()), mmru.Text);
                     break;
                 #endregion
-
                 #region Danh mục nguyên liệu
                 case "FRM_DMNGUYENLIEU":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
@@ -766,7 +770,6 @@ namespace GD.BBPH.APP.HETHONG
                     break;
                 #endregion
 
-                #region Danh mục nguyên liệu
                 case "FRM_DMCHUCVU":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -774,7 +777,6 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMCHUCVU()), mmru.Text);
                     break;
-                #endregion
 
                 #region Danh mục công nhân
                 case "FRM_DMCONGNHAN":

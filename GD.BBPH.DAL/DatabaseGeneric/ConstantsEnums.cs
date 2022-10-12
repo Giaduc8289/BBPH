@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 11, 2022 3:09:06 PM
+// Code is generated on: Wednesday, October 12, 2022 10:13:57 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -91,14 +91,36 @@ namespace GD.BBPH.DAL
 	/// </summary>
 	public enum CongsuatmayFieldIndex:int
 	{
-		///<summary>Macs. </summary>
-		Macs,
+		///<summary>Macongsuat. </summary>
+		Macongsuat,
 		///<summary>Tencongsuat. </summary>
 		Tencongsuat,
-		///<summary>Macd. </summary>
-		Macd,
-		///<summary>Maqc. </summary>
-		Maqc,
+		///<summary>Mamay. </summary>
+		Mamay,
+		///<summary>Madongmay. </summary>
+		Madongmay,
+		///<summary>Macongdoan. </summary>
+		Macongdoan,
+		///<summary>Maquycach1. </summary>
+		Maquycach1,
+		///<summary>Maquycach2. </summary>
+		Maquycach2,
+		///<summary>Maquycach3. </summary>
+		Maquycach3,
+		///<summary>Khotu. </summary>
+		Khotu,
+		///<summary>Khoden. </summary>
+		Khoden,
+		///<summary>Chieudaitu. </summary>
+		Chieudaitu,
+		///<summary>Chieudaiden. </summary>
+		Chieudaiden,
+		///<summary>Dodaytu. </summary>
+		Dodaytu,
+		///<summary>Dodayden. </summary>
+		Dodayden,
+		///<summary>Tocdo. </summary>
+		Tocdo,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -703,18 +725,16 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
-	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmquycach.
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmnhomquycach.
 	/// </summary>
-	public enum DmquycachFieldIndex:int
+	public enum DmnhomquycachFieldIndex:int
 	{
-		///<summary>Maqc. </summary>
-		Maqc,
-		///<summary>Tenquycach. </summary>
-		Tenquycach,
-		///<summary>Macd. </summary>
-		Macd,
-		///<summary>Maqccha. </summary>
-		Maqccha,
+		///<summary>Manhom. </summary>
+		Manhom,
+		///<summary>Tennhom. </summary>
+		Tennhom,
+		///<summary>Tenrutgon. </summary>
+		Tenrutgon,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -723,10 +743,36 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
-		///<summary>Tencd. </summary>
-		Tencd,
-		///<summary>Tenqccha. </summary>
-		Tenqccha,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dmquycach.
+	/// </summary>
+	public enum DmquycachFieldIndex:int
+	{
+		///<summary>Maquycach. </summary>
+		Maquycach,
+		///<summary>Tenquycach. </summary>
+		Tenquycach,
+		///<summary>Macongdoan. </summary>
+		Macongdoan,
+		///<summary>Tencongdoan. </summary>
+		Tencongdoan,
+		///<summary>Manhom. </summary>
+		Manhom,
+		///<summary>Tennhom. </summary>
+		Tennhom,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1181,6 +1227,12 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Tenmang. </summary>
+		Tenmang,
+		///<summary>Tenmay. </summary>
+		Tenmay,
+		///<summary>Tencongnhan. </summary>
+		Tencongnhan,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1634,6 +1686,8 @@ namespace GD.BBPH.DAL
 		DmnguyenlieuEntity,
 		///<summary>Dmnhomnguyenlieu</summary>
 		DmnhomnguyenlieuEntity,
+		///<summary>Dmnhomquycach</summary>
+		DmnhomquycachEntity,
 		///<summary>Dmquycach</summary>
 		DmquycachEntity,
 		///<summary>Dmtaikhoan</summary>

@@ -62,6 +62,9 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Nguoitao.Text = _Rowview.Row[KetquathoiFields.Nguoitao.Name].ToString();
 					txt_Ngaysua.Text = _Rowview.Row[KetquathoiFields.Ngaysua.Name].ToString();
 					txt_Nguoisua.Text = _Rowview.Row[KetquathoiFields.Nguoisua.Name].ToString();
+					txt_Tenmang.Text = _Rowview.Row[KetquathoiFields.Tenmang.Name].ToString();
+					txt_Tenmay.Text = _Rowview.Row[KetquathoiFields.Tenmay.Name].ToString();
+					txt_Tencongnhan.Text = _Rowview.Row[KetquathoiFields.Tencongnhan.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Ketquathoi_CurrentChanged"); }
@@ -94,6 +97,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			_ketquathoiEntity.Nguoitao = txt_Nguoitao.Text.Trim();
 			_ketquathoiEntity.Ngaysua = txt_Ngaysua.Text.Trim();
 			_ketquathoiEntity.Nguoisua = txt_Nguoisua.Text.Trim();
+			_ketquathoiEntity.Tenmang = txt_Tenmang.Text.Trim();
+			_ketquathoiEntity.Tenmay = txt_Tenmay.Text.Trim();
+			_ketquathoiEntity.Tencongnhan = txt_Tencongnhan.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -128,6 +134,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Ketquathoi.CurrentRow.Cells[KetquathoiFields.Nguoitao.Name].Value = _ketquathoiEntity.Nguoitao;
 				GRID_Ketquathoi.CurrentRow.Cells[KetquathoiFields.Ngaysua.Name].Value = _ketquathoiEntity.Ngaysua;
 				GRID_Ketquathoi.CurrentRow.Cells[KetquathoiFields.Nguoisua.Name].Value = _ketquathoiEntity.Nguoisua;
+				GRID_Ketquathoi.CurrentRow.Cells[KetquathoiFields.Tenmang.Name].Value = _ketquathoiEntity.Tenmang;
+				GRID_Ketquathoi.CurrentRow.Cells[KetquathoiFields.Tenmay.Name].Value = _ketquathoiEntity.Tenmay;
+				GRID_Ketquathoi.CurrentRow.Cells[KetquathoiFields.Tencongnhan.Name].Value = _ketquathoiEntity.Tencongnhan;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquathoiManager.Convert(_ketquathoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Ketquathoi_PK;

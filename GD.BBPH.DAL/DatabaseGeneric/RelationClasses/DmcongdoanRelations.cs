@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 11, 2022 3:09:07 PM
+// Code is generated on: Wednesday, October 12, 2022 10:13:58 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -30,30 +30,13 @@ namespace GD.BBPH.DAL.RelationClasses
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
-			toReturn.Add(this.CongsuatmayEntityUsingMacd);
 			toReturn.Add(this.DmdongmayEntityUsingMacd);
-			toReturn.Add(this.DmquycachEntityUsingMacd);
 
 
 			return toReturn;
 		}
 
 		#region Class Property Declarations
-
-		/// <summary>Returns a new IEntityRelation object, between DmcongdoanEntity and CongsuatmayEntity over the 1:n relation they have, using the relation between the fields:
-		/// Dmcongdoan.Macd - Congsuatmay.Macd
-		/// </summary>
-		public virtual IEntityRelation CongsuatmayEntityUsingMacd
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Congsuatmay" , true);
-				relation.AddEntityFieldPair(DmcongdoanFields.Macd, CongsuatmayFields.Macd);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmcongdoanEntity", true);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CongsuatmayEntity", false);
-				return relation;
-			}
-		}
 
 		/// <summary>Returns a new IEntityRelation object, between DmcongdoanEntity and DmdongmayEntity over the 1:n relation they have, using the relation between the fields:
 		/// Dmcongdoan.Macd - Dmdongmay.Macd
@@ -66,21 +49,6 @@ namespace GD.BBPH.DAL.RelationClasses
 				relation.AddEntityFieldPair(DmcongdoanFields.Macd, DmdongmayFields.Macd);
 				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmcongdoanEntity", true);
 				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmdongmayEntity", false);
-				return relation;
-			}
-		}
-
-		/// <summary>Returns a new IEntityRelation object, between DmcongdoanEntity and DmquycachEntity over the 1:n relation they have, using the relation between the fields:
-		/// Dmcongdoan.Macd - Dmquycach.Macd
-		/// </summary>
-		public virtual IEntityRelation DmquycachEntityUsingMacd
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Dmquycach" , true);
-				relation.AddEntityFieldPair(DmcongdoanFields.Macd, DmquycachFields.Macd);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmcongdoanEntity", true);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmquycachEntity", false);
 				return relation;
 			}
 		}
