@@ -804,7 +804,7 @@ namespace GD.BBPH.APP.HETHONG
                     {
                         if (frm.Name == "FRM_BAOGIA") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
                     }
-                    //ShowAsMDIChildMax((new GD.BBPH.APP.BANHANG.FRM_BAOGIA()), mmru.Text);
+                    ShowAsMDIChildMax((new GD.BBPH.APP.BANHANG.FRM_BAOGIA()), mmru.Text);
                     break;
 
                 case "FRM_DONHANG":

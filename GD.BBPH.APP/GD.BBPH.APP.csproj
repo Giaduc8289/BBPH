@@ -129,6 +129,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BANHANG\FRM_BAOGIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANHANG\FRM_BAOGIA.designer.cs">
+      <DependentUpon>FRM_BAOGIA.cs</DependentUpon>
+    </Compile>
     <Compile Include="BANHANG\FRM_DONHANG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -409,6 +415,9 @@
     <Compile Include="THOI\FRM_TKNLTHOI.designer.cs">
       <DependentUpon>FRM_TKNLTHOI.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BANHANG\FRM_BAOGIA.resx">
+      <DependentUpon>FRM_BAOGIA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BANHANG\FRM_DONHANG.resx">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
     </EmbeddedResource>
