@@ -173,7 +173,7 @@
             this.btn_THEMMANH.TabIndex = 10;
             this.btn_THEMMANH.Text = "Thêm manh";
             this.btn_THEMMANH.UseVisualStyleBackColor = true;
-            this.btn_THEMMANH.Click += new System.EventHandler(this.btn_THEMMANH_Click);
+            //this.btn_THEMMANH.Click += new System.EventHandler(this.btn_THEMMANH_Click);
             // 
             // btn_THEMTUI
             // 
@@ -187,7 +187,7 @@
             this.btn_THEMTUI.TabIndex = 9;
             this.btn_THEMTUI.Text = "Thêm túi";
             this.btn_THEMTUI.UseVisualStyleBackColor = true;
-            this.btn_THEMTUI.Click += new System.EventHandler(this.btn_THEMTUI_Click);
+            //this.btn_THEMTUI.Click += new System.EventHandler(this.btn_THEMTUI_Click);
             // 
             // btn_SAOCHEP
             // 

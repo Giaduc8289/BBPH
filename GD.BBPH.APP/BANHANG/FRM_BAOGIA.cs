@@ -37,7 +37,7 @@ namespace GD.BBPH.APP.BANHANG
         private string MAKHACHHANG = "", MAHANG = "";
         //private bool _Noidia = false, _Truyenthong = false;
         private decimal _Vat = 10;
-        private DataTable DT_DMKHACH = new DataTable(), DT_DMHANG = new DataTable();//DT_DMCHUNGLOAI = new DataTable(), DT_DMPE = new DataTable(), DT_DMMANH_SOI = new DataTable();
+        private DataTable DT_DMKHACH = new DataTable(), DT_DMHANG = new DataTable(), DT_DMCHUNGLOAI = new DataTable(); //, DT_DMPE = new DataTable(), DT_DMMANH_SOI = new DataTable();
         //public DataTable DT_HANGCHON = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
@@ -354,20 +354,20 @@ namespace GD.BBPH.APP.BANHANG
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
             ListviewJanusC _frm_MultiRows_Select = 
-                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI_CHON.xml", DT_DMCHUNGLOAI, DmchungloaiFields.Ma.Name, txt_MAKHACH.Text.Trim());
+                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI_CHON.xml", DT_DMCHUNGLOAI, DmchungloaiFields.Id.Name, txt_MAKHACH.Text.Trim());
             _frm_MultiRows_Select.ShowDialog();
             if (_frm_MultiRows_Select._RowsViewSelect == null) return;
 
             foreach(DataRowView drv in _frm_MultiRows_Select._RowsViewSelect)
             { 
                 DataRow r_Detail = DT_BAOGIA_D_FILL.NewRow();
-                r_Detail[BaogiaDFields.Loaihang.Name] = 0;
-                r_Detail[BaogiaDFields.Masp.Name] = drv.Row[DmchungloaiFields.Machungloai.Name].ToString();
-                r_Detail[BaogiaDFields.Loaihang.Name] = drv.Row[DmchungloaiFields.Chungloai.Name].ToString();
+                //r_Detail[BaogiaDFields.Loaihang.Name] = 0;
+                r_Detail[BaogiaDFields.Masp.Name] = drv.Row[DmchungloaiFields.Id.Name].ToString();
+                r_Detail[BaogiaDFields.Tenchungloai.Name] = drv.Row[DmchungloaiFields.Tenchungloai.Name].ToString();
                 r_Detail[BaogiaDFields.Kichthuoc.Name] = drv.Row[DmchungloaiFields.Kichthuoc.Name].ToString();
-                try { r_Detail[BaogiaDFields.Kichthuoc.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmchungloaiFields.Trongluongbao.Name].ToString()); }
+                try { r_Detail[BaogiaDFields.Kichthuoc.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmchungloaiFields.Kichthuoc.Name].ToString()); }
                 catch { }
-                try { r_Detail[BaogiaDFields.Trongluong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmchungloaiFields.Trongluongpe.Name].ToString()); }
+                try { r_Detail[BaogiaDFields.Trongluong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmchungloaiFields.Trongluong.Name].ToString()); }
                 catch { }
                 ////------------Lấy sau từ module Tinhgia (thiết kế bảng)
                 //try { _BaogiaDEntity.Giavon = LIB.ConvertString.NumbertoDB(drv.Row[DanhmuchanghoaFields.Gia.Name].ToString()); }
@@ -386,10 +386,10 @@ namespace GD.BBPH.APP.BANHANG
         {
             DataRowView _view = (DataRowView)GRID_BAOGIA_D.CurrentRow.DataRow;
             string _MAHIEU_PK = _view[BaogiaDFields.Id.Name].ToString();
-            string _MAHANG = _view[BaogiaDFields.Mahang.Name].ToString();
+            string _MAHANG = _view[BaogiaDFields.Masp.Name].ToString();
             string _Sobaogia = _view[BaogiaDFields.Sobaogia.Name].ToString();
-            string _Chungloai = _view[BaogiaDFields.Chungloai.Name].ToString();
-            if(new DondathangDManager().SelectBySobaogiaChungloaiRDT(_Sobaogia, _Chungloai).Rows.Count>0)
+            string _Chungloai = _view[BaogiaDFields.Tenchungloai.Name].ToString();
+            if(new DonhangDManager().SelectByMahangRDT(_MAHANG).Rows.Count>0)
             {
                 MessageBox.Show("Đã sử dụng trong đơn đặt hàng." + '\n' + "Không thể xóa hàng " + _MAHANG + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -455,18 +455,18 @@ namespace GD.BBPH.APP.BANHANG
                 BaogiaDEntity _BaogiaDEntity = new BaogiaDEntity();
                 _BaogiaDEntity.Sobaogia = _BaogiaHEntity.Sobaogia;
                 _BaogiaDEntity.Ngaytao = _BaogiaHEntity.Ngaybaogia;
-                //_BaogiaDEntity.Ngayhieuluc = _BaogiaHEntity.Ngayhieuluc;
-                //try{ _BaogiaDEntity.Loaihang = Convert.ToInt32(_view[BaogiaDFields.Loaihang.Name].ToString()); }
-                //catch { }
+                _BaogiaDEntity.Ngaytao = _BaogiaHEntity.Ngayhieuluc;
+                try { _BaogiaDEntity.Tenchungloai = _view[BaogiaDFields.Tenchungloai.Name].ToString(); }
+                catch { }
                 _BaogiaDEntity.Masp = _view[BaogiaDFields.Masp.Name].ToString();
                 _BaogiaDEntity.Tenhang = _view[BaogiaDFields.Tenhang.Name].ToString();
-                //_BaogiaDEntity.Chungloai = _view[BaogiaDFields.Chungloai.Name].ToString();
+                _BaogiaDEntity.Tenchungloai = _view[BaogiaDFields.Tenchungloai.Name].ToString();
                 _BaogiaDEntity.Kichthuoc = _view[BaogiaDFields.Kichthuoc.Name].ToString();
                 _BaogiaDEntity.Mota = _view[BaogiaDFields.Mota.Name].ToString();
-                //try { _BaogiaDEntity.Trongluongbao = Convert.ToDecimal(_view[BaogiaDFields.Trongluongbao.Name].ToString()); }
-                //catch { }
-                //try { _BaogiaDEntity.Trongluongpe = Convert.ToDecimal(_view[BaogiaDFields.Trongluongpe.Name].ToString()); }
-                //catch { }
+                try { _BaogiaDEntity.Kichthuoc = _view[BaogiaDFields.Kichthuoc.Name].ToString(); }
+                catch { }
+                try { _BaogiaDEntity.Trongluong = Convert.ToDecimal(_view[BaogiaDFields.Trongluong.Name].ToString()); }
+                catch { }
                 try { _BaogiaDEntity.DongiakhongVat = Convert.ToInt32(_view[BaogiaDFields.DongiakhongVat.Name].ToString()); }
                 catch { }
                 try { _BaogiaDEntity.DongiaVat = Convert.ToInt32(_view[BaogiaDFields.DongiaVat.Name].ToString()); }
@@ -652,13 +652,13 @@ namespace GD.BBPH.APP.BANHANG
                     DataRow r_Detail = DT_BAOGIA_D_FILL.NewRow();
                     r_Detail[BaogiaDFields.Sobaogia.Name] = dr[BaogiaDFields.Sobaogia.Name];
                     r_Detail[BaogiaDFields.Ngaytao.Name] = dr[BaogiaDFields.Ngaytao.Name];
-                    //r_Detail[BaogiaDFields.Ngayhieuluc.Name] = dr[BaogiaDFields.Ngayhieuluc.Name];
-                    r_Detail[BaogiaDFields.Loaihang.Name] = dr[BaogiaDFields.Loaihang.Name];
+                    r_Detail[BaogiaDFields.Ngaysua.Name] = dr[BaogiaDFields.Ngaysua.Name];
+                    r_Detail[BaogiaDFields.Tenchungloai.Name] = dr[BaogiaDFields.Tenchungloai.Name];
                     r_Detail[BaogiaDFields.Masp.Name] = dr[BaogiaDFields.Masp.Name];
                     r_Detail[BaogiaDFields.Tenhang.Name] = dr[BaogiaDFields.Tenhang.Name];
                     //r_Detail[BaogiaDFields.Chungloai.Name] = dr[BaogiaDFields.Chungloai.Name];
                     r_Detail[BaogiaDFields.Kichthuoc.Name] = dr[BaogiaDFields.Kichthuoc.Name];
-                    //r_Detail[BaogiaDFields.Trongluongbao.Name] = dr[BaogiaDFields.Trongluongbao.Name];
+                    r_Detail[BaogiaDFields.Trongluong.Name] = dr[BaogiaDFields.Trongluong.Name];
                     //r_Detail[BaogiaDFields.Trongluongpe.Name] = dr[BaogiaDFields.Trongluongpe.Name];
                     r_Detail[BaogiaDFields.DongiakhongVat.Name] = dr[BaogiaDFields.DongiakhongVat.Name];
                     //r_Detail[BaogiaDFields.Dongiapechuavat.Name] = dr[BaogiaDFields.Dongiapechuavat.Name];
@@ -743,86 +743,89 @@ namespace GD.BBPH.APP.BANHANG
 
         private void btn_IN_Click(object sender, EventArgs e)
         {
-            DataSet dsKetqua = new DataSet();
-            DateTime _Ngaybaogia = new DateTime(), _Ngayhieuluc = new DateTime();
-            string _Sobaogia = "", _Khachhang = "", _Phuongthuctt = "", _Diadiemgiao = "", _Noidung = "";
+            //DataSet dsKetqua = new DataSet();
+            //DateTime _Ngaybaogia = new DateTime(), _Ngayhieuluc = new DateTime();
+            //string _Sobaogia = "", _Khachhang = "", _Phuongthuctt = "", _Diadiemgiao = "", _Noidung = "";
 
-            try
-            {
-                #region Lay thong tin cac tham so
-                _Ngaybaogia = Convert.ToDateTime(txt_NGAYBAOGIA.Text);
-                _Sobaogia = txt_SOBAOGIA.Text;
-                
-                #endregion
+            //try
+            //{
+            //    #region Lay thong tin cac tham so
+            //    _Ngaybaogia = Convert.ToDateTime(txt_NGAYBAOGIA.Text);
+            //    _Sobaogia = txt_SOBAOGIA.Text;
 
-                #region Chay procedure
-                DAL.DatabaseSpecific.DataAccessAdapter _DataAccessAdapter = new DAL.DatabaseSpecific.DataAccessAdapter(LIB.SESSION_START.ConnectionStringKeyName);
-                SqlParameter[] parameters = new SqlParameter[2];
-                parameters[0] = new SqlParameter("@Ngaybaogia", _Ngaybaogia);
-                parameters[1] = new SqlParameter("@Sobaogia", _Sobaogia);
+            //    #endregion
 
-                _DataAccessAdapter.CallRetrievalStoredProcedure("Inbaogia", parameters, dsKetqua);
-                _DataAccessAdapter.CloseConnection();
-                dsKetqua.Tables[0].TableName = "Inbaogia";
-                #endregion
-                
-                #region Tham so
-                DataTable dtThamso = new DataTable("Thamso");
-                dtThamso.Columns.Add("Khachhang");
-                dtThamso.Columns.Add("Phuongthuctt");
-                dtThamso.Columns.Add("Diadiemgiao");
-                dtThamso.Columns.Add("Ngayhieuluc", Type.GetType("System.DateTime"));
-                dtThamso.Columns.Add("Noidung");
-                dtThamso.Columns.Add("Noidia");
-                dtThamso.Columns.Add("Truyenthong");
+            //    #region Chay procedure
+            //    DAL.DatabaseSpecific.DataAccessAdapter _DataAccessAdapter = new DAL.DatabaseSpecific.DataAccessAdapter(LIB.SESSION_START.ConnectionStringKeyName);
+            //    SqlParameter[] parameters = new SqlParameter[2];
+            //    parameters[0] = new SqlParameter("@Ngaybaogia", _Ngaybaogia);
+            //    parameters[1] = new SqlParameter("@Sobaogia", _Sobaogia);
 
-                DataRow dr = dtThamso.NewRow();
-                dr["Khachhang"] = txt_TENKHACH.Text;
-                dr["Phuongthuctt"] = txt_PHUONGTHUCTT.Text;
-                dr["Diadiemgiao"] = txt_DIADIEMGIAO.Text;
-                dr["Ngayhieuluc"] = Convert.ToDateTime(txt_NGAYHIEULUC.Text);
-                dr["Noidung"] = txt_NOIDUNG.Text;
-                dr["Noidia"] = _Noidia;
-                dr["Truyenthong"] = _Truyenthong;
+            //    _DataAccessAdapter.CallRetrievalStoredProcedure("Inbaogia", parameters, dsKetqua);
+            //    _DataAccessAdapter.CloseConnection();
+            //    dsKetqua.Tables[0].TableName = "Inbaogia";
+            //    #endregion
 
-                dtThamso.Rows.Add(dr);
-                dsKetqua.Tables.Add(dtThamso);
-                #endregion
+            //    #region Tham so
+            //    DataTable dtThamso = new DataTable("Thamso");
+            //    dtThamso.Columns.Add("Khachhang");
+            //    dtThamso.Columns.Add("Phuongthuctt");
+            //    dtThamso.Columns.Add("Diadiemgiao");
+            //    dtThamso.Columns.Add("Ngayhieuluc", Type.GetType("System.DateTime"));
+            //    dtThamso.Columns.Add("Noidung");
+            //    dtThamso.Columns.Add("Sobaogia");
+            //    //dtThamso.Columns.Add("Noidia");
+            //    //dtThamso.Columns.Add("Truyenthong");
 
-                #region Hien bao cao
-                if (_Noidia == true)
-                {
-                    new BAOCAO.FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\BAOGIA.rdlc", "Inbaogia", this.Text, true).Show();
-                }
-                else
-                {
-                    new BAOCAO.FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\BAOGIATA.rdlc", "Inbaogia", this.Text, true).Show();
-                }
-                #endregion
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            //    DataRow dr = dtThamso.NewRow();
+            //    dr["Khachhang"] = txt_TENKHACH.Text;
+            //    dr["Phuongthuctt"] = txt_PHUONGTHUCTT.Text;
+            //    dr["Diadiemgiao"] = txt_DIADIEMGIAO.Text;
+            //    dr["Ngayhieuluc"] = Convert.ToDateTime(txt_NGAYHIEULUC.Text);
+            //    dr["Noidung"] = txt_NOIDUNG.Text;
+            //    dr["Sobaogia"] = txt_SOBAOGIA.Text;
+            //    //dr["Noidia"] = _Noidia;
+            //    //dr["Truyenthong"] = _Truyenthong;
+
+            //    dtThamso.Rows.Add(dr);
+            //    dsKetqua.Tables.Add(dtThamso);
+            //}
+            //#endregion
+
+            ////    #region Hien bao cao
+            ////    if (_Noidia == true)
+            ////    {
+            ////        new BAOCAO.FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\BAOGIA.rdlc", "Inbaogia", this.Text, true).Show();
+            ////    }
+            ////    else
+            ////    {
+            ////        new BAOCAO.FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\BAOGIATA.rdlc", "Inbaogia", this.Text, true).Show();
+            ////    }
+            ////    #endregion
+            ////}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
         }
 
         private void btn_TIMKIEM_Click(object sender, EventArgs e)
         {
-            FRM_TIMKIEM frm = new FRM_TIMKIEM();
-            frm.ShowDialog();
-            if (frm._DialogResult == DialogResult.No) return;
-            DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-            //DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
-            MAKHACHHANG = frm._Makhachhang;
-            MAHANG = frm._Mahang;
-            MAHIEU_PK = frm._Sobaogia;
-            DT_BAOGIA_H = LIB.Procedures.Danhsachbaogia(LIB.SESSION_START.TS_NGAYDAUNAM, LIB.SESSION_START.TS_NGAYCUOINAM, MAHIEU_PK, MAKHACHHANG, MAHANG);
-            DataView Source_View = new DataView(DT_BAOGIA_H);
-            BS_BAOGIA_H = new BindingSource();
-            BS_BAOGIA_H.DataSource = Source_View;
-            GRID_BAOGIA_H.DataSource = BS_BAOGIA_H;
-            BS_BAOGIA_H.CurrentChanged += new EventHandler(BS_BAOGIA_H_CurrentChanged);
-            BS_BAOGIA_H_CurrentChanged((new object()), (new EventArgs()));
+            //FRM_TIMKIEM frm = new FRM_TIMKIEM();
+            //frm.ShowDialog();
+            //if (frm._DialogResult == DialogResult.No) return;
+            //DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+            ////DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
+            //MAKHACHHANG = frm._Makhachhang;
+            //MAHANG = frm._Mahang;
+            //MAHIEU_PK = frm._Sobaogia;
+            //DT_BAOGIA_H = LIB.Procedures.Danhsachbaogia(LIB.SESSION_START.TS_NGAYDAUNAM, LIB.SESSION_START.TS_NGAYCUOINAM, MAHIEU_PK, MAKHACHHANG, MAHANG);
+            //DataView Source_View = new DataView(DT_BAOGIA_H);
+            //BS_BAOGIA_H = new BindingSource();
+            //BS_BAOGIA_H.DataSource = Source_View;
+            //GRID_BAOGIA_H.DataSource = BS_BAOGIA_H;
+            //BS_BAOGIA_H.CurrentChanged += new EventHandler(BS_BAOGIA_H_CurrentChanged);
+            //BS_BAOGIA_H_CurrentChanged((new object()), (new EventArgs()));
         }
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
