@@ -489,6 +489,19 @@ namespace GD.BBPH.APP.LIB
             set { _DT_KQTHOI = value; }
         }
         #endregion
+
+        #region KQIN
+        private static DataTable _DT_KQIN = null;
+        public static DataTable DT_KQIN
+        {
+            get
+            {
+                _DT_KQIN = new KetquainManager().SelectAllRDT();
+                return _DT_KQIN;
+            }
+            set { _DT_KQIN = value; }
+        }
+        #endregion
         #region HANGTRALAI
         private static DataTable _DT_HANGTRALAI = null;
         public static DataTable DT_HANGTRALAI

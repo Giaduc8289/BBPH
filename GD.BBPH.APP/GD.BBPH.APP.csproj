@@ -321,6 +321,12 @@
     <Compile Include="HETHONG\FRM_USERS.designer.cs">
       <DependentUpon>FRM_USERS.cs</DependentUpon>
     </Compile>
+    <Compile Include="IN\FRM_KQIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IN\FRM_KQIN.designer.cs">
+      <DependentUpon>FRM_KQIN.cs</DependentUpon>
+    </Compile>
     <Compile Include="LIB\ChucdanhEngine.cs" />
     <Compile Include="LIB\ConvertString.cs" />
     <Compile Include="LIB\DataFactory.cs" />
@@ -498,6 +504,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HETHONG\FRM_USERS.resx">
       <DependentUpon>FRM_USERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IN\FRM_KQIN.resx">
+      <DependentUpon>FRM_KQIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -1204,7 +1213,6 @@
     <Folder Include="CHIA\" />
     <Folder Include="GHEP\" />
     <Folder Include="HOANTHIEN\" />
-    <Folder Include="IN\" />
     <Folder Include="KHO\" />
     <Folder Include="LOC\" />
     <Folder Include="MUAHANG\" />

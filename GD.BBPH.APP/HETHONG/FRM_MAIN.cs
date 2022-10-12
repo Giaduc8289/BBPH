@@ -845,6 +845,14 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region In
+                case "FRM_KQIN":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KQIN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.IN.FRM_KQIN()), mmru.Text);
+                    break;
+
                 #endregion
 
                 #region Lọc

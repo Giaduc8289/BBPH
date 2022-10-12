@@ -29,19 +29,13 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
-
-  <tablename>
-    <name>Ketquain</name>
-    <headerText>Danh sách kết quả in</headerText>
-  </tablename>
-
   <viewgrid>
     <value>1</value>
     <name>Ngay</name>
-    <headerText>Ngày</headerText>
+    <headerText>Ngay</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>80</Width>
+    <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -50,52 +44,20 @@
     <headerText>Ca</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>45</Width>
+    <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Mamayin</name>
-    <headerText>Máy</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>50</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tenmay</name>
-    <headerText>Tên máy</headerText>
+    <name>Mamay</name>
+    <headerText>Mamay</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
-  <viewgrid>
-    <value>2</value>
-    <name>Phedet</name>
-    <headerText>Phedet</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
-    <name>Phein</name>
-    <headerText>Phein</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
-    <name>Phecongnghe</name>
-    <headerText>Phecongnghe</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
+  <tablename>
+    <name>tablename</name>
+    <headerText>Danh sách tendanhsach</headerText>
+  </tablename>
 </NewDataSet>
