@@ -29,10 +29,20 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
+
+  <!--<viewgrid>
+    <value>1</value>
+    <name>Id</name>
+    <headerText>id</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>-->
   <viewgrid>
     <value>1</value>
-    <name>Ngay</name>
-    <headerText>Ngay</headerText>
+    <name>Manguyenlieu</name>
+    <headerText>Mã nguyên liệu</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -40,8 +50,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Ca</name>
-    <headerText>Ca</headerText>
+    <name>Tennguyenlieu</name>
+    <headerText>Tên nguyên liệu</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -49,15 +59,24 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Mamay</name>
-    <headerText>Mamay</headerText>
+    <name>Klnhap</name>
+    <headerText>Khối lượng nhập</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Klxuat</name>
+    <headerText>Khối lượng xuất</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>
-    <name>tablename</name>
-    <headerText>Danh sách tendanhsach</headerText>
+    <name>TKNLTHOICHITIET</name>
+    <headerText>Danh sách thống kê nguyên liệu thổi chi tiết</headerText>
   </tablename>
 </NewDataSet>

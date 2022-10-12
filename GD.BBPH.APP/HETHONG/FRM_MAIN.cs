@@ -836,7 +836,6 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Thổi
-
                 case "FRM_KQTHOI":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -844,9 +843,24 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.THOI.FRM_KQTHOI()), mmru.Text);
                     break;
+                case "FRM_TKNLTHOI":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_TKNLTHOI") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.THOI.FRM_TKNLTHOI()), mmru.Text);
+                    break;
                 #endregion
 
                 #region In
+                case "FRM_KQIN":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KQIN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.IN.FRM_KQIN()), mmru.Text);
+                    break;
+
                 #endregion
 
                 #region Lọc

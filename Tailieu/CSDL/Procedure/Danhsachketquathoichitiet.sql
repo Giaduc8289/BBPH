@@ -13,7 +13,7 @@ Create Procedure dbo.Danhsachketquathoichitiet
 	Select * 
 	FROM dbo.Ketquathoi
 	WHERE (Id = @Maketquathoi OR @Maketquathoi = '')
-		AND (Mamang=@Mamang OR @Mamang=''
+		AND (Mamang=@Mamang OR @Mamang='')
 
 GO
 
