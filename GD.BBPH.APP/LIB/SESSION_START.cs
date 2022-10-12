@@ -477,6 +477,18 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region KQTHOI
+        private static DataTable _DT_KQTHOI = null;
+        public static DataTable DT_KQTHOI
+        {
+            get
+            {
+                _DT_KQTHOI = new KetquathoiManager().SelectAllRDT();
+                return _DT_KQTHOI;
+            }
+            set { _DT_KQTHOI = value; }
+        }
+        #endregion
         #region HANGTRALAI
         private static DataTable _DT_HANGTRALAI = null;
         public static DataTable DT_HANGTRALAI

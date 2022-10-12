@@ -31,8 +31,8 @@
   </xs:schema>
   <viewgrid>
     <value>1</value>
-    <name>Mamang</name>
-    <headerText>Mamang</headerText>
+    <name>Ngay</name>
+    <headerText>Ngay</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -40,8 +40,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tenmang</name>
-    <headerText>Tenmang</headerText>
+    <name>Ca</name>
+    <headerText>Ca</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -49,80 +49,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Makhach</name>
-    <headerText>Makhach</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tenkhach</name>
-    <headerText>Tenkhach</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Kichthuoc</name>
-    <headerText>Kichthuoc</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Trongluong</name>
-    <headerText>Trongluong</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Mactpt</name>
-    <headerText>Mactpt</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Ngaytao</name>
-    <headerText>Ngaytao</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Nguoitao</name>
-    <headerText>Nguoitao</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Ngaysua</name>
-    <headerText>Ngaysua</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Nguoisua</name>
-    <headerText>Nguoisua</headerText>
+    <name>Mamay</name>
+    <headerText>Mamay</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
