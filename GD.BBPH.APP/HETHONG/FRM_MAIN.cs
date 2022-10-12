@@ -828,6 +828,13 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Thổi
+                case "FRM_TKNLTHOI":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_TKNLTHOI") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.THOI.FRM_TKNLTHOI()), mmru.Text);
+                    break;
                 #endregion
 
                 #region In
