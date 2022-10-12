@@ -101,6 +101,7 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH.xml", GRID_DMQUYCACH, uiPanel0Container);
             FORM_PROCESS();
+            GRID_DMQUYCACH.RootTable.Groups.Add(GRID_DMQUYCACH.Tables[0].Columns[DmquycachFields.Tennhom.Name]);
             //GRID_DMQUYCACH.RootTable.Columns[DmquycachFields.Tencd.Name].EditType = EditType.NoEdit;
             //GRID_DMQUYCACH.RootTable.Columns[DmquycachFields.Tenqccha.Name].EditType = EditType.NoEdit;
             DataView Source_View = new DataView(DT_DMQUYCACH);
