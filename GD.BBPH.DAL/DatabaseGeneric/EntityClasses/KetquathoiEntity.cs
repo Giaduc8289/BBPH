@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, October 11, 2022 11:43:59 PM
+// Code is generated on: Wednesday, October 12, 2022 10:13:59 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -531,6 +531,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenmang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenmay", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tencongnhan", fieldHashtable);
 		}
 		#endregion
 
@@ -890,6 +899,39 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquathoiFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)KetquathoiFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Tenmang property of the Entity Ketquathoi<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathoi"."Tenmang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenmang
+		{
+			get { return (System.String)GetValue((int)KetquathoiFieldIndex.Tenmang, true); }
+			set	{ SetValue((int)KetquathoiFieldIndex.Tenmang, value); }
+		}
+
+		/// <summary> The Tenmay property of the Entity Ketquathoi<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathoi"."Tenmay"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenmay
+		{
+			get { return (System.String)GetValue((int)KetquathoiFieldIndex.Tenmay, true); }
+			set	{ SetValue((int)KetquathoiFieldIndex.Tenmay, value); }
+		}
+
+		/// <summary> The Tencongnhan property of the Entity Ketquathoi<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathoi"."Tencongnhan"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tencongnhan
+		{
+			get { return (System.String)GetValue((int)KetquathoiFieldIndex.Tencongnhan, true); }
+			set	{ SetValue((int)KetquathoiFieldIndex.Tencongnhan, value); }
 		}
 
 
