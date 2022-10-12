@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 12, 2022 10:13:59 AM
+// Code is generated on: Wednesday, October 12, 2022 3:04:17 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1897,6 +1897,26 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Nguoisua);}
 		}
+		/// <summary>Creates a new KetquachiaEntity.Mamay field instance</summary>
+		public static EntityField2 Mamay
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Mamay);}
+		}
+		/// <summary>Creates a new KetquachiaEntity.Tensanpham field instance</summary>
+		public static EntityField2 Tensanpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tensanpham);}
+		}
+		/// <summary>Creates a new KetquachiaEntity.Tenmay field instance</summary>
+		public static EntityField2 Tenmay
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tenmay);}
+		}
+		/// <summary>Creates a new KetquachiaEntity.Tencongnhan field instance</summary>
+		public static EntityField2 Tencongnhan
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tencongnhan);}
+		}
 	}
 
 	/// <summary>Field Creation Class for entity KetquaghepEntity</summary>
@@ -2077,6 +2097,21 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.Nguoisua);}
 		}
+		/// <summary>Creates a new KetquaghepEntity.Tensanpham field instance</summary>
+		public static EntityField2 Tensanpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.Tensanpham);}
+		}
+		/// <summary>Creates a new KetquaghepEntity.Tenmay field instance</summary>
+		public static EntityField2 Tenmay
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.Tenmay);}
+		}
+		/// <summary>Creates a new KetquaghepEntity.Tencongnhan field instance</summary>
+		public static EntityField2 Tencongnhan
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.Tencongnhan);}
+		}
 	}
 
 	/// <summary>Field Creation Class for entity KetquainEntity</summary>
@@ -2206,6 +2241,21 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.Nguoisua);}
+		}
+		/// <summary>Creates a new KetquainEntity.Tensanpham field instance</summary>
+		public static EntityField2 Tensanpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.Tensanpham);}
+		}
+		/// <summary>Creates a new KetquainEntity.Tenmay field instance</summary>
+		public static EntityField2 Tenmay
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.Tenmay);}
+		}
+		/// <summary>Creates a new KetquainEntity.Tencongnhan field instance</summary>
+		public static EntityField2 Tencongnhan
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.Tencongnhan);}
 		}
 	}
 
@@ -2561,6 +2611,21 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquatuaFieldIndex.Nguoisua);}
+		}
+		/// <summary>Creates a new KetquatuaEntity.Tensanpham field instance</summary>
+		public static EntityField2 Tensanpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquatuaFieldIndex.Tensanpham);}
+		}
+		/// <summary>Creates a new KetquatuaEntity.Tenmay field instance</summary>
+		public static EntityField2 Tenmay
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquatuaFieldIndex.Tenmay);}
+		}
+		/// <summary>Creates a new KetquatuaEntity.Tencongnhan field instance</summary>
+		public static EntityField2 Tencongnhan
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquatuaFieldIndex.Tencongnhan);}
 		}
 	}
 
