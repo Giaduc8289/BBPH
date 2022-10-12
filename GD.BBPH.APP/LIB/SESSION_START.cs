@@ -502,5 +502,21 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region Thổi
+        #region TKNLTHOI
+        private static DataTable _DT_TKNLTHOI = null;
+        public static DataTable DT_TKNLTHOI
+        {
+            get
+            {
+                _DT_TKNLTHOI = new TknguyenlieuthoiManager().SelectAllRDT();
+                return _DT_TKNLTHOI;
+            }
+            set { _DT_TKNLTHOI = value; }
+        }
+        #endregion
+
+        #endregion
+
     }
 }

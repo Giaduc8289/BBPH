@@ -397,6 +397,12 @@
     <Compile Include="THOI\FRM_KQTHOI.designer.cs">
       <DependentUpon>FRM_KQTHOI.cs</DependentUpon>
     </Compile>
+    <Compile Include="THOI\FRM_TKNLTHOI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="THOI\FRM_TKNLTHOI.designer.cs">
+      <DependentUpon>FRM_TKNLTHOI.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BANHANG\FRM_DONHANG.resx">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
     </EmbeddedResource>
@@ -789,6 +795,9 @@
     <EmbeddedResource Include="RDLC\BCTHLUONGDET.rdlc" />
     <EmbeddedResource Include="THOI\FRM_KQTHOI.resx">
       <DependentUpon>FRM_KQTHOI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="THOI\FRM_TKNLTHOI.resx">
+      <DependentUpon>FRM_TKNLTHOI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="RDLC\DataSXBB.xsc">

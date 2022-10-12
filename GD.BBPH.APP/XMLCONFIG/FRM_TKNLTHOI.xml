@@ -29,46 +29,26 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
-  
+  <viewgrid>
+    <value>1</value>
+    <name>Ngay</name>
+    <headerText>Ngày</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Ca</name>
+    <headerText>Ca</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
   <tablename>
-    <name>Dmnguyenlieu</name>
-    <headerText>Danh sách nguyên liệu</headerText>
+    <name>tablename</name>
+    <headerText>Danh sách tendanhsach</headerText>
   </tablename>
-  
-  <viewgrid>
-    <value>1</value>
-    <name>Manl</name>
-    <headerText>Manl</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tenrutgon</name>
-    <headerText>Tenrutgon</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Manhom</name>
-    <headerText>Manhom</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tennhom</name>
-    <headerText>Tennhom</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
 </NewDataSet>
