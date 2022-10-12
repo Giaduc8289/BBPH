@@ -876,24 +876,19 @@
     <Content Include="Logo-App-Ico.ico" />
     <Content Include="XMLCONFIG\FRM_CTPTMANG.xml" />
     <Content Include="XMLCONFIG\FRM_CTPTMANGCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_DIEUCHUYENNGUYENLIEU.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGNHAN_CHON.xml" />
-    <Content Include="XMLCONFIG\FRM_DMDONGMAY.xml" />
-    <Content Include="XMLCONFIG\FRM_DMDONGMAYDET_CHON.xml" />
-    <Content Include="XMLCONFIG\FRM_DMDONGMAYIN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMDONGMAYPE.xml" />
+    <Content Include="XMLCONFIG\FRM_DMDONGMAY.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="XMLCONFIG\FRM_DMBOPHAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_DMLOAIVATTUPHU.xml" />
-    <Content Include="XMLCONFIG\FRM_DMLOAIPHE.xml" />
     <Content Include="XMLCONFIG\FRM_DMMANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAUIN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYHT.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYHOANTHIEN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYSOI_CHON.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYPE.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAY.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml">
       <SubType>Designer</SubType>
@@ -911,7 +906,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_KIEMKEHT.xml" />
-    <Content Include="XMLCONFIG\FRM_DMKHOPHE.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANG.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANGCHITIET.xml">
       <SubType>Designer</SubType>
@@ -940,9 +934,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_XUATKHOMANHTRANGCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_DIEUCHUYENNGUYENLIEUCHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_XUATKHOPHE.xml" />
@@ -1070,20 +1061,7 @@
     <Content Include="XMLCONFIG\FRM_TKPHECATONG.xml" />
     <Content Include="XMLCONFIG\FRM_CONGTHAYKHO.xml" />
     <Content Include="XMLCONFIG\FRM_CONGTHAYKHOCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_DMCSDETBANSOI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMCSSOIDENIER.xml" />
-    <Content Include="XMLCONFIG\FRM_DMCSDETDENIER.xml" />
-    <Content Include="XMLCONFIG\FRM_DMCSDETKHO.xml" />
-    <Content Include="XMLCONFIG\FRM_DMDACDIEMMANH.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGIALUONG.xml" />
-    <Content Include="XMLCONFIG\FRM_DMDONGMAYHOANTHIEN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMDONGMAYTRANG.xml" />
-    <Content Include="XMLCONFIG\FRM_DMHINHTHUCTRANG.xml" />
-    <Content Include="XMLCONFIG\FRM_DMHINHTHUCDET.xml" />
-    <Content Include="XMLCONFIG\FRM_DMLUONGBANSOI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMLUONGKHO.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYIN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYTRANG.xml" />
     <Content Include="XMLCONFIG\FRM_KHBHANG.xml" />
     <Content Include="XMLCONFIG\FRM_KHBHANGCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KHSXDET.xml" />
@@ -1092,22 +1070,12 @@
     <Content Include="XMLCONFIG\FRM_KHSXSOIDIEUCHINH.xml" />
     <Content Include="XMLCONFIG\FRM_KHSXSOITHEODH.xml" />
     <Content Include="XMLCONFIG\FRM_KHSXSOI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMBANSOI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMCHATLUONG.xml" />
     <Content Include="XMLCONFIG\FRM_DMCHUCVU.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGNHAN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMCSMAYDET.xml" />
-    <Content Include="XMLCONFIG\FRM_DMCSMAYSOI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMDONGMAYDET.xml" />
-    <Content Include="XMLCONFIG\FRM_DMDONGMAYSOI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMHINHTHUC.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHO.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMANH.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAUSAC.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYDET.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYSOI.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHAMAY.xml" />
     <Content Include="XMLCONFIG\FRM_DMPHONGBAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMSOI.xml" />
@@ -1138,10 +1106,8 @@
     <Content Include="XMLCONFIG\FRM_USERS.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPMANH_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANH_CHON.xml" />
-    <Content Include="XMLCONFIG\FRM_DIEUCHUYENMANH_D.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPMANH_D.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANH_D.xml" />
-    <Content Include="XMLCONFIG\FRM_DIEUCHUYENMANH_H.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPMANH_H.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANH_H.xml" />
     <Content Include="XMLCONFIG\FRM_XUATSOI_D.xml" />
