@@ -154,12 +154,21 @@
     <Compile Include="DatabaseGeneric\EntityClasses\KetquathoiEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\KetquatuaEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\MaucuahangEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\NhapkhomangEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\NhapkhonguyenlieuEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\NhapkhosanphamEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\PhieugiaohangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\PhieugiaohangHEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\SodumangEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\SodunguyenlieuEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\SodusanphamEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\ThamsoEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\ThanhphanmauEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\TknguyenlieuthoiEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\TruccuahangEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\XuatkhomangEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\XuatkhonguyenlieuEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\XuatkhosanphamEntity.cs" />
     <Compile Include="DatabaseGeneric\HelperClasses\EntityCollection.cs">
       <GeneratedBy>LLBLGen Pro</GeneratedBy>
     </Compile>
@@ -254,14 +263,23 @@
     <Compile Include="DatabaseGeneric\RelationClasses\MaucuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuroleRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\NhapkhomangRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\NhapkhonguyenlieuRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\NhapkhosanphamRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\PhieugiaohangDRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\PhieugiaohangHRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\RolesRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\SodumangRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\SodunguyenlieuRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\SodusanphamRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\ThamsoRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\ThanhphanmauRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\TknguyenlieuthoiRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\TruccuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\UsersRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\XuatkhomangRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\XuatkhonguyenlieuRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\XuatkhosanphamRelations.cs" />
     <Compile Include="DatabaseSpecific\ActionProcedures.cs" />
     <Compile Include="DatabaseSpecific\DataAccessAdapter.cs" />
     <Compile Include="DatabaseSpecific\PersistenceInfoProvider.cs" />

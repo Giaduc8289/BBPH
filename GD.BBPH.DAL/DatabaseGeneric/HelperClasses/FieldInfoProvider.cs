@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 12, 2022 3:04:16 PM
+// Code is generated on: Wednesday, October 12, 2022 5:45:06 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -56,7 +56,7 @@ namespace GD.BBPH.DAL.HelperClasses
 		/// <summary>Method which initializes the internal datastores.</summary>
 		private void Init()
 		{
-			base.InitClass( (46 + 0));
+			base.InitClass( (55 + 0));
 			InitBaogiaDEntityInfos();
 			InitBaogiaHEntityInfos();
 			InitCongsuatmayEntityInfos();
@@ -95,14 +95,23 @@ namespace GD.BBPH.DAL.HelperClasses
 			InitMaucuahangEntityInfos();
 			InitMenuEntityInfos();
 			InitMenuroleEntityInfos();
+			InitNhapkhomangEntityInfos();
+			InitNhapkhonguyenlieuEntityInfos();
+			InitNhapkhosanphamEntityInfos();
 			InitPhieugiaohangDEntityInfos();
 			InitPhieugiaohangHEntityInfos();
 			InitRolesEntityInfos();
+			InitSodumangEntityInfos();
+			InitSodunguyenlieuEntityInfos();
+			InitSodusanphamEntityInfos();
 			InitThamsoEntityInfos();
 			InitThanhphanmauEntityInfos();
 			InitTknguyenlieuthoiEntityInfos();
 			InitTruccuahangEntityInfos();
 			InitUsersEntityInfos();
+			InitXuatkhomangEntityInfos();
+			InitXuatkhonguyenlieuEntityInfos();
+			InitXuatkhosanphamEntityInfos();
 
 			base.ConstructElementFieldStructures(InheritanceInfoProviderSingleton.GetInstance());
 		}
@@ -775,6 +784,66 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("MenuroleEntity", "Menuid", typeof(System.String), true, true, false, false,  (int)MenuroleFieldIndex.Menuid, 50, 0, 0);
 			base.AddElementFieldInfo("MenuroleEntity", "Rolesid", typeof(System.String), true, true, false, false,  (int)MenuroleFieldIndex.Rolesid, 50, 0, 0);
 		}
+		/// <summary>Inits NhapkhomangEntity's FieldInfo objects</summary>
+		private void InitNhapkhomangEntityInfos()
+		{
+			base.AddElementFieldInfo("NhapkhomangEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)NhapkhomangFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Ngaynhap", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)NhapkhomangFieldIndex.Ngaynhap, 0, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Makho", typeof(System.String), false, false, false, true,  (int)NhapkhomangFieldIndex.Makho, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Tenkho", typeof(System.String), false, false, false, true,  (int)NhapkhomangFieldIndex.Tenkho, 250, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Mamang", typeof(System.String), false, false, false, true,  (int)NhapkhomangFieldIndex.Mamang, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Tenmang", typeof(System.String), false, false, false, true,  (int)NhapkhomangFieldIndex.Tenmang, 250, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Somet", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)NhapkhomangFieldIndex.Somet, 0, 2, 20);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Sokg", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)NhapkhomangFieldIndex.Sokg, 0, 2, 20);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Malydo", typeof(System.String), false, false, false, true,  (int)NhapkhomangFieldIndex.Malydo, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Tenlydo", typeof(System.String), false, false, false, true,  (int)NhapkhomangFieldIndex.Tenlydo, 250, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Lenhsx", typeof(System.String), false, false, false, true,  (int)NhapkhomangFieldIndex.Lenhsx, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Sohopdongmua", typeof(System.String), false, false, false, true,  (int)NhapkhomangFieldIndex.Sohopdongmua, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)NhapkhomangFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)NhapkhomangFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)NhapkhomangFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("NhapkhomangEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)NhapkhomangFieldIndex.Nguoisua, 50, 0, 0);
+		}
+		/// <summary>Inits NhapkhonguyenlieuEntity's FieldInfo objects</summary>
+		private void InitNhapkhonguyenlieuEntityInfos()
+		{
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)NhapkhonguyenlieuFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Ngaynhap", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Ngaynhap, 0, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Makho", typeof(System.String), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Makho, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Tenkho", typeof(System.String), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Tenkho, 250, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Manguyenlieu", typeof(System.String), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Manguyenlieu, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Tennguyenlieu", typeof(System.String), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Tennguyenlieu, 250, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Donvitinh", typeof(System.String), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Donvitinh, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Soluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Soluong, 0, 2, 20);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Malydo", typeof(System.String), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Malydo, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Tenlydo", typeof(System.String), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Tenlydo, 250, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Sohopdongmua", typeof(System.String), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Sohopdongmua, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("NhapkhonguyenlieuEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)NhapkhonguyenlieuFieldIndex.Nguoisua, 50, 0, 0);
+		}
+		/// <summary>Inits NhapkhosanphamEntity's FieldInfo objects</summary>
+		private void InitNhapkhosanphamEntityInfos()
+		{
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)NhapkhosanphamFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Ngaynhap", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Ngaynhap, 0, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Makho", typeof(System.String), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Makho, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Tenkho", typeof(System.String), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Tenkho, 250, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Masanpham", typeof(System.String), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Masanpham, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Tensanpham", typeof(System.String), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Tensanpham, 250, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Soluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Soluong, 0, 2, 20);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Somet", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Somet, 0, 2, 20);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Sokg", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Sokg, 0, 2, 20);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Malydo", typeof(System.String), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Malydo, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Tenlydo", typeof(System.String), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Tenlydo, 250, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Lenhsx", typeof(System.String), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Lenhsx, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Sohopdongmua", typeof(System.String), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Sohopdongmua, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("NhapkhosanphamEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)NhapkhosanphamFieldIndex.Nguoisua, 50, 0, 0);
+		}
 		/// <summary>Inits PhieugiaohangDEntity's FieldInfo objects</summary>
 		private void InitPhieugiaohangDEntityInfos()
 		{
@@ -821,6 +890,54 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("RolesEntity", "Rolesid", typeof(System.String), true, false, false, false,  (int)RolesFieldIndex.Rolesid, 50, 0, 0);
 			base.AddElementFieldInfo("RolesEntity", "Rolesname", typeof(System.String), false, false, false, true,  (int)RolesFieldIndex.Rolesname, 50, 0, 0);
 			base.AddElementFieldInfo("RolesEntity", "Description", typeof(System.String), false, false, false, true,  (int)RolesFieldIndex.Description, 200, 0, 0);
+		}
+		/// <summary>Inits SodumangEntity's FieldInfo objects</summary>
+		private void InitSodumangEntityInfos()
+		{
+			base.AddElementFieldInfo("SodumangEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)SodumangFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("SodumangEntity", "Ngaykiemke", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)SodumangFieldIndex.Ngaykiemke, 0, 0, 0);
+			base.AddElementFieldInfo("SodumangEntity", "Makho", typeof(System.String), false, false, false, true,  (int)SodumangFieldIndex.Makho, 50, 0, 0);
+			base.AddElementFieldInfo("SodumangEntity", "Tenkho", typeof(System.String), false, false, false, true,  (int)SodumangFieldIndex.Tenkho, 250, 0, 0);
+			base.AddElementFieldInfo("SodumangEntity", "Mamang", typeof(System.String), false, false, false, true,  (int)SodumangFieldIndex.Mamang, 50, 0, 0);
+			base.AddElementFieldInfo("SodumangEntity", "Tenmang", typeof(System.String), false, false, false, true,  (int)SodumangFieldIndex.Tenmang, 250, 0, 0);
+			base.AddElementFieldInfo("SodumangEntity", "Somet", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)SodumangFieldIndex.Somet, 0, 2, 20);
+			base.AddElementFieldInfo("SodumangEntity", "Sokg", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)SodumangFieldIndex.Sokg, 0, 2, 20);
+			base.AddElementFieldInfo("SodumangEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)SodumangFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("SodumangEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)SodumangFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("SodumangEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)SodumangFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("SodumangEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)SodumangFieldIndex.Nguoisua, 50, 0, 0);
+		}
+		/// <summary>Inits SodunguyenlieuEntity's FieldInfo objects</summary>
+		private void InitSodunguyenlieuEntityInfos()
+		{
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)SodunguyenlieuFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Ngaykiemke", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Ngaykiemke, 0, 0, 0);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Makho", typeof(System.String), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Makho, 50, 0, 0);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Tenkho", typeof(System.String), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Tenkho, 250, 0, 0);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Manguyenlieu", typeof(System.String), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Manguyenlieu, 50, 0, 0);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Tennguyenlieu", typeof(System.String), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Tennguyenlieu, 250, 0, 0);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Donvitinh", typeof(System.String), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Donvitinh, 50, 0, 0);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Soluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Soluong, 0, 2, 20);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("SodunguyenlieuEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)SodunguyenlieuFieldIndex.Nguoisua, 50, 0, 0);
+		}
+		/// <summary>Inits SodusanphamEntity's FieldInfo objects</summary>
+		private void InitSodusanphamEntityInfos()
+		{
+			base.AddElementFieldInfo("SodusanphamEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)SodusanphamFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("SodusanphamEntity", "Ngaykiemke", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)SodusanphamFieldIndex.Ngaykiemke, 0, 0, 0);
+			base.AddElementFieldInfo("SodusanphamEntity", "Makho", typeof(System.String), false, false, false, true,  (int)SodusanphamFieldIndex.Makho, 50, 0, 0);
+			base.AddElementFieldInfo("SodusanphamEntity", "Tenkho", typeof(System.String), false, false, false, true,  (int)SodusanphamFieldIndex.Tenkho, 250, 0, 0);
+			base.AddElementFieldInfo("SodusanphamEntity", "Masanpham", typeof(System.String), false, false, false, true,  (int)SodusanphamFieldIndex.Masanpham, 50, 0, 0);
+			base.AddElementFieldInfo("SodusanphamEntity", "Tensanpham", typeof(System.String), false, false, false, true,  (int)SodusanphamFieldIndex.Tensanpham, 250, 0, 0);
+			base.AddElementFieldInfo("SodusanphamEntity", "Somet", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)SodusanphamFieldIndex.Somet, 0, 2, 20);
+			base.AddElementFieldInfo("SodusanphamEntity", "Soluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)SodusanphamFieldIndex.Soluong, 0, 2, 20);
+			base.AddElementFieldInfo("SodusanphamEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)SodusanphamFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("SodusanphamEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)SodusanphamFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("SodusanphamEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)SodusanphamFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("SodusanphamEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)SodusanphamFieldIndex.Nguoisua, 50, 0, 0);
 		}
 		/// <summary>Inits ThamsoEntity's FieldInfo objects</summary>
 		private void InitThamsoEntityInfos()
@@ -884,6 +1001,68 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("UsersEntity", "Address", typeof(System.String), false, false, false, true,  (int)UsersFieldIndex.Address, 500, 0, 0);
 			base.AddElementFieldInfo("UsersEntity", "Password", typeof(System.String), false, false, false, false,  (int)UsersFieldIndex.Password, 50, 0, 0);
 			base.AddElementFieldInfo("UsersEntity", "Active", typeof(Nullable<System.Boolean>), false, false, false, true,  (int)UsersFieldIndex.Active, 0, 0, 0);
+		}
+		/// <summary>Inits XuatkhomangEntity's FieldInfo objects</summary>
+		private void InitXuatkhomangEntityInfos()
+		{
+			base.AddElementFieldInfo("XuatkhomangEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)XuatkhomangFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Ngayxuat", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)XuatkhomangFieldIndex.Ngayxuat, 0, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Makho", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Makho, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Tenkho", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Tenkho, 250, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Mamang", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Mamang, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Tenmang", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Tenmang, 250, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Somet", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)XuatkhomangFieldIndex.Somet, 0, 2, 20);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Sokg", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)XuatkhomangFieldIndex.Sokg, 0, 2, 20);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Malydo", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Malydo, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Tenlydo", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Tenlydo, 250, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Lenhsx", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Lenhsx, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Sophieugiao", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Sophieugiao, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Madonhang", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Madonhang, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)XuatkhomangFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)XuatkhomangFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("XuatkhomangEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)XuatkhomangFieldIndex.Nguoisua, 50, 0, 0);
+		}
+		/// <summary>Inits XuatkhonguyenlieuEntity's FieldInfo objects</summary>
+		private void InitXuatkhonguyenlieuEntityInfos()
+		{
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)XuatkhonguyenlieuFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Ngayxuat", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Ngayxuat, 0, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Makho", typeof(System.String), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Makho, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Tenkho", typeof(System.String), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Tenkho, 250, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Manguyenlieu", typeof(System.String), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Manguyenlieu, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Tennguyenlieu", typeof(System.String), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Tennguyenlieu, 250, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Donvitinh", typeof(System.String), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Donvitinh, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Soluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Soluong, 0, 2, 20);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Malydo", typeof(System.String), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Malydo, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Tenlydo", typeof(System.String), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Tenlydo, 250, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Lenhxuat", typeof(System.String), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Lenhxuat, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("XuatkhonguyenlieuEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)XuatkhonguyenlieuFieldIndex.Nguoisua, 50, 0, 0);
+		}
+		/// <summary>Inits XuatkhosanphamEntity's FieldInfo objects</summary>
+		private void InitXuatkhosanphamEntityInfos()
+		{
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)XuatkhosanphamFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Ngayxuat", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Ngayxuat, 0, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Makho", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Makho, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Tenkho", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Tenkho, 250, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Masanpham", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Masanpham, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Tensanpham", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Tensanpham, 250, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Soluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Soluong, 0, 2, 20);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Somet", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Somet, 0, 2, 20);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Sokg", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Sokg, 0, 2, 20);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Malydo", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Malydo, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Tenlydo", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Tenlydo, 250, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Lenhsx", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Lenhsx, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Sophieugiao", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Sophieugiao, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Madonhang", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Madonhang, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("XuatkhosanphamEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)XuatkhosanphamFieldIndex.Nguoisua, 50, 0, 0);
 		}
 		
 	}

@@ -61,14 +61,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{8E88BC
 		GenSupportCode\Entity\MaucuahangEnt.cs = GenSupportCode\Entity\MaucuahangEnt.cs
 		GenSupportCode\Entity\MenuEnt.cs = GenSupportCode\Entity\MenuEnt.cs
 		GenSupportCode\Entity\MenuroleEnt.cs = GenSupportCode\Entity\MenuroleEnt.cs
+		GenSupportCode\Entity\NhapkhomangEnt.cs = GenSupportCode\Entity\NhapkhomangEnt.cs
+		GenSupportCode\Entity\NhapkhonguyenlieuEnt.cs = GenSupportCode\Entity\NhapkhonguyenlieuEnt.cs
+		GenSupportCode\Entity\NhapkhosanphamEnt.cs = GenSupportCode\Entity\NhapkhosanphamEnt.cs
 		GenSupportCode\Entity\PhieugiaohangDEnt.cs = GenSupportCode\Entity\PhieugiaohangDEnt.cs
 		GenSupportCode\Entity\PhieugiaohangHEnt.cs = GenSupportCode\Entity\PhieugiaohangHEnt.cs
 		GenSupportCode\Entity\RolesEnt.cs = GenSupportCode\Entity\RolesEnt.cs
+		GenSupportCode\Entity\SodumangEnt.cs = GenSupportCode\Entity\SodumangEnt.cs
+		GenSupportCode\Entity\SodunguyenlieuEnt.cs = GenSupportCode\Entity\SodunguyenlieuEnt.cs
+		GenSupportCode\Entity\SodusanphamEnt.cs = GenSupportCode\Entity\SodusanphamEnt.cs
 		GenSupportCode\Entity\ThamsoEnt.cs = GenSupportCode\Entity\ThamsoEnt.cs
 		GenSupportCode\Entity\ThanhphanmauEnt.cs = GenSupportCode\Entity\ThanhphanmauEnt.cs
 		GenSupportCode\Entity\TknguyenlieuthoiEnt.cs = GenSupportCode\Entity\TknguyenlieuthoiEnt.cs
 		GenSupportCode\Entity\TruccuahangEnt.cs = GenSupportCode\Entity\TruccuahangEnt.cs
 		GenSupportCode\Entity\UsersEnt.cs = GenSupportCode\Entity\UsersEnt.cs
+		GenSupportCode\Entity\XuatkhomangEnt.cs = GenSupportCode\Entity\XuatkhomangEnt.cs
+		GenSupportCode\Entity\XuatkhonguyenlieuEnt.cs = GenSupportCode\Entity\XuatkhonguyenlieuEnt.cs
+		GenSupportCode\Entity\XuatkhosanphamEnt.cs = GenSupportCode\Entity\XuatkhosanphamEnt.cs
 	EndProjectSection
 EndProject
 Global
