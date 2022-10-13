@@ -71,6 +71,8 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_MAKHO = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
+            this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -128,6 +130,8 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.btn_XOADONG);
+            this.uiPanel1Container.Controls.Add(this.btn_THEMDONG);
             this.uiPanel1Container.Controls.Add(this.label14);
             this.uiPanel1Container.Controls.Add(this.txt_SOHD);
             this.uiPanel1Container.Controls.Add(this.label15);
@@ -456,10 +460,10 @@
             this.pne_CHITIET.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_CHITIET.Location = new System.Drawing.Point(8, 235);
+            this.pne_CHITIET.Location = new System.Drawing.Point(8, 266);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(830, 241);
+            this.pne_CHITIET.Size = new System.Drawing.Size(830, 210);
             this.pne_CHITIET.TabIndex = 192;
             // 
             // label1
@@ -589,6 +593,34 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã kho";
             // 
+            // btn_XOADONG
+            // 
+            this.btn_XOADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_XOADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_XOADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_XOADONG.Enabled = false;
+            this.btn_XOADONG.Location = new System.Drawing.Point(153, 228);
+            this.btn_XOADONG.Name = "btn_XOADONG";
+            this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_XOADONG.TabIndex = 11;
+            this.btn_XOADONG.Text = "Xóa dòng";
+            this.btn_XOADONG.UseVisualStyleBackColor = true;
+            this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
+            // 
+            // btn_THEMDONG
+            // 
+            this.btn_THEMDONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_THEMDONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_THEMDONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_THEMDONG.Enabled = false;
+            this.btn_THEMDONG.Location = new System.Drawing.Point(19, 228);
+            this.btn_THEMDONG.Name = "btn_THEMDONG";
+            this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_THEMDONG.TabIndex = 10;
+            this.btn_THEMDONG.Text = "Thêm dòng";
+            this.btn_THEMDONG.UseVisualStyleBackColor = true;
+            this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
+            // 
             // FRM_NHAPSANPHAM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,5 +687,7 @@
         private CONTROL.LABEL label12;
         private CONTROL.TEXTBOX txt_MALYDO;
         private CONTROL.LABEL label13;
+        private CONTROL.BUTTON btn_XOADONG;
+        private CONTROL.BUTTON btn_THEMDONG;
     }
 }
