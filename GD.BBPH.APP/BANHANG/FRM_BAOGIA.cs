@@ -354,7 +354,7 @@ namespace GD.BBPH.APP.BANHANG
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
             ListviewJanusC _frm_MultiRows_Select = 
-                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI_CHON.xml", DT_DMCHUNGLOAI, DmchungloaiFields.Id.Name, txt_MAKHACH.Text.Trim());
+                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI_CHON.xml", DT_DMCHUNGLOAI, DmchungloaiFields.Machungloai.Name, txt_MAKHACH.Text.Trim());
             _frm_MultiRows_Select.ShowDialog();
             if (_frm_MultiRows_Select._RowsViewSelect == null) return;
 
@@ -362,7 +362,7 @@ namespace GD.BBPH.APP.BANHANG
             { 
                 DataRow r_Detail = DT_BAOGIA_D_FILL.NewRow();
                 //r_Detail[BaogiaDFields.Loaihang.Name] = 0;
-                r_Detail[BaogiaDFields.Masp.Name] = drv.Row[DmchungloaiFields.Id.Name].ToString();
+                r_Detail[BaogiaDFields.Masp.Name] = drv.Row[DmchungloaiFields.Machungloai.Name].ToString();
                 r_Detail[BaogiaDFields.Tenchungloai.Name] = drv.Row[DmchungloaiFields.Tenchungloai.Name].ToString();
                 r_Detail[BaogiaDFields.Kichthuoc.Name] = drv.Row[DmchungloaiFields.Kichthuoc.Name].ToString();
                 try { r_Detail[BaogiaDFields.Kichthuoc.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmchungloaiFields.Kichthuoc.Name].ToString()); }
