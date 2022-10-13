@@ -25,12 +25,12 @@ namespace GD.BBPH.APP.KHO
         private NhapkhomangManager _NhapkhomangManager = new NhapkhomangManager();
         private NhapkhomangEntity _NhapkhomangEntity = new NhapkhomangEntity();
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-        private DataTable DT_NHAPMANG = new DataTable();
-        private BindingSource BS_NHAPSANPHAM = new BindingSource();
+        private DataTable DT_NHAPMANG = new DataTable(), DT_NHAPMANG_CHITIET = new DataTable(), DT_NHAPMANG_CHITIET_FILL = new DataTable();
+        private BindingSource BS_NHAPMANG = new BindingSource(), BS_NHAPMANG_CHITIET = new BindingSource();
         private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_NHAPMANG = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_NHAPMANGCHITIET = new GD.BBPH.CONTROL.JGridEX();
-        private string FUNCTION = "LOAD", MAHIEU_PK = "";
+        private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET = "";
         private string MAMANG = "", MAKHO ="" ;
         private DataTable DT_DMMANG = new DataTable(), DT_DMKHO = new DataTable();
 
@@ -56,7 +56,9 @@ namespace GD.BBPH.APP.KHO
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_NHAPMANG");
-                        DT_NHAPMANG = LIB.SESSION_START.DT_NHAPMANG;
+                        DT_NHAPMANG = LIB.Procedures.Danhsachnhapmang(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, string.Empty);
+                        DT_NHAPMANG_CHITIET = LIB.SESSION_START.DT_NHAPMANG;
+
                         DT_DMKHO = LIB.SESSION_START.DT_DMKHO;
                         DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
                     }
@@ -112,30 +114,51 @@ namespace GD.BBPH.APP.KHO
             //GRID_NHAPMANG.RootTable.Groups.Add(GRID_NHAPMANG.Tables[0].Columns[NhapkhomangFields.Phongban.Name]);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_NHAPMANG);
-            BS_NHAPSANPHAM = new BindingSource();
-            BS_NHAPSANPHAM.DataSource = Source_View;
-            GRID_NHAPMANG.DataSource = BS_NHAPSANPHAM;
-            BS_NHAPSANPHAM.CurrentChanged += new EventHandler(BS_NHAPSANPHAM_CurrentChanged);
-            BS_NHAPSANPHAM_CurrentChanged((new object()), (new EventArgs()));
+            BS_NHAPMANG = new BindingSource();
+            BS_NHAPMANG.DataSource = Source_View;
+            GRID_NHAPMANG.DataSource = BS_NHAPMANG;
+            BS_NHAPMANG.CurrentChanged += new EventHandler(BS_NHAPMANG_CurrentChanged);
+            BS_NHAPMANG_CurrentChanged((new object()), (new EventArgs()));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             btn_THEMMOI.Focus();
         }
 
-        void BS_NHAPSANPHAM_CurrentChanged(object sender, EventArgs e)
+        void BS_NHAPMANG_CurrentChanged(object sender, EventArgs e)
         {
             try
             {
                 //GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
                 GRID_NHAPMANG.UpdateData();
-                if (BS_NHAPSANPHAM.Current != null)
+                if (BS_NHAPMANG.Current != null)
                 {
-                    DataRowView _Rowview = (DataRowView)this.BS_NHAPSANPHAM.Current;
+                    DataRowView _Rowview = (DataRowView)this.BS_NHAPMANG.Current;
                     if (_Rowview != null)
-                        MAHIEU_PK = _Rowview.Row[NhapkhomangFields.Id.Name].ToString();
+                        MAHIEU_PK = _Rowview.Row[NhapkhomangFields.Ngaynhap.Name].ToString();
+
                     txt_NGAY.Text = _Rowview.Row[NhapkhomangFields.Ngaynhap.Name].ToString();
                     txt_MAKHO.Text = _Rowview.Row[NhapkhomangFields.Makho.Name].ToString();
-                    txt_TENKHO.Text = _Rowview.Row[NhapkhomangFields.Tenkho.Name].ToString();
+                    //txt_TENKHO.Text = _Rowview.Row[NhapkhomangFields.Tenkho.Name].ToString();
+                    txt_MAKHO_Validating(new object(), new CancelEventArgs());
+
+                    SHOWGRID(MAHIEU_PK);
+                }
+                else
+                    SHOWGRID("");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "BS_NHAPMANG_CurrentChanged"); }
+        }
+
+        void BS_NHAPMANG_CHITIET_CurrentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (BS_NHAPMANG_CHITIET.Current != null)
+                {
+                    DataRowView _Rowview = (DataRowView)this.BS_NHAPMANG_CHITIET.Current;
+                    if (_Rowview != null)
+                        MACHITIET = _Rowview.Row[NhapkhomangFields.Id.Name].ToString();
+
                     txt_MAMANG.Text = _Rowview.Row[NhapkhomangFields.Mamang.Name].ToString();
                     txt_TENMANG.Text = _Rowview.Row[NhapkhomangFields.Tenmang.Name].ToString();
                     txt_SOM.Text = _Rowview.Row[NhapkhomangFields.Somet.Name].ToString();
@@ -146,56 +169,175 @@ namespace GD.BBPH.APP.KHO
                     txt_SOHD.Text = _Rowview.Row[NhapkhomangFields.Sohopdongmua.Name].ToString();
 
                     txt_MAMANG_Validating(new object(), new CancelEventArgs());
-                    txt_MAKHO_Validating(new object(), new CancelEventArgs());
-                    //txt_MACONGNHAN_Validating(new object(), new CancelEventArgs());
                 }
+                //else
+                //{
+                //    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                //}
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "BS_NHAPSANPHAM_CurrentChanged"); }
+            catch
+            { }
         }
-
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private void SHOWGRID(string MAHIEU_PK)
         {
-            NhapkhomangEntity _NhapkhomangEntity = new NhapkhomangEntity();
-            _NhapkhomangEntity.Ngaynhap = Convert.ToDateTime( txt_NGAY.Text.Trim());
-            _NhapkhomangEntity.Makho = txt_MAKHO.Text.Trim();
-            _NhapkhomangEntity.Tenkho = txt_TENKHO.Text.Trim();
-            _NhapkhomangEntity.Mamang = txt_MAMANG.Text.Trim();
-            _NhapkhomangEntity.Tenmang = txt_TENMANG.Text.Trim();
-            _NhapkhomangEntity.Somet = Convert.ToDecimal(txt_SOM.Text.Trim());
-            _NhapkhomangEntity.Sokg = Convert.ToDecimal(txt_SOKG.Text.Trim());
-            _NhapkhomangEntity.Malydo = txt_MALYDO.Text.Trim();
-            _NhapkhomangEntity.Tenlydo = txt_TENLYDO.Text.Trim();
-            _NhapkhomangEntity.Lenhsx = txt_LENHSX.Text.Trim();
-            _NhapkhomangEntity.Sohopdongmua = txt_SOHD.Text.Trim();
-
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(MAHIEU_PK))
             {
-                _NhapkhomangEntity.Ngaytao = DateTime.Now;
-                _NhapkhomangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _NhapkhomangManager.InsertV2(_NhapkhomangEntity, r_Insert, DT_NHAPMANG, BS_NHAPSANPHAM);
-                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_NhapkhomangManager.Convert(_NhapkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                BS_NHAPSANPHAM.ResetCurrentItem();
+                DT_NHAPMANG_CHITIET_FILL = new NhapkhomangManager().Clone();
+                BS_NHAPMANG_CHITIET = new BindingSource(DT_NHAPMANG_CHITIET_FILL, null);
+                GRID_NHAPMANGCHITIET.DataSource = BS_NHAPMANG_CHITIET;
             }
             else
             {
-                _NhapkhomangEntity.Ngaysua = DateTime.Now;
-                _NhapkhomangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                _NhapkhomangManager.Update(_NhapkhomangEntity);
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Ngaynhap.Name].Value = _NhapkhomangEntity.Ngaynhap;
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Makho.Name].Value = _NhapkhomangEntity.Makho;
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Tenkho.Name].Value = _NhapkhomangEntity.Tenkho;
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Mamang.Name].Value = _NhapkhomangEntity.Mamang;
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Tenmang.Name].Value = _NhapkhomangEntity.Tenmang;
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Somet.Name].Value = _NhapkhomangEntity.Somet;
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Sokg.Name].Value = _NhapkhomangEntity.Sokg;
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Malydo.Name].Value = _NhapkhomangEntity.Malydo;
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Tenlydo.Name].Value = _NhapkhomangEntity.Tenlydo;
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Lenhsx.Name].Value = _NhapkhomangEntity.Lenhsx;
-                GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Sohopdongmua.Name].Value = _NhapkhomangEntity.Sohopdongmua;
-       
+                DT_NHAPMANG_CHITIET_FILL = new NhapkhomangManager().SelectByNgaynhapMakhoRDT(Convert.ToDateTime(txt_NGAY.Text.Trim()), txt_MAKHO.Text.Trim());
 
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_NhapkhomangManager.Convert(_NhapkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                DataView Source_View = new DataView(DT_NHAPMANG_CHITIET_FILL);
+                BS_NHAPMANG_CHITIET = new BindingSource();
+                BS_NHAPMANG_CHITIET.DataSource = Source_View;
+                GRID_NHAPMANGCHITIET.DataSource = BS_NHAPMANG_CHITIET;
             }
+            BS_NHAPMANG_CHITIET.CurrentChanged += new EventHandler(BS_NHAPMANG_CHITIET_CurrentChanged);
+            BS_NHAPMANG_CHITIET_CurrentChanged((new object()), (new EventArgs()));
+        }
+
+
+        #region Xu ly dong chi tiet
+        private void btn_THEMDONG_Click(object sender, EventArgs e)
+        {
+            DataRow r_Detail = DT_NHAPMANG_CHITIET_FILL.NewRow();
+            r_Detail[NhapkhomangFields.Mamang.Name] = txt_MAMANG.Text;
+            r_Detail[NhapkhomangFields.Tenmang.Name] = txt_TENMANG.Text;
+            try { r_Detail[NhapkhomangFields.Somet.Name] = LIB.ConvertString.NumbertoDB(txt_SOM.Text.Trim()); }
+            catch { }
+            try { r_Detail[NhapkhomangFields.Sokg.Name] = LIB.ConvertString.NumbertoDB(txt_SOKG.Text.Trim()); }
+            catch { }
+            r_Detail[NhapkhomangFields.Malydo.Name] = txt_MALYDO.Text;
+            r_Detail[NhapkhomangFields.Tenlydo.Name] = txt_TENLYDO.Text;
+            r_Detail[NhapkhomangFields.Lenhsx.Name] = txt_LENHSX.Text;
+            r_Detail[NhapkhomangFields.Sohopdongmua.Name] = txt_SOHD.Text;
+
+            DT_NHAPMANG_CHITIET_FILL.Rows.Add(r_Detail);
+
+            DataView Source_View = new DataView(DT_NHAPMANG_CHITIET_FILL);
+            BS_NHAPMANG_CHITIET = new BindingSource();
+            BS_NHAPMANG_CHITIET.DataSource = Source_View;
+            GRID_NHAPMANGCHITIET.DataSource = BS_NHAPMANG_CHITIET;
+            BS_NHAPMANG_CHITIET.Position = DT_NHAPMANG_CHITIET_FILL.Rows.Count;
+            //Tinhtong();
+            //txt_MAHANG.Focus();
+        }
+        private void btn_XOADONG_Click(object sender, EventArgs e)
+        {
+            DataRowView _view = (DataRowView)GRID_NHAPMANGCHITIET.CurrentRow.DataRow;
+            string _MAHIEU_PK = _view[NhapkhomangFields.Id.Name].ToString();
+            string _MAMANG = _view[NhapkhomangFields.Mamang.Name].ToString();
+            if (string.IsNullOrEmpty(_MAHIEU_PK) && MessageBox.Show("Xóa dòng: " + _MAMANG, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                   System.Windows.Forms.DialogResult.Yes)
+            {
+                GRID_NHAPMANGCHITIET.CurrentRow.Delete();
+            }
+            else
+            {
+                NhapkhosanphamManager _NhapkhosanphamManager = new NhapkhosanphamManager();
+                NhapkhosanphamEntity _NhapkhosanphamEntity = new NhapkhosanphamEntity();
+                try { _NhapkhosanphamEntity = _NhapkhosanphamManager.SelectOne(Convert.ToInt64(_MAHIEU_PK)); }
+                catch { }
+                if (_NhapkhosanphamEntity != null && MessageBox.Show("Xóa dòng: " + _MAMANG, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                       System.Windows.Forms.DialogResult.Yes)
+                {
+                    try
+                    {
+                        _NhapkhosanphamManager.Delete(Convert.ToInt64(_MAHIEU_PK));
+                        DataRow[] drArr = DT_NHAPMANG_CHITIET_FILL.Select(NhapkhomangFields.Id.Name + "='" + _MAHIEU_PK + "'");
+                        DT_NHAPMANG_CHITIET_FILL.Rows.Remove(drArr[0]);
+                        //GRID_TKNLTHOI_CHITIET.CurrentRow.Delete();
+                        //GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_PhieugiaohangHManager.Convert(_PhieugiaohangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không thể xóa dòng " + _MAMANG + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    BS_NHAPMANG_CHITIET.ResetCurrentItem();
+                    GRID_NHAPMANGCHITIET.DataSource = BS_NHAPMANG_CHITIET;
+                }
+                GRID_NHAPMANGCHITIET.Enabled = true;
+            }
+            //Tinhtong();
+        }
+        #endregion
+
+
+
+        private string Save_Data(string _str_DMCHUONG_PK)
+        {
+            DateTime _ngaynhap = Convert.ToDateTime(txt_NGAY.Text.Trim());
+
+            EntityCollection _NhapkhomangEntityCol = new EntityCollection();
+            GridEXRow[] listGrid = GRID_NHAPMANGCHITIET.GetDataRows();
+            foreach (GridEXRow _grid in listGrid)
+            {
+                DataRowView _view = (DataRowView)_grid.DataRow;
+                if (_view == null) continue;
+                NhapkhomangEntity _nhapkhomangEntity = new NhapkhomangEntity();
+                _nhapkhomangEntity.Ngaynhap = _ngaynhap;
+                _nhapkhomangEntity.Makho = txt_MAKHO.Text.Trim();
+                _nhapkhomangEntity.Tenkho = txt_TENKHO.Text.Trim();
+                _nhapkhomangEntity.Mamang = _view.Row[NhapkhomangFields.Mamang.Name].ToString();
+                _nhapkhomangEntity.Tenmang = _view.Row[NhapkhomangFields.Tenmang.Name].ToString();
+                _nhapkhomangEntity.Somet = Convert.ToDecimal(_view.Row[NhapkhomangFields.Somet.Name].ToString());
+                _nhapkhomangEntity.Sokg = Convert.ToDecimal(_view.Row[NhapkhomangFields.Sokg.Name].ToString());
+                _nhapkhomangEntity.Malydo = _view.Row[NhapkhomangFields.Malydo.Name].ToString();
+                _nhapkhomangEntity.Tenlydo = _view.Row[NhapkhomangFields.Tenlydo.Name].ToString();
+                _nhapkhomangEntity.Lenhsx = _view.Row[NhapkhomangFields.Lenhsx.Name].ToString();
+                _nhapkhomangEntity.Sohopdongmua = _view.Row[NhapkhomangFields.Sohopdongmua.Name].ToString();
+
+                if (!string.IsNullOrEmpty(_nhapkhomangEntity.Mamang))
+                    _NhapkhomangEntityCol.Add(_nhapkhomangEntity);
+            }
+
+            foreach (NhapkhomangEntity _nhapkhomangEntity in _NhapkhomangEntityCol)
+            {
+                if (_nhapkhomangEntity.IsNew)
+                {
+                    DataRow _r_Insert = DT_NHAPMANG_CHITIET.NewRow();
+                    DT_NHAPMANG_CHITIET.Rows.Add(_r_Insert);
+                    _NhapkhomangManager.InsertV2(_nhapkhomangEntity, _r_Insert, DT_NHAPMANG_CHITIET, BS_NHAPMANG_CHITIET);
+                }
+                else _NhapkhomangManager.Update(_nhapkhomangEntity);
+            }
+
+            //if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            //{
+            //    _NhapkhomangEntity.Ngaytao = DateTime.Now;
+            //    _NhapkhomangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+            //    _str_DMCHUONG_PK = _NhapkhomangManager.InsertV2(_NhapkhomangEntity, r_Insert, DT_NHAPMANG, BS_NHAPMANG);
+            //     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_NhapkhomangManager.Convert(_NhapkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            //    BS_NHAPMANG.ResetCurrentItem();
+            //}
+            //else
+            //{
+            //    _NhapkhomangEntity.Ngaysua = DateTime.Now;
+            //    _NhapkhomangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+            //    _NhapkhomangManager.Update(_NhapkhomangEntity);
+            GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Ngaynhap.Name].Value = _ngaynhap;
+            GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Makho.Name].Value = txt_MAKHO.Text.Trim();
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Tenkho.Name].Value = txt_TENKHO.Text.Trim();
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Mamang.Name].Value = _NhapkhomangEntity.Mamang;
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Tenmang.Name].Value = _NhapkhomangEntity.Tenmang;
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Soluong.Name].Value = _NhapkhomangEntity.Soluong;
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Somet.Name].Value = _NhapkhomangEntity.Somet;
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Sokg.Name].Value = _NhapkhomangEntity.Sokg;
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Malydo.Name].Value = _NhapkhomangEntity.Malydo;
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Tenlydo.Name].Value = _NhapkhomangEntity.Tenlydo;
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Lenhsx.Name].Value = _NhapkhomangEntity.Lenhsx;
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Sophieugiao.Name].Value = _NhapkhomangEntity.Sophieugiao;
+            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Madonhang.Name].Value = _NhapkhomangEntity.Madonhang;
+
+            GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_NhapkhomangManager.Convert(_NhapkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+            //}
             return _str_DMCHUONG_PK;
         }
 
@@ -209,12 +351,13 @@ namespace GD.BBPH.APP.KHO
             NhapkhomangEntity _NhapkhomangEntity = new NhapkhomangEntity();
             r_Insert = DT_NHAPMANG.NewRow();
             DT_NHAPMANG.Rows.Add(r_Insert);
-            BS_NHAPSANPHAM.Position = DT_NHAPMANG.Rows.Count;
+            BS_NHAPMANG.Position = DT_NHAPMANG.Rows.Count;
             MAHIEU_PK = "";
-            txt_MAKHO.Focus();
+            txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENKHO, txt_TENMANG }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_NHAPMANG.Enabled = false;
         }
         private void btn_SUA_Click(object sender, EventArgs e)
@@ -223,10 +366,17 @@ namespace GD.BBPH.APP.KHO
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHO, txt_TENMANG }));
                 txt_LENHSX.Focus();
             }
+            GRID_NHAPMANGCHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
+            GRID_NHAPMANGCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_NHAPMANGCHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_NHAPMANGCHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_NHAPMANGCHITIET.Enabled = true;
             GRID_NHAPMANG.Enabled = false;
+            btn_XOADONG.Enabled = true;
         }
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
@@ -234,10 +384,13 @@ namespace GD.BBPH.APP.KHO
             {
                 DT_NHAPMANG.Rows.Remove(r_Insert);
             }
-            BS_NHAPSANPHAM_CurrentChanged(new object(), new EventArgs());
+            BS_NHAPMANG_CurrentChanged(new object(), new EventArgs());
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
             GRID_NHAPMANG.Enabled = true;
+            GRID_NHAPMANGCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_NHAPMANGCHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_NHAPMANGCHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
         }
         private void btn_XOA_Click(object sender, EventArgs e)
         {
@@ -253,9 +406,10 @@ namespace GD.BBPH.APP.KHO
                 {
                     _NhapkhomangManager.Delete(Convert.ToInt64(MAHIEU_PK));
                     GRID_NHAPMANG.CurrentRow.Delete();
-                    BS_NHAPSANPHAM_CurrentChanged(new object(), new EventArgs());
+                    BS_NHAPMANG_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
                     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_NhapkhomangManager.Convert(_NhapkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                    btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
                 }
                 catch
                 {
@@ -263,6 +417,9 @@ namespace GD.BBPH.APP.KHO
                 }
             }
             GRID_NHAPMANG.Enabled = true;
+            GRID_NHAPMANGCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_NHAPMANGCHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_NHAPMANGCHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
         }
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
@@ -272,16 +429,16 @@ namespace GD.BBPH.APP.KHO
             //    txt_MAMAY.Focus();
             //    return;
             //}
-            if (txt_MAKHO.Text == "")
+            if (txt_NGAY.Text == "")
             {
                 MessageBox.Show("Yêu cầu nhập mã công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_MAKHO.Focus();
+                txt_NGAY.Focus();
                 return;
             }
-            else if (txt_LENHSX.Text == "")
+            else if (txt_MAKHO.Text == "")
             {
                 MessageBox.Show("Yêu cầu nhập tên công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_LENHSX.Focus();
+                txt_MAKHO.Focus();
                 return;
             }
             else
@@ -291,6 +448,9 @@ namespace GD.BBPH.APP.KHO
                 GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
                 GRID_NHAPMANG.Enabled = true;
                 btn_THEMMOI.Focus();
+                GRID_NHAPMANGCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_NHAPMANGCHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_NHAPMANGCHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
             }
         }
         private void btn_Thoat_Click(object sender, EventArgs e)

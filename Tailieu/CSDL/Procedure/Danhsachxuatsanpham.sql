@@ -19,6 +19,7 @@ Create Procedure dbo.Danhsachxuatsanpham
 		
 GO
 
-Exec Danhsachxuatsanpham '10/01/2020', '10/30/2020', ''
+Exec Danhsachxuatsanpham '10/01/2022', '10/30/2022', ''
+
 
 
