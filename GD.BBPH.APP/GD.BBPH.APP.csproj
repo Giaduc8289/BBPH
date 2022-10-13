@@ -333,6 +333,12 @@
     <Compile Include="IN\FRM_KQIN.designer.cs">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
     </Compile>
+    <Compile Include="KHO\FRM_NHAPMANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHO\FRM_NHAPMANG.designer.cs">
+      <DependentUpon>FRM_NHAPMANG.cs</DependentUpon>
+    </Compile>
     <Compile Include="KHO\FRM_NHAPSANPHAM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -531,6 +537,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IN\FRM_KQIN.resx">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHO\FRM_NHAPMANG.resx">
+      <DependentUpon>FRM_NHAPMANG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KHO\FRM_NHAPSANPHAM.resx">
       <DependentUpon>FRM_NHAPSANPHAM.cs</DependentUpon>
@@ -984,6 +993,10 @@
     <Content Include="XMLCONFIG\FRM_NHAPKHOPHECHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="XMLCONFIG\FRM_NHAPMANG.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPMANGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPSANPHAM.xml" />
+    <Content Include="XMLCONFIG\FRM_NHAPSANPHAMCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_PHIEUGIAOHANG_D.xml" />
     <Content Include="XMLCONFIG\FRM_PHIEUGIAOHANG_H.xml" />
     <Content Include="XMLCONFIG\FRM_TPMAU.xml" />

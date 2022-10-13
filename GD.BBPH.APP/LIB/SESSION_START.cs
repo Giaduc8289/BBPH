@@ -546,6 +546,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region NHAPMANG
+        private static DataTable _DT_NHAPMANG = null;
+        public static DataTable DT_NHAPMANG
+        {
+            get
+            {
+                _DT_NHAPMANG = new NhapkhomangManager().SelectAllRDT();
+                return _DT_NHAPMANG;
+            }
+            set { _DT_NHAPMANG = value; }
+        }
+        #endregion
+
         #endregion
 
     }

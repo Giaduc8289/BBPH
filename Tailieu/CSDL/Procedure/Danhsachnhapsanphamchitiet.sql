@@ -17,4 +17,4 @@ Create Procedure dbo.Danhsachnhapsanphamchitiet
 
 GO
 
-Exec Danhsachketquainchitiet  '',''
+Exec Danhsachnhapsanphamchitiet  '',''
