@@ -414,7 +414,7 @@ namespace GD.BBPH.APP.IN
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MASP.Text.Trim()) || DT_DMSP == null || DT_DMSP.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MASP.Text.Trim().ToUpper();
-            _RowViewSelect = checkmamang(Str_MASIEUTHI, DT_DMSP);
+            _RowViewSelect = checkmasp(Str_MASIEUTHI, DT_DMSP);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
@@ -432,7 +432,7 @@ namespace GD.BBPH.APP.IN
                 txt_TENSP.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
             }
         }
-        private DataRow checkmamang(string masieuthi, DataTable dt)
+        private DataRow checkmasp(string masieuthi, DataTable dt)
         {
             try
             {

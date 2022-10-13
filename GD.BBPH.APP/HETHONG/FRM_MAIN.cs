@@ -879,6 +879,14 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Kho
+
+                case "FRM_NHAPSANPHAM":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_NHAPSANPHAM") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_NHAPSANPHAM()), mmru.Text);
+                    break;
                 #endregion
 
                 #region Tính giá

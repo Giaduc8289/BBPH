@@ -531,5 +531,22 @@ namespace GD.BBPH.APP.LIB
 
         #endregion
 
+        #region Kho
+
+        #region NHAPSANPHAM
+        private static DataTable _DT_NHAPSANPHAM = null;
+        public static DataTable DT_NHAPSANPHAM
+        {
+            get
+            {
+                _DT_NHAPSANPHAM = new NhapkhosanphamManager().SelectAllRDT();
+                return _DT_NHAPSANPHAM;
+            }
+            set { _DT_NHAPSANPHAM = value; }
+        }
+        #endregion
+
+        #endregion
+
     }
 }
