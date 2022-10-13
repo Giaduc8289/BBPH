@@ -377,7 +377,7 @@ namespace GD.BBPH.BLL
 			return _DmchungloaiEntity;
 		}
 
-		public DmchungloaiEntity Insert(System.String Tenchungloai, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Somau, System.Int32 Sohinh, System.String Loaimuc, System.String Ghichu, )//ko co mahieu
+		public DmchungloaiEntity Insert(System.String Tenchungloai, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Somau, System.Int32 Sohinh, System.String Loaimuc, System.String Ghichu)//ko co mahieu
 		{
 			DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
