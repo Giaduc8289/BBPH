@@ -559,6 +559,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region NHAPKHONGUYENLIEU
+        private static DataTable _DT_NHAPKHONGUYENLIEU = null;
+        public static DataTable DT_NHAPKHONGUYENLIEU
+        {
+            get
+            {
+                _DT_NHAPKHONGUYENLIEU = new NhapkhonguyenlieuManager().SelectAllRDT();
+                return _DT_NHAPKHONGUYENLIEU;
+            }
+            set { _DT_NHAPKHONGUYENLIEU = value; }
+        }
+        #endregion
+
         #endregion
 
     }
