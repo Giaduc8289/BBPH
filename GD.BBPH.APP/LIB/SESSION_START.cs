@@ -546,6 +546,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region XUATSANPHAM
+        private static DataTable _DT_XUATSANPHAM = null;
+        public static DataTable DT_XUATSANPHAM
+        {
+            get
+            {
+                _DT_XUATSANPHAM = new XuatkhosanphamManager().SelectAllRDT();
+                return _DT_XUATSANPHAM;
+            }
+            set { _DT_XUATSANPHAM = value; }
+        }
+        #endregion
+
         #region NHAPMANG
         private static DataTable _DT_NHAPMANG = null;
         public static DataTable DT_NHAPMANG

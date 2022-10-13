@@ -345,6 +345,12 @@
     <Compile Include="KHO\FRM_NHAPSANPHAM.designer.cs">
       <DependentUpon>FRM_NHAPSANPHAM.cs</DependentUpon>
     </Compile>
+    <Compile Include="KHO\FRM_XUATSANPHAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHO\FRM_XUATSANPHAM.designer.cs">
+      <DependentUpon>FRM_XUATSANPHAM.cs</DependentUpon>
+    </Compile>
     <Compile Include="LIB\ChucdanhEngine.cs" />
     <Compile Include="LIB\ConvertString.cs" />
     <Compile Include="LIB\DataFactory.cs" />
@@ -543,6 +549,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KHO\FRM_NHAPSANPHAM.resx">
       <DependentUpon>FRM_NHAPSANPHAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHO\FRM_XUATSANPHAM.resx">
+      <DependentUpon>FRM_XUATSANPHAM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -1184,6 +1193,8 @@
     <Content Include="XMLCONFIG\FRM_XUATMANH_D.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPMANH_H.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANH_H.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATSANPHAM.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATSANPHAMCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_XUATSOI_D.xml" />
     <Content Include="XMLCONFIG\FRM_XUATSOI_H.xml" />
   </ItemGroup>
