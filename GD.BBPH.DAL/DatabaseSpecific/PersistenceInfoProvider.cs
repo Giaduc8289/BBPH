@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 12, 2022 5:45:09 PM
+// Code is generated on: Thursday, October 13, 2022 2:37:53 PM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -259,7 +259,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		private void InitDmchungloaiEntityMappings()
 		{
 			base.AddElementMapping( "DmchungloaiEntity", "BBPH", @"dbo", "Dmchungloai", 8 );
-			base.AddElementFieldMapping( "DmchungloaiEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
+			base.AddElementFieldMapping( "DmchungloaiEntity", "Machungloai", "Machungloai", false, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 0 );
 			base.AddElementFieldMapping( "DmchungloaiEntity", "Tenchungloai", "Tenchungloai", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "DmchungloaiEntity", "Kichthuoc", "Kichthuoc", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 2 );
 			base.AddElementFieldMapping( "DmchungloaiEntity", "Trongluong", "Trongluong", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 3 );

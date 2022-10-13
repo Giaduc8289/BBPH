@@ -26,7 +26,7 @@ namespace GD.BBPH.BLL
 		#region ColumnNames
 		
 		
-		public const String Field_Id="Id";				
+		public const String Field_Machungloai="Machungloai";				
 		
 		public const String Field_Tenchungloai="Tenchungloai";				
 		
@@ -57,7 +57,7 @@ namespace GD.BBPH.BLL
 			DataTable dt = new DataTable();
 			
 			
-			dt.Columns.Add(Field_Id,typeof(System.Int64));
+			dt.Columns.Add(Field_Machungloai,typeof(System.String));
 			
 			dt.Columns.Add(Field_Tenchungloai,typeof(System.String));
 			
@@ -85,7 +85,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_Id]=_DmchungloaiEntity.Id;
+				r[Field_Machungloai]=_DmchungloaiEntity.Machungloai;
 			}
 			catch { }
 			
@@ -139,7 +139,7 @@ namespace GD.BBPH.BLL
 		public DmchungloaiEntity Convert(DataRow r)
 		{	
 			
-			DmchungloaiEntity _DmchungloaiEntity=new DmchungloaiEntity(System.Int64.Parse(r[Field_Id].ToString()));					
+			DmchungloaiEntity _DmchungloaiEntity=new DmchungloaiEntity(r[Field_Machungloai].ToString());					
 						
 			
 			
@@ -193,7 +193,7 @@ namespace GD.BBPH.BLL
 		{	
 			
 			
-			_DmchungloaiEntity.Id= _DmchungloaiEntity_XML.Id;
+			_DmchungloaiEntity.Machungloai= _DmchungloaiEntity_XML.Machungloai;
 			
 			_DmchungloaiEntity.Tenchungloai= _DmchungloaiEntity_XML.Tenchungloai;
 			
@@ -217,12 +217,12 @@ namespace GD.BBPH.BLL
 		{
 		
 			
-			String id =(new DmchungloaiManagerBase()).Insert(_DmchungloaiEntity).Id.ToString();
+			String id =(new DmchungloaiManagerBase()).Insert(_DmchungloaiEntity).Machungloai.ToString();
 			
 			
 			try
 			{
-				r.SetField(Field_Id,_DmchungloaiEntity.Id);
+				r.SetField(Field_Machungloai,_DmchungloaiEntity.Machungloai);
 			}
 			catch { }
 			
@@ -281,7 +281,7 @@ namespace GD.BBPH.BLL
 		
 			
 			(new DmchungloaiManagerBase()).Update(_DmchungloaiEntity);
-			r.SetField(Field_Id,_DmchungloaiEntity.Id);
+			r.SetField(Field_Machungloai,_DmchungloaiEntity.Machungloai);
 									
 			
 			
@@ -349,13 +349,13 @@ namespace GD.BBPH.BLL
 			return DmchungloaiEntity;
 		}
 
-		public DmchungloaiEntity Insert(System.Int64  Id, System.String  Tenchungloai, System.String  Kichthuoc, System.Decimal  Trongluong, System.Int32  Somau, System.Int32  Sohinh, System.String  Loaimuc, System.String  Ghichu)
+		public DmchungloaiEntity Insert(System.String  Machungloai, System.String  Tenchungloai, System.String  Kichthuoc, System.Decimal  Trongluong, System.Int32  Somau, System.Int32  Sohinh, System.String  Loaimuc, System.String  Ghichu)
 		{
 			DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
 				
-				_DmchungloaiEntity.Id = Id;
+				_DmchungloaiEntity.Machungloai = Machungloai;
 				
 				_DmchungloaiEntity.Tenchungloai = Tenchungloai;
 				
@@ -377,7 +377,7 @@ namespace GD.BBPH.BLL
 			return _DmchungloaiEntity;
 		}
 
-		public DmchungloaiEntity Insert(System.String Tenchungloai, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Somau, System.Int32 Sohinh, System.String Loaimuc, System.String Ghichu)//ko co mahieu
+		public DmchungloaiEntity Insert(System.String Tenchungloai, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Somau, System.Int32 Sohinh, System.String Loaimuc, System.String Ghichu, )//ko co mahieu
 		{
 			DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -412,7 +412,7 @@ namespace GD.BBPH.BLL
 				RelationPredicateBucket filter = new RelationPredicateBucket();
 				IPredicateExpression _PredicateExpression = new PredicateExpression();
 				
-				_PredicateExpression.Add(DmchungloaiFields.Id == _DmchungloaiEntity.Id);
+				_PredicateExpression.Add(DmchungloaiFields.Machungloai == _DmchungloaiEntity.Machungloai);
 				
 					
 				filter.PredicateExpression.Add(_PredicateExpression);
@@ -434,12 +434,12 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.String Tenchungloai, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Somau, System.Int32 Sohinh, System.String Loaimuc, System.String Ghichu)
+		public bool Update(System.String Machungloai, System.String Tenchungloai, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Somau, System.Int32 Sohinh, System.String Loaimuc, System.String Ghichu)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
-				DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity(Id);
+				DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity(Machungloai);
 				if (adapter.FetchEntity(_DmchungloaiEntity))
 				{
 				
@@ -467,12 +467,12 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Delete(System.Int64 Id)
+		public bool Delete(System.String Machungloai)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
-				DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity(Id);
+				DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity(Machungloai);
 				if (adapter.FetchEntity(_DmchungloaiEntity))
 				{
 					adapter.DeleteEntity(_DmchungloaiEntity);
@@ -492,13 +492,13 @@ namespace GD.BBPH.BLL
 		
 		
 		
-		public int DeleteById(System.Int64 Id)
+		public int DeleteByMachungloai(System.String Machungloai)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DmchungloaiFields.Id == Id);
+			_PredicateExpression.Add(DmchungloaiFields.Machungloai == Machungloai);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -621,12 +621,12 @@ namespace GD.BBPH.BLL
 		}		
 			
 		
-		public DmchungloaiEntity SelectOne(System.Int64 Id)
+		public DmchungloaiEntity SelectOne(System.String Machungloai)
 		{
 			DmchungloaiEntity toReturn = null;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
-				DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity(Id);
+				DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity(Machungloai);
 				if (adapter.FetchEntity(_DmchungloaiEntity))
 				{
 					toReturn = _DmchungloaiEntity;
@@ -661,13 +661,13 @@ namespace GD.BBPH.BLL
 		
 		
 		// Return EntityCollection
-		public EntityCollection SelectById(System.Int64 Id)
+		public EntityCollection SelectByMachungloai(System.String Machungloai)
 		{
 			EntityCollection _DmchungloaiCollection = new EntityCollection(new DmchungloaiEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DmchungloaiFields.Id == Id);
+			_PredicateExpression.Add(DmchungloaiFields.Machungloai == Machungloai);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -677,14 +677,14 @@ namespace GD.BBPH.BLL
 			return _DmchungloaiCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByIdRDT(System.Int64 Id)
+		public DataTable SelectByMachungloaiRDT(System.String Machungloai)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _DmchungloaiCollection = new EntityCollection(new DmchungloaiEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DmchungloaiFields.Id == Id);
+			_PredicateExpression.Add(DmchungloaiFields.Machungloai == Machungloai);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

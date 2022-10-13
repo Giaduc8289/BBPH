@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 12, 2022 5:45:08 PM
+// Code is generated on: Thursday, October 13, 2022 2:37:52 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -537,10 +537,10 @@ namespace GD.BBPH.DAL.HelperClasses
 	/// <summary>Field Creation Class for entity DmchungloaiEntity</summary>
 	public partial class DmchungloaiFields
 	{
-		/// <summary>Creates a new DmchungloaiEntity.Id field instance</summary>
-		public static EntityField2 Id
+		/// <summary>Creates a new DmchungloaiEntity.Machungloai field instance</summary>
+		public static EntityField2 Machungloai
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Id);}
+			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Machungloai);}
 		}
 		/// <summary>Creates a new DmchungloaiEntity.Tenchungloai field instance</summary>
 		public static EntityField2 Tenchungloai

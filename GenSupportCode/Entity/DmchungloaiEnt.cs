@@ -37,9 +37,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				{
 					DataRowView _Rowview = (DataRowView)this.BS_Dmchungloai.Current;
 					if (_Rowview != null)
-						MAHIEU_PK = _Rowview.Row[DmchungloaiFields.Id.Name].ToString();
+						MAHIEU_PK = _Rowview.Row[DmchungloaiFields.Machungloai.Name].ToString();
 					
-					txt_Id.Text = _Rowview.Row[DmchungloaiFields.Id.Name].ToString();
+					txt_Machungloai.Text = _Rowview.Row[DmchungloaiFields.Machungloai.Name].ToString();
 					txt_Tenchungloai.Text = _Rowview.Row[DmchungloaiFields.Tenchungloai.Name].ToString();
 					txt_Kichthuoc.Text = _Rowview.Row[DmchungloaiFields.Kichthuoc.Name].ToString();
 					txt_Trongluong.Text = _Rowview.Row[DmchungloaiFields.Trongluong.Name].ToString();
@@ -56,7 +56,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DmchungloaiEntity _dmchungloaiEntity = new DmchungloaiEntity();
 			
-			_dmchungloaiEntity.Id = txt_Id.Text.Trim();
+			_dmchungloaiEntity.Machungloai = txt_Machungloai.Text.Trim();
 			_dmchungloaiEntity.Tenchungloai = txt_Tenchungloai.Text.Trim();
 			_dmchungloaiEntity.Kichthuoc = txt_Kichthuoc.Text.Trim();
 			_dmchungloaiEntity.Trongluong = txt_Trongluong.Text.Trim();
@@ -75,7 +75,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				_DmchungloaiManager.Update(_dmchungloaiEntity);
 				
-				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Id.Name].Value = _dmchungloaiEntity.Id;
+				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Machungloai.Name].Value = _dmchungloaiEntity.Machungloai;
 				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Tenchungloai.Name].Value = _dmchungloaiEntity.Tenchungloai;
 				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Kichthuoc.Name].Value = _dmchungloaiEntity.Kichthuoc;
 				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Trongluong.Name].Value = _dmchungloaiEntity.Trongluong;
