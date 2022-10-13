@@ -333,6 +333,12 @@
     <Compile Include="IN\FRM_KQIN.designer.cs">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
     </Compile>
+    <Compile Include="KHO\FRM_NHAPKHONGUYENLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHO\FRM_NHAPKHONGUYENLIEU.designer.cs">
+      <DependentUpon>FRM_NHAPKHONGUYENLIEU.cs</DependentUpon>
+    </Compile>
     <Compile Include="KHO\FRM_NHAPMANG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -543,6 +549,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IN\FRM_KQIN.resx">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHO\FRM_NHAPKHONGUYENLIEU.resx">
+      <DependentUpon>FRM_NHAPKHONGUYENLIEU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KHO\FRM_NHAPMANG.resx">
       <DependentUpon>FRM_NHAPMANG.cs</DependentUpon>
@@ -962,10 +971,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_DMMAY.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYHT.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYHOANTHIEN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYSOI_CHON.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYPE.xml" />
     <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml">
       <SubType>Designer</SubType>
