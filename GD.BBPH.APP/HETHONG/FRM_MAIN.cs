@@ -888,6 +888,14 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_NHAPSANPHAM()), mmru.Text);
                     break;
 
+                case "FRM_XUATSANPHAM":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_XUATSANPHAM") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_XUATSANPHAM()), mmru.Text);
+                    break;
+
                 case "FRM_NHAPMANG":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
