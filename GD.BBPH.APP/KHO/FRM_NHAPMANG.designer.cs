@@ -34,6 +34,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
+            this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
             this.label14 = new GD.BBPH.CONTROL.LABEL();
             this.txt_SOHD = new GD.BBPH.CONTROL.TEXTBOX();
             this.label15 = new GD.BBPH.CONTROL.LABEL();
@@ -126,6 +128,8 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.btn_XOADONG);
+            this.uiPanel1Container.Controls.Add(this.btn_THEMDONG);
             this.uiPanel1Container.Controls.Add(this.label14);
             this.uiPanel1Container.Controls.Add(this.txt_SOHD);
             this.uiPanel1Container.Controls.Add(this.label15);
@@ -166,6 +170,34 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(845, 535);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // btn_XOADONG
+            // 
+            this.btn_XOADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_XOADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_XOADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_XOADONG.Enabled = false;
+            this.btn_XOADONG.Location = new System.Drawing.Point(153, 225);
+            this.btn_XOADONG.Name = "btn_XOADONG";
+            this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_XOADONG.TabIndex = 10;
+            this.btn_XOADONG.Text = "Xóa dòng";
+            this.btn_XOADONG.UseVisualStyleBackColor = true;
+            this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
+            // 
+            // btn_THEMDONG
+            // 
+            this.btn_THEMDONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_THEMDONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_THEMDONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_THEMDONG.Enabled = false;
+            this.btn_THEMDONG.Location = new System.Drawing.Point(19, 225);
+            this.btn_THEMDONG.Name = "btn_THEMDONG";
+            this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_THEMDONG.TabIndex = 9;
+            this.btn_THEMDONG.Text = "Thêm dòng";
+            this.btn_THEMDONG.UseVisualStyleBackColor = true;
+            this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -187,7 +219,7 @@
             this.txt_SOHD.Name = "txt_SOHD";
             this.txt_SOHD.Regular_Expression = null;
             this.txt_SOHD.Size = new System.Drawing.Size(174, 20);
-            this.txt_SOHD.TabIndex = 11;
+            this.txt_SOHD.TabIndex = 8;
             // 
             // label15
             // 
@@ -209,7 +241,7 @@
             this.txt_LENHSX.Name = "txt_LENHSX";
             this.txt_LENHSX.Regular_Expression = null;
             this.txt_LENHSX.Size = new System.Drawing.Size(143, 20);
-            this.txt_LENHSX.TabIndex = 10;
+            this.txt_LENHSX.TabIndex = 7;
             // 
             // label16
             // 
@@ -223,7 +255,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(295, 154);
+            this.label11.Location = new System.Drawing.Point(287, 154);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.TabIndex = 211;
@@ -241,7 +273,7 @@
             this.txt_TENLYDO.Name = "txt_TENLYDO";
             this.txt_TENLYDO.Regular_Expression = null;
             this.txt_TENLYDO.Size = new System.Drawing.Size(174, 20);
-            this.txt_TENLYDO.TabIndex = 9;
+            this.txt_TENLYDO.TabIndex = 6;
             // 
             // label12
             // 
@@ -263,7 +295,7 @@
             this.txt_MALYDO.Name = "txt_MALYDO";
             this.txt_MALYDO.Regular_Expression = null;
             this.txt_MALYDO.Size = new System.Drawing.Size(143, 20);
-            this.txt_MALYDO.TabIndex = 8;
+            this.txt_MALYDO.TabIndex = 5;
             // 
             // label13
             // 
@@ -277,7 +309,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(293, 116);
+            this.label9.Location = new System.Drawing.Point(287, 116);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(36, 13);
             this.label9.TabIndex = 206;
@@ -295,7 +327,7 @@
             this.txt_SOKG.Name = "txt_SOKG";
             this.txt_SOKG.Regular_Expression = null;
             this.txt_SOKG.Size = new System.Drawing.Size(174, 20);
-            this.txt_SOKG.TabIndex = 7;
+            this.txt_SOKG.TabIndex = 4;
             // 
             // label10
             // 
@@ -327,7 +359,7 @@
             this.txt_SOM.Name = "txt_SOM";
             this.txt_SOM.Regular_Expression = null;
             this.txt_SOM.Size = new System.Drawing.Size(144, 20);
-            this.txt_SOM.TabIndex = 6;
+            this.txt_SOM.TabIndex = 3;
             // 
             // label7
             // 
@@ -340,7 +372,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(269, 83);
+            this.label3.Location = new System.Drawing.Point(287, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 198;
@@ -380,7 +412,7 @@
             this.txt_MAMANG.Name = "txt_MAMANG";
             this.txt_MAMANG.Regular_Expression = null;
             this.txt_MAMANG.Size = new System.Drawing.Size(143, 20);
-            this.txt_MAMANG.TabIndex = 3;
+            this.txt_MAMANG.TabIndex = 2;
             this.txt_MAMANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMANG_Validating);
             // 
             // label5
@@ -395,7 +427,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(295, 47);
+            this.label2.Location = new System.Drawing.Point(287, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 193;
@@ -428,11 +460,11 @@
             this.pne_CHITIET.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_CHITIET.Location = new System.Drawing.Point(8, 235);
+            this.pne_CHITIET.Location = new System.Drawing.Point(8, 263);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(830, 241);
-            this.pne_CHITIET.TabIndex = 192;
+            this.pne_CHITIET.Size = new System.Drawing.Size(830, 213);
+            this.pne_CHITIET.TabIndex = 11;
             // 
             // label1
             // 
@@ -625,5 +657,7 @@
         private CONTROL.LABEL label12;
         private CONTROL.TEXTBOX txt_MALYDO;
         private CONTROL.LABEL label13;
+        private CONTROL.BUTTON btn_XOADONG;
+        private CONTROL.BUTTON btn_THEMDONG;
     }
 }

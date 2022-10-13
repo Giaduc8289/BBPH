@@ -56,7 +56,9 @@ namespace GD.BBPH.APP.KHO
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_NHAPSANPHAM");
-                        DT_NHAPSANPHAM = LIB.SESSION_START.DT_NHAPSANPHAM;
+                        DT_NHAPSANPHAM = LIB.Procedures.Danhsachnhapsanpham(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, string.Empty);
+                        DT_NHAPSANPHAM_CHITIET = LIB.SESSION_START.DT_NHAPSANPHAM;
+
                         DT_DMKHO = LIB.SESSION_START.DT_DMKHO;
                         DT_DMSP = LIB.SESSION_START.DM_HANG;
                     }
@@ -369,6 +371,7 @@ namespace GD.BBPH.APP.KHO
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHO, txt_TENSP }));
                 txt_LENHSX.Focus();
             }
