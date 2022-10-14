@@ -5,6 +5,7 @@ Go
 
 Create Procedure dbo.Danhsachketquathoichitiet
 	@Maketquathoi	NVARCHAR(50),
+	@Ca				Int,
 	@Mamang			NVARCHAR(50)
   As
 	SET NOCOUNT ON;
@@ -13,8 +14,9 @@ Create Procedure dbo.Danhsachketquathoichitiet
 	Select * 
 	FROM dbo.Ketquathoi
 	WHERE (Id = @Maketquathoi OR @Maketquathoi = '')
+		AND (Ca = @Ca OR @Ca = 0)
 		AND (Mamang=@Mamang OR @Mamang='')
 
 GO
 
-Exec Danhsachketquathoichitiet  '',''
+Exec Danhsachketquathoichitiet  '', 0, ''
