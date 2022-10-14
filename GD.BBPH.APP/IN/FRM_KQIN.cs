@@ -25,13 +25,13 @@ namespace GD.BBPH.APP.IN
         private KetquainManager _KetquainManager = new KetquainManager();
         private KetquainEntity _KetquainEntity = new KetquainEntity();
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-        private DataTable DT_KQIN = new DataTable();
-        private BindingSource BS_KQIN = new BindingSource();
+        private DataTable DT_KQIN = new DataTable(), DT_KQIN_CHITIET_FILL = new DataTable(), DT_KQIN_CHITIET = new DataTable();
+        private BindingSource BS_KQIN = new BindingSource(), BS_KQIN_CHITIET = new BindingSource();
         private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_KQIN = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_KQINCHITIET = new GD.BBPH.CONTROL.JGridEX();
-        private string FUNCTION = "LOAD", MAHIEU_PK = "";
-        private string MASP = "";
+        private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET="";
+        private string MASP = "", CA="0";
         private DataTable DT_DMMAY = new DataTable(), DT_LENHIN = new DataTable(), DT_DMSP = new DataTable(), DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable();
 
 
@@ -56,7 +56,10 @@ namespace GD.BBPH.APP.IN
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQIN");
-                        DT_KQIN = LIB.SESSION_START.DT_KQIN;
+                        DT_KQIN = LIB.Procedures.Danhsachketquain(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); // LIB.SESSION_START.DT_KQIN;
+                        DT_KQIN_CHITIET = LIB.SESSION_START.DT_KQIN;
+
+
                         DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
                         DT_DMSP = LIB.SESSION_START.DM_HANG;
                         DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
@@ -99,10 +102,10 @@ namespace GD.BBPH.APP.IN
             DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
             InitializeComponent();
             KetquainManager _KetquainManager = new KetquainManager();
-            DataTable dt111 = LIB.Procedures.Danhsachketquain(Ngaydauthang, Ngaycuoithang, MASP);
-            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQIN.xml");
-            dt111 = LIB.Procedures.Danhsachketquainchitiet(MAHIEU_PK, MASP);
-            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQINCHITIET.xml");
+            DataTable dt111 = LIB.Procedures.Danhsachketquain(Ngaydauthang, Ngaycuoithang, Convert.ToInt32(CA), MASP);
+            GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQIN.xml");
+            dt111 = LIB.Procedures.Danhsachketquainchitiet(MAHIEU_PK, Convert.ToInt32(CA), MASP);
+            GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQINCHITIET.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -112,6 +115,7 @@ namespace GD.BBPH.APP.IN
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQIN.xml", GRID_KQIN, uiPanel0Container);
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQINCHITIET.xml", GRID_KQINCHITIET, pne_CHITIET);
+            GRID_KQINCHITIET.DeletingRecord += GRID_KQINCHITIET_DeletingRecord;
             //GRID_KQIN.RootTable.Groups.Add(GRID_KQIN.Tables[0].Columns[KetquainFields.Phongban.Name]);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_KQIN);
@@ -135,13 +139,38 @@ namespace GD.BBPH.APP.IN
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_KQIN.Current;
                     if (_Rowview != null)
-                        MAHIEU_PK = _Rowview.Row[KetquainFields.Id.Name].ToString();
+                        MAHIEU_PK = _Rowview.Row[KetquainFields.Ngay.Name].ToString();
+
                     txt_NGAY.Text = _Rowview.Row[KetquainFields.Ngay.Name].ToString();
                     txt_CA.Text = _Rowview.Row[KetquainFields.Ca.Name].ToString();
                     txt_MAMAY.Text = _Rowview.Row[KetquainFields.Mamay.Name].ToString();
+
+                    //txt_TENKHO.Text = _Rowview.Row[KetquainFields.Tenkho.Name].ToString();
+                    txt_MAMAY_Validating(new object(), new CancelEventArgs());
+
+                    SHOWGRID(MAHIEU_PK);
+                }
+                else
+                    SHOWGRID("");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KQIN_CurrentChanged"); }
+        }
+
+        void BS_KQIN_CHITIET_CurrentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (BS_KQIN_CHITIET.Current != null)
+                {
+                    DataRowView _Rowview = (DataRowView)this.BS_KQIN_CHITIET.Current;
+                    if (_Rowview != null)
+                        MACHITIET = _Rowview.Row[KetquainFields.Id.Name].ToString();
+
                     txt_LENHIN.Text = _Rowview.Row[KetquainFields.Lenhin.Name].ToString();
-                    txt_MASP.Text = _Rowview.Row[KetquainFields.Masanpham.Name].ToString();
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquainFields.Macongnhan.Name].ToString();
+                    txt_MACONGNHAN_Validating(new object(), new CancelEventArgs());
+                    txt_MASP.Text = _Rowview.Row[KetquainFields.Masanpham.Name].ToString();
+                    txt_MASP_Validating(new object(), new CancelEventArgs());
                     txt_SOMLSX.Text = _Rowview.Row[KetquainFields.SometLsx.Name].ToString();
                     txt_SOMCAP.Text = _Rowview.Row[KetquainFields.Sometcap.Name].ToString();
                     txt_SOKGCAP.Text = _Rowview.Row[KetquainFields.Sokgcap.Name].ToString();
@@ -152,90 +181,205 @@ namespace GD.BBPH.APP.IN
                     txt_PHESX.Text = _Rowview.Row[KetquainFields.PheSx.Name].ToString();
                     txt_TONGM2DM.Text = _Rowview.Row[KetquainFields.Tongm2dm.Name].ToString();
                     txt_M2SAIHONGTT.Text = _Rowview.Row[KetquainFields.M2saihongtt.Name].ToString();
-                    txt_TENMAY.Text = _Rowview.Row[KetquainFields.Tenmay.Name].ToString();
-                    txt_TENSP.Text = _Rowview.Row[KetquainFields.Tensanpham.Name].ToString();
-                    txt_TENCONGNHAN.Text = _Rowview.Row[KetquainFields.Tencongnhan.Name].ToString();
                     txt_THOIGIANBATDAU.Text = _Rowview.Row[KetquainFields.Thoigianbatdau.Name].ToString();
                     txt_THOIGIANKETTHUC.Text = _Rowview.Row[KetquainFields.Thoigianketthuc.Name].ToString();
                     txt_THOIGIANCHUANBI.Text = _Rowview.Row[KetquainFields.Thoigianchuanbi.Name].ToString();
                     txt_THOIGIANSUCO.Text = _Rowview.Row[KetquainFields.Thoigiansuco.Name].ToString();
 
-                    txt_MAMAY_Validating(new object(), new CancelEventArgs());
-                    txt_MASP_Validating(new object(), new CancelEventArgs());
-                    txt_MACONGNHAN_Validating(new object(), new CancelEventArgs());
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KQIN_CurrentChanged"); }
+            catch
+            { }
         }
-
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private void SHOWGRID(string MAHIEU_PK)
         {
-            KetquainEntity _KetquainEntity = new KetquainEntity();
-            _KetquainEntity.Ngay = Convert.ToDateTime( txt_NGAY.Text.Trim());
-            try {_KetquainEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim()); }
-            catch { }
-            _KetquainEntity.Mamay = txt_MAMAY.Text.Trim();
-            _KetquainEntity.Lenhin = txt_LENHIN.Text.Trim();
-            _KetquainEntity.Masanpham = txt_MASP.Text.Trim();
-            _KetquainEntity.Macongnhan = txt_MACONGNHAN.Text.Trim();
-            _KetquainEntity.SometLsx = Convert.ToDecimal(txt_SOMLSX.Text.Trim());
-            _KetquainEntity.Sometcap = Convert.ToDecimal(txt_SOMCAP.Text.Trim());
-            _KetquainEntity.Sokgcap = Convert.ToDecimal(txt_SOKGCAP.Text.Trim());
-            _KetquainEntity.Thuctein = Convert.ToDecimal(txt_THUCTEIN.Text.Trim());
-            _KetquainEntity.Sokgin = Convert.ToDecimal(txt_SOKGIN.Text.Trim());
-            _KetquainEntity.Saihongthucte = Convert.ToDecimal(txt_SAIHONGTHUCTE.Text.Trim());
-            _KetquainEntity.Thoigianbatdau = Convert.ToDateTime(txt_THOIGIANBATDAU.Text.Trim());
-            _KetquainEntity.Thoigianketthuc = Convert.ToDateTime(txt_THOIGIANKETTHUC.Text.Trim());
-            _KetquainEntity.Thoigianchuanbi = Convert.ToDecimal(txt_THOIGIANCHUANBI.Text.Trim());
-            _KetquainEntity.Thoigiansuco = Convert.ToDecimal(txt_THOIGIANSUCO.Text.Trim());
-            _KetquainEntity.PheNcc = Convert.ToDecimal(txt_PHENCC.Text.Trim());
-            _KetquainEntity.PheSx = Convert.ToDecimal(txt_PHESX.Text.Trim());
-            _KetquainEntity.M2saihongtt = Convert.ToDecimal(txt_M2SAIHONGTT.Text.Trim());
-            _KetquainEntity.Tongm2dm = Convert.ToDecimal(txt_TONGM2DM.Text.Trim());
-            _KetquainEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
-            _KetquainEntity.Tenmay = txt_TENMAY.Text.Trim();
-            _KetquainEntity.Tensanpham = txt_TENSP.Text.Trim();
-
-
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(MAHIEU_PK))
             {
-                _KetquainEntity.Ngaytao = DateTime.Now;
-                _KetquainEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _KetquainManager.InsertV2(_KetquainEntity, r_Insert, DT_KQIN, BS_KQIN);
-                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainManager.Convert(_KetquainEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                BS_KQIN.ResetCurrentItem();
+                DT_KQIN_CHITIET_FILL = new KetquainManager().Clone();
+                BS_KQIN_CHITIET = new BindingSource(DT_KQIN_CHITIET_FILL, null);
+                GRID_KQINCHITIET.DataSource = BS_KQIN_CHITIET;
             }
             else
             {
-                _KetquainEntity.Ngaysua = DateTime.Now;
-                _KetquainEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                _KetquainManager.Update(_KetquainEntity);
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Ngay.Name].Value = _KetquainEntity.Ngay;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Ca.Name].Value = _KetquainEntity.Ca;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Mamay.Name].Value = _KetquainEntity.Mamay;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Lenhin.Name].Value = _KetquainEntity.Lenhin;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Masanpham.Name].Value = _KetquainEntity.Masanpham;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Macongnhan.Name].Value = _KetquainEntity.Macongnhan;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.SometLsx.Name].Value = _KetquainEntity.SometLsx;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Sometcap.Name].Value = _KetquainEntity.Sometcap;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Sokgcap.Name].Value = _KetquainEntity.Sokgcap;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Thuctein.Name].Value = _KetquainEntity.Thuctein;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Sokgin.Name].Value = _KetquainEntity.Sokgin;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Saihongthucte.Name].Value = _KetquainEntity.Saihongthucte;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.PheNcc.Name].Value = _KetquainEntity.PheNcc;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Thoigianbatdau.Name].Value = _KetquainEntity.Thoigianbatdau;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Thoigianketthuc.Name].Value = _KetquainEntity.Thoigianketthuc;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Thoigianchuanbi.Name].Value = _KetquainEntity.Thoigianchuanbi;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Thoigiansuco.Name].Value = _KetquainEntity.Thoigiansuco;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.PheSx.Name].Value = _KetquainEntity.PheSx;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.M2saihongtt.Name].Value = _KetquainEntity.M2saihongtt;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Tongm2dm.Name].Value = _KetquainEntity.Tongm2dm;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Tencongnhan.Name].Value = _KetquainEntity.Tencongnhan;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Tenmay.Name].Value = _KetquainEntity.Tenmay;
-                GRID_KQIN.CurrentRow.Cells[KetquainFields.Tensanpham.Name].Value = _KetquainEntity.Tensanpham;
+                DT_KQIN_CHITIET_FILL = new KetquainManager().SelectByNgayCaMamayRDT(Convert.ToDateTime(txt_NGAY.Text.Trim()), Convert.ToInt32(txt_CA.Text.Trim()), txt_MAMAY.Text.Trim());
 
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainManager.Convert(_KetquainEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                DataView Source_View = new DataView(DT_KQIN_CHITIET_FILL);
+                BS_KQIN_CHITIET = new BindingSource();
+                BS_KQIN_CHITIET.DataSource = Source_View;
+                GRID_KQINCHITIET.DataSource = BS_KQIN_CHITIET;
             }
+            BS_KQIN_CHITIET.CurrentChanged += new EventHandler(BS_KQIN_CHITIET_CurrentChanged);
+            BS_KQIN_CHITIET_CurrentChanged((new object()), (new EventArgs()));
+        }
+
+        #region Xu ly dong chi tiet
+        private void btn_THEMDONG_Click(object sender, EventArgs e)
+        {
+            DataRow r_Detail = DT_KQIN_CHITIET_FILL.NewRow();
+            r_Detail[KetquainFields.Lenhin.Name] = txt_LENHIN.Text;
+            r_Detail[KetquainFields.Macongnhan.Name] = txt_MACONGNHAN.Text;
+            r_Detail[KetquainFields.Tencongnhan.Name] = txt_TENCONGNHAN.Text;
+            r_Detail[KetquainFields.Masanpham.Name] = txt_MASP.Text;
+            r_Detail[KetquainFields.Tensanpham.Name] = txt_TENSP.Text;
+            try { r_Detail[KetquainFields.SometLsx.Name] = LIB.ConvertString.NumbertoDB(txt_SOMLSX.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquainFields.Sometcap.Name] = LIB.ConvertString.NumbertoDB(txt_SOMCAP.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquainFields.Sokgcap.Name] = LIB.ConvertString.NumbertoDB(txt_SOKGCAP.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquainFields.Thuctein.Name] = LIB.ConvertString.NumbertoDB(txt_THUCTEIN.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquainFields.Sokgin.Name] = LIB.ConvertString.NumbertoDB(txt_SOKGIN.Text.Trim()); }
+            catch { }
+            r_Detail[KetquainFields.Saihongthucte.Name] = txt_SAIHONGTHUCTE.Text;
+            r_Detail[KetquainFields.PheNcc.Name] = txt_PHENCC.Text;
+            r_Detail[KetquainFields.PheSx.Name] = txt_PHESX.Text;
+            r_Detail[KetquainFields.Tongm2dm.Name] = txt_TONGM2DM.Text;
+            r_Detail[KetquainFields.M2saihongtt.Name] = txt_M2SAIHONGTT.Text;
+            r_Detail[KetquainFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text;
+            r_Detail[KetquainFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text;
+            r_Detail[KetquainFields.Thoigianchuanbi.Name] = txt_THOIGIANCHUANBI.Text;
+            r_Detail[KetquainFields.Thoigiansuco.Name] = txt_THOIGIANSUCO.Text;
+
+            DT_KQIN_CHITIET_FILL.Rows.Add(r_Detail);
+
+            DataView Source_View = new DataView(DT_KQIN_CHITIET_FILL);
+            BS_KQIN_CHITIET = new BindingSource();
+            BS_KQIN_CHITIET.DataSource = Source_View;
+            GRID_KQINCHITIET.DataSource = BS_KQIN_CHITIET;
+            BS_KQIN_CHITIET.Position = DT_KQIN_CHITIET_FILL.Rows.Count;
+            //Tinhtong();
+            //txt_MAHANG.Focus();
+        }
+        private void btn_XOADONG_Click(object sender, EventArgs e)
+        {
+            DataRowView _view = (DataRowView)GRID_KQINCHITIET.CurrentRow.DataRow;
+            string _MAHIEU_PK = _view[KetquainFields.Id.Name].ToString();
+            string _MAMANG = _view[KetquainFields.Masanpham.Name].ToString();
+            if (string.IsNullOrEmpty(_MAHIEU_PK) && MessageBox.Show("Xóa dòng: " + _MAMANG, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                   System.Windows.Forms.DialogResult.Yes)
+            {
+                GRID_KQINCHITIET.CurrentRow.Delete();
+            }
+            else
+            {
+                KetquainManager _KetquainManager = new KetquainManager();
+                KetquainEntity _KetquainEntity = new KetquainEntity();
+                try { _KetquainEntity = _KetquainManager.SelectOne(Convert.ToInt64(_MAHIEU_PK)); }
+                catch { }
+                if (_KetquainEntity != null && MessageBox.Show("Xóa dòng: " + _MAMANG, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                       System.Windows.Forms.DialogResult.Yes)
+                {
+                    try
+                    {
+                        _KetquainManager.Delete(Convert.ToInt64(_MAHIEU_PK));
+                        DataRow[] drArr = DT_KQIN_CHITIET_FILL.Select(KetquainFields.Id.Name + "='" + _MAHIEU_PK + "'");
+                        DT_KQIN_CHITIET_FILL.Rows.Remove(drArr[0]);
+                        //GRID_KQINCHITIET.CurrentRow.Delete();
+                        //GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_PhieugiaohangHManager.Convert(_PhieugiaohangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không thể xóa dòng " + _MAMANG + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    BS_KQIN_CHITIET.ResetCurrentItem();
+                    GRID_KQINCHITIET.DataSource = BS_KQIN_CHITIET;
+                }
+                GRID_KQINCHITIET.Enabled = true;
+            }
+            //Tinhtong();
+        }
+        private void GRID_KQINCHITIET_DeletingRecord(object sender, RowActionCancelEventArgs e)
+        {
+            btn_XOADONG_Click(new object(), new EventArgs());
+        }
+        #endregion
+
+
+        private string Save_Data(string _str_DMCHUONG_PK)
+        {
+            DateTime _ngay = Convert.ToDateTime(txt_NGAY.Text.Trim());
+
+            EntityCollection _KetquainEntityCol = new EntityCollection();
+            GridEXRow[] listGrid = GRID_KQINCHITIET.GetDataRows();
+            foreach (GridEXRow _grid in listGrid)
+            {
+                DataRowView _view = (DataRowView)_grid.DataRow;
+                if (_view == null) continue;
+                KetquainEntity _ketquainEntity = new KetquainEntity();
+                _ketquainEntity.Ngay = _ngay;
+                _ketquainEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
+                _ketquainEntity.Mamay = txt_MAMAY.Text.Trim();
+                _ketquainEntity.Tenmay = txt_TENMAY.Text.Trim();
+                _ketquainEntity.Lenhin = _view.Row[KetquainFields.Lenhin.Name].ToString();
+                _ketquainEntity.Macongnhan = _view.Row[KetquainFields.Macongnhan.Name].ToString();
+                _ketquainEntity.Tencongnhan = _view.Row[KetquainFields.Tencongnhan.Name].ToString();
+                _ketquainEntity.Masanpham = _view.Row[KetquainFields.Masanpham.Name].ToString();
+                _ketquainEntity.Tensanpham = _view.Row[KetquainFields.Tensanpham.Name].ToString();
+                _ketquainEntity.SometLsx = Convert.ToDecimal(_view.Row[KetquainFields.SometLsx.Name].ToString());
+                _ketquainEntity.Sometcap = Convert.ToDecimal(_view.Row[KetquainFields.Sometcap.Name].ToString());
+                _ketquainEntity.Sokgcap = Convert.ToDecimal(_view.Row[KetquainFields.Sokgcap.Name].ToString());
+                _ketquainEntity.Thuctein = Convert.ToDecimal(_view.Row[KetquainFields.Thuctein.Name].ToString());
+                _ketquainEntity.Sokgin = Convert.ToDecimal(_view.Row[KetquainFields.Sokgin.Name].ToString());
+                _ketquainEntity.Saihongthucte = Convert.ToDecimal(_view.Row[KetquainFields.Saihongthucte.Name].ToString());
+                _ketquainEntity.PheNcc = Convert.ToDecimal(_view.Row[KetquainFields.PheNcc.Name].ToString());
+                _ketquainEntity.PheSx = Convert.ToDecimal(_view.Row[KetquainFields.PheSx.Name].ToString());
+                _ketquainEntity.Tongm2dm = Convert.ToDecimal(_view.Row[KetquainFields.Tongm2dm.Name].ToString());
+                _ketquainEntity.M2saihongtt = Convert.ToDecimal(_view.Row[KetquainFields.M2saihongtt.Name].ToString());
+                _ketquainEntity.Thoigianbatdau = Convert.ToDateTime(_view.Row[KetquainFields.Thoigianbatdau.Name].ToString());
+                _ketquainEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquainFields.Thoigianketthuc.Name].ToString());
+                _ketquainEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquainFields.Thoigianchuanbi.Name].ToString());
+                _ketquainEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquainFields.Thoigiansuco.Name].ToString());
+
+
+                #region xét isnew
+                try { _ketquainEntity.Id = Convert.ToInt64(_view[KetquainFields.Id.Name].ToString()); }
+                catch { }
+
+                _ketquainEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_ketquainEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new KetquainManager()).SelectById(_ketquainEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _ketquainEntity.Ngaysua = DateTime.Now;
+                        _ketquainEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _ketquainEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _ketquainEntity.Ngaytao = DateTime.Now;
+                        _ketquainEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+                #endregion
+                if (!string.IsNullOrEmpty(_ketquainEntity.Masanpham))
+                    _KetquainEntityCol.Add(_ketquainEntity);
+               
+            }
+
+
+            foreach (KetquainEntity _ketquainEntity in _KetquainEntityCol)
+            {
+                if (_ketquainEntity.IsNew)
+                {
+                    DataRow _r_Insert = DT_KQIN_CHITIET.NewRow();
+                    DT_KQIN_CHITIET.Rows.Add(_r_Insert);
+                    _KetquainManager.InsertV2(_ketquainEntity, _r_Insert, DT_KQIN_CHITIET, BS_KQIN_CHITIET);
+                }
+                else _KetquainManager.Update(_ketquainEntity);
+            }
+
+            GRID_KQIN.CurrentRow.Cells[KetquainFields.Ngay.Name].Value = _ngay;
+            GRID_KQIN.CurrentRow.Cells[KetquainFields.Ca.Name].Value = txt_CA.Text.Trim();
+            GRID_KQIN.CurrentRow.Cells[KetquainFields.Mamay.Name].Value = txt_MAMAY.Text.Trim();
+
+            GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainManager.Convert(_KetquainEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+            //}
             return _str_DMCHUONG_PK;
         }
 
@@ -243,18 +387,21 @@ namespace GD.BBPH.APP.IN
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
+            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENHIN.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASP.Text = txt_TENSP.Text = txt_SOMLSX.Text = txt_SOMCAP.Text = txt_SOKGCAP.Text = txt_THUCTEIN.Text = txt_SOKGIN.Text = txt_SAIHONGTHUCTE.Text = txt_PHENCC.Text = txt_PHESX.Text =
+               txt_TONGM2DM.Text = txt_M2SAIHONGTT.Text = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_THOIGIANSUCO.Text =  string.Empty;
             //txt_PHONGBAN.Text = string.Empty;
             //txt_CHUCVU.Text = string.Empty;
-            KetquainManager _KetquainManager = new KetquainManager();
-            KetquainEntity _KetquainEntity = new KetquainEntity();
+            KetquathoiManager _KetquathoiManager = new KetquathoiManager();
+            KetquathoiEntity _KetquathoiEntity = new KetquathoiEntity();
             r_Insert = DT_KQIN.NewRow();
             DT_KQIN.Rows.Add(r_Insert);
             BS_KQIN.Position = DT_KQIN.Rows.Count;
             MAHIEU_PK = "";
-            txt_MAMAY.Focus();
+            txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSP, txt_TENMAY }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_KQIN.Enabled = false;
         }
         private void btn_SUA_Click(object sender, EventArgs e)
@@ -263,10 +410,16 @@ namespace GD.BBPH.APP.IN
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENCONGNHAN, txt_TENSP, txt_TENMAY }));
-                txt_LENHIN.Focus();
+                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSP, txt_TENMAY }));
             }
+            GRID_KQINCHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
+            GRID_KQINCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_KQINCHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_KQINCHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_KQINCHITIET.Enabled = true;
             GRID_KQIN.Enabled = false;
+            btn_XOADONG.Enabled = true;
         }
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
@@ -276,26 +429,31 @@ namespace GD.BBPH.APP.IN
             }
             BS_KQIN_CurrentChanged(new object(), new EventArgs());
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
             FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
             GRID_KQIN.Enabled = true;
+            GRID_KQINCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_KQINCHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_KQINCHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
         }
         private void btn_XOA_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             if (string.IsNullOrEmpty(MAHIEU_PK)) return;
-            KetquainManager _KetquainManager = new KetquainManager();
-            KetquainEntity _KetquainEntity = new KetquainEntity();
-            _KetquainEntity = _KetquainManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
-            if (_KetquainEntity != null && MessageBox.Show("Xóa công nhân: " + MAHIEU_PK + " - " + txt_LENHIN.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            KetquathoiManager _KetquathoiManager = new KetquathoiManager();
+            KetquathoiEntity _KetquathoiEntity = new KetquathoiEntity();
+            _KetquathoiEntity = _KetquathoiManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
+            if (_KetquathoiEntity != null && MessageBox.Show("Xóa công nhân: " + MAHIEU_PK + " - " + txt_LENHIN.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
                 {
-                    _KetquainManager.Delete(Convert.ToInt64(MAHIEU_PK));
+                    _KetquathoiManager.Delete(Convert.ToInt64(MAHIEU_PK));
                     GRID_KQIN.CurrentRow.Delete();
                     BS_KQIN_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
-                    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainManager.Convert(_KetquainEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquathoiManager.Convert(_KetquathoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                    btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
                 }
                 catch
                 {
@@ -303,25 +461,34 @@ namespace GD.BBPH.APP.IN
                 }
             }
             GRID_KQIN.Enabled = true;
+            GRID_KQINCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_KQINCHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_KQINCHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
         }
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(MAHIEU_PK) && _KetquainManager.SelectOne(txt_MAMAY.Text.Trim()) != null)
+            //if (string.IsNullOrEmpty(MAHIEU_PK) && _KetquathoiManager.SelectOne(txt_MAMAY.Text.Trim()) != null)
             //{
             //    MessageBox.Show("Mã công nhân bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             //    txt_MAMAY.Focus();
             //    return;
             //}
-            if (txt_MAMAY.Text == "")
+            if (txt_NGAY.Text == "")
             {
                 MessageBox.Show("Yêu cầu nhập mã công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_MAMAY.Focus();
+                txt_NGAY.Focus();
                 return;
             }
-            else if (txt_LENHIN.Text == "")
+            else if (txt_CA.Text == "")
             {
                 MessageBox.Show("Yêu cầu nhập tên công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_LENHIN.Focus();
+                txt_CA.Focus();
+                return;
+            }
+            else if (txt_MAMAY.Text == "")
+            {
+                MessageBox.Show("Yêu cầu nhập tên công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_MAMAY.Focus();
                 return;
             }
             else
@@ -331,6 +498,10 @@ namespace GD.BBPH.APP.IN
                 GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
                 GRID_KQIN.Enabled = true;
                 btn_THEMMOI.Focus();
+                GRID_KQINCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_KQINCHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_KQINCHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+
             }
         }
         private void btn_Thoat_Click(object sender, EventArgs e)
@@ -372,30 +543,30 @@ namespace GD.BBPH.APP.IN
             catch { return null; }
         }
 
-        //private void txt_LENHTHOI_Validating(object sender, CancelEventArgs e)
+        //private void txt_LENHIN_Validating(object sender, CancelEventArgs e)
         //{
         //    _RowViewSelect = null;
-        //    if (string.IsNullOrEmpty(txt_LENHTHOI.Text.Trim()) || DT_LENHTHOI == null || DT_LENHTHOI.Rows.Count == 0) return;
-        //    string Str_MASIEUTHI = txt_LENHTHOI.Text.Trim().ToUpper();
-        //    _RowViewSelect = checklenhthoi(Str_MASIEUTHI, DT_LENHTHOI);
+        //    if (string.IsNullOrEmpty(txt_LENHIN.Text.Trim()) || DT_LENHIN == null || DT_LENHIN.Rows.Count == 0) return;
+        //    string Str_MASIEUTHI = txt_LENHIN.Text.Trim().ToUpper();
+        //    _RowViewSelect = checklenhthoi(Str_MASIEUTHI, DT_LENHIN);
         //    if (_RowViewSelect == null)
         //    {
         //        ListviewJanus _frm_SingerRows_Select =
         //            new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMKHACH.xml",
-        //                DT_LENHTHOI, DmkhachFields.Makhach.Name, Str_MASIEUTHI);
+        //                DT_LENHIN, DmkhachFields.Makhach.Name, Str_MASIEUTHI);
         //        _frm_SingerRows_Select.ShowDialog();
         //        if (_frm_SingerRows_Select._RowViewSelect == null) return;
         //        _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-        //        txt_LENHTHOI.Text = _RowViewSelect[DmkhachFields.Makhach.Name].ToString();
-        //        txt_LENHTHOI.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
+        //        txt_LENHIN.Text = _RowViewSelect[DmkhachFields.Makhach.Name].ToString();
+        //        txt_LENHIN.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
 
-        //        DT_LENHTHOI = new DmhangManager().SelectByMakhachRDT(txt_LENHTHOI.Text);
+        //        DT_LENHIN = new DmhangManager().SelectByMakhachRDT(txt_LENHIN.Text);
 
         //    }
         //    else
         //    {
-        //        txt_LENHTHOI.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
-        //        DT_LENHTHOI = new DmhangManager().SelectByMakhachRDT(txt_LENHTHOI.Text);
+        //        txt_LENHIN.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
+        //        DT_LENHIN = new DmhangManager().SelectByMakhachRDT(txt_LENHIN.Text);
 
         //    }
         //}

@@ -114,6 +114,7 @@ namespace GD.BBPH.APP.THOI
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQTHOI.xml", GRID_KQTHOI, uiPanel0Container);
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQTHOICHITIET.xml", GRID_KQTHOICHITIET, pne_CHITIET);
+            GRID_KQTHOICHITIET.DeletingRecord += GRID_KQTHOICHITIET_DeletingRecord;
             //GRID_KQTHOI.RootTable.Groups.Add(GRID_KQTHOI.Tables[0].Columns[KetquathoiFields.Phongban.Name]);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_KQTHOI);
@@ -293,6 +294,12 @@ namespace GD.BBPH.APP.THOI
             }
             //Tinhtong();
         }
+
+        private void GRID_KQTHOICHITIET_DeletingRecord(object sender, RowActionCancelEventArgs e)
+        {
+            btn_XOADONG_Click(new object(), new EventArgs());
+        }
+
         #endregion
 
         private string Save_Data(string _str_DMCHUONG_PK)
@@ -327,6 +334,26 @@ namespace GD.BBPH.APP.THOI
                 _ketquathoiEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquathoiFields.Thoigianchuanbi.Name].ToString());
                 _ketquathoiEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquathoiFields.Thoigiansuco.Name].ToString());
                 _ketquathoiEntity.Sokgdukiendat = Convert.ToDecimal(_view.Row[KetquathoiFields.Sokgdukiendat.Name].ToString());
+
+                try { _ketquathoiEntity.Id = Convert.ToInt64(_view[KetquathoiFields.Id.Name].ToString()); }
+                catch { }
+
+                _ketquathoiEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_ketquathoiEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new KetquathoiManager()).SelectById(_ketquathoiEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _ketquathoiEntity.Ngaysua = DateTime.Now;
+                        _ketquathoiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _ketquathoiEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _ketquathoiEntity.Ngaytao = DateTime.Now;
+                        _ketquathoiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
 
                 if (!string.IsNullOrEmpty(_ketquathoiEntity.Mamang))
                     _KetquathoiEntityCol.Add(_ketquathoiEntity);

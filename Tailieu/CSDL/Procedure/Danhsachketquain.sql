@@ -6,6 +6,7 @@ Go
 Create Procedure dbo.Danhsachketquain
 	@Tungay		Datetime,
 	@Denngay	Datetime,
+	@Ca			Int,
 	@Masp		NVARCHAR(20)
 	--@Mahang			Nvarchar(20)
   As
@@ -15,10 +16,11 @@ Create Procedure dbo.Danhsachketquain
 	Select Distinct Ngay, Ca, kq.Mamay
 	From dbo.Ketquain kq left join dbo.dmmay dm on kq.Mamay = dm.Mamay
 	Where Ngay Between @Tungay And @Denngay
+		AND (Ca = @Ca OR @Ca = 0)
 		AND	(Masanpham = @Masp Or @Masp='')
 		
 GO
 
-Exec Danhsachketquain '10/01/2020', '10/30/2020', ''
+Exec Danhsachketquain '10/01/2022', '10/30/2022', 0, ''
 
 
