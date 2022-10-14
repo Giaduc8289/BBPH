@@ -1801,6 +1801,31 @@ namespace GD.BBPH.APP.LIB
             parameters.CopyTo(myArr, 0);
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachketquathoichitiet", "Danhsachketquathoichitiet", myArr).Tables[0];
         }
+
+        public static DataTable Danhsachketquachia(DateTime Tungay, DateTime Denngay, int Ca, string Mamang)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Tungay", SqlDbType.Date, 0), Tungay);
+            parameters.Add(new SqlParameter("@Denngay", SqlDbType.Date, 0), Denngay);
+            parameters.Add(new SqlParameter("@Ca", SqlDbType.Int, 0), Ca);
+            parameters.Add(new SqlParameter("@Mamang", SqlDbType.NVarChar, 0), Mamang);
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachketquachia", "Danhsachketquachia", myArr).Tables[0];
+        }
+        public static DataTable Danhsachketquachiachitiet(string MAHIEU_PK, int ca, string Mamang)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Maketquathoi", SqlDbType.NVarChar, 0), MAHIEU_PK);
+            parameters.Add(new SqlParameter("@Ca", SqlDbType.Int, 0), ca);
+            parameters.Add(new SqlParameter("@Mamang", SqlDbType.NVarChar, 0), Mamang);
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachketquachiachitiet", "Danhsachketquachiachitiet", myArr).Tables[0];
+        }
+
         public static DataTable Danhsachthongkenguyenlieu(DateTime Tungay, DateTime Denngay, string Manguyenlieu)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
