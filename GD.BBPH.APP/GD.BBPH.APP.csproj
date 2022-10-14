@@ -339,6 +339,12 @@
     <Compile Include="IN\FRM_KQIN.designer.cs">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
     </Compile>
+    <Compile Include="KHO\FRM_KIEMKENGUYENLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHO\FRM_KIEMKENGUYENLIEU.designer.cs">
+      <DependentUpon>FRM_KIEMKENGUYENLIEU.cs</DependentUpon>
+    </Compile>
     <Compile Include="KHO\FRM_NHAPKHONGUYENLIEU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -570,6 +576,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IN\FRM_KQIN.resx">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHO\FRM_KIEMKENGUYENLIEU.resx">
+      <DependentUpon>FRM_KIEMKENGUYENLIEU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KHO\FRM_NHAPKHONGUYENLIEU.resx">
       <DependentUpon>FRM_NHAPKHONGUYENLIEU.cs</DependentUpon>
