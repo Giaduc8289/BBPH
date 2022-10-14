@@ -314,6 +314,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region SODUSANPHAM
+        private static DataTable _DT_SODUSANPHAM = null;
+        public static DataTable DT_SODUSANPHAM
+        {
+            get
+            {
+                _DT_SODUSANPHAM = new SodumangManager().SelectAllRDT();
+                return _DT_SODUSANPHAM;
+            }
+            set { _DT_SODUSANPHAM = value; }
+        }
+        #endregion
+
         #region DMLYDONHAPXUAT
         private static DataTable _DT_DMLYDONHAPXUAT = null;
         public static DataTable DT_DMLYDONHAPXUAT
