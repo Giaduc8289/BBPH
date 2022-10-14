@@ -913,6 +913,14 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_NHAPMANG()), mmru.Text);
                     break;
 
+                case "FRM_KIEMKEMANG":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KIEMKEMANG") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_KIEMKEMANG()), mmru.Text);
+                    break;
+
                 case "FRM_NHAPKHONGUYENLIEU":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {

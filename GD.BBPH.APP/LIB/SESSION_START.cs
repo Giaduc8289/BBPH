@@ -300,6 +300,20 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMKHO = value; }
         }
         #endregion
+
+        #region SODUMANG
+        private static DataTable _DT_SODUMANG = null;
+        public static DataTable DT_SODUMANG
+        {
+            get
+            {
+                _DT_SODUMANG = new SodumangManager().SelectAllRDT();
+                return _DT_SODUMANG;
+            }
+            set { _DT_SODUMANG = value; }
+        }
+        #endregion
+
         #region DMLYDONHAPXUAT
         private static DataTable _DT_DMLYDONHAPXUAT = null;
         public static DataTable DT_DMLYDONHAPXUAT

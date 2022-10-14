@@ -17,18 +17,38 @@
               </xs:sequence>
             </xs:complexType>
           </xs:element>
+          <xs:element name="tablename">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="name" type="xs:string" minOccurs="0" />
+                <xs:element name="headerText" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
         </xs:choice>
       </xs:complexType>
     </xs:element>
   </xs:schema>
-  
   <viewgrid>
     <value>1</value>
     <name>Ngaykiemke</name>
-    <headerText>Ngày kiểm kê</headerText>
+    <headerText>Ngaykiemke</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Makho</name>
+    <headerText>Makho</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <tablename>
+    <name>tablename</name>
+    <headerText>Danh sách tendanhsach</headerText>
+  </tablename>
 </NewDataSet>
