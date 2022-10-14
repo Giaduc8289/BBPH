@@ -658,6 +658,15 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMKHACH()), mmru.Text);
                     break;
 
+                case "FRM_DMCHUNGLOAI":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMCHUNGLOAI") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMCHUNGLOAI()), mmru.Text);
+                    break;
+
+
                 case "FRM_CTPTMANG":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {

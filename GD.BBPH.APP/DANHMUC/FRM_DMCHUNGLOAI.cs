@@ -91,7 +91,7 @@ namespace GD.BBPH.APP.DANHMUC
             InitializeComponent();
             DmchungloaiManager _DmchungloaiManager = new DmchungloaiManager();
             DataTable dt111 = _DmchungloaiManager.Clone();
-            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI.xml");
+            GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -124,8 +124,14 @@ namespace GD.BBPH.APP.DANHMUC
                     DataRowView _Rowview = (DataRowView)this.BS_DMCHUNGLOAI.Current;
                     if (_Rowview != null)
                         MAHIEU_PK = _Rowview.Row[DmchungloaiFields.Machungloai.Name].ToString();
-                    txt_MAHIEU.Text = _Rowview.Row[DmchungloaiFields.Machungloai.Name].ToString();
-                    txt_TENHIEU.Text = _Rowview.Row[DmchungloaiFields.Tenchungloai.Name].ToString();
+                    txt_MACHUNGLOAI.Text    = _Rowview.Row[DmchungloaiFields.Machungloai.Name].ToString();
+                    txt_TENCHUNGLOAI.Text   = _Rowview.Row[DmchungloaiFields.Tenchungloai.Name].ToString();
+                    txt_KICHTHUOC.Text      = _Rowview.Row[DmchungloaiFields.Kichthuoc.Name].ToString();
+                    txt_TRONGLUONG.Text     = _Rowview.Row[DmchungloaiFields.Trongluong.Name].ToString();
+                    txt_SOMAU.Text          = _Rowview.Row[DmchungloaiFields.Somau.Name].ToString();
+                    txt_SOHINH.Text         = _Rowview.Row[DmchungloaiFields.Sohinh.Name].ToString();
+                    txt_LOAIMUC.Text        = _Rowview.Row[DmchungloaiFields.Loaimuc.Name].ToString();
+                    txt_GHICHU.Text         = _Rowview.Row[DmchungloaiFields.Ghichu.Name].ToString();
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMCHUNGLOAI_CurrentChanged"); }
@@ -133,24 +139,36 @@ namespace GD.BBPH.APP.DANHMUC
 
         private string Save_Data(string _str_DMCHUONG_PK)
         {
-            DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity();
-            _DmchungloaiEntity.Machungloai = txt_MAHIEU.Text.Trim();
-            _DmchungloaiEntity.Tenchungloai = txt_TENHIEU.Text.Trim();
+            DmchungloaiEntity _dmchungloaiEntity = new DmchungloaiEntity();
+            _dmchungloaiEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
+            _dmchungloaiEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
+            _dmchungloaiEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
+            _dmchungloaiEntity.Trongluong = Convert.ToDecimal(txt_TRONGLUONG.Text.Trim());
+            _dmchungloaiEntity.Somau = Convert.ToInt32(txt_SOMAU.Text.Trim());
+            _dmchungloaiEntity.Sohinh = Convert.ToInt32(txt_SOHINH.Text.Trim());
+            _dmchungloaiEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
+            _dmchungloaiEntity.Ghichu = txt_GHICHU.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
-                _DmchungloaiEntity.Ngaytao = DateTime.Now;
-                _DmchungloaiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _DmchungloaiManager.InsertV2(_DmchungloaiEntity, r_Insert, DT_DMCHUNGLOAI, BS_DMCHUNGLOAI);
-                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchungloaiManager.Convert(_DmchungloaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                _dmchungloaiEntity.Ngaytao = DateTime.Now;
+                _dmchungloaiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                _str_DMCHUONG_PK = _DmchungloaiManager.InsertV2(_dmchungloaiEntity, r_Insert, DT_DMCHUNGLOAI, BS_DMCHUNGLOAI);
+                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchungloaiManager.Convert(_dmchungloaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMCHUNGLOAI.ResetCurrentItem();
             }
             else
             {
-                _DmchungloaiEntity.Ngaysua = DateTime.Now;
-                _DmchungloaiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                _DmchungloaiManager.Update(_DmchungloaiEntity);
-                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Macv.Name].Value = _DmchungloaiEntity.Macv;
-                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenchucvu.Name].Value = _DmchungloaiEntity.Tenchucvu;
+                _dmchungloaiEntity.Ngaysua = DateTime.Now;
+                _dmchungloaiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                _DmchungloaiManager.Update(_dmchungloaiEntity);
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Machungloai.Name].Value = _dmchungloaiEntity.Machungloai;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenchungloai.Name].Value = _dmchungloaiEntity.Tenchungloai;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Kichthuoc.Name].Value = _dmchungloaiEntity.Kichthuoc;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Trongluong.Name].Value = _dmchungloaiEntity.Trongluong;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Somau.Name].Value = _dmchungloaiEntity.Somau;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Sohinh.Name].Value = _dmchungloaiEntity.Sohinh;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Loaimuc.Name].Value = _dmchungloaiEntity.Loaimuc;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Ghichu.Name].Value = _dmchungloaiEntity.Ghichu;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchungloaiManager.Convert(_DmchungloaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;
@@ -168,7 +186,7 @@ namespace GD.BBPH.APP.DANHMUC
             DT_DMCHUNGLOAI.Rows.Add(r_Insert);
             BS_DMCHUNGLOAI.Position = DT_DMCHUNGLOAI.Rows.Count;
             MAHIEU_PK = "";
-            txt_MAHIEU.Focus();
+            txt_MACHUNGLOAI.Focus();
             TEXTBOX_Only_Control(false, null);
             //GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_PHONGBAN, txt_CHUCVU }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
@@ -180,8 +198,8 @@ namespace GD.BBPH.APP.DANHMUC
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MAHIEU }));
-                txt_TENHIEU.Focus();
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MACHUNGLOAI }));
+                txt_TENCHUNGLOAI.Focus();
             }
             GRID_DMCHUNGLOAI.Enabled = false;
         }
@@ -203,7 +221,7 @@ namespace GD.BBPH.APP.DANHMUC
             DmchungloaiManager _DmchungloaiManager = new DmchungloaiManager();
             DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity();
             _DmchungloaiEntity = _DmchungloaiManager.SelectOne(MAHIEU_PK);
-            if (_DmchungloaiEntity != null && MessageBox.Show("Xóa công nhân: " + MAHIEU_PK + " - " + txt_TENHIEU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_DmchungloaiEntity != null && MessageBox.Show("Xóa công nhân: " + MAHIEU_PK + " - " + txt_TENCHUNGLOAI.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -223,22 +241,22 @@ namespace GD.BBPH.APP.DANHMUC
         }
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(MAHIEU_PK) && _DmchungloaiManager.SelectOne(txt_MAHIEU.Text.Trim()) != null)
+            if (string.IsNullOrEmpty(MAHIEU_PK) && _DmchungloaiManager.SelectOne(txt_MACHUNGLOAI.Text.Trim()) != null)
             {
                 MessageBox.Show("Mã công nhân bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_MAHIEU.Focus();
+                txt_MACHUNGLOAI.Focus();
                 return;
             }
-            else if (txt_MAHIEU.Text == "")
+            else if (txt_MACHUNGLOAI.Text == "")
             {
                 MessageBox.Show("Yêu cầu nhập mã công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_MAHIEU.Focus();
+                txt_MACHUNGLOAI.Focus();
                 return;
             }
-            else if (txt_TENHIEU.Text == "")
+            else if (txt_TENCHUNGLOAI.Text == "")
             {
                 MessageBox.Show("Yêu cầu nhập tên công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_TENHIEU.Focus();
+                txt_TENCHUNGLOAI.Focus();
                 return;
             }
             else
