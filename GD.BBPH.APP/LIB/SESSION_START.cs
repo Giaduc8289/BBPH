@@ -327,6 +327,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region SODUNGUYENLIEU
+        private static DataTable _DT_SODUNGUYENLIEU = null;
+        public static DataTable DT_SODUNGUYENLIEU
+        {
+            get
+            {
+                _DT_SODUNGUYENLIEU = new SodumangManager().SelectAllRDT();
+                return _DT_SODUNGUYENLIEU;
+            }
+            set { _DT_SODUNGUYENLIEU = value; }
+        }
+        #endregion
+
         #region DMLYDONHAPXUAT
         private static DataTable _DT_DMLYDONHAPXUAT = null;
         public static DataTable DT_DMLYDONHAPXUAT

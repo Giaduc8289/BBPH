@@ -936,6 +936,14 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_NHAPKHONGUYENLIEU()), mmru.Text);
                     break;
+
+                case "FRM_KIEMKENGUYENLIEU":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KIEMKENGUYENLIEU") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_KIEMKENGUYENLIEU()), mmru.Text);
+                    break;
                 #endregion
 
                 #region Tính giá
