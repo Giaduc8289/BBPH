@@ -326,6 +326,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region DMCHUNGLOAI
+        private static DataTable _DT_DMCHUNGLOAI = null;
+        public static DataTable DT_DMCHUNGLOAI
+        {
+            get
+            {
+                _DT_DMCHUNGLOAI = new DmchungloaiManager().SelectAllRDT();
+                return _DT_DMCHUNGLOAI;
+            }
+            set { _DT_DMCHUNGLOAI = value; }
+        }
+        #endregion
+
         #region CTPTMANG_H
         private static DataTable _DT_CTPTMANG_H = null;
         public static DataTable DT_CTPTMANG_H
