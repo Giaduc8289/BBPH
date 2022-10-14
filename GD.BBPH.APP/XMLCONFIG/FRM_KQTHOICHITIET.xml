@@ -236,6 +236,33 @@
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tenmang</name>
+    <headerText>Tenmang</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tenmay</name>
+    <headerText>Tenmay</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tencongnhan</name>
+    <headerText>Tencongnhan</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
   <tablename>
     <name>tablename</name>
     <headerText>Danh sách tendanhsach</headerText>
