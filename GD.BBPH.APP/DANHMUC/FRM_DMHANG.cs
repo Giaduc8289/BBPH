@@ -162,8 +162,8 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_LOAIMUC.Text = _Rowview.Row[DmhangFields.Loaimuc.Name].ToString();
                     txt_KICHTHUOCTRUC.Text = _Rowview.Row[DmhangFields.Kichthuoctruc.Name].ToString();
                     txt_VITRI.Text = _Rowview.Row[DmhangFields.Vitri.Name].ToString();
-                    txt_QUYCACHDONGGOI.Text = _Rowview.Row[DmhangFields.Maqcdonggoi.Name].ToString();
-                    txt_LOAITHUNG.Text = _Rowview.Row[DmhangFields.Maqcloaithung.Name].ToString();
+                    txt_MAQCDONGGOI.Text = _Rowview.Row[DmhangFields.Maqcdonggoi.Name].ToString();
+                    txt_MAQCLOAITHUNG.Text = _Rowview.Row[DmhangFields.Maqcloaithung.Name].ToString();
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmhang_CurrentChanged"); }
@@ -185,8 +185,8 @@ namespace GD.BBPH.APP.DANHMUC
             _dmhangEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
             _dmhangEntity.Kichthuoctruc = txt_KICHTHUOCTRUC.Text.Trim();
             _dmhangEntity.Vitri = txt_VITRI.Text.Trim();
-            _dmhangEntity.Maqcdonggoi = txt_QUYCACHDONGGOI.Text.Trim();
-            _dmhangEntity.Maqcloaithung = txt_LOAITHUNG.Text.Trim();
+            _dmhangEntity.Maqcdonggoi = txt_MAQCDONGGOI.Text.Trim();
+            _dmhangEntity.Maqcloaithung = txt_MAQCLOAITHUNG.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _str_DMCHUONG_PK = _DmhangManager.InsertV2(_dmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
@@ -349,8 +349,8 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_LOAIMUC.Text = drCopy[0][DmhangFields.Loaimuc.Name].ToString();
                 txt_KICHTHUOCTRUC.Text = drCopy[0][DmhangFields.Kichthuoctruc.Name].ToString();
                 txt_VITRI.Text = drCopy[0][DmhangFields.Vitri.Name].ToString();
-                txt_QUYCACHDONGGOI.Text = drCopy[0][DmhangFields.Maqcdonggoi.Name].ToString();
-                txt_LOAITHUNG.Text = drCopy[0][DmhangFields.Maqcloaithung.Name].ToString();
+                txt_MAQCDONGGOI.Text = drCopy[0][DmhangFields.Maqcdonggoi.Name].ToString();
+                txt_MAQCLOAITHUNG.Text = drCopy[0][DmhangFields.Maqcloaithung.Name].ToString();
                 //try
                 //{
                 //    txt_TLPHOI.Text = double.Parse(drCopy[0][DmhangFields.Trongluongphoi.Name].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN"));

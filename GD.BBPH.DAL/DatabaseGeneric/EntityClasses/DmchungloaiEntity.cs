@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 12, 2022 5:45:08 PM
+// Code is generated on: Friday, October 14, 2022 10:58:13 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -89,22 +89,22 @@ namespace GD.BBPH.DAL.EntityClasses
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="id">PK value for Dmchungloai which data should be fetched into this Dmchungloai object</param>
+		/// <param name="machungloai">PK value for Dmchungloai which data should be fetched into this Dmchungloai object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DmchungloaiEntity(System.Int64 id):base("DmchungloaiEntity")
+		public DmchungloaiEntity(System.String machungloai):base("DmchungloaiEntity")
 		{
 			InitClassEmpty(null, CreateFields());
-			this.Id = id;
+			this.Machungloai = machungloai;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="id">PK value for Dmchungloai which data should be fetched into this Dmchungloai object</param>
+		/// <param name="machungloai">PK value for Dmchungloai which data should be fetched into this Dmchungloai object</param>
 		/// <param name="validator">The custom validator object for this DmchungloaiEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DmchungloaiEntity(System.Int64 id, IValidator validator):base("DmchungloaiEntity")
+		public DmchungloaiEntity(System.String machungloai, IValidator validator):base("DmchungloaiEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
-			this.Id = id;
+			this.Machungloai = machungloai;
 		}
 
 		/// <summary> Protected CTor for deserialization</summary>
@@ -433,7 +433,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			Dictionary<string, string> fieldHashtable = null;
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Id", fieldHashtable);
+			_fieldsCustomProperties.Add("Machungloai", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tenchungloai", fieldHashtable);
@@ -455,6 +455,18 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Ghichu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nguoitao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaysua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
 		}
 		#endregion
 
@@ -520,15 +532,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return DmchungloaiEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The Id property of the Entity Dmchungloai<br/><br/>
+		/// <summary> The Machungloai property of the Entity Dmchungloai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Dmchungloai"."Id"<br/>
-		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, true</remarks>
-		public virtual System.Int64 Id
+		/// <remarks>Mapped on  table field: "Dmchungloai"."Machungloai"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
+		public virtual System.String Machungloai
 		{
-			get { return (System.Int64)GetValue((int)DmchungloaiFieldIndex.Id, true); }
-			set	{ SetValue((int)DmchungloaiFieldIndex.Id, value); }
+			get { return (System.String)GetValue((int)DmchungloaiFieldIndex.Machungloai, true); }
+			set	{ SetValue((int)DmchungloaiFieldIndex.Machungloai, value); }
 		}
 
 		/// <summary> The Tenchungloai property of the Entity Dmchungloai<br/><br/>
@@ -606,6 +618,50 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmchungloaiFieldIndex.Ghichu, true); }
 			set	{ SetValue((int)DmchungloaiFieldIndex.Ghichu, value); }
+		}
+
+		/// <summary> The Ngaytao property of the Entity Dmchungloai<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmchungloai"."Ngaytao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaytao
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)DmchungloaiFieldIndex.Ngaytao, false); }
+			set	{ SetValue((int)DmchungloaiFieldIndex.Ngaytao, value); }
+		}
+
+		/// <summary> The Nguoitao property of the Entity Dmchungloai<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmchungloai"."Nguoitao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoitao
+		{
+			get { return (System.String)GetValue((int)DmchungloaiFieldIndex.Nguoitao, true); }
+			set	{ SetValue((int)DmchungloaiFieldIndex.Nguoitao, value); }
+		}
+
+		/// <summary> The Ngaysua property of the Entity Dmchungloai<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmchungloai"."Ngaysua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaysua
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)DmchungloaiFieldIndex.Ngaysua, false); }
+			set	{ SetValue((int)DmchungloaiFieldIndex.Ngaysua, value); }
+		}
+
+		/// <summary> The Nguoisua property of the Entity Dmchungloai<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmchungloai"."Nguoisua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoisua
+		{
+			get { return (System.String)GetValue((int)DmchungloaiFieldIndex.Nguoisua, true); }
+			set	{ SetValue((int)DmchungloaiFieldIndex.Nguoisua, value); }
 		}
 
 

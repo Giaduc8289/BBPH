@@ -31,6 +31,10 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+*/bin/x86/Debug/
+*/bin/x86/Release/
+*/obj/x86/Debug/
+*/obj/x86/Release/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

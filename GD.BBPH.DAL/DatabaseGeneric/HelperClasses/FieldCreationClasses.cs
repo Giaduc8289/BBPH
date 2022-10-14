@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 12, 2022 5:45:08 PM
+// Code is generated on: Friday, October 14, 2022 10:58:13 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -537,10 +537,10 @@ namespace GD.BBPH.DAL.HelperClasses
 	/// <summary>Field Creation Class for entity DmchungloaiEntity</summary>
 	public partial class DmchungloaiFields
 	{
-		/// <summary>Creates a new DmchungloaiEntity.Id field instance</summary>
-		public static EntityField2 Id
+		/// <summary>Creates a new DmchungloaiEntity.Machungloai field instance</summary>
+		public static EntityField2 Machungloai
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Id);}
+			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Machungloai);}
 		}
 		/// <summary>Creates a new DmchungloaiEntity.Tenchungloai field instance</summary>
 		public static EntityField2 Tenchungloai
@@ -576,6 +576,26 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Ghichu
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Ghichu);}
+		}
+		/// <summary>Creates a new DmchungloaiEntity.Ngaytao field instance</summary>
+		public static EntityField2 Ngaytao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Ngaytao);}
+		}
+		/// <summary>Creates a new DmchungloaiEntity.Nguoitao field instance</summary>
+		public static EntityField2 Nguoitao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Nguoitao);}
+		}
+		/// <summary>Creates a new DmchungloaiEntity.Ngaysua field instance</summary>
+		public static EntityField2 Ngaysua
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Ngaysua);}
+		}
+		/// <summary>Creates a new DmchungloaiEntity.Nguoisua field instance</summary>
+		public static EntityField2 Nguoisua
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Nguoisua);}
 		}
 	}
 

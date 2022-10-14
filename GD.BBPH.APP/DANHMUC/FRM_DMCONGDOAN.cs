@@ -95,6 +95,7 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_KHOIPHUC, btn_KHOIPHUC.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCONGDOAN.xml", GRID_DMCONGDOAN, uiPanel0Container);
+            GRID_DMCONGDOAN.RootTable.SortKeys.Add(DmcongdoanFields.Sothutucongdoan.Name, Janus.Windows.GridEX.SortOrder.Ascending);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_DMCONGDOAN);
             BS_DMCONGDOAN = new BindingSource();

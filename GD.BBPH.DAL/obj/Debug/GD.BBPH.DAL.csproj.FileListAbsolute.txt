@@ -1,6 +1,0 @@
-D:\Dev\BBPH\GD.BBPH.DAL\DatabaseGeneric\bin\Debug\GD.BBPH.DAL.dll
-D:\Dev\BBPH\GD.BBPH.DAL\DatabaseGeneric\bin\Debug\GD.BBPH.DAL.pdb
-D:\Dev\BBPH\GD.BBPH.DAL\obj\Debug\GD.BBPH.DAL.dll
-D:\Dev\BBPH\GD.BBPH.DAL\obj\Debug\GD.BBPH.DAL.pdb
-D:\Dev\BBPH\GD.BBPH.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.DQE.SqlServer.NET20.dll
-D:\Dev\BBPH\GD.BBPH.DAL\DatabaseGeneric\bin\Debug\SD.LLBLGen.Pro.LinqSupportClasses.NET35.dll

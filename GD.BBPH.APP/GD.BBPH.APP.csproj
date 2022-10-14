@@ -159,6 +159,12 @@
     <Compile Include="BAOCAO\FRM_REPORTVIEWER.designer.cs">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
     </Compile>
+    <Compile Include="DANHMUC\FRM_DMCHUNGLOAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMCHUNGLOAI.designer.cs">
+      <DependentUpon>FRM_DMCHUNGLOAI.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMNHOMQUYCACH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,11 +339,35 @@
     <Compile Include="IN\FRM_KQIN.designer.cs">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
     </Compile>
+    <Compile Include="KHO\FRM_KIEMKENGUYENLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHO\FRM_KIEMKENGUYENLIEU.designer.cs">
+      <DependentUpon>FRM_KIEMKENGUYENLIEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KHO\FRM_NHAPKHONGUYENLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHO\FRM_NHAPKHONGUYENLIEU.designer.cs">
+      <DependentUpon>FRM_NHAPKHONGUYENLIEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KHO\FRM_KIEMKEMANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHO\FRM_KIEMKEMANG.designer.cs">
+      <DependentUpon>FRM_KIEMKEMANG.cs</DependentUpon>
+    </Compile>
     <Compile Include="KHO\FRM_NHAPMANG.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KHO\FRM_NHAPMANG.designer.cs">
       <DependentUpon>FRM_NHAPMANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KHO\FRM_KIEMKESANPHAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHO\FRM_KIEMKESANPHAM.designer.cs">
+      <DependentUpon>FRM_KIEMKESANPHAM.cs</DependentUpon>
     </Compile>
     <Compile Include="KHO\FRM_NHAPSANPHAM.cs">
       <SubType>Form</SubType>
@@ -457,6 +487,9 @@
     <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMCHUNGLOAI.resx">
+      <DependentUpon>FRM_DMCHUNGLOAI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMNHOMQUYCACH.resx">
       <DependentUpon>FRM_DMNHOMQUYCACH.cs</DependentUpon>
     </EmbeddedResource>
@@ -544,8 +577,20 @@
     <EmbeddedResource Include="IN\FRM_KQIN.resx">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KHO\FRM_KIEMKENGUYENLIEU.resx">
+      <DependentUpon>FRM_KIEMKENGUYENLIEU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHO\FRM_NHAPKHONGUYENLIEU.resx">
+      <DependentUpon>FRM_NHAPKHONGUYENLIEU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHO\FRM_KIEMKEMANG.resx">
+      <DependentUpon>FRM_KIEMKEMANG.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KHO\FRM_NHAPMANG.resx">
       <DependentUpon>FRM_NHAPMANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHO\FRM_KIEMKESANPHAM.resx">
+      <DependentUpon>FRM_KIEMKESANPHAM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KHO\FRM_NHAPSANPHAM.resx">
       <DependentUpon>FRM_NHAPSANPHAM.cs</DependentUpon>
@@ -962,10 +1007,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_DMMAY.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYHT.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYHOANTHIEN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYSOI_CHON.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAYPE.xml" />
     <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml">
       <SubType>Designer</SubType>
