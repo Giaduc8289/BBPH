@@ -31,7 +31,7 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
-GD.BBPH.BLL/bin/x86/Debug/
+*/bin/x86/Debug/
 */bin/x86/Release/
 */obj/x86/Debug/
 */obj/x86/Release/
