@@ -159,7 +159,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_SOHINH.Text = _Rowview.Row[DmhangFields.Sohinh.Name].ToString();
                     txt_CAUTRUCIN.Text = _Rowview.Row[DmhangFields.Cautrucin.Name].ToString();
                     txt_SOMAU.Text = _Rowview.Row[DmhangFields.Somau.Name].ToString();
-                    txt_LOAIMUC.Text = _Rowview.Row[DmhangFields.Loaimuc.Name].ToString();
+                    txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Loaimuc.Name].ToString();
                     txt_KICHTHUOCTRUC.Text = _Rowview.Row[DmhangFields.Kichthuoctruc.Name].ToString();
                     txt_VITRI.Text = _Rowview.Row[DmhangFields.Vitri.Name].ToString();
                     txt_MAQCDONGGOI.Text = _Rowview.Row[DmhangFields.Maqcdonggoi.Name].ToString();
@@ -182,7 +182,7 @@ namespace GD.BBPH.APP.DANHMUC
             _dmhangEntity.Sohinh = Int32.Parse(txt_SOHINH.Text.Trim());
             _dmhangEntity.Cautrucin = txt_CAUTRUCIN.Text.Trim();
             _dmhangEntity.Somau = Int32.Parse(txt_SOMAU.Text.Trim());
-            _dmhangEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
+            _dmhangEntity.Loaimuc = txt_MALOAIMUC.Text.Trim();
             _dmhangEntity.Kichthuoctruc = txt_KICHTHUOCTRUC.Text.Trim();
             _dmhangEntity.Vitri = txt_VITRI.Text.Trim();
             _dmhangEntity.Maqcdonggoi = txt_MAQCDONGGOI.Text.Trim();
@@ -346,7 +346,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_SOHINH.Text = drCopy[0][DmhangFields.Sohinh.Name].ToString();
                 txt_CAUTRUCIN.Text = drCopy[0][DmhangFields.Cautrucin.Name].ToString();
                 txt_SOMAU.Text = drCopy[0][DmhangFields.Somau.Name].ToString();
-                txt_LOAIMUC.Text = drCopy[0][DmhangFields.Loaimuc.Name].ToString();
+                txt_MALOAIMUC.Text = drCopy[0][DmhangFields.Loaimuc.Name].ToString();
                 txt_KICHTHUOCTRUC.Text = drCopy[0][DmhangFields.Kichthuoctruc.Name].ToString();
                 txt_VITRI.Text = drCopy[0][DmhangFields.Vitri.Name].ToString();
                 txt_MAQCDONGGOI.Text = drCopy[0][DmhangFields.Maqcdonggoi.Name].ToString();

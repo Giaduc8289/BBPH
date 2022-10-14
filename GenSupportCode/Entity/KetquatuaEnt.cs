@@ -67,6 +67,9 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Nguoitao.Text = _Rowview.Row[KetquatuaFields.Nguoitao.Name].ToString();
 					txt_Ngaysua.Text = _Rowview.Row[KetquatuaFields.Ngaysua.Name].ToString();
 					txt_Nguoisua.Text = _Rowview.Row[KetquatuaFields.Nguoisua.Name].ToString();
+					txt_Tensanpham.Text = _Rowview.Row[KetquatuaFields.Tensanpham.Name].ToString();
+					txt_Tenmay.Text = _Rowview.Row[KetquatuaFields.Tenmay.Name].ToString();
+					txt_Tencongnhan.Text = _Rowview.Row[KetquatuaFields.Tencongnhan.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Ketquatua_CurrentChanged"); }
@@ -104,6 +107,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			_ketquatuaEntity.Nguoitao = txt_Nguoitao.Text.Trim();
 			_ketquatuaEntity.Ngaysua = txt_Ngaysua.Text.Trim();
 			_ketquatuaEntity.Nguoisua = txt_Nguoisua.Text.Trim();
+			_ketquatuaEntity.Tensanpham = txt_Tensanpham.Text.Trim();
+			_ketquatuaEntity.Tenmay = txt_Tenmay.Text.Trim();
+			_ketquatuaEntity.Tencongnhan = txt_Tencongnhan.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -143,6 +149,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Ketquatua.CurrentRow.Cells[KetquatuaFields.Nguoitao.Name].Value = _ketquatuaEntity.Nguoitao;
 				GRID_Ketquatua.CurrentRow.Cells[KetquatuaFields.Ngaysua.Name].Value = _ketquatuaEntity.Ngaysua;
 				GRID_Ketquatua.CurrentRow.Cells[KetquatuaFields.Nguoisua.Name].Value = _ketquatuaEntity.Nguoisua;
+				GRID_Ketquatua.CurrentRow.Cells[KetquatuaFields.Tensanpham.Name].Value = _ketquatuaEntity.Tensanpham;
+				GRID_Ketquatua.CurrentRow.Cells[KetquatuaFields.Tenmay.Name].Value = _ketquatuaEntity.Tenmay;
+				GRID_Ketquatua.CurrentRow.Cells[KetquatuaFields.Tencongnhan.Name].Value = _ketquatuaEntity.Tencongnhan;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquatuaManager.Convert(_ketquatuaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Ketquatua_PK;

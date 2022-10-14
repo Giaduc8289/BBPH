@@ -171,15 +171,12 @@ namespace GD.BBPH.APP.CHIA
                     txt_MAMANG_Validating(new object(), new CancelEventArgs());
                     txt_SOMVAO.Text = _Rowview.Row[KetquachiaFields.Sometvao.Name].ToString();
                     txt_SOKGVAO.Text = _Rowview.Row[KetquachiaFields.Sokgvao.Name].ToString();
-                    txt_DAURAGHEP.Text = _Rowview.Row[KetquachiaFields.Socon.Name].ToString();
-                    txt_SOCON.Text = _Rowview.Row[KetquachiaFields.Thoigianlencuon.Name].ToString();
-                    txt_PHELIEUTHUCTE.Text = _Rowview.Row[KetquachiaFields.Solanhacuon.Name].ToString();
-                    txt_TONGSP.Text = _Rowview.Row[KetquachiaFields.Dauraghep.Name].ToString();
+                    txt_DAURAGHEP.Text = _Rowview.Row[KetquachiaFields.Dauraghep.Name].ToString();
+                    txt_SOCON.Text = _Rowview.Row[KetquachiaFields.Socon.Name].ToString();
                     txt_THOIGIANBATDAU.Text = _Rowview.Row[KetquachiaFields.Thoigianbatdau.Name].ToString();
                     txt_THOIGIANKETTHUC.Text = _Rowview.Row[KetquachiaFields.Thoigianketthuc.Name].ToString();
                     txt_THOIGIANDOILENH.Text = _Rowview.Row[KetquachiaFields.Thoigianhacuon.Name].ToString();
                     txt_THOIGIANSUCO.Text = _Rowview.Row[KetquachiaFields.Thoigiansuco.Name].ToString();
-                    txt_SOKGDUKIEN.Text = _Rowview.Row[KetquachiaFields.Thoigiancatdau.Name].ToString();
 
                     ////txt_Socon.Text = _Rowview.Row[KetquachiaFields.Socon.Name].ToString();
                     ////txt_Thoigianlencuon.Text = _Rowview.Row[KetquachiaFields.Thoigianlencuon.Name].ToString();
@@ -367,8 +364,8 @@ namespace GD.BBPH.APP.CHIA
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENH.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_SOMVAO.Text = txt_SOKGVAO.Text = txt_DAURAGHEP.Text = txt_SOCON.Text = txt_CHATLUONG.Text = txt_PHELIEUTHUCTE.Text = txt_TONGSP.Text
-                = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANDOILENH.Text = txt_THOIGIANSUCO.Text = txt_SOKGDUKIEN.Text = string.Empty;
+            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENH.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_SOMVAO.Text = txt_SOKGVAO.Text = txt_DAURAGHEP.Text = txt_SOCON.Text 
+                = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANDOILENH.Text = txt_THOIGIANSUCO.Text = string.Empty;
             //txt_PHONGBAN.Text = string.Empty;
             //txt_CHUCVU.Text = string.Empty;
             KetquachiaManager _KetquachiaManager = new KetquachiaManager();
