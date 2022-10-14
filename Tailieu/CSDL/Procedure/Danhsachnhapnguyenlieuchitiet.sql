@@ -1,9 +1,9 @@
-------------------------Danh sach Danhsachnhapmangchitiet-------------
-If Object_ID('dbo.Danhsachnhapnguyenlieuchitiet','P') is not null
-	Drop Procedure dbo.Danhsachnhapnguyenlieuchitiet;
+------------------------Danh sach Danhsachnhapkhonguyenlieuchitiet-------------
+If Object_ID('dbo.Danhsachnhapkhonguyenlieuchitiet','P') is not null
+	Drop Procedure dbo.Danhsachnhapkhonguyenlieuchitiet;
 Go
 
-Create Procedure dbo.Danhsachnhapnguyenlieuchitiet
+Create Procedure dbo.Danhsachnhapkhonguyenlieuchitiet
 	@Ngay		Datetime,
 	@Makho		NVARCHAR(20),
 	@Manguyenlieu		NVARCHAR(50),
@@ -21,5 +21,5 @@ Create Procedure dbo.Danhsachnhapnguyenlieuchitiet
 
 GO
 
-Exec Danhsachnhapnguyenlieuchitiet  '10/10/2022', '', '', ''
+Exec Danhsachnhapkhonguyenlieuchitiet  '10/10/2022', '', '', ''
 
