@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 13, 2022 2:37:50 PM
+// Code is generated on: Friday, October 14, 2022 10:58:12 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -258,6 +258,10 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmchungloaiEntity", "Sohinh", typeof(Nullable<System.Int32>), false, false, false, true,  (int)DmchungloaiFieldIndex.Sohinh, 0, 0, 10);
 			base.AddElementFieldInfo("DmchungloaiEntity", "Loaimuc", typeof(System.String), false, false, false, true,  (int)DmchungloaiFieldIndex.Loaimuc, 50, 0, 0);
 			base.AddElementFieldInfo("DmchungloaiEntity", "Ghichu", typeof(System.String), false, false, false, true,  (int)DmchungloaiFieldIndex.Ghichu, 250, 0, 0);
+			base.AddElementFieldInfo("DmchungloaiEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)DmchungloaiFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("DmchungloaiEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)DmchungloaiFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("DmchungloaiEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)DmchungloaiFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("DmchungloaiEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)DmchungloaiFieldIndex.Nguoisua, 50, 0, 0);
 		}
 		/// <summary>Inits DmcongdoanEntity's FieldInfo objects</summary>
 		private void InitDmcongdoanEntityInfos()

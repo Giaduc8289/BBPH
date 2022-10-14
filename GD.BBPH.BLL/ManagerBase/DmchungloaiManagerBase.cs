@@ -42,6 +42,14 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Ghichu="Ghichu";				
 		
+		public const String Field_Ngaytao="Ngaytao";				
+		
+		public const String Field_Nguoitao="Nguoitao";				
+		
+		public const String Field_Ngaysua="Ngaysua";				
+		
+		public const String Field_Nguoisua="Nguoisua";				
+		
 				
 		#endregion	
 
@@ -72,6 +80,14 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Loaimuc,typeof(System.String));
 			
 			dt.Columns.Add(Field_Ghichu,typeof(System.String));
+			
+			dt.Columns.Add(Field_Ngaytao,typeof(System.DateTime));
+			
+			dt.Columns.Add(Field_Nguoitao,typeof(System.String));
+			
+			dt.Columns.Add(Field_Ngaysua,typeof(System.DateTime));
+			
+			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
 									
 		            
 			return dt;			
@@ -130,6 +146,30 @@ namespace GD.BBPH.BLL
 				r[Field_Ghichu]=_DmchungloaiEntity.Ghichu;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_Ngaytao]=_DmchungloaiEntity.Ngaytao;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Nguoitao]=_DmchungloaiEntity.Nguoitao;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Ngaysua]=_DmchungloaiEntity.Ngaysua;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Nguoisua]=_DmchungloaiEntity.Nguoisua;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -184,6 +224,30 @@ namespace GD.BBPH.BLL
 				_DmchungloaiEntity.Ghichu= r[Field_Ghichu].ToString();						
 			}
 			catch { }
+			
+			try
+			{
+				_DmchungloaiEntity.Ngaytao= System.DateTime.Parse(r[Field_Ngaytao].ToString());						
+			}
+			catch { }
+			
+			try
+			{
+				_DmchungloaiEntity.Nguoitao= r[Field_Nguoitao].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_DmchungloaiEntity.Ngaysua= System.DateTime.Parse(r[Field_Ngaysua].ToString());						
+			}
+			catch { }
+			
+			try
+			{
+				_DmchungloaiEntity.Nguoisua= r[Field_Nguoisua].ToString();						
+			}
+			catch { }
 									
 									
 			return _DmchungloaiEntity;
@@ -208,6 +272,14 @@ namespace GD.BBPH.BLL
 			_DmchungloaiEntity.Loaimuc= _DmchungloaiEntity_XML.Loaimuc;
 			
 			_DmchungloaiEntity.Ghichu= _DmchungloaiEntity_XML.Ghichu;
+			
+			_DmchungloaiEntity.Ngaytao= _DmchungloaiEntity_XML.Ngaytao;
+			
+			_DmchungloaiEntity.Nguoitao= _DmchungloaiEntity_XML.Nguoitao;
+			
+			_DmchungloaiEntity.Ngaysua= _DmchungloaiEntity_XML.Ngaysua;
+			
+			_DmchungloaiEntity.Nguoisua= _DmchungloaiEntity_XML.Nguoisua;
 									
 				
 			return _DmchungloaiEntity;
@@ -270,6 +342,30 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Ghichu,_DmchungloaiEntity.Ghichu);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Ngaytao,_DmchungloaiEntity.Ngaytao);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Nguoitao,_DmchungloaiEntity.Nguoitao);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Ngaysua,_DmchungloaiEntity.Ngaysua);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Nguoisua,_DmchungloaiEntity.Nguoisua);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -327,6 +423,30 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Ghichu,_DmchungloaiEntity.Ghichu);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Ngaytao,_DmchungloaiEntity.Ngaytao);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Nguoitao,_DmchungloaiEntity.Nguoitao);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Ngaysua,_DmchungloaiEntity.Ngaysua);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Nguoisua,_DmchungloaiEntity.Nguoisua);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -349,7 +469,7 @@ namespace GD.BBPH.BLL
 			return DmchungloaiEntity;
 		}
 
-		public DmchungloaiEntity Insert(System.String  Machungloai, System.String  Tenchungloai, System.String  Kichthuoc, System.Decimal  Trongluong, System.Int32  Somau, System.Int32  Sohinh, System.String  Loaimuc, System.String  Ghichu)
+		public DmchungloaiEntity Insert(System.String  Machungloai, System.String  Tenchungloai, System.String  Kichthuoc, System.Decimal  Trongluong, System.Int32  Somau, System.Int32  Sohinh, System.String  Loaimuc, System.String  Ghichu, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
 		{
 			DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -370,6 +490,14 @@ namespace GD.BBPH.BLL
 				_DmchungloaiEntity.Loaimuc = Loaimuc;
 				
 				_DmchungloaiEntity.Ghichu = Ghichu;
+				
+				_DmchungloaiEntity.Ngaytao = Ngaytao;
+				
+				_DmchungloaiEntity.Nguoitao = Nguoitao;
+				
+				_DmchungloaiEntity.Ngaysua = Ngaysua;
+				
+				_DmchungloaiEntity.Nguoisua = Nguoisua;
 					
 					
 				adapter.SaveEntity(_DmchungloaiEntity, true);
@@ -377,7 +505,7 @@ namespace GD.BBPH.BLL
 			return _DmchungloaiEntity;
 		}
 
-		public DmchungloaiEntity Insert(System.String Tenchungloai, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Somau, System.Int32 Sohinh, System.String Loaimuc, System.String Ghichu)//ko co mahieu
+		public DmchungloaiEntity Insert(System.String Tenchungloai, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Somau, System.Int32 Sohinh, System.String Loaimuc, System.String Ghichu, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -397,6 +525,14 @@ namespace GD.BBPH.BLL
 				_DmchungloaiEntity.Loaimuc = Loaimuc;
 				
 				_DmchungloaiEntity.Ghichu = Ghichu;
+				
+				_DmchungloaiEntity.Ngaytao = Ngaytao;
+				
+				_DmchungloaiEntity.Nguoitao = Nguoitao;
+				
+				_DmchungloaiEntity.Ngaysua = Ngaysua;
+				
+				_DmchungloaiEntity.Nguoisua = Nguoisua;
 					
 
 				adapter.SaveEntity(_DmchungloaiEntity, true);
@@ -434,7 +570,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Machungloai, System.String Tenchungloai, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Somau, System.Int32 Sohinh, System.String Loaimuc, System.String Ghichu)
+		public bool Update(System.String Machungloai, System.String Tenchungloai, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Somau, System.Int32 Sohinh, System.String Loaimuc, System.String Ghichu, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -458,6 +594,14 @@ namespace GD.BBPH.BLL
 					_DmchungloaiEntity.Loaimuc = Loaimuc;
 					
 					_DmchungloaiEntity.Ghichu = Ghichu;
+					
+					_DmchungloaiEntity.Ngaytao = Ngaytao;
+					
+					_DmchungloaiEntity.Nguoitao = Nguoitao;
+					
+					_DmchungloaiEntity.Ngaysua = Ngaysua;
+					
+					_DmchungloaiEntity.Nguoisua = Nguoisua;
 						
 
 					adapter.SaveEntity(_DmchungloaiEntity, true);
@@ -611,6 +755,70 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DmchungloaiFields.Ghichu == Ghichu);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmchungloaiEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByNgaytao(System.DateTime Ngaytao)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Ngaytao == Ngaytao);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmchungloaiEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByNguoitao(System.String Nguoitao)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Nguoitao == Nguoitao);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmchungloaiEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByNgaysua(System.DateTime Ngaysua)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Ngaysua == Ngaysua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmchungloaiEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByNguoisua(System.String Nguoisua)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Nguoisua == Nguoisua);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -923,6 +1131,142 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DmchungloaiFields.Ghichu == Ghichu);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmchungloaiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByNgaytao(System.DateTime Ngaytao)
+		{
+			EntityCollection _DmchungloaiCollection = new EntityCollection(new DmchungloaiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Ngaytao == Ngaytao);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmchungloaiCollection, filter, 0, null);
+			}
+			return _DmchungloaiCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByNgaytaoRDT(System.DateTime Ngaytao)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmchungloaiCollection = new EntityCollection(new DmchungloaiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Ngaytao == Ngaytao);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmchungloaiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByNguoitao(System.String Nguoitao)
+		{
+			EntityCollection _DmchungloaiCollection = new EntityCollection(new DmchungloaiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Nguoitao == Nguoitao);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmchungloaiCollection, filter, 0, null);
+			}
+			return _DmchungloaiCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByNguoitaoRDT(System.String Nguoitao)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmchungloaiCollection = new EntityCollection(new DmchungloaiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Nguoitao == Nguoitao);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmchungloaiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByNgaysua(System.DateTime Ngaysua)
+		{
+			EntityCollection _DmchungloaiCollection = new EntityCollection(new DmchungloaiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Ngaysua == Ngaysua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmchungloaiCollection, filter, 0, null);
+			}
+			return _DmchungloaiCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByNgaysuaRDT(System.DateTime Ngaysua)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmchungloaiCollection = new EntityCollection(new DmchungloaiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Ngaysua == Ngaysua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmchungloaiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByNguoisua(System.String Nguoisua)
+		{
+			EntityCollection _DmchungloaiCollection = new EntityCollection(new DmchungloaiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmchungloaiCollection, filter, 0, null);
+			}
+			return _DmchungloaiCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByNguoisuaRDT(System.String Nguoisua)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmchungloaiCollection = new EntityCollection(new DmchungloaiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchungloaiFields.Nguoisua == Nguoisua);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

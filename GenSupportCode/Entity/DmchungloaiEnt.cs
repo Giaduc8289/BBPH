@@ -47,6 +47,10 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Sohinh.Text = _Rowview.Row[DmchungloaiFields.Sohinh.Name].ToString();
 					txt_Loaimuc.Text = _Rowview.Row[DmchungloaiFields.Loaimuc.Name].ToString();
 					txt_Ghichu.Text = _Rowview.Row[DmchungloaiFields.Ghichu.Name].ToString();
+					txt_Ngaytao.Text = _Rowview.Row[DmchungloaiFields.Ngaytao.Name].ToString();
+					txt_Nguoitao.Text = _Rowview.Row[DmchungloaiFields.Nguoitao.Name].ToString();
+					txt_Ngaysua.Text = _Rowview.Row[DmchungloaiFields.Ngaysua.Name].ToString();
+					txt_Nguoisua.Text = _Rowview.Row[DmchungloaiFields.Nguoisua.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmchungloai_CurrentChanged"); }
@@ -64,6 +68,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			_dmchungloaiEntity.Sohinh = txt_Sohinh.Text.Trim();
 			_dmchungloaiEntity.Loaimuc = txt_Loaimuc.Text.Trim();
 			_dmchungloaiEntity.Ghichu = txt_Ghichu.Text.Trim();
+			_dmchungloaiEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+			_dmchungloaiEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+			_dmchungloaiEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+			_dmchungloaiEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -83,6 +91,10 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Sohinh.Name].Value = _dmchungloaiEntity.Sohinh;
 				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Loaimuc.Name].Value = _dmchungloaiEntity.Loaimuc;
 				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Ghichu.Name].Value = _dmchungloaiEntity.Ghichu;
+				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Ngaytao.Name].Value = _dmchungloaiEntity.Ngaytao;
+				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Nguoitao.Name].Value = _dmchungloaiEntity.Nguoitao;
+				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Ngaysua.Name].Value = _dmchungloaiEntity.Ngaysua;
+				GRID_Dmchungloai.CurrentRow.Cells[DmchungloaiFields.Nguoisua.Name].Value = _dmchungloaiEntity.Nguoisua;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchungloaiManager.Convert(_dmchungloaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Dmchungloai_PK;

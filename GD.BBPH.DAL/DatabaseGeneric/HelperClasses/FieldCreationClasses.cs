@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 13, 2022 2:37:52 PM
+// Code is generated on: Friday, October 14, 2022 10:58:13 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -576,6 +576,26 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Ghichu
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Ghichu);}
+		}
+		/// <summary>Creates a new DmchungloaiEntity.Ngaytao field instance</summary>
+		public static EntityField2 Ngaytao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Ngaytao);}
+		}
+		/// <summary>Creates a new DmchungloaiEntity.Nguoitao field instance</summary>
+		public static EntityField2 Nguoitao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Nguoitao);}
+		}
+		/// <summary>Creates a new DmchungloaiEntity.Ngaysua field instance</summary>
+		public static EntityField2 Ngaysua
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Ngaysua);}
+		}
+		/// <summary>Creates a new DmchungloaiEntity.Nguoisua field instance</summary>
+		public static EntityField2 Nguoisua
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmchungloaiFieldIndex.Nguoisua);}
 		}
 	}
 

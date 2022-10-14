@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 13, 2022 2:37:50 PM
+// Code is generated on: Friday, October 14, 2022 10:58:12 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -313,6 +313,14 @@ namespace GD.BBPH.DAL
 		Loaimuc,
 		///<summary>Ghichu. </summary>
 		Ghichu,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
