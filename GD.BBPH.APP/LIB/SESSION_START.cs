@@ -638,6 +638,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region XUATMANG
+        private static DataTable _DT_XUATMANG = null;
+        public static DataTable DT_XUATMANG
+        {
+            get
+            {
+                _DT_XUATMANG = new XuatkhomangManager().SelectAllRDT();
+                return _DT_XUATMANG;
+            }
+            set { _DT_XUATMANG = value; }
+        }
+        #endregion
+
         #region NHAPKHONGUYENLIEU
         private static DataTable _DT_NHAPKHONGUYENLIEU = null;
         public static DataTable DT_NHAPKHONGUYENLIEU
@@ -651,6 +664,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+
+        #region XUATNGUYENLIEU
+        private static DataTable _DT_XUATNGUYENLIEU = null;
+        public static DataTable DT_XUATNGUYENLIEU
+        {
+            get
+            {
+                _DT_XUATNGUYENLIEU = new XuatkhonguyenlieuManager().SelectAllRDT();
+                return _DT_XUATNGUYENLIEU;
+            }
+            set { _DT_XUATNGUYENLIEU = value; }
+        }
+        #endregion
         #endregion
 
         #region Tua

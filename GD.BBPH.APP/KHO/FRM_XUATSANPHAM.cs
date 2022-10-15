@@ -378,7 +378,7 @@ namespace GD.BBPH.APP.KHO
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            txt_NGAY.Text = txt_MAKHO.Text = txt_TENKHO.Text = txt_MASP.Text = txt_TENSP.Text = txt_SOLUONG.Text = txt_SOM.Text = txt_SOKG.Text = txt_MALYDO.Text = txt_TENKHO.Text = txt_LENHSX.Text = txt_SOPHIEUGIAO.Text = txt_MADH.Text = string.Empty;
+            txt_NGAY.Text = txt_MAKHO.Text = txt_TENKHO.Text = txt_MASP.Text = txt_TENSP.Text = txt_SOLUONG.Text = txt_SOM.Text = txt_SOKG.Text = txt_MALYDO.Text = txt_TENLYDO.Text = txt_LENHSX.Text = txt_SOPHIEUGIAO.Text = txt_MADH.Text = string.Empty;
             XuatkhosanphamManager _XuatkhosanphamManager = new XuatkhosanphamManager();
             XuatkhosanphamEntity _XuatkhosanphamEntity = new XuatkhosanphamEntity();
             r_Insert = DT_XUATSANPHAM.NewRow();
@@ -400,7 +400,6 @@ namespace GD.BBPH.APP.KHO
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHO, txt_TENSP }));
-                txt_LENHSX.Focus();
             }
             GRID_XUATSANPHAMCHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             GRID_XUATSANPHAMCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
