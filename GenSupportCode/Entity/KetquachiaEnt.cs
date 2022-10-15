@@ -66,6 +66,10 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Nguoitao.Text = _Rowview.Row[KetquachiaFields.Nguoitao.Name].ToString();
 					txt_Ngaysua.Text = _Rowview.Row[KetquachiaFields.Ngaysua.Name].ToString();
 					txt_Nguoisua.Text = _Rowview.Row[KetquachiaFields.Nguoisua.Name].ToString();
+					txt_Mamay.Text = _Rowview.Row[KetquachiaFields.Mamay.Name].ToString();
+					txt_Tensanpham.Text = _Rowview.Row[KetquachiaFields.Tensanpham.Name].ToString();
+					txt_Tenmay.Text = _Rowview.Row[KetquachiaFields.Tenmay.Name].ToString();
+					txt_Tencongnhan.Text = _Rowview.Row[KetquachiaFields.Tencongnhan.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Ketquachia_CurrentChanged"); }
@@ -102,6 +106,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			_ketquachiaEntity.Nguoitao = txt_Nguoitao.Text.Trim();
 			_ketquachiaEntity.Ngaysua = txt_Ngaysua.Text.Trim();
 			_ketquachiaEntity.Nguoisua = txt_Nguoisua.Text.Trim();
+			_ketquachiaEntity.Mamay = txt_Mamay.Text.Trim();
+			_ketquachiaEntity.Tensanpham = txt_Tensanpham.Text.Trim();
+			_ketquachiaEntity.Tenmay = txt_Tenmay.Text.Trim();
+			_ketquachiaEntity.Tencongnhan = txt_Tencongnhan.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -140,6 +148,10 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Ketquachia.CurrentRow.Cells[KetquachiaFields.Nguoitao.Name].Value = _ketquachiaEntity.Nguoitao;
 				GRID_Ketquachia.CurrentRow.Cells[KetquachiaFields.Ngaysua.Name].Value = _ketquachiaEntity.Ngaysua;
 				GRID_Ketquachia.CurrentRow.Cells[KetquachiaFields.Nguoisua.Name].Value = _ketquachiaEntity.Nguoisua;
+				GRID_Ketquachia.CurrentRow.Cells[KetquachiaFields.Mamay.Name].Value = _ketquachiaEntity.Mamay;
+				GRID_Ketquachia.CurrentRow.Cells[KetquachiaFields.Tensanpham.Name].Value = _ketquachiaEntity.Tensanpham;
+				GRID_Ketquachia.CurrentRow.Cells[KetquachiaFields.Tenmay.Name].Value = _ketquachiaEntity.Tenmay;
+				GRID_Ketquachia.CurrentRow.Cells[KetquachiaFields.Tencongnhan.Name].Value = _ketquachiaEntity.Tencongnhan;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquachiaManager.Convert(_ketquachiaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Ketquachia_PK;

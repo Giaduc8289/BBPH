@@ -5,7 +5,9 @@ Go
 
 Create Procedure dbo.Danhsachketquainchitiet
 	@Maketquain	NVARCHAR(50),
-	@Masp		NVARCHAR(50)
+	@Masp		NVARCHAR(50),
+	@Ca			Int
+
   As
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
@@ -14,7 +16,9 @@ Create Procedure dbo.Danhsachketquainchitiet
 	FROM dbo.Ketquain
 	WHERE (Id = @Maketquain OR @Maketquain = '')
 		AND (Masanpham=@Masp OR @Masp='')
+		AND (Ca = @Ca OR @Ca = 0)
+
 
 GO
 
-Exec Danhsachketquainchitiet  '',''
+Exec Danhsachketquainchitiet  '','',0

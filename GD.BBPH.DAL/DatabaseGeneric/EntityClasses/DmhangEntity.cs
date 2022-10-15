@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 13, 2022 2:37:51 PM
+// Code is generated on: Friday, October 14, 2022 9:49:43 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -536,6 +536,21 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Rong", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dai", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Somauma", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sohinhma", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maloaimuc", fieldHashtable);
 		}
 		#endregion
 
@@ -725,7 +740,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Loaimuc property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Loaimuc"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Loaimuc
 		{
@@ -984,6 +999,61 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmhangFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)DmhangFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Rong property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Rong"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Rong
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Rong, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Rong, value); }
+		}
+
+		/// <summary> The Dai property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Dai"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dai
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Dai, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Dai, value); }
+		}
+
+		/// <summary> The Somauma property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Somauma"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Somauma
+		{
+			get { return (System.String)GetValue((int)DmhangFieldIndex.Somauma, true); }
+			set	{ SetValue((int)DmhangFieldIndex.Somauma, value); }
+		}
+
+		/// <summary> The Sohinhma property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Sohinhma"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Sohinhma
+		{
+			get { return (System.String)GetValue((int)DmhangFieldIndex.Sohinhma, true); }
+			set	{ SetValue((int)DmhangFieldIndex.Sohinhma, value); }
+		}
+
+		/// <summary> The Maloaimuc property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Maloaimuc"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maloaimuc
+		{
+			get { return (System.String)GetValue((int)DmhangFieldIndex.Maloaimuc, true); }
+			set	{ SetValue((int)DmhangFieldIndex.Maloaimuc, value); }
 		}
 
 

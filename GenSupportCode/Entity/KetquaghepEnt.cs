@@ -74,6 +74,9 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_Nguoitao.Text = _Rowview.Row[KetquaghepFields.Nguoitao.Name].ToString();
 					txt_Ngaysua.Text = _Rowview.Row[KetquaghepFields.Ngaysua.Name].ToString();
 					txt_Nguoisua.Text = _Rowview.Row[KetquaghepFields.Nguoisua.Name].ToString();
+					txt_Tensanpham.Text = _Rowview.Row[KetquaghepFields.Tensanpham.Name].ToString();
+					txt_Tenmay.Text = _Rowview.Row[KetquaghepFields.Tenmay.Name].ToString();
+					txt_Tencongnhan.Text = _Rowview.Row[KetquaghepFields.Tencongnhan.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Ketquaghep_CurrentChanged"); }
@@ -118,6 +121,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			_ketquaghepEntity.Nguoitao = txt_Nguoitao.Text.Trim();
 			_ketquaghepEntity.Ngaysua = txt_Ngaysua.Text.Trim();
 			_ketquaghepEntity.Nguoisua = txt_Nguoisua.Text.Trim();
+			_ketquaghepEntity.Tensanpham = txt_Tensanpham.Text.Trim();
+			_ketquaghepEntity.Tenmay = txt_Tenmay.Text.Trim();
+			_ketquaghepEntity.Tencongnhan = txt_Tencongnhan.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
 			{
@@ -164,6 +170,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_Ketquaghep.CurrentRow.Cells[KetquaghepFields.Nguoitao.Name].Value = _ketquaghepEntity.Nguoitao;
 				GRID_Ketquaghep.CurrentRow.Cells[KetquaghepFields.Ngaysua.Name].Value = _ketquaghepEntity.Ngaysua;
 				GRID_Ketquaghep.CurrentRow.Cells[KetquaghepFields.Nguoisua.Name].Value = _ketquaghepEntity.Nguoisua;
+				GRID_Ketquaghep.CurrentRow.Cells[KetquaghepFields.Tensanpham.Name].Value = _ketquaghepEntity.Tensanpham;
+				GRID_Ketquaghep.CurrentRow.Cells[KetquaghepFields.Tenmay.Name].Value = _ketquaghepEntity.Tenmay;
+				GRID_Ketquaghep.CurrentRow.Cells[KetquaghepFields.Tencongnhan.Name].Value = _ketquaghepEntity.Tencongnhan;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquaghepManager.Convert(_ketquaghepEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_Ketquaghep_PK;

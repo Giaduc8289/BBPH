@@ -300,6 +300,46 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMKHO = value; }
         }
         #endregion
+
+        #region SODUMANG
+        private static DataTable _DT_SODUMANG = null;
+        public static DataTable DT_SODUMANG
+        {
+            get
+            {
+                _DT_SODUMANG = new SodumangManager().SelectAllRDT();
+                return _DT_SODUMANG;
+            }
+            set { _DT_SODUMANG = value; }
+        }
+        #endregion
+
+        #region SODUSANPHAM
+        private static DataTable _DT_SODUSANPHAM = null;
+        public static DataTable DT_SODUSANPHAM
+        {
+            get
+            {
+                _DT_SODUSANPHAM = new SodumangManager().SelectAllRDT();
+                return _DT_SODUSANPHAM;
+            }
+            set { _DT_SODUSANPHAM = value; }
+        }
+        #endregion
+
+        #region SODUNGUYENLIEU
+        private static DataTable _DT_SODUNGUYENLIEU = null;
+        public static DataTable DT_SODUNGUYENLIEU
+        {
+            get
+            {
+                _DT_SODUNGUYENLIEU = new SodumangManager().SelectAllRDT();
+                return _DT_SODUNGUYENLIEU;
+            }
+            set { _DT_SODUNGUYENLIEU = value; }
+        }
+        #endregion
+
         #region DMLYDONHAPXUAT
         private static DataTable _DT_DMLYDONHAPXUAT = null;
         public static DataTable DT_DMLYDONHAPXUAT
@@ -323,6 +363,19 @@ namespace GD.BBPH.APP.LIB
                 return _DT_DMCONGNHAN;
             }
             set { _DT_DMCONGNHAN = value; }
+        }
+        #endregion
+
+        #region DMCHUNGLOAI
+        private static DataTable _DT_DMCHUNGLOAI = null;
+        public static DataTable DT_DMCHUNGLOAI
+        {
+            get
+            {
+                _DT_DMCHUNGLOAI = new DmchungloaiManager().SelectAllRDT();
+                return _DT_DMCHUNGLOAI;
+            }
+            set { _DT_DMCHUNGLOAI = value; }
         }
         #endregion
 
@@ -487,6 +540,19 @@ namespace GD.BBPH.APP.LIB
                 return _DT_KQTHOI;
             }
             set { _DT_KQTHOI = value; }
+        }
+        #endregion
+
+        #region KQCHIA
+        private static DataTable _DT_KQCHIA = null;
+        public static DataTable DT_KQCHIA
+        {
+            get
+            {
+                _DT_KQCHIA = new KetquachiaManager().SelectAllRDT();
+                return _DT_KQCHIA;
+            }
+            set { _DT_KQCHIA = value; }
         }
         #endregion
 

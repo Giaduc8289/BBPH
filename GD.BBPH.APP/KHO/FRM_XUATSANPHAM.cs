@@ -111,6 +111,8 @@ namespace GD.BBPH.APP.KHO
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_XUATSANPHAM.xml", GRID_XUATSANPHAM, uiPanel0Container);
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_XUATSANPHAMCHITIET.xml", GRID_XUATSANPHAMCHITIET, pne_CHITIET);
+            GRID_XUATSANPHAMCHITIET.DeletingRecord += GRID_XUATSANPHAMCHITIET_DeletingRecord;
+
             //GRID_XUATSANPHAM.RootTable.Groups.Add(GRID_XUATSANPHAM.Tables[0].Columns[XuatkhosanphamFields.Phongban.Name]);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_XUATSANPHAM);
@@ -270,6 +272,11 @@ namespace GD.BBPH.APP.KHO
             }
             //Tinhtong();
         }
+        private void GRID_XUATSANPHAMCHITIET_DeletingRecord(object sender, RowActionCancelEventArgs e)
+        {
+            btn_XOADONG_Click(new object(), new EventArgs());
+        }
+
         #endregion
 
 
@@ -297,6 +304,26 @@ namespace GD.BBPH.APP.KHO
                 _xuatkhosanphamEntity.Lenhsx = _view.Row[XuatkhosanphamFields.Lenhsx.Name].ToString();
                 _xuatkhosanphamEntity.Sophieugiao = _view.Row[XuatkhosanphamFields.Sophieugiao.Name].ToString();
                 _xuatkhosanphamEntity.Madonhang = _view.Row[XuatkhosanphamFields.Madonhang.Name].ToString();
+
+                try { _xuatkhosanphamEntity.Id = Convert.ToInt64(_view[XuatkhosanphamFields.Id.Name].ToString()); }
+                catch { }
+
+                _xuatkhosanphamEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_xuatkhosanphamEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new XuatkhosanphamManager()).SelectById(_xuatkhosanphamEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _xuatkhosanphamEntity.Ngaysua = DateTime.Now;
+                        _xuatkhosanphamEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _xuatkhosanphamEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _xuatkhosanphamEntity.Ngaytao = DateTime.Now;
+                        _xuatkhosanphamEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
 
                 if (!string.IsNullOrEmpty(_xuatkhosanphamEntity.Masanpham))
                     _XuatkhosanphamEntityCol.Add(_xuatkhosanphamEntity);

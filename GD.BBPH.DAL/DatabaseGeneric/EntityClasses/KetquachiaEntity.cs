@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 13, 2022 2:37:52 PM
+// Code is generated on: Friday, October 14, 2022 9:49:43 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -658,11 +658,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Dauraghep property of the Entity Ketquachia<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquachia"."Dauraghep"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Dauraghep
+		public virtual Nullable<System.Decimal> Dauraghep
 		{
-			get { return (System.String)GetValue((int)KetquachiaFieldIndex.Dauraghep, true); }
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquachiaFieldIndex.Dauraghep, false); }
 			set	{ SetValue((int)KetquachiaFieldIndex.Dauraghep, value); }
 		}
 

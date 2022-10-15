@@ -111,6 +111,8 @@ namespace GD.BBPH.APP.KHO
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_NHAPMANG.xml", GRID_NHAPMANG, uiPanel0Container);
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_NHAPMANGCHITIET.xml", GRID_NHAPMANGCHITIET, pne_CHITIET);
+            GRID_NHAPMANGCHITIET.DeletingRecord += GRID_NHAPMANGCHITIET_DeletingRecord;
+
             //GRID_NHAPMANG.RootTable.Groups.Add(GRID_NHAPMANG.Tables[0].Columns[NhapkhomangFields.Phongban.Name]);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_NHAPMANG);
@@ -266,6 +268,13 @@ namespace GD.BBPH.APP.KHO
             }
             //Tinhtong();
         }
+
+        private void GRID_NHAPMANGCHITIET_DeletingRecord(object sender, RowActionCancelEventArgs e)
+        {
+            btn_XOADONG_Click(new object(), new EventArgs());
+        }
+
+
         #endregion
 
 
@@ -292,6 +301,28 @@ namespace GD.BBPH.APP.KHO
                 _nhapkhomangEntity.Tenlydo = _view.Row[NhapkhomangFields.Tenlydo.Name].ToString();
                 _nhapkhomangEntity.Lenhsx = _view.Row[NhapkhomangFields.Lenhsx.Name].ToString();
                 _nhapkhomangEntity.Sohopdongmua = _view.Row[NhapkhomangFields.Sohopdongmua.Name].ToString();
+
+                #region xét isnew
+                try { _nhapkhomangEntity.Id = Convert.ToInt64(_view[NhapkhomangFields.Id.Name].ToString()); }
+                catch { }
+
+                _nhapkhomangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_nhapkhomangEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new NhapkhomangManager()).SelectById(_nhapkhomangEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _nhapkhomangEntity.Ngaysua = DateTime.Now;
+                        _nhapkhomangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _nhapkhomangEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _nhapkhomangEntity.Ngaytao = DateTime.Now;
+                        _nhapkhomangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+                #endregion
 
                 if (!string.IsNullOrEmpty(_nhapkhomangEntity.Mamang))
                     _NhapkhomangEntityCol.Add(_nhapkhomangEntity);

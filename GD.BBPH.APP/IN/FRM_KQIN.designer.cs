@@ -86,6 +86,8 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
+            this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -143,6 +145,8 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.btn_XOADONG);
+            this.uiPanel1Container.Controls.Add(this.btn_THEMDONG);
             this.uiPanel1Container.Controls.Add(this.txt_M2SAIHONGTT);
             this.uiPanel1Container.Controls.Add(this.txt_PHESX);
             this.uiPanel1Container.Controls.Add(this.label16);
@@ -212,7 +216,7 @@
             this.txt_M2SAIHONGTT.Name = "txt_M2SAIHONGTT";
             this.txt_M2SAIHONGTT.Regular_Expression = null;
             this.txt_M2SAIHONGTT.Size = new System.Drawing.Size(101, 20);
-            this.txt_M2SAIHONGTT.TabIndex = 18;
+            this.txt_M2SAIHONGTT.TabIndex = 15;
             // 
             // txt_PHESX
             // 
@@ -226,7 +230,7 @@
             this.txt_PHESX.Name = "txt_PHESX";
             this.txt_PHESX.Regular_Expression = null;
             this.txt_PHESX.Size = new System.Drawing.Size(101, 20);
-            this.txt_PHESX.TabIndex = 16;
+            this.txt_PHESX.TabIndex = 13;
             // 
             // label16
             // 
@@ -249,7 +253,7 @@
             this.txt_SAIHONGTHUCTE.Name = "txt_SAIHONGTHUCTE";
             this.txt_SAIHONGTHUCTE.Regular_Expression = null;
             this.txt_SAIHONGTHUCTE.Size = new System.Drawing.Size(110, 20);
-            this.txt_SAIHONGTHUCTE.TabIndex = 14;
+            this.txt_SAIHONGTHUCTE.TabIndex = 11;
             // 
             // txt_TONGM2DM
             // 
@@ -263,7 +267,7 @@
             this.txt_TONGM2DM.Name = "txt_TONGM2DM";
             this.txt_TONGM2DM.Regular_Expression = null;
             this.txt_TONGM2DM.Size = new System.Drawing.Size(107, 20);
-            this.txt_TONGM2DM.TabIndex = 17;
+            this.txt_TONGM2DM.TabIndex = 14;
             // 
             // label20
             // 
@@ -304,7 +308,7 @@
             this.txt_PHENCC.Name = "txt_PHENCC";
             this.txt_PHENCC.Regular_Expression = null;
             this.txt_PHENCC.Size = new System.Drawing.Size(107, 20);
-            this.txt_PHENCC.TabIndex = 15;
+            this.txt_PHENCC.TabIndex = 12;
             // 
             // label11
             // 
@@ -378,11 +382,11 @@
             this.pne_CHITIET.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_CHITIET.Location = new System.Drawing.Point(8, 346);
+            this.pne_CHITIET.Location = new System.Drawing.Point(8, 381);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(830, 130);
-            this.pne_CHITIET.TabIndex = 192;
+            this.pne_CHITIET.Size = new System.Drawing.Size(830, 95);
+            this.pne_CHITIET.TabIndex = 22;
             // 
             // txt_THOIGIANSUCO
             // 
@@ -396,7 +400,7 @@
             this.txt_THOIGIANSUCO.Name = "txt_THOIGIANSUCO";
             this.txt_THOIGIANSUCO.Regular_Expression = null;
             this.txt_THOIGIANSUCO.Size = new System.Drawing.Size(101, 20);
-            this.txt_THOIGIANSUCO.TabIndex = 22;
+            this.txt_THOIGIANSUCO.TabIndex = 19;
             // 
             // label14
             // 
@@ -419,7 +423,7 @@
             this.txt_THOIGIANCHUANBI.Name = "txt_THOIGIANCHUANBI";
             this.txt_THOIGIANCHUANBI.Regular_Expression = null;
             this.txt_THOIGIANCHUANBI.Size = new System.Drawing.Size(107, 20);
-            this.txt_THOIGIANCHUANBI.TabIndex = 21;
+            this.txt_THOIGIANCHUANBI.TabIndex = 18;
             // 
             // label15
             // 
@@ -442,7 +446,7 @@
             this.txt_THOIGIANKETTHUC.Name = "txt_THOIGIANKETTHUC";
             this.txt_THOIGIANKETTHUC.Regular_Expression = null;
             this.txt_THOIGIANKETTHUC.Size = new System.Drawing.Size(101, 20);
-            this.txt_THOIGIANKETTHUC.TabIndex = 20;
+            this.txt_THOIGIANKETTHUC.TabIndex = 17;
             // 
             // label12
             // 
@@ -466,7 +470,7 @@
             this.txt_THOIGIANBATDAU.Name = "txt_THOIGIANBATDAU";
             this.txt_THOIGIANBATDAU.Regular_Expression = null;
             this.txt_THOIGIANBATDAU.Size = new System.Drawing.Size(107, 20);
-            this.txt_THOIGIANBATDAU.TabIndex = 19;
+            this.txt_THOIGIANBATDAU.TabIndex = 16;
             // 
             // label13
             // 
@@ -489,7 +493,7 @@
             this.txt_SOKGIN.Name = "txt_SOKGIN";
             this.txt_SOKGIN.Regular_Expression = null;
             this.txt_SOKGIN.Size = new System.Drawing.Size(101, 20);
-            this.txt_SOKGIN.TabIndex = 13;
+            this.txt_SOKGIN.TabIndex = 10;
             // 
             // label8
             // 
@@ -513,7 +517,7 @@
             this.txt_THUCTEIN.Name = "txt_THUCTEIN";
             this.txt_THUCTEIN.Regular_Expression = null;
             this.txt_THUCTEIN.Size = new System.Drawing.Size(107, 20);
-            this.txt_THUCTEIN.TabIndex = 12;
+            this.txt_THUCTEIN.TabIndex = 9;
             // 
             // label9
             // 
@@ -536,7 +540,7 @@
             this.txt_SOKGCAP.Name = "txt_SOKGCAP";
             this.txt_SOKGCAP.Regular_Expression = null;
             this.txt_SOKGCAP.Size = new System.Drawing.Size(110, 20);
-            this.txt_SOKGCAP.TabIndex = 11;
+            this.txt_SOKGCAP.TabIndex = 8;
             // 
             // label7
             // 
@@ -559,7 +563,7 @@
             this.txt_SOMCAP.Name = "txt_SOMCAP";
             this.txt_SOMCAP.Regular_Expression = null;
             this.txt_SOMCAP.Size = new System.Drawing.Size(101, 20);
-            this.txt_SOMCAP.TabIndex = 10;
+            this.txt_SOMCAP.TabIndex = 7;
             // 
             // label5
             // 
@@ -583,7 +587,7 @@
             this.txt_SOMLSX.Name = "txt_SOMLSX";
             this.txt_SOMLSX.Regular_Expression = null;
             this.txt_SOMLSX.Size = new System.Drawing.Size(107, 20);
-            this.txt_SOMLSX.TabIndex = 9;
+            this.txt_SOMLSX.TabIndex = 6;
             // 
             // label6
             // 
@@ -606,7 +610,7 @@
             this.txt_MACONGNHAN.Name = "txt_MACONGNHAN";
             this.txt_MACONGNHAN.Regular_Expression = null;
             this.txt_MACONGNHAN.Size = new System.Drawing.Size(143, 20);
-            this.txt_MACONGNHAN.TabIndex = 5;
+            this.txt_MACONGNHAN.TabIndex = 4;
             this.txt_MACONGNHAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACONGNHAN_Validating);
             // 
             // label3
@@ -630,7 +634,7 @@
             this.txt_MASP.Name = "txt_MASP";
             this.txt_MASP.Regular_Expression = null;
             this.txt_MASP.Size = new System.Drawing.Size(143, 20);
-            this.txt_MASP.TabIndex = 7;
+            this.txt_MASP.TabIndex = 5;
             this.txt_MASP.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASP_Validating);
             // 
             // label4
@@ -780,7 +784,7 @@
             this.txt_LENHIN.Name = "txt_LENHIN";
             this.txt_LENHIN.Regular_Expression = null;
             this.txt_LENHIN.Size = new System.Drawing.Size(174, 20);
-            this.txt_LENHIN.TabIndex = 4;
+            this.txt_LENHIN.TabIndex = 3;
             // 
             // label21
             // 
@@ -814,6 +818,34 @@
             this.label22.Size = new System.Drawing.Size(44, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã máy";
+            // 
+            // btn_XOADONG
+            // 
+            this.btn_XOADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_XOADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_XOADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_XOADONG.Enabled = false;
+            this.btn_XOADONG.Location = new System.Drawing.Point(117, 343);
+            this.btn_XOADONG.Name = "btn_XOADONG";
+            this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_XOADONG.TabIndex = 21;
+            this.btn_XOADONG.Text = "Xóa dòng";
+            this.btn_XOADONG.UseVisualStyleBackColor = true;
+            this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
+            // 
+            // btn_THEMDONG
+            // 
+            this.btn_THEMDONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_THEMDONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_THEMDONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_THEMDONG.Enabled = false;
+            this.btn_THEMDONG.Location = new System.Drawing.Point(15, 343);
+            this.btn_THEMDONG.Name = "btn_THEMDONG";
+            this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_THEMDONG.TabIndex = 20;
+            this.btn_THEMDONG.Text = "Thêm dòng";
+            this.btn_THEMDONG.UseVisualStyleBackColor = true;
+            this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
             // 
             // FRM_KQIN
             // 
@@ -896,5 +928,7 @@
         private CONTROL.LABEL label19;
         private CONTROL.TEXTBOX txt_PHENCC;
         private CONTROL.LABEL label11;
+        private CONTROL.BUTTON btn_XOADONG;
+        private CONTROL.BUTTON btn_THEMDONG;
     }
 }

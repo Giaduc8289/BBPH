@@ -27,5 +27,23 @@ namespace GD.BBPH.BLL
 		{
 			// Nothing for now.
 		}
-	}
+
+        public DataTable SelectByNgaykiemkhoRDT(System.DateTime Ngaykiemke, System.String Makho)
+        {
+            DataTable toReturn = new DataTable();
+            EntityCollection _SodunguyenlieuCollection = new EntityCollection(new SodunguyenlieuEntityFactory());
+            RelationPredicateBucket filter = new RelationPredicateBucket();
+
+            IPredicateExpression _PredicateExpression = new PredicateExpression();
+            _PredicateExpression.Add(SodunguyenlieuFields.Ngaykiemke == Ngaykiemke);
+            _PredicateExpression.Add(SodunguyenlieuFields.Makho == Makho);
+            filter.PredicateExpression.Add(_PredicateExpression);
+
+            using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+            {
+                adapter.FetchTypedList(_SodunguyenlieuCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+            }
+            return toReturn;
+        }
+    }
 }

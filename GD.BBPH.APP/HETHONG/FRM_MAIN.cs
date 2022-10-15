@@ -658,6 +658,15 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMKHACH()), mmru.Text);
                     break;
 
+                case "FRM_DMCHUNGLOAI":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMCHUNGLOAI") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMCHUNGLOAI()), mmru.Text);
+                    break;
+
+
                 case "FRM_CTPTMANG":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -895,6 +904,14 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_NHAPSANPHAM()), mmru.Text);
                     break;
 
+                case "FRM_KIEMKESANPHAM":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KIEMKESANPHAM") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_KIEMKESANPHAM()), mmru.Text);
+                    break;
+
                 case "FRM_XUATSANPHAM":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -911,12 +928,28 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_NHAPMANG()), mmru.Text);
                     break;
 
+                case "FRM_KIEMKEMANG":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KIEMKEMANG") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_KIEMKEMANG()), mmru.Text);
+                    break;
+
                 case "FRM_NHAPKHONGUYENLIEU":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
                         if (frm.Name == "FRM_NHAPKHONGUYENLIEU") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_NHAPKHONGUYENLIEU()), mmru.Text);
+                    break;
+
+                case "FRM_KIEMKENGUYENLIEU":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KIEMKENGUYENLIEU") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_KIEMKENGUYENLIEU()), mmru.Text);
                     break;
                 #endregion
 
