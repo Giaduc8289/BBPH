@@ -889,6 +889,13 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Chia
+                case "FRM_KQCHIA":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KQCHIA") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.CHIA.FRM_KQCHIA()), mmru.Text);
+                    break;
                 #endregion
 
                 #region Hoàn thiện

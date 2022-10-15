@@ -31,9 +31,9 @@ namespace GD.BBPH.APP.CHIA
         private GD.BBPH.CONTROL.JGridEX GRID_KQCHIA = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_KQCHIACHITIET = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET="";
-        private string MAMANG = "", CA= "0";
+        private string MASP = "", CA= "0";
 
-        private DataTable DT_DMMAY = new DataTable(), DT_LENHTHOI = new DataTable(), DT_DMMANG = new DataTable(), DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable();
+        private DataTable DT_DMMAY = new DataTable(), DT_LENHTHOI = new DataTable(), DT_DMHANG = new DataTable(), DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable();
 
         //private DataTable DT_DMPHONGBAN = new DataTable();
 
@@ -62,7 +62,7 @@ namespace GD.BBPH.APP.CHIA
 
                         //DT_DMPHONGBAN = LIB.SESSION_START.DT_DMPHONGBAN;
                         DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
-                        DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
+                        DT_DMHANG = LIB.SESSION_START.DM_HANG;
                         DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
                     }
                 };
@@ -101,9 +101,9 @@ namespace GD.BBPH.APP.CHIA
             DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
             InitializeComponent();
             KetquachiaManager _KetquachiaManager = new KetquachiaManager();
-            DataTable dt111 = LIB.Procedures.Danhsachketquachia(Ngaydauthang, Ngaycuoithang, Convert.ToInt32(CA), MAMANG);
+            DataTable dt111 = LIB.Procedures.Danhsachketquachia(Ngaydauthang, Ngaycuoithang, Convert.ToInt32(CA), MASP);
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQCHIA.xml");
-            dt111 = LIB.Procedures.Danhsachketquachiachitiet(MAHIEU_PK, Convert.ToInt32(CA), MAMANG);
+            dt111 = LIB.Procedures.Danhsachketquachiachitiet(MAHIEU_PK, Convert.ToInt32(CA), MASP);
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQCHIACHITIET.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
@@ -165,30 +165,34 @@ namespace GD.BBPH.APP.CHIA
                         MACHITIET = _Rowview.Row[KetquachiaFields.Id.Name].ToString();
 
                     txt_LENH.Text = _Rowview.Row[KetquachiaFields.Lenh.Name].ToString();
+                    txt_MAMAY.Text = _Rowview.Row[KetquachiaFields.Mamay.Name].ToString();
+                    txt_MAMAY_Validating(new object(), new CancelEventArgs());
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquachiaFields.Macongnhan.Name].ToString();
                     txt_MACONGNHAN_Validating(new object(), new CancelEventArgs());
                     txt_MASANPHAM.Text = _Rowview.Row[KetquachiaFields.Masanpham.Name].ToString();
-                    txt_MAMANG_Validating(new object(), new CancelEventArgs());
+                    txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
+
                     txt_SOMVAO.Text = _Rowview.Row[KetquachiaFields.Sometvao.Name].ToString();
                     txt_SOKGVAO.Text = _Rowview.Row[KetquachiaFields.Sokgvao.Name].ToString();
                     txt_DAURAGHEP.Text = _Rowview.Row[KetquachiaFields.Dauraghep.Name].ToString();
                     txt_SOCON.Text = _Rowview.Row[KetquachiaFields.Socon.Name].ToString();
+
+                    txt_THOIGIANCATDAU.Text = _Rowview.Row[KetquachiaFields.Thoigiancatdau.Name].ToString();
                     txt_THOIGIANBATDAU.Text = _Rowview.Row[KetquachiaFields.Thoigianbatdau.Name].ToString();
                     txt_THOIGIANKETTHUC.Text = _Rowview.Row[KetquachiaFields.Thoigianketthuc.Name].ToString();
-                    txt_THOIGIANDOILENH.Text = _Rowview.Row[KetquachiaFields.Thoigianhacuon.Name].ToString();
+                    txt_THOIGIANDOILENH.Text = _Rowview.Row[KetquachiaFields.Thoigiandoilenh.Name].ToString();
+                    txt_SOLANHACUON.Text = _Rowview.Row[KetquachiaFields.Solanhacuon.Name].ToString();
+                    txt_THOIGIANLENCUON.Text = _Rowview.Row[KetquachiaFields.Thoigianlencuon.Name].ToString();
+                    txt_THOIGIANHACUON.Text = _Rowview.Row[KetquachiaFields.Thoigianhacuon.Name].ToString();
                     txt_THOIGIANSUCO.Text = _Rowview.Row[KetquachiaFields.Thoigiansuco.Name].ToString();
 
-                    ////txt_Socon.Text = _Rowview.Row[KetquachiaFields.Socon.Name].ToString();
-                    ////txt_Thoigianlencuon.Text = _Rowview.Row[KetquachiaFields.Thoigianlencuon.Name].ToString();
-                    ////txt_Thoigianhacuon.Text = _Rowview.Row[KetquachiaFields.Thoigianhacuon.Name].ToString();
-                    ////txt_Solanhacuon.Text = _Rowview.Row[KetquachiaFields.Solanhacuon.Name].ToString();
-                    ////txt_Thoigiancatdau.Text = _Rowview.Row[KetquachiaFields.Thoigiancatdau.Name].ToString();
-                    //txt_Thoigiandoilenh.Text = _Rowview.Row[KetquachiaFields.Thoigiandoilenh.Name].ToString();
-                    //txt_Phein.Text = _Rowview.Row[KetquachiaFields.Phein.Name].ToString();
-                    //txt_Pheghep.Text = _Rowview.Row[KetquachiaFields.Pheghep.Name].ToString();
-                    //txt_Phechia.Text = _Rowview.Row[KetquachiaFields.Phechia.Name].ToString();
-                    //txt_PhethoiNcc.Text = _Rowview.Row[KetquachiaFields.PhethoiNcc.Name].ToString();
-                    //txt_Phesx.Text = _Rowview.Row[KetquachiaFields.Phesx.Name].ToString();
+                    txt_PHEIN.Text = _Rowview.Row[KetquachiaFields.Phein.Name].ToString();
+                    txt_PHEGHEP.Text = _Rowview.Row[KetquachiaFields.Pheghep.Name].ToString();
+                    txt_PHECHIA.Text = _Rowview.Row[KetquachiaFields.Phechia.Name].ToString();
+                    txt_PHETHOI.Text = _Rowview.Row[KetquachiaFields.PhethoiNcc.Name].ToString();
+                    txt_PHESANXUAT.Text = _Rowview.Row[KetquachiaFields.Phesx.Name].ToString();
+
+
 
 
 
@@ -226,26 +230,52 @@ namespace GD.BBPH.APP.CHIA
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
             DataRow r_Detail = DT_KQCHIA_CHITIET_FILL.NewRow();
-            //r_Detail[KetquachiaFields.Lenhthoi.Name] = txt_LENHTHOI.Text;
+            r_Detail[KetquachiaFields.Lenh.Name] = txt_LENH.Text;
             r_Detail[KetquachiaFields.Macongnhan.Name] = txt_MACONGNHAN.Text;
             r_Detail[KetquachiaFields.Tencongnhan.Name] = txt_TENCONGNHAN.Text;
-            //r_Detail[KetquachiaFields.Mamang.Name] = txt_MAMANG.Text;
-            //r_Detail[KetquachiaFields.Tenmang.Name] = txt_TENMANG.Text;
-            //try { r_Detail[KetquachiaFields.Sokgquydoi.Name] = LIB.ConvertString.NumbertoDB(txt_SOKGQUYDOI.Text.Trim()); }
-            //catch { }
-            //try { r_Detail[KetquachiaFields.Somet.Name] = LIB.ConvertString.NumbertoDB(txt_SOM.Text.Trim()); }
-            //catch { }
-            //try { r_Detail[KetquachiaFields.Sokg.Name] = LIB.ConvertString.NumbertoDB(txt_SOKG.Text.Trim()); }
-            //catch { }
-            //try { r_Detail[KetquachiaFields.Chenhlechkg.Name] = LIB.ConvertString.NumbertoDB(txt_CHENHLECHKG.Text.Trim()); }
-            //catch { }
+            r_Detail[KetquachiaFields.Masanpham.Name] = txt_MASANPHAM.Text;
+            r_Detail[KetquachiaFields.Tensanpham.Name] = txt_TENSANPHAM.Text;
+            r_Detail[KetquachiaFields.Mamay.Name] = txt_MAMAY.Text;
+            r_Detail[KetquachiaFields.Tenmay.Name] = txt_TENMAY.Text;
+            try { r_Detail[KetquachiaFields.Ca.Name] = LIB.ConvertString.NumbertoDB(txt_CA.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Sometvao.Name] = LIB.ConvertString.NumbertoDB(txt_SOMVAO.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Sokgvao.Name] = LIB.ConvertString.NumbertoDB(txt_SOKGVAO.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Socon.Name] = LIB.ConvertString.NumbertoDB(txt_SOCON.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Dauraghep.Name] = LIB.ConvertString.NumbertoDB(txt_DAURAGHEP.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Thoigiancatdau.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANCATDAU.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Thoigiandoilenh.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANDOILENH.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Solanhacuon.Name] = LIB.ConvertString.NumbertoDB(txt_SOLANHACUON.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Thoigianlencuon.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANLENCUON.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Thoigianhacuon.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANHACUON.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Phein.Name] = LIB.ConvertString.NumbertoDB(txt_PHEIN.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Pheghep.Name] = LIB.ConvertString.NumbertoDB(txt_PHEGHEP.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Phechia.Name] = LIB.ConvertString.NumbertoDB(txt_PHECHIA.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.PhethoiNcc.Name] = LIB.ConvertString.NumbertoDB(txt_PHETHOI.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Phesx.Name] = LIB.ConvertString.NumbertoDB(txt_PHESANXUAT.Text.Trim()); }
+            catch { }
             //r_Detail[KetquachiaFields.Chatluong.Name] = txt_CHATLUONG.Text;
             //r_Detail[KetquachiaFields.Phelieuthucte.Name] = txt_PHELIEUTHUCTE.Text;
             //r_Detail[KetquachiaFields.Tongsp.Name] = txt_TONGSP.Text;
             r_Detail[KetquachiaFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text;
             r_Detail[KetquachiaFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text;
             //r_Detail[KetquachiaFields.Thoigianchuanbi.Name] = txt_THOIGIANCHUANBI.Text;
-            r_Detail[KetquachiaFields.Thoigiansuco.Name] = txt_THOIGIANSUCO.Text;
+            //r_Detail[KetquachiaFields.Thoigiansuco.Name] = txt_THOIGIANSUCO.Text;
             //try { r_Detail[KetquachiaFields.Sokgdukiendat.Name] = LIB.ConvertString.NumbertoDB(txt_SOKGDUKIEN.Text.Trim()); }
             //catch { }
         
@@ -317,23 +347,32 @@ namespace GD.BBPH.APP.CHIA
                 _ketquachiaEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
                 _ketquachiaEntity.Mamay = txt_MAMAY.Text.Trim();
                 _ketquachiaEntity.Tenmay = txt_TENMAY.Text.Trim();
-                //_ketquachiaEntity.Lenhthoi = _view.Row[KetquachiaFields.Lenhthoi.Name].ToString();
+                _ketquachiaEntity.Lenh = _view.Row[KetquachiaFields.Lenh.Name].ToString();
                 _ketquachiaEntity.Macongnhan = _view.Row[KetquachiaFields.Macongnhan.Name].ToString();
                 _ketquachiaEntity.Tencongnhan = _view.Row[KetquachiaFields.Tencongnhan.Name].ToString();
-                //_ketquachiaEntity.Mamang = _view.Row[KetquachiaFields.Mamang.Name].ToString();
-                //_ketquachiaEntity.Tenmang = _view.Row[KetquachiaFields.Tenmang.Name].ToString();
-                //_ketquachiaEntity.Somet = Convert.ToDecimal(_view.Row[KetquachiaFields.Somet.Name].ToString());
-                //_ketquachiaEntity.Sokg = Convert.ToDecimal(_view.Row[KetquachiaFields.Sokg.Name].ToString());
-                //_ketquachiaEntity.Sokgquydoi = Convert.ToDecimal(_view.Row[KetquachiaFields.Sokgquydoi.Name].ToString());
-                //_ketquachiaEntity.Chenhlechkg = Convert.ToDecimal(_view.Row[KetquachiaFields.Chenhlechkg.Name].ToString());
+                _ketquachiaEntity.Masanpham = _view.Row[KetquachiaFields.Masanpham.Name].ToString();
+                _ketquachiaEntity.Tensanpham = _view.Row[KetquachiaFields.Tensanpham.Name].ToString();
+                _ketquachiaEntity.Sometvao = Convert.ToDecimal(_view.Row[KetquachiaFields.Sometvao.Name].ToString());
+                _ketquachiaEntity.Sokgvao = Convert.ToDecimal(_view.Row[KetquachiaFields.Sokgvao.Name].ToString());
+                _ketquachiaEntity.Socon = Convert.ToInt32(_view.Row[KetquachiaFields.Socon.Name].ToString());
+                _ketquachiaEntity.Dauraghep = Convert.ToDecimal(_view.Row[KetquachiaFields.Dauraghep.Name].ToString());
                 //_ketquachiaEntity.Chatluong = _view.Row[KetquachiaFields.Chatluong.Name].ToString();
                 //_ketquachiaEntity.Phelieuthucte = Convert.ToDecimal(_view.Row[KetquachiaFields.Phelieuthucte.Name].ToString());
                 //_ketquachiaEntity.Tongsp = Convert.ToDecimal(_view.Row[KetquachiaFields.Tongsp.Name].ToString());
+                _ketquachiaEntity.Thoigiancatdau = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigiancatdau.Name].ToString());
                 _ketquachiaEntity.Thoigianbatdau = Convert.ToDateTime(_view.Row[KetquachiaFields.Thoigianbatdau.Name].ToString());
                 _ketquachiaEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquachiaFields.Thoigianketthuc.Name].ToString());
-                //_ketquachiaEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigianchuanbi.Name].ToString());
-                //_ketquachiaEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigiansuco.Name].ToString());
+                _ketquachiaEntity.Thoigiandoilenh = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigiandoilenh.Name].ToString());
+                _ketquachiaEntity.Solanhacuon = Convert.ToInt32(_view.Row[KetquachiaFields.Solanhacuon.Name].ToString());
+                _ketquachiaEntity.Thoigianlencuon = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigianlencuon.Name].ToString());
+                _ketquachiaEntity.Thoigianhacuon = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigianhacuon.Name].ToString());
+                _ketquachiaEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigiansuco.Name].ToString());
                 //_ketquachiaEntity.Sokgdukiendat = Convert.ToDecimal(_view.Row[KetquachiaFields.Sokgdukiendat.Name].ToString());
+                _ketquachiaEntity.Phein = Convert.ToDecimal(_view.Row[KetquachiaFields.Phein.Name].ToString());
+                _ketquachiaEntity.Pheghep = Convert.ToDecimal(_view.Row[KetquachiaFields.Pheghep.Name].ToString());
+                _ketquachiaEntity.Phechia = Convert.ToDecimal(_view.Row[KetquachiaFields.Phechia.Name].ToString());
+                _ketquachiaEntity.PhethoiNcc = Convert.ToDecimal(_view.Row[KetquachiaFields.PhethoiNcc.Name].ToString());
+                _ketquachiaEntity.Phesx = Convert.ToDecimal(_view.Row[KetquachiaFields.Phesx.Name].ToString());
 
                 if (!string.IsNullOrEmpty(_ketquachiaEntity.Masanpham))
                     _KetquachiaEntityCol.Add(_ketquachiaEntity);
@@ -353,6 +392,8 @@ namespace GD.BBPH.APP.CHIA
             GRID_KQCHIA.CurrentRow.Cells[KetquachiaFields.Ngay.Name].Value = _ngayxuat;
             GRID_KQCHIA.CurrentRow.Cells[KetquachiaFields.Ca.Name].Value = txt_CA.Text.Trim();
             GRID_KQCHIA.CurrentRow.Cells[KetquachiaFields.Mamay.Name].Value = txt_MAMAY.Text.Trim();
+            GRID_KQCHIA.CurrentRow.Cells[KetquachiaFields.Masanpham.Name].Value = txt_MASANPHAM.Text.Trim();
+            GRID_KQCHIA.CurrentRow.Cells[KetquachiaFields.Tensanpham.Name].Value = txt_TENSANPHAM.Text.Trim();
 
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquachiaManager.Convert(_KetquachiaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
@@ -568,34 +609,34 @@ namespace GD.BBPH.APP.CHIA
         //}
 
 
-        private void txt_MAMANG_Validating(object sender, CancelEventArgs e)
+        private void txt_MASANPHAM_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_MASANPHAM.Text.Trim()) || DT_DMMANG == null || DT_DMMANG.Rows.Count == 0) return;
+            if (string.IsNullOrEmpty(txt_MASANPHAM.Text.Trim()) || DT_DMHANG == null || DT_DMHANG.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MASANPHAM.Text.Trim().ToUpper();
-            _RowViewSelect = checkmamang(Str_MASIEUTHI, DT_DMMANG);
+            _RowViewSelect = checksanpham(Str_MASIEUTHI, DT_DMHANG);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANG.xml",
-                        DT_DMMANG, DmmangFields.Mamang.Name, Str_MASIEUTHI);
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml",
+                        DT_DMHANG, DmhangFields.Masp.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MASANPHAM.Text = _RowViewSelect[DmmangFields.Mamang.Name].ToString();
-                txt_TENSANPHAM.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
 
             }
             else
             {
-                txt_TENSANPHAM.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
             }
         }
-        private DataRow checkmamang(string masieuthi, DataTable dt)
+        private DataRow checksanpham(string masieuthi, DataTable dt)
         {
             try
             {
-                return dt.Select(DmmangFields.Mamang.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+                return dt.Select(DmhangFields.Masp.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
         }
