@@ -543,6 +543,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region KQCHIA
+        private static DataTable _DT_KQCHIA = null;
+        public static DataTable DT_KQCHIA
+        {
+            get
+            {
+                _DT_KQCHIA = new KetquachiaManager().SelectAllRDT();
+                return _DT_KQCHIA;
+            }
+            set { _DT_KQCHIA = value; }
+        }
+        #endregion
+
         #region KQIN
         private static DataTable _DT_KQIN = null;
         public static DataTable DT_KQIN
@@ -662,6 +675,21 @@ namespace GD.BBPH.APP.LIB
                 return _DT_XUATNGUYENLIEU;
             }
             set { _DT_XUATNGUYENLIEU = value; }
+        }
+        #endregion
+        #endregion
+
+        #region Tua
+        #region KQTUA
+        private static DataTable _DT_TKKQTUA = null;
+        public static DataTable DT_TKKQTUA
+        {
+            get
+            {
+                _DT_TKKQTUA = new KetquatuaManager().SelectAllRDT();
+                return _DT_TKKQTUA;
+            }
+            set { _DT_TKKQTUA = value; }
         }
         #endregion
         #endregion

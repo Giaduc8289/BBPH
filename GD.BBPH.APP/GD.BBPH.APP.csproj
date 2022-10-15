@@ -159,6 +159,12 @@
     <Compile Include="BAOCAO\FRM_REPORTVIEWER.designer.cs">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
     </Compile>
+    <Compile Include="CHIA\FRM_KQCHIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHIA\FRM_KQCHIA.designer.cs">
+      <DependentUpon>FRM_KQCHIA.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMCHUNGLOAI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -484,6 +490,12 @@
     <Compile Include="THOI\FRM_TKNLTHOI.designer.cs">
       <DependentUpon>FRM_TKNLTHOI.cs</DependentUpon>
     </Compile>
+    <Compile Include="TUA\FRM_TKKQTUA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TUA\FRM_TKKQTUA.designer.cs">
+      <DependentUpon>FRM_TKKQTUA.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BANHANG\FRM_BAOGIA.resx">
       <DependentUpon>FRM_BAOGIA.cs</DependentUpon>
     </EmbeddedResource>
@@ -498,6 +510,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHIA\FRM_KQCHIA.resx">
+      <DependentUpon>FRM_KQCHIA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMCHUNGLOAI.resx">
       <DependentUpon>FRM_DMCHUNGLOAI.cs</DependentUpon>
@@ -916,6 +931,9 @@
     <EmbeddedResource Include="THOI\FRM_TKNLTHOI.resx">
       <DependentUpon>FRM_TKNLTHOI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TUA\FRM_TKKQTUA.resx">
+      <DependentUpon>FRM_TKKQTUA.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="RDLC\DataSXBB.xsc">
       <DependentUpon>DataSXBB.xsd</DependentUpon>
@@ -1151,7 +1169,6 @@
     <Content Include="XMLCONFIG\FRM_QCDONGKIEN.xml" />
     <Content Include="XMLCONFIG\FRM_QCMAYDAY.xml" />
     <Content Include="XMLCONFIG\FRM_QCGAP.xml" />
-    <Content Include="XMLCONFIG\FRM_DMQUYCACHSP.xml" />
     <Content Include="XMLCONFIG\FRM_DONGIACONGDOAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGDOAN.xml" />
     <Content Include="XMLCONFIG\FRM_DONDATHANG.xml" />
@@ -1220,7 +1237,6 @@
     <Content Include="XMLCONFIG\FRM_DMMAUSAC.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHAMAY.xml" />
     <Content Include="XMLCONFIG\FRM_DMPHONGBAN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMSOI.xml" />
     <Content Include="XMLCONFIG\FRM_DMTRONGLUONG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANGCHITIET.xml" />
@@ -1324,13 +1340,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CHIA\" />
     <Folder Include="GHEP\" />
     <Folder Include="HOANTHIEN\" />
     <Folder Include="LOC\" />
     <Folder Include="MUAHANG\" />
     <Folder Include="TINHGIA\" />
-    <Folder Include="TUA\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

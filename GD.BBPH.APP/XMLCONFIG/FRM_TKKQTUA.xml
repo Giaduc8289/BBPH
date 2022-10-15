@@ -29,82 +29,35 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
-
+  <viewgrid>
+    <value>1</value>
+    <name>Ngay</name>
+    <headerText>Ngày</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Ca</name>
+    <headerText>Ca</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Lenhtua</name>
+    <headerText>Lệnh tua</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
   <tablename>
-    <name>Mausac</name>
-    <headerText>Danh sách quy cách sản phẩm</headerText>
+    <name>tablename</name>
+    <headerText>Danh sách tendanhsach</headerText>
   </tablename>
-
-  <viewgrid>
-    <value>1</value>
-    <name>Mahieu</name>
-    <headerText>Mã quy cách</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>80</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tenhieu</name>
-    <headerText>Tên quy cách</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>120</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-    <viewgrid>
-    <value>1</value>
-    <name>Maquycachcha</name>
-    <headerText>Quy cách cha</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>80</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
- <viewgrid>
-    <value>2</value>
-    <name>Macongdoan</name>
-    <headerText>Mã công đoạn</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>60</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tencongdoan</name>
-    <headerText>Công đoạn</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>80</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
-    <name>Sudungthongke</name>
-    <headerText>Sudungthongke</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
-    <name>Sudungtinhluong</name>
-    <headerText>Sudungtinhluong</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
-    <name>Nhapkhotoanbo</name>
-    <headerText>Nhapkhotoanbo</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
 </NewDataSet>
