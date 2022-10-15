@@ -237,6 +237,7 @@
             this.txt_TENMANG.Regular_Expression = null;
             this.txt_TENMANG.Size = new System.Drawing.Size(174, 20);
             this.txt_TENMANG.TabIndex = 8;
+            this.txt_TENMANG.TabStop = false;
             // 
             // txt_TENCONGNHAN
             // 
@@ -251,6 +252,7 @@
             this.txt_TENCONGNHAN.Regular_Expression = null;
             this.txt_TENCONGNHAN.Size = new System.Drawing.Size(174, 20);
             this.txt_TENCONGNHAN.TabIndex = 6;
+            this.txt_TENCONGNHAN.TabStop = false;
             // 
             // label18
             // 
@@ -273,6 +275,7 @@
             this.txt_TENMAY.Regular_Expression = null;
             this.txt_TENMAY.Size = new System.Drawing.Size(174, 20);
             this.txt_TENMAY.TabIndex = 3;
+            this.txt_TENMAY.TabStop = false;
             // 
             // label17
             // 

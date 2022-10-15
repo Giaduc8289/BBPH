@@ -112,6 +112,7 @@ namespace GD.BBPH.APP.TUA
             GRID_TKKQTUA.RootTable.SortKeys.Add(KetquatuaFields.Ngay.Name, Janus.Windows.GridEX.SortOrder.Descending);
             GRID_TKKQTUA_CHITIET.FilterMode = FilterMode.None;
             GRID_TKKQTUA_CHITIET.GroupByBoxVisible = false;
+            GRID_TKKQTUA_CHITIET.DeletingRecord += GRID_TKKQTUA_CHITIET_DeletingRecord;
             FORM_PROCESS();
             //GRID_TKKQTUA_CHITIET.COMBO_MULTICOLUMN(GRID_TKKQTUA_CHITIET, KetquatuaFields.Masp.Name, DanhmuchanghoaFields.Tenhieu.Name, DanhmuchanghoaFields.Mahieu.Name, DanhmuchanghoaFields.Mahieu.Name, DT_HANG);
             //GRID_TKKQTUA_CHITIET.CellEdited += GRID_TKKQTUA_CHITIET_CellEdited;
@@ -289,6 +290,10 @@ namespace GD.BBPH.APP.TUA
             }
             //Tinhtong();
         }
+        private void GRID_TKKQTUA_CHITIET_DeletingRecord(object sender, RowActionCancelEventArgs e)
+        {
+            btn_XOADONG_Click(new object(), new EventArgs());
+        }
         #endregion
         private string Save_Data(string _str_Tknguyenlieuthoi_PK)
         {
@@ -346,6 +351,28 @@ namespace GD.BBPH.APP.TUA
                 catch { }
                 try { _KetquatuaEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigiansuco.Name].ToString()); }
                 catch { }
+
+                #region xét isnew
+                try { _KetquatuaEntity.Id = Convert.ToInt64(_view[KetquatuaFields.Id.Name].ToString()); }
+                catch { }
+
+                _KetquatuaEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_KetquatuaEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new KetquatuaManager()).SelectById(_KetquatuaEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _KetquatuaEntity.Ngaysua = DateTime.Now;
+                        _KetquatuaEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _KetquatuaEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _KetquatuaEntity.Ngaytao = DateTime.Now;
+                        _KetquatuaEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+                #endregion
 
                 if (!string.IsNullOrEmpty(_KetquatuaEntity.Masanpham))
                     _KetquatuaEntityCol.Add(_KetquatuaEntity);

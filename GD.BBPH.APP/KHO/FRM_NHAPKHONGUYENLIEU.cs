@@ -110,6 +110,8 @@ namespace GD.BBPH.APP.KHO
             GRID_NHAPKHONGUYENLIEU.RootTable.SortKeys.Add(NhapkhonguyenlieuFields.Ngaynhap.Name, Janus.Windows.GridEX.SortOrder.Descending);
             GRID_NHAPKHONGUYENLIEU_CHITIET.FilterMode = FilterMode.None;
             GRID_NHAPKHONGUYENLIEU_CHITIET.GroupByBoxVisible = false;
+            GRID_NHAPKHONGUYENLIEU_CHITIET.DeletingRecord += GRID_NHAPKHONGUYENLIEU_CHITIET_DeletingRecord;
+
             FORM_PROCESS();
             //GRID_NHAPKHONGUYENLIEU_CHITIET.COMBO_MULTICOLUMN(GRID_NHAPKHONGUYENLIEU_CHITIET, NhapkhonguyenlieuFields.Masp.Name, DanhmuchanghoaFields.Tenhieu.Name, DanhmuchanghoaFields.Mahieu.Name, DanhmuchanghoaFields.Mahieu.Name, DT_DMHANG);
             //GRID_NHAPKHONGUYENLIEU_CHITIET.CellEdited += GRID_NHAPKHONGUYENLIEU_CHITIET_CellEdited;
@@ -261,6 +263,10 @@ namespace GD.BBPH.APP.KHO
             }
             //Tinhtong();
         }
+        private void GRID_NHAPKHONGUYENLIEU_CHITIET_DeletingRecord(object sender, RowActionCancelEventArgs e)
+        {
+            btn_XOADONG_Click(new object(), new EventArgs());
+        }
         #endregion
         private string Save_Data(string _str_Tknguyenlieuthoi_PK)
         {
@@ -285,7 +291,27 @@ namespace GD.BBPH.APP.KHO
                  _NhapkhonguyenlieuEntity.Donvitinh = _view.Row[NhapkhonguyenlieuFields.Donvitinh.Name].ToString();
                 _NhapkhonguyenlieuEntity.Malydo = _view.Row[NhapkhonguyenlieuFields.Malydo.Name].ToString();
                 _NhapkhonguyenlieuEntity.Tenlydo = _view.Row[NhapkhonguyenlieuFields.Tenlydo.Name].ToString();
+                #region xét isnew
+                try { _NhapkhonguyenlieuEntity.Id = Convert.ToInt64(_view[NhapkhonguyenlieuFields.Id.Name].ToString()); }
+                catch { }
 
+                _NhapkhonguyenlieuEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_NhapkhonguyenlieuEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new NhapkhonguyenlieuManager()).SelectById(_NhapkhonguyenlieuEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _NhapkhonguyenlieuEntity.Ngaysua = DateTime.Now;
+                        _NhapkhonguyenlieuEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _NhapkhonguyenlieuEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _NhapkhonguyenlieuEntity.Ngaytao = DateTime.Now;
+                        _NhapkhonguyenlieuEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+                #endregion
                 if (!string.IsNullOrEmpty(_NhapkhonguyenlieuEntity.Manguyenlieu))
                     _NhapkhonguyenlieuEntityCol.Add(_NhapkhonguyenlieuEntity);
             }
