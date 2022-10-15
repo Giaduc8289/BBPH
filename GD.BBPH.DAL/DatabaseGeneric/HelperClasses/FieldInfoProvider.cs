@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 15, 2022 9:21:20 AM
+// Code is generated on: Saturday, October 15, 2022 3:20:26 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -320,7 +320,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmhangEntity", "Masp", typeof(System.String), true, false, false, false,  (int)DmhangFieldIndex.Masp, 50, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Tensp", typeof(System.String), false, false, false, false,  (int)DmhangFieldIndex.Tensp, 250, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Maspcuakhach", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Maspcuakhach, 250, 0, 0);
-			base.AddElementFieldInfo("DmhangEntity", "Machungloai", typeof(Nullable<System.Int64>), false, false, false, true,  (int)DmhangFieldIndex.Machungloai, 0, 0, 19);
+			base.AddElementFieldInfo("DmhangEntity", "Machungloai", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Machungloai, 50, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Tenchungloai", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Tenchungloai, 250, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Makhach", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Makhach, 50, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Tenkhach", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Tenkhach, 250, 0, 0);
