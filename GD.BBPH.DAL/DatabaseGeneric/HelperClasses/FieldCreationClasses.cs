@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 14, 2022 9:49:44 PM
+// Code is generated on: Saturday, October 15, 2022 9:21:22 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1877,6 +1877,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Ca);}
 		}
+		/// <summary>Creates a new KetquachiaEntity.Mamay field instance</summary>
+		public static EntityField2 Mamay
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Mamay);}
+		}
 		/// <summary>Creates a new KetquachiaEntity.Lenh field instance</summary>
 		public static EntityField2 Lenh
 		{
@@ -1891,6 +1896,21 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Macongnhan
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Macongnhan);}
+		}
+		/// <summary>Creates a new KetquachiaEntity.Tensanpham field instance</summary>
+		public static EntityField2 Tensanpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tensanpham);}
+		}
+		/// <summary>Creates a new KetquachiaEntity.Tenmay field instance</summary>
+		public static EntityField2 Tenmay
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tenmay);}
+		}
+		/// <summary>Creates a new KetquachiaEntity.Tencongnhan field instance</summary>
+		public static EntityField2 Tencongnhan
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tencongnhan);}
 		}
 		/// <summary>Creates a new KetquachiaEntity.Dauraghep field instance</summary>
 		public static EntityField2 Dauraghep
@@ -1996,26 +2016,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Nguoisua);}
-		}
-		/// <summary>Creates a new KetquachiaEntity.Mamay field instance</summary>
-		public static EntityField2 Mamay
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Mamay);}
-		}
-		/// <summary>Creates a new KetquachiaEntity.Tensanpham field instance</summary>
-		public static EntityField2 Tensanpham
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tensanpham);}
-		}
-		/// <summary>Creates a new KetquachiaEntity.Tenmay field instance</summary>
-		public static EntityField2 Tenmay
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tenmay);}
-		}
-		/// <summary>Creates a new KetquachiaEntity.Tencongnhan field instance</summary>
-		public static EntityField2 Tencongnhan
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tencongnhan);}
 		}
 	}
 

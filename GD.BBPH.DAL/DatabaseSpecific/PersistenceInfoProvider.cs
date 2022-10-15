@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 14, 2022 9:49:44 PM
+// Code is generated on: Saturday, October 15, 2022 9:21:23 AM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -603,34 +603,34 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "KetquachiaEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "KetquachiaEntity", "Ngay", "Ngay", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 1 );
 			base.AddElementFieldMapping( "KetquachiaEntity", "Ca", "Ca", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 2 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Lenh", "Lenh", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 3 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Masanpham", "Masanpham", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 4 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Macongnhan", "Macongnhan", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 5 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Dauraghep", "Dauraghep", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 6 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Sometvao", "Sometvao", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 7 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Sokgvao", "Sokgvao", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 8 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Socon", "Socon", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 9 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigianbatdau", "Thoigianbatdau", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 10 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigianketthuc", "Thoigianketthuc", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 11 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigianlencuon", "Thoigianlencuon", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 12 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigianhacuon", "Thoigianhacuon", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 13 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Solanhacuon", "Solanhacuon", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 14 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigiancatdau", "Thoigiancatdau", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 15 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigiandoilenh", "Thoigiandoilenh", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 16 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigiansuco", "Thoigiansuco", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 17 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Phein", "Phein", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 18 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Pheghep", "Pheghep", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 19 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Phechia", "Phechia", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 20 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "PhethoiNcc", "PhethoiNCC", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 21 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Phesx", "Phesx", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 22 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Ngaytao", "Ngaytao", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 23 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 24 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 25 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 26 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Mamay", "Mamay", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 27 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Tensanpham", "Tensanpham", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 28 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Tenmay", "Tenmay", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 29 );
-			base.AddElementFieldMapping( "KetquachiaEntity", "Tencongnhan", "Tencongnhan", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 30 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Mamay", "Mamay", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 3 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Lenh", "Lenh", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 4 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Masanpham", "Masanpham", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 5 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Macongnhan", "Macongnhan", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 6 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Tensanpham", "Tensanpham", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 7 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Tenmay", "Tenmay", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 8 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Tencongnhan", "Tencongnhan", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 9 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Dauraghep", "Dauraghep", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 10 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Sometvao", "Sometvao", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 11 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Sokgvao", "Sokgvao", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 12 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Socon", "Socon", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 13 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigianbatdau", "Thoigianbatdau", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 14 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigianketthuc", "Thoigianketthuc", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 15 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigianlencuon", "Thoigianlencuon", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 16 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigianhacuon", "Thoigianhacuon", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 17 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Solanhacuon", "Solanhacuon", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 18 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigiancatdau", "Thoigiancatdau", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 19 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigiandoilenh", "Thoigiandoilenh", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 20 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Thoigiansuco", "Thoigiansuco", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 21 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Phein", "Phein", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 22 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Pheghep", "Pheghep", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 23 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Phechia", "Phechia", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 24 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "PhethoiNcc", "PhethoiNCC", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 25 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Phesx", "Phesx", true, (int)SqlDbType.Decimal, 0, 2, 20, false, "", null, typeof(System.Decimal), 26 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Ngaytao", "Ngaytao", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 27 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 28 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 29 );
+			base.AddElementFieldMapping( "KetquachiaEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 30 );
 		}
 		/// <summary>Inits KetquaghepEntity's mappings</summary>
 		private void InitKetquaghepEntityMappings()

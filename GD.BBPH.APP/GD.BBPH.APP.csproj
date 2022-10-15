@@ -1142,7 +1142,6 @@
     <Content Include="XMLCONFIG\FRM_QCDONGKIEN.xml" />
     <Content Include="XMLCONFIG\FRM_QCMAYDAY.xml" />
     <Content Include="XMLCONFIG\FRM_QCGAP.xml" />
-    <Content Include="XMLCONFIG\FRM_DMQUYCACHSP.xml" />
     <Content Include="XMLCONFIG\FRM_DONGIACONGDOAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGDOAN.xml" />
     <Content Include="XMLCONFIG\FRM_DONDATHANG.xml" />
@@ -1211,7 +1210,6 @@
     <Content Include="XMLCONFIG\FRM_DMMAUSAC.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHAMAY.xml" />
     <Content Include="XMLCONFIG\FRM_DMPHONGBAN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMSOI.xml" />
     <Content Include="XMLCONFIG\FRM_DMTRONGLUONG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANGCHITIET.xml" />
