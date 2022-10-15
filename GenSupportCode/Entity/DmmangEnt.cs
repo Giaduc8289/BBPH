@@ -28,73 +28,73 @@ namespace GD.BBPH.DAL.EntityClasses
 			// Nothing for now.
 		}
 
-		void BS_Dmmang_CurrentChanged(object sender, EventArgs e)
+		void BS_DMMANG_CurrentChanged(object sender, EventArgs e)
 		{
 			try
 			{
 				GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-				if (BS_Dmmang.Current != null)
+				if (BS_DMMANG.Current != null)
 				{
-					DataRowView _Rowview = (DataRowView)this.BS_Dmmang.Current;
+					DataRowView _Rowview = (DataRowView)this.BS_DMMANG.Current;
 					if (_Rowview != null)
 						MAHIEU_PK = _Rowview.Row[DmmangFields.Mamang.Name].ToString();
 					
-					txt_Mamang.Text = _Rowview.Row[DmmangFields.Mamang.Name].ToString();
-					txt_Tenmang.Text = _Rowview.Row[DmmangFields.Tenmang.Name].ToString();
-					txt_Makhach.Text = _Rowview.Row[DmmangFields.Makhach.Name].ToString();
-					txt_Tenkhach.Text = _Rowview.Row[DmmangFields.Tenkhach.Name].ToString();
-					txt_Kichthuoc.Text = _Rowview.Row[DmmangFields.Kichthuoc.Name].ToString();
-					txt_Trongluong.Text = _Rowview.Row[DmmangFields.Trongluong.Name].ToString();
-					txt_Mactpt.Text = _Rowview.Row[DmmangFields.Mactpt.Name].ToString();
-					txt_Ngaytao.Text = _Rowview.Row[DmmangFields.Ngaytao.Name].ToString();
-					txt_Nguoitao.Text = _Rowview.Row[DmmangFields.Nguoitao.Name].ToString();
-					txt_Ngaysua.Text = _Rowview.Row[DmmangFields.Ngaysua.Name].ToString();
-					txt_Nguoisua.Text = _Rowview.Row[DmmangFields.Nguoisua.Name].ToString();
+					txt_MAMANG.Text = _Rowview.Row[DmmangFields.Mamang.Name].ToString();
+					txt_TENMANG.Text = _Rowview.Row[DmmangFields.Tenmang.Name].ToString();
+					txt_MAKHACH.Text = _Rowview.Row[DmmangFields.Makhach.Name].ToString();
+					txt_TENKHACH.Text = _Rowview.Row[DmmangFields.Tenkhach.Name].ToString();
+					txt_KICHTHUOC.Text = _Rowview.Row[DmmangFields.Kichthuoc.Name].ToString();
+					txt_TRONGLUONG.Text = _Rowview.Row[DmmangFields.Trongluong.Name].ToString();
+					txt_MACTPT.Text = _Rowview.Row[DmmangFields.Mactpt.Name].ToString();
+					txt_NGAYTAO.Text = _Rowview.Row[DmmangFields.Ngaytao.Name].ToString();
+					txt_NGUOITAO.Text = _Rowview.Row[DmmangFields.Nguoitao.Name].ToString();
+					txt_NGAYSUA.Text = _Rowview.Row[DmmangFields.Ngaysua.Name].ToString();
+					txt_NGUOISUA.Text = _Rowview.Row[DmmangFields.Nguoisua.Name].ToString();
 				}
 			}
-			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmmang_CurrentChanged"); }
+			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMMANG_CurrentChanged"); }
 		}
 
-		private string Save_Data(string _str_Dmmang_PK)
+		private string Save_Data(string _str_DMMANG_PK)
 		{
 			DmmangEntity _dmmangEntity = new DmmangEntity();
 			
-			_dmmangEntity.Mamang = txt_Mamang.Text.Trim();
-			_dmmangEntity.Tenmang = txt_Tenmang.Text.Trim();
-			_dmmangEntity.Makhach = txt_Makhach.Text.Trim();
-			_dmmangEntity.Tenkhach = txt_Tenkhach.Text.Trim();
-			_dmmangEntity.Kichthuoc = txt_Kichthuoc.Text.Trim();
-			_dmmangEntity.Trongluong = txt_Trongluong.Text.Trim();
-			_dmmangEntity.Mactpt = txt_Mactpt.Text.Trim();
-			_dmmangEntity.Ngaytao = txt_Ngaytao.Text.Trim();
-			_dmmangEntity.Nguoitao = txt_Nguoitao.Text.Trim();
-			_dmmangEntity.Ngaysua = txt_Ngaysua.Text.Trim();
-			_dmmangEntity.Nguoisua = txt_Nguoisua.Text.Trim();
+			_dmmangEntity.Mamang = txt_MAMANG.Text.Trim();
+			_dmmangEntity.Tenmang = txt_TENMANG.Text.Trim();
+			_dmmangEntity.Makhach = txt_MAKHACH.Text.Trim();
+			_dmmangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
+			_dmmangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
+			_dmmangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
+			_dmmangEntity.Mactpt = txt_MACTPT.Text.Trim();
+			_dmmangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_dmmangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_dmmangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_dmmangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
-			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
+			if (string.IsNullOrEmpty(_str_DMMANG_PK))
 			{
-				_str_Dmmang_PK = _DmmangManager.InsertV2(_DmmangEntity, r_Insert, DT_Dmmang, BS_Dmmang);
+				_str_DMMANG_PK = _DmmangManager.InsertV2(_dmmangEntity, r_Insert, DT_DMMANG, BS_DMMANG);
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_dmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-				BS_Dmmang.ResetCurrentItem();
+				BS_DMMANG.ResetCurrentItem();
 			}
 			else
 			{
 				_DmmangManager.Update(_dmmangEntity);
 				
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Mamang.Name].Value = _dmmangEntity.Mamang;
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Tenmang.Name].Value = _dmmangEntity.Tenmang;
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Makhach.Name].Value = _dmmangEntity.Makhach;
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Tenkhach.Name].Value = _dmmangEntity.Tenkhach;
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Kichthuoc.Name].Value = _dmmangEntity.Kichthuoc;
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Trongluong.Name].Value = _dmmangEntity.Trongluong;
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Mactpt.Name].Value = _dmmangEntity.Mactpt;
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Ngaytao.Name].Value = _dmmangEntity.Ngaytao;
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Nguoitao.Name].Value = _dmmangEntity.Nguoitao;
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Ngaysua.Name].Value = _dmmangEntity.Ngaysua;
-				GRID_Dmmang.CurrentRow.Cells[DmmangFields.Nguoisua.Name].Value = _dmmangEntity.Nguoisua;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Mamang.Name].Value = _dmmangEntity.Mamang;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenmang.Name].Value = _dmmangEntity.Tenmang;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Makhach.Name].Value = _dmmangEntity.Makhach;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenkhach.Name].Value = _dmmangEntity.Tenkhach;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Kichthuoc.Name].Value = _dmmangEntity.Kichthuoc;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Trongluong.Name].Value = _dmmangEntity.Trongluong;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Mactpt.Name].Value = _dmmangEntity.Mactpt;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Ngaytao.Name].Value = _dmmangEntity.Ngaytao;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Nguoitao.Name].Value = _dmmangEntity.Nguoitao;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Ngaysua.Name].Value = _dmmangEntity.Ngaysua;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Nguoisua.Name].Value = _dmmangEntity.Nguoisua;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_dmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
-			return _str_Dmmang_PK;
+			return _str_DMMANG_PK;
 		}
 
 	}

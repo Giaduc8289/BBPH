@@ -28,49 +28,49 @@ namespace GD.BBPH.DAL.EntityClasses
 			// Nothing for now.
 		}
 
-		void BS_Dmcapma_CurrentChanged(object sender, EventArgs e)
+		void BS_DMCAPMA_CurrentChanged(object sender, EventArgs e)
 		{
 			try
 			{
 				GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-				if (BS_Dmcapma.Current != null)
+				if (BS_DMCAPMA.Current != null)
 				{
-					DataRowView _Rowview = (DataRowView)this.BS_Dmcapma.Current;
+					DataRowView _Rowview = (DataRowView)this.BS_DMCAPMA.Current;
 					if (_Rowview != null)
 						MAHIEU_PK = _Rowview.Row[DmcapmaFields.Loaima.Name].ToString();
 					
-					txt_Macappk.Text = _Rowview.Row[DmcapmaFields.Macappk.Name].ToString();
-					txt_Loaima.Text = _Rowview.Row[DmcapmaFields.Loaima.Name].ToString();
-					txt_Mastart.Text = _Rowview.Row[DmcapmaFields.Mastart.Name].ToString();
+					txt_MACAPPK.Text = _Rowview.Row[DmcapmaFields.Macappk.Name].ToString();
+					txt_LOAIMA.Text = _Rowview.Row[DmcapmaFields.Loaima.Name].ToString();
+					txt_MASTART.Text = _Rowview.Row[DmcapmaFields.Mastart.Name].ToString();
 				}
 			}
-			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmcapma_CurrentChanged"); }
+			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMCAPMA_CurrentChanged"); }
 		}
 
-		private string Save_Data(string _str_Dmcapma_PK)
+		private string Save_Data(string _str_DMCAPMA_PK)
 		{
 			DmcapmaEntity _dmcapmaEntity = new DmcapmaEntity();
 			
-			_dmcapmaEntity.Macappk = txt_Macappk.Text.Trim();
-			_dmcapmaEntity.Loaima = txt_Loaima.Text.Trim();
-			_dmcapmaEntity.Mastart = txt_Mastart.Text.Trim();
+			_dmcapmaEntity.Macappk = txt_MACAPPK.Text.Trim();
+			_dmcapmaEntity.Loaima = txt_LOAIMA.Text.Trim();
+			_dmcapmaEntity.Mastart = txt_MASTART.Text.Trim();
 			
-			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
+			if (string.IsNullOrEmpty(_str_DMCAPMA_PK))
 			{
-				_str_Dmcapma_PK = _DmcapmaManager.InsertV2(_DmcapmaEntity, r_Insert, DT_Dmcapma, BS_Dmcapma);
+				_str_DMCAPMA_PK = _DmcapmaManager.InsertV2(_dmcapmaEntity, r_Insert, DT_DMCAPMA, BS_DMCAPMA);
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcapmaManager.Convert(_dmcapmaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-				BS_Dmcapma.ResetCurrentItem();
+				BS_DMCAPMA.ResetCurrentItem();
 			}
 			else
 			{
 				_DmcapmaManager.Update(_dmcapmaEntity);
 				
-				GRID_Dmcapma.CurrentRow.Cells[DmcapmaFields.Macappk.Name].Value = _dmcapmaEntity.Macappk;
-				GRID_Dmcapma.CurrentRow.Cells[DmcapmaFields.Loaima.Name].Value = _dmcapmaEntity.Loaima;
-				GRID_Dmcapma.CurrentRow.Cells[DmcapmaFields.Mastart.Name].Value = _dmcapmaEntity.Mastart;
+				GRID_DMCAPMA.CurrentRow.Cells[DmcapmaFields.Macappk.Name].Value = _dmcapmaEntity.Macappk;
+				GRID_DMCAPMA.CurrentRow.Cells[DmcapmaFields.Loaima.Name].Value = _dmcapmaEntity.Loaima;
+				GRID_DMCAPMA.CurrentRow.Cells[DmcapmaFields.Mastart.Name].Value = _dmcapmaEntity.Mastart;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcapmaManager.Convert(_dmcapmaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
-			return _str_Dmcapma_PK;
+			return _str_DMCAPMA_PK;
 		}
 
 	}

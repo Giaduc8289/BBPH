@@ -28,49 +28,49 @@ namespace GD.BBPH.DAL.EntityClasses
 			// Nothing for now.
 		}
 
-		void BS_Roles_CurrentChanged(object sender, EventArgs e)
+		void BS_ROLES_CurrentChanged(object sender, EventArgs e)
 		{
 			try
 			{
 				GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-				if (BS_Roles.Current != null)
+				if (BS_ROLES.Current != null)
 				{
-					DataRowView _Rowview = (DataRowView)this.BS_Roles.Current;
+					DataRowView _Rowview = (DataRowView)this.BS_ROLES.Current;
 					if (_Rowview != null)
 						MAHIEU_PK = _Rowview.Row[RolesFields.Rolesid.Name].ToString();
 					
-					txt_Rolesid.Text = _Rowview.Row[RolesFields.Rolesid.Name].ToString();
-					txt_Rolesname.Text = _Rowview.Row[RolesFields.Rolesname.Name].ToString();
-					txt_Description.Text = _Rowview.Row[RolesFields.Description.Name].ToString();
+					txt_ROLESID.Text = _Rowview.Row[RolesFields.Rolesid.Name].ToString();
+					txt_ROLESNAME.Text = _Rowview.Row[RolesFields.Rolesname.Name].ToString();
+					txt_DESCRIPTION.Text = _Rowview.Row[RolesFields.Description.Name].ToString();
 				}
 			}
-			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Roles_CurrentChanged"); }
+			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_ROLES_CurrentChanged"); }
 		}
 
-		private string Save_Data(string _str_Roles_PK)
+		private string Save_Data(string _str_ROLES_PK)
 		{
 			RolesEntity _rolesEntity = new RolesEntity();
 			
-			_rolesEntity.Rolesid = txt_Rolesid.Text.Trim();
-			_rolesEntity.Rolesname = txt_Rolesname.Text.Trim();
-			_rolesEntity.Description = txt_Description.Text.Trim();
+			_rolesEntity.Rolesid = txt_ROLESID.Text.Trim();
+			_rolesEntity.Rolesname = txt_ROLESNAME.Text.Trim();
+			_rolesEntity.Description = txt_DESCRIPTION.Text.Trim();
 			
-			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
+			if (string.IsNullOrEmpty(_str_ROLES_PK))
 			{
-				_str_Roles_PK = _RolesManager.InsertV2(_RolesEntity, r_Insert, DT_Roles, BS_Roles);
+				_str_ROLES_PK = _RolesManager.InsertV2(_rolesEntity, r_Insert, DT_ROLES, BS_ROLES);
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_RolesManager.Convert(_rolesEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-				BS_Roles.ResetCurrentItem();
+				BS_ROLES.ResetCurrentItem();
 			}
 			else
 			{
 				_RolesManager.Update(_rolesEntity);
 				
-				GRID_Roles.CurrentRow.Cells[RolesFields.Rolesid.Name].Value = _rolesEntity.Rolesid;
-				GRID_Roles.CurrentRow.Cells[RolesFields.Rolesname.Name].Value = _rolesEntity.Rolesname;
-				GRID_Roles.CurrentRow.Cells[RolesFields.Description.Name].Value = _rolesEntity.Description;
+				GRID_ROLES.CurrentRow.Cells[RolesFields.Rolesid.Name].Value = _rolesEntity.Rolesid;
+				GRID_ROLES.CurrentRow.Cells[RolesFields.Rolesname.Name].Value = _rolesEntity.Rolesname;
+				GRID_ROLES.CurrentRow.Cells[RolesFields.Description.Name].Value = _rolesEntity.Description;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_RolesManager.Convert(_rolesEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
-			return _str_Roles_PK;
+			return _str_ROLES_PK;
 		}
 
 	}

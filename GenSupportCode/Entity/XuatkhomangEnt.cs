@@ -28,91 +28,91 @@ namespace GD.BBPH.DAL.EntityClasses
 			// Nothing for now.
 		}
 
-		void BS_Xuatkhomang_CurrentChanged(object sender, EventArgs e)
+		void BS_XUATKHOMANG_CurrentChanged(object sender, EventArgs e)
 		{
 			try
 			{
 				GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-				if (BS_Xuatkhomang.Current != null)
+				if (BS_XUATKHOMANG.Current != null)
 				{
-					DataRowView _Rowview = (DataRowView)this.BS_Xuatkhomang.Current;
+					DataRowView _Rowview = (DataRowView)this.BS_XUATKHOMANG.Current;
 					if (_Rowview != null)
 						MAHIEU_PK = _Rowview.Row[XuatkhomangFields.Id.Name].ToString();
 					
-					txt_Id.Text = _Rowview.Row[XuatkhomangFields.Id.Name].ToString();
-					txt_Ngayxuat.Text = _Rowview.Row[XuatkhomangFields.Ngayxuat.Name].ToString();
-					txt_Makho.Text = _Rowview.Row[XuatkhomangFields.Makho.Name].ToString();
-					txt_Tenkho.Text = _Rowview.Row[XuatkhomangFields.Tenkho.Name].ToString();
-					txt_Mamang.Text = _Rowview.Row[XuatkhomangFields.Mamang.Name].ToString();
-					txt_Tenmang.Text = _Rowview.Row[XuatkhomangFields.Tenmang.Name].ToString();
-					txt_Somet.Text = _Rowview.Row[XuatkhomangFields.Somet.Name].ToString();
-					txt_Sokg.Text = _Rowview.Row[XuatkhomangFields.Sokg.Name].ToString();
-					txt_Malydo.Text = _Rowview.Row[XuatkhomangFields.Malydo.Name].ToString();
-					txt_Tenlydo.Text = _Rowview.Row[XuatkhomangFields.Tenlydo.Name].ToString();
-					txt_Lenhsx.Text = _Rowview.Row[XuatkhomangFields.Lenhsx.Name].ToString();
-					txt_Sophieugiao.Text = _Rowview.Row[XuatkhomangFields.Sophieugiao.Name].ToString();
-					txt_Madonhang.Text = _Rowview.Row[XuatkhomangFields.Madonhang.Name].ToString();
-					txt_Ngaytao.Text = _Rowview.Row[XuatkhomangFields.Ngaytao.Name].ToString();
-					txt_Nguoitao.Text = _Rowview.Row[XuatkhomangFields.Nguoitao.Name].ToString();
-					txt_Ngaysua.Text = _Rowview.Row[XuatkhomangFields.Ngaysua.Name].ToString();
-					txt_Nguoisua.Text = _Rowview.Row[XuatkhomangFields.Nguoisua.Name].ToString();
+					txt_ID.Text = _Rowview.Row[XuatkhomangFields.Id.Name].ToString();
+					txt_NGAYXUAT.Text = _Rowview.Row[XuatkhomangFields.Ngayxuat.Name].ToString();
+					txt_MAKHO.Text = _Rowview.Row[XuatkhomangFields.Makho.Name].ToString();
+					txt_TENKHO.Text = _Rowview.Row[XuatkhomangFields.Tenkho.Name].ToString();
+					txt_MAMANG.Text = _Rowview.Row[XuatkhomangFields.Mamang.Name].ToString();
+					txt_TENMANG.Text = _Rowview.Row[XuatkhomangFields.Tenmang.Name].ToString();
+					txt_SOMET.Text = _Rowview.Row[XuatkhomangFields.Somet.Name].ToString();
+					txt_SOKG.Text = _Rowview.Row[XuatkhomangFields.Sokg.Name].ToString();
+					txt_MALYDO.Text = _Rowview.Row[XuatkhomangFields.Malydo.Name].ToString();
+					txt_TENLYDO.Text = _Rowview.Row[XuatkhomangFields.Tenlydo.Name].ToString();
+					txt_LENHSX.Text = _Rowview.Row[XuatkhomangFields.Lenhsx.Name].ToString();
+					txt_SOPHIEUGIAO.Text = _Rowview.Row[XuatkhomangFields.Sophieugiao.Name].ToString();
+					txt_MADONHANG.Text = _Rowview.Row[XuatkhomangFields.Madonhang.Name].ToString();
+					txt_NGAYTAO.Text = _Rowview.Row[XuatkhomangFields.Ngaytao.Name].ToString();
+					txt_NGUOITAO.Text = _Rowview.Row[XuatkhomangFields.Nguoitao.Name].ToString();
+					txt_NGAYSUA.Text = _Rowview.Row[XuatkhomangFields.Ngaysua.Name].ToString();
+					txt_NGUOISUA.Text = _Rowview.Row[XuatkhomangFields.Nguoisua.Name].ToString();
 				}
 			}
-			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Xuatkhomang_CurrentChanged"); }
+			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_XUATKHOMANG_CurrentChanged"); }
 		}
 
-		private string Save_Data(string _str_Xuatkhomang_PK)
+		private string Save_Data(string _str_XUATKHOMANG_PK)
 		{
 			XuatkhomangEntity _xuatkhomangEntity = new XuatkhomangEntity();
 			
-			_xuatkhomangEntity.Id = txt_Id.Text.Trim();
-			_xuatkhomangEntity.Ngayxuat = txt_Ngayxuat.Text.Trim();
-			_xuatkhomangEntity.Makho = txt_Makho.Text.Trim();
-			_xuatkhomangEntity.Tenkho = txt_Tenkho.Text.Trim();
-			_xuatkhomangEntity.Mamang = txt_Mamang.Text.Trim();
-			_xuatkhomangEntity.Tenmang = txt_Tenmang.Text.Trim();
-			_xuatkhomangEntity.Somet = txt_Somet.Text.Trim();
-			_xuatkhomangEntity.Sokg = txt_Sokg.Text.Trim();
-			_xuatkhomangEntity.Malydo = txt_Malydo.Text.Trim();
-			_xuatkhomangEntity.Tenlydo = txt_Tenlydo.Text.Trim();
-			_xuatkhomangEntity.Lenhsx = txt_Lenhsx.Text.Trim();
-			_xuatkhomangEntity.Sophieugiao = txt_Sophieugiao.Text.Trim();
-			_xuatkhomangEntity.Madonhang = txt_Madonhang.Text.Trim();
-			_xuatkhomangEntity.Ngaytao = txt_Ngaytao.Text.Trim();
-			_xuatkhomangEntity.Nguoitao = txt_Nguoitao.Text.Trim();
-			_xuatkhomangEntity.Ngaysua = txt_Ngaysua.Text.Trim();
-			_xuatkhomangEntity.Nguoisua = txt_Nguoisua.Text.Trim();
+			_xuatkhomangEntity.Id = txt_ID.Text.Trim();
+			_xuatkhomangEntity.Ngayxuat = txt_NGAYXUAT.Text.Trim();
+			_xuatkhomangEntity.Makho = txt_MAKHO.Text.Trim();
+			_xuatkhomangEntity.Tenkho = txt_TENKHO.Text.Trim();
+			_xuatkhomangEntity.Mamang = txt_MAMANG.Text.Trim();
+			_xuatkhomangEntity.Tenmang = txt_TENMANG.Text.Trim();
+			_xuatkhomangEntity.Somet = txt_SOMET.Text.Trim();
+			_xuatkhomangEntity.Sokg = txt_SOKG.Text.Trim();
+			_xuatkhomangEntity.Malydo = txt_MALYDO.Text.Trim();
+			_xuatkhomangEntity.Tenlydo = txt_TENLYDO.Text.Trim();
+			_xuatkhomangEntity.Lenhsx = txt_LENHSX.Text.Trim();
+			_xuatkhomangEntity.Sophieugiao = txt_SOPHIEUGIAO.Text.Trim();
+			_xuatkhomangEntity.Madonhang = txt_MADONHANG.Text.Trim();
+			_xuatkhomangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_xuatkhomangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_xuatkhomangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_xuatkhomangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
-			if (string.IsNullOrEmpty(_str_DMBANSOI_PK))
+			if (string.IsNullOrEmpty(_str_XUATKHOMANG_PK))
 			{
-				_str_Xuatkhomang_PK = _XuatkhomangManager.InsertV2(_XuatkhomangEntity, r_Insert, DT_Xuatkhomang, BS_Xuatkhomang);
+				_str_XUATKHOMANG_PK = _XuatkhomangManager.InsertV2(_xuatkhomangEntity, r_Insert, DT_XUATKHOMANG, BS_XUATKHOMANG);
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_XuatkhomangManager.Convert(_xuatkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-				BS_Xuatkhomang.ResetCurrentItem();
+				BS_XUATKHOMANG.ResetCurrentItem();
 			}
 			else
 			{
 				_XuatkhomangManager.Update(_xuatkhomangEntity);
 				
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Id.Name].Value = _xuatkhomangEntity.Id;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Ngayxuat.Name].Value = _xuatkhomangEntity.Ngayxuat;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Makho.Name].Value = _xuatkhomangEntity.Makho;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Tenkho.Name].Value = _xuatkhomangEntity.Tenkho;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Mamang.Name].Value = _xuatkhomangEntity.Mamang;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Tenmang.Name].Value = _xuatkhomangEntity.Tenmang;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Somet.Name].Value = _xuatkhomangEntity.Somet;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Sokg.Name].Value = _xuatkhomangEntity.Sokg;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Malydo.Name].Value = _xuatkhomangEntity.Malydo;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Tenlydo.Name].Value = _xuatkhomangEntity.Tenlydo;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Lenhsx.Name].Value = _xuatkhomangEntity.Lenhsx;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Sophieugiao.Name].Value = _xuatkhomangEntity.Sophieugiao;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Madonhang.Name].Value = _xuatkhomangEntity.Madonhang;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Ngaytao.Name].Value = _xuatkhomangEntity.Ngaytao;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Nguoitao.Name].Value = _xuatkhomangEntity.Nguoitao;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Ngaysua.Name].Value = _xuatkhomangEntity.Ngaysua;
-				GRID_Xuatkhomang.CurrentRow.Cells[XuatkhomangFields.Nguoisua.Name].Value = _xuatkhomangEntity.Nguoisua;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Id.Name].Value = _xuatkhomangEntity.Id;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Ngayxuat.Name].Value = _xuatkhomangEntity.Ngayxuat;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Makho.Name].Value = _xuatkhomangEntity.Makho;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Tenkho.Name].Value = _xuatkhomangEntity.Tenkho;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Mamang.Name].Value = _xuatkhomangEntity.Mamang;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Tenmang.Name].Value = _xuatkhomangEntity.Tenmang;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Somet.Name].Value = _xuatkhomangEntity.Somet;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Sokg.Name].Value = _xuatkhomangEntity.Sokg;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Malydo.Name].Value = _xuatkhomangEntity.Malydo;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Tenlydo.Name].Value = _xuatkhomangEntity.Tenlydo;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Lenhsx.Name].Value = _xuatkhomangEntity.Lenhsx;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Sophieugiao.Name].Value = _xuatkhomangEntity.Sophieugiao;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Madonhang.Name].Value = _xuatkhomangEntity.Madonhang;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Ngaytao.Name].Value = _xuatkhomangEntity.Ngaytao;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Nguoitao.Name].Value = _xuatkhomangEntity.Nguoitao;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Ngaysua.Name].Value = _xuatkhomangEntity.Ngaysua;
+				GRID_XUATKHOMANG.CurrentRow.Cells[XuatkhomangFields.Nguoisua.Name].Value = _xuatkhomangEntity.Nguoisua;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_XuatkhomangManager.Convert(_xuatkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
-			return _str_Xuatkhomang_PK;
+			return _str_XUATKHOMANG_PK;
 		}
 
 	}
