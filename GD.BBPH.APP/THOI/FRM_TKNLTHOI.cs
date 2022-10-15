@@ -110,6 +110,8 @@ namespace GD.BBPH.APP.THOI
             GRID_TKNLTHOI.RootTable.SortKeys.Add(TknguyenlieuthoiFields.Ngay.Name, Janus.Windows.GridEX.SortOrder.Descending);
             GRID_TKNLTHOI_CHITIET.FilterMode = FilterMode.None;
             GRID_TKNLTHOI_CHITIET.GroupByBoxVisible = false;
+            GRID_TKNLTHOI_CHITIET.DeletingRecord += GRID_TKNLTHOI_CHITIET_DeletingRecord;
+
             FORM_PROCESS();
             //GRID_TKNLTHOI_CHITIET.COMBO_MULTICOLUMN(GRID_TKNLTHOI_CHITIET, TknguyenlieuthoiFields.Masp.Name, DanhmuchanghoaFields.Tenhieu.Name, DanhmuchanghoaFields.Mahieu.Name, DanhmuchanghoaFields.Mahieu.Name, DT_DMHANG);
             //GRID_TKNLTHOI_CHITIET.CellEdited += GRID_TKNLTHOI_CHITIET_CellEdited;
@@ -260,6 +262,10 @@ namespace GD.BBPH.APP.THOI
             }
             //Tinhtong();
         }
+        private void GRID_TKNLTHOI_CHITIET_DeletingRecord(object sender, RowActionCancelEventArgs e)
+        {
+            btn_XOADONG_Click(new object(), new EventArgs());
+        }
         #endregion
         private string Save_Data(string _str_Tknguyenlieuthoi_PK)
         {
@@ -281,6 +287,27 @@ namespace GD.BBPH.APP.THOI
                 catch { }
                 try { _tknguyenlieuthoiEntity.Klxuat = Convert.ToDecimal(_view.Row[TknguyenlieuthoiFields.Klxuat.Name].ToString()); }
                 catch { }
+                #region xét isnew
+                try { _tknguyenlieuthoiEntity.Id = Convert.ToInt64(_view[TknguyenlieuthoiFields.Id.Name].ToString()); }
+                catch { }
+
+                _tknguyenlieuthoiEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_tknguyenlieuthoiEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new TknguyenlieuthoiManager()).SelectById(_tknguyenlieuthoiEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        //_tknguyenlieuthoiEntity.Ngaysua = DateTime.Now;
+                        //_tknguyenlieuthoiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _tknguyenlieuthoiEntity.IsNew = false;
+                    }
+                    //else
+                    //{
+                    //    _tknguyenlieuthoiEntity.Ngaytao = DateTime.Now;
+                    //    _tknguyenlieuthoiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    //}
+                }
+                #endregion
                 if (!string.IsNullOrEmpty(_tknguyenlieuthoiEntity.Manguyenlieu))
                     _TknguyenlieuthoiEntityCol.Add(_tknguyenlieuthoiEntity);
             }
