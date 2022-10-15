@@ -311,6 +311,7 @@
             this.txt_MACHUNGLOAI.Size = new System.Drawing.Size(82, 20);
             this.txt_MACHUNGLOAI.TabIndex = 5;
             this.txt_MACHUNGLOAI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_MACHUNGLOAI.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACHUNGLOAI_Validating);
             // 
             // label25
             // 
@@ -401,6 +402,7 @@
             this.txt_MAQCTHANHPHAM.Size = new System.Drawing.Size(82, 20);
             this.txt_MAQCTHANHPHAM.TabIndex = 29;
             this.txt_MAQCTHANHPHAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_MAQCTHANHPHAM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAQCTHANHPHAM_Validating);
             // 
             // label24
             // 
@@ -489,6 +491,7 @@
             this.txt_MAMANG2.Size = new System.Drawing.Size(82, 20);
             this.txt_MAMANG2.TabIndex = 23;
             this.txt_MAMANG2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_MAMANG2.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMANG2_Validating);
             // 
             // label23
             // 
@@ -577,6 +580,7 @@
             this.txt_MAMANG1.Size = new System.Drawing.Size(82, 20);
             this.txt_MAMANG1.TabIndex = 19;
             this.txt_MAMANG1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_MAMANG1.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMANG1_Validating);
             // 
             // label14
             // 
@@ -633,6 +637,7 @@
             this.txt_SOHINHMA.Size = new System.Drawing.Size(54, 20);
             this.txt_SOHINHMA.TabIndex = 15;
             this.txt_SOHINHMA.TabStop = false;
+            this.txt_SOHINHMA.Validating += new System.ComponentModel.CancelEventHandler(this.txt_SOHINHMA_Validating);
             // 
             // txt_SOMAUMA
             // 
@@ -648,6 +653,7 @@
             this.txt_SOMAUMA.Size = new System.Drawing.Size(54, 20);
             this.txt_SOMAUMA.TabIndex = 13;
             this.txt_SOMAUMA.TabStop = false;
+            this.txt_SOMAUMA.Validating += new System.ComponentModel.CancelEventHandler(this.txt_SOMAUMA_Validating);
             // 
             // txt_DAI
             // 
@@ -749,6 +755,7 @@
             this.txt_MALOAIMUC.Regular_Expression = null;
             this.txt_MALOAIMUC.Size = new System.Drawing.Size(82, 20);
             this.txt_MALOAIMUC.TabIndex = 11;
+            this.txt_MALOAIMUC.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MALOAIMUC_Validating);
             // 
             // txt_MAQCLOAITHUNG
             // 
@@ -763,6 +770,7 @@
             this.txt_MAQCLOAITHUNG.Regular_Expression = null;
             this.txt_MAQCLOAITHUNG.Size = new System.Drawing.Size(82, 20);
             this.txt_MAQCLOAITHUNG.TabIndex = 33;
+            this.txt_MAQCLOAITHUNG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAQCLOAITHUNG_Validating);
             // 
             // txt_MAQCDONGGOI
             // 
@@ -778,6 +786,7 @@
             this.txt_MAQCDONGGOI.Size = new System.Drawing.Size(82, 20);
             this.txt_MAQCDONGGOI.TabIndex = 31;
             this.txt_MAQCDONGGOI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_MAQCDONGGOI.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAQCDONGGOI_Validating);
             // 
             // txt_KHOILUONGMUC
             // 
