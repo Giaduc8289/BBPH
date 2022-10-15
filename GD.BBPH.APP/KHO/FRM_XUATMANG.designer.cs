@@ -428,7 +428,9 @@
             this.txt_TENMANG.Name = "txt_TENMANG";
             this.txt_TENMANG.Regular_Expression = null;
             this.txt_TENMANG.Size = new System.Drawing.Size(174, 20);
-            this.txt_TENMANG.TabIndex = 4;
+            this.txt_TENMANG.TabIndex = 20;
+            this.txt_TENMANG.TabStop = false;
+            this.txt_TENMANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMANG_Validating);
             // 
             // label4
             // 
@@ -483,7 +485,9 @@
             this.txt_TENKHO.Name = "txt_TENKHO";
             this.txt_TENKHO.Regular_Expression = null;
             this.txt_TENKHO.Size = new System.Drawing.Size(174, 20);
-            this.txt_TENKHO.TabIndex = 2;
+            this.txt_TENKHO.TabIndex = 19;
+            this.txt_TENKHO.TabStop = false;
+            this.txt_TENKHO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKHO_Validating);
             // 
             // label17
             // 

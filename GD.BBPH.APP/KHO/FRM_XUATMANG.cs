@@ -60,7 +60,7 @@ namespace GD.BBPH.APP.KHO
                         DT_XUATMANG_CHITIET = LIB.SESSION_START.DT_XUATMANG;
 
                         DT_DMKHO = LIB.SESSION_START.DT_DMKHO;
-                        DT_DMMANG = LIB.SESSION_START.DM_HANG;
+                        DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -495,29 +495,29 @@ namespace GD.BBPH.APP.KHO
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MAMANG.Text.Trim()) || DT_DMMANG == null || DT_DMMANG.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MAMANG.Text.Trim().ToUpper();
-            _RowViewSelect = checkmasp(Str_MASIEUTHI, DT_DMMANG);
+            _RowViewSelect = checkmamang(Str_MASIEUTHI, DT_DMMANG);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml",
-                        DT_DMMANG, DmhangFields.Masp.Name, Str_MASIEUTHI);
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANG.xml",
+                        DT_DMMANG, DmmangFields.Mamang.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MAMANG.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
-                txt_TENMANG.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
+                txt_MAMANG.Text = _RowViewSelect[DmmangFields.Mamang.Name].ToString();
+                txt_TENMANG.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
 
             }
             else
             {
-                txt_TENMANG.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
+                txt_TENMANG.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
             }
         }
-        private DataRow checkmasp(string masieuthi, DataTable dt)
+        private DataRow checkmamang(string masieuthi, DataTable dt)
         {
             try
             {
-                return dt.Select(DmhangFields.Masp.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+                return dt.Select(DmmangFields.Mamang.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
         }

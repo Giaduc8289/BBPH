@@ -34,6 +34,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
+            this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
             this.txt_M2SAIHONGTT = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_PHESX = new GD.BBPH.CONTROL.TEXTBOX();
             this.label16 = new GD.BBPH.CONTROL.LABEL();
@@ -86,8 +88,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
-            this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -203,6 +203,34 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(845, 535);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // btn_XOADONG
+            // 
+            this.btn_XOADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_XOADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_XOADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_XOADONG.Enabled = false;
+            this.btn_XOADONG.Location = new System.Drawing.Point(117, 343);
+            this.btn_XOADONG.Name = "btn_XOADONG";
+            this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_XOADONG.TabIndex = 21;
+            this.btn_XOADONG.Text = "Xóa dòng";
+            this.btn_XOADONG.UseVisualStyleBackColor = true;
+            this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
+            // 
+            // btn_THEMDONG
+            // 
+            this.btn_THEMDONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_THEMDONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_THEMDONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_THEMDONG.Enabled = false;
+            this.btn_THEMDONG.Location = new System.Drawing.Point(15, 343);
+            this.btn_THEMDONG.Name = "btn_THEMDONG";
+            this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_THEMDONG.TabIndex = 20;
+            this.btn_THEMDONG.Text = "Thêm dòng";
+            this.btn_THEMDONG.UseVisualStyleBackColor = true;
+            this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
             // 
             // txt_M2SAIHONGTT
             // 
@@ -332,6 +360,7 @@
             this.txt_TENSP.Regular_Expression = null;
             this.txt_TENSP.Size = new System.Drawing.Size(174, 20);
             this.txt_TENSP.TabIndex = 8;
+            this.txt_TENSP.TabStop = false;
             // 
             // txt_TENCONGNHAN
             // 
@@ -346,6 +375,7 @@
             this.txt_TENCONGNHAN.Regular_Expression = null;
             this.txt_TENCONGNHAN.Size = new System.Drawing.Size(174, 20);
             this.txt_TENCONGNHAN.TabIndex = 6;
+            this.txt_TENCONGNHAN.TabStop = false;
             // 
             // label18
             // 
@@ -368,6 +398,7 @@
             this.txt_TENMAY.Regular_Expression = null;
             this.txt_TENMAY.Size = new System.Drawing.Size(174, 20);
             this.txt_TENMAY.TabIndex = 3;
+            this.txt_TENMAY.TabStop = false;
             // 
             // label17
             // 
@@ -818,34 +849,6 @@
             this.label22.Size = new System.Drawing.Size(44, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã máy";
-            // 
-            // btn_XOADONG
-            // 
-            this.btn_XOADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.btn_XOADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
-            this.btn_XOADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOADONG.Enabled = false;
-            this.btn_XOADONG.Location = new System.Drawing.Point(117, 343);
-            this.btn_XOADONG.Name = "btn_XOADONG";
-            this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
-            this.btn_XOADONG.TabIndex = 21;
-            this.btn_XOADONG.Text = "Xóa dòng";
-            this.btn_XOADONG.UseVisualStyleBackColor = true;
-            this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
-            // 
-            // btn_THEMDONG
-            // 
-            this.btn_THEMDONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.btn_THEMDONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
-            this.btn_THEMDONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMDONG.Enabled = false;
-            this.btn_THEMDONG.Location = new System.Drawing.Point(15, 343);
-            this.btn_THEMDONG.Name = "btn_THEMDONG";
-            this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
-            this.btn_THEMDONG.TabIndex = 20;
-            this.btn_THEMDONG.Text = "Thêm dòng";
-            this.btn_THEMDONG.UseVisualStyleBackColor = true;
-            this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
             // 
             // FRM_KQIN
             // 

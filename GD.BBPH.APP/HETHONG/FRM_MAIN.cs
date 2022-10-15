@@ -952,6 +952,13 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_XUATMANG()), mmru.Text);
                     break;
+                case "FRM_XUATNGUYENLIEU":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_XUATNGUYENLIEU") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.KHO.FRM_XUATNGUYENLIEU()), mmru.Text);
+                    break;
                 #endregion
 
                 #region Tính giá

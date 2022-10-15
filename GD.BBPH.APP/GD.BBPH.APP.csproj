@@ -375,6 +375,12 @@
     <Compile Include="KHO\FRM_NHAPSANPHAM.designer.cs">
       <DependentUpon>FRM_NHAPSANPHAM.cs</DependentUpon>
     </Compile>
+    <Compile Include="KHO\FRM_XUATNGUYENLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHO\FRM_XUATNGUYENLIEU.designer.cs">
+      <DependentUpon>FRM_XUATNGUYENLIEU.cs</DependentUpon>
+    </Compile>
     <Compile Include="KHO\FRM_XUATMANG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -600,6 +606,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KHO\FRM_NHAPSANPHAM.resx">
       <DependentUpon>FRM_NHAPSANPHAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHO\FRM_XUATNGUYENLIEU.resx">
+      <DependentUpon>FRM_XUATNGUYENLIEU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KHO\FRM_XUATMANG.resx">
       <DependentUpon>FRM_XUATMANG.cs</DependentUpon>
@@ -1245,6 +1254,8 @@
     <Content Include="XMLCONFIG\FRM_XUATMANH_D.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPMANH_H.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANH_H.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATNGUYENLIEU.xml" />
+    <Content Include="XMLCONFIG\FRM_XUATNGUYENLIEUCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_XUATSANPHAM.xml" />
     <Content Include="XMLCONFIG\FRM_XUATSANPHAMCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_XUATSOI_D.xml" />

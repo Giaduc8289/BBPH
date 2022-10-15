@@ -651,6 +651,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+
+        #region XUATNGUYENLIEU
+        private static DataTable _DT_XUATNGUYENLIEU = null;
+        public static DataTable DT_XUATNGUYENLIEU
+        {
+            get
+            {
+                _DT_XUATNGUYENLIEU = new XuatkhonguyenlieuManager().SelectAllRDT();
+                return _DT_XUATNGUYENLIEU;
+            }
+            set { _DT_XUATNGUYENLIEU = value; }
+        }
+        #endregion
         #endregion
 
     }
