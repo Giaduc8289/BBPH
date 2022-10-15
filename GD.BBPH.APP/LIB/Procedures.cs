@@ -1922,6 +1922,31 @@ namespace GD.BBPH.APP.LIB
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachnhapnguyenlieuchitiet", "Danhsachnhapnguyenlieuchitiet", myArr).Tables[0];
         }
 
+        public static DataTable Danhsachketquatua(DateTime Tungay, DateTime Denngay, int Ca, string Lenhtua)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Tungay", SqlDbType.Date, 0), Tungay);
+            parameters.Add(new SqlParameter("@Denngay", SqlDbType.Date, 0), Denngay);
+            parameters.Add(new SqlParameter("@Ca", SqlDbType.Int, 0), Ca);
+            parameters.Add(new SqlParameter("@Lenhtua", SqlDbType.NVarChar, 0), Lenhtua);
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachketquatua", "Danhsachketquatua", myArr).Tables[0];
+        }
+        public static DataTable Danhsachketquatuachitiet(DateTime Ngay, int Ca, string Lenhtua, string Masanpham)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Ngay", SqlDbType.Date, 0), Ngay);
+            parameters.Add(new SqlParameter("@Ca", SqlDbType.Int, 0), Ca);
+            parameters.Add(new SqlParameter("@Lenhtua", SqlDbType.NVarChar, 0), Lenhtua);
+            parameters.Add(new SqlParameter("@Masanpham", SqlDbType.NVarChar, 0), Masanpham);
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachketquatuachitiet", "Danhsachketquatuachitiet", myArr).Tables[0];
+        }
+
         #endregion
 
         #region Khác
