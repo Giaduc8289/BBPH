@@ -27,5 +27,23 @@ namespace GD.BBPH.BLL
 		{
 			// Nothing for now.
 		}
-	}
+        public DataTable SelectByNgayCaLenhtuaRDT(System.DateTime Ngay, System.String Ca, System.String Lenhtua )
+        {
+            DataTable toReturn = new DataTable();
+            EntityCollection _KetquatuaCollection = new EntityCollection(new KetquatuaEntityFactory());
+            RelationPredicateBucket filter = new RelationPredicateBucket();
+
+            IPredicateExpression _PredicateExpression = new PredicateExpression();
+            _PredicateExpression.Add(KetquatuaFields.Ngay == Ngay);
+            _PredicateExpression.Add(KetquatuaFields.Ca == Ca);
+            _PredicateExpression.Add(KetquatuaFields.Lenhtua == Lenhtua);
+            filter.PredicateExpression.Add(_PredicateExpression);
+
+            using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+            {
+                adapter.FetchTypedList(_KetquatuaCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+            }
+            return toReturn;
+        }
+    }
 }

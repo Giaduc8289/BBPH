@@ -653,5 +653,20 @@ namespace GD.BBPH.APP.LIB
 
         #endregion
 
+        #region Tua
+        #region KQTUA
+        private static DataTable _DT_TKKQTUA = null;
+        public static DataTable DT_TKKQTUA
+        {
+            get
+            {
+                _DT_TKKQTUA = new KetquatuaManager().SelectAllRDT();
+                return _DT_TKKQTUA;
+            }
+            set { _DT_TKKQTUA = value; }
+        }
+        #endregion
+        #endregion
+
     }
 }
