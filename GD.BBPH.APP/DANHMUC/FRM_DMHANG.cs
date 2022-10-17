@@ -155,7 +155,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MACHUNGLOAI.Text = _Rowview.Row[DmhangFields.Machungloai.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmhangFields.Trongluong.Name].ToString();
                     txt_KICHTHUOC.Text = _Rowview.Row[DmhangFields.Kichthuoc.Name].ToString();
-                    txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Loaimuc.Name].ToString();
+                    txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
                     txt_SOMAUMA.Text = _Rowview.Row[DmhangFields.Somauma.Name].ToString();
                     txt_SOHINHMA.Text = _Rowview.Row[DmhangFields.Sohinhma.Name].ToString();
                     txt_CAUTRUCIN.Text = _Rowview.Row[DmhangFields.Cautrucin.Name].ToString();
