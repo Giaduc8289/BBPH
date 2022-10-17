@@ -315,6 +315,7 @@
             this.txt_TENLYDO.Regular_Expression = null;
             this.txt_TENLYDO.Size = new System.Drawing.Size(174, 20);
             this.txt_TENLYDO.TabIndex = 9;
+            this.txt_TENLYDO.TabStop = false;
             // 
             // label12
             // 
@@ -337,6 +338,8 @@
             this.txt_MALYDO.Regular_Expression = null;
             this.txt_MALYDO.Size = new System.Drawing.Size(143, 20);
             this.txt_MALYDO.TabIndex = 8;
+            this.txt_MALYDO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MALYDO_KeyDown);
+            this.txt_MALYDO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_LYDO_Validating);
             // 
             // label13
             // 
@@ -479,6 +482,7 @@
             this.txt_MASP.Regular_Expression = null;
             this.txt_MASP.Size = new System.Drawing.Size(143, 20);
             this.txt_MASP.TabIndex = 3;
+            this.txt_MASP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MASP_KeyDown);
             this.txt_MASP.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASP_Validating);
             // 
             // label5
@@ -649,6 +653,7 @@
             this.txt_MAKHO.Regular_Expression = null;
             this.txt_MAKHO.Size = new System.Drawing.Size(143, 20);
             this.txt_MAKHO.TabIndex = 1;
+            this.txt_MAKHO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAKHO_KeyDown);
             this.txt_MAKHO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKHO_Validating);
             // 
             // label22

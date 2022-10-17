@@ -334,6 +334,9 @@ namespace GD.BBPH.APP.DANHMUC
             else
                 txt_CHUCVU.Text = _RowViewSelect[DmchucvuFields.Tenchucvu.Name].ToString();
         }
+
+       
+
         private DataRow checkMACHUCVU(string masieuthi, DataTable dt)
         {
             try
@@ -342,19 +345,32 @@ namespace GD.BBPH.APP.DANHMUC
             }
             catch { return null; }
         }
+
+        
         #endregion
 
         #region Shortcut Key
-        //private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMPHONGBAN frm_Dm = new FRM_DMPHONGBAN();
-        //        frm_Dm.Text = "Danh mục phòng ban";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMPHONGBAN = new DanhmucphongbanManager().SelectAllRDT();
-        //    }
-        //}
+        private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMBOPHAN frm_Bp = new FRM_DMBOPHAN();
+                frm_Bp.Text = "Danh mục bộ phận";
+                frm_Bp.ShowDialog();
+                DT_DMBOPHAN = new DmbophanManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MACHUCVU_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCHUCVU frm_CV = new FRM_DMCHUCVU();
+                frm_CV.Text = "Danh mục chức vụ";
+                frm_CV.ShowDialog();
+                DT_DMCHUCVU = new DmchucvuManager().SelectAllRDT();
+            }
+        }
         #endregion
 
         private void uiPanel0_Resize(object sender, EventArgs e)

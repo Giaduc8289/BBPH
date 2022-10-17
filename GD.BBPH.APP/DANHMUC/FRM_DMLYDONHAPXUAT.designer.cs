@@ -34,6 +34,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_MANHOM = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label2 = new GD.BBPH.CONTROL.LABEL();
             this.txt_TENNHOM = new GD.BBPH.CONTROL.TEXTBOX();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
@@ -46,8 +48,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAHIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_MANHOM = new GD.BBPH.CONTROL.TEXTBOX();
-            this.label2 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -124,6 +124,30 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(675, 535);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // txt_MANHOM
+            // 
+            this.txt_MANHOM.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MANHOM.BannerText = null;
+            this.txt_MANHOM.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_MANHOM.FormNametoShow = "";
+            this.txt_MANHOM.Is_DateTime = false;
+            this.txt_MANHOM.IsShowForm = false;
+            this.txt_MANHOM.Location = new System.Drawing.Point(76, 82);
+            this.txt_MANHOM.Name = "txt_MANHOM";
+            this.txt_MANHOM.Regular_Expression = null;
+            this.txt_MANHOM.Size = new System.Drawing.Size(138, 20);
+            this.txt_MANHOM.TabIndex = 2;
+            this.txt_MANHOM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANHOM_Validating);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 124;
+            this.label2.Text = "Mã nhóm";
+            // 
             // txt_TENNHOM
             // 
             this.txt_TENNHOM.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,7 +160,7 @@
             this.txt_TENNHOM.Name = "txt_TENNHOM";
             this.txt_TENNHOM.Regular_Expression = null;
             this.txt_TENNHOM.Size = new System.Drawing.Size(318, 20);
-            this.txt_TENNHOM.TabIndex = 121;
+            this.txt_TENNHOM.TabIndex = 3;
             // 
             // label1
             // 
@@ -270,29 +294,6 @@
             this.label22.Size = new System.Drawing.Size(47, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã lý do";
-            // 
-            // txt_MANHOM
-            // 
-            this.txt_MANHOM.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MANHOM.BannerText = null;
-            this.txt_MANHOM.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_MANHOM.FormNametoShow = "";
-            this.txt_MANHOM.Is_DateTime = false;
-            this.txt_MANHOM.IsShowForm = false;
-            this.txt_MANHOM.Location = new System.Drawing.Point(76, 82);
-            this.txt_MANHOM.Name = "txt_MANHOM";
-            this.txt_MANHOM.Regular_Expression = null;
-            this.txt_MANHOM.Size = new System.Drawing.Size(138, 20);
-            this.txt_MANHOM.TabIndex = 123;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 124;
-            this.label2.Text = "Mã nhóm";
             // 
             // FRM_LYDONHAPXUAT
             // 
