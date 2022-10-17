@@ -155,7 +155,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MACHUNGLOAI.Text = _Rowview.Row[DmhangFields.Machungloai.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmhangFields.Trongluong.Name].ToString();
                     txt_KICHTHUOC.Text = _Rowview.Row[DmhangFields.Kichthuoc.Name].ToString();
-                    txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Loaimuc.Name].ToString();
+                    txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
                     txt_SOMAUMA.Text = _Rowview.Row[DmhangFields.Somauma.Name].ToString();
                     txt_SOHINHMA.Text = _Rowview.Row[DmhangFields.Sohinhma.Name].ToString();
                     txt_CAUTRUCIN.Text = _Rowview.Row[DmhangFields.Cautrucin.Name].ToString();
@@ -207,7 +207,7 @@ namespace GD.BBPH.APP.DANHMUC
             _dmhangEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
             _dmhangEntity.Sohinh = Int32.Parse(txt_SOHINH.Text.Trim());
             _dmhangEntity.Cautrucin = txt_CAUTRUCIN.Text.Trim();
-            _dmhangEntity.Khoiluongmuc = Int32.Parse(txt_KHOILUONGMUC.Text.Trim());
+            _dmhangEntity.Khoiluongmuc = LIB.ConvertString.NumbertoDB(txt_KHOILUONGMUC.Text.Trim());
             _dmhangEntity.Mamang1 = txt_MAMANG1.Text.Trim();
             _dmhangEntity.Tenmang1 = txt_TENMANG1.Text.Trim();
             _dmhangEntity.Tlmanglop1 = LIB.ConvertString.NumbertoDB(txt_TLMANG1.Text.Trim());

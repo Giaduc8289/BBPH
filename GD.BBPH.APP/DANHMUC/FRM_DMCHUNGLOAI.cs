@@ -30,7 +30,8 @@ namespace GD.BBPH.APP.DANHMUC
         private GD.BBPH.CONTROL.JGridEX GRID_DMCHUNGLOAI = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
 
-        //private DataTable DT_DMPHONGBAN = new DataTable();
+        private DataTable DT_LOAIMUC = new DataTable(), DT_SOMAU = new DataTable(), DT_SOHINH = new DataTable()
+            , DT_QCTHANHPHAM = new DataTable(), DT_QCDONGGOI = new DataTable(), DT_QCLOAITHUNG = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
@@ -54,7 +55,12 @@ namespace GD.BBPH.APP.DANHMUC
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMCHUNGLOAI");
                         DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
 
-                        //DT_DMPHONGBAN = LIB.SESSION_START.DT_DMPHONGBAN;
+                        DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
+                        DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
+                        DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
+                        DT_QCTHANHPHAM = new DmquycachManager().SelectByManhomRDT("N06");
+                        DT_QCDONGGOI = new DmquycachManager().SelectByManhomRDT("N07");
+                        DT_QCLOAITHUNG = new DmquycachManager().SelectByManhomRDT("N08");
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -124,14 +130,14 @@ namespace GD.BBPH.APP.DANHMUC
                     DataRowView _Rowview = (DataRowView)this.BS_DMCHUNGLOAI.Current;
                     if (_Rowview != null)
                         MAHIEU_PK = _Rowview.Row[DmchungloaiFields.Machungloai.Name].ToString();
-                    txt_MACHUNGLOAI.Text    = _Rowview.Row[DmchungloaiFields.Machungloai.Name].ToString();
-                    txt_TENCHUNGLOAI.Text   = _Rowview.Row[DmchungloaiFields.Tenchungloai.Name].ToString();
-                    txt_KICHTHUOC.Text      = _Rowview.Row[DmchungloaiFields.Kichthuoc.Name].ToString();
-                    txt_TRONGLUONG.Text     = _Rowview.Row[DmchungloaiFields.Trongluong.Name].ToString();
-                    txt_SOMAU.Text          = _Rowview.Row[DmchungloaiFields.Somau.Name].ToString();
-                    txt_SOHINH.Text         = _Rowview.Row[DmchungloaiFields.Sohinh.Name].ToString();
-                    txt_LOAIMUC.Text        = _Rowview.Row[DmchungloaiFields.Loaimuc.Name].ToString();
-                    txt_GHICHU.Text         = _Rowview.Row[DmchungloaiFields.Ghichu.Name].ToString();
+                    txt_MACHUNGLOAI.Text = _Rowview.Row[DmchungloaiFields.Machungloai.Name].ToString();
+                    txt_TENCHUNGLOAI.Text = _Rowview.Row[DmchungloaiFields.Tenchungloai.Name].ToString();
+                    txt_KICHTHUOC.Text = _Rowview.Row[DmchungloaiFields.Kichthuoc.Name].ToString();
+                    txt_TRONGLUONG.Text = _Rowview.Row[DmchungloaiFields.Trongluong.Name].ToString();
+                    txt_SOMAU.Text = _Rowview.Row[DmchungloaiFields.Somau.Name].ToString();
+                    txt_SOHINH.Text = _Rowview.Row[DmchungloaiFields.Sohinh.Name].ToString();
+                    txt_LOAIMUC.Text = _Rowview.Row[DmchungloaiFields.Loaimuc.Name].ToString();
+                    txt_GHICHU.Text = _Rowview.Row[DmchungloaiFields.Ghichu.Name].ToString();
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMCHUNGLOAI_CurrentChanged"); }
@@ -275,16 +281,17 @@ namespace GD.BBPH.APP.DANHMUC
         #endregion
 
         #region Shortcut Key
-        //private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMPHONGBAN frm_Dm = new FRM_DMPHONGBAN();
-        //        frm_Dm.Text = "Danh mục phòng ban";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMPHONGBAN = new DanhmucphongbanManager().SelectAllRDT();
-        //    }
-        //}
+        private void txt_SOMAUMA_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách";
+                frm_Dm.ShowDialog();
+                DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
+            }
+        }
+
         #endregion
 
         private void uiPanel0_Resize(object sender, EventArgs e)
