@@ -84,7 +84,7 @@
             // 
             this.uiPanelManager1.BeginPanelInfo();
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(641, 542), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(659, 542), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(813, 542), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -114,7 +114,7 @@
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(644, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(659, 542);
+            this.uiPanel1.Size = new System.Drawing.Size(813, 542);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             this.uiPanel1.Click += new System.EventHandler(this.uiPanel1_Click);
@@ -153,7 +153,7 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(657, 518);
+            this.uiPanel1Container.Size = new System.Drawing.Size(811, 518);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // txt_GHICHU
@@ -170,7 +170,7 @@
             this.txt_GHICHU.Regular_Expression = null;
             this.txt_GHICHU.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_GHICHU.Size = new System.Drawing.Size(419, 116);
-            this.txt_GHICHU.TabIndex = 191;
+            this.txt_GHICHU.TabIndex = 8;
             // 
             // label8
             // 
@@ -187,10 +187,10 @@
             this.btn_IN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_IN.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_IN.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_IN.Location = new System.Drawing.Point(583, 397);
+            this.btn_IN.Location = new System.Drawing.Point(583, 380);
             this.btn_IN.Name = "btn_IN";
             this.btn_IN.Size = new System.Drawing.Size(75, 23);
-            this.btn_IN.TabIndex = 190;
+            this.btn_IN.TabIndex = 20;
             this.btn_IN.Text = "&In";
             this.btn_IN.UseVisualStyleBackColor = true;
             this.btn_IN.Click += new System.EventHandler(this.btn_IN_Click);
@@ -203,7 +203,7 @@
             this.btn_DIEUCHINH.Location = new System.Drawing.Point(185, 113);
             this.btn_DIEUCHINH.Name = "btn_DIEUCHINH";
             this.btn_DIEUCHINH.Size = new System.Drawing.Size(78, 23);
-            this.btn_DIEUCHINH.TabIndex = 189;
+            this.btn_DIEUCHINH.TabIndex = 11;
             this.btn_DIEUCHINH.Text = "Điều chỉnh";
             this.btn_DIEUCHINH.UseVisualStyleBackColor = true;
             this.btn_DIEUCHINH.Visible = false;
@@ -222,7 +222,7 @@
             this.txt_HOTEN.ReadOnly = true;
             this.txt_HOTEN.Regular_Expression = null;
             this.txt_HOTEN.Size = new System.Drawing.Size(288, 20);
-            this.txt_HOTEN.TabIndex = 8;
+            this.txt_HOTEN.TabIndex = 7;
             this.txt_HOTEN.TabStop = false;
             // 
             // txt_MANHANVIEN
@@ -237,7 +237,7 @@
             this.txt_MANHANVIEN.Name = "txt_MANHANVIEN";
             this.txt_MANHANVIEN.Regular_Expression = null;
             this.txt_MANHANVIEN.Size = new System.Drawing.Size(105, 20);
-            this.txt_MANHANVIEN.TabIndex = 7;
+            this.txt_MANHANVIEN.TabIndex = 6;
             this.txt_MANHANVIEN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANHANVIEN_Validating);
             // 
             // label6
@@ -266,7 +266,7 @@
             this.txt_NGAYBAOGIA.ReadOnly = true;
             this.txt_NGAYBAOGIA.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txt_NGAYBAOGIA.Size = new System.Drawing.Size(93, 20);
-            this.txt_NGAYBAOGIA.TabIndex = 6;
+            this.txt_NGAYBAOGIA.TabIndex = 5;
             this.txt_NGAYBAOGIA.TabStop = false;
             this.txt_NGAYBAOGIA.ValidatingType = typeof(System.DateTime);
             // 
@@ -282,7 +282,7 @@
             this.txt_SOBAOGIA.Name = "txt_SOBAOGIA";
             this.txt_SOBAOGIA.Regular_Expression = null;
             this.txt_SOBAOGIA.Size = new System.Drawing.Size(105, 20);
-            this.txt_SOBAOGIA.TabIndex = 5;
+            this.txt_SOBAOGIA.TabIndex = 4;
             this.txt_SOBAOGIA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_SOBAOGIA_KeyDown);
             this.txt_SOBAOGIA.Validating += new System.ComponentModel.CancelEventHandler(this.txt_SOBAOGIA_Validating);
             // 
@@ -301,10 +301,10 @@
             this.btn_Thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Thoat.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(664, 397);
+            this.btn_Thoat.Location = new System.Drawing.Point(664, 380);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 19;
+            this.btn_Thoat.TabIndex = 21;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -315,10 +315,10 @@
             this.btn_TIMKIEM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_TIMKIEM.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_TIMKIEM.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_TIMKIEM.Location = new System.Drawing.Point(502, 397);
+            this.btn_TIMKIEM.Location = new System.Drawing.Point(502, 380);
             this.btn_TIMKIEM.Name = "btn_TIMKIEM";
             this.btn_TIMKIEM.Size = new System.Drawing.Size(75, 23);
-            this.btn_TIMKIEM.TabIndex = 18;
+            this.btn_TIMKIEM.TabIndex = 19;
             this.btn_TIMKIEM.Text = "Tìm kiếm";
             this.btn_TIMKIEM.UseVisualStyleBackColor = true;
             // 
@@ -328,10 +328,10 @@
             this.btn_LAMMOI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_LAMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LAMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LAMMOI.Location = new System.Drawing.Point(420, 397);
+            this.btn_LAMMOI.Location = new System.Drawing.Point(420, 380);
             this.btn_LAMMOI.Name = "btn_LAMMOI";
             this.btn_LAMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LAMMOI.TabIndex = 17;
+            this.btn_LAMMOI.TabIndex = 18;
             this.btn_LAMMOI.Text = "Làm mới";
             this.btn_LAMMOI.UseVisualStyleBackColor = true;
             this.btn_LAMMOI.Click += new System.EventHandler(this.btn_LAMMOI_Click);
@@ -394,7 +394,7 @@
             this.txt_TENKHACH.ReadOnly = true;
             this.txt_TENKHACH.Regular_Expression = null;
             this.txt_TENKHACH.Size = new System.Drawing.Size(288, 20);
-            this.txt_TENKHACH.TabIndex = 4;
+            this.txt_TENKHACH.TabIndex = 3;
             this.txt_TENKHACH.TabStop = false;
             this.txt_TENKHACH.TextChanged += new System.EventHandler(this.txt_TENKHACH_TextChanged);
             // 
@@ -410,7 +410,7 @@
             this.txt_MAKHACH.Name = "txt_MAKHACH";
             this.txt_MAKHACH.Regular_Expression = null;
             this.txt_MAKHACH.Size = new System.Drawing.Size(105, 20);
-            this.txt_MAKHACH.TabIndex = 3;
+            this.txt_MAKHACH.TabIndex = 2;
             this.txt_MAKHACH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAKHACH_KeyDown);
             this.txt_MAKHACH.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKHACH_Validating);
             // 
@@ -431,8 +431,8 @@
             this.pne_CHITIET.Location = new System.Drawing.Point(14, 142);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(1913, 242);
-            this.pne_CHITIET.TabIndex = 11;
+            this.pne_CHITIET.Size = new System.Drawing.Size(2235, 225);
+            this.pne_CHITIET.TabIndex = 12;
             // 
             // btn_KHOIPHUC
             // 
@@ -440,10 +440,10 @@
             this.btn_KHOIPHUC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_KHOIPHUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 397);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 380);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 14;
+            this.btn_KHOIPHUC.TabIndex = 15;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -454,10 +454,10 @@
             this.btn_LUULAI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_LUULAI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(14, 397);
+            this.btn_LUULAI.Location = new System.Drawing.Point(14, 380);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LUULAI.TabIndex = 12;
+            this.btn_LUULAI.TabIndex = 13;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
             this.btn_LUULAI.Click += new System.EventHandler(this.btn_LUULAI_Click);
@@ -468,10 +468,10 @@
             this.btn_XOA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_XOA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(94, 397);
+            this.btn_XOA.Location = new System.Drawing.Point(94, 380);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 13;
+            this.btn_XOA.TabIndex = 14;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -482,10 +482,10 @@
             this.btn_THEMMOI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_THEMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(340, 397);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(340, 380);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 16;
+            this.btn_THEMMOI.TabIndex = 17;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -496,10 +496,10 @@
             this.btn_SUA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_SUA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(258, 397);
+            this.btn_SUA.Location = new System.Drawing.Point(258, 380);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 15;
+            this.btn_SUA.TabIndex = 16;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
@@ -531,7 +531,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1306, 548);
+            this.ClientSize = new System.Drawing.Size(1460, 548);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

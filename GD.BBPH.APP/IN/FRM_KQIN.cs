@@ -647,16 +647,38 @@ namespace GD.BBPH.APP.IN
         #endregion
 
         #region Shortcut Key
-        //private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMPHONGBAN frm_Dm = new FRM_DMPHONGBAN();
-        //        frm_Dm.Text = "Danh mục phòng ban";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMPHONGBAN = new DanhmucphongbanManager().SelectAllRDT();
-        //    }
-        //}
+        private void txt_MAMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMMAY frm_Dm = new FRM_DMMAY();
+                frm_Dm.Text = "Danh mục máy";
+                frm_Dm.ShowDialog();
+                DT_DMMAY = new DmmayManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MACONGNHAN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCONGNHAN frm_Dm = new FRM_DMCONGNHAN();
+                frm_Dm.Text = "Danh mục công nhân";
+                frm_Dm.ShowDialog();
+                DT_NHANVIEN = new DmcongnhanManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MASP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMHANG frm_Dm = new FRM_DMHANG();
+                frm_Dm.Text = "Danh mục hàng";
+                frm_Dm.ShowDialog();
+                DT_DMSP = new DmhangManager().SelectAllRDT();
+            }
+        }
         #endregion
 
         private void label12_Click(object sender, EventArgs e)

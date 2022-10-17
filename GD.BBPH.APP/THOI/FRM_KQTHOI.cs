@@ -462,6 +462,9 @@ namespace GD.BBPH.APP.THOI
             GRID_KQTHOICHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_KQTHOICHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
         }
+
+       
+
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
             //if (string.IsNullOrEmpty(MAHIEU_PK) && _KetquathoiManager.SelectOne(txt_MAMAY.Text.Trim()) != null)
@@ -644,16 +647,38 @@ namespace GD.BBPH.APP.THOI
         #endregion
 
         #region Shortcut Key
-        //private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMPHONGBAN frm_Dm = new FRM_DMPHONGBAN();
-        //        frm_Dm.Text = "Danh mục phòng ban";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMPHONGBAN = new DanhmucphongbanManager().SelectAllRDT();
-        //    }
-        //}
+        private void txt_MAMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMMAY frm_Dm = new FRM_DMMAY();
+                frm_Dm.Text = "Danh mục máy";
+                frm_Dm.ShowDialog();
+                DT_DMMAY = new DmmayManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MACONGNHAN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCONGNHAN frm_Dm = new FRM_DMCONGNHAN();
+                frm_Dm.Text = "Danh mục công nhân";
+                frm_Dm.ShowDialog();
+                DT_NHANVIEN = new DmcongnhanManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MANG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMMANG frm_Dm = new FRM_DMMANG();
+                frm_Dm.Text = "Danh mục màng";
+                frm_Dm.ShowDialog();
+                DT_DMMANG = new DmmangManager().SelectAllRDT();
+            }
+        }
         #endregion
 
         private void label12_Click(object sender, EventArgs e)

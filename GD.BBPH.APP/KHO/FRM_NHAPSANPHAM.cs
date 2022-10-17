@@ -32,7 +32,7 @@ namespace GD.BBPH.APP.KHO
         private GD.BBPH.CONTROL.JGridEX GRID_NHAPSANPHAMCHITIET = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET="" ;
         private string MASP = "", MAKHO ="" ;
-        private DataTable DT_DMSP = new DataTable(), DT_DMKHO = new DataTable();
+        private DataTable DT_DMSP = new DataTable(), DT_DMKHO = new DataTable(), DT_DMLYDONHAPXUAT = new DataTable();
 
 
 
@@ -61,6 +61,7 @@ namespace GD.BBPH.APP.KHO
 
                         DT_DMKHO = LIB.SESSION_START.DT_DMKHO;
                         DT_DMSP = LIB.SESSION_START.DM_HANG;
+                        DT_DMLYDONHAPXUAT = LIB.SESSION_START.DT_DMLYDONHAPXUAT;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -172,6 +173,7 @@ namespace GD.BBPH.APP.KHO
                     txt_SOHD.Text = _Rowview.Row[NhapkhosanphamFields.Sohopdongmua.Name].ToString();
 
                     txt_MASP_Validating(new object(), new CancelEventArgs());
+                    txt_LYDO_Validating(new object(), new CancelEventArgs());
                 }
                 //else
                 //{
@@ -560,19 +562,77 @@ namespace GD.BBPH.APP.KHO
             }
             catch { return null; }
         }
+
+       
+        private void txt_LYDO_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MALYDO.Text.Trim()) || DT_DMLYDONHAPXUAT == null || DT_DMLYDONHAPXUAT.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MALYDO.Text.Trim().ToUpper();
+            _RowViewSelect = checkmalydo(Str_MASIEUTHI, DT_DMLYDONHAPXUAT);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LYDONHAPXUAT.xml",
+                        DT_DMLYDONHAPXUAT, DmlydonhapxuatFields.Malydo.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MALYDO.Text = _RowViewSelect[DmlydonhapxuatFields.Malydo.Name].ToString();
+                txt_TENLYDO.Text = _RowViewSelect[DmlydonhapxuatFields.Tenlydo.Name].ToString();
+
+            }
+            else
+            {
+                txt_TENLYDO.Text = _RowViewSelect[DmlydonhapxuatFields.Tenlydo.Name].ToString();
+
+            }
+        }
+        private DataRow checkmalydo(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(DmlydonhapxuatFields.Malydo.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
+
+        
         #endregion
 
         #region Shortcut Key
-        //private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMPHONGBAN frm_Dm = new FRM_DMPHONGBAN();
-        //        frm_Dm.Text = "Danh mục phòng ban";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMPHONGBAN = new DanhmucphongbanManager().SelectAllRDT();
-        //    }
-        //}
+        private void txt_MAKHO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMKHO frm_Dm = new FRM_DMKHO();
+                frm_Dm.Text = "Danh mục kho";
+                frm_Dm.ShowDialog();
+                DT_DMKHO = new DmkhoManager().SelectAllRDT();
+            }
+        }
+        private void txt_MASP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMHANG frm_Dm = new FRM_DMHANG();
+                frm_Dm.Text = "Danh mục hàng";
+                frm_Dm.ShowDialog();
+                DT_DMSP = new DmhangManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MALYDO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_LYDONHAPXUAT frm_Dm = new FRM_LYDONHAPXUAT();
+                frm_Dm.Text = "Danh mục lý do";
+                frm_Dm.ShowDialog();
+                DT_DMLYDONHAPXUAT = new DmlydonhapxuatManager().SelectAllRDT();
+            }
+        }
+
         #endregion
 
         private void label12_Click(object sender, EventArgs e)

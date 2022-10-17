@@ -34,6 +34,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
+            this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
             this.label14 = new GD.BBPH.CONTROL.LABEL();
             this.txt_SOHD = new GD.BBPH.CONTROL.TEXTBOX();
             this.label15 = new GD.BBPH.CONTROL.LABEL();
@@ -71,8 +73,6 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_MAKHO = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
-            this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -174,6 +174,34 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(845, 535);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // btn_XOADONG
+            // 
+            this.btn_XOADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_XOADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_XOADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_XOADONG.Enabled = false;
+            this.btn_XOADONG.Location = new System.Drawing.Point(153, 228);
+            this.btn_XOADONG.Name = "btn_XOADONG";
+            this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_XOADONG.TabIndex = 13;
+            this.btn_XOADONG.Text = "Xóa dòng";
+            this.btn_XOADONG.UseVisualStyleBackColor = true;
+            this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
+            // 
+            // btn_THEMDONG
+            // 
+            this.btn_THEMDONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_THEMDONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_THEMDONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_THEMDONG.Enabled = false;
+            this.btn_THEMDONG.Location = new System.Drawing.Point(19, 228);
+            this.btn_THEMDONG.Name = "btn_THEMDONG";
+            this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_THEMDONG.TabIndex = 12;
+            this.btn_THEMDONG.Text = "Thêm dòng";
+            this.btn_THEMDONG.UseVisualStyleBackColor = true;
+            this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -195,7 +223,7 @@
             this.txt_SOHD.Name = "txt_SOHD";
             this.txt_SOHD.Regular_Expression = null;
             this.txt_SOHD.Size = new System.Drawing.Size(174, 20);
-            this.txt_SOHD.TabIndex = 10;
+            this.txt_SOHD.TabIndex = 11;
             // 
             // label15
             // 
@@ -217,7 +245,7 @@
             this.txt_LENHSX.Name = "txt_LENHSX";
             this.txt_LENHSX.Regular_Expression = null;
             this.txt_LENHSX.Size = new System.Drawing.Size(143, 20);
-            this.txt_LENHSX.TabIndex = 9;
+            this.txt_LENHSX.TabIndex = 10;
             // 
             // label16
             // 
@@ -249,7 +277,8 @@
             this.txt_TENLYDO.Name = "txt_TENLYDO";
             this.txt_TENLYDO.Regular_Expression = null;
             this.txt_TENLYDO.Size = new System.Drawing.Size(174, 20);
-            this.txt_TENLYDO.TabIndex = 8;
+            this.txt_TENLYDO.TabIndex = 9;
+            this.txt_TENLYDO.TabStop = false;
             // 
             // label12
             // 
@@ -271,7 +300,9 @@
             this.txt_MALYDO.Name = "txt_MALYDO";
             this.txt_MALYDO.Regular_Expression = null;
             this.txt_MALYDO.Size = new System.Drawing.Size(143, 20);
-            this.txt_MALYDO.TabIndex = 7;
+            this.txt_MALYDO.TabIndex = 8;
+            this.txt_MALYDO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MALYDO_KeyDown);
+            this.txt_MALYDO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_LYDO_Validating);
             // 
             // label13
             // 
@@ -303,7 +334,7 @@
             this.txt_SOKG.Name = "txt_SOKG";
             this.txt_SOKG.Regular_Expression = null;
             this.txt_SOKG.Size = new System.Drawing.Size(174, 20);
-            this.txt_SOKG.TabIndex = 6;
+            this.txt_SOKG.TabIndex = 7;
             // 
             // label10
             // 
@@ -335,7 +366,7 @@
             this.txt_SOM.Name = "txt_SOM";
             this.txt_SOM.Regular_Expression = null;
             this.txt_SOM.Size = new System.Drawing.Size(174, 20);
-            this.txt_SOM.TabIndex = 5;
+            this.txt_SOM.TabIndex = 6;
             // 
             // label7
             // 
@@ -357,7 +388,7 @@
             this.txt_SOLUONG.Name = "txt_SOLUONG";
             this.txt_SOLUONG.Regular_Expression = null;
             this.txt_SOLUONG.Size = new System.Drawing.Size(143, 20);
-            this.txt_SOLUONG.TabIndex = 3;
+            this.txt_SOLUONG.TabIndex = 5;
             // 
             // label8
             // 
@@ -391,6 +422,7 @@
             this.txt_TENSP.Regular_Expression = null;
             this.txt_TENSP.Size = new System.Drawing.Size(174, 20);
             this.txt_TENSP.TabIndex = 4;
+            this.txt_TENSP.TabStop = false;
             // 
             // label4
             // 
@@ -412,7 +444,8 @@
             this.txt_MASP.Name = "txt_MASP";
             this.txt_MASP.Regular_Expression = null;
             this.txt_MASP.Size = new System.Drawing.Size(143, 20);
-            this.txt_MASP.TabIndex = 2;
+            this.txt_MASP.TabIndex = 3;
+            this.txt_MASP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MASP_KeyDown);
             this.txt_MASP.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASP_Validating);
             // 
             // label5
@@ -446,6 +479,7 @@
             this.txt_TENKHO.Regular_Expression = null;
             this.txt_TENKHO.Size = new System.Drawing.Size(174, 20);
             this.txt_TENKHO.TabIndex = 2;
+            this.txt_TENKHO.TabStop = false;
             // 
             // label17
             // 
@@ -464,7 +498,7 @@
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
             this.pne_CHITIET.Size = new System.Drawing.Size(830, 210);
-            this.pne_CHITIET.TabIndex = 13;
+            this.pne_CHITIET.TabIndex = 14;
             // 
             // label1
             // 
@@ -494,7 +528,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(432, 492);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 19;
+            this.btn_Thoat.TabIndex = 20;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -508,7 +542,7 @@
             this.btn_KHOIPHUC.Location = new System.Drawing.Point(185, 492);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 16;
+            this.btn_KHOIPHUC.TabIndex = 17;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -522,7 +556,7 @@
             this.btn_LUULAI.Location = new System.Drawing.Point(25, 492);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LUULAI.TabIndex = 14;
+            this.btn_LUULAI.TabIndex = 15;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
             this.btn_LUULAI.Click += new System.EventHandler(this.btn_LUULAI_Click);
@@ -536,7 +570,7 @@
             this.btn_XOA.Location = new System.Drawing.Point(104, 492);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 15;
+            this.btn_XOA.TabIndex = 16;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -550,7 +584,7 @@
             this.btn_THEMMOI.Location = new System.Drawing.Point(350, 492);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 18;
+            this.btn_THEMMOI.TabIndex = 19;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -564,7 +598,7 @@
             this.btn_SUA.Location = new System.Drawing.Point(269, 492);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 17;
+            this.btn_SUA.TabIndex = 18;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
@@ -582,6 +616,7 @@
             this.txt_MAKHO.Regular_Expression = null;
             this.txt_MAKHO.Size = new System.Drawing.Size(143, 20);
             this.txt_MAKHO.TabIndex = 1;
+            this.txt_MAKHO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAKHO_KeyDown);
             this.txt_MAKHO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKHO_Validating);
             // 
             // label22
@@ -592,34 +627,6 @@
             this.label22.Size = new System.Drawing.Size(43, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã kho";
-            // 
-            // btn_XOADONG
-            // 
-            this.btn_XOADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.btn_XOADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
-            this.btn_XOADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOADONG.Enabled = false;
-            this.btn_XOADONG.Location = new System.Drawing.Point(153, 228);
-            this.btn_XOADONG.Name = "btn_XOADONG";
-            this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
-            this.btn_XOADONG.TabIndex = 12;
-            this.btn_XOADONG.Text = "Xóa dòng";
-            this.btn_XOADONG.UseVisualStyleBackColor = true;
-            this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
-            // 
-            // btn_THEMDONG
-            // 
-            this.btn_THEMDONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.btn_THEMDONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
-            this.btn_THEMDONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMDONG.Enabled = false;
-            this.btn_THEMDONG.Location = new System.Drawing.Point(19, 228);
-            this.btn_THEMDONG.Name = "btn_THEMDONG";
-            this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
-            this.btn_THEMDONG.TabIndex = 11;
-            this.btn_THEMDONG.Text = "Thêm dòng";
-            this.btn_THEMDONG.UseVisualStyleBackColor = true;
-            this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
             // 
             // FRM_NHAPSANPHAM
             // 

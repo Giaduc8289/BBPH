@@ -239,6 +239,8 @@ namespace GD.BBPH.APP.DANHMUC
         }
         #endregion
 
+
+        #region Validate
         private void txt_MACD_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
@@ -296,7 +298,32 @@ namespace GD.BBPH.APP.DANHMUC
             }
             catch { return null; }
         }
+        #endregion
 
+        #region shortcut
+        private void txt_MANHOMQC_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMNHOMQUYCACH frm_Nqc = new FRM_DMNHOMQUYCACH();
+                frm_Nqc.Text = "Danh mục nhóm quy cách";
+                frm_Nqc.ShowDialog();
+                DT_DMNHOMQUYCACH = new DmnhomquycachManager().SelectAllRDT();
+            }
+        }
+
+  
+        private void txt_MACD_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCONGDOAN frm_Nqc = new FRM_DMCONGDOAN();
+                frm_Nqc.Text = "Danh mục công đoạn";
+                frm_Nqc.ShowDialog();
+                DT_DMCONGDOAN = new DmcongdoanManager().SelectAllRDT();
+            }
+        }
+        #endregion
         private string Save_Data(string _str_DMCHUONG_PK)
         {
             DmquycachEntity _DmquycachEntity = new DmquycachEntity();
