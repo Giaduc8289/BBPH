@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 15, 2022 3:20:27 PM
+// Code is generated on: Monday, October 17, 2022 2:56:17 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -644,7 +644,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Khotu property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "congsuatmay"."Khotu"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Khotu
 		{
@@ -655,7 +655,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Khoden property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "congsuatmay"."Khoden"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Khoden
 		{
@@ -666,7 +666,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Chieudaitu property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "congsuatmay"."Chieudaitu"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Chieudaitu
 		{
@@ -677,7 +677,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Chieudaiden property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "congsuatmay"."Chieudaiden"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Chieudaiden
 		{
@@ -688,7 +688,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Dodaytu property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "congsuatmay"."Dodaytu"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Dodaytu
 		{
@@ -699,7 +699,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Dodayden property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "congsuatmay"."Dodayden"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Dodayden
 		{
@@ -710,7 +710,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Tocdo property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "congsuatmay"."Tocdo"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Tocdo
 		{

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 15, 2022 3:20:27 PM
+// Code is generated on: Monday, October 17, 2022 2:56:17 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -728,7 +728,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Somet property of the Entity Ketquathoi<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquathoi"."Somet"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Somet
 		{
@@ -739,7 +739,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Sokg property of the Entity Ketquathoi<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquathoi"."Sokg"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Sokg
 		{
@@ -750,7 +750,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Sokgquydoi property of the Entity Ketquathoi<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquathoi"."Sokgquydoi"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Sokgquydoi
 		{
@@ -761,7 +761,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Chenhlechkg property of the Entity Ketquathoi<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquathoi"."Chenhlechkg"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Chenhlechkg
 		{
@@ -783,7 +783,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Phelieuthucte property of the Entity Ketquathoi<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquathoi"."Phelieuthucte"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Phelieuthucte
 		{
@@ -794,7 +794,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Tongsp property of the Entity Ketquathoi<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquathoi"."Tongsp"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Tongsp
 		{
@@ -827,7 +827,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Thoigianchuanbi property of the Entity Ketquathoi<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquathoi"."Thoigianchuanbi"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Thoigianchuanbi
 		{
@@ -838,7 +838,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Thoigiansuco property of the Entity Ketquathoi<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquathoi"."Thoigiansuco"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Thoigiansuco
 		{
@@ -849,7 +849,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Sokgdukiendat property of the Entity Ketquathoi<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquathoi"."Sokgdukiendat"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Sokgdukiendat
 		{

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 15, 2022 3:20:27 PM
+// Code is generated on: Monday, October 17, 2022 2:56:17 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -707,7 +707,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Trongluong property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Trongluong"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Trongluong
 		{
@@ -751,7 +751,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Khoiluongmuc property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Khoiluongmuc"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Khoiluongmuc
 		{
@@ -795,7 +795,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Tlmanglop1 property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Tlmanglop1"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Tlmanglop1
 		{
@@ -806,7 +806,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Tlkeolop1 property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Tlkeolop1"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Tlkeolop1
 		{
@@ -839,7 +839,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Tlmanglop2 property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Tlmanglop2"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Tlmanglop2
 		{
@@ -850,7 +850,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Tlkeolop2 property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Tlkeolop2"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Tlkeolop2
 		{
@@ -861,7 +861,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Dinhluongkeo property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Dinhluongkeo"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Dinhluongkeo
 		{
@@ -1004,7 +1004,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Rong property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Rong"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Rong
 		{
@@ -1015,7 +1015,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Dai property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Dai"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Dai
 		{
