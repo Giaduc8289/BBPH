@@ -1027,6 +1027,24 @@ namespace GD.BBPH.APP.DANHMUC
 
         #endregion
 
+        #region Text Changed
+        private void txt_KICHTHUOC_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txt_KICHTHUOC.Text.Length > 0)
+                {
+                    int vtriX = txt_KICHTHUOC.Text.ToUpper().IndexOf('X');
+                    if (vtriX <= 0) return;
+                    txt_RONG.Text = txt_KICHTHUOC.Text.Substring(0, vtriX);
+                    txt_DAI.Text = txt_KICHTHUOC.Text.Substring(vtriX+1);
+                }
+            }
+            catch { }
+        }
+
+        #endregion
+
         #region Shortcut Key
         private void txt_MAKHACH_KeyDown(object sender, KeyEventArgs e)
         {
