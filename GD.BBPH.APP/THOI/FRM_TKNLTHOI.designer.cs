@@ -257,6 +257,7 @@
             this.txt_Manguyenlieu.Regular_Expression = null;
             this.txt_Manguyenlieu.Size = new System.Drawing.Size(138, 20);
             this.txt_Manguyenlieu.TabIndex = 2;
+            this.txt_Manguyenlieu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MANGUYENLIEU_KeyDown);
             this.txt_Manguyenlieu.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANGUYENLIEU_Validating);
             // 
             // txt_Tennguyenlieu

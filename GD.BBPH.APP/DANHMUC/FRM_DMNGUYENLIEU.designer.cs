@@ -153,7 +153,7 @@
             this.txt_MANHOM.Regular_Expression = null;
             this.txt_MANHOM.Size = new System.Drawing.Size(100, 20);
             this.txt_MANHOM.TabIndex = 123;
-            this.txt_MANHOM.TabStop = false;
+            this.txt_MANHOM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MANHOMNGUYENLIEU_KeyDown);
             this.txt_MANHOM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANHOMNGUYENLIEU_Validating);
             // 
             // label1

@@ -294,6 +294,19 @@ namespace GD.BBPH.APP.DANHMUC
         }
         #endregion
 
+
+        #region Shortcut Key
+        private void txt_MADONGMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMDONGMAY frm_Dm = new FRM_DMDONGMAY();
+                frm_Dm.Text = "Danh mục dòng máy";
+                frm_Dm.ShowDialog();
+                DT_DMDONGMAY = new DmdongmayManager().SelectAllRDT();
+            }
+        }
+        #endregion
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)

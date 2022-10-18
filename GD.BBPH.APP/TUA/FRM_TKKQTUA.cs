@@ -644,6 +644,40 @@ namespace GD.BBPH.APP.TUA
         }
         #endregion
 
+        #region Shortcut Key
+        private void txt_MAMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMMAY frm_Dm = new FRM_DMMAY();
+                frm_Dm.Text = "Danh mục máy";
+                frm_Dm.ShowDialog();
+                DT_DMMAY = new DmmayManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MACONGNHAN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCONGNHAN frm_Dm = new FRM_DMCONGNHAN();
+                frm_Dm.Text = "Danh mục công nhân";
+                frm_Dm.ShowDialog();
+                DT_DMCONGNHAN = new DmcongnhanManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MASANPHAM_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMHANG frm_Dm = new FRM_DMHANG();
+                frm_Dm.Text = "Danh mục sản phẩm";
+                frm_Dm.ShowDialog();
+                DT_HANG = new DmhangManager().SelectAllRDT();
+            }
+        }
+        #endregion
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)

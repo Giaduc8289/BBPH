@@ -172,6 +172,8 @@
             this.txt_TENLYDO.Regular_Expression = null;
             this.txt_TENLYDO.Size = new System.Drawing.Size(132, 20);
             this.txt_TENLYDO.TabIndex = 8;
+            this.txt_TENLYDO.TabStop = false;
+            this.txt_TENLYDO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MALYDO_Validating);
             // 
             // label6
             // 
@@ -209,6 +211,7 @@
             this.txt_TENKHO.Regular_Expression = null;
             this.txt_TENKHO.Size = new System.Drawing.Size(138, 20);
             this.txt_TENKHO.TabIndex = 2;
+            this.txt_TENKHO.TabStop = false;
             this.txt_TENKHO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKHO_Validating);
             // 
             // label5
@@ -283,6 +286,7 @@
             this.txt_MAKHO.Regular_Expression = null;
             this.txt_MAKHO.Size = new System.Drawing.Size(127, 20);
             this.txt_MAKHO.TabIndex = 1;
+            this.txt_MAKHO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAKHO_KeyDown);
             this.txt_MAKHO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKHO_Validating);
             // 
             // label4
@@ -326,6 +330,8 @@
             this.txt_MALYDO.Regular_Expression = null;
             this.txt_MALYDO.Size = new System.Drawing.Size(138, 20);
             this.txt_MALYDO.TabIndex = 7;
+            this.txt_MALYDO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MALYDO_KeyDown);
+            this.txt_MALYDO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MALYDO_Validating);
             // 
             // txt_MANGUYENLIEU
             // 
@@ -340,6 +346,7 @@
             this.txt_MANGUYENLIEU.Regular_Expression = null;
             this.txt_MANGUYENLIEU.Size = new System.Drawing.Size(138, 20);
             this.txt_MANGUYENLIEU.TabIndex = 3;
+            this.txt_MANGUYENLIEU.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MANGUYENLIEU_KeyDown);
             this.txt_MANGUYENLIEU.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANGUYENLIEU_Validating);
             // 
             // txt_TENNGUYENLIEU
