@@ -1029,6 +1029,7 @@
     <Content Include="Logo-App-Ico.ico" />
     <Content Include="XMLCONFIG\FRM_CTPTMANG.xml" />
     <Content Include="XMLCONFIG\FRM_CTPTMANGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCHUNGLOAI.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGNHAN_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAY.xml">
       <SubType>Designer</SubType>
