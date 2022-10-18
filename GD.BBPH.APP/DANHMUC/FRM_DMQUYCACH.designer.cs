@@ -169,6 +169,7 @@
             this.txt_MANHOMQC.Regular_Expression = null;
             this.txt_MANHOMQC.Size = new System.Drawing.Size(114, 20);
             this.txt_MANHOMQC.TabIndex = 2;
+            this.txt_MANHOMQC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MANHOMQC_KeyDown);
             this.txt_MANHOMQC.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANHOMQC_Validating);
             // 
             // label2
@@ -193,6 +194,7 @@
             this.txt_MACD.Regular_Expression = null;
             this.txt_MACD.Size = new System.Drawing.Size(114, 20);
             this.txt_MACD.TabIndex = 3;
+            this.txt_MACD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MACD_KeyDown);
             this.txt_MACD.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACD_Validating);
             // 
             // label1
@@ -335,7 +337,7 @@
             this.ClientSize = new System.Drawing.Size(992, 548);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_DMQUYCACH";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DMQUYCACH_FormClosing);

@@ -310,6 +310,7 @@
             this.txt_MACHUNGLOAI.Regular_Expression = null;
             this.txt_MACHUNGLOAI.Size = new System.Drawing.Size(82, 20);
             this.txt_MACHUNGLOAI.TabIndex = 5;
+            this.txt_MACHUNGLOAI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MACHUNGLOAI_KeyDown);
             this.txt_MACHUNGLOAI.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACHUNGLOAI_Validating);
             // 
             // label25
@@ -400,6 +401,7 @@
             this.txt_MAQCTHANHPHAM.Regular_Expression = null;
             this.txt_MAQCTHANHPHAM.Size = new System.Drawing.Size(82, 20);
             this.txt_MAQCTHANHPHAM.TabIndex = 29;
+            this.txt_MAQCTHANHPHAM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAQCTHANHPHAM_KeyDown);
             this.txt_MAQCTHANHPHAM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAQCTHANHPHAM_Validating);
             // 
             // label24
@@ -488,6 +490,7 @@
             this.txt_MAMANG2.Regular_Expression = null;
             this.txt_MAMANG2.Size = new System.Drawing.Size(82, 20);
             this.txt_MAMANG2.TabIndex = 23;
+            this.txt_MAMANG2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAMANG_KeyDown);
             this.txt_MAMANG2.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMANG2_Validating);
             // 
             // label23
@@ -576,6 +579,7 @@
             this.txt_MAMANG1.Regular_Expression = null;
             this.txt_MAMANG1.Size = new System.Drawing.Size(82, 20);
             this.txt_MAMANG1.TabIndex = 19;
+            this.txt_MAMANG1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAMANG_KeyDown);
             this.txt_MAMANG1.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMANG1_Validating);
             // 
             // label14
@@ -647,6 +651,7 @@
             this.txt_SOMAUMA.Regular_Expression = null;
             this.txt_SOMAUMA.Size = new System.Drawing.Size(54, 20);
             this.txt_SOMAUMA.TabIndex = 13;
+            this.txt_SOMAUMA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_SOMAUMA_KeyDown);
             this.txt_SOMAUMA.Validating += new System.ComponentModel.CancelEventHandler(this.txt_SOMAUMA_Validating);
             // 
             // txt_DAI
@@ -751,6 +756,7 @@
             this.txt_MALOAIMUC.Regular_Expression = null;
             this.txt_MALOAIMUC.Size = new System.Drawing.Size(82, 20);
             this.txt_MALOAIMUC.TabIndex = 11;
+            this.txt_MALOAIMUC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MALOAIMUC_KeyDown);
             this.txt_MALOAIMUC.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MALOAIMUC_Validating);
             // 
             // txt_MAQCLOAITHUNG
@@ -766,6 +772,7 @@
             this.txt_MAQCLOAITHUNG.Regular_Expression = null;
             this.txt_MAQCLOAITHUNG.Size = new System.Drawing.Size(82, 20);
             this.txt_MAQCLOAITHUNG.TabIndex = 33;
+            this.txt_MAQCLOAITHUNG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAQCLOAITHUNG_KeyDown);
             this.txt_MAQCLOAITHUNG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAQCLOAITHUNG_Validating);
             // 
             // txt_MAQCDONGGOI
@@ -781,6 +788,7 @@
             this.txt_MAQCDONGGOI.Regular_Expression = null;
             this.txt_MAQCDONGGOI.Size = new System.Drawing.Size(82, 20);
             this.txt_MAQCDONGGOI.TabIndex = 31;
+            this.txt_MAQCDONGGOI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAQCDONGGOI_KeyDown);
             this.txt_MAQCDONGGOI.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAQCDONGGOI_Validating);
             // 
             // txt_KHOILUONGMUC
@@ -1114,6 +1122,7 @@
             this.txt_MAKHACH.Regular_Expression = null;
             this.txt_MAKHACH.Size = new System.Drawing.Size(82, 20);
             this.txt_MAKHACH.TabIndex = 2;
+            this.txt_MAKHACH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAKHACH_KeyDown);
             this.txt_MAKHACH.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKHACH_Validating);
             // 
             // label2

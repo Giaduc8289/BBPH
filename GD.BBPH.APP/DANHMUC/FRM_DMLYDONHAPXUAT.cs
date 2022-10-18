@@ -26,7 +26,7 @@ namespace GD.BBPH.APP.DANHMUC
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
         private DataTable DT_DMLYDONHAPXUAT = new DataTable();
         private BindingSource BS_LYDONHAPXUAT = new BindingSource();
-        private DataRow r_Insert = null;
+        private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_LYDONHAPXUAT = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
@@ -121,7 +121,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MAHIEU.Text = _Rowview.Row[DmlydonhapxuatFields.Malydo.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmlydonhapxuatFields.Tenlydo.Name].ToString();
                     txt_MANHOM.Text = _Rowview.Row[DmlydonhapxuatFields.Manhom.Name].ToString();
-                    txt_TENNHOM.Text = _Rowview.Row[DmlydonhapxuatFields.Tennhom.Name].ToString();
+                    txt_MANHOM_Validating(new object(), new CancelEventArgs());
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_LYDONHAPXUAT_CurrentChanged"); }
@@ -169,7 +169,7 @@ namespace GD.BBPH.APP.DANHMUC
             MAHIEU_PK = "";
             txt_MAHIEU.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENNHOM }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_LYDONHAPXUAT.Enabled = false;
         }
@@ -179,7 +179,7 @@ namespace GD.BBPH.APP.DANHMUC
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MAHIEU }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MAHIEU, txt_TENNHOM }));
                 txt_TENHIEU.Focus();
             }
             GRID_LYDONHAPXUAT.Enabled = false;
@@ -255,6 +255,44 @@ namespace GD.BBPH.APP.DANHMUC
         }
         #endregion
 
+        #region Validate
+
+        private void txt_MANHOM_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MANHOM.Text.Trim()) || DT_DMLYDONHAPXUAT == null || DT_DMLYDONHAPXUAT.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MANHOM.Text.Trim().ToUpper();
+            _RowViewSelect = checkmanhomlydo(Str_MASIEUTHI, DT_DMLYDONHAPXUAT);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LYDONHAPXUAT.xml",
+                        DT_DMLYDONHAPXUAT, DmlydonhapxuatFields.Malydo.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MANHOM.Text = _RowViewSelect[DmlydonhapxuatFields.Malydo.Name].ToString();
+                txt_TENNHOM.Text = _RowViewSelect[DmlydonhapxuatFields.Tenlydo.Name].ToString();
+
+            }
+            else
+            {
+                txt_TENNHOM.Text = _RowViewSelect[DmlydonhapxuatFields.Tenlydo.Name].ToString();
+
+            }
+        }
+
+        private DataRow checkmanhomlydo(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(DmlydonhapxuatFields.Malydo.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
+
+        #endregion
+
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)
@@ -262,6 +300,8 @@ namespace GD.BBPH.APP.DANHMUC
             else
                 GRID_LYDONHAPXUAT.ColumnAutoResize = false;
         }
+
+        
 
         private void FRM_LYDONHAPXUAT_FormClosing(object sender, FormClosingEventArgs e)
         {

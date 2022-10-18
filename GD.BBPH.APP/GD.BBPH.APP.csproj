@@ -1072,6 +1072,7 @@
     <Content Include="XMLCONFIG\FRM_KQCHIACHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOI.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOICHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_LYDONHAPXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDOXUATKHO.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANGCHITIET.xml">

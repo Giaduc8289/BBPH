@@ -586,6 +586,7 @@
             this.txt_MACONGNHAN.Regular_Expression = null;
             this.txt_MACONGNHAN.Size = new System.Drawing.Size(143, 20);
             this.txt_MACONGNHAN.TabIndex = 4;
+            this.txt_MACONGNHAN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MACONGNHAN_KeyDown);
             this.txt_MACONGNHAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACONGNHAN_Validating);
             // 
             // label3
@@ -610,6 +611,7 @@
             this.txt_MAMANG.Regular_Expression = null;
             this.txt_MAMANG.Size = new System.Drawing.Size(143, 20);
             this.txt_MAMANG.TabIndex = 5;
+            this.txt_MAMANG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MANG_KeyDown);
             this.txt_MAMANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMANG_Validating);
             // 
             // label4
@@ -783,6 +785,7 @@
             this.txt_MAMAY.Regular_Expression = null;
             this.txt_MAMAY.Size = new System.Drawing.Size(143, 20);
             this.txt_MAMAY.TabIndex = 2;
+            this.txt_MAMAY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAMAY_KeyDown);
             this.txt_MAMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMAY_Validating);
             // 
             // label22

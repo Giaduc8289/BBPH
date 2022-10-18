@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 15, 2022 3:20:27 PM
+// Code is generated on: Monday, October 17, 2022 2:56:17 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -764,7 +764,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Dauratua property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Dauratua"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Dauratua
 		{
@@ -775,7 +775,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The ManginMet property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."ManginMet"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> ManginMet
 		{
@@ -786,7 +786,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The ManginKg property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."ManginKg"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> ManginKg
 		{
@@ -797,7 +797,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The MangcapMet property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."MangcapMet"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> MangcapMet
 		{
@@ -808,7 +808,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The MangcapKg property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."MangcapKg"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> MangcapKg
 		{
@@ -830,7 +830,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The ThucteMet property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."ThucteMet"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> ThucteMet
 		{
@@ -841,7 +841,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The ThucteKg property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."ThucteKg"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> ThucteKg
 		{
@@ -874,7 +874,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Thoigianchuanbi property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Thoigianchuanbi"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Thoigianchuanbi
 		{
@@ -885,7 +885,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Thoigiansuco property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Thoigiansuco"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Thoigiansuco
 		{
@@ -896,7 +896,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Thuctekeo property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Thuctekeo"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Thuctekeo
 		{
@@ -907,7 +907,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Thuctedongran property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Thuctedongran"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Thuctedongran
 		{
@@ -918,7 +918,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Thuctedungmoi property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Thuctedungmoi"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Thuctedungmoi
 		{
@@ -929,7 +929,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Phein property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Phein"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Phein
 		{
@@ -940,7 +940,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Pheghep property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Pheghep"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Pheghep
 		{
@@ -951,7 +951,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The PheNcc property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."PheNCC"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> PheNcc
 		{
@@ -962,7 +962,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The PheSx property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."PheSX"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> PheSx
 		{
@@ -973,7 +973,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Phethoi property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Phethoi"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Phethoi
 		{
@@ -984,7 +984,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Pheintui property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Pheintui"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Pheintui
 		{
@@ -995,7 +995,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Phegheptui property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Phegheptui"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Phegheptui
 		{
@@ -1006,7 +1006,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The PhethoiNcc property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Phethoi_NCC"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> PhethoiNcc
 		{
@@ -1017,7 +1017,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Phesxtui property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Phesxtui"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 2, 0<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Phesxtui
 		{

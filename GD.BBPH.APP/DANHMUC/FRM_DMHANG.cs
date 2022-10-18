@@ -685,111 +685,96 @@ namespace GD.BBPH.APP.DANHMUC
         #endregion
 
         #region Shortcut Key
-        //private void txt_MAKHACH_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMKHACH frm_Dm = new FRM_DMKHACH();
-        //        frm_Dm.Text = "Danh mục khách hàng";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMKHACH = new DanhmuckhachManager().SelectAllRDT();
-        //    }
-        //}
-        //private void txt_MAMANH_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMMANH frm_Dm = new FRM_DMMANH();
-        //        frm_Dm.Text = "Danh mục manh";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMMANH = new DanhmucmanhManager().SelectAllRDT();
-        //    }
-        //}
-        //private void txt_MASOI_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMSOI frm_Dm = new FRM_DMSOI();
-        //        frm_Dm.Text = "Danh mục sợi";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMSOI = new DanhmucsoiManager().SelectAllRDT();
-        //    }
-        //}
-        //private void txt_DONGMAYIN_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMDONGMAYIN frm_Dm = new FRM_DMDONGMAYIN();
-        //        frm_Dm.Text = "Danh mục dòng máy in";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMDONGMAYIN = new DongmayinManager().SelectAllRDT();
-        //    }
-        //}
-
-        //private void txt_KIEUGAP_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_QCGAP frm_Dm = new FRM_QCGAP();
-        //        frm_Dm.Text = "Danh mục quy cách gấp";
-        //        frm_Dm.ShowDialog();
-        //        DT_QCGAP = new QuycachgapManager().SelectAllRDT();
-        //    }
-        //}
-
-        //private void txt_KIEUVIENMIENG_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_QCVIENMIENG frm_Dm = new FRM_QCVIENMIENG();
-        //        frm_Dm.Text = "Danh mục quy cách viền miệng";
-        //        frm_Dm.ShowDialog();
-        //        DT_QCVIENMIENG = new QuycachvienmiengManager().SelectAllRDT();
-        //    }
-        //}
-
-        //private void txt_KIEUMAYDAY_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_QCMAYDAY frm_Dm = new FRM_QCMAYDAY();
-        //        frm_Dm.Text = "Danh mục quy cách may đáy";
-        //        frm_Dm.ShowDialog();
-        //        DT_QCMAYDAY = new QuycachmaydayManager().SelectAllRDT();
-        //    }
-        //}
-
-        //private void txt_KIEUDONGKIEN_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_QCDONGKIEN frm_Dm = new FRM_QCDONGKIEN();
-        //        frm_Dm.Text = "Danh mục quy cách đóng kiện";
-        //        frm_Dm.ShowDialog();
-        //        DT_QCDONGKIEN = new QuycachdongkienManager().SelectAllRDT();
-        //    }
-        //}
-
-        //private void txt_MALOAI_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMLOAI frm_Dm = new FRM_DMLOAI();
-        //        frm_Dm.Text = "Danh mục loại";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMLOAI = new DanhmucloaiManager().SelectAllRDT();
-        //    }
-        //}
-        //private void txt_MAPE_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMPE frm_Dm = new FRM_DMPE();
-        //        frm_Dm.Text = "Danh mục túi";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMPE = new DanhmucpeManager().SelectAllRDT();
-        //    }
-        //}
+        private void txt_MAKHACH_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMKHACH frm_Dm = new FRM_DMKHACH();
+                frm_Dm.Text = "Danh mục khách hàng";
+                frm_Dm.ShowDialog();
+                DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+            }
+        }
+        private void txt_MACHUNGLOAI_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCHUNGLOAI frm_Dm = new FRM_DMCHUNGLOAI();
+                frm_Dm.Text = "Danh mục chủng loại";
+                frm_Dm.ShowDialog();
+                DT_DMCHUNGLOAI = new DmchungloaiManager().SelectAllRDT();
+            }
+        }
+        private void txt_MALOAIMUC_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách";
+                frm_Dm.ShowDialog();
+                DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
+            }
+        }
+        private void txt_SOMAUMA_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách";
+                frm_Dm.ShowDialog();
+                DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
+            }
+        }
+        private void txt_SOHINHMA_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách";
+                frm_Dm.ShowDialog();
+                DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
+            }
+        }
+        private void txt_MAQCTHANHPHAM_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách";
+                frm_Dm.ShowDialog();
+                DT_QCTHANHPHAM = new DmquycachManager().SelectByManhomRDT("N06");
+            }
+        }
+        private void txt_MAQCDONGGOI_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách";
+                frm_Dm.ShowDialog();
+                DT_QCDONGGOI = new DmquycachManager().SelectByManhomRDT("N07");
+            }
+        }
+        private void txt_MAQCLOAITHUNG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách";
+                frm_Dm.ShowDialog();
+                DT_QCLOAITHUNG = new DmquycachManager().SelectByManhomRDT("N08");
+            }
+        }
+        private void txt_MAMANG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMMANG frm_Dm = new FRM_DMMANG();
+                frm_Dm.Text = "Danh mục màng";
+                frm_Dm.ShowDialog();
+                DT_DMMANG = new DmmangManager().SelectAllRDT();
+            }
+        }
         #endregion
 
         private void FRM_DMHANG_FormClosing(object sender, FormClosingEventArgs e)
