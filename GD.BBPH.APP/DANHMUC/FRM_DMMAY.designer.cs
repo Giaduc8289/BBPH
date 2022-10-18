@@ -139,6 +139,7 @@
             this.txt_MADONGMAY.Regular_Expression = null;
             this.txt_MADONGMAY.Size = new System.Drawing.Size(109, 20);
             this.txt_MADONGMAY.TabIndex = 2;
+            this.txt_MADONGMAY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MADONGMAY_KeyDown);
             this.txt_MADONGMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MADONGMAY_Validating);
             // 
             // txt_TENDONGMAY

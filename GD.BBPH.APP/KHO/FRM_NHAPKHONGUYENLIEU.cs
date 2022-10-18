@@ -32,7 +32,7 @@ namespace GD.BBPH.APP.KHO
         private GD.BBPH.CONTROL.JGridEX GRID_NHAPKHONGUYENLIEU_CHITIET = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET = "";
 
-        private DataTable DT_DMNGUYENLIEU = new DataTable(), DT_DMKHO = new DataTable();
+        private DataTable DT_DMNGUYENLIEU = new DataTable(), DT_DMKHO = new DataTable(), DT_DMLYDONHAPXUAT = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
@@ -530,6 +530,71 @@ namespace GD.BBPH.APP.KHO
                 return dt.Select(DmkhoFields.Makho.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
+        }
+
+        private void txt_MALYDO_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MALYDO.Text.Trim()) || DT_DMLYDONHAPXUAT == null || DT_DMLYDONHAPXUAT.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MALYDO.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaLydo(Str_MASIEUTHI, DT_DMLYDONHAPXUAT);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMLYDOXUATKHO.xml",
+                        DT_DMLYDONHAPXUAT, DmlydonhapxuatFields.Malydo.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MALYDO.Text = _RowViewSelect[DmlydonhapxuatFields.Malydo.Name].ToString();
+                txt_TENLYDO.Text = _RowViewSelect[DmlydonhapxuatFields.Tenlydo.Name].ToString();
+            }
+            else
+                txt_TENLYDO.Text = _RowViewSelect[DmlydonhapxuatFields.Tenlydo.Name].ToString();
+        }
+
+        private DataRow checkmaLydo(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(DmlydonhapxuatFields.Malydo.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
+
+        #endregion
+
+        #region Shortcut Key
+        private void txt_MALYDO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_LYDONHAPXUAT frm_Dm = new FRM_LYDONHAPXUAT();
+                frm_Dm.Text = "Danh mục lý do";
+                frm_Dm.ShowDialog();
+                DT_DMLYDONHAPXUAT = new DmlydonhapxuatManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MAKHO_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMKHO frm_Dm = new FRM_DMKHO();
+                frm_Dm.Text = "Danh mục lý do";
+                frm_Dm.ShowDialog();
+                DT_DMKHO = new DmkhoManager().SelectAllRDT();
+            }
+        }
+        private void txt_MANGUYENLIEU_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMNGUYENLIEU frm_Dm = new FRM_DMNGUYENLIEU();
+                frm_Dm.Text = "Danh mục lý do";
+                frm_Dm.ShowDialog();
+                DT_DMNGUYENLIEU = new DmnguyenlieuManager().SelectAllRDT();
+            }
         }
         #endregion
 

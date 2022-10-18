@@ -405,8 +405,7 @@ namespace GD.BBPH.APP.CHIA
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENH.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_SOMVAO.Text = txt_SOKGVAO.Text = txt_DAURAGHEP.Text = txt_SOCON.Text 
-                = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANDOILENH.Text = txt_THOIGIANSUCO.Text = string.Empty;
+            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENH.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_SOMVAO.Text = txt_SOKGVAO.Text = txt_DAURAGHEP.Text = txt_SOCON.Text = txt_THOIGIANCATDAU.Text = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANDOILENH.Text = txt_SOLANHACUON.Text = txt_THOIGIANLENCUON.Text = txt_THOIGIANHACUON.Text = txt_THOIGIANSUCO.Text = txt_PHEIN.Text = txt_PHEGHEP.Text = txt_PHECHIA.Text = txt_PHESANXUAT.Text = string.Empty;
             //txt_PHONGBAN.Text = string.Empty;
             //txt_CHUCVU.Text = string.Empty;
             KetquachiaManager _KetquachiaManager = new KetquachiaManager();
@@ -417,7 +416,7 @@ namespace GD.BBPH.APP.CHIA
             MAHIEU_PK = "";
             txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY, txt_LENH, txt_MACONGNHAN, txt_TENCONGNHAN, txt_MASANPHAM, txt_TENSANPHAM, txt_SOMVAO, txt_SOKGVAO, txt_DAURAGHEP, txt_SOCON, txt_THOIGIANCATDAU, txt_THOIGIANBATDAU, txt_THOIGIANKETTHUC, txt_THOIGIANDOILENH, txt_SOLANHACUON, txt_THOIGIANLENCUON, txt_THOIGIANHACUON, txt_THOIGIANSUCO, txt_PHEIN, txt_PHEGHEP, txt_PHECHIA, txt_PHESANXUAT }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_KQCHIA.Enabled = false;
@@ -429,7 +428,7 @@ namespace GD.BBPH.APP.CHIA
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY, txt_LENH, txt_MACONGNHAN, txt_TENCONGNHAN, txt_MASANPHAM, txt_TENSANPHAM, txt_SOMVAO, txt_SOKGVAO, txt_DAURAGHEP, txt_SOCON, txt_THOIGIANCATDAU, txt_THOIGIANBATDAU, txt_THOIGIANKETTHUC, txt_THOIGIANDOILENH, txt_SOLANHACUON, txt_THOIGIANLENCUON, txt_THOIGIANHACUON, txt_THOIGIANSUCO, txt_PHEIN, txt_PHEGHEP, txt_PHECHIA, txt_PHESANXUAT }));
             }
             GRID_KQCHIACHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             GRID_KQCHIACHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;

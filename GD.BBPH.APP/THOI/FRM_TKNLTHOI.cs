@@ -499,6 +499,18 @@ namespace GD.BBPH.APP.THOI
         }
         #endregion
 
+        #region Shortcut Key
+        private void txt_MANGUYENLIEU_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMNGUYENLIEU frm_Dm = new FRM_DMNGUYENLIEU();
+                frm_Dm.Text = "Danh mục lý do";
+                frm_Dm.ShowDialog();
+                DT_DMNGUYENLIEU = new DmnguyenlieuManager().SelectAllRDT();
+            }
+        }
+        #endregion
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)
