@@ -97,7 +97,7 @@ namespace GD.BBPH.APP.DANHMUC
             InitializeComponent();
             DmchungloaiManager _DmchungloaiManager = new DmchungloaiManager();
             DataTable dt111 = _DmchungloaiManager.Clone();
-            GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI.xml");
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -138,6 +138,17 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_SOHINH.Text = _Rowview.Row[DmchungloaiFields.Sohinh.Name].ToString();
                     txt_LOAIMUC.Text = _Rowview.Row[DmchungloaiFields.Loaimuc.Name].ToString();
                     txt_GHICHU.Text = _Rowview.Row[DmchungloaiFields.Ghichu.Name].ToString();
+                    txt_RONG.Text = _Rowview.Row[DmchungloaiFields.Rong.Name].ToString();
+                    txt_DAI.Text = _Rowview.Row[DmchungloaiFields.Dai.Name].ToString();
+                    txt_SOMAUMA.Text = _Rowview.Row[DmchungloaiFields.Somauma.Name].ToString();
+                    txt_SOHINHMA.Text = _Rowview.Row[DmchungloaiFields.Sohinhma.Name].ToString();
+                    txt_MAQCDONGGOI.Text = _Rowview.Row[DmchungloaiFields.Maqcdonggoi.Name].ToString();
+                    txt_TENQCDONGGOI.Text = _Rowview.Row[DmchungloaiFields.Tenqcdonggoi.Name].ToString();
+                    txt_MAQCLOAITHUNG.Text = _Rowview.Row[DmchungloaiFields.Maqcloaithung.Name].ToString();
+                    txt_TENQCLOAITHUNG.Text = _Rowview.Row[DmchungloaiFields.Tenqcloaithung.Name].ToString();
+                    txt_MAQCTHANHPHAM.Text = _Rowview.Row[DmchungloaiFields.Maqcthanhpham.Name].ToString();
+                    txt_TENQCTHANHPHAM.Text = _Rowview.Row[DmchungloaiFields.Tenqcthanhpham.Name].ToString();
+                    txt_MALOAIMUC.Text = _Rowview.Row[DmchungloaiFields.Maloaimuc.Name].ToString();
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMCHUNGLOAI_CurrentChanged"); }
@@ -154,6 +165,17 @@ namespace GD.BBPH.APP.DANHMUC
             _dmchungloaiEntity.Sohinh = Convert.ToInt32(txt_SOHINH.Text.Trim());
             _dmchungloaiEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
             _dmchungloaiEntity.Ghichu = txt_GHICHU.Text.Trim();
+            _dmchungloaiEntity.Rong = Convert.ToDecimal(txt_RONG.Text.Trim());
+            _dmchungloaiEntity.Dai = Convert.ToDecimal(txt_DAI.Text.Trim());
+            _dmchungloaiEntity.Somauma = txt_SOMAUMA.Text.Trim();
+            _dmchungloaiEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
+            _dmchungloaiEntity.Maqcdonggoi = txt_MAQCDONGGOI.Text.Trim();
+            _dmchungloaiEntity.Tenqcdonggoi = txt_TENQCDONGGOI.Text.Trim();
+            _dmchungloaiEntity.Maqcloaithung = txt_MAQCLOAITHUNG.Text.Trim();
+            _dmchungloaiEntity.Tenqcloaithung = txt_TENQCLOAITHUNG.Text.Trim();
+            _dmchungloaiEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
+            _dmchungloaiEntity.Tenqcthanhpham = txt_TENQCTHANHPHAM.Text.Trim();
+            _dmchungloaiEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _dmchungloaiEntity.Ngaytao = DateTime.Now;
@@ -175,6 +197,17 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Sohinh.Name].Value = _dmchungloaiEntity.Sohinh;
                 GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Loaimuc.Name].Value = _dmchungloaiEntity.Loaimuc;
                 GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Ghichu.Name].Value = _dmchungloaiEntity.Ghichu;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Rong.Name].Value = _dmchungloaiEntity.Rong;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Dai.Name].Value = _dmchungloaiEntity.Dai;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Somauma.Name].Value = _dmchungloaiEntity.Somauma;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Sohinhma.Name].Value = _dmchungloaiEntity.Sohinhma;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maqcdonggoi.Name].Value = _dmchungloaiEntity.Maqcdonggoi;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenqcdonggoi.Name].Value = _dmchungloaiEntity.Tenqcdonggoi;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maqcloaithung.Name].Value = _dmchungloaiEntity.Maqcloaithung;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenqcloaithung.Name].Value = _dmchungloaiEntity.Tenqcloaithung;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maqcthanhpham.Name].Value = _dmchungloaiEntity.Maqcthanhpham;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenqcthanhpham.Name].Value = _dmchungloaiEntity.Tenqcthanhpham;
+                GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maloaimuc.Name].Value = _dmchungloaiEntity.Maloaimuc;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchungloaiManager.Convert(_DmchungloaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;
