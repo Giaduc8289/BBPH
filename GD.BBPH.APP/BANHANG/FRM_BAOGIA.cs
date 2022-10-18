@@ -104,9 +104,10 @@ namespace GD.BBPH.APP.BANHANG
         public FRM_BAOGIA()
         {
             InitializeComponent();
-            BaogiaHManager _BaogiaHManager = new BaogiaHManager();
-            DataTable dt111 = _BaogiaHManager.Clone();
-            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_BAOGIA.xml");
+            //DataTable dt111 = new BaogiaHManager().Clone();
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_BAOGIA_H.xml");
+            //dt111 = new BaogiaDManager().Clone();
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_BAOGIA_D.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -124,15 +125,15 @@ namespace GD.BBPH.APP.BANHANG
             GRID_BAOGIA_D.RootTable.Groups.Add(GRID_BAOGIA_D.Tables[0].Columns[BaogiaDFields.Machungloai.Name]);
             FORM_PROCESS();
             GRID_BAOGIA_D.COMBO_MULTICOLUMN(GRID_BAOGIA_D, BaogiaDFields.Masp.Name, DmhangFields.Tensp.Name, DmhangFields.Masp.Name, DmhangFields.Masp.Name, DT_DMHANG);
-            GRID_BAOGIA_D.RootTable.Columns["Mahang"].EditType = EditType.NoEdit;
-            GRID_BAOGIA_D.RootTable.Columns["Chungloai"].EditType = EditType.NoEdit;
-            GRID_BAOGIA_D.RootTable.Columns["Kichthuoc"].EditType = EditType.NoEdit;
-            GRID_BAOGIA_D.RootTable.Columns["Trongluongbao"].EditType = EditType.NoEdit;
-            GRID_BAOGIA_D.RootTable.Columns["Trongluongpe"].EditType = EditType.NoEdit;
-            //GRID_BAOGIA_D.RootTable.Columns[BaogiaDFields.Dongiapechuavat.Name].EditType = EditType.NoEdit;
-            GRID_BAOGIA_D.RootTable.Columns[BaogiaDFields.DongiakhongVat.Name].EditType = EditType.NoEdit;
-            //GRID_BAOGIA_D.RootTable.Columns[BaogiaDFields.Dongiatongchuavat.Name].EditType = EditType.NoEdit;
-            GRID_BAOGIA_D.RootTable.Columns["Giavon"].EditType = EditType.NoEdit;
+            //GRID_BAOGIA_D.RootTable.Columns["Mahang"].EditType = EditType.NoEdit;
+            //GRID_BAOGIA_D.RootTable.Columns["Chungloai"].EditType = EditType.NoEdit;
+            //GRID_BAOGIA_D.RootTable.Columns["Kichthuoc"].EditType = EditType.NoEdit;
+            ////GRID_BAOGIA_D.RootTable.Columns["Trongluongbao"].EditType = EditType.NoEdit;
+            ////GRID_BAOGIA_D.RootTable.Columns["Trongluongpe"].EditType = EditType.NoEdit;
+            ////GRID_BAOGIA_D.RootTable.Columns[BaogiaDFields.Dongiapechuavat.Name].EditType = EditType.NoEdit;
+            //GRID_BAOGIA_D.RootTable.Columns[BaogiaDFields.DongiakhongVat.Name].EditType = EditType.NoEdit;
+            ////GRID_BAOGIA_D.RootTable.Columns[BaogiaDFields.Dongiatongchuavat.Name].EditType = EditType.NoEdit;
+            //GRID_BAOGIA_D.RootTable.Columns["Giavon"].EditType = EditType.NoEdit;
             GRID_BAOGIA_D.CellEdited += GRID_BAOGIA_D_CellEdited;
             GRID_BAOGIA_D.RecordsDeleted += GRID_BAOGIA_D_RecordsDeleted;
             GRID_BAOGIA_D.RecordUpdated += GRID_BAOGIA_D_RecordUpdated;
@@ -145,7 +146,7 @@ namespace GD.BBPH.APP.BANHANG
             BS_BAOGIA_H.CurrentChanged += new EventHandler(BS_BAOGIA_H_CurrentChanged);
             BS_BAOGIA_H_CurrentChanged((new object()), (new EventArgs()));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            //btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_THEMTUI.Enabled = btn_THEMSP.Enabled = false;
+            btn_THEMSP.Enabled = btn_XOADONG.Enabled = false;
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             btn_THEMMOI.Focus();
         }
@@ -217,20 +218,6 @@ namespace GD.BBPH.APP.BANHANG
                     txt_MAKHACH_Validating(new object(), new CancelEventArgs());
 
                     SHOWGRID(MAHIEU_PK);
-
-                    #region Load grid
-                    //try
-                    //{
-                    //    DataRow[] drArr = DT_BAOGIA_D.Select(BaogiaHFields.Sobaogia.Name + "='" + MAHIEU_PK + "'");
-                    //    if (drArr.Length != 0)
-                    //    {
-                    //        DT_BAOGIA_D_FILL = drArr.CopyToDataTable();
-                    //    }
-                    //    else DT_BAOGIA_D_FILL.Clear();
-                    //    GRID_BAOGIA_D.DataSource = DT_BAOGIA_D_FILL;
-                    //}
-                    //catch (Exception ex) { }
-                    #endregion
                 }
                 else
                 {
@@ -471,16 +458,6 @@ namespace GD.BBPH.APP.BANHANG
                 catch { }
                 try { _BaogiaDEntity.DongiaVat = Convert.ToInt32(_view[BaogiaDFields.DongiaVat.Name].ToString()); }
                 catch { }
-                //try { _BaogiaDEntity.Dongiapechuavat = Convert.ToDecimal(_view[BaogiaDFields.Dongiapechuavat.Name].ToString()); }
-                //catch { }
-                //try { _BaogiaDEntity.Dongiapecovat = Convert.ToDecimal(_view[BaogiaDFields.Dongiapecovat.Name].ToString()); }
-                //catch { }
-                //try { _BaogiaDEntity.Dongiatongchuavat = Convert.ToDecimal(_view[BaogiaDFields.Dongiatongchuavat.Name].ToString()); }
-                //catch { }
-                //try { _BaogiaDEntity.Dongiatongcovat = Convert.ToDecimal(_view[BaogiaDFields.Dongiatongcovat.Name].ToString()); }
-                //catch { }
-                //try { _BaogiaDEntity.Giavon = Convert.ToDecimal(_view[BaogiaDFields.Giavon.Name].ToString()); }
-                //catch { }
 
                 try { _BaogiaDEntity.Id = Convert.ToInt64(_view[BaogiaDFields.Id.Name].ToString()); }
                 catch { }
@@ -502,8 +479,8 @@ namespace GD.BBPH.APP.BANHANG
                     }
                 }
 
-                //if(!string.IsNullOrEmpty(_BaogiaDEntity.Chungloai))
-                //    _BaogiaDEntityCol.Add(_BaogiaDEntity);
+                if (!string.IsNullOrEmpty(_BaogiaDEntity.Tenchungloai))
+                    _BaogiaDEntityCol.Add(_BaogiaDEntity);
             }
 
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
@@ -516,7 +493,7 @@ namespace GD.BBPH.APP.BANHANG
                 GRID_BAOGIA_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_BAOGIA_D.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_BaogiaHManager.Convert(_BaogiaHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                //btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_THEMTUI.Enabled = btn_THEMSP.Enabled = false;
+                btn_THEMSP.Enabled = btn_XOADONG.Enabled = false;
                 BS_BAOGIA_H.ResetCurrentItem();
                 BS_BAOGIA_H_CurrentChanged(new object(), new EventArgs());
                 BS_BAOGIA_H.Position = DT_BAOGIA_H.Rows.Count - 1;
@@ -548,7 +525,7 @@ namespace GD.BBPH.APP.BANHANG
                 GRID_BAOGIA_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_BAOGIA_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_BAOGIA_D.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
-                //btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_THEMTUI.Enabled = btn_THEMSP.Enabled = false;
+                btn_THEMSP.Enabled = btn_XOADONG.Enabled = false;
                 BS_BAOGIA_H.ResetCurrentItem();
                 BS_BAOGIA_H_CurrentChanged(new object(), new EventArgs());
             }
@@ -576,7 +553,7 @@ namespace GD.BBPH.APP.BANHANG
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            //btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_THEMTUI.Enabled = btn_THEMSP.Enabled = true;
+            btn_THEMSP.Enabled = btn_XOADONG.Enabled = true;
             GRID_BAOGIA_H.Enabled = false;
             btn_TIMKIEM.Enabled = btn_IN.Enabled = false;
             txt_NGAYBAOGIA.Text = txt_NGAYHIEULUC.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
@@ -587,7 +564,7 @@ namespace GD.BBPH.APP.BANHANG
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                //btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_THEMTUI.Enabled = btn_THEMSP.Enabled = true;
+                btn_THEMSP.Enabled = btn_XOADONG.Enabled = true;
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_SOBAOGIA, txt_TENKHACH }));
                 //txt_TENHIEU.Focus();
             }
@@ -608,7 +585,7 @@ namespace GD.BBPH.APP.BANHANG
             }
             BS_BAOGIA_H_CurrentChanged(new object(), new EventArgs());
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            //btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_THEMTUI.Enabled = btn_THEMSP.Enabled = false;
+            btn_THEMSP.Enabled = btn_XOADONG.Enabled = false;
             FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
             btn_TIMKIEM.Enabled = btn_IN.Enabled = btn_LAMMOI.Enabled = true;
             GRID_BAOGIA_H.Enabled = true;
@@ -616,7 +593,7 @@ namespace GD.BBPH.APP.BANHANG
             GRID_BAOGIA_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_BAOGIA_D.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
             btn_SAOCHEP.Enabled = btn_LAMMOI.Enabled = btn_IN.Enabled = true;
-            //btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_THEMTUI.Enabled = btn_THEMSP.Enabled = false;
+            btn_THEMSP.Enabled = btn_XOADONG.Enabled = false;
         }
 
         private void btn_SAOCHEP_Click(object sender, EventArgs e)
@@ -681,7 +658,7 @@ namespace GD.BBPH.APP.BANHANG
             }
             catch { }
             btn_SAOCHEP.Enabled = btn_IN.Enabled = false;
-            //btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_THEMTUI.Enabled = btn_THEMSP.Enabled = true;
+            btn_THEMSP.Enabled = btn_XOADONG.Enabled = true;
         }
 
         private void btn_XOA_Click(object sender, EventArgs e)
@@ -708,7 +685,7 @@ namespace GD.BBPH.APP.BANHANG
                     //GD.BBPH.LIB.TrayPopup.PoupStringMessage(GD.BBPH.APP.Properties.Resources.MessageTitle, GD.BBPH.APP.Properties.Resources.MessageContent_T);
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
                     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_BaogiaHManager.Convert(_BaogiaHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                    //btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_THEMTUI.Enabled = btn_THEMSP.Enabled = false;
+                    btn_THEMSP.Enabled = btn_XOADONG.Enabled = false;
                 }
                 catch
                 {
@@ -743,70 +720,57 @@ namespace GD.BBPH.APP.BANHANG
 
         private void btn_IN_Click(object sender, EventArgs e)
         {
-            //DataSet dsKetqua = new DataSet();
-            //DateTime _Ngaybaogia = new DateTime(), _Ngayhieuluc = new DateTime();
-            //string _Sobaogia = "", _Khachhang = "", _Phuongthuctt = "", _Diadiemgiao = "", _Noidung = "";
+            DataSet dsKetqua = new DataSet();
+            DateTime _Ngaybaogia = new DateTime(), _Ngayhieuluc = new DateTime();
+            string _Sobaogia = "", _Khachhang = "", _Phuongthuctt = "", _Diadiemgiao = "", _Noidung = "";
 
-            //try
-            //{
-            //    #region Lay thong tin cac tham so
-            //    _Ngaybaogia = Convert.ToDateTime(txt_NGAYBAOGIA.Text);
-            //    _Sobaogia = txt_SOBAOGIA.Text;
+            try
+            {
+                #region Lay thong tin cac tham so
+                _Ngaybaogia = Convert.ToDateTime(txt_NGAYBAOGIA.Text);
+                _Sobaogia = txt_SOBAOGIA.Text;
+                #endregion
 
-            //    #endregion
+                #region Chay procedure
+                DAL.DatabaseSpecific.DataAccessAdapter _DataAccessAdapter = new DAL.DatabaseSpecific.DataAccessAdapter(LIB.SESSION_START.ConnectionStringKeyName);
+                SqlParameter[] parameters = new SqlParameter[2];
+                parameters[0] = new SqlParameter("@Ngaybaogia", _Ngaybaogia);
+                parameters[1] = new SqlParameter("@Sobaogia", _Sobaogia);
 
-            //    #region Chay procedure
-            //    DAL.DatabaseSpecific.DataAccessAdapter _DataAccessAdapter = new DAL.DatabaseSpecific.DataAccessAdapter(LIB.SESSION_START.ConnectionStringKeyName);
-            //    SqlParameter[] parameters = new SqlParameter[2];
-            //    parameters[0] = new SqlParameter("@Ngaybaogia", _Ngaybaogia);
-            //    parameters[1] = new SqlParameter("@Sobaogia", _Sobaogia);
+                _DataAccessAdapter.CallRetrievalStoredProcedure("Inbaogia", parameters, dsKetqua);
+                _DataAccessAdapter.CloseConnection();
+                dsKetqua.Tables[0].TableName = "Inbaogia";
+                #endregion
 
-            //    _DataAccessAdapter.CallRetrievalStoredProcedure("Inbaogia", parameters, dsKetqua);
-            //    _DataAccessAdapter.CloseConnection();
-            //    dsKetqua.Tables[0].TableName = "Inbaogia";
-            //    #endregion
+                #region Tham so
+                DataTable dtThamso = new DataTable("Thamso");
+                dtThamso.Columns.Add("Khachhang");
+                dtThamso.Columns.Add("Phuongthuctt");
+                dtThamso.Columns.Add("Diadiemgiao");
+                dtThamso.Columns.Add("Ngayhieuluc", Type.GetType("System.DateTime"));
+                dtThamso.Columns.Add("Noidung");
+                dtThamso.Columns.Add("Sobaogia");
 
-            //    #region Tham so
-            //    DataTable dtThamso = new DataTable("Thamso");
-            //    dtThamso.Columns.Add("Khachhang");
-            //    dtThamso.Columns.Add("Phuongthuctt");
-            //    dtThamso.Columns.Add("Diadiemgiao");
-            //    dtThamso.Columns.Add("Ngayhieuluc", Type.GetType("System.DateTime"));
-            //    dtThamso.Columns.Add("Noidung");
-            //    dtThamso.Columns.Add("Sobaogia");
-            //    //dtThamso.Columns.Add("Noidia");
-            //    //dtThamso.Columns.Add("Truyenthong");
+                DataRow dr = dtThamso.NewRow();
+                dr["Khachhang"] = txt_TENKHACH.Text;
+                dr["Phuongthuctt"] = txt_PHUONGTHUCTT.Text;
+                dr["Diadiemgiao"] = txt_DIADIEMGIAO.Text;
+                dr["Ngayhieuluc"] = Convert.ToDateTime(txt_NGAYHIEULUC.Text);
+                dr["Noidung"] = txt_NOIDUNG.Text;
+                dr["Sobaogia"] = txt_SOBAOGIA.Text;
 
-            //    DataRow dr = dtThamso.NewRow();
-            //    dr["Khachhang"] = txt_TENKHACH.Text;
-            //    dr["Phuongthuctt"] = txt_PHUONGTHUCTT.Text;
-            //    dr["Diadiemgiao"] = txt_DIADIEMGIAO.Text;
-            //    dr["Ngayhieuluc"] = Convert.ToDateTime(txt_NGAYHIEULUC.Text);
-            //    dr["Noidung"] = txt_NOIDUNG.Text;
-            //    dr["Sobaogia"] = txt_SOBAOGIA.Text;
-            //    //dr["Noidia"] = _Noidia;
-            //    //dr["Truyenthong"] = _Truyenthong;
+                dtThamso.Rows.Add(dr);
+                dsKetqua.Tables.Add(dtThamso);
+                #endregion
 
-            //    dtThamso.Rows.Add(dr);
-            //    dsKetqua.Tables.Add(dtThamso);
-            //}
-            //#endregion
-
-            ////    #region Hien bao cao
-            ////    if (_Noidia == true)
-            ////    {
-            ////        new BAOCAO.FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\BAOGIA.rdlc", "Inbaogia", this.Text, true).Show();
-            ////    }
-            ////    else
-            ////    {
-            ////        new BAOCAO.FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\BAOGIATA.rdlc", "Inbaogia", this.Text, true).Show();
-            ////    }
-            ////    #endregion
-            ////}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
+                #region Hien bao cao
+                new BAOCAO.FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\BAOGIA.rdlc", "Inbaogia", this.Text, true).Show();
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btn_TIMKIEM_Click(object sender, EventArgs e)
@@ -854,7 +818,7 @@ namespace GD.BBPH.APP.BANHANG
                 GRID_BAOGIA_D.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
             }
             btn_SAOCHEP.Enabled = btn_LAMMOI.Enabled = btn_IN.Enabled = true;
-            //btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_THEMTUI.Enabled = btn_THEMSP.Enabled = false;
+            btn_THEMSP.Enabled = btn_XOADONG.Enabled = false;
         }
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
@@ -913,6 +877,7 @@ namespace GD.BBPH.APP.BANHANG
             }
         }
         #endregion
+
         private void FRM_BAOGIA_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)

@@ -1027,6 +1027,8 @@
     <Content Include="IMG\TeamViewer.exe" />
     <Content Include="IMG\waiting.xml" />
     <Content Include="Logo-App-Ico.ico" />
+    <Content Include="XMLCONFIG\FRM_BAOGIA_D.xml" />
+    <Content Include="XMLCONFIG\FRM_BAOGIA_H.xml" />
     <Content Include="XMLCONFIG\FRM_CTPTMANG.xml" />
     <Content Include="XMLCONFIG\FRM_CTPTMANGCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_DMCHUNGLOAI.xml" />
