@@ -50,7 +50,7 @@
     <headerText>Tên KH</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>150</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -65,14 +65,14 @@
   <viewgrid>
     <value>2</value>
     <name>Sodienthoai</name>
-    <headerText>Sodienthoai</headerText>
+    <headerText>Số điện thoại</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Email</name>
     <headerText>Email</headerText>
     <BackColor>0</BackColor>
@@ -95,7 +95,7 @@
   <headerText>Người liên hệ</headerText>
   <BackColor>0</BackColor>
   <SelectionBackColor>0</SelectionBackColor>
-  <Width>250</Width>
+  <Width>150</Width>
   <Thutu>100</Thutu>
   </viewgrid>
 </NewDataSet>

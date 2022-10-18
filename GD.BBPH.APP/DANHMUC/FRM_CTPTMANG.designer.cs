@@ -140,7 +140,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(322, 11);
+            this.label14.Location = new System.Drawing.Point(346, 11);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(74, 13);
             this.label14.TabIndex = 1;
@@ -148,7 +148,7 @@
             // 
             // txt_NGAYAPDUNG
             // 
-            this.txt_NGAYAPDUNG.Location = new System.Drawing.Point(397, 9);
+            this.txt_NGAYAPDUNG.Location = new System.Drawing.Point(421, 9);
             this.txt_NGAYAPDUNG.Mask = "00/00/0000";
             this.txt_NGAYAPDUNG.Name = "txt_NGAYAPDUNG";
             this.txt_NGAYAPDUNG.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -190,7 +190,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(329, 93);
+            this.label4.Location = new System.Drawing.Point(327, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 129;
@@ -203,7 +203,7 @@
             this.txt_TONGTIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_TONGTIEN.Giatrithapphan = 0;
             this.txt_TONGTIEN.IsSoNguyen = false;
-            this.txt_TONGTIEN.Location = new System.Drawing.Point(233, 91);
+            this.txt_TONGTIEN.Location = new System.Drawing.Point(240, 90);
             this.txt_TONGTIEN.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TONGTIEN.Name = "txt_TONGTIEN";
             this.txt_TONGTIEN.ReadOnly = true;
@@ -216,7 +216,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(182, 93);
+            this.label3.Location = new System.Drawing.Point(183, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 127;
@@ -229,7 +229,7 @@
             this.txt_TONGKL.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_TONGKL.Giatrithapphan = 0;
             this.txt_TONGKL.IsSoNguyen = false;
-            this.txt_TONGKL.Location = new System.Drawing.Point(88, 91);
+            this.txt_TONGKL.Location = new System.Drawing.Point(95, 91);
             this.txt_TONGKL.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TONGKL.Name = "txt_TONGKL";
             this.txt_TONGKL.ReadOnly = true;
@@ -278,10 +278,10 @@
             this.txt_TENCONGTHUC.FormNametoShow = "";
             this.txt_TENCONGTHUC.Is_DateTime = false;
             this.txt_TENCONGTHUC.IsShowForm = false;
-            this.txt_TENCONGTHUC.Location = new System.Drawing.Point(88, 38);
+            this.txt_TENCONGTHUC.Location = new System.Drawing.Point(95, 38);
             this.txt_TENCONGTHUC.Name = "txt_TENCONGTHUC";
             this.txt_TENCONGTHUC.Regular_Expression = null;
-            this.txt_TENCONGTHUC.Size = new System.Drawing.Size(414, 20);
+            this.txt_TENCONGTHUC.Size = new System.Drawing.Size(226, 20);
             this.txt_TENCONGTHUC.TabIndex = 3;
             // 
             // pne_CHITIET
@@ -387,7 +387,7 @@
             this.txt_MACONGTHUC.FormNametoShow = "";
             this.txt_MACONGTHUC.Is_DateTime = false;
             this.txt_MACONGTHUC.IsShowForm = false;
-            this.txt_MACONGTHUC.Location = new System.Drawing.Point(88, 9);
+            this.txt_MACONGTHUC.Location = new System.Drawing.Point(95, 9);
             this.txt_MACONGTHUC.Name = "txt_MACONGTHUC";
             this.txt_MACONGTHUC.Regular_Expression = null;
             this.txt_MACONGTHUC.Size = new System.Drawing.Size(138, 20);

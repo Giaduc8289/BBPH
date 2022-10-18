@@ -45,7 +45,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Sophieugiao</name>
     <headerText>Số phiếu giao</headerText>
     <BackColor>0</BackColor>
@@ -54,25 +54,25 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Makhach</name>
-    <headerText>Makhach</headerText>
+    <headerText>Mã khách</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Loaihang</name>
-    <headerText>Loaihang</headerText>
+    <headerText>Loại hàng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Mahang</name>
     <headerText>Mã hàng</headerText>
     <BackColor>0</BackColor>
@@ -83,7 +83,7 @@
   <viewgrid>
     <value>1</value>
     <name>Mauin</name>
-    <headerText>Hàng hoá</headerText>
+    <headerText>Mẫu in</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -135,7 +135,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Sopo</name>
     <headerText>Số PO</headerText>
     <BackColor>0</BackColor>
@@ -144,7 +144,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngayhethanpo</name>
     <headerText>Ngày hết hạn PO</headerText>
     <BackColor>0</BackColor>

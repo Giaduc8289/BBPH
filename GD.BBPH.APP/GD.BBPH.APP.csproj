@@ -1029,6 +1029,7 @@
     <Content Include="Logo-App-Ico.ico" />
     <Content Include="XMLCONFIG\FRM_CTPTMANG.xml" />
     <Content Include="XMLCONFIG\FRM_CTPTMANGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCHUNGLOAI.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGNHAN_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAY.xml">
       <SubType>Designer</SubType>
@@ -1042,7 +1043,6 @@
     <Content Include="XMLCONFIG\FRM_DMMAY.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="XMLCONFIG\FRM_DMMAY.xml" />
     <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml">
       <SubType>Designer</SubType>
@@ -1053,6 +1053,8 @@
     <Content Include="XMLCONFIG\FRM_DMPHE.xml" />
     <Content Include="XMLCONFIG\FRM_DMQUYCACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMVATTUPHU.xml" />
+    <Content Include="XMLCONFIG\FRM_DONHANG_D.xml" />
+    <Content Include="XMLCONFIG\FRM_DONHANG_H.xml" />
     <Content Include="XMLCONFIG\FRM_HANGTRALAI.xml" />
     <Content Include="XMLCONFIG\FRM_KHTRANG_EDIT_FIND.xml" />
     <Content Include="XMLCONFIG\FRM_KHTRANG_EDIT.xml" />

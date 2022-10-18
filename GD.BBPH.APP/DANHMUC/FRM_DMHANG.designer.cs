@@ -737,7 +737,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(248, 77);
+            this.label11.Location = new System.Drawing.Point(1, 74);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(93, 13);
             this.label11.TabIndex = 195;
@@ -751,7 +751,7 @@
             this.txt_MASPCUAKHACH.FormNametoShow = "";
             this.txt_MASPCUAKHACH.Is_DateTime = false;
             this.txt_MASPCUAKHACH.IsShowForm = false;
-            this.txt_MASPCUAKHACH.Location = new System.Drawing.Point(344, 73);
+            this.txt_MASPCUAKHACH.Location = new System.Drawing.Point(95, 71);
             this.txt_MASPCUAKHACH.Name = "txt_MASPCUAKHACH";
             this.txt_MASPCUAKHACH.Regular_Expression = null;
             this.txt_MASPCUAKHACH.Size = new System.Drawing.Size(315, 20);
