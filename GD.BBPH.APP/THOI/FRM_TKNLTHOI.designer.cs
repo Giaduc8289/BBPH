@@ -196,7 +196,7 @@
             this.txt_Ca.FormNametoShow = "";
             this.txt_Ca.Is_DateTime = false;
             this.txt_Ca.IsShowForm = false;
-            this.txt_Ca.Location = new System.Drawing.Point(358, 13);
+            this.txt_Ca.Location = new System.Drawing.Point(278, 15);
             this.txt_Ca.Name = "txt_Ca";
             this.txt_Ca.Regular_Expression = null;
             this.txt_Ca.Size = new System.Drawing.Size(138, 20);
@@ -205,7 +205,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(269, 20);
+            this.label4.Location = new System.Drawing.Point(251, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(20, 13);
             this.label4.TabIndex = 129;
@@ -241,7 +241,7 @@
             this.txt_Klxuat.Location = new System.Drawing.Point(111, 126);
             this.txt_Klxuat.Name = "txt_Klxuat";
             this.txt_Klxuat.Regular_Expression = null;
-            this.txt_Klxuat.Size = new System.Drawing.Size(241, 20);
+            this.txt_Klxuat.Size = new System.Drawing.Size(128, 20);
             this.txt_Klxuat.TabIndex = 5;
             // 
             // txt_Manguyenlieu
@@ -255,7 +255,7 @@
             this.txt_Manguyenlieu.Location = new System.Drawing.Point(111, 74);
             this.txt_Manguyenlieu.Name = "txt_Manguyenlieu";
             this.txt_Manguyenlieu.Regular_Expression = null;
-            this.txt_Manguyenlieu.Size = new System.Drawing.Size(138, 20);
+            this.txt_Manguyenlieu.Size = new System.Drawing.Size(128, 20);
             this.txt_Manguyenlieu.TabIndex = 2;
             this.txt_Manguyenlieu.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANGUYENLIEU_Validating);
             // 
@@ -271,7 +271,7 @@
             this.txt_Tennguyenlieu.Name = "txt_Tennguyenlieu";
             this.txt_Tennguyenlieu.ReadOnly = true;
             this.txt_Tennguyenlieu.Regular_Expression = null;
-            this.txt_Tennguyenlieu.Size = new System.Drawing.Size(218, 20);
+            this.txt_Tennguyenlieu.Size = new System.Drawing.Size(214, 20);
             this.txt_Tennguyenlieu.TabIndex = 3;
             this.txt_Tennguyenlieu.TabStop = false;
             this.txt_Tennguyenlieu.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANGUYENLIEU_Validating);
@@ -296,7 +296,7 @@
             this.txt_Klnhap.Location = new System.Drawing.Point(111, 100);
             this.txt_Klnhap.Name = "txt_Klnhap";
             this.txt_Klnhap.Regular_Expression = null;
-            this.txt_Klnhap.Size = new System.Drawing.Size(241, 20);
+            this.txt_Klnhap.Size = new System.Drawing.Size(128, 20);
             this.txt_Klnhap.TabIndex = 4;
             // 
             // label1

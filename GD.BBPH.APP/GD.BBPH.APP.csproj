@@ -1066,10 +1066,13 @@
     <Content Include="XMLCONFIG\FRM_KIEMKEMANGCHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="XMLCONFIG\FRM_KIEMKENGUYENLIEU_CHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEPHE.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEPHECHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="XMLCONFIG\FRM_KIEMKESANPHAM.xml" />
+    <Content Include="XMLCONFIG\FRM_KIEMKESANPHAMCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KQCHIA.xml" />
     <Content Include="XMLCONFIG\FRM_KQCHIACHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOI.xml" />
@@ -1080,6 +1083,7 @@
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANGCHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="XMLCONFIG\FRM_NHAPKHONGUYENLIEU_CHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOPHE.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOPHECHITIET.xml">
       <SubType>Designer</SubType>
@@ -1090,6 +1094,10 @@
     <Content Include="XMLCONFIG\FRM_NHAPSANPHAMCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_PHIEUGIAOHANG_D.xml" />
     <Content Include="XMLCONFIG\FRM_PHIEUGIAOHANG_H.xml" />
+    <Content Include="XMLCONFIG\FRM_TKKQTUA.xml" />
+    <Content Include="XMLCONFIG\FRM_TKKQTUA_CHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_TKNLTHOI.xml" />
+    <Content Include="XMLCONFIG\FRM_TKNLTHOI_CHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_TPMAU.xml" />
     <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOA.xml" />
     <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOACHITIET.xml" />
@@ -1126,9 +1134,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_NHAPKHONGUYENLIEU.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHONGUYENLIEUCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANHTRANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANHTRANGCHITIET.xml">
       <SubType>Designer</SubType>
@@ -1147,9 +1152,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_KIEMKENGUYENLIEU.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKENGUYENLIEUCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_KIEMKESOICHITIET.xml">
       <SubType>Designer</SubType>
     </Content>

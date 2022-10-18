@@ -32,7 +32,7 @@
   <viewgrid>
     <value>1</value>
     <name>Ngaykiemke</name>
-    <headerText>Ngaykiemke</headerText>
+    <headerText>Ngày kiểm kê</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -41,7 +41,7 @@
   <viewgrid>
     <value>1</value>
     <name>Makho</name>
-    <headerText>Makho</headerText>
+    <headerText>Mã kho</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -50,7 +50,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tenkho</name>
-    <headerText>Tenkho</headerText>
+    <headerText>Tên kho</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>

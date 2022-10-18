@@ -32,7 +32,7 @@
   <viewgrid>
     <value>1</value>
     <name>Ngay</name>
-    <headerText>Ngay</headerText>
+    <headerText>Ngày</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -44,13 +44,13 @@
     <headerText>Ca</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Mamay</name>
-    <headerText>Mamay</headerText>
+    <headerText>Mã máy</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>

@@ -189,7 +189,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(295, 120);
+            this.label6.Location = new System.Drawing.Point(280, 120);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 4;
@@ -207,13 +207,13 @@
             this.txt_SOM.Location = new System.Drawing.Point(361, 117);
             this.txt_SOM.Name = "txt_SOM";
             this.txt_SOM.Regular_Expression = null;
-            this.txt_SOM.Size = new System.Drawing.Size(174, 20);
+            this.txt_SOM.Size = new System.Drawing.Size(160, 20);
             this.txt_SOM.TabIndex = 5;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(295, 120);
+            this.label7.Location = new System.Drawing.Point(280, 120);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 202;
@@ -245,7 +245,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(269, 83);
+            this.label3.Location = new System.Drawing.Point(280, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 198;
@@ -262,13 +262,13 @@
             this.txt_TENSP.Location = new System.Drawing.Point(361, 80);
             this.txt_TENSP.Name = "txt_TENSP";
             this.txt_TENSP.Regular_Expression = null;
-            this.txt_TENSP.Size = new System.Drawing.Size(174, 20);
+            this.txt_TENSP.Size = new System.Drawing.Size(160, 20);
             this.txt_TENSP.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(295, 83);
+            this.label4.Location = new System.Drawing.Point(280, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 197;
@@ -300,7 +300,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(295, 47);
+            this.label2.Location = new System.Drawing.Point(280, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 193;
@@ -317,13 +317,13 @@
             this.txt_TENKHO.Location = new System.Drawing.Point(361, 44);
             this.txt_TENKHO.Name = "txt_TENKHO";
             this.txt_TENKHO.Regular_Expression = null;
-            this.txt_TENKHO.Size = new System.Drawing.Size(174, 20);
+            this.txt_TENKHO.Size = new System.Drawing.Size(160, 20);
             this.txt_TENKHO.TabIndex = 2;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(295, 47);
+            this.label17.Location = new System.Drawing.Point(280, 47);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(0, 13);
             this.label17.TabIndex = 121;

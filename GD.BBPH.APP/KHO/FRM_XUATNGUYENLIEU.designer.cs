@@ -87,8 +87,8 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(472, 559), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(847, 559), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(249, 559), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(1070, 559), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -100,7 +100,7 @@
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(472, 559);
+            this.uiPanel0.Size = new System.Drawing.Size(249, 559);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Danh sách";
             this.uiPanel0.Resize += new System.EventHandler(this.uiPanel0_Resize);
@@ -109,7 +109,7 @@
             // 
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(466, 535);
+            this.uiPanel0Container.Size = new System.Drawing.Size(243, 535);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // uiPanel1
@@ -117,9 +117,9 @@
             this.uiPanel1.CloseButtonVisible = Janus.Windows.UI.InheritableBoolean.False;
             this.uiPanel1.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
-            this.uiPanel1.Location = new System.Drawing.Point(475, 3);
+            this.uiPanel1.Location = new System.Drawing.Point(252, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(847, 559);
+            this.uiPanel1.Size = new System.Drawing.Size(1070, 559);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
@@ -161,7 +161,7 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(845, 535);
+            this.uiPanel1Container.Size = new System.Drawing.Size(1068, 535);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // btn_XOADONG
@@ -232,7 +232,7 @@
             this.txt_TENLYDO.FormNametoShow = "";
             this.txt_TENLYDO.Is_DateTime = false;
             this.txt_TENLYDO.IsShowForm = false;
-            this.txt_TENLYDO.Location = new System.Drawing.Point(361, 156);
+            this.txt_TENLYDO.Location = new System.Drawing.Point(375, 156);
             this.txt_TENLYDO.Name = "txt_TENLYDO";
             this.txt_TENLYDO.Regular_Expression = null;
             this.txt_TENLYDO.Size = new System.Drawing.Size(174, 20);
@@ -274,7 +274,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(302, 119);
+            this.label9.Location = new System.Drawing.Point(287, 119);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 206;
@@ -288,7 +288,7 @@
             this.txt_SOLUONG.FormNametoShow = "";
             this.txt_SOLUONG.Is_DateTime = false;
             this.txt_SOLUONG.IsShowForm = false;
-            this.txt_SOLUONG.Location = new System.Drawing.Point(361, 116);
+            this.txt_SOLUONG.Location = new System.Drawing.Point(375, 116);
             this.txt_SOLUONG.Name = "txt_SOLUONG";
             this.txt_SOLUONG.Regular_Expression = null;
             this.txt_SOLUONG.Size = new System.Drawing.Size(174, 20);
@@ -297,7 +297,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(310, 119);
+            this.label10.Location = new System.Drawing.Point(287, 119);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 13);
             this.label10.TabIndex = 205;
@@ -337,7 +337,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(272, 83);
+            this.label3.Location = new System.Drawing.Point(287, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 198;
@@ -352,7 +352,7 @@
             this.txt_TENNGUYENLIEU.FormNametoShow = "";
             this.txt_TENNGUYENLIEU.Is_DateTime = false;
             this.txt_TENNGUYENLIEU.IsShowForm = false;
-            this.txt_TENNGUYENLIEU.Location = new System.Drawing.Point(361, 80);
+            this.txt_TENNGUYENLIEU.Location = new System.Drawing.Point(375, 80);
             this.txt_TENNGUYENLIEU.Name = "txt_TENNGUYENLIEU";
             this.txt_TENNGUYENLIEU.Regular_Expression = null;
             this.txt_TENNGUYENLIEU.Size = new System.Drawing.Size(174, 20);
@@ -396,7 +396,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(291, 47);
+            this.label2.Location = new System.Drawing.Point(287, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 193;
@@ -410,7 +410,7 @@
             this.txt_TENKHO.FormNametoShow = "";
             this.txt_TENKHO.Is_DateTime = false;
             this.txt_TENKHO.IsShowForm = false;
-            this.txt_TENKHO.Location = new System.Drawing.Point(361, 44);
+            this.txt_TENKHO.Location = new System.Drawing.Point(375, 44);
             this.txt_TENKHO.Name = "txt_TENKHO";
             this.txt_TENKHO.Regular_Expression = null;
             this.txt_TENKHO.Size = new System.Drawing.Size(174, 20);
@@ -433,7 +433,7 @@
             this.pne_CHITIET.Location = new System.Drawing.Point(8, 237);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(830, 239);
+            this.pne_CHITIET.Size = new System.Drawing.Size(1053, 239);
             this.pne_CHITIET.TabIndex = 10;
             // 
             // label1
