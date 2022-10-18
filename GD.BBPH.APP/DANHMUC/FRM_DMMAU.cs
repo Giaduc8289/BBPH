@@ -327,8 +327,17 @@ namespace GD.BBPH.APP.DANHMUC
                 _dmmauEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _DmmauManager.InsertV2(_dmmauEntity, r_Insert, DT_DMMAU, BS_DMMAU);
 
-                //foreach (ThanhphanmauEntity _thanhphanmauEntity in _ThanhphanmauEntityCol)
-                //    _thanhphanmauEntity.Mamau = _dmmauEntity.Mamau;
+                //---Xử lý trường hợp khi thêm mới màu gốc, thì thành phần màu tự bổ sung với tỷ lệ 100%
+                if(_dmmauEntity.Lamaugoc==true)
+                {
+                    ThanhphanmauEntity _thanhphanmauEntity = new ThanhphanmauEntity();
+                    _thanhphanmauEntity.Mamau = txt_MAMAU.Text.Trim();
+                    _thanhphanmauEntity.Tenmau = txt_TENMAU.Text.Trim();
+                    _thanhphanmauEntity.Mausudung = txt_MAMAU.Text.Trim();
+                    _thanhphanmauEntity.Tenmausudung = txt_TENMAU.Text.Trim();
+                    _thanhphanmauEntity.Tyle = 100;
+                    _ThanhphanmauEntityCol.Add(_thanhphanmauEntity);
+                }
                 _ThanhphanmauManager.InsertCollection(_ThanhphanmauEntityCol);
 
                 GRID_TPMAU.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -439,8 +448,8 @@ namespace GD.BBPH.APP.DANHMUC
             if (string.IsNullOrEmpty(MAHIEU_PK)) return;
             ThanhphanmauManager _ThanhphanmauManager = new ThanhphanmauManager();
             ThanhphanmauEntity _ThanhphanmauEntity = new ThanhphanmauEntity();
-            //_ThanhphanmauEntity = _ThanhphanmauManager.SelectOne(MAHIEU_PK);
-            if (_ThanhphanmauEntity != null && MessageBox.Show("Xóa thành phần sợi: " + txt_MAMAU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            _DmmauEntity = _DmmauManager.SelectOne(MAHIEU_PK);
+            if (_DmmauEntity != null && MessageBox.Show("Xóa màu: " + txt_TENMAU.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -456,7 +465,7 @@ namespace GD.BBPH.APP.DANHMUC
                             catch { }
                         }
                     }
-                    //_ThanhphanmauManager.Delete(MAHIEU_PK);
+                    _DmmauManager.Delete(MAHIEU_PK);
                     try { GRID_DMMAU.CurrentRow.Delete(); }
                     catch { }
                     BS_DMMAU_CurrentChanged(new object(), new EventArgs());
@@ -466,7 +475,7 @@ namespace GD.BBPH.APP.DANHMUC
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa thành phần sợi: " + txt_MAMAU.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa màu: " + txt_TENMAU.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_TPMAU.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -478,16 +487,22 @@ namespace GD.BBPH.APP.DANHMUC
         {
             if (txt_MAMAU.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập mã công thức!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập mã màu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAMAU.Focus();
                 return;
             }
-            //else if (string.IsNullOrEmpty(MAHIEU_PK) && _ThanhphanmauManager.SelectByMactptRDT(txt_Mactpt.Text).Rows.Count > 0)
-            //{
-            //    MessageBox.Show("Công thức bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txt_Mactpt.Focus();
-            //    return;
-            //}
+            else if (string.IsNullOrEmpty(MAHIEU_PK) && _DmmauManager.SelectByMamauRDT(txt_MAMAU.Text).Rows.Count > 0)
+            {
+                MessageBox.Show("Mã màu bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_MAMAU.Focus();
+                return;
+            }
+            else if (txt_TENMAU.Text == "")
+            {
+                MessageBox.Show("Yêu cầu nhập tên màu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txt_TENMAU.Focus();
+                return;
+            }
             else
             {
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
