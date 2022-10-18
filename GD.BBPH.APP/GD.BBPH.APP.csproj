@@ -1074,6 +1074,7 @@
     <Content Include="XMLCONFIG\FRM_KQTHOICHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_LYDONHAPXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDOXUATKHO.xml" />
+    <Content Include="XMLCONFIG\FRM_MAUCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANGCHITIET.xml">
       <SubType>Designer</SubType>
@@ -1089,6 +1090,7 @@
     <Content Include="XMLCONFIG\FRM_PHIEUGIAOHANG_D.xml" />
     <Content Include="XMLCONFIG\FRM_PHIEUGIAOHANG_H.xml" />
     <Content Include="XMLCONFIG\FRM_TPMAU.xml" />
+    <Content Include="XMLCONFIG\FRM_TRUCCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOA.xml" />
     <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOACHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_XUATKHOMANG.xml" />
