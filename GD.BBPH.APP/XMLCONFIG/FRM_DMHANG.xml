@@ -32,16 +32,16 @@
   <viewgrid>
     <value>1</value>
     <name>Masp</name>
-    <headerText>Masp</headerText>
+    <headerText>Mã SP</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>50</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Tensp</name>
-    <headerText>Tensp</headerText>
+    <headerText>Tên SP</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -50,23 +50,41 @@
   <viewgrid>
     <value>1</value>
     <name>Maspcuakhach</name>
-    <headerText>Maspcuakhach</headerText>
+    <headerText>Mã bên khách</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Makhach</name>
+    <headerText>Mã khách</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>60</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tenkhach</name>
+    <headerText>Tên khách</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>120</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Machungloai</name>
-    <headerText>Machungloai</headerText>
+    <headerText>Mã chủng loại</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tenchungloai</name>
     <headerText>Tenchungloai</headerText>
     <BackColor>0</BackColor>
@@ -75,25 +93,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
-    <name>Makhach</name>
-    <headerText>Makhach</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tenkhach</name>
-    <headerText>Tenkhach</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Kichthuoc</name>
     <headerText>Kichthuoc</headerText>
     <BackColor>0</BackColor>
@@ -102,7 +102,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Trongluong</name>
     <headerText>Trongluong</headerText>
     <BackColor>0</BackColor>
@@ -111,7 +111,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Sohinh</name>
     <headerText>Sohinh</headerText>
     <BackColor>0</BackColor>
@@ -120,7 +120,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Somau</name>
     <headerText>Somau</headerText>
     <BackColor>0</BackColor>
@@ -129,7 +129,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Loaimuc</name>
     <headerText>Loaimuc</headerText>
     <BackColor>0</BackColor>
@@ -138,7 +138,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Khoiluongmuc</name>
     <headerText>Khoiluongmuc</headerText>
     <BackColor>0</BackColor>
@@ -147,7 +147,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Cautrucin</name>
     <headerText>Cautrucin</headerText>
     <BackColor>0</BackColor>
@@ -156,7 +156,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Mamang1</name>
     <headerText>Mamang1</headerText>
     <BackColor>0</BackColor>
@@ -165,7 +165,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tenmang1</name>
     <headerText>Tenmang1</headerText>
     <BackColor>0</BackColor>
@@ -174,7 +174,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tlmanglop1</name>
     <headerText>Tlmanglop1</headerText>
     <BackColor>0</BackColor>
@@ -183,7 +183,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tlkeolop1</name>
     <headerText>Tlkeolop1</headerText>
     <BackColor>0</BackColor>
@@ -192,7 +192,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Mamang2</name>
     <headerText>Mamang2</headerText>
     <BackColor>0</BackColor>
@@ -201,7 +201,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tenmang2</name>
     <headerText>Tenmang2</headerText>
     <BackColor>0</BackColor>
@@ -210,7 +210,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tlmanglop2</name>
     <headerText>Tlmanglop2</headerText>
     <BackColor>0</BackColor>
@@ -219,7 +219,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tlkeolop2</name>
     <headerText>Tlkeolop2</headerText>
     <BackColor>0</BackColor>
@@ -228,7 +228,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Dinhluongkeo</name>
     <headerText>Dinhluongkeo</headerText>
     <BackColor>0</BackColor>
@@ -237,7 +237,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Kichthuoctruc</name>
     <headerText>Kichthuoctruc</headerText>
     <BackColor>0</BackColor>
@@ -246,7 +246,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Vitri</name>
     <headerText>Vitri</headerText>
     <BackColor>0</BackColor>
@@ -255,7 +255,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Maqcdonggoi</name>
     <headerText>Maqcdonggoi</headerText>
     <BackColor>0</BackColor>
@@ -264,7 +264,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tenqcdonggoi</name>
     <headerText>Tenqcdonggoi</headerText>
     <BackColor>0</BackColor>
@@ -273,7 +273,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Maqcloaithung</name>
     <headerText>Maqcloaithung</headerText>
     <BackColor>0</BackColor>
@@ -282,7 +282,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tenqcloaithung</name>
     <headerText>Tenqcloaithung</headerText>
     <BackColor>0</BackColor>
@@ -291,7 +291,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Maqcthanhpham</name>
     <headerText>Maqcthanhpham</headerText>
     <BackColor>0</BackColor>
@@ -300,7 +300,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tenqcthanhpham</name>
     <headerText>Tenqcthanhpham</headerText>
     <BackColor>0</BackColor>
@@ -309,7 +309,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaytao</name>
     <headerText>Ngaytao</headerText>
     <BackColor>0</BackColor>
@@ -318,7 +318,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoitao</name>
     <headerText>Nguoitao</headerText>
     <BackColor>0</BackColor>
@@ -327,7 +327,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaysua</name>
     <headerText>Ngaysua</headerText>
     <BackColor>0</BackColor>
@@ -336,7 +336,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoisua</name>
     <headerText>Nguoisua</headerText>
     <BackColor>0</BackColor>
@@ -345,7 +345,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Rong</name>
     <headerText>Rong</headerText>
     <BackColor>0</BackColor>
@@ -354,7 +354,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Dai</name>
     <headerText>Dai</headerText>
     <BackColor>0</BackColor>
@@ -363,7 +363,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Somauma</name>
     <headerText>Somauma</headerText>
     <BackColor>0</BackColor>
@@ -372,7 +372,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Sohinhma</name>
     <headerText>Sohinhma</headerText>
     <BackColor>0</BackColor>
@@ -381,7 +381,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Maloaimuc</name>
     <headerText>Maloaimuc</headerText>
     <BackColor>0</BackColor>
@@ -390,7 +390,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>
-    <name>tablename</name>
-    <headerText>Danh sách tendanhsach</headerText>
+    <name>Dmhang</name>
+    <headerText>Danh sách sản phẩm</headerText>
   </tablename>
 </NewDataSet>

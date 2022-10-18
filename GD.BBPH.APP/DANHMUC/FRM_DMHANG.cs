@@ -24,13 +24,15 @@ namespace GD.BBPH.APP.DANHMUC
         private DmhangManager _DmhangManager = new DmhangManager();
         private DmhangEntity _DmhangEntity = new DmhangEntity();
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-        private DataTable DT_DMHANGHOA = new DataTable();
-        private BindingSource BS_DMHANGHOA = new BindingSource();
+        private DataTable DT_DMHANGHOA = new DataTable(), DT_MAUCUAHANG = new DataTable(), DT_TRUCCUAHANG = new DataTable();
+        private BindingSource BS_DMHANGHOA = new BindingSource(), BS_MAUCUAHANG = new BindingSource(), BS_TRUCCUAHANG = new BindingSource();
         private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_DMHANGHOA = new GD.BBPH.CONTROL.JGridEX();
-        private string FUNCTION = "LOAD", MAHIEU_PK = "";
+        private GD.BBPH.CONTROL.JGridEX GRID_MAUCUAHANG = new GD.BBPH.CONTROL.JGridEX();
+        private GD.BBPH.CONTROL.JGridEX GRID_TRUCCUAHANG = new GD.BBPH.CONTROL.JGridEX();
+        private string FUNCTION = "LOAD", MAHIEU_PK = "", MAMAUCHITIET = "", MATRUCCHITIET = "";
 
-        private DataTable DT_DMKHACH = new DataTable(), DT_DMCHUNGLOAI = new DataTable(), DT_DMMANG = new DataTable()
+        private DataTable DT_DMKHACH = new DataTable(), DT_DMCHUNGLOAI = new DataTable(), DT_DMMANG = new DataTable(), DT_DMMAU = new DataTable()
             , DT_LOAIMUC = new DataTable(), DT_SOMAU = new DataTable(), DT_SOHINH = new DataTable()
             , DT_QCTHANHPHAM = new DataTable(), DT_QCDONGGOI = new DataTable(), DT_QCLOAITHUNG = new DataTable();
 
@@ -59,6 +61,7 @@ namespace GD.BBPH.APP.DANHMUC
                         DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
                         DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
                         DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
+                        DT_DMMAU = LIB.SESSION_START.DT_DMMAU;
                         DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
                         DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
                         DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
@@ -95,6 +98,8 @@ namespace GD.BBPH.APP.DANHMUC
         {
             DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
             DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
+            DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
+            DT_DMMAU = LIB.SESSION_START.DT_DMMAU;
             DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
             DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
             DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
@@ -111,9 +116,12 @@ namespace GD.BBPH.APP.DANHMUC
         public FRM_DMHANG()
         {
             InitializeComponent();
-            DmhangManager _DmhangManager = new DmhangManager();
-            DataTable dt111 = _DmhangManager.Clone();
-            GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml");
+            //DataTable dt111 = new DmhangManager().Clone();
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml");
+            //dt111 = new MaucuahangManager().Clone();
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MAUCUAHANG.xml");
+            //dt111 = new TruccuahangManager().Clone();
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_TRUCCUAHANG.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -123,7 +131,12 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_KHOIPHUC, btn_KHOIPHUC.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml", GRID_DMHANGHOA, uiPanel0Container);
+            GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MAUCUAHANG.xml", GRID_MAUCUAHANG, pne_DSMAU);
+            GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_TRUCCUAHANG.xml", GRID_TRUCCUAHANG, pne_DSTRUC);
             FORM_PROCESS();
+            GRID_MAUCUAHANG.COMBO_MULTICOLUMN(GRID_MAUCUAHANG, MaucuahangFields.Mamau.Name, DmmauFields.Tenmau.Name, DmmauFields.Mamau.Name, DmmauFields.Mamau.Name, DT_DMMAU);
+            GRID_MAUCUAHANG.CellEdited += GRID_MAUCUAHANG_CellEdited;
+            GRID_MAUCUAHANG.RootTable.Columns[MaucuahangFields.Tenmau.Name].EditType = EditType.NoEdit;
             DataView Source_View = new DataView(DT_DMHANGHOA);
             BS_DMHANGHOA = new BindingSource();
             BS_DMHANGHOA.DataSource = Source_View;
@@ -135,6 +148,19 @@ namespace GD.BBPH.APP.DANHMUC
             btn_THEMMOI.Focus();
         }
 
+        #region Xử lý Grid chi tiết
+        private void GRID_MAUCUAHANG_CellEdited(object sender, ColumnActionEventArgs e)
+        {
+            if (e.Column.DataMember == MaucuahangFields.Mamau.Name)
+            {
+                DmmauEntity _DmmauEntity = new DmmauManager().SelectOne(GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.Mamau.Name].Value.ToString());
+                if (_DmmauEntity!=null)
+                    GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.Tenmau.Name].Value = _DmmauEntity.Tenmau;
+            }
+        }
+        #endregion
+
+        #region Load dữ liệu
         void BS_DMHANGHOA_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -166,7 +192,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MAMANG2.Text = _Rowview.Row[DmhangFields.Mamang2.Name].ToString();
                     txt_TLMANG2.Text = _Rowview.Row[DmhangFields.Tlmanglop2.Name].ToString();
                     txt_TLKEO2.Text = _Rowview.Row[DmhangFields.Tlkeolop2.Name].ToString();
-                    //txt_Dinhluongkeo.Text = _Rowview.Row[DmhangFields.Dinhluongkeo.Name].ToString();
+                    txt_DINHLUONGKEO.Text = _Rowview.Row[DmhangFields.Dinhluongkeo.Name].ToString();
                     txt_KICHTHUOCTRUC.Text = _Rowview.Row[DmhangFields.Kichthuoctruc.Name].ToString();
                     txt_VITRI.Text = _Rowview.Row[DmhangFields.Vitri.Name].ToString();
                     txt_MAQCTHANHPHAM.Text = _Rowview.Row[DmhangFields.Maqcthanhpham.Name].ToString();
@@ -182,10 +208,82 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MAQCTHANHPHAM_Validating(new object(), new CancelEventArgs());
                     txt_MAQCDONGGOI_Validating(new object(), new CancelEventArgs());
                     txt_MAQCLOAITHUNG_Validating(new object(), new CancelEventArgs());
+
+                    SHOWGRID(MAHIEU_PK);
+                }
+                else
+                {
+                    SHOWGRID("");
+                    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmhang_CurrentChanged"); }
         }
+        void BS_MAUCUAHANG_CurrentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (BS_MAUCUAHANG.Current != null)
+                {
+                    DataRowView _Rowview = (DataRowView)this.BS_MAUCUAHANG.Current;
+                    if (_Rowview != null)
+                        MAMAUCHITIET = _Rowview.Row[MaucuahangFields.Id.Name].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        void BS_TRUCCUAHANG_CurrentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (BS_TRUCCUAHANG.Current != null)
+                {
+                    DataRowView _Rowview = (DataRowView)this.BS_TRUCCUAHANG.Current;
+                    if (_Rowview != null)
+                        MATRUCCHITIET = _Rowview.Row[TruccuahangFields.Id.Name].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void SHOWGRID(string MAHIEU_PK)
+        {
+            if (string.IsNullOrEmpty(MAHIEU_PK))
+            {
+                DT_MAUCUAHANG = new MaucuahangManager().Clone();
+                BS_MAUCUAHANG = new BindingSource(DT_MAUCUAHANG, null);
+                GRID_MAUCUAHANG.DataSource = BS_MAUCUAHANG;
+
+                DT_TRUCCUAHANG = new TruccuahangManager().Clone();
+                BS_TRUCCUAHANG = new BindingSource(DT_TRUCCUAHANG, null);
+                GRID_TRUCCUAHANG.DataSource = BS_TRUCCUAHANG;
+            }
+            else
+            {
+                DT_MAUCUAHANG = new MaucuahangManager().SelectByMaspRDT(MAHIEU_PK);
+                DataView Source_View_Mau = new DataView(DT_MAUCUAHANG);
+                BS_MAUCUAHANG = new BindingSource();
+                BS_MAUCUAHANG.DataSource = Source_View_Mau;
+                GRID_MAUCUAHANG.DataSource = BS_MAUCUAHANG;
+
+                DT_TRUCCUAHANG = new TruccuahangManager().SelectByMaspRDT(MAHIEU_PK);
+                DataView Source_View_Truc = new DataView(DT_TRUCCUAHANG);
+                BS_TRUCCUAHANG = new BindingSource();
+                BS_TRUCCUAHANG.DataSource = Source_View_Truc;
+                GRID_TRUCCUAHANG.DataSource = BS_TRUCCUAHANG;
+            }
+            BS_MAUCUAHANG.CurrentChanged += new EventHandler(BS_MAUCUAHANG_CurrentChanged);
+            BS_MAUCUAHANG_CurrentChanged((new object()), (new EventArgs()));
+            BS_TRUCCUAHANG.CurrentChanged += new EventHandler(BS_TRUCCUAHANG_CurrentChanged);
+            BS_TRUCCUAHANG_CurrentChanged((new object()), (new EventArgs()));
+        }
+        #endregion
 
         private string Save_Data(string _str_DMCHUONG_PK)
         {
@@ -216,7 +314,7 @@ namespace GD.BBPH.APP.DANHMUC
             _dmhangEntity.Tenmang2 = txt_TENMANG2.Text.Trim();
             _dmhangEntity.Tlmanglop2 = LIB.ConvertString.NumbertoDB(txt_TLMANG2.Text.Trim());
             _dmhangEntity.Tlkeolop2 = LIB.ConvertString.NumbertoDB(txt_TLKEO2.Text.Trim());
-            //_dmhangEntity.Dinhluongkeo = txt_DINHLUONGKEO.Text.Trim();
+            _dmhangEntity.Dinhluongkeo = LIB.ConvertString.NumbertoDB(txt_DINHLUONGKEO.Text.Trim());
             _dmhangEntity.Kichthuoctruc = txt_KICHTHUOCTRUC.Text.Trim();
             _dmhangEntity.Vitri = txt_VITRI.Text.Trim();
             _dmhangEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
@@ -226,36 +324,167 @@ namespace GD.BBPH.APP.DANHMUC
             _dmhangEntity.Maqcloaithung = txt_MAQCLOAITHUNG.Text.Trim();
             _dmhangEntity.Tenqcloaithung = txt_TENQCLOAITHUNG.Text.Trim();
 
+            #region Lấy dữ liệu lưới chi tiết
+            EntityCollection _MaucuahangEntityCol = new EntityCollection();
+            GridEXRow[] listGrid = GRID_MAUCUAHANG.GetDataRows();
+            foreach (GridEXRow _grid in listGrid)
+            {
+                DataRowView _view = (DataRowView)_grid.DataRow;
+                if (_view == null) continue;
+                MaucuahangEntity _maucuahangEntity = new MaucuahangEntity();
+                _maucuahangEntity.Masp = txt_MASP.Text.Trim();
+                _maucuahangEntity.Tensp = txt_TENSP.Text.Trim();
+                _maucuahangEntity.Mamau = _view[MaucuahangFields.Mamau.Name].ToString();
+                _maucuahangEntity.Tenmau = _view[MaucuahangFields.Tenmau.Name].ToString();
+                _maucuahangEntity.Klmau = LIB.ConvertString.NumbertoDB(_view[MaucuahangFields.Klmau.Name].ToString());
+                try { _maucuahangEntity.Id = Convert.ToInt64(_view[MaucuahangFields.Id.Name].ToString()); }
+                catch { }
+
+                _maucuahangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_maucuahangEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new MaucuahangManager()).SelectById(_maucuahangEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _maucuahangEntity.Ngaysua = DateTime.Now;
+                        _maucuahangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _maucuahangEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _maucuahangEntity.Ngaytao = DateTime.Now;
+                        _maucuahangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+
+                _MaucuahangEntityCol.Add(_maucuahangEntity);
+            }
+            EntityCollection _TruccuahangEntityCol = new EntityCollection();
+            GridEXRow[] listGridTruc = GRID_TRUCCUAHANG.GetDataRows();
+            foreach (GridEXRow _grid in listGridTruc)
+            {
+                DataRowView _view = (DataRowView)_grid.DataRow;
+                if (_view == null) continue;
+                TruccuahangEntity _truccuahangEntity = new TruccuahangEntity();
+
+                _truccuahangEntity.Masp = txt_MASP.Text.Trim();
+                _truccuahangEntity.Tensp = txt_TENSP.Text.Trim();
+                try { _truccuahangEntity.Stttruc = Convert.ToInt32(_view[TruccuahangFields.Stttruc.Name].ToString()); }
+                catch { }
+                _truccuahangEntity.Matruc = _view[TruccuahangFields.Matruc.Name].ToString();
+                try { _truccuahangEntity.Id = Convert.ToInt64(_view[TruccuahangFields.Id.Name].ToString()); }
+                catch { }
+
+                _truccuahangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_truccuahangEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new TruccuahangManager()).SelectById(_truccuahangEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _truccuahangEntity.Ngaysua = DateTime.Now;
+                        _truccuahangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _truccuahangEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _truccuahangEntity.Ngaytao = DateTime.Now;
+                        _truccuahangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+
+                _TruccuahangEntityCol.Add(_truccuahangEntity);
+            }
+            #endregion
+
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
-                _str_DMCHUONG_PK = _DmhangManager.InsertV2(_dmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
                 _dmhangEntity.Ngaytao = DateTime.Now;
                 _dmhangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _DmhangManager.InsertV2(_DmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
+                _str_DMCHUONG_PK = _DmhangManager.InsertV2(_dmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
+                new MaucuahangManager().InsertCollection(_MaucuahangEntityCol);
+                new TruccuahangManager().InsertCollection(_TruccuahangEntityCol);
+                GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmhangManager.Convert(_dmhangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMHANGHOA.ResetCurrentItem();
+                BS_DMHANGHOA_CurrentChanged(new object(), new EventArgs());
             }
             else
             {
                 _dmhangEntity.Ngaysua = DateTime.Now;
                 _dmhangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DmhangManager.Update(_dmhangEntity);
-
+                foreach (MaucuahangEntity _maucuahangEntity in _MaucuahangEntityCol)
+                {
+                    if (_maucuahangEntity.IsNew)
+                    {
+                        DataRow _r_Insert = DT_MAUCUAHANG.NewRow();
+                        DT_MAUCUAHANG.Rows.Add(_r_Insert);
+                        new MaucuahangManager().InsertV2(_maucuahangEntity, _r_Insert, DT_MAUCUAHANG, BS_MAUCUAHANG);
+                    }
+                    else new MaucuahangManager().Update(_maucuahangEntity);
+                }
+                foreach (TruccuahangEntity _truccuahangEntity in _TruccuahangEntityCol)
+                {
+                    if (_truccuahangEntity.IsNew)
+                    {
+                        DataRow _r_Insert = DT_TRUCCUAHANG.NewRow();
+                        DT_TRUCCUAHANG.Rows.Add(_r_Insert);
+                        new TruccuahangManager().InsertV2(_truccuahangEntity, _r_Insert, DT_TRUCCUAHANG, BS_TRUCCUAHANG);
+                    }
+                    else new TruccuahangManager().Update(_truccuahangEntity);
+                }
+                #region Update lưới chính
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Masp.Name].Value = _dmhangEntity.Masp;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tensp.Name].Value = _dmhangEntity.Tensp;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maspcuakhach.Name].Value = _dmhangEntity.Maspcuakhach;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Machungloai.Name].Value = _dmhangEntity.Machungloai;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenchungloai.Name].Value = _dmhangEntity.Tenchungloai;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Makhach.Name].Value = _dmhangEntity.Makhach;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenkhach.Name].Value = _dmhangEntity.Tenkhach;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Kichthuoc.Name].Value = _dmhangEntity.Kichthuoc;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Khoiluongmuc.Name].Value = _dmhangEntity.Khoiluongmuc;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Trongluong.Name].Value = _dmhangEntity.Trongluong;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Sohinh.Name].Value = _dmhangEntity.Sohinh;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Cautrucin.Name].Value = _dmhangEntity.Cautrucin;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somau.Name].Value = _dmhangEntity.Somau;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Loaimuc.Name].Value = _dmhangEntity.Loaimuc;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Khoiluongmuc.Name].Value = _dmhangEntity.Khoiluongmuc;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Cautrucin.Name].Value = _dmhangEntity.Cautrucin;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Mamang1.Name].Value = _dmhangEntity.Mamang1;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenmang1.Name].Value = _dmhangEntity.Tenmang1;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlmanglop1.Name].Value = _dmhangEntity.Tlmanglop1;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlkeolop1.Name].Value = _dmhangEntity.Tlkeolop1;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Mamang2.Name].Value = _dmhangEntity.Mamang2;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenmang2.Name].Value = _dmhangEntity.Tenmang2;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlmanglop2.Name].Value = _dmhangEntity.Tlmanglop2;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlkeolop2.Name].Value = _dmhangEntity.Tlkeolop2;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Dinhluongkeo.Name].Value = _dmhangEntity.Dinhluongkeo;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Kichthuoctruc.Name].Value = _dmhangEntity.Kichthuoctruc;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Vitri.Name].Value = _dmhangEntity.Vitri;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maqcdonggoi.Name].Value = _dmhangEntity.Maqcdonggoi;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenqcdonggoi.Name].Value = _dmhangEntity.Tenqcdonggoi;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maqcloaithung.Name].Value = _dmhangEntity.Maqcloaithung;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenqcloaithung.Name].Value = _dmhangEntity.Tenqcloaithung;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maqcthanhpham.Name].Value = _dmhangEntity.Maqcthanhpham;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenqcthanhpham.Name].Value = _dmhangEntity.Tenqcthanhpham;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Rong.Name].Value = _dmhangEntity.Rong;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Dai.Name].Value = _dmhangEntity.Dai;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somauma.Name].Value = _dmhangEntity.Somauma;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Sohinhma.Name].Value = _dmhangEntity.Sohinhma;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maloaimuc.Name].Value = _dmhangEntity.Maloaimuc;
+                #endregion
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmhangManager.Convert(_dmhangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+                BS_DMHANGHOA.ResetCurrentItem();
+                BS_DMHANGHOA_CurrentChanged(new object(), new EventArgs());
             }
             return _str_DMCHUONG_PK;
         }
@@ -270,6 +499,16 @@ namespace GD.BBPH.APP.DANHMUC
             r_Insert = DT_DMHANGHOA.NewRow();
             DT_DMHANGHOA.Rows.Add(r_Insert);
             BS_DMHANGHOA.Position = DT_DMHANGHOA.Rows.Count;
+            GRID_MAUCUAHANG.Enabled = true;
+            GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MAUCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
+            GRID_TRUCCUAHANG.Enabled = true;
+            GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_TRUCCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             MAHIEU_PK = "";
             txt_MASP.Focus();
             TEXTBOX_Only_Control(false, null);
@@ -290,6 +529,16 @@ namespace GD.BBPH.APP.DANHMUC
 
             }
             GRID_DMHANGHOA.Enabled = false;
+            GRID_MAUCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
+            GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MAUCUAHANG.Enabled = true;
+            GRID_TRUCCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
+            GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_TRUCCUAHANG.Enabled = true;
         }
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
@@ -301,6 +550,12 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
             GRID_DMHANGHOA.Enabled = true;
+            GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
         }
         private void btn_XOA_Click(object sender, EventArgs e)
         {
@@ -327,6 +582,12 @@ namespace GD.BBPH.APP.DANHMUC
                 }
             }
             GRID_DMHANGHOA.Enabled = true;
+            GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
         }
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
@@ -361,6 +622,12 @@ namespace GD.BBPH.APP.DANHMUC
                 GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
                 GRID_DMHANGHOA.Enabled = true;
                 btn_THEMMOI.Focus();
+                GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
             }
         }
         private void btn_SAOCHEP_Click(object sender, EventArgs e)
@@ -374,6 +641,16 @@ namespace GD.BBPH.APP.DANHMUC
                 DT_DMHANGHOA.Rows.Add(r_Insert);
                 DataRow[] drCopy = DT_DMHANGHOA.Select(DmhangFields.Masp.Name + "= '" + MAHIEU_PK + "'");
                 BS_DMHANGHOA.Position = DT_DMHANGHOA.Rows.Count;
+                GRID_MAUCUAHANG.Enabled = true;
+                GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+                GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+                GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+                GRID_MAUCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
+                GRID_TRUCCUAHANG.Enabled = true;
+                GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+                GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+                GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+                GRID_TRUCCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
 
                 txt_MASP.Text = drCopy[0][DmhangFields.Masp.Name].ToString();
                 txt_TENSP.Text = drCopy[0][DmhangFields.Tensp.Name].ToString();
@@ -676,10 +953,10 @@ namespace GD.BBPH.APP.DANHMUC
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_MAQCLOAITHUNG.Text = _RowViewSelect[DmquycachFields.Maquycach.Name].ToString();
-                txt_LOAIMUC.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
+                txt_TENQCLOAITHUNG.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
             }
             else
-                txt_LOAIMUC.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
+                txt_TENQCLOAITHUNG.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
         }
 
         #endregion
