@@ -65,8 +65,8 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(637, 689), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(701, 689), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(637, 559), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(587, 559), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -77,9 +77,8 @@
             this.uiPanel0.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
-            this.uiPanel0.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(637, 689);
+            this.uiPanel0.Size = new System.Drawing.Size(637, 559);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Danh sách";
             this.uiPanel0.Resize += new System.EventHandler(this.uiPanel0_Resize);
@@ -87,9 +86,8 @@
             // uiPanel0Container
             // 
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
-            this.uiPanel0Container.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(631, 665);
+            this.uiPanel0Container.Size = new System.Drawing.Size(631, 535);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // uiPanel1
@@ -98,9 +96,8 @@
             this.uiPanel1.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(640, 3);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(701, 689);
+            this.uiPanel1.Size = new System.Drawing.Size(587, 559);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
@@ -119,9 +116,8 @@
             this.uiPanel1Container.Controls.Add(this.txt_MANHOM);
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
-            this.uiPanel1Container.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(699, 665);
+            this.uiPanel1Container.Size = new System.Drawing.Size(585, 535);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // txt_TENRUTGON
@@ -132,20 +128,18 @@
             this.txt_TENRUTGON.FormNametoShow = "";
             this.txt_TENRUTGON.Is_DateTime = false;
             this.txt_TENRUTGON.IsShowForm = false;
-            this.txt_TENRUTGON.Location = new System.Drawing.Point(148, 108);
-            this.txt_TENRUTGON.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TENRUTGON.Location = new System.Drawing.Point(111, 88);
             this.txt_TENRUTGON.Name = "txt_TENRUTGON";
             this.txt_TENRUTGON.Regular_Expression = null;
-            this.txt_TENRUTGON.Size = new System.Drawing.Size(423, 22);
+            this.txt_TENRUTGON.Size = new System.Drawing.Size(318, 20);
             this.txt_TENRUTGON.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 113);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(22, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 122;
             this.label1.Text = "Tên rút gọn";
             // 
@@ -154,10 +148,9 @@
             this.btn_Thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_Thoat.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(574, 204);
-            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Thoat.Location = new System.Drawing.Point(430, 166);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(100, 28);
+            this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
             this.btn_Thoat.TabIndex = 8;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
@@ -168,10 +161,9 @@
             this.btn_KHOIPHUC.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_KHOIPHUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(245, 204);
-            this.btn_KHOIPHUC.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(184, 166);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
-            this.btn_KHOIPHUC.Size = new System.Drawing.Size(100, 28);
+            this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
             this.btn_KHOIPHUC.TabIndex = 5;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
@@ -182,10 +174,9 @@
             this.btn_LUULAI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_LUULAI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(32, 204);
-            this.btn_LUULAI.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_LUULAI.Location = new System.Drawing.Point(24, 166);
             this.btn_LUULAI.Name = "btn_LUULAI";
-            this.btn_LUULAI.Size = new System.Drawing.Size(100, 28);
+            this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
             this.btn_LUULAI.TabIndex = 3;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
@@ -196,10 +187,9 @@
             this.btn_XOA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_XOA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(137, 204);
-            this.btn_XOA.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_XOA.Location = new System.Drawing.Point(103, 166);
             this.btn_XOA.Name = "btn_XOA";
-            this.btn_XOA.Size = new System.Drawing.Size(100, 28);
+            this.btn_XOA.Size = new System.Drawing.Size(75, 23);
             this.btn_XOA.TabIndex = 4;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
@@ -210,10 +200,9 @@
             this.btn_THEMMOI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_THEMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(465, 204);
-            this.btn_THEMMOI.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(349, 166);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
-            this.btn_THEMMOI.Size = new System.Drawing.Size(100, 28);
+            this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
             this.btn_THEMMOI.TabIndex = 7;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
@@ -224,10 +213,9 @@
             this.btn_SUA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_SUA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(357, 204);
-            this.btn_SUA.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_SUA.Location = new System.Drawing.Point(268, 166);
             this.btn_SUA.Name = "btn_SUA";
-            this.btn_SUA.Size = new System.Drawing.Size(100, 28);
+            this.btn_SUA.Size = new System.Drawing.Size(75, 23);
             this.btn_SUA.TabIndex = 6;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
@@ -241,20 +229,18 @@
             this.txt_TENNHOM.FormNametoShow = "";
             this.txt_TENNHOM.Is_DateTime = false;
             this.txt_TENNHOM.IsShowForm = false;
-            this.txt_TENNHOM.Location = new System.Drawing.Point(148, 64);
-            this.txt_TENNHOM.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TENNHOM.Location = new System.Drawing.Point(111, 52);
             this.txt_TENNHOM.Name = "txt_TENNHOM";
             this.txt_TENNHOM.Regular_Expression = null;
-            this.txt_TENNHOM.Size = new System.Drawing.Size(423, 22);
+            this.txt_TENNHOM.Size = new System.Drawing.Size(318, 20);
             this.txt_TENNHOM.TabIndex = 1;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(29, 69);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(22, 56);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(72, 17);
+            this.label21.Size = new System.Drawing.Size(55, 13);
             this.label21.TabIndex = 120;
             this.label21.Text = "Tên nhóm";
             // 
@@ -266,31 +252,29 @@
             this.txt_MANHOM.FormNametoShow = "";
             this.txt_MANHOM.Is_DateTime = false;
             this.txt_MANHOM.IsShowForm = false;
-            this.txt_MANHOM.Location = new System.Drawing.Point(148, 27);
-            this.txt_MANHOM.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MANHOM.Location = new System.Drawing.Point(111, 22);
             this.txt_MANHOM.Name = "txt_MANHOM";
             this.txt_MANHOM.Regular_Expression = null;
-            this.txt_MANHOM.Size = new System.Drawing.Size(183, 22);
+            this.txt_MANHOM.Size = new System.Drawing.Size(138, 20);
             this.txt_MANHOM.TabIndex = 0;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(29, 30);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(22, 24);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(66, 17);
+            this.label22.Size = new System.Drawing.Size(51, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã nhóm";
             // 
             // FRM_DMNHOMQUYCACH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 695);
+            this.ClientSize = new System.Drawing.Size(1230, 565);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FRM_DMNHOMQUYCACH";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DMNHOMQUYCACH_FormClosing);

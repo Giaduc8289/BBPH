@@ -147,7 +147,7 @@
             this.txt_NGUOILIENHE.Location = new System.Drawing.Point(100, 147);
             this.txt_NGUOILIENHE.Name = "txt_NGUOILIENHE";
             this.txt_NGUOILIENHE.Regular_Expression = null;
-            this.txt_NGUOILIENHE.Size = new System.Drawing.Size(318, 20);
+            this.txt_NGUOILIENHE.Size = new System.Drawing.Size(332, 20);
             this.txt_NGUOILIENHE.TabIndex = 127;
             // 
             // label5
@@ -179,10 +179,10 @@
             this.txt_EMAIL.FormNametoShow = "";
             this.txt_EMAIL.Is_DateTime = false;
             this.txt_EMAIL.IsShowForm = false;
-            this.txt_EMAIL.Location = new System.Drawing.Point(243, 112);
+            this.txt_EMAIL.Location = new System.Drawing.Point(260, 112);
             this.txt_EMAIL.Name = "txt_EMAIL";
             this.txt_EMAIL.Regular_Expression = null;
-            this.txt_EMAIL.Size = new System.Drawing.Size(176, 20);
+            this.txt_EMAIL.Size = new System.Drawing.Size(172, 20);
             this.txt_EMAIL.TabIndex = 5;
             // 
             // txt_SODIENTHOAI
@@ -196,13 +196,13 @@
             this.txt_SODIENTHOAI.Location = new System.Drawing.Point(100, 110);
             this.txt_SODIENTHOAI.Name = "txt_SODIENTHOAI";
             this.txt_SODIENTHOAI.Regular_Expression = null;
-            this.txt_SODIENTHOAI.Size = new System.Drawing.Size(83, 20);
+            this.txt_SODIENTHOAI.Size = new System.Drawing.Size(100, 20);
             this.txt_SODIENTHOAI.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(206, 113);
+            this.label3.Location = new System.Drawing.Point(223, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 126;
@@ -242,7 +242,7 @@
             this.txt_DIACHI.Location = new System.Drawing.Point(100, 76);
             this.txt_DIACHI.Name = "txt_DIACHI";
             this.txt_DIACHI.Regular_Expression = null;
-            this.txt_DIACHI.Size = new System.Drawing.Size(318, 20);
+            this.txt_DIACHI.Size = new System.Drawing.Size(332, 20);
             this.txt_DIACHI.TabIndex = 2;
             // 
             // label1
@@ -343,7 +343,7 @@
             this.txt_TENHIEU.Location = new System.Drawing.Point(100, 42);
             this.txt_TENHIEU.Name = "txt_TENHIEU";
             this.txt_TENHIEU.Regular_Expression = null;
-            this.txt_TENHIEU.Size = new System.Drawing.Size(318, 20);
+            this.txt_TENHIEU.Size = new System.Drawing.Size(332, 20);
             this.txt_TENHIEU.TabIndex = 1;
             // 
             // label21

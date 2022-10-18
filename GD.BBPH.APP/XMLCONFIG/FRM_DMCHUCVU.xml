@@ -38,7 +38,7 @@
   <viewgrid>
     <value>1</value>
     <name>Macv</name>
-    <headerText>Mã</headerText>
+    <headerText>Mã chức vụ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -47,7 +47,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tenchucvu</name>
-    <headerText>Chức vụ</headerText>
+    <headerText>Tên chức vụ</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>

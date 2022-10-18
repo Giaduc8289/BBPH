@@ -337,6 +337,11 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMMANG.ColumnAutoResize = false;
         }
 
+        private void uiPanel1Container_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void label22_Click(object sender, EventArgs e)
         {
 

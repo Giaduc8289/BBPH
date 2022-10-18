@@ -126,6 +126,13 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MAHIEU.Text = _Rowview.Row[DmnguyenlieuFields.Manl.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmnguyenlieuFields.Tenrutgon.Name].ToString();
                     txt_MANHOM.Text = _Rowview.Row[DmnguyenlieuFields.Manhom.Name].ToString();
+                    txt_TENHIEU.Text = _Rowview.Row[DmnguyenlieuFields.Tennl.Name].ToString();
+                    txt_GIA.Text = _Rowview.Row[DmnguyenlieuFields.Gia.Name].ToString();
+                    txt_NGAY.Text = _Rowview.Row[DmnguyenlieuFields.Ngay.Name].ToString();
+                    txt_GIAHIENTAI.Text = _Rowview.Row[DmnguyenlieuFields.Giahientai.Name].ToString();
+                    txt_TANG.Text = _Rowview.Row[DmnguyenlieuFields.Tang.Name].ToString();
+                    txt_GIAM.Text = _Rowview.Row[DmnguyenlieuFields.Giam.Name].ToString();
+
 
                     txt_MANHOMNGUYENLIEU_Validating(new object(), new CancelEventArgs());
                 }
@@ -140,6 +147,13 @@ namespace GD.BBPH.APP.DANHMUC
             _DmnguyenlieuEntity.Tenrutgon = txt_TENHIEU.Text.Trim();
             _DmnguyenlieuEntity.Manhom = txt_MANHOM.Text.Trim();
             _DmnguyenlieuEntity.Tennhom = txt_TENNHOM.Text.Trim();
+            _DmnguyenlieuEntity.Tennl = txt_TENNGUYENLIEU.Text.Trim();
+            _DmnguyenlieuEntity.Gia = Convert.ToDecimal(txt_GIA.Text.Trim());
+            _DmnguyenlieuEntity.Ngay = Convert.ToDateTime(txt_NGAY.Text.Trim());
+            _DmnguyenlieuEntity.Giahientai = Convert.ToDecimal(txt_GIAHIENTAI.Text.Trim());
+            _DmnguyenlieuEntity.Tang = Convert.ToDecimal(txt_TANG.Text.Trim());
+            _DmnguyenlieuEntity.Giam = Convert.ToDecimal(txt_GIAM.Text.Trim());
+
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _DmnguyenlieuEntity.Ngaytao = DateTime.Now;
@@ -157,6 +171,13 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tenrutgon.Name].Value = _DmnguyenlieuEntity.Tenrutgon;
                 GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Manhom.Name].Value = _DmnguyenlieuEntity.Manhom;
                 GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tennhom.Name].Value = _DmnguyenlieuEntity.Tennhom;
+                GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tennl.Name].Value = _DmnguyenlieuEntity.Tennl;
+                GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Gia.Name].Value = _DmnguyenlieuEntity.Gia;
+                GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Ngay.Name].Value = _DmnguyenlieuEntity.Ngay;
+                GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Giahientai.Name].Value = _DmnguyenlieuEntity.Giahientai;
+                GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tang.Name].Value = _DmnguyenlieuEntity.Tang;
+                GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Giam.Name].Value = _DmnguyenlieuEntity.Giam;
+
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnguyenlieuManager.Convert(_DmnguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_DMCHUONG_PK;

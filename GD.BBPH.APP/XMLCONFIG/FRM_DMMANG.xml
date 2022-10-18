@@ -32,7 +32,7 @@
   <viewgrid>
     <value>1</value>
     <name>Mamang</name>
-    <headerText>Mamang</headerText>
+    <headerText>Mã màng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -41,7 +41,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tenmang</name>
-    <headerText>Tenmang</headerText>
+    <headerText>Tên màng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -50,7 +50,7 @@
   <viewgrid>
     <value>1</value>
     <name>Makhach</name>
-    <headerText>Makhach</headerText>
+    <headerText>Mã khách</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -59,7 +59,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tenkhach</name>
-    <headerText>Tenkhach</headerText>
+    <headerText>Tên khách</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -68,7 +68,7 @@
   <viewgrid>
     <value>1</value>
     <name>Kichthuoc</name>
-    <headerText>Kichthuoc</headerText>
+    <headerText>Kích thước</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -77,7 +77,7 @@
   <viewgrid>
     <value>1</value>
     <name>Trongluong</name>
-    <headerText>Trongluong</headerText>
+    <headerText>Trọng lượng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -86,14 +86,14 @@
   <viewgrid>
     <value>1</value>
     <name>Mactpt</name>
-    <headerText>Mactpt</headerText>
+    <headerText>Mã CTPT</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaytao</name>
     <headerText>Ngaytao</headerText>
     <BackColor>0</BackColor>
@@ -102,7 +102,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoitao</name>
     <headerText>Nguoitao</headerText>
     <BackColor>0</BackColor>
@@ -111,7 +111,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaysua</name>
     <headerText>Ngaysua</headerText>
     <BackColor>0</BackColor>
@@ -120,7 +120,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoisua</name>
     <headerText>Nguoisua</headerText>
     <BackColor>0</BackColor>

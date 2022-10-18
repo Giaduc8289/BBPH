@@ -202,7 +202,7 @@
             this.txt_TENHIEU.FormNametoShow = "";
             this.txt_TENHIEU.Is_DateTime = false;
             this.txt_TENHIEU.IsShowForm = false;
-            this.txt_TENHIEU.Location = new System.Drawing.Point(111, 81);
+            this.txt_TENHIEU.Location = new System.Drawing.Point(93, 81);
             this.txt_TENHIEU.Name = "txt_TENHIEU";
             this.txt_TENHIEU.Regular_Expression = null;
             this.txt_TENHIEU.Size = new System.Drawing.Size(318, 20);
@@ -211,7 +211,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(22, 85);
+            this.label21.Location = new System.Drawing.Point(8, 85);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(68, 13);
             this.label21.TabIndex = 120;
@@ -225,7 +225,7 @@
             this.txt_MAHIEU.FormNametoShow = "";
             this.txt_MAHIEU.Is_DateTime = false;
             this.txt_MAHIEU.IsShowForm = false;
-            this.txt_MAHIEU.Location = new System.Drawing.Point(111, 51);
+            this.txt_MAHIEU.Location = new System.Drawing.Point(93, 51);
             this.txt_MAHIEU.Name = "txt_MAHIEU";
             this.txt_MAHIEU.Regular_Expression = null;
             this.txt_MAHIEU.Size = new System.Drawing.Size(138, 20);
@@ -234,7 +234,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(22, 54);
+            this.label22.Location = new System.Drawing.Point(8, 54);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(64, 13);
             this.label22.TabIndex = 119;

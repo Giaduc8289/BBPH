@@ -94,8 +94,8 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(481, 498), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(750, 498), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(641, 498), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(772, 498), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -107,7 +107,7 @@
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(481, 498);
+            this.uiPanel0.Size = new System.Drawing.Size(641, 498);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Danh sách";
             // 
@@ -115,7 +115,7 @@
             // 
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(475, 474);
+            this.uiPanel0Container.Size = new System.Drawing.Size(635, 474);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // uiPanel1
@@ -123,9 +123,9 @@
             this.uiPanel1.CloseButtonVisible = Janus.Windows.UI.InheritableBoolean.False;
             this.uiPanel1.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
-            this.uiPanel1.Location = new System.Drawing.Point(484, 3);
+            this.uiPanel1.Location = new System.Drawing.Point(644, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(750, 498);
+            this.uiPanel1.Size = new System.Drawing.Size(772, 498);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
@@ -174,7 +174,7 @@
             this.uiPanel1Container.Controls.Add(this.btn_SUA);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(748, 474);
+            this.uiPanel1Container.Size = new System.Drawing.Size(770, 474);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // txt_VAT
@@ -258,7 +258,7 @@
             this.txt_MADONHANG_D.FormNametoShow = "";
             this.txt_MADONHANG_D.Is_DateTime = false;
             this.txt_MADONHANG_D.IsShowForm = false;
-            this.txt_MADONHANG_D.Location = new System.Drawing.Point(425, 153);
+            this.txt_MADONHANG_D.Location = new System.Drawing.Point(622, 155);
             this.txt_MADONHANG_D.Name = "txt_MADONHANG_D";
             this.txt_MADONHANG_D.Regular_Expression = null;
             this.txt_MADONHANG_D.Size = new System.Drawing.Size(105, 20);
@@ -296,7 +296,7 @@
             this.txt_LOAI.FormNametoShow = "";
             this.txt_LOAI.Is_DateTime = false;
             this.txt_LOAI.IsShowForm = false;
-            this.txt_LOAI.Location = new System.Drawing.Point(425, 105);
+            this.txt_LOAI.Location = new System.Drawing.Point(443, 105);
             this.txt_LOAI.Name = "txt_LOAI";
             this.txt_LOAI.ReadOnly = true;
             this.txt_LOAI.Regular_Expression = null;
@@ -307,7 +307,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(397, 106);
+            this.label5.Location = new System.Drawing.Point(395, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 248;
@@ -321,7 +321,7 @@
             this.label16.Location = new System.Drawing.Point(-1, 93);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(861, 2);
+            this.label16.Size = new System.Drawing.Size(883, 2);
             this.label16.TabIndex = 246;
             // 
             // txt_MAUIN
@@ -414,7 +414,7 @@
             this.txt_TONGTIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_TONGTIEN.Giatrithapphan = 0;
             this.txt_TONGTIEN.IsSoNguyen = false;
-            this.txt_TONGTIEN.Location = new System.Drawing.Point(425, 188);
+            this.txt_TONGTIEN.Location = new System.Drawing.Point(443, 155);
             this.txt_TONGTIEN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_TONGTIEN.Name = "txt_TONGTIEN";
             this.txt_TONGTIEN.ReadOnly = true;
@@ -427,7 +427,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(372, 190);
+            this.label2.Location = new System.Drawing.Point(390, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 199;
@@ -609,7 +609,7 @@
             this.pne_CHITIET.Location = new System.Drawing.Point(14, 215);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(841, 199);
+            this.pne_CHITIET.Size = new System.Drawing.Size(863, 199);
             this.pne_CHITIET.TabIndex = 14;
             // 
             // btn_KHOIPHUC
@@ -686,7 +686,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1237, 504);
+            this.ClientSize = new System.Drawing.Size(1419, 504);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

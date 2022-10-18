@@ -128,10 +128,10 @@
             this.txt_TENRUTGON.FormNametoShow = "";
             this.txt_TENRUTGON.Is_DateTime = false;
             this.txt_TENRUTGON.IsShowForm = false;
-            this.txt_TENRUTGON.Location = new System.Drawing.Point(76, 84);
+            this.txt_TENRUTGON.Location = new System.Drawing.Point(93, 84);
             this.txt_TENRUTGON.Name = "txt_TENRUTGON";
             this.txt_TENRUTGON.Regular_Expression = null;
-            this.txt_TENRUTGON.Size = new System.Drawing.Size(318, 20);
+            this.txt_TENRUTGON.Size = new System.Drawing.Size(240, 20);
             this.txt_TENRUTGON.TabIndex = 2;
             // 
             // label1
@@ -229,10 +229,10 @@
             this.txt_TENHIEU.FormNametoShow = "";
             this.txt_TENHIEU.Is_DateTime = false;
             this.txt_TENHIEU.IsShowForm = false;
-            this.txt_TENHIEU.Location = new System.Drawing.Point(76, 49);
+            this.txt_TENHIEU.Location = new System.Drawing.Point(93, 49);
             this.txt_TENHIEU.Name = "txt_TENHIEU";
             this.txt_TENHIEU.Regular_Expression = null;
-            this.txt_TENHIEU.Size = new System.Drawing.Size(318, 20);
+            this.txt_TENHIEU.Size = new System.Drawing.Size(240, 20);
             this.txt_TENHIEU.TabIndex = 1;
             // 
             // label21
@@ -252,7 +252,7 @@
             this.txt_MAHIEU.FormNametoShow = "";
             this.txt_MAHIEU.Is_DateTime = false;
             this.txt_MAHIEU.IsShowForm = false;
-            this.txt_MAHIEU.Location = new System.Drawing.Point(76, 19);
+            this.txt_MAHIEU.Location = new System.Drawing.Point(93, 19);
             this.txt_MAHIEU.Name = "txt_MAHIEU";
             this.txt_MAHIEU.Regular_Expression = null;
             this.txt_MAHIEU.Size = new System.Drawing.Size(138, 20);
