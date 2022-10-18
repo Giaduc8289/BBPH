@@ -136,7 +136,9 @@ namespace GD.BBPH.APP.DANHMUC
             FORM_PROCESS();
             GRID_MAUCUAHANG.COMBO_MULTICOLUMN(GRID_MAUCUAHANG, MaucuahangFields.Mamau.Name, DmmauFields.Tenmau.Name, DmmauFields.Mamau.Name, DmmauFields.Mamau.Name, DT_DMMAU);
             GRID_MAUCUAHANG.CellEdited += GRID_MAUCUAHANG_CellEdited;
+            GRID_MAUCUAHANG.DeletingRecord += GRID_MAUCUAHANG_DeletingRecord;
             GRID_MAUCUAHANG.RootTable.Columns[MaucuahangFields.Tenmau.Name].EditType = EditType.NoEdit;
+            GRID_TRUCCUAHANG.DeletingRecord += GRID_TRUCCUAHANG_DeletingRecord;
             DataView Source_View = new DataView(DT_DMHANGHOA);
             BS_DMHANGHOA = new BindingSource();
             BS_DMHANGHOA.DataSource = Source_View;
@@ -157,6 +159,68 @@ namespace GD.BBPH.APP.DANHMUC
                 if (_DmmauEntity!=null)
                     GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.Tenmau.Name].Value = _DmmauEntity.Tenmau;
             }
+        }
+        private void GRID_MAUCUAHANG_DeletingRecord(object sender, RowActionCancelEventArgs e)
+        {
+            DataRowView _view = (DataRowView)GRID_MAUCUAHANG.CurrentRow.DataRow;
+            string _MAHIEU_PK = _view[MaucuahangFields.Id.Name].ToString();
+            string _TENMAU = _view[MaucuahangFields.Tenmau.Name].ToString();
+            if (string.IsNullOrEmpty(_MAHIEU_PK)) return;
+            MaucuahangManager _MaucuahangManager = new MaucuahangManager();
+            MaucuahangEntity _MaucuahangEntity = new MaucuahangEntity();
+            try { _MaucuahangEntity = _MaucuahangManager.SelectOne(Convert.ToInt64(_MAHIEU_PK)); }
+            catch { }
+            if (_MaucuahangEntity != null && MessageBox.Show("Xóa dòng màu: " + _TENMAU, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                   System.Windows.Forms.DialogResult.Yes)
+            {
+                try
+                {
+                    _MaucuahangManager.Delete(Convert.ToInt64(_MAHIEU_PK));
+                    DataRow[] drArr = DT_MAUCUAHANG.Select(MaucuahangFields.Id.Name + "='" + _MAHIEU_PK + "'");
+                    DT_MAUCUAHANG.Rows.Remove(drArr[0]);
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể xóa dòng màu: " + _TENMAU + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                BS_MAUCUAHANG.ResetCurrentItem();
+                GRID_MAUCUAHANG.DataSource = BS_MAUCUAHANG;
+            }
+            GRID_MAUCUAHANG.Enabled = true;
+        }
+        private void GRID_TRUCCUAHANG_DeletingRecord(object sender, RowActionCancelEventArgs e)
+        {
+            DataRowView _view = (DataRowView)GRID_TRUCCUAHANG.CurrentRow.DataRow;
+            string _MAHIEU_PK = _view[TruccuahangFields.Id.Name].ToString();
+            string _MATRUC = _view[TruccuahangFields.Matruc.Name].ToString();
+            if (string.IsNullOrEmpty(_MAHIEU_PK)) return;
+            TruccuahangManager _TruccuahangManager = new TruccuahangManager();
+            TruccuahangEntity _TruccuahangEntity = new TruccuahangEntity();
+            try { _TruccuahangEntity = _TruccuahangManager.SelectOne(Convert.ToInt64(_MAHIEU_PK)); }
+            catch { }
+            if (_TruccuahangEntity != null && MessageBox.Show("Xóa dòng trục: " + _MATRUC, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                   System.Windows.Forms.DialogResult.Yes)
+            {
+                try
+                {
+                    _TruccuahangManager.Delete(Convert.ToInt64(_MAHIEU_PK));
+                    DataRow[] drArr = DT_TRUCCUAHANG.Select(TruccuahangFields.Id.Name + "='" + _MAHIEU_PK + "'");
+                    DT_TRUCCUAHANG.Rows.Remove(drArr[0]);
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể xóa dòng trục: " + _MATRUC + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                BS_TRUCCUAHANG.ResetCurrentItem();
+                GRID_TRUCCUAHANG.DataSource = BS_TRUCCUAHANG;
+            }
+            GRID_TRUCCUAHANG.Enabled = true;
         }
         #endregion
 
@@ -298,6 +362,8 @@ namespace GD.BBPH.APP.DANHMUC
             _dmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
             _dmhangEntity.Trongluong = LIB.ConvertString.NumbertoDB(txt_TRONGLUONG.Text.Trim());
             _dmhangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
+            _dmhangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
+            _dmhangEntity.Dai = LIB.ConvertString.NumbertoDB(txt_DAI.Text.Trim());
             _dmhangEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
             _dmhangEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
             _dmhangEntity.Somauma = txt_SOMAUMA.Text.Trim();
