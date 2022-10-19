@@ -584,7 +584,7 @@
             this.txt_KHOILUONGRA.FormNametoShow = "";
             this.txt_KHOILUONGRA.Is_DateTime = false;
             this.txt_KHOILUONGRA.IsShowForm = false;
-            this.txt_KHOILUONGRA.Location = new System.Drawing.Point(898, 100);
+            this.txt_KHOILUONGRA.Location = new System.Drawing.Point(901, 100);
             this.txt_KHOILUONGRA.Name = "txt_KHOILUONGRA";
             this.txt_KHOILUONGRA.Regular_Expression = null;
             this.txt_KHOILUONGRA.Size = new System.Drawing.Size(138, 20);
@@ -598,7 +598,7 @@
             this.txt_KHOILUONGVAO.FormNametoShow = "";
             this.txt_KHOILUONGVAO.Is_DateTime = false;
             this.txt_KHOILUONGVAO.IsShowForm = false;
-            this.txt_KHOILUONGVAO.Location = new System.Drawing.Point(651, 100);
+            this.txt_KHOILUONGVAO.Location = new System.Drawing.Point(654, 100);
             this.txt_KHOILUONGVAO.Name = "txt_KHOILUONGVAO";
             this.txt_KHOILUONGVAO.Regular_Expression = null;
             this.txt_KHOILUONGVAO.Size = new System.Drawing.Size(138, 20);
@@ -621,7 +621,7 @@
             this.txt_SOMETRA.FormNametoShow = "";
             this.txt_SOMETRA.Is_DateTime = false;
             this.txt_SOMETRA.IsShowForm = false;
-            this.txt_SOMETRA.Location = new System.Drawing.Point(898, 74);
+            this.txt_SOMETRA.Location = new System.Drawing.Point(901, 74);
             this.txt_SOMETRA.Name = "txt_SOMETRA";
             this.txt_SOMETRA.Regular_Expression = null;
             this.txt_SOMETRA.Size = new System.Drawing.Size(138, 20);
@@ -698,7 +698,7 @@
             this.btn_XOADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
             this.btn_XOADONG.Enabled = false;
-            this.btn_XOADONG.Location = new System.Drawing.Point(127, 258);
+            this.btn_XOADONG.Location = new System.Drawing.Point(127, 265);
             this.btn_XOADONG.Name = "btn_XOADONG";
             this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
             this.btn_XOADONG.TabIndex = 27;
@@ -712,7 +712,7 @@
             this.btn_THEMDONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMDONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
             this.btn_THEMDONG.Enabled = false;
-            this.btn_THEMDONG.Location = new System.Drawing.Point(25, 258);
+            this.btn_THEMDONG.Location = new System.Drawing.Point(25, 265);
             this.btn_THEMDONG.Name = "btn_THEMDONG";
             this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
             this.btn_THEMDONG.TabIndex = 26;
@@ -725,10 +725,10 @@
             this.pne_CHITIET.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_CHITIET.Location = new System.Drawing.Point(9, 309);
+            this.pne_CHITIET.Location = new System.Drawing.Point(9, 302);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(1057, 166);
+            this.pne_CHITIET.Size = new System.Drawing.Size(1057, 172);
             this.pne_CHITIET.TabIndex = 250;
             // 
             // label16
@@ -826,7 +826,7 @@
             this.txt_SOMETVAO.FormNametoShow = "";
             this.txt_SOMETVAO.Is_DateTime = false;
             this.txt_SOMETVAO.IsShowForm = false;
-            this.txt_SOMETVAO.Location = new System.Drawing.Point(651, 74);
+            this.txt_SOMETVAO.Location = new System.Drawing.Point(654, 74);
             this.txt_SOMETVAO.Name = "txt_SOMETVAO";
             this.txt_SOMETVAO.Regular_Expression = null;
             this.txt_SOMETVAO.Size = new System.Drawing.Size(138, 20);

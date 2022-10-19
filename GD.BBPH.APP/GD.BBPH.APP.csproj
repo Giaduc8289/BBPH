@@ -1191,15 +1191,7 @@
     <Content Include="XMLCONFIG\FRM_KHIN.xml" />
     <Content Include="XMLCONFIG\FRM_KHDETDIEUCHINH.xml" />
     <Content Include="XMLCONFIG\FRM_KHTRANG.xml" />
-    <Content Include="XMLCONFIG\FRM_KQHTSAUCAT.xml" />
-    <Content Include="XMLCONFIG\FRM_KQHTTRUOCCAT.xml" />
-    <Content Include="XMLCONFIG\FRM_KQHTSAUCATCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_KQIN.xml" />
-    <Content Include="XMLCONFIG\FRM_KQHTTRUOCCATCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_KQINCHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1259,12 +1251,6 @@
     <Content Include="XMLCONFIG\FRM_THANHPHANSOI.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="XMLCONFIG\FRM_KQSXSOI.xml" />
-    <Content Include="XMLCONFIG\FRM_KQDET.xml" />
-    <Content Include="XMLCONFIG\FRM_KQSXSOICHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_KQDETCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_NCMANHTHANG.xml" />
     <Content Include="XMLCONFIG\FRM_NCSOITHANG.xml" />
     <Content Include="XMLCONFIG\FRM_ROLES.xml" />
