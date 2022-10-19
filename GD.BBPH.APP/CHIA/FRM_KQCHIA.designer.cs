@@ -227,7 +227,7 @@
             this.txt_SOLANHACUON.Location = new System.Drawing.Point(340, 177);
             this.txt_SOLANHACUON.Name = "txt_SOLANHACUON";
             this.txt_SOLANHACUON.Regular_Expression = "";
-            this.txt_SOLANHACUON.Size = new System.Drawing.Size(118, 20);
+            this.txt_SOLANHACUON.Size = new System.Drawing.Size(129, 20);
             this.txt_SOLANHACUON.TabIndex = 209;
             // 
             // label11
@@ -250,7 +250,7 @@
             this.txt_THOIGIANHACUON.Location = new System.Drawing.Point(340, 248);
             this.txt_THOIGIANHACUON.Name = "txt_THOIGIANHACUON";
             this.txt_THOIGIANHACUON.Regular_Expression = null;
-            this.txt_THOIGIANHACUON.Size = new System.Drawing.Size(118, 20);
+            this.txt_THOIGIANHACUON.Size = new System.Drawing.Size(129, 20);
             this.txt_THOIGIANHACUON.TabIndex = 204;
             // 
             // label8
@@ -273,7 +273,7 @@
             this.txt_THOIGIANLENCUON.Location = new System.Drawing.Point(340, 212);
             this.txt_THOIGIANLENCUON.Name = "txt_THOIGIANLENCUON";
             this.txt_THOIGIANLENCUON.Regular_Expression = null;
-            this.txt_THOIGIANLENCUON.Size = new System.Drawing.Size(118, 20);
+            this.txt_THOIGIANLENCUON.Size = new System.Drawing.Size(129, 20);
             this.txt_THOIGIANLENCUON.TabIndex = 203;
             // 
             // label10
@@ -544,7 +544,7 @@
             this.txt_THOIGIANSUCO.Location = new System.Drawing.Point(340, 285);
             this.txt_THOIGIANSUCO.Name = "txt_THOIGIANSUCO";
             this.txt_THOIGIANSUCO.Regular_Expression = null;
-            this.txt_THOIGIANSUCO.Size = new System.Drawing.Size(118, 20);
+            this.txt_THOIGIANSUCO.Size = new System.Drawing.Size(129, 20);
             this.txt_THOIGIANSUCO.TabIndex = 17;
             // 
             // label14
@@ -761,16 +761,16 @@
             this.txt_CA.FormNametoShow = "";
             this.txt_CA.Is_DateTime = false;
             this.txt_CA.IsShowForm = false;
-            this.txt_CA.Location = new System.Drawing.Point(291, 13);
+            this.txt_CA.Location = new System.Drawing.Point(252, 13);
             this.txt_CA.Name = "txt_CA";
             this.txt_CA.Regular_Expression = null;
-            this.txt_CA.Size = new System.Drawing.Size(53, 20);
+            this.txt_CA.Size = new System.Drawing.Size(66, 20);
             this.txt_CA.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(265, 16);
+            this.label2.Location = new System.Drawing.Point(226, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 13);
             this.label2.TabIndex = 162;
@@ -887,16 +887,16 @@
             this.txt_LENH.FormNametoShow = "";
             this.txt_LENH.Is_DateTime = false;
             this.txt_LENH.IsShowForm = false;
-            this.txt_LENH.Location = new System.Drawing.Point(466, 13);
+            this.txt_LENH.Location = new System.Drawing.Point(391, 13);
             this.txt_LENH.Name = "txt_LENH";
             this.txt_LENH.Regular_Expression = null;
-            this.txt_LENH.Size = new System.Drawing.Size(117, 20);
+            this.txt_LENH.Size = new System.Drawing.Size(78, 20);
             this.txt_LENH.TabIndex = 3;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(406, 16);
+            this.label21.Location = new System.Drawing.Point(331, 16);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(54, 13);
             this.label21.TabIndex = 120;
