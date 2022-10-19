@@ -39,7 +39,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngay</name>
     <headerText>Ngày</headerText>
     <BackColor>0</BackColor>
@@ -48,7 +48,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ca</name>
     <headerText>Ca</headerText>
     <BackColor>0</BackColor>
@@ -57,7 +57,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Mamay</name>
     <headerText>Mã máy</headerText>
     <BackColor>0</BackColor>
