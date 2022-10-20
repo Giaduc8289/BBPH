@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 20, 2022 4:00:47 PM
+// Code is generated on: Friday, October 21, 2022 5:42:36 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -635,11 +635,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The MaArgb property of the Entity Dmmau<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmmau"."MaARGB"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 8<br/>
+		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String MaArgb
+		public virtual Nullable<System.Int64> MaArgb
 		{
-			get { return (System.String)GetValue((int)DmmauFieldIndex.MaArgb, true); }
+			get { return (Nullable<System.Int64>)GetValue((int)DmmauFieldIndex.MaArgb, false); }
 			set	{ SetValue((int)DmmauFieldIndex.MaArgb, value); }
 		}
 

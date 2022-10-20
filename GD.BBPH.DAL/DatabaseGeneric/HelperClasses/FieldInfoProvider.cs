@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 20, 2022 4:00:47 PM
+// Code is generated on: Friday, October 21, 2022 5:42:35 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -428,7 +428,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmmauEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)DmmauFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("DmmauEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)DmmauFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("DmmauEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)DmmauFieldIndex.Nguoisua, 50, 0, 0);
-			base.AddElementFieldInfo("DmmauEntity", "MaArgb", typeof(System.String), false, false, false, true,  (int)DmmauFieldIndex.MaArgb, 8, 0, 0);
+			base.AddElementFieldInfo("DmmauEntity", "MaArgb", typeof(Nullable<System.Int64>), false, false, false, true,  (int)DmmauFieldIndex.MaArgb, 0, 0, 19);
 		}
 		/// <summary>Inits DmmayEntity's FieldInfo objects</summary>
 		private void InitDmmayEntityInfos()

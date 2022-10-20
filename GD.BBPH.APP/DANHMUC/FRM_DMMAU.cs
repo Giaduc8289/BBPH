@@ -216,6 +216,7 @@ namespace GD.BBPH.APP.DANHMUC
 
                     txt_MAMAU.Text = _Rowview.Row[DmmauFields.Mamau.Name].ToString();
                     txt_TENMAU.Text = _Rowview.Row[DmmauFields.Tenmau.Name].ToString();
+                    txt_MAARGB.BackColor = Color.FromArgb(Convert.ToInt32(_Rowview.Row[DmmauFields.MaArgb.Name].ToString()));
                     try { chk_LAMAUGOC.Checked = Convert.ToBoolean(_Rowview.Row[DmmauFields.Lamaugoc.Name].ToString()); }
                     catch { }
 
@@ -278,8 +279,7 @@ namespace GD.BBPH.APP.DANHMUC
 
             _dmmauEntity.Mamau = txt_MAMAU.Text.Trim();
             _dmmauEntity.Tenmau = txt_TENMAU.Text.Trim();
-            _dmmauEntity.MaArgb = txt_MAU.BackColor;
-            //_dmmauEntity.Lamaugoc = txt_Lamaugoc.Text.Trim();
+            _dmmauEntity.MaArgb = txt_MAARGB.BackColor.ToArgb();
             if (chk_LAMAUGOC.Checked)
                 _dmmauEntity.Lamaugoc = true;
             else
@@ -383,12 +383,12 @@ namespace GD.BBPH.APP.DANHMUC
             return _str_DMCHUONG_PK;      
         }
 
-        private void btn_MAU_Click(object sender, EventArgs e)
+        private void btn_CHONMAU_Click(object sender, EventArgs e)
         {
             ColorDialog colorDlg = new ColorDialog();
             if (colorDlg.ShowDialog() == DialogResult.OK)
             {
-                txt_MAU.BackColor = colorDlg.Color; // lấy color ở dòng này   
+                txt_MAARGB.BackColor = colorDlg.Color; // lấy color ở dòng này   
             }
         }
 

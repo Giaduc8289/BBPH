@@ -71,7 +71,7 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
 			
-			dt.Columns.Add(Field_MaArgb,typeof(System.String));
+			dt.Columns.Add(Field_MaArgb,typeof(System.Int64));
 									
 		            
 			return dt;			
@@ -181,7 +181,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_DmmauEntity.MaArgb= r[Field_MaArgb].ToString();						
+				_DmmauEntity.MaArgb= System.Int64.Parse(r[Field_MaArgb].ToString());						
 			}
 			catch { }
 									
@@ -349,7 +349,7 @@ namespace GD.BBPH.BLL
 			return DmmauEntity;
 		}
 
-		public DmmauEntity Insert(System.String  Mamau, System.String  Tenmau, System.Boolean  Lamaugoc, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.String  MaArgb)
+		public DmmauEntity Insert(System.String  Mamau, System.String  Tenmau, System.Boolean  Lamaugoc, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Int64  MaArgb)
 		{
 			DmmauEntity _DmmauEntity = new DmmauEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -377,7 +377,7 @@ namespace GD.BBPH.BLL
 			return _DmmauEntity;
 		}
 
-		public DmmauEntity Insert(System.String Tenmau, System.Boolean Lamaugoc, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String MaArgb, )//ko co mahieu
+		public DmmauEntity Insert(System.String Tenmau, System.Boolean Lamaugoc, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Int64 MaArgb)//ko co mahieu
 		{
 			DmmauEntity _DmmauEntity = new DmmauEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -434,7 +434,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Mamau, System.String Tenmau, System.Boolean Lamaugoc, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String MaArgb)
+		public bool Update(System.String Mamau, System.String Tenmau, System.Boolean Lamaugoc, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Int64 MaArgb)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -604,7 +604,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByMaArgb(System.String MaArgb)
+		public int DeleteByMaArgb(System.Int64 MaArgb)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -899,7 +899,7 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByMaArgb(System.String MaArgb)
+		public EntityCollection SelectByMaArgb(System.Int64 MaArgb)
 		{
 			EntityCollection _DmmauCollection = new EntityCollection(new DmmauEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
@@ -915,7 +915,7 @@ namespace GD.BBPH.BLL
 			return _DmmauCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByMaArgbRDT(System.String MaArgb)
+		public DataTable SelectByMaArgbRDT(System.Int64 MaArgb)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _DmmauCollection = new EntityCollection(new DmmauEntityFactory());
