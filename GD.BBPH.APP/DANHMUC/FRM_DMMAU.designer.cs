@@ -49,6 +49,9 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_MAMAU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_MAU = new System.Windows.Forms.TextBox();
+            this.btn_MAU = new System.Windows.Forms.Button();
+            this.label2 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -105,6 +108,9 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.label2);
+            this.uiPanel1Container.Controls.Add(this.btn_MAU);
+            this.uiPanel1Container.Controls.Add(this.txt_MAU);
             this.uiPanel1Container.Controls.Add(this.chk_LAMAUGOC);
             this.uiPanel1Container.Controls.Add(this.btn_THEMDONG);
             this.uiPanel1Container.Controls.Add(this.btn_SAOCHEP);
@@ -318,6 +324,32 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã màu";
             // 
+            // txt_MAU
+            // 
+            this.txt_MAU.Location = new System.Drawing.Point(386, 9);
+            this.txt_MAU.Name = "txt_MAU";
+            this.txt_MAU.Size = new System.Drawing.Size(24, 20);
+            this.txt_MAU.TabIndex = 123;
+            // 
+            // btn_MAU
+            // 
+            this.btn_MAU.Location = new System.Drawing.Point(427, 7);
+            this.btn_MAU.Name = "btn_MAU";
+            this.btn_MAU.Size = new System.Drawing.Size(75, 23);
+            this.btn_MAU.TabIndex = 124;
+            this.btn_MAU.Text = "Chọn màu";
+            this.btn_MAU.UseVisualStyleBackColor = true;
+            this.btn_MAU.Click += new System.EventHandler(this.btn_MAU_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(331, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 125;
+            this.label2.Text = "Mẫu màu";
+            // 
             // FRM_DMMAU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,5 +394,8 @@
         private CONTROL.BUTTON btn_SAOCHEP;
         private CONTROL.BUTTON btn_THEMDONG;
         private System.Windows.Forms.CheckBox chk_LAMAUGOC;
+        private CONTROL.LABEL label2;
+        private System.Windows.Forms.Button btn_MAU;
+        private System.Windows.Forms.TextBox txt_MAU;
     }
 }

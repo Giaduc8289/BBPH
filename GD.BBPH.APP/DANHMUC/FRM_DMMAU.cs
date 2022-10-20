@@ -278,6 +278,7 @@ namespace GD.BBPH.APP.DANHMUC
 
             _dmmauEntity.Mamau = txt_MAMAU.Text.Trim();
             _dmmauEntity.Tenmau = txt_TENMAU.Text.Trim();
+            _dmmauEntity.MaArgb = txt_MAU.BackColor;
             //_dmmauEntity.Lamaugoc = txt_Lamaugoc.Text.Trim();
             if (chk_LAMAUGOC.Checked)
                 _dmmauEntity.Lamaugoc = true;
@@ -380,6 +381,15 @@ namespace GD.BBPH.APP.DANHMUC
             }
 
             return _str_DMCHUONG_PK;      
+        }
+
+        private void btn_MAU_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDlg = new ColorDialog();
+            if (colorDlg.ShowDialog() == DialogResult.OK)
+            {
+                txt_MAU.BackColor = colorDlg.Color; // lấy color ở dòng này   
+            }
         }
 
         #region Button

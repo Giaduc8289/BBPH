@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 19, 2022 9:45:40 AM
+// Code is generated on: Thursday, October 20, 2022 4:00:47 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -476,6 +476,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("MaArgb", fieldHashtable);
 		}
 		#endregion
 
@@ -627,6 +630,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmmauFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)DmmauFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The MaArgb property of the Entity Dmmau<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmau"."MaARGB"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 8<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String MaArgb
+		{
+			get { return (System.String)GetValue((int)DmmauFieldIndex.MaArgb, true); }
+			set	{ SetValue((int)DmmauFieldIndex.MaArgb, value); }
 		}
 
 		/// <summary> Gets the EntityCollection with the related entities of type 'ThanhphanmauEntity' which are related to this entity via a relation of type '1:n'.
