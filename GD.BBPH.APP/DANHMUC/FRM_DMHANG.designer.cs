@@ -309,9 +309,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.pne_DSTRUC);
             this.groupBox2.Location = new System.Drawing.Point(344, 320);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(314, 205);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
@@ -323,7 +323,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pne_DSTRUC.Location = new System.Drawing.Point(4, 21);
-            this.pne_DSTRUC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pne_DSTRUC.Margin = new System.Windows.Forms.Padding(2);
             this.pne_DSTRUC.Name = "pne_DSTRUC";
             this.pne_DSTRUC.Size = new System.Drawing.Size(305, 179);
             this.pne_DSTRUC.TabIndex = 15;
@@ -334,9 +334,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.pne_DSMAU);
             this.groupBox1.Location = new System.Drawing.Point(24, 320);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(314, 205);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
@@ -348,7 +348,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pne_DSMAU.Location = new System.Drawing.Point(4, 21);
-            this.pne_DSMAU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pne_DSMAU.Margin = new System.Windows.Forms.Padding(2);
             this.pne_DSMAU.Name = "pne_DSMAU";
             this.pne_DSMAU.Size = new System.Drawing.Size(305, 179);
             this.pne_DSMAU.TabIndex = 14;
@@ -1087,9 +1087,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(189, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 128;
-            this.label3.Text = "Kích thước";
+            this.label3.Text = "Độ dày";
             // 
             // txt_MAKHACH
             // 
@@ -1169,7 +1169,7 @@
             this.ClientSize = new System.Drawing.Size(1317, 618);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_DMHANG";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DMHANG_FormClosing);
