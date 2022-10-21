@@ -137,6 +137,7 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_MAUCUAHANG.COMBO_MULTICOLUMN(GRID_MAUCUAHANG, MaucuahangFields.Mamau.Name, DmmauFields.Tenmau.Name, DmmauFields.Mamau.Name, DmmauFields.Mamau.Name, DT_DMMAU);
             GRID_MAUCUAHANG.CellEdited += GRID_MAUCUAHANG_CellEdited;
             GRID_MAUCUAHANG.DeletingRecord += GRID_MAUCUAHANG_DeletingRecord;
+            GRID_MAUCUAHANG.FormattingRow += GRID_MAUCUAHANG_FormattingRow;
             GRID_MAUCUAHANG.RootTable.Columns[MaucuahangFields.Tenmau.Name].EditType = EditType.NoEdit;
             GRID_TRUCCUAHANG.DeletingRecord += GRID_TRUCCUAHANG_DeletingRecord;
             DataView Source_View = new DataView(DT_DMHANGHOA);
@@ -157,7 +158,10 @@ namespace GD.BBPH.APP.DANHMUC
             {
                 DmmauEntity _DmmauEntity = new DmmauManager().SelectOne(GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.Mamau.Name].Value.ToString());
                 if (_DmmauEntity!=null)
+                {
                     GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.Tenmau.Name].Value = _DmmauEntity.Tenmau;
+                    GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.MaArgb.Name].Value = _DmmauEntity.MaArgb;
+                }
             }
         }
         private void GRID_MAUCUAHANG_DeletingRecord(object sender, RowActionCancelEventArgs e)
@@ -221,6 +225,19 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_TRUCCUAHANG.DataSource = BS_TRUCCUAHANG;
             }
             GRID_TRUCCUAHANG.Enabled = true;
+        }
+        private void GRID_MAUCUAHANG_FormattingRow(object sender, RowLoadEventArgs e)
+        {
+            try
+            {
+                int argb = Convert.ToInt32(e.Row.Cells[MaucuahangFields.MaArgb.Name].Value.ToString());
+                Color mau = Color.FromArgb(argb);
+                Janus.Windows.GridEX.GridEXFormatStyle style = new GridEXFormatStyle();
+                style.ForeColor = mau;
+                style.BackColor = mau;
+                e.Row.Cells[MaucuahangFields.MaArgb.Name].FormatStyle = style;
+            }
+            catch { }
         }
         #endregion
 
@@ -361,15 +378,17 @@ namespace GD.BBPH.APP.DANHMUC
             //_dmhangEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
             //_dmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
             _dmhangEntity.Trongluong = LIB.ConvertString.NumbertoDB(txt_TRONGLUONG.Text.Trim());
-            _dmhangEntity.Doday = Convert.ToDecimal(txt_KICHTHUOC.Text.Trim());
+            _dmhangEntity.Doday = LIB.ConvertString.NumbertoDB(txt_KICHTHUOC.Text.Trim());
             _dmhangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
             _dmhangEntity.Dai = LIB.ConvertString.NumbertoDB(txt_DAI.Text.Trim());
             _dmhangEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
             _dmhangEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
             _dmhangEntity.Somauma = txt_SOMAUMA.Text.Trim();
-            _dmhangEntity.Somau = Int32.Parse(txt_SOMAU.Text.Trim());
+            try { _dmhangEntity.Somau = Int32.Parse(txt_SOMAU.Text.Trim()); }
+            catch { }
             _dmhangEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
-            _dmhangEntity.Sohinh = Int32.Parse(txt_SOHINH.Text.Trim());
+            try { _dmhangEntity.Sohinh = Int32.Parse(txt_SOHINH.Text.Trim()); }
+            catch { }
             _dmhangEntity.Cautrucin = txt_CAUTRUCIN.Text.Trim();
             _dmhangEntity.Khoiluongmuc = LIB.ConvertString.NumbertoDB(txt_KHOILUONGMUC.Text.Trim());
             _dmhangEntity.Mamang1 = txt_MAMANG1.Text.Trim();
@@ -403,6 +422,9 @@ namespace GD.BBPH.APP.DANHMUC
                 _maucuahangEntity.Mamau = _view[MaucuahangFields.Mamau.Name].ToString();
                 _maucuahangEntity.Tenmau = _view[MaucuahangFields.Tenmau.Name].ToString();
                 _maucuahangEntity.Klmau = LIB.ConvertString.NumbertoDB(_view[MaucuahangFields.Klmau.Name].ToString());
+                _maucuahangEntity.Tylebaophu = LIB.ConvertString.NumbertoDB(_view[MaucuahangFields.Tylebaophu.Name].ToString());
+                try { _maucuahangEntity.MaArgb = int.Parse(_view[MaucuahangFields.MaArgb.Name].ToString()); }
+                catch { }
                 try { _maucuahangEntity.Id = Convert.ToInt64(_view[MaucuahangFields.Id.Name].ToString()); }
                 catch { }
 
@@ -512,7 +534,7 @@ namespace GD.BBPH.APP.DANHMUC
                 //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenchungloai.Name].Value = _dmhangEntity.Tenchungloai;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Makhach.Name].Value = _dmhangEntity.Makhach;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenkhach.Name].Value = _dmhangEntity.Tenkhach;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Doday.Name].Value = _dmhangEntity.Doday;
+                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Doday.Name].Value = _dmhangEntity.Doday;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Trongluong.Name].Value = _dmhangEntity.Trongluong;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Sohinh.Name].Value = _dmhangEntity.Sohinh;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somau.Name].Value = _dmhangEntity.Somau;
