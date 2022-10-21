@@ -125,7 +125,7 @@ namespace GD.BBPH.APP.DANHMUC
             BS_DMMAU.CurrentChanged += new EventHandler(BS_DMMAU_CurrentChanged);
             BS_DMMAU_CurrentChanged((new object()), (new EventArgs()));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_CHONMAU.Enabled =  false;
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             btn_THEMMOI.Focus();
         }
@@ -229,9 +229,7 @@ namespace GD.BBPH.APP.DANHMUC
                     GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container)); 
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            catch (Exception) {MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -345,7 +343,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_TPMAU.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TPMAU.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmauManager.Convert(_DmmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_CHONMAU.Enabled = false;
                 BS_DMMAU.ResetCurrentItem();
                 BS_DMMAU_CurrentChanged(new object(), new EventArgs());
                 BS_DMMAU.Position = DT_DMMAU.Rows.Count - 1;
@@ -375,7 +373,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_TPMAU.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TPMAU.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TPMAU.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
-                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_CHONMAU.Enabled = false;
                 BS_DMMAU.ResetCurrentItem();
                 BS_DMMAU_CurrentChanged(new object(), new EventArgs());
             }
@@ -414,7 +412,7 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_DMMAU.Enabled = false;
-            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_CHONMAU.Enabled = true;
             btn_SAOCHEP.Enabled = false;
         }
 
@@ -433,7 +431,7 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TPMAU.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
             GRID_TPMAU.Enabled = true;
             GRID_DMMAU.Enabled = false;
-            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_CHONMAU.Enabled = true;
             btn_SAOCHEP.Enabled = false;
         }
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
@@ -449,7 +447,7 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TPMAU.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_TPMAU.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_DMMAU.Enabled = true;
-            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_CHONMAU.Enabled = false;
             btn_SAOCHEP.Enabled = true;
         }
         private void btn_XOA_Click(object sender, EventArgs e)
@@ -481,7 +479,7 @@ namespace GD.BBPH.APP.DANHMUC
                     BS_DMMAU_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
                     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_ThanhphanmauManager.Convert(_ThanhphanmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                    btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+                    btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_CHONMAU.Enabled = false;
                 }
                 catch
                 {
@@ -524,7 +522,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_TPMAU.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TPMAU.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TPMAU.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
-                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_CHONMAU.Enabled = false;
                 btn_SAOCHEP.Enabled = true;
             }
         }
