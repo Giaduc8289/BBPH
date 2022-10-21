@@ -30,7 +30,7 @@ namespace GD.BBPH.APP.DANHMUC
         private GD.BBPH.CONTROL.JGridEX GRID_DMMANG = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
 
-        private DataTable DT_DMKHACH = new DataTable(), DT_CTPT = new DataTable();
+        private DataTable DT_DMKHACH = new DataTable(), DT_CTPT = new DataTable(), DT_QCMANG= new DataTable(), DT_LOAIMANG = new DataTable() ;
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -55,6 +55,8 @@ namespace GD.BBPH.APP.DANHMUC
 
                         DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
                         DT_CTPT = LIB.Procedures.Danhsachctpt();
+                        DT_QCMANG = new DmquycachManager().SelectByManhomRDT("N10");
+                        DT_LOAIMANG = new DmquycachManager().SelectByManhomRDT("N09");
                         //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(DT_CTPT, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_CTPT_H.xml");
                     }
                 };
@@ -81,6 +83,15 @@ namespace GD.BBPH.APP.DANHMUC
                 f.ShowDialog();
             };
         }
+
+        //private void LoadDanhMuc()
+        //{
+        //    DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
+        //    DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+        //    DT_CTPT = LIB.Procedures.Danhsachctpt();
+        //    DT_QCMANG = new DmquycachManager().SelectByManhomRDT("N10");
+        //    DT_LOAIMANG = new DmquycachManager().SelectByManhomRDT("N09");
+        //}
 
         private static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
         {
@@ -130,6 +141,8 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_KICHTHUOC.Text = _Rowview.Row[DmmangFields.Kichthuoc.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmmangFields.Trongluong.Name].ToString();
                     txt_MACTPT_Validating(new object(), new CancelEventArgs());
+                    txt_MALOAIMANG_Validating(new object(), new CancelEventArgs());
+                    txt_MAQUYCACHLOAIMANG_Validating(new object(), new CancelEventArgs());
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMMANG_CurrentChanged"); }
@@ -144,7 +157,14 @@ namespace GD.BBPH.APP.DANHMUC
             _DmmangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
             _DmmangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
             _DmmangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
-            _DmmangEntity.Mactpt = txt_MACTPT.Text.Trim();
+            _DmmangEntity.Doday = LIB.ConvertString.NumbertoDB(txt_DODAY.Text.Trim());
+            _DmmangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
+            _DmmangEntity.Maloaimang = txt_MALOAIMANG.Text.Trim();
+            _DmmangEntity.Tenloaimang = txt_TENLOAIMANG.Text.Trim();
+            _DmmangEntity.Maqcmang = txt_MAQUYCACHMANG.Text.Trim();
+            _DmmangEntity.Tenqcmang = txt_TENQUYCACHMANG.Text.Trim();
+           
+
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _DmmangEntity.Ngaytao = DateTime.Now;
@@ -327,8 +347,106 @@ namespace GD.BBPH.APP.DANHMUC
             }
             catch { return null; }
         }
+
+        private void txt_MALOAIMANG_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MALOAIMANG.Text.Trim()) || DT_LOAIMANG == null || DT_LOAIMANG.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MALOAIMANG.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaLoaimang(Str_MASIEUTHI, DT_LOAIMANG);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH.xml",
+                        DT_LOAIMANG, DmquycachFields.Maquycach.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MALOAIMANG.Text = _RowViewSelect[DmquycachFields.Maquycach.Name].ToString();
+                txt_TENLOAIMANG.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
+            }
+            else
+                txt_TENLOAIMANG.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
+        }
+        private DataRow checkmaLoaimang(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(DmquycachFields.Maquycach.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
+
+        private void txt_MAQUYCACHLOAIMANG_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MAQUYCACHMANG.Text.Trim()) || DT_QCMANG == null || DT_QCMANG.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MAQUYCACHMANG.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaQCloaimang(Str_MASIEUTHI, DT_QCMANG);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH.xml",
+                        DT_QCMANG, DmquycachFields.Maquycach.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MAQUYCACHMANG.Text = _RowViewSelect[DmquycachFields.Maquycach.Name].ToString();
+                txt_TENQUYCACHMANG.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
+            }
+            else
+                txt_TENQUYCACHMANG.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
+        }
+        private DataRow checkmaQCloaimang(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(DmquycachFields.Maquycach.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
+
+
+
         #endregion
 
+        #region Shortcut Key
+        private void txt_MAKHACH_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+        private void txt_MALOAIMANG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục loại màng";
+                frm_Dm.ShowDialog();
+                DT_LOAIMANG = new DmquycachManager().SelectAllRDT();
+            }
+        }
+        private void txt_MAQCMANG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách màng";
+                frm_Dm.ShowDialog();
+                DT_QCMANG = new DmquycachManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MACTPTMANG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_CTPTMANG frm_Dm = new FRM_CTPTMANG();
+                frm_Dm.Text = "Danh mục quy cách màng";
+                frm_Dm.ShowDialog();
+                DT_CTPT = new CtptmangHManager().SelectAllRDT();
+            }
+        }
+        #endregion
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)
@@ -338,6 +456,26 @@ namespace GD.BBPH.APP.DANHMUC
         }
 
         private void uiPanel1Container_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textbox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textbox2_TextChanged(object sender, EventArgs e)
         {
 
         }
