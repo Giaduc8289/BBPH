@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 8:24:15 AM
+// Code is generated on: Friday, October 21, 2022 9:01:03 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -791,6 +791,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("MaucuahangEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)MaucuahangFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("MaucuahangEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)MaucuahangFieldIndex.Nguoisua, 50, 0, 0);
 			base.AddElementFieldInfo("MaucuahangEntity", "Tylebaophu", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)MaucuahangFieldIndex.Tylebaophu, 0, 3, 20);
+			base.AddElementFieldInfo("MaucuahangEntity", "MaArgb", typeof(Nullable<System.Int64>), false, false, false, true,  (int)MaucuahangFieldIndex.MaArgb, 0, 0, 19);
 		}
 		/// <summary>Inits MenuEntity's FieldInfo objects</summary>
 		private void InitMenuEntityInfos()
