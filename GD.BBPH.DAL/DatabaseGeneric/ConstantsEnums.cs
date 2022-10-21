@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 8:24:15 AM
+// Code is generated on: Friday, October 21, 2022 9:01:02 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1431,6 +1431,8 @@ namespace GD.BBPH.DAL
 		Nguoisua,
 		///<summary>Tylebaophu. </summary>
 		Tylebaophu,
+		///<summary>MaArgb. </summary>
+		MaArgb,
 		/// <summary></summary>
 		AmountOfFields
 	}

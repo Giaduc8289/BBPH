@@ -98,7 +98,7 @@
             this.btn_XOA = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
-            this.txt_KICHTHUOC = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_DODAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label3 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAKHACH = new GD.BBPH.CONTROL.TEXTBOX();
             this.label2 = new GD.BBPH.CONTROL.LABEL();
@@ -128,7 +128,7 @@
             // 
             this.uiPanelManager1.BeginPanelInfo();
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(633, 612), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(678, 612), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(817, 612), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -158,7 +158,7 @@
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(636, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(678, 612);
+            this.uiPanel1.Size = new System.Drawing.Size(817, 612);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
@@ -226,7 +226,7 @@
             this.uiPanel1Container.Controls.Add(this.btn_XOA);
             this.uiPanel1Container.Controls.Add(this.btn_THEMMOI);
             this.uiPanel1Container.Controls.Add(this.btn_SUA);
-            this.uiPanel1Container.Controls.Add(this.txt_KICHTHUOC);
+            this.uiPanel1Container.Controls.Add(this.txt_DODAY);
             this.uiPanel1Container.Controls.Add(this.label3);
             this.uiPanel1Container.Controls.Add(this.txt_MAKHACH);
             this.uiPanel1Container.Controls.Add(this.label2);
@@ -236,7 +236,7 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(676, 588);
+            this.uiPanel1Container.Size = new System.Drawing.Size(815, 588);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // txt_DINHLUONGKEO
@@ -308,11 +308,11 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.pne_DSTRUC);
-            this.groupBox2.Location = new System.Drawing.Point(344, 320);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(501, 320);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(314, 205);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(230, 205);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Trục ghép";
@@ -323,9 +323,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pne_DSTRUC.Location = new System.Drawing.Point(4, 21);
-            this.pne_DSTRUC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pne_DSTRUC.Margin = new System.Windows.Forms.Padding(2);
             this.pne_DSTRUC.Name = "pne_DSTRUC";
-            this.pne_DSTRUC.Size = new System.Drawing.Size(305, 179);
+            this.pne_DSTRUC.Size = new System.Drawing.Size(221, 179);
             this.pne_DSTRUC.TabIndex = 15;
             // 
             // groupBox1
@@ -334,10 +334,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.pne_DSMAU);
             this.groupBox1.Location = new System.Drawing.Point(24, 320);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(314, 205);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(472, 205);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Màu in";
@@ -348,9 +348,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pne_DSMAU.Location = new System.Drawing.Point(4, 21);
-            this.pne_DSMAU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pne_DSMAU.Margin = new System.Windows.Forms.Padding(2);
             this.pne_DSMAU.Name = "pne_DSMAU";
-            this.pne_DSMAU.Size = new System.Drawing.Size(305, 179);
+            this.pne_DSMAU.Size = new System.Drawing.Size(458, 179);
             this.pne_DSMAU.TabIndex = 14;
             // 
             // txt_TENQCTHANHPHAM
@@ -911,7 +911,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(218, 254);
+            this.label8.Location = new System.Drawing.Point(201, 253);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 13);
             this.label8.TabIndex = 144;
@@ -1067,29 +1067,29 @@
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
             // 
-            // txt_KICHTHUOC
+            // txt_DODAY
             // 
-            this.txt_KICHTHUOC.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_KICHTHUOC.BannerText = null;
-            this.txt_KICHTHUOC.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_KICHTHUOC.FormNametoShow = "";
-            this.txt_KICHTHUOC.Is_DateTime = false;
-            this.txt_KICHTHUOC.IsShowForm = false;
-            this.txt_KICHTHUOC.Location = new System.Drawing.Point(247, 99);
-            this.txt_KICHTHUOC.Name = "txt_KICHTHUOC";
-            this.txt_KICHTHUOC.Regular_Expression = null;
-            this.txt_KICHTHUOC.Size = new System.Drawing.Size(82, 20);
-            this.txt_KICHTHUOC.TabIndex = 8;
-            this.txt_KICHTHUOC.TextChanged += new System.EventHandler(this.txt_KICHTHUOC_TextChanged);
+            this.txt_DODAY.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DODAY.BannerText = null;
+            this.txt_DODAY.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_DODAY.FormNametoShow = "";
+            this.txt_DODAY.Is_DateTime = false;
+            this.txt_DODAY.IsShowForm = false;
+            this.txt_DODAY.Location = new System.Drawing.Point(247, 99);
+            this.txt_DODAY.Name = "txt_DODAY";
+            this.txt_DODAY.Regular_Expression = null;
+            this.txt_DODAY.Size = new System.Drawing.Size(82, 20);
+            this.txt_DODAY.TabIndex = 8;
+            this.txt_DODAY.TextChanged += new System.EventHandler(this.txt_KICHTHUOC_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(189, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 128;
-            this.label3.Text = "Kích thước";
+            this.label3.Text = "Độ dày";
             // 
             // txt_MAKHACH
             // 
@@ -1166,10 +1166,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 618);
+            this.ClientSize = new System.Drawing.Size(1456, 618);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_DMHANG";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DMHANG_FormClosing);
@@ -1193,7 +1193,7 @@
         private Janus.Windows.UI.Dock.UIPanelInnerContainer uiPanel0Container;
         private Janus.Windows.UI.Dock.UIPanel uiPanel1;
         private Janus.Windows.UI.Dock.UIPanelInnerContainer uiPanel1Container;
-        private GD.BBPH.CONTROL.TEXTBOX txt_KICHTHUOC;
+        private GD.BBPH.CONTROL.TEXTBOX txt_DODAY;
         private GD.BBPH.CONTROL.LABEL label3;
         private GD.BBPH.CONTROL.TEXTBOX txt_MAKHACH;
         private GD.BBPH.CONTROL.LABEL label2;

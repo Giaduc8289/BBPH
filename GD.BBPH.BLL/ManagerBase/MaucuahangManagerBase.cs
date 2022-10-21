@@ -48,6 +48,8 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Tylebaophu="Tylebaophu";				
 		
+		public const String Field_MaArgb="MaArgb";				
+		
 				
 		#endregion	
 
@@ -84,6 +86,8 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
 			
 			dt.Columns.Add(Field_Tylebaophu,typeof(System.Decimal));
+			
+			dt.Columns.Add(Field_MaArgb,typeof(System.Int64));
 									
 		            
 			return dt;			
@@ -160,6 +164,12 @@ namespace GD.BBPH.BLL
 				r[Field_Tylebaophu]=_MaucuahangEntity.Tylebaophu;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_MaArgb]=_MaucuahangEntity.MaArgb;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -232,6 +242,12 @@ namespace GD.BBPH.BLL
 				_MaucuahangEntity.Tylebaophu= System.Decimal.Parse(r[Field_Tylebaophu].ToString());						
 			}
 			catch { }
+			
+			try
+			{
+				_MaucuahangEntity.MaArgb= System.Int64.Parse(r[Field_MaArgb].ToString());						
+			}
+			catch { }
 									
 									
 			return _MaucuahangEntity;
@@ -262,6 +278,8 @@ namespace GD.BBPH.BLL
 			_MaucuahangEntity.Nguoisua= _MaucuahangEntity_XML.Nguoisua;
 			
 			_MaucuahangEntity.Tylebaophu= _MaucuahangEntity_XML.Tylebaophu;
+			
+			_MaucuahangEntity.MaArgb= _MaucuahangEntity_XML.MaArgb;
 									
 				
 			return _MaucuahangEntity;
@@ -342,6 +360,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Tylebaophu,_MaucuahangEntity.Tylebaophu);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_MaArgb,_MaucuahangEntity.MaArgb);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -417,6 +441,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Tylebaophu,_MaucuahangEntity.Tylebaophu);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_MaArgb,_MaucuahangEntity.MaArgb);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -439,7 +469,7 @@ namespace GD.BBPH.BLL
 			return MaucuahangEntity;
 		}
 
-		public MaucuahangEntity Insert(System.Int64  Id, System.String  Masp, System.String  Tensp, System.String  Mamau, System.String  Tenmau, System.Decimal  Klmau, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Decimal  Tylebaophu)
+		public MaucuahangEntity Insert(System.Int64  Id, System.String  Masp, System.String  Tensp, System.String  Mamau, System.String  Tenmau, System.Decimal  Klmau, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Decimal  Tylebaophu, System.Int64  MaArgb)
 		{
 			MaucuahangEntity _MaucuahangEntity = new MaucuahangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -466,6 +496,8 @@ namespace GD.BBPH.BLL
 				_MaucuahangEntity.Nguoisua = Nguoisua;
 				
 				_MaucuahangEntity.Tylebaophu = Tylebaophu;
+				
+				_MaucuahangEntity.MaArgb = MaArgb;
 					
 					
 				adapter.SaveEntity(_MaucuahangEntity, true);
@@ -473,7 +505,7 @@ namespace GD.BBPH.BLL
 			return _MaucuahangEntity;
 		}
 
-		public MaucuahangEntity Insert(System.String Masp, System.String Tensp, System.String Mamau, System.String Tenmau, System.Decimal Klmau, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Tylebaophu)//ko co mahieu
+		public MaucuahangEntity Insert(System.String Masp, System.String Tensp, System.String Mamau, System.String Tenmau, System.Decimal Klmau, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Tylebaophu, System.Int64 MaArgb)//ko co mahieu
 		{
 			MaucuahangEntity _MaucuahangEntity = new MaucuahangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -499,6 +531,8 @@ namespace GD.BBPH.BLL
 				_MaucuahangEntity.Nguoisua = Nguoisua;
 				
 				_MaucuahangEntity.Tylebaophu = Tylebaophu;
+				
+				_MaucuahangEntity.MaArgb = MaArgb;
 					
 
 				adapter.SaveEntity(_MaucuahangEntity, true);
@@ -536,7 +570,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.String Masp, System.String Tensp, System.String Mamau, System.String Tenmau, System.Decimal Klmau, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Tylebaophu)
+		public bool Update(System.Int64 Id, System.String Masp, System.String Tensp, System.String Mamau, System.String Tenmau, System.Decimal Klmau, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Tylebaophu, System.Int64 MaArgb)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -566,6 +600,8 @@ namespace GD.BBPH.BLL
 					_MaucuahangEntity.Nguoisua = Nguoisua;
 					
 					_MaucuahangEntity.Tylebaophu = Tylebaophu;
+					
+					_MaucuahangEntity.MaArgb = MaArgb;
 						
 
 					adapter.SaveEntity(_MaucuahangEntity, true);
@@ -767,6 +803,22 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(MaucuahangFields.Tylebaophu == Tylebaophu);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("MaucuahangEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByMaArgb(System.Int64 MaArgb)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(MaucuahangFields.MaArgb == MaArgb);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1181,6 +1233,40 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(MaucuahangFields.Tylebaophu == Tylebaophu);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_MaucuahangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByMaArgb(System.Int64 MaArgb)
+		{
+			EntityCollection _MaucuahangCollection = new EntityCollection(new MaucuahangEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(MaucuahangFields.MaArgb == MaArgb);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_MaucuahangCollection, filter, 0, null);
+			}
+			return _MaucuahangCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByMaArgbRDT(System.Int64 MaArgb)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _MaucuahangCollection = new EntityCollection(new MaucuahangEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(MaucuahangFields.MaArgb == MaArgb);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
