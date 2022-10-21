@@ -761,7 +761,7 @@ namespace GD.BBPH.BLL
 			return _CongsuatmayEntity;
 		}
 
-		public CongsuatmayEntity Insert(System.String Tencongsuat, System.String Mamay, System.String Madongmay, System.String Macongdoan, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Tocdo, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Somauma, System.String Sohinhma, System.String Maloaimang, System.String Maqcthanhpham, )//ko co mahieu
+		public CongsuatmayEntity Insert(System.String Tencongsuat, System.String Mamay, System.String Madongmay, System.String Macongdoan, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Tocdo, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Somauma, System.String Sohinhma, System.String Maloaimang, System.String Maqcthanhpham)//ko co mahieu
 		{
 			CongsuatmayEntity _CongsuatmayEntity = new CongsuatmayEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
