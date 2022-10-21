@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 5:42:36 AM
+// Code is generated on: Friday, October 21, 2022 8:24:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -461,6 +461,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tylebaophu", fieldHashtable);
 		}
 		#endregion
 
@@ -634,6 +637,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)MaucuahangFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)MaucuahangFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Tylebaophu property of the Entity Maucuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "maucuahang"."Tylebaophu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tylebaophu
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)MaucuahangFieldIndex.Tylebaophu, false); }
+			set	{ SetValue((int)MaucuahangFieldIndex.Tylebaophu, value); }
 		}
 
 

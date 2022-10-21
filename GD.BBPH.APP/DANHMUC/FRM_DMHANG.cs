@@ -242,7 +242,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MAKHACH.Text = _Rowview.Row[DmhangFields.Makhach.Name].ToString();
                     txt_TENKHACH.Text = _Rowview.Row[DmhangFields.Tenkhach.Name].ToString();
                     txt_MASPCUAKHACH.Text = _Rowview.Row[DmhangFields.Maspcuakhach.Name].ToString();
-                    txt_MACHUNGLOAI.Text = _Rowview.Row[DmhangFields.Machungloai.Name].ToString();
+                    //txt_MACHUNGLOAI.Text = _Rowview.Row[DmhangFields.Machungloai.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmhangFields.Trongluong.Name].ToString();
                     txt_KICHTHUOC.Text = _Rowview.Row[DmhangFields.Kichthuoc.Name].ToString();
                     txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
@@ -358,8 +358,8 @@ namespace GD.BBPH.APP.DANHMUC
             _dmhangEntity.Makhach = txt_MAKHACH.Text.Trim();
             _dmhangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
             _dmhangEntity.Maspcuakhach = txt_MASPCUAKHACH.Text.Trim();
-            _dmhangEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
-            _dmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
+            //_dmhangEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
+            //_dmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
             _dmhangEntity.Trongluong = LIB.ConvertString.NumbertoDB(txt_TRONGLUONG.Text.Trim());
             _dmhangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
             _dmhangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
@@ -508,8 +508,8 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Masp.Name].Value = _dmhangEntity.Masp;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tensp.Name].Value = _dmhangEntity.Tensp;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maspcuakhach.Name].Value = _dmhangEntity.Maspcuakhach;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Machungloai.Name].Value = _dmhangEntity.Machungloai;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenchungloai.Name].Value = _dmhangEntity.Tenchungloai;
+                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Machungloai.Name].Value = _dmhangEntity.Machungloai;
+                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenchungloai.Name].Value = _dmhangEntity.Tenchungloai;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Makhach.Name].Value = _dmhangEntity.Makhach;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenkhach.Name].Value = _dmhangEntity.Tenkhach;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Kichthuoc.Name].Value = _dmhangEntity.Kichthuoc;
@@ -814,23 +814,23 @@ namespace GD.BBPH.APP.DANHMUC
 
         private void txt_MACHUNGLOAI_Validating(object sender, CancelEventArgs e)
         {
-            _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_MACHUNGLOAI.Text.Trim()) || DT_DMCHUNGLOAI == null || DT_DMCHUNGLOAI.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MACHUNGLOAI.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaChungloai(Str_MASIEUTHI, DT_DMCHUNGLOAI);
-            if (_RowViewSelect == null)
-            {
-                ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI.xml",
-                        DT_DMCHUNGLOAI, DmchungloaiFields.Machungloai.Name, Str_MASIEUTHI);
-                _frm_SingerRows_Select.ShowDialog();
-                if (_frm_SingerRows_Select._RowViewSelect == null) return;
-                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MACHUNGLOAI.Text = _RowViewSelect[DmchungloaiFields.Machungloai.Name].ToString();
-                txt_TENCHUNGLOAI.Text = _RowViewSelect[DmchungloaiFields.Tenchungloai.Name].ToString();
-            }
-            else
-                txt_TENCHUNGLOAI.Text = _RowViewSelect[DmchungloaiFields.Tenchungloai.Name].ToString();
+            //_RowViewSelect = null;
+            //if (string.IsNullOrEmpty(txt_MACHUNGLOAI.Text.Trim()) || DT_DMCHUNGLOAI == null || DT_DMCHUNGLOAI.Rows.Count == 0) return;
+            //string Str_MASIEUTHI = txt_MACHUNGLOAI.Text.Trim().ToUpper();
+            //_RowViewSelect = checkmaChungloai(Str_MASIEUTHI, DT_DMCHUNGLOAI);
+            //if (_RowViewSelect == null)
+            //{
+            //    ListviewJanus _frm_SingerRows_Select =
+            //        new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI.xml",
+            //            DT_DMCHUNGLOAI, DmchungloaiFields.Machungloai.Name, Str_MASIEUTHI);
+            //    _frm_SingerRows_Select.ShowDialog();
+            //    if (_frm_SingerRows_Select._RowViewSelect == null) return;
+            //    _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+            //    txt_MACHUNGLOAI.Text = _RowViewSelect[DmchungloaiFields.Machungloai.Name].ToString();
+            //    txt_TENCHUNGLOAI.Text = _RowViewSelect[DmchungloaiFields.Tenchungloai.Name].ToString();
+            //}
+            //else
+            //    txt_TENCHUNGLOAI.Text = _RowViewSelect[DmchungloaiFields.Tenchungloai.Name].ToString();
         }
         private DataRow checkmaChungloai(string masieuthi, DataTable dt)
         {

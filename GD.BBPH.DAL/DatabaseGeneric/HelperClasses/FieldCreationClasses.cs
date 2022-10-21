@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 5:42:36 AM
+// Code is generated on: Friday, October 21, 2022 8:24:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1012,6 +1012,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Maloaimuc);}
 		}
+		/// <summary>Creates a new DmhangEntity.Doday field instance</summary>
+		public static EntityField2 Doday
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Doday);}
+		}
 	}
 
 	/// <summary>Field Creation Class for entity DmkhachEntity</summary>
@@ -1251,6 +1256,36 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Nguoisua);}
+		}
+		/// <summary>Creates a new DmmangEntity.Doday field instance</summary>
+		public static EntityField2 Doday
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Doday);}
+		}
+		/// <summary>Creates a new DmmangEntity.Rong field instance</summary>
+		public static EntityField2 Rong
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Rong);}
+		}
+		/// <summary>Creates a new DmmangEntity.Maloaimang field instance</summary>
+		public static EntityField2 Maloaimang
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Maloaimang);}
+		}
+		/// <summary>Creates a new DmmangEntity.Tenloaimang field instance</summary>
+		public static EntityField2 Tenloaimang
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Tenloaimang);}
+		}
+		/// <summary>Creates a new DmmangEntity.Maqcmang field instance</summary>
+		public static EntityField2 Maqcmang
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Maqcmang);}
+		}
+		/// <summary>Creates a new DmmangEntity.Tenqcmang field instance</summary>
+		public static EntityField2 Tenqcmang
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Tenqcmang);}
 		}
 	}
 
@@ -2811,6 +2846,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Nguoisua);}
+		}
+		/// <summary>Creates a new MaucuahangEntity.Tylebaophu field instance</summary>
+		public static EntityField2 Tylebaophu
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(MaucuahangFieldIndex.Tylebaophu);}
 		}
 	}
 

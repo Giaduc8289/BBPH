@@ -79,6 +79,7 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_SOMAUMA.Text = _Rowview.Row[DmhangFields.Somauma.Name].ToString();
 					txt_SOHINHMA.Text = _Rowview.Row[DmhangFields.Sohinhma.Name].ToString();
 					txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
+					txt_DODAY.Text = _Rowview.Row[DmhangFields.Doday.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMHANG_CurrentChanged"); }
@@ -128,6 +129,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_dmhangEntity.Somauma = txt_SOMAUMA.Text.Trim();
 			_dmhangEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
 			_dmhangEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
+			_dmhangEntity.Doday = txt_DODAY.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMHANG_PK))
 			{
@@ -179,6 +181,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_DMHANG.CurrentRow.Cells[DmhangFields.Somauma.Name].Value = _dmhangEntity.Somauma;
 				GRID_DMHANG.CurrentRow.Cells[DmhangFields.Sohinhma.Name].Value = _dmhangEntity.Sohinhma;
 				GRID_DMHANG.CurrentRow.Cells[DmhangFields.Maloaimuc.Name].Value = _dmhangEntity.Maloaimuc;
+				GRID_DMHANG.CurrentRow.Cells[DmhangFields.Doday.Name].Value = _dmhangEntity.Doday;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmhangManager.Convert(_dmhangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DMHANG_PK;

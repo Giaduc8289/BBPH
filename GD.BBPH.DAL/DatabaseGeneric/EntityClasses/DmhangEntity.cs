@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 5:42:36 AM
+// Code is generated on: Friday, October 21, 2022 8:24:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -551,6 +551,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Maloaimuc", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Doday", fieldHashtable);
 		}
 		#endregion
 
@@ -1054,6 +1057,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmhangFieldIndex.Maloaimuc, true); }
 			set	{ SetValue((int)DmhangFieldIndex.Maloaimuc, value); }
+		}
+
+		/// <summary> The Doday property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Doday"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Doday
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Doday, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Doday, value); }
 		}
 
 

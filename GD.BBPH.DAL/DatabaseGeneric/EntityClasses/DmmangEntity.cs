@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 5:42:36 AM
+// Code is generated on: Friday, October 21, 2022 8:24:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -464,6 +464,24 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Doday", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Rong", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maloaimang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenloaimang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maqcmang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenqcmang", fieldHashtable);
 		}
 		#endregion
 
@@ -648,6 +666,72 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmmangFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)DmmangFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Doday property of the Entity Dmmang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmang"."Doday"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Doday
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmmangFieldIndex.Doday, false); }
+			set	{ SetValue((int)DmmangFieldIndex.Doday, value); }
+		}
+
+		/// <summary> The Rong property of the Entity Dmmang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmang"."Rong"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Rong
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmmangFieldIndex.Rong, false); }
+			set	{ SetValue((int)DmmangFieldIndex.Rong, value); }
+		}
+
+		/// <summary> The Maloaimang property of the Entity Dmmang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmang"."Maloaimang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maloaimang
+		{
+			get { return (System.String)GetValue((int)DmmangFieldIndex.Maloaimang, true); }
+			set	{ SetValue((int)DmmangFieldIndex.Maloaimang, value); }
+		}
+
+		/// <summary> The Tenloaimang property of the Entity Dmmang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmang"."Tenloaimang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenloaimang
+		{
+			get { return (System.String)GetValue((int)DmmangFieldIndex.Tenloaimang, true); }
+			set	{ SetValue((int)DmmangFieldIndex.Tenloaimang, value); }
+		}
+
+		/// <summary> The Maqcmang property of the Entity Dmmang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmang"."Maqcmang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maqcmang
+		{
+			get { return (System.String)GetValue((int)DmmangFieldIndex.Maqcmang, true); }
+			set	{ SetValue((int)DmmangFieldIndex.Maqcmang, value); }
+		}
+
+		/// <summary> The Tenqcmang property of the Entity Dmmang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmang"."Tenqcmang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenqcmang
+		{
+			get { return (System.String)GetValue((int)DmmangFieldIndex.Tenqcmang, true); }
+			set	{ SetValue((int)DmmangFieldIndex.Tenqcmang, value); }
 		}
 
 
