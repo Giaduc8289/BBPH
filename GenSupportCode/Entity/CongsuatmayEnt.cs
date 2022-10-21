@@ -44,9 +44,6 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_MAMAY.Text = _Rowview.Row[CongsuatmayFields.Mamay.Name].ToString();
 					txt_MADONGMAY.Text = _Rowview.Row[CongsuatmayFields.Madongmay.Name].ToString();
 					txt_MACONGDOAN.Text = _Rowview.Row[CongsuatmayFields.Macongdoan.Name].ToString();
-					txt_MAQUYCACH1.Text = _Rowview.Row[CongsuatmayFields.Maquycach1.Name].ToString();
-					txt_MAQUYCACH2.Text = _Rowview.Row[CongsuatmayFields.Maquycach2.Name].ToString();
-					txt_MAQUYCACH3.Text = _Rowview.Row[CongsuatmayFields.Maquycach3.Name].ToString();
 					txt_KHOTU.Text = _Rowview.Row[CongsuatmayFields.Khotu.Name].ToString();
 					txt_KHODEN.Text = _Rowview.Row[CongsuatmayFields.Khoden.Name].ToString();
 					txt_CHIEUDAITU.Text = _Rowview.Row[CongsuatmayFields.Chieudaitu.Name].ToString();
@@ -58,6 +55,10 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NGUOITAO.Text = _Rowview.Row[CongsuatmayFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[CongsuatmayFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[CongsuatmayFields.Nguoisua.Name].ToString();
+					txt_SOMAUMA.Text = _Rowview.Row[CongsuatmayFields.Somauma.Name].ToString();
+					txt_SOHINHMA.Text = _Rowview.Row[CongsuatmayFields.Sohinhma.Name].ToString();
+					txt_MALOAIMANG.Text = _Rowview.Row[CongsuatmayFields.Maloaimang.Name].ToString();
+					txt_MAQCTHANHPHAM.Text = _Rowview.Row[CongsuatmayFields.Maqcthanhpham.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_CONGSUATMAY_CurrentChanged"); }
@@ -72,9 +73,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_congsuatmayEntity.Mamay = txt_MAMAY.Text.Trim();
 			_congsuatmayEntity.Madongmay = txt_MADONGMAY.Text.Trim();
 			_congsuatmayEntity.Macongdoan = txt_MACONGDOAN.Text.Trim();
-			_congsuatmayEntity.Maquycach1 = txt_MAQUYCACH1.Text.Trim();
-			_congsuatmayEntity.Maquycach2 = txt_MAQUYCACH2.Text.Trim();
-			_congsuatmayEntity.Maquycach3 = txt_MAQUYCACH3.Text.Trim();
 			_congsuatmayEntity.Khotu = txt_KHOTU.Text.Trim();
 			_congsuatmayEntity.Khoden = txt_KHODEN.Text.Trim();
 			_congsuatmayEntity.Chieudaitu = txt_CHIEUDAITU.Text.Trim();
@@ -86,6 +84,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			_congsuatmayEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
 			_congsuatmayEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
 			_congsuatmayEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_congsuatmayEntity.Somauma = txt_SOMAUMA.Text.Trim();
+			_congsuatmayEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
+			_congsuatmayEntity.Maloaimang = txt_MALOAIMANG.Text.Trim();
+			_congsuatmayEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_CONGSUATMAY_PK))
 			{
@@ -102,9 +104,6 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Mamay.Name].Value = _congsuatmayEntity.Mamay;
 				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Madongmay.Name].Value = _congsuatmayEntity.Madongmay;
 				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Macongdoan.Name].Value = _congsuatmayEntity.Macongdoan;
-				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maquycach1.Name].Value = _congsuatmayEntity.Maquycach1;
-				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maquycach2.Name].Value = _congsuatmayEntity.Maquycach2;
-				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maquycach3.Name].Value = _congsuatmayEntity.Maquycach3;
 				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Khotu.Name].Value = _congsuatmayEntity.Khotu;
 				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Khoden.Name].Value = _congsuatmayEntity.Khoden;
 				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Chieudaitu.Name].Value = _congsuatmayEntity.Chieudaitu;
@@ -116,6 +115,10 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Nguoitao.Name].Value = _congsuatmayEntity.Nguoitao;
 				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Ngaysua.Name].Value = _congsuatmayEntity.Ngaysua;
 				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Nguoisua.Name].Value = _congsuatmayEntity.Nguoisua;
+				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Somauma.Name].Value = _congsuatmayEntity.Somauma;
+				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Sohinhma.Name].Value = _congsuatmayEntity.Sohinhma;
+				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maloaimang.Name].Value = _congsuatmayEntity.Maloaimang;
+				GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maqcthanhpham.Name].Value = _congsuatmayEntity.Maqcthanhpham;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CongsuatmayManager.Convert(_congsuatmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_CONGSUATMAY_PK;
