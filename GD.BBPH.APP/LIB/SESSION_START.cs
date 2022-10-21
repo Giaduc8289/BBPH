@@ -238,6 +238,20 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMMAY = value; }
         }
         #endregion
+
+        #region CONGSUATMAY
+        private static DataTable _DT_CONGSUATMAY = null;
+        public static DataTable DT_CONGSUATMAY
+        {
+            get
+            {
+                _DT_CONGSUATMAY = new CongsuatmayManager().SelectAllRDT();
+                return _DT_CONGSUATMAY;
+            }
+            set { _DT_CONGSUATMAY = value; }
+        }
+        #endregion
+
         #region DMCONGDOAN
         private static DataTable _DT_DMCONGDOAN = null;
         public static DataTable DT_DMCONGDOAN
@@ -250,6 +264,7 @@ namespace GD.BBPH.APP.LIB
             set { _DT_DMCONGDOAN = value; }
         }
         #endregion
+
         #region DT_DMMANG
         private static DataTable _DT_DMMANG = null;
         public static DataTable DT_DMMANG
