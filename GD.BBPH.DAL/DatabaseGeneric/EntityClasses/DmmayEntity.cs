@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 11:46:36 AM
+// Code is generated on: Friday, October 21, 2022 5:19:23 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -39,6 +39,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		#region Class Member Declarations
 		private EntityCollection<KetquaghepEntity> _ketquaghep;
 		private EntityCollection<KetquainEntity> _ketquain;
+		private EntityCollection<KetquathanhphamEntity> _ketquathanhpham;
 		private EntityCollection<KetquathoiEntity> _ketquathoi;
 		private EntityCollection<KetquatuaEntity> _ketquatua;
 
@@ -61,6 +62,8 @@ namespace GD.BBPH.DAL.EntityClasses
 			public static readonly string Ketquaghep = "Ketquaghep";
 			/// <summary>Member name Ketquain</summary>
 			public static readonly string Ketquain = "Ketquain";
+			/// <summary>Member name Ketquathanhpham</summary>
+			public static readonly string Ketquathanhpham = "Ketquathanhpham";
 			/// <summary>Member name Ketquathoi</summary>
 			public static readonly string Ketquathoi = "Ketquathoi";
 			/// <summary>Member name Ketquatua</summary>
@@ -127,6 +130,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				_ketquaghep = (EntityCollection<KetquaghepEntity>)info.GetValue("_ketquaghep", typeof(EntityCollection<KetquaghepEntity>));
 				_ketquain = (EntityCollection<KetquainEntity>)info.GetValue("_ketquain", typeof(EntityCollection<KetquainEntity>));
+				_ketquathanhpham = (EntityCollection<KetquathanhphamEntity>)info.GetValue("_ketquathanhpham", typeof(EntityCollection<KetquathanhphamEntity>));
 				_ketquathoi = (EntityCollection<KetquathoiEntity>)info.GetValue("_ketquathoi", typeof(EntityCollection<KetquathoiEntity>));
 				_ketquatua = (EntityCollection<KetquatuaEntity>)info.GetValue("_ketquatua", typeof(EntityCollection<KetquatuaEntity>));
 
@@ -175,6 +179,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				case "Ketquain":
 					this.Ketquain.Add((KetquainEntity)entity);
 					break;
+				case "Ketquathanhpham":
+					this.Ketquathanhpham.Add((KetquathanhphamEntity)entity);
+					break;
 				case "Ketquathoi":
 					this.Ketquathoi.Add((KetquathoiEntity)entity);
 					break;
@@ -210,6 +217,9 @@ namespace GD.BBPH.DAL.EntityClasses
 					break;
 				case "Ketquain":
 					toReturn.Add(DmmayEntity.Relations.KetquainEntityUsingMamay);
+					break;
+				case "Ketquathanhpham":
+					toReturn.Add(DmmayEntity.Relations.KetquathanhphamEntityUsingMamay);
 					break;
 				case "Ketquathoi":
 					toReturn.Add(DmmayEntity.Relations.KetquathoiEntityUsingMamay);
@@ -261,6 +271,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				case "Ketquain":
 					this.Ketquain.Add((KetquainEntity)relatedEntity);
 					break;
+				case "Ketquathanhpham":
+					this.Ketquathanhpham.Add((KetquathanhphamEntity)relatedEntity);
+					break;
 				case "Ketquathoi":
 					this.Ketquathoi.Add((KetquathoiEntity)relatedEntity);
 					break;
@@ -288,6 +301,9 @@ namespace GD.BBPH.DAL.EntityClasses
 					break;
 				case "Ketquain":
 					base.PerformRelatedEntityRemoval(this.Ketquain, relatedEntity, signalRelatedEntityManyToOne);
+					break;
+				case "Ketquathanhpham":
+					base.PerformRelatedEntityRemoval(this.Ketquathanhpham, relatedEntity, signalRelatedEntityManyToOne);
 					break;
 				case "Ketquathoi":
 					base.PerformRelatedEntityRemoval(this.Ketquathoi, relatedEntity, signalRelatedEntityManyToOne);
@@ -328,6 +344,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
 			toReturn.Add(this.Ketquaghep);
 			toReturn.Add(this.Ketquain);
+			toReturn.Add(this.Ketquathanhpham);
 			toReturn.Add(this.Ketquathoi);
 			toReturn.Add(this.Ketquatua);
 
@@ -346,6 +363,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				info.AddValue("_ketquaghep", ((_ketquaghep!=null) && (_ketquaghep.Count>0) && !this.MarkedForDeletion)?_ketquaghep:null);
 				info.AddValue("_ketquain", ((_ketquain!=null) && (_ketquain.Count>0) && !this.MarkedForDeletion)?_ketquain:null);
+				info.AddValue("_ketquathanhpham", ((_ketquathanhpham!=null) && (_ketquathanhpham.Count>0) && !this.MarkedForDeletion)?_ketquathanhpham:null);
 				info.AddValue("_ketquathoi", ((_ketquathoi!=null) && (_ketquathoi.Count>0) && !this.MarkedForDeletion)?_ketquathoi:null);
 				info.AddValue("_ketquatua", ((_ketquatua!=null) && (_ketquatua.Count>0) && !this.MarkedForDeletion)?_ketquatua:null);
 
@@ -406,6 +424,16 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 
 		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Ketquathanhpham' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoKetquathanhpham()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(KetquathanhphamFields.Mamay, null, ComparisonOperator.Equal, this.Mamay));
+			return bucket;
+		}
+
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
 		/// the related entities of type 'Ketquathoi' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
 		/// <returns></returns>
 		public virtual IRelationPredicateBucket GetRelationInfoKetquathoi()
@@ -457,6 +485,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
 			collectionsQueue.Enqueue(this._ketquaghep);
 			collectionsQueue.Enqueue(this._ketquain);
+			collectionsQueue.Enqueue(this._ketquathanhpham);
 			collectionsQueue.Enqueue(this._ketquathoi);
 			collectionsQueue.Enqueue(this._ketquatua);
 
@@ -469,6 +498,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
 			this._ketquaghep = (EntityCollection<KetquaghepEntity>) collectionsQueue.Dequeue();
 			this._ketquain = (EntityCollection<KetquainEntity>) collectionsQueue.Dequeue();
+			this._ketquathanhpham = (EntityCollection<KetquathanhphamEntity>) collectionsQueue.Dequeue();
 			this._ketquathoi = (EntityCollection<KetquathoiEntity>) collectionsQueue.Dequeue();
 			this._ketquatua = (EntityCollection<KetquatuaEntity>) collectionsQueue.Dequeue();
 
@@ -483,6 +513,10 @@ namespace GD.BBPH.DAL.EntityClasses
 				return true;
 			}
 			if (this._ketquain != null)
+			{
+				return true;
+			}
+			if (this._ketquathanhpham != null)
 			{
 				return true;
 			}
@@ -506,6 +540,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
 			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquaghepEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquaghepEntityFactory))) : null);
 			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquainEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquainEntityFactory))) : null);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquathanhphamEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquathanhphamEntityFactory))) : null);
 			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquathoiEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquathoiEntityFactory))) : null);
 			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquatuaEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquatuaEntityFactory))) : null);
 
@@ -521,6 +556,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 			toReturn.Add("Ketquaghep", _ketquaghep);
 			toReturn.Add("Ketquain", _ketquain);
+			toReturn.Add("Ketquathanhpham", _ketquathanhpham);
 			toReturn.Add("Ketquathoi", _ketquathoi);
 			toReturn.Add("Ketquatua", _ketquatua);
 
@@ -538,6 +574,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			if(_ketquain!=null)
 			{
 				_ketquain.ActiveContext = base.ActiveContext;
+			}
+			if(_ketquathanhpham!=null)
+			{
+				_ketquathanhpham.ActiveContext = base.ActiveContext;
 			}
 			if(_ketquathoi!=null)
 			{
@@ -558,6 +598,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 			_ketquaghep = null;
 			_ketquain = null;
+			_ketquathanhpham = null;
 			_ketquathoi = null;
 			_ketquatua = null;
 
@@ -659,6 +700,17 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				return new PrefetchPathElement2( new EntityCollection<KetquainEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquainEntityFactory))),
 					(IEntityRelation)GetRelationsForField("Ketquain")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KetquainEntity, 0, null, null, null, null, "Ketquain", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Ketquathanhpham' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathKetquathanhpham
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<KetquathanhphamEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquathanhphamEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Ketquathanhpham")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KetquathanhphamEntity, 0, null, null, null, null, "Ketquathanhpham", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
 			}
 		}
 		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Ketquathoi' 
@@ -828,6 +880,22 @@ namespace GD.BBPH.DAL.EntityClasses
 					_ketquain.SetContainingEntityInfo(this, "Dmmay");
 				}
 				return _ketquain;
+			}
+		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'KetquathanhphamEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(KetquathanhphamEntity))]
+		public virtual EntityCollection<KetquathanhphamEntity> Ketquathanhpham
+		{
+			get
+			{
+				if(_ketquathanhpham==null)
+				{
+					_ketquathanhpham = new EntityCollection<KetquathanhphamEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquathanhphamEntityFactory)));
+					_ketquathanhpham.SetContainingEntityInfo(this, "Dmmay");
+				}
+				return _ketquathanhpham;
 			}
 		}
 

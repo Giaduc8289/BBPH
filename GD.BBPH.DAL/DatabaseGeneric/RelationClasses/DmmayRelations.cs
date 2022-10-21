@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 11:46:35 AM
+// Code is generated on: Friday, October 21, 2022 5:19:22 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -32,6 +32,7 @@ namespace GD.BBPH.DAL.RelationClasses
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
 			toReturn.Add(this.KetquaghepEntityUsingMamay);
 			toReturn.Add(this.KetquainEntityUsingMamay);
+			toReturn.Add(this.KetquathanhphamEntityUsingMamay);
 			toReturn.Add(this.KetquathoiEntityUsingMamay);
 			toReturn.Add(this.KetquatuaEntityUsingMamay);
 
@@ -67,6 +68,21 @@ namespace GD.BBPH.DAL.RelationClasses
 				relation.AddEntityFieldPair(DmmayFields.Mamay, KetquainFields.Mamay);
 				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", true);
 				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KetquainEntity", false);
+				return relation;
+			}
+		}
+
+		/// <summary>Returns a new IEntityRelation object, between DmmayEntity and KetquathanhphamEntity over the 1:n relation they have, using the relation between the fields:
+		/// Dmmay.Mamay - Ketquathanhpham.Mamay
+		/// </summary>
+		public virtual IEntityRelation KetquathanhphamEntityUsingMamay
+		{
+			get
+			{
+				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Ketquathanhpham" , true);
+				relation.AddEntityFieldPair(DmmayFields.Mamay, KetquathanhphamFields.Mamay);
+				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", true);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KetquathanhphamEntity", false);
 				return relation;
 			}
 		}

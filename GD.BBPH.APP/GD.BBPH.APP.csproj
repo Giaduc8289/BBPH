@@ -449,6 +449,7 @@
     <Compile Include="Manager\KetquaghepManager.cs" />
     <Compile Include="Manager\KetquainManager.cs" />
     <Compile Include="Manager\KetquainmauManager.cs" />
+    <Compile Include="Manager\KetquathanhphamManager.cs" />
     <Compile Include="Manager\KetquathoiManager.cs" />
     <Compile Include="Manager\KetquatuaManager.cs" />
     <Compile Include="Manager\LogbackupManager.cs" />

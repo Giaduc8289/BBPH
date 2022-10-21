@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 11:46:35 AM
+// Code is generated on: Friday, October 21, 2022 5:19:22 PM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -156,6 +156,9 @@ namespace GD.BBPH.DAL.Linq
 					break;
 				case GD.BBPH.DAL.EntityType.KetquainmauEntity:
 					toReturn = this.Ketquainmau;
+					break;
+				case GD.BBPH.DAL.EntityType.KetquathanhphamEntity:
+					toReturn = this.Ketquathanhpham;
 					break;
 				case GD.BBPH.DAL.EntityType.KetquathoiEntity:
 					toReturn = this.Ketquathoi;
@@ -423,6 +426,12 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<KetquainmauEntity> Ketquainmau
 		{
 			get { return new DataSource2<KetquainmauEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KetquathanhphamEntity instances in the database.</summary>
+		public DataSource2<KetquathanhphamEntity> Ketquathanhpham
+		{
+			get { return new DataSource2<KetquathanhphamEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting KetquathoiEntity instances in the database.</summary>

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 11:46:36 AM
+// Code is generated on: Friday, October 21, 2022 5:19:23 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1337,6 +1337,47 @@ namespace GD.BBPH.DAL.FactoryClasses
 
 		#endregion
 	}	
+	/// <summary>Factory to create new, empty KetquathanhphamEntity objects.</summary>
+	[Serializable]
+	public partial class KetquathanhphamEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KetquathanhphamEntityFactory() : base("KetquathanhphamEntity", GD.BBPH.DAL.EntityType.KetquathanhphamEntity) { }
+
+		/// <summary>Creates a new, empty KetquathanhphamEntity object.</summary>
+		/// <returns>A new, empty KetquathanhphamEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KetquathanhphamEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquathanhpham
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KetquathanhphamEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KetquathanhphamEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquathanhphamUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KetquathanhphamEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
 	/// <summary>Factory to create new, empty KetquathoiEntity objects.</summary>
 	[Serializable]
 	public partial class KetquathoiEntityFactory : EntityFactoryBase2 {
@@ -2342,6 +2383,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.KetquainmauEntity:
 					factoryToUse = new KetquainmauEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KetquathanhphamEntity:
+					factoryToUse = new KetquathanhphamEntityFactory();
 					break;
 				case GD.BBPH.DAL.EntityType.KetquathoiEntity:
 					factoryToUse = new KetquathoiEntityFactory();

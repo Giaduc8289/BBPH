@@ -26,15 +26,17 @@ namespace GD.BBPH.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
+	
 
 	/// <summary>
-	/// Entity class which represents the entity 'Ketquatua'.<br/><br/>
+	/// Entity class which represents the entity 'Ketquathanhpham'.<br/><br/>
 	/// 
 	/// </summary>
 	[Serializable]
-	public partial class KetquatuaEntity : CommonEntityBase, ISerializable
+	public partial class KetquathanhphamEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END	
+		// __LLBLGENPRO_USER_CODE_REGION_END
+			
 	{
 		#region Class Member Declarations
 
@@ -44,6 +46,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
+		
 		#endregion
 
 		#region Statics
@@ -62,13 +65,13 @@ namespace GD.BBPH.DAL.EntityClasses
 		#endregion
 		
 		/// <summary> Static CTor for setting up custom property hashtables. Is executed before the first instance of this entity class or derived classes is constructed. </summary>
-		static KetquatuaEntity()
+		static KetquathanhphamEntity()
 		{
 			SetupCustomPropertyHashtables();
 		}
 
 		/// <summary> CTor</summary>
-		public KetquatuaEntity():base("KetquatuaEntity")
+		public KetquathanhphamEntity():base("KetquathanhphamEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 		}
@@ -76,33 +79,33 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> CTor</summary>
 		/// <remarks>For framework usage.</remarks>
 		/// <param name="fields">Fields object to set as the fields for this entity.</param>
-		public KetquatuaEntity(IEntityFields2 fields):base("KetquatuaEntity")
+		public KetquathanhphamEntity(IEntityFields2 fields):base("KetquathanhphamEntity")
 		{
 			InitClassEmpty(null, fields);
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="validator">The custom validator object for this KetquatuaEntity</param>
-		public KetquatuaEntity(IValidator validator):base("KetquatuaEntity")
+		/// <param name="validator">The custom validator object for this KetquathanhphamEntity</param>
+		public KetquathanhphamEntity(IValidator validator):base("KetquathanhphamEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 		}
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="id">PK value for Ketquatua which data should be fetched into this Ketquatua object</param>
+		/// <param name="id">PK value for Ketquathanhpham which data should be fetched into this Ketquathanhpham object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public KetquatuaEntity(System.Int64 id):base("KetquatuaEntity")
+		public KetquathanhphamEntity(System.Int64 id):base("KetquathanhphamEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 			this.Id = id;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="id">PK value for Ketquatua which data should be fetched into this Ketquatua object</param>
-		/// <param name="validator">The custom validator object for this KetquatuaEntity</param>
+		/// <param name="id">PK value for Ketquathanhpham which data should be fetched into this Ketquathanhpham object</param>
+		/// <param name="validator">The custom validator object for this KetquathanhphamEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public KetquatuaEntity(System.Int64 id, IValidator validator):base("KetquatuaEntity")
+		public KetquathanhphamEntity(System.Int64 id, IValidator validator):base("KetquathanhphamEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 			this.Id = id;
@@ -112,7 +115,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="info"></param>
 		/// <param name="context"></param>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		protected KetquatuaEntity(SerializationInfo info, StreamingContext context) : base(info, context)
+		protected KetquathanhphamEntity(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
@@ -129,6 +132,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 		}
 
 		
@@ -136,9 +140,9 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="fieldIndex">The fieldindex.</param>
 		protected override void PerformDesyncSetupFKFieldChange(int fieldIndex)
 		{
-			switch((KetquatuaFieldIndex)fieldIndex)
+			switch((KetquathanhphamFieldIndex)fieldIndex)
 			{
-				case KetquatuaFieldIndex.Mamay:
+				case KetquathanhphamFieldIndex.Mamay:
 					DesetupSyncDmmay(true, false);
 					break;
 				default:
@@ -179,7 +183,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>RelationCollection with relation object(s) which represent the relation the field is maped on</returns>
 		public override RelationCollection GetRelationsForFieldOfType(string fieldName)
 		{
-			return KetquatuaEntity.GetRelationsForField(fieldName);
+			return KetquathanhphamEntity.GetRelationsForField(fieldName);
 		}
 
 		/// <summary>Gets the relation objects which represent the relation the fieldName specified is mapped on. </summary>
@@ -191,7 +195,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 				case "Dmmay":
-					toReturn.Add(KetquatuaEntity.Relations.DmmayEntityUsingMamay);
+					toReturn.Add(KetquathanhphamEntity.Relations.DmmayEntityUsingMamay);
 					break;
 
 
@@ -311,6 +315,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 			base.GetObjectData(info, context);
 		}
 
@@ -318,7 +323,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the current value is NULL, use <see cref="TestCurrentFieldValueForNull"/> for that.</summary>
 		/// <param name="fieldIndex">Index of the field to test if that field was NULL in the persistent storage</param>
 		/// <returns>true if the field with the passed in index was NULL in the persistent storage, false otherwise</returns>
-		public bool TestOriginalFieldValueForNull(KetquatuaFieldIndex fieldIndex)
+		public bool TestOriginalFieldValueForNull(KetquathanhphamFieldIndex fieldIndex)
 		{
 			return base.Fields[(int)fieldIndex].IsNull;
 		}
@@ -327,7 +332,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the original value (read from the db) is NULL</summary>
 		/// <param name="fieldIndex">Index of the field to test if its currentvalue is null/undefined</param>
 		/// <returns>true if the field's value isn't defined yet, false otherwise</returns>
-		public bool TestCurrentFieldValueForNull(KetquatuaFieldIndex fieldIndex)
+		public bool TestCurrentFieldValueForNull(KetquathanhphamFieldIndex fieldIndex)
 		{
 			return base.CheckIfCurrentFieldValueIsNull((int)fieldIndex);
 		}
@@ -337,7 +342,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>A list of all the EntityRelation objects the type of this instance has. Hierarchy relations are excluded.</returns>
 		public override List<IEntityRelation> GetAllRelations()
 		{
-			return new KetquatuaRelations().GetAllRelations();
+			return new KetquathanhphamRelations().GetAllRelations();
 		}
 		
 
@@ -358,7 +363,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates entity fields object for this entity. Used in constructor to setup this entity in a polymorphic scenario.</summary>
 		protected virtual IEntityFields2 CreateFields()
 		{
-			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.KetquatuaEntity);
+			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.KetquathanhphamEntity);
 		}
 
 		/// <summary>
@@ -373,7 +378,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates a new instance of the factory related to this entity</summary>
 		protected override IEntityFactory2 CreateEntityFactory()
 		{
-			return EntityFactoryCache2.GetEntityFactory(typeof(KetquatuaEntityFactory));
+			return EntityFactoryCache2.GetEntityFactory(typeof(KetquathanhphamEntityFactory));
 		}
 #if !CF
 		/// <summary>Adds the member collections to the collections queue (base first)</summary>
@@ -451,6 +456,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 			OnInitClassMembersComplete();
 		}
 
@@ -476,7 +482,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Mamay", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Lenhtua", fieldHashtable);
+			_fieldsCustomProperties.Add("SoLsx", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Masanpham", fieldHashtable);
@@ -485,22 +491,19 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Macongnhan", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Daurain", fieldHashtable);
+			_fieldsCustomProperties.Add("Tensanpham", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenmay", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tencongnhan", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("SoMetvao", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("SoKgvao", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("SoMetra", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("SoKgra", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Saihongthucte", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Thoigianbatdau", fieldHashtable);
@@ -518,10 +521,19 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Thoigiancatdau", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Thoigiandoilenh", fieldHashtable);
+			_fieldsCustomProperties.Add("Thoigiansuco", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Thoigiansuco", fieldHashtable);
+			_fieldsCustomProperties.Add("Dgnangsuat", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dmtui", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ttetui", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Kiemtra", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Phein", fieldHashtable);
@@ -530,10 +542,22 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Pheghep", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
+			_fieldsCustomProperties.Add("Phechia", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Phebien", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
 			_fieldsCustomProperties.Add("Phethoi", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Phesx", fieldHashtable);
+			_fieldsCustomProperties.Add("Phechinhmay", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Phekhac", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Titrongtui", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
@@ -546,15 +570,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tensanpham", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tenmay", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tencongnhan", fieldHashtable);
 		}
 		#endregion
 
@@ -563,7 +578,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="resetFKFields">if set to true it will also reset the FK fields pointing to the related entity</param>
 		private void DesetupSyncDmmay(bool signalRelatedEntity, bool resetFKFields)
 		{
-			base.PerformDesetupSyncRelatedEntity( _dmmay, new PropertyChangedEventHandler( OnDmmayPropertyChanged ), "Dmmay", KetquatuaEntity.Relations.DmmayEntityUsingMamay, true, signalRelatedEntity, "Ketquatua", resetFKFields, new int[] { (int)KetquatuaFieldIndex.Mamay } );		
+			base.PerformDesetupSyncRelatedEntity( _dmmay, new PropertyChangedEventHandler( OnDmmayPropertyChanged ), "Dmmay", KetquathanhphamEntity.Relations.DmmayEntityUsingMamay, true, signalRelatedEntity, "Ketquathanhpham", resetFKFields, new int[] { (int)KetquathanhphamFieldIndex.Mamay } );		
 			_dmmay = null;
 		}
 
@@ -575,7 +590,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				DesetupSyncDmmay(true, true);
 				_dmmay = (DmmayEntity)relatedEntity;
-				base.PerformSetupSyncRelatedEntity( _dmmay, new PropertyChangedEventHandler( OnDmmayPropertyChanged ), "Dmmay", KetquatuaEntity.Relations.DmmayEntityUsingMamay, true, new string[] {  } );
+				base.PerformSetupSyncRelatedEntity( _dmmay, new PropertyChangedEventHandler( OnDmmayPropertyChanged ), "Dmmay", KetquathanhphamEntity.Relations.DmmayEntityUsingMamay, true, new string[] {  } );
 			}
 		}
 		
@@ -593,7 +608,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
-		/// <param name="validator">The validator object for this KetquatuaEntity</param>
+		/// <param name="validator">The validator object for this KetquathanhphamEntity</param>
 		/// <param name="fields">Fields of this entity</param>
 		protected virtual void InitClassEmpty(IValidator validator, IEntityFields2 fields)
 		{
@@ -606,15 +621,16 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 
 			OnInitialized();
 		}
 
 		#region Class Property Declarations
 		/// <summary> The relations object holding all relations of this entity with other entity classes.</summary>
-		public  static KetquatuaRelations Relations
+		public  static KetquathanhphamRelations Relations
 		{
-			get	{ return new KetquatuaRelations(); }
+			get	{ return new KetquathanhphamRelations(); }
 		}
 		
 		/// <summary> The custom properties for this entity type.</summary>
@@ -634,7 +650,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			get
 			{
 				return new PrefetchPathElement2(new EntityCollection(EntityFactoryCache2.GetEntityFactory(typeof(DmmayEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Dmmay")[0], (int)GD.BBPH.DAL.EntityType.KetquatuaEntity, (int)GD.BBPH.DAL.EntityType.DmmayEntity, 0, null, null, null, null, "Dmmay", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
+					(IEntityRelation)GetRelationsForField("Dmmay")[0], (int)GD.BBPH.DAL.EntityType.KetquathanhphamEntity, (int)GD.BBPH.DAL.EntityType.DmmayEntity, 0, null, null, null, null, "Dmmay", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne);
 			}
 		}
 
@@ -644,7 +660,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, string> CustomPropertiesOfType
 		{
-			get { return KetquatuaEntity.CustomProperties;}
+			get { return KetquathanhphamEntity.CustomProperties;}
 		}
 
 		/// <summary> The custom properties for the fields of this entity type. The returned Hashtable contains per fieldname a hashtable of name-value
@@ -660,348 +676,381 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, Dictionary<string, string>> FieldsCustomPropertiesOfType
 		{
-			get { return KetquatuaEntity.FieldsCustomProperties;}
+			get { return KetquathanhphamEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The Id property of the Entity Ketquatua<br/><br/>
+		/// <summary> The Id property of the Entity Ketquathanhpham<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Id"<br/>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Id"<br/>
 		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, true</remarks>
 		public virtual System.Int64 Id
 		{
-			get { return (System.Int64)GetValue((int)KetquatuaFieldIndex.Id, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Id, value); }
+			get { return (System.Int64)GetValue((int)KetquathanhphamFieldIndex.Id, true); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Id, value); }
 		}
 
-		/// <summary> The Ngay property of the Entity Ketquatua<br/><br/>
+		/// <summary> The Ngay property of the Entity Ketquathanhpham<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Ngay"<br/>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Ngay"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngay
 		{
-			get { return (Nullable<System.DateTime>)GetValue((int)KetquatuaFieldIndex.Ngay, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Ngay, value); }
+			get { return (Nullable<System.DateTime>)GetValue((int)KetquathanhphamFieldIndex.Ngay, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Ngay, value); }
 		}
 
-		/// <summary> The Ca property of the Entity Ketquatua<br/><br/>
+		/// <summary> The Ca property of the Entity Ketquathanhpham<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Ca"<br/>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Ca"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Int32> Ca
 		{
-			get { return (Nullable<System.Int32>)GetValue((int)KetquatuaFieldIndex.Ca, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Ca, value); }
+			get { return (Nullable<System.Int32>)GetValue((int)KetquathanhphamFieldIndex.Ca, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Ca, value); }
 		}
 
-		/// <summary> The Mamay property of the Entity Ketquatua<br/><br/>
+		/// <summary> The Mamay property of the Entity Ketquathanhpham<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Mamay"<br/>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Mamay"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Mamay
 		{
-			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Mamay, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Mamay, value); }
+			get { return (System.String)GetValue((int)KetquathanhphamFieldIndex.Mamay, true); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Mamay, value); }
 		}
 
-		/// <summary> The Lenhtua property of the Entity Ketquatua<br/><br/>
+		/// <summary> The SoLsx property of the Entity Ketquathanhpham<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Lenhtua"<br/>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."SoLSX"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Lenhtua
+		public virtual System.String SoLsx
 		{
-			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Lenhtua, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Lenhtua, value); }
+			get { return (System.String)GetValue((int)KetquathanhphamFieldIndex.SoLsx, true); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.SoLsx, value); }
 		}
 
-		/// <summary> The Masanpham property of the Entity Ketquatua<br/><br/>
+		/// <summary> The Masanpham property of the Entity Ketquathanhpham<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Masanpham"<br/>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Masanpham"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Masanpham
 		{
-			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Masanpham, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Masanpham, value); }
+			get { return (System.String)GetValue((int)KetquathanhphamFieldIndex.Masanpham, true); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Masanpham, value); }
 		}
 
-		/// <summary> The Macongnhan property of the Entity Ketquatua<br/><br/>
+		/// <summary> The Macongnhan property of the Entity Ketquathanhpham<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Macongnhan"<br/>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Macongnhan"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Macongnhan
 		{
-			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Macongnhan, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Macongnhan, value); }
+			get { return (System.String)GetValue((int)KetquathanhphamFieldIndex.Macongnhan, true); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Macongnhan, value); }
 		}
 
-		/// <summary> The Daurain property of the Entity Ketquatua<br/><br/>
+		/// <summary> The Tensanpham property of the Entity Ketquathanhpham<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Daurain"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Daurain
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Daurain, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Daurain, value); }
-		}
-
-		/// <summary> The SoMetvao property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."SoMetvao"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> SoMetvao
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.SoMetvao, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.SoMetvao, value); }
-		}
-
-		/// <summary> The SoKgvao property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."SoKgvao"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> SoKgvao
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.SoKgvao, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.SoKgvao, value); }
-		}
-
-		/// <summary> The SoMetra property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."SoMetra"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> SoMetra
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.SoMetra, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.SoMetra, value); }
-		}
-
-		/// <summary> The SoKgra property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."SoKgra"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> SoKgra
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.SoKgra, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.SoKgra, value); }
-		}
-
-		/// <summary> The Saihongthucte property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Saihongthucte"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Saihongthucte
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Saihongthucte, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Saihongthucte, value); }
-		}
-
-		/// <summary> The Thoigianbatdau property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigianbatdau"<br/>
-		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.DateTime> Thoigianbatdau
-		{
-			get { return (Nullable<System.DateTime>)GetValue((int)KetquatuaFieldIndex.Thoigianbatdau, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Thoigianbatdau, value); }
-		}
-
-		/// <summary> The Thoigianketthuc property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigianketthuc"<br/>
-		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.DateTime> Thoigianketthuc
-		{
-			get { return (Nullable<System.DateTime>)GetValue((int)KetquatuaFieldIndex.Thoigianketthuc, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Thoigianketthuc, value); }
-		}
-
-		/// <summary> The Thoigianchuanbi property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigianchuanbi"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Thoigianchuanbi
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Thoigianchuanbi, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Thoigianchuanbi, value); }
-		}
-
-		/// <summary> The Thoigianhacuon property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigianhacuon"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Thoigianhacuon
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Thoigianhacuon, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Thoigianhacuon, value); }
-		}
-
-		/// <summary> The Thoigiancatdau property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigiancatdau"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Thoigiancatdau
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Thoigiancatdau, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Thoigiancatdau, value); }
-		}
-
-		/// <summary> The Thoigiandoilenh property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigiandoilenh"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Thoigiandoilenh
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Thoigiandoilenh, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Thoigiandoilenh, value); }
-		}
-
-		/// <summary> The Thoigiansuco property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigiansuco"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Thoigiansuco
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Thoigiansuco, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Thoigiansuco, value); }
-		}
-
-		/// <summary> The Phein property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Phein"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Phein
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Phein, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Phein, value); }
-		}
-
-		/// <summary> The Pheghep property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Pheghep"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Pheghep
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Pheghep, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Pheghep, value); }
-		}
-
-		/// <summary> The Phethoi property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Phethoi"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Phethoi
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Phethoi, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Phethoi, value); }
-		}
-
-		/// <summary> The Phesx property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Phesx"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Phesx
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Phesx, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Phesx, value); }
-		}
-
-		/// <summary> The Ngaytao property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Ngaytao"<br/>
-		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.DateTime> Ngaytao
-		{
-			get { return (Nullable<System.DateTime>)GetValue((int)KetquatuaFieldIndex.Ngaytao, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Ngaytao, value); }
-		}
-
-		/// <summary> The Nguoitao property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Nguoitao"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Nguoitao
-		{
-			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Nguoitao, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Nguoitao, value); }
-		}
-
-		/// <summary> The Ngaysua property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Ngaysua"<br/>
-		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.DateTime> Ngaysua
-		{
-			get { return (Nullable<System.DateTime>)GetValue((int)KetquatuaFieldIndex.Ngaysua, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Ngaysua, value); }
-		}
-
-		/// <summary> The Nguoisua property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Nguoisua"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Nguoisua
-		{
-			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Nguoisua, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Nguoisua, value); }
-		}
-
-		/// <summary> The Tensanpham property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Tensanpham"<br/>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Tensanpham"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tensanpham
 		{
-			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Tensanpham, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Tensanpham, value); }
+			get { return (System.String)GetValue((int)KetquathanhphamFieldIndex.Tensanpham, true); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Tensanpham, value); }
 		}
 
-		/// <summary> The Tenmay property of the Entity Ketquatua<br/><br/>
+		/// <summary> The Tenmay property of the Entity Ketquathanhpham<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Tenmay"<br/>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Tenmay"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tenmay
 		{
-			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Tenmay, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Tenmay, value); }
+			get { return (System.String)GetValue((int)KetquathanhphamFieldIndex.Tenmay, true); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Tenmay, value); }
 		}
 
-		/// <summary> The Tencongnhan property of the Entity Ketquatua<br/><br/>
+		/// <summary> The Tencongnhan property of the Entity Ketquathanhpham<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Tencongnhan"<br/>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Tencongnhan"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tencongnhan
 		{
-			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Tencongnhan, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Tencongnhan, value); }
+			get { return (System.String)GetValue((int)KetquathanhphamFieldIndex.Tencongnhan, true); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Tencongnhan, value); }
+		}
+
+		/// <summary> The SoMetvao property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."SoMetvao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> SoMetvao
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.SoMetvao, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.SoMetvao, value); }
+		}
+
+		/// <summary> The SoKgvao property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."SoKgvao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> SoKgvao
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.SoKgvao, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.SoKgvao, value); }
+		}
+
+		/// <summary> The Thoigianbatdau property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Thoigianbatdau"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Thoigianbatdau
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)KetquathanhphamFieldIndex.Thoigianbatdau, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Thoigianbatdau, value); }
+		}
+
+		/// <summary> The Thoigianketthuc property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Thoigianketthuc"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Thoigianketthuc
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)KetquathanhphamFieldIndex.Thoigianketthuc, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Thoigianketthuc, value); }
+		}
+
+		/// <summary> The Thoigianchuanbi property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Thoigianchuanbi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Thoigianchuanbi
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Thoigianchuanbi, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Thoigianchuanbi, value); }
+		}
+
+		/// <summary> The Thoigianhacuon property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Thoigianhacuon"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Thoigianhacuon
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Thoigianhacuon, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Thoigianhacuon, value); }
+		}
+
+		/// <summary> The Thoigiancatdau property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Thoigiancatdau"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Thoigiancatdau
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Thoigiancatdau, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Thoigiancatdau, value); }
+		}
+
+		/// <summary> The Thoigiansuco property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Thoigiansuco"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Thoigiansuco
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Thoigiansuco, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Thoigiansuco, value); }
+		}
+
+		/// <summary> The Dgnangsuat property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Dgnangsuat"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dgnangsuat
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Dgnangsuat, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Dgnangsuat, value); }
+		}
+
+		/// <summary> The Dmtui property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Dmtui"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dmtui
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Dmtui, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Dmtui, value); }
+		}
+
+		/// <summary> The Ttetui property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Ttetui"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Ttetui
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Ttetui, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Ttetui, value); }
+		}
+
+		/// <summary> The Kiemtra property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Kiemtra"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Kiemtra
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Kiemtra, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Kiemtra, value); }
+		}
+
+		/// <summary> The Phein property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Phein"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Phein
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Phein, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Phein, value); }
+		}
+
+		/// <summary> The Pheghep property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Pheghep"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Pheghep
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Pheghep, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Pheghep, value); }
+		}
+
+		/// <summary> The Phechia property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Phechia"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Phechia
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Phechia, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Phechia, value); }
+		}
+
+		/// <summary> The Phebien property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Phebien"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Phebien
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Phebien, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Phebien, value); }
+		}
+
+		/// <summary> The Phethoi property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Phethoi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Phethoi
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Phethoi, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Phethoi, value); }
+		}
+
+		/// <summary> The Phechinhmay property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Phechinhmay"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Phechinhmay
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Phechinhmay, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Phechinhmay, value); }
+		}
+
+		/// <summary> The Phekhac property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Phekhac"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Phekhac
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Phekhac, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Phekhac, value); }
+		}
+
+		/// <summary> The Titrongtui property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Titrongtui"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Titrongtui
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathanhphamFieldIndex.Titrongtui, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Titrongtui, value); }
+		}
+
+		/// <summary> The Ngaytao property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Ngaytao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaytao
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)KetquathanhphamFieldIndex.Ngaytao, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Ngaytao, value); }
+		}
+
+		/// <summary> The Nguoitao property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Nguoitao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoitao
+		{
+			get { return (System.String)GetValue((int)KetquathanhphamFieldIndex.Nguoitao, true); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Nguoitao, value); }
+		}
+
+		/// <summary> The Ngaysua property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Ngaysua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaysua
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)KetquathanhphamFieldIndex.Ngaysua, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Ngaysua, value); }
+		}
+
+		/// <summary> The Nguoisua property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Nguoisua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoisua
+		{
+			get { return (System.String)GetValue((int)KetquathanhphamFieldIndex.Nguoisua, true); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Nguoisua, value); }
 		}
 
 
@@ -1027,14 +1076,14 @@ namespace GD.BBPH.DAL.EntityClasses
 					{
 						if(_dmmay != null)
 						{
-							_dmmay.UnsetRelatedEntity(this, "Ketquatua");
+							_dmmay.UnsetRelatedEntity(this, "Ketquathanhpham");
 						}
 					}
 					else
 					{
 						if(_dmmay!=value)
 						{
-							((IEntity2)value).SetRelatedEntity(this, "Ketquatua");
+							((IEntity2)value).SetRelatedEntity(this, "Ketquathanhpham");
 						}
 					}
 				}
@@ -1059,7 +1108,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override int LLBLGenProEntityTypeValue 
 		{ 
-			get { return (int)GD.BBPH.DAL.EntityType.KetquatuaEntity; }
+			get { return (int)GD.BBPH.DAL.EntityType.KetquathanhphamEntity; }
 		}
 		#endregion
 
@@ -1068,6 +1117,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
+		
 		#endregion
 
 		#region Included code

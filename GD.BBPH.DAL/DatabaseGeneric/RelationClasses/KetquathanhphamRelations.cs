@@ -17,43 +17,43 @@ using SD.LLBLGen.Pro.ORMSupportClasses;
 
 namespace GD.BBPH.DAL.RelationClasses
 {
-	/// <summary>Implements the static Relations variant for the entity: CtptmangH. </summary>
-	public partial class CtptmangHRelations
+	/// <summary>Implements the static Relations variant for the entity: Ketquathanhpham. </summary>
+	public partial class KetquathanhphamRelations
 	{
 		/// <summary>CTor</summary>
-		public CtptmangHRelations()
+		public KetquathanhphamRelations()
 		{
 		}
 
-		/// <summary>Gets all relations of the CtptmangHEntity as a list of IEntityRelation objects.</summary>
+		/// <summary>Gets all relations of the KetquathanhphamEntity as a list of IEntityRelation objects.</summary>
 		/// <returns>a list of IEntityRelation objects</returns>
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
-			toReturn.Add(this.CtptmangDEntityUsingIdH);
 
 
+			toReturn.Add(this.DmmayEntityUsingMamay);
 			return toReturn;
 		}
 
 		#region Class Property Declarations
 
-		/// <summary>Returns a new IEntityRelation object, between CtptmangHEntity and CtptmangDEntity over the 1:n relation they have, using the relation between the fields:
-		/// CtptmangH.Id - CtptmangD.IdH
+
+
+		/// <summary>Returns a new IEntityRelation object, between KetquathanhphamEntity and DmmayEntity over the m:1 relation they have, using the relation between the fields:
+		/// Ketquathanhpham.Mamay - Dmmay.Mamay
 		/// </summary>
-		public virtual IEntityRelation CtptmangDEntityUsingIdH
+		public virtual IEntityRelation DmmayEntityUsingMamay
 		{
 			get
 			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "CtptmangD" , true);
-				relation.AddEntityFieldPair(CtptmangHFields.Id, CtptmangDFields.IdH);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangHEntity", true);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangDEntity", false);
+				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmmay", false);
+				relation.AddEntityFieldPair(DmmayFields.Mamay, KetquathanhphamFields.Mamay);
+				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", false);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KetquathanhphamEntity", true);
 				return relation;
 			}
 		}
-
-
 
 		/// <summary>stub, not used in this entity, only for TargetPerEntity entities.</summary>
 		public virtual IEntityRelation GetSubTypeRelation(string subTypeEntityName) { return null; }
