@@ -261,7 +261,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MASPCUAKHACH.Text = _Rowview.Row[DmhangFields.Maspcuakhach.Name].ToString();
                     //txt_MACHUNGLOAI.Text = _Rowview.Row[DmhangFields.Machungloai.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmhangFields.Trongluong.Name].ToString();
-                    txt_KICHTHUOC.Text = _Rowview.Row[DmhangFields.Doday.Name].ToString();
+                    txt_DODAY.Text = _Rowview.Row[DmhangFields.Doday.Name].ToString();
                     txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
                     txt_SOMAUMA.Text = _Rowview.Row[DmhangFields.Somauma.Name].ToString();
                     txt_SOHINHMA.Text = _Rowview.Row[DmhangFields.Sohinhma.Name].ToString();
@@ -378,7 +378,7 @@ namespace GD.BBPH.APP.DANHMUC
             //_dmhangEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
             //_dmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
             _dmhangEntity.Trongluong = LIB.ConvertString.NumbertoDB(txt_TRONGLUONG.Text.Trim());
-            _dmhangEntity.Doday = LIB.ConvertString.NumbertoDB(txt_KICHTHUOC.Text.Trim());
+            _dmhangEntity.Doday = LIB.ConvertString.NumbertoDB(txt_DODAY.Text.Trim());
             _dmhangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
             _dmhangEntity.Dai = LIB.ConvertString.NumbertoDB(txt_DAI.Text.Trim());
             _dmhangEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
@@ -746,7 +746,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_MAKHACH_Validating(new object(), new CancelEventArgs());
 
                 txt_TENKHACH.Text = drCopy[0][DmhangFields.Tenkhach.Name].ToString();
-                txt_KICHTHUOC.Text = drCopy[0][DmhangFields.Doday.Name].ToString();
+                txt_DODAY.Text = drCopy[0][DmhangFields.Doday.Name].ToString();
                 txt_KHOILUONGMUC.Text = drCopy[0][DmhangFields.Khoiluongmuc.Name].ToString();
                 txt_SOHINH.Text = drCopy[0][DmhangFields.Sohinh.Name].ToString();
                 txt_CAUTRUCIN.Text = drCopy[0][DmhangFields.Cautrucin.Name].ToString();
@@ -1054,12 +1054,12 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                if (txt_KICHTHUOC.Text.Length > 0)
+                if (txt_DODAY.Text.Length > 0)
                 {
-                    int vtriX = txt_KICHTHUOC.Text.ToUpper().IndexOf('X');
+                    int vtriX = txt_DODAY.Text.ToUpper().IndexOf('X');
                     if (vtriX <= 0) return;
-                    txt_RONG.Text = txt_KICHTHUOC.Text.Substring(0, vtriX);
-                    txt_DAI.Text = txt_KICHTHUOC.Text.Substring(vtriX+1);
+                    txt_RONG.Text = txt_DODAY.Text.Substring(0, vtriX);
+                    txt_DAI.Text = txt_DODAY.Text.Substring(vtriX+1);
                 }
             }
             catch { }

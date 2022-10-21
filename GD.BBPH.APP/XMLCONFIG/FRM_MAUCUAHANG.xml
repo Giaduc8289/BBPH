@@ -62,7 +62,7 @@
     <headerText>Mã màu</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>70</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -134,7 +134,7 @@
     <headerText>Mã màu</headerText>
     <BackColor>txt_MAARGB.BackColor = Color.FromArgb(Convert.ToInt32(_Rowview.Row[DmmauFields.MaArgb.Name].ToString()));</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>50</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>
