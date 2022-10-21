@@ -98,8 +98,8 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(471, 602), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(611, 602), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(972, 602), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(612, 602), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -111,7 +111,7 @@
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(471, 602);
+            this.uiPanel0.Size = new System.Drawing.Size(972, 602);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Danh sách";
             this.uiPanel0.Resize += new System.EventHandler(this.uiPanel0_Resize);
@@ -120,7 +120,7 @@
             // 
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(465, 578);
+            this.uiPanel0Container.Size = new System.Drawing.Size(966, 578);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // uiPanel1
@@ -128,9 +128,9 @@
             this.uiPanel1.CloseButtonVisible = Janus.Windows.UI.InheritableBoolean.False;
             this.uiPanel1.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
-            this.uiPanel1.Location = new System.Drawing.Point(474, 3);
+            this.uiPanel1.Location = new System.Drawing.Point(975, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(611, 602);
+            this.uiPanel1.Size = new System.Drawing.Size(612, 602);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
@@ -183,7 +183,7 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(609, 578);
+            this.uiPanel1Container.Size = new System.Drawing.Size(610, 578);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // btn_CHONQCTHANHPHAM
@@ -277,7 +277,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(315, 227);
+            this.label10.Location = new System.Drawing.Point(225, 228);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 13);
             this.label10.TabIndex = 147;
@@ -295,7 +295,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(340, 199);
+            this.label8.Location = new System.Drawing.Point(250, 200);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 13);
             this.label8.TabIndex = 145;
@@ -313,7 +313,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(325, 171);
+            this.label6.Location = new System.Drawing.Point(235, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 13);
             this.label6.TabIndex = 143;
@@ -421,7 +421,7 @@
             this.txt_CHIEUDAIDEN.FormNametoShow = "";
             this.txt_CHIEUDAIDEN.Is_DateTime = false;
             this.txt_CHIEUDAIDEN.IsShowForm = false;
-            this.txt_CHIEUDAIDEN.Location = new System.Drawing.Point(391, 223);
+            this.txt_CHIEUDAIDEN.Location = new System.Drawing.Point(301, 224);
             this.txt_CHIEUDAIDEN.Name = "txt_CHIEUDAIDEN";
             this.txt_CHIEUDAIDEN.Regular_Expression = null;
             this.txt_CHIEUDAIDEN.Size = new System.Drawing.Size(109, 20);
@@ -449,7 +449,7 @@
             this.txt_KHODEN.FormNametoShow = "";
             this.txt_KHODEN.Is_DateTime = false;
             this.txt_KHODEN.IsShowForm = false;
-            this.txt_KHODEN.Location = new System.Drawing.Point(391, 195);
+            this.txt_KHODEN.Location = new System.Drawing.Point(301, 196);
             this.txt_KHODEN.Name = "txt_KHODEN";
             this.txt_KHODEN.Regular_Expression = null;
             this.txt_KHODEN.Size = new System.Drawing.Size(109, 20);
@@ -477,7 +477,7 @@
             this.txt_DODAYDEN.FormNametoShow = "";
             this.txt_DODAYDEN.Is_DateTime = false;
             this.txt_DODAYDEN.IsShowForm = false;
-            this.txt_DODAYDEN.Location = new System.Drawing.Point(391, 167);
+            this.txt_DODAYDEN.Location = new System.Drawing.Point(301, 168);
             this.txt_DODAYDEN.Name = "txt_DODAYDEN";
             this.txt_DODAYDEN.Regular_Expression = null;
             this.txt_DODAYDEN.Size = new System.Drawing.Size(109, 20);
@@ -524,7 +524,7 @@
             this.txt_TENCONGDOAN.Name = "txt_TENCONGDOAN";
             this.txt_TENCONGDOAN.ReadOnly = true;
             this.txt_TENCONGDOAN.Regular_Expression = null;
-            this.txt_TENCONGDOAN.Size = new System.Drawing.Size(293, 20);
+            this.txt_TENCONGDOAN.Size = new System.Drawing.Size(203, 20);
             this.txt_TENCONGDOAN.TabIndex = 128;
             this.txt_TENCONGDOAN.TabStop = false;
             // 
@@ -555,7 +555,7 @@
             this.txt_TENMAY.Name = "txt_TENMAY";
             this.txt_TENMAY.ReadOnly = true;
             this.txt_TENMAY.Regular_Expression = null;
-            this.txt_TENMAY.Size = new System.Drawing.Size(293, 20);
+            this.txt_TENMAY.Size = new System.Drawing.Size(203, 20);
             this.txt_TENMAY.TabIndex = 126;
             this.txt_TENMAY.TabStop = false;
             // 
@@ -586,7 +586,7 @@
             this.txt_TENDONGMAY.Name = "txt_TENDONGMAY";
             this.txt_TENDONGMAY.ReadOnly = true;
             this.txt_TENDONGMAY.Regular_Expression = null;
-            this.txt_TENDONGMAY.Size = new System.Drawing.Size(293, 20);
+            this.txt_TENDONGMAY.Size = new System.Drawing.Size(203, 20);
             this.txt_TENDONGMAY.TabIndex = 124;
             this.txt_TENDONGMAY.TabStop = false;
             // 
@@ -741,7 +741,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 608);
+            this.ClientSize = new System.Drawing.Size(1590, 608);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Margin = new System.Windows.Forms.Padding(4);

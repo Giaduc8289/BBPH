@@ -113,6 +113,7 @@ namespace GD.BBPH.APP.DANHMUC
             BS_CONGSUATMAY.CurrentChanged += new EventHandler(BS_CONGSUATMAY_CurrentChanged);
             BS_CONGSUATMAY_CurrentChanged((new object()), (new EventArgs()));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = false;
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             btn_THEMMOI.Focus();
         }
@@ -164,6 +165,7 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_CONGSUATMAY.Enabled = false;
+            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = true;
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {
@@ -175,6 +177,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_TENCONGSUAT.Focus();
             }
             GRID_CONGSUATMAY.Enabled = false;
+            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = true;
         }
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
@@ -186,6 +189,7 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
             GRID_CONGSUATMAY.Enabled = true;
+            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = false;
         }
         private void btn_XOA_Click(object sender, EventArgs e)
         {
@@ -204,6 +208,7 @@ namespace GD.BBPH.APP.DANHMUC
                     BS_CONGSUATMAY_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
                     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CongsuatmayManager.Convert(_CongsuatmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                    btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = false;
                 }
                 catch
                 {
@@ -239,6 +244,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
                 GRID_CONGSUATMAY.Enabled = true;
                 btn_THEMMOI.Focus();
+                btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = false;
             }
         }
         private void btn_Thoat_Click(object sender, EventArgs e)
@@ -274,6 +280,7 @@ namespace GD.BBPH.APP.DANHMUC
                 _CongsuatmayEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _CongsuatmayManager.InsertV2(_CongsuatmayEntity, r_Insert, DT_CONGSUATMAY, BS_CONGSUATMAY);
                  GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CongsuatmayManager.Convert(_CongsuatmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = false;
                 BS_CONGSUATMAY.ResetCurrentItem();
             }
             else
@@ -298,6 +305,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maqcthanhpham.Name].Value = _congsuatmayEntity.Maqcthanhpham;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Tocdo.Name].Value = _congsuatmayEntity.Tocdo;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CongsuatmayManager.Convert(_CongsuatmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = false;
             }
             return _str_DMCHUONG_PK;
         }
