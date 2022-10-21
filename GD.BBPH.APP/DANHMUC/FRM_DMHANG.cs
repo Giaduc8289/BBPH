@@ -244,7 +244,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MASPCUAKHACH.Text = _Rowview.Row[DmhangFields.Maspcuakhach.Name].ToString();
                     //txt_MACHUNGLOAI.Text = _Rowview.Row[DmhangFields.Machungloai.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmhangFields.Trongluong.Name].ToString();
-                    txt_KICHTHUOC.Text = _Rowview.Row[DmhangFields.Kichthuoc.Name].ToString();
+                    txt_KICHTHUOC.Text = _Rowview.Row[DmhangFields.Doday.Name].ToString();
                     txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
                     txt_SOMAUMA.Text = _Rowview.Row[DmhangFields.Somauma.Name].ToString();
                     txt_SOHINHMA.Text = _Rowview.Row[DmhangFields.Sohinhma.Name].ToString();
@@ -361,7 +361,7 @@ namespace GD.BBPH.APP.DANHMUC
             //_dmhangEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
             //_dmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
             _dmhangEntity.Trongluong = LIB.ConvertString.NumbertoDB(txt_TRONGLUONG.Text.Trim());
-            _dmhangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
+            _dmhangEntity.Doday = Convert.ToDecimal(txt_KICHTHUOC.Text.Trim());
             _dmhangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
             _dmhangEntity.Dai = LIB.ConvertString.NumbertoDB(txt_DAI.Text.Trim());
             _dmhangEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
@@ -512,7 +512,7 @@ namespace GD.BBPH.APP.DANHMUC
                 //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenchungloai.Name].Value = _dmhangEntity.Tenchungloai;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Makhach.Name].Value = _dmhangEntity.Makhach;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenkhach.Name].Value = _dmhangEntity.Tenkhach;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Kichthuoc.Name].Value = _dmhangEntity.Kichthuoc;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Doday.Name].Value = _dmhangEntity.Doday;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Trongluong.Name].Value = _dmhangEntity.Trongluong;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Sohinh.Name].Value = _dmhangEntity.Sohinh;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somau.Name].Value = _dmhangEntity.Somau;
@@ -724,7 +724,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_MAKHACH_Validating(new object(), new CancelEventArgs());
 
                 txt_TENKHACH.Text = drCopy[0][DmhangFields.Tenkhach.Name].ToString();
-                txt_KICHTHUOC.Text = drCopy[0][DmhangFields.Kichthuoc.Name].ToString();
+                txt_KICHTHUOC.Text = drCopy[0][DmhangFields.Doday.Name].ToString();
                 txt_KHOILUONGMUC.Text = drCopy[0][DmhangFields.Khoiluongmuc.Name].ToString();
                 txt_SOHINH.Text = drCopy[0][DmhangFields.Sohinh.Name].ToString();
                 txt_CAUTRUCIN.Text = drCopy[0][DmhangFields.Cautrucin.Name].ToString();
