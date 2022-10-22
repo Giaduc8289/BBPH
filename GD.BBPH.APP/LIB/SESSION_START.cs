@@ -252,6 +252,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region DINHMUCTHOIGIAN
+        private static DataTable _DT_DINHMUCTHOIGIAN = null;
+        public static DataTable DT_DINHMUCTHOIGIAN
+        {
+            get
+            {
+                _DT_DINHMUCTHOIGIAN = new DinhmucthoigianManager().SelectAllRDT();
+                return _DT_DINHMUCTHOIGIAN;
+            }
+            set { _DT_DINHMUCTHOIGIAN = value; }
+        }
+        #endregion
+
         #region DMCONGDOAN
         private static DataTable _DT_DMCONGDOAN = null;
         public static DataTable DT_DMCONGDOAN

@@ -738,6 +738,14 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_LYDONHAPXUAT()), mmru.Text);
                     break;
 
+                case "FRM_DINHMUCTHOIGIAN":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DINHMUCTHOIGIAN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DINHMUCTHOIGIAN()), mmru.Text);
+                    break;
+
                 #region Danh mục công đoạn
                 case "FRM_DMCONGDOAN":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
