@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 5:19:23 PM
+// Code is generated on: Saturday, October 22, 2022 8:27:17 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -445,7 +445,43 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Madm", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
+			_fieldsCustomProperties.Add("Macongdoan", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dodaytu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dodayden", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Khotu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Khoden", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Chieudaitu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Chieudaiden", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Somauma", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sohinhma", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maloaimang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maqcthanhpham", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
 			_fieldsCustomProperties.Add("Dauca", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Daucuon", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Doilenh", fieldHashtable);
@@ -573,13 +609,134 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Madm property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Madm"<br/>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Madongmay"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Madm
 		{
 			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Madm, true); }
 			set	{ SetValue((int)DinhmucthoigianFieldIndex.Madm, value); }
+		}
+
+		/// <summary> The Macongdoan property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Macongdoan"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Macongdoan
+		{
+			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Macongdoan, true); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Macongdoan, value); }
+		}
+
+		/// <summary> The Dodaytu property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Dodaytu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dodaytu
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Dodaytu, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Dodaytu, value); }
+		}
+
+		/// <summary> The Dodayden property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Dodayden"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dodayden
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Dodayden, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Dodayden, value); }
+		}
+
+		/// <summary> The Khotu property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Khotu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Khotu
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Khotu, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Khotu, value); }
+		}
+
+		/// <summary> The Khoden property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Khoden"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Khoden
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Khoden, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Khoden, value); }
+		}
+
+		/// <summary> The Chieudaitu property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Chieudaitu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Chieudaitu
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Chieudaitu, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Chieudaitu, value); }
+		}
+
+		/// <summary> The Chieudaiden property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Chieudaiden"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Chieudaiden
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Chieudaiden, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Chieudaiden, value); }
+		}
+
+		/// <summary> The Somauma property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Somauma"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Somauma
+		{
+			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Somauma, true); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Somauma, value); }
+		}
+
+		/// <summary> The Sohinhma property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Sohinhma"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Sohinhma
+		{
+			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Sohinhma, true); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Sohinhma, value); }
+		}
+
+		/// <summary> The Maloaimang property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Maloaimang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maloaimang
+		{
+			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Maloaimang, true); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Maloaimang, value); }
+		}
+
+		/// <summary> The Maqcthanhpham property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Maqcthanhpham"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maqcthanhpham
+		{
+			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Maqcthanhpham, true); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Maqcthanhpham, value); }
 		}
 
 		/// <summary> The Dauca property of the Entity Dinhmucthoigian<br/><br/>
@@ -591,6 +748,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Dauca, false); }
 			set	{ SetValue((int)DinhmucthoigianFieldIndex.Dauca, value); }
+		}
+
+		/// <summary> The Daucuon property of the Entity Dinhmucthoigian<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Daucuon"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Daucuon
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DinhmucthoigianFieldIndex.Daucuon, false); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Daucuon, value); }
 		}
 
 		/// <summary> The Doilenh property of the Entity Dinhmucthoigian<br/><br/>

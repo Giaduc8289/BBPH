@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 5:19:22 PM
+// Code is generated on: Saturday, October 22, 2022 8:27:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -209,8 +209,32 @@ namespace GD.BBPH.DAL
 		Mamay,
 		///<summary>Madm. </summary>
 		Madm,
+		///<summary>Macongdoan. </summary>
+		Macongdoan,
+		///<summary>Dodaytu. </summary>
+		Dodaytu,
+		///<summary>Dodayden. </summary>
+		Dodayden,
+		///<summary>Khotu. </summary>
+		Khotu,
+		///<summary>Khoden. </summary>
+		Khoden,
+		///<summary>Chieudaitu. </summary>
+		Chieudaitu,
+		///<summary>Chieudaiden. </summary>
+		Chieudaiden,
+		///<summary>Somauma. </summary>
+		Somauma,
+		///<summary>Sohinhma. </summary>
+		Sohinhma,
+		///<summary>Maloaimang. </summary>
+		Maloaimang,
+		///<summary>Maqcthanhpham. </summary>
+		Maqcthanhpham,
 		///<summary>Dauca. </summary>
 		Dauca,
+		///<summary>Daucuon. </summary>
+		Daucuon,
 		///<summary>Doilenh. </summary>
 		Doilenh,
 		///<summary>Lencuon. </summary>

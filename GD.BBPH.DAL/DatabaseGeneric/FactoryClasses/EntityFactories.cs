@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 5:19:23 PM
+// Code is generated on: Saturday, October 22, 2022 8:27:17 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1350,7 +1350,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquathanhpham
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1362,7 +1361,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKetquathanhphamUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		

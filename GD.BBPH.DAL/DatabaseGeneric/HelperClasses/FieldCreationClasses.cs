@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 5:19:23 PM
+// Code is generated on: Saturday, October 22, 2022 8:27:17 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -397,10 +397,70 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Madm);}
 		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Macongdoan field instance</summary>
+		public static EntityField2 Macongdoan
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Macongdoan);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Dodaytu field instance</summary>
+		public static EntityField2 Dodaytu
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Dodaytu);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Dodayden field instance</summary>
+		public static EntityField2 Dodayden
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Dodayden);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Khotu field instance</summary>
+		public static EntityField2 Khotu
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Khotu);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Khoden field instance</summary>
+		public static EntityField2 Khoden
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Khoden);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Chieudaitu field instance</summary>
+		public static EntityField2 Chieudaitu
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Chieudaitu);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Chieudaiden field instance</summary>
+		public static EntityField2 Chieudaiden
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Chieudaiden);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Somauma field instance</summary>
+		public static EntityField2 Somauma
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Somauma);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Sohinhma field instance</summary>
+		public static EntityField2 Sohinhma
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Sohinhma);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Maloaimang field instance</summary>
+		public static EntityField2 Maloaimang
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Maloaimang);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Maqcthanhpham field instance</summary>
+		public static EntityField2 Maqcthanhpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Maqcthanhpham);}
+		}
 		/// <summary>Creates a new DinhmucthoigianEntity.Dauca field instance</summary>
 		public static EntityField2 Dauca
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Dauca);}
+		}
+		/// <summary>Creates a new DinhmucthoigianEntity.Daucuon field instance</summary>
+		public static EntityField2 Daucuon
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DinhmucthoigianFieldIndex.Daucuon);}
 		}
 		/// <summary>Creates a new DinhmucthoigianEntity.Doilenh field instance</summary>
 		public static EntityField2 Doilenh

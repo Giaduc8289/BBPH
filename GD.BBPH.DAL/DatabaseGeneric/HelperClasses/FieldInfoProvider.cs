@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, October 21, 2022 5:19:22 PM
+// Code is generated on: Saturday, October 22, 2022 8:27:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -211,7 +211,19 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DinhmucthoigianEntity", "Tendinhmuc", typeof(System.String), false, false, false, false,  (int)DinhmucthoigianFieldIndex.Tendinhmuc, 250, 0, 0);
 			base.AddElementFieldInfo("DinhmucthoigianEntity", "Mamay", typeof(System.String), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Mamay, 50, 0, 0);
 			base.AddElementFieldInfo("DinhmucthoigianEntity", "Madm", typeof(System.String), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Madm, 50, 0, 0);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Macongdoan", typeof(System.String), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Macongdoan, 50, 0, 0);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Dodaytu", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Dodaytu, 0, 3, 20);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Dodayden", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Dodayden, 0, 3, 20);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Khotu", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Khotu, 0, 3, 20);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Khoden", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Khoden, 0, 3, 20);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Chieudaitu", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Chieudaitu, 0, 3, 20);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Chieudaiden", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Chieudaiden, 0, 3, 20);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Somauma", typeof(System.String), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Somauma, 2147483647, 0, 0);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Sohinhma", typeof(System.String), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Sohinhma, 2147483647, 0, 0);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Maloaimang", typeof(System.String), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Maloaimang, 2147483647, 0, 0);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Maqcthanhpham", typeof(System.String), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Maqcthanhpham, 2147483647, 0, 0);
 			base.AddElementFieldInfo("DinhmucthoigianEntity", "Dauca", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Dauca, 0, 3, 20);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Daucuon", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Daucuon, 0, 3, 20);
 			base.AddElementFieldInfo("DinhmucthoigianEntity", "Doilenh", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Doilenh, 0, 3, 20);
 			base.AddElementFieldInfo("DinhmucthoigianEntity", "Lencuon", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Lencuon, 0, 3, 20);
 			base.AddElementFieldInfo("DinhmucthoigianEntity", "Xuongcuon", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Xuongcuon, 0, 3, 20);
