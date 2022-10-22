@@ -32,7 +32,7 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Mamay="Mamay";				
 		
-		public const String Field_Madm="Madm";				
+		public const String Field_Madongmay="Madongmay";				
 		
 		public const String Field_Macongdoan="Macongdoan";				
 		
@@ -99,7 +99,7 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Mamay,typeof(System.String));
 			
-			dt.Columns.Add(Field_Madm,typeof(System.String));
+			dt.Columns.Add(Field_Madongmay,typeof(System.String));
 			
 			dt.Columns.Add(Field_Macongdoan,typeof(System.String));
 			
@@ -175,7 +175,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_Madm]=_DinhmucthoigianEntity.Madm;
+				r[Field_Madongmay]=_DinhmucthoigianEntity.Madongmay;
 			}
 			catch { }
 			
@@ -337,7 +337,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_DinhmucthoigianEntity.Madm= r[Field_Madm].ToString();						
+				_DinhmucthoigianEntity.Madongmay= r[Field_Madongmay].ToString();						
 			}
 			catch { }
 			
@@ -487,7 +487,7 @@ namespace GD.BBPH.BLL
 			
 			_DinhmucthoigianEntity.Mamay= _DinhmucthoigianEntity_XML.Mamay;
 			
-			_DinhmucthoigianEntity.Madm= _DinhmucthoigianEntity_XML.Madm;
+			_DinhmucthoigianEntity.Madongmay= _DinhmucthoigianEntity_XML.Madongmay;
 			
 			_DinhmucthoigianEntity.Macongdoan= _DinhmucthoigianEntity_XML.Macongdoan;
 			
@@ -567,7 +567,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Madm,_DinhmucthoigianEntity.Madm);
+				r.SetField(Field_Madongmay,_DinhmucthoigianEntity.Madongmay);
 			}
 			catch { }
 			
@@ -732,7 +732,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Madm,_DinhmucthoigianEntity.Madm);
+				r.SetField(Field_Madongmay,_DinhmucthoigianEntity.Madongmay);
 			}
 			catch { }
 			
@@ -889,7 +889,7 @@ namespace GD.BBPH.BLL
 			return DinhmucthoigianEntity;
 		}
 
-		public DinhmucthoigianEntity Insert(System.String  Madmtg, System.String  Tendinhmuc, System.String  Mamay, System.String  Madm, System.String  Macongdoan, System.Decimal  Dodaytu, System.Decimal  Dodayden, System.Decimal  Khotu, System.Decimal  Khoden, System.Decimal  Chieudaitu, System.Decimal  Chieudaiden, System.String  Somauma, System.String  Sohinhma, System.String  Maloaimang, System.String  Maqcthanhpham, System.Decimal  Dauca, System.Decimal  Daucuon, System.Decimal  Doilenh, System.Decimal  Lencuon, System.Decimal  Xuongcuon, System.Decimal  Thaythietbi, System.Decimal  Dungmay, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public DinhmucthoigianEntity Insert(System.String  Madmtg, System.String  Tendinhmuc, System.String  Mamay, System.String  Madongmay, System.String  Macongdoan, System.Decimal  Dodaytu, System.Decimal  Dodayden, System.Decimal  Khotu, System.Decimal  Khoden, System.Decimal  Chieudaitu, System.Decimal  Chieudaiden, System.String  Somauma, System.String  Sohinhma, System.String  Maloaimang, System.String  Maqcthanhpham, System.Decimal  Dauca, System.Decimal  Daucuon, System.Decimal  Doilenh, System.Decimal  Lencuon, System.Decimal  Xuongcuon, System.Decimal  Thaythietbi, System.Decimal  Dungmay, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
 		{
 			DinhmucthoigianEntity _DinhmucthoigianEntity = new DinhmucthoigianEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -901,7 +901,7 @@ namespace GD.BBPH.BLL
 				
 				_DinhmucthoigianEntity.Mamay = Mamay;
 				
-				_DinhmucthoigianEntity.Madm = Madm;
+				_DinhmucthoigianEntity.Madongmay = Madongmay;
 				
 				_DinhmucthoigianEntity.Macongdoan = Macongdoan;
 				
@@ -953,7 +953,7 @@ namespace GD.BBPH.BLL
 			return _DinhmucthoigianEntity;
 		}
 
-		public DinhmucthoigianEntity Insert(System.String Tendinhmuc, System.String Mamay, System.String Madm, System.String Macongdoan, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.String Somauma, System.String Sohinhma, System.String Maloaimang, System.String Maqcthanhpham, System.Decimal Dauca, System.Decimal Daucuon, System.Decimal Doilenh, System.Decimal Lencuon, System.Decimal Xuongcuon, System.Decimal Thaythietbi, System.Decimal Dungmay, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public DinhmucthoigianEntity Insert(System.String Tendinhmuc, System.String Mamay, System.String Madongmay, System.String Macongdoan, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.String Somauma, System.String Sohinhma, System.String Maloaimang, System.String Maqcthanhpham, System.Decimal Dauca, System.Decimal Daucuon, System.Decimal Doilenh, System.Decimal Lencuon, System.Decimal Xuongcuon, System.Decimal Thaythietbi, System.Decimal Dungmay, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			DinhmucthoigianEntity _DinhmucthoigianEntity = new DinhmucthoigianEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -964,7 +964,7 @@ namespace GD.BBPH.BLL
 				
 				_DinhmucthoigianEntity.Mamay = Mamay;
 				
-				_DinhmucthoigianEntity.Madm = Madm;
+				_DinhmucthoigianEntity.Madongmay = Madongmay;
 				
 				_DinhmucthoigianEntity.Macongdoan = Macongdoan;
 				
@@ -1046,7 +1046,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Madmtg, System.String Tendinhmuc, System.String Mamay, System.String Madm, System.String Macongdoan, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.String Somauma, System.String Sohinhma, System.String Maloaimang, System.String Maqcthanhpham, System.Decimal Dauca, System.Decimal Daucuon, System.Decimal Doilenh, System.Decimal Lencuon, System.Decimal Xuongcuon, System.Decimal Thaythietbi, System.Decimal Dungmay, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.String Madmtg, System.String Tendinhmuc, System.String Mamay, System.String Madongmay, System.String Macongdoan, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.String Somauma, System.String Sohinhma, System.String Maloaimang, System.String Maqcthanhpham, System.Decimal Dauca, System.Decimal Daucuon, System.Decimal Doilenh, System.Decimal Lencuon, System.Decimal Xuongcuon, System.Decimal Thaythietbi, System.Decimal Dungmay, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1061,7 +1061,7 @@ namespace GD.BBPH.BLL
 					
 					_DinhmucthoigianEntity.Mamay = Mamay;
 					
-					_DinhmucthoigianEntity.Madm = Madm;
+					_DinhmucthoigianEntity.Madongmay = Madongmay;
 					
 					_DinhmucthoigianEntity.Macongdoan = Macongdoan;
 					
@@ -1188,13 +1188,13 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByMadm(System.String Madm)
+		public int DeleteByMadongmay(System.String Madongmay)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DinhmucthoigianFields.Madm == Madm);
+			_PredicateExpression.Add(DinhmucthoigianFields.Madongmay == Madongmay);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1699,13 +1699,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByMadm(System.String Madm)
+		public EntityCollection SelectByMadongmay(System.String Madongmay)
 		{
 			EntityCollection _DinhmucthoigianCollection = new EntityCollection(new DinhmucthoigianEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DinhmucthoigianFields.Madm == Madm);
+			_PredicateExpression.Add(DinhmucthoigianFields.Madongmay == Madongmay);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1715,14 +1715,14 @@ namespace GD.BBPH.BLL
 			return _DinhmucthoigianCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByMadmRDT(System.String Madm)
+		public DataTable SelectByMadongmayRDT(System.String Madongmay)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _DinhmucthoigianCollection = new EntityCollection(new DinhmucthoigianEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DinhmucthoigianFields.Madm == Madm);
+			_PredicateExpression.Add(DinhmucthoigianFields.Madongmay == Madongmay);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 22, 2022 8:27:17 AM
+// Code is generated on: Saturday, October 22, 2022 11:02:37 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -442,7 +442,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Mamay", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Madm", fieldHashtable);
+			_fieldsCustomProperties.Add("Madongmay", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Macongdoan", fieldHashtable);
@@ -607,15 +607,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DinhmucthoigianFieldIndex.Mamay, value); }
 		}
 
-		/// <summary> The Madm property of the Entity Dinhmucthoigian<br/><br/>
+		/// <summary> The Madongmay property of the Entity Dinhmucthoigian<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dinhmucthoigian"."Madongmay"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Madm
+		public virtual System.String Madongmay
 		{
-			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Madm, true); }
-			set	{ SetValue((int)DinhmucthoigianFieldIndex.Madm, value); }
+			get { return (System.String)GetValue((int)DinhmucthoigianFieldIndex.Madongmay, true); }
+			set	{ SetValue((int)DinhmucthoigianFieldIndex.Madongmay, value); }
 		}
 
 		/// <summary> The Macongdoan property of the Entity Dinhmucthoigian<br/><br/>

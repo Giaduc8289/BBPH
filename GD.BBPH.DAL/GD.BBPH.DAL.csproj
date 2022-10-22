@@ -125,6 +125,7 @@
     <Compile Include="DatabaseGeneric\EntityClasses\CtptmangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CtptmangHEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DinhmucthoigianEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DinhmucvattuEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmbophanEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmcapmaEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmchucvuEntity.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="DatabaseGeneric\EntityClasses\DmmauEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmmayEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmnguyenlieuEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DmnhomdinhmucEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmnhomnguyenlieuEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmnhomquycachEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmquycachEntity.cs" />
@@ -231,6 +233,7 @@
     <Compile Include="DatabaseGeneric\RelationClasses\CtptmangDRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CtptmangHRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DinhmucthoigianRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DinhmucvattuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmbophanRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmcapmaRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmchucvuRelations.cs" />
@@ -246,6 +249,7 @@
     <Compile Include="DatabaseGeneric\RelationClasses\DmmauRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmmayRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmnguyenlieuRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DmnhomdinhmucRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmnhomnguyenlieuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmnhomquycachRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmquycachRelations.cs" />

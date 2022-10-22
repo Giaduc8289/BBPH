@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 22, 2022 8:27:17 AM
+// Code is generated on: Saturday, October 22, 2022 11:02:37 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -50,6 +50,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 				case GD.BBPH.DAL.EntityType.DinhmucthoigianEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DinhmucthoigianEntity");
 					break;
+				case GD.BBPH.DAL.EntityType.DinhmucvattuEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DinhmucvattuEntity");
+					break;
 				case GD.BBPH.DAL.EntityType.DmbophanEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmbophanEntity");
 					break;
@@ -94,6 +97,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.DmnguyenlieuEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmnguyenlieuEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.DmnhomdinhmucEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmnhomdinhmucEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.DmnhomnguyenlieuEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "DmnhomnguyenlieuEntity");

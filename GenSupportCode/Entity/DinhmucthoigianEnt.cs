@@ -42,7 +42,7 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_MADMTG.Text = _Rowview.Row[DinhmucthoigianFields.Madmtg.Name].ToString();
 					txt_TENDINHMUC.Text = _Rowview.Row[DinhmucthoigianFields.Tendinhmuc.Name].ToString();
 					txt_MAMAY.Text = _Rowview.Row[DinhmucthoigianFields.Mamay.Name].ToString();
-					txt_MADM.Text = _Rowview.Row[DinhmucthoigianFields.Madm.Name].ToString();
+					txt_MADONGMAY.Text = _Rowview.Row[DinhmucthoigianFields.Madongmay.Name].ToString();
 					txt_MACONGDOAN.Text = _Rowview.Row[DinhmucthoigianFields.Macongdoan.Name].ToString();
 					txt_DODAYTU.Text = _Rowview.Row[DinhmucthoigianFields.Dodaytu.Name].ToString();
 					txt_DODAYDEN.Text = _Rowview.Row[DinhmucthoigianFields.Dodayden.Name].ToString();
@@ -77,7 +77,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_dinhmucthoigianEntity.Madmtg = txt_MADMTG.Text.Trim();
 			_dinhmucthoigianEntity.Tendinhmuc = txt_TENDINHMUC.Text.Trim();
 			_dinhmucthoigianEntity.Mamay = txt_MAMAY.Text.Trim();
-			_dinhmucthoigianEntity.Madm = txt_MADM.Text.Trim();
+			_dinhmucthoigianEntity.Madongmay = txt_MADONGMAY.Text.Trim();
 			_dinhmucthoigianEntity.Macongdoan = txt_MACONGDOAN.Text.Trim();
 			_dinhmucthoigianEntity.Dodaytu = txt_DODAYTU.Text.Trim();
 			_dinhmucthoigianEntity.Dodayden = txt_DODAYDEN.Text.Trim();
@@ -114,7 +114,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Madmtg.Name].Value = _dinhmucthoigianEntity.Madmtg;
 				GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Tendinhmuc.Name].Value = _dinhmucthoigianEntity.Tendinhmuc;
 				GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Mamay.Name].Value = _dinhmucthoigianEntity.Mamay;
-				GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Madm.Name].Value = _dinhmucthoigianEntity.Madm;
+				GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Madongmay.Name].Value = _dinhmucthoigianEntity.Madongmay;
 				GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Macongdoan.Name].Value = _dinhmucthoigianEntity.Macongdoan;
 				GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Dodaytu.Name].Value = _dinhmucthoigianEntity.Dodaytu;
 				GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Dodayden.Name].Value = _dinhmucthoigianEntity.Dodayden;

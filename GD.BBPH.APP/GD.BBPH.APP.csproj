@@ -425,6 +425,8 @@
     <Compile Include="Manager\CongsuatmayManager.cs" />
     <Compile Include="Manager\CtptmangDManager.cs" />
     <Compile Include="Manager\CtptmangHManager.cs" />
+    <Compile Include="Manager\DinhmucthoigianManager.cs" />
+    <Compile Include="Manager\DinhmucvattuManager.cs" />
     <Compile Include="Manager\DmcapmaManager.cs" />
     <Compile Include="Manager\DmchucvuManager.cs" />
     <Compile Include="Manager\DmchungloaiManager.cs" />
@@ -438,6 +440,7 @@
     <Compile Include="Manager\DmmauManager.cs" />
     <Compile Include="Manager\DmmayManager.cs" />
     <Compile Include="Manager\DmnguyenlieuManager.cs" />
+    <Compile Include="Manager\DmnhomdinhmucManager.cs" />
     <Compile Include="Manager\DmnhomnguyenlieuManager.cs" />
     <Compile Include="Manager\DmnhomquycachManager.cs" />
     <Compile Include="Manager\DmquycachManager.cs" />
