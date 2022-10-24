@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 24, 2022 11:18:28 AM
+// Code is generated on: Monday, October 24, 2022 2:13:36 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -124,12 +124,18 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			base.AddElementFieldInfo("BaogiaDEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)BaogiaDFieldIndex.Id, 0, 0, 19);
 			base.AddElementFieldInfo("BaogiaDEntity", "Sobaogia", typeof(System.String), false, true, false, false,  (int)BaogiaDFieldIndex.Sobaogia, 50, 0, 0);
-			base.AddElementFieldInfo("BaogiaDEntity", "Machungloai", typeof(Nullable<System.Int64>), false, false, false, true,  (int)BaogiaDFieldIndex.Machungloai, 0, 0, 19);
-			base.AddElementFieldInfo("BaogiaDEntity", "Tenchungloai", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Tenchungloai, 250, 0, 0);
 			base.AddElementFieldInfo("BaogiaDEntity", "Masp", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Masp, 50, 0, 0);
-			base.AddElementFieldInfo("BaogiaDEntity", "Tenhang", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Tenhang, 250, 0, 0);
-			base.AddElementFieldInfo("BaogiaDEntity", "Kichthuoc", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Kichthuoc, 250, 0, 0);
+			base.AddElementFieldInfo("BaogiaDEntity", "Tensp", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Tensp, 250, 0, 0);
+			base.AddElementFieldInfo("BaogiaDEntity", "Maspcuakhach", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Maspcuakhach, 250, 0, 0);
+			base.AddElementFieldInfo("BaogiaDEntity", "Doday", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)BaogiaDFieldIndex.Doday, 0, 3, 20);
+			base.AddElementFieldInfo("BaogiaDEntity", "Rong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)BaogiaDFieldIndex.Rong, 0, 3, 20);
+			base.AddElementFieldInfo("BaogiaDEntity", "Dai", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)BaogiaDFieldIndex.Dai, 0, 3, 20);
 			base.AddElementFieldInfo("BaogiaDEntity", "Trongluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)BaogiaDFieldIndex.Trongluong, 0, 3, 20);
+			base.AddElementFieldInfo("BaogiaDEntity", "Loaimuc", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Loaimuc, 250, 0, 0);
+			base.AddElementFieldInfo("BaogiaDEntity", "Cautrucin", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Cautrucin, 250, 0, 0);
+			base.AddElementFieldInfo("BaogiaDEntity", "Tenqcdonggoi", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Tenqcdonggoi, 250, 0, 0);
+			base.AddElementFieldInfo("BaogiaDEntity", "Tenqcloaithung", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Tenqcloaithung, 250, 0, 0);
+			base.AddElementFieldInfo("BaogiaDEntity", "Tenqcthanhpham", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Tenqcthanhpham, 250, 0, 0);
 			base.AddElementFieldInfo("BaogiaDEntity", "Mota", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Mota, 250, 0, 0);
 			base.AddElementFieldInfo("BaogiaDEntity", "DongiakhongVat", typeof(Nullable<System.Int32>), false, false, false, true,  (int)BaogiaDFieldIndex.DongiakhongVat, 0, 0, 10);
 			base.AddElementFieldInfo("BaogiaDEntity", "DongiaVat", typeof(Nullable<System.Int32>), false, false, false, true,  (int)BaogiaDFieldIndex.DongiaVat, 0, 0, 10);

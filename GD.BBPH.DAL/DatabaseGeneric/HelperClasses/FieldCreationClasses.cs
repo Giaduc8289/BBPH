@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 24, 2022 11:18:29 AM
+// Code is generated on: Monday, October 24, 2022 2:13:37 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -27,35 +27,65 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Sobaogia);}
 		}
-		/// <summary>Creates a new BaogiaDEntity.Machungloai field instance</summary>
-		public static EntityField2 Machungloai
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Machungloai);}
-		}
-		/// <summary>Creates a new BaogiaDEntity.Tenchungloai field instance</summary>
-		public static EntityField2 Tenchungloai
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Tenchungloai);}
-		}
 		/// <summary>Creates a new BaogiaDEntity.Masp field instance</summary>
 		public static EntityField2 Masp
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Masp);}
 		}
-		/// <summary>Creates a new BaogiaDEntity.Tenhang field instance</summary>
-		public static EntityField2 Tenhang
+		/// <summary>Creates a new BaogiaDEntity.Tensp field instance</summary>
+		public static EntityField2 Tensp
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Tenhang);}
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Tensp);}
 		}
-		/// <summary>Creates a new BaogiaDEntity.Kichthuoc field instance</summary>
-		public static EntityField2 Kichthuoc
+		/// <summary>Creates a new BaogiaDEntity.Maspcuakhach field instance</summary>
+		public static EntityField2 Maspcuakhach
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Kichthuoc);}
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Maspcuakhach);}
+		}
+		/// <summary>Creates a new BaogiaDEntity.Doday field instance</summary>
+		public static EntityField2 Doday
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Doday);}
+		}
+		/// <summary>Creates a new BaogiaDEntity.Rong field instance</summary>
+		public static EntityField2 Rong
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Rong);}
+		}
+		/// <summary>Creates a new BaogiaDEntity.Dai field instance</summary>
+		public static EntityField2 Dai
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Dai);}
 		}
 		/// <summary>Creates a new BaogiaDEntity.Trongluong field instance</summary>
 		public static EntityField2 Trongluong
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Trongluong);}
+		}
+		/// <summary>Creates a new BaogiaDEntity.Loaimuc field instance</summary>
+		public static EntityField2 Loaimuc
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Loaimuc);}
+		}
+		/// <summary>Creates a new BaogiaDEntity.Cautrucin field instance</summary>
+		public static EntityField2 Cautrucin
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Cautrucin);}
+		}
+		/// <summary>Creates a new BaogiaDEntity.Tenqcdonggoi field instance</summary>
+		public static EntityField2 Tenqcdonggoi
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Tenqcdonggoi);}
+		}
+		/// <summary>Creates a new BaogiaDEntity.Tenqcloaithung field instance</summary>
+		public static EntityField2 Tenqcloaithung
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Tenqcloaithung);}
+		}
+		/// <summary>Creates a new BaogiaDEntity.Tenqcthanhpham field instance</summary>
+		public static EntityField2 Tenqcthanhpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Tenqcthanhpham);}
 		}
 		/// <summary>Creates a new BaogiaDEntity.Mota field instance</summary>
 		public static EntityField2 Mota

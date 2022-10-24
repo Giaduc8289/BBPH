@@ -13,11 +13,11 @@ Create Procedure dbo.Danhsachbaogiachitiet
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
 	
-	Select dbo.Baogia_d.*, dmhang.Makhach Makhach
-	From dbo.Baogia_d LEFT JOIN dbo.dmhang ON dmhang.Masp = Baogia_d.Masp
-	Where Baogia_d.Ngaytao BETWEEN @Tungay AND @Denngay
-		AND (Sobaogia=@Sobaogia OR @Sobaogia='')
-		AND	(Baogia_d.Masp=@Mahang OR @Mahang='')
+	Select d.*
+	From dbo.Baogia_d d Left Join baogia_h h on d.Sobaogia=h.Sobaogia
+	Where Ngaybaogia BETWEEN @Tungay AND @Denngay
+		AND (d.Sobaogia=@Sobaogia OR @Sobaogia='')
+		AND	(d.Masp=@Mahang OR @Mahang='')
 		AND	(Makhach=@Makhachhang OR @Makhachhang='')
 
 Go

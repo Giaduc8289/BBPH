@@ -123,18 +123,10 @@ namespace GD.BBPH.APP.BANHANG
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_BAOGIA_D.xml", GRID_BAOGIA_D, pne_CHITIET);
             GRID_BAOGIA_D.FilterMode = FilterMode.None;
             //GRID_BAOGIA_D.GroupByBoxVisible = false;
-            GRID_BAOGIA_D.RootTable.Groups.Add(GRID_BAOGIA_D.Tables[0].Columns[BaogiaDFields.Machungloai.Name]);
+            //GRID_BAOGIA_D.RootTable.Groups.Add(GRID_BAOGIA_D.Tables[0].Columns[BaogiaDFields.Machungloai.Name]);
             FORM_PROCESS();
             GRID_BAOGIA_D.COMBO_MULTICOLUMN(GRID_BAOGIA_D, BaogiaDFields.Masp.Name, DmhangFields.Tensp.Name, DmhangFields.Masp.Name, DmhangFields.Masp.Name, DT_DMHANG);
             //GRID_BAOGIA_D.RootTable.Columns["Mahang"].EditType = EditType.NoEdit;
-            //GRID_BAOGIA_D.RootTable.Columns["Chungloai"].EditType = EditType.NoEdit;
-            //GRID_BAOGIA_D.RootTable.Columns["Kichthuoc"].EditType = EditType.NoEdit;
-            ////GRID_BAOGIA_D.RootTable.Columns["Trongluongbao"].EditType = EditType.NoEdit;
-            ////GRID_BAOGIA_D.RootTable.Columns["Trongluongpe"].EditType = EditType.NoEdit;
-            ////GRID_BAOGIA_D.RootTable.Columns[BaogiaDFields.Dongiapechuavat.Name].EditType = EditType.NoEdit;
-            //GRID_BAOGIA_D.RootTable.Columns[BaogiaDFields.DongiakhongVat.Name].EditType = EditType.NoEdit;
-            ////GRID_BAOGIA_D.RootTable.Columns[BaogiaDFields.Dongiatongchuavat.Name].EditType = EditType.NoEdit;
-            //GRID_BAOGIA_D.RootTable.Columns["Giavon"].EditType = EditType.NoEdit;
             GRID_BAOGIA_D.CellEdited += GRID_BAOGIA_D_CellEdited;
             GRID_BAOGIA_D.RecordsDeleted += GRID_BAOGIA_D_RecordsDeleted;
             GRID_BAOGIA_D.RecordUpdated += GRID_BAOGIA_D_RecordUpdated;
@@ -271,78 +263,10 @@ namespace GD.BBPH.APP.BANHANG
         }
 
         #region Xu ly dong chi tiet
-        //private void btn_THEMTUI_Click(object sender, EventArgs e)
-        //{
-        //    ListviewJanusC _frm_MultiRows_Select =
-        //        new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMPE_CHON.xml", DT_DMPE, DanhmucpeFields.Mahieu.Name, string.Empty);
-        //    _frm_MultiRows_Select.ShowDialog();
-        //    if (_frm_MultiRows_Select._RowsViewSelect == null) return;
-
-        //    foreach (DataRowView drv in _frm_MultiRows_Select._RowsViewSelect)
-        //    {
-        //        DataRow r_Detail = DT_BAOGIA_D_FILL.NewRow();
-        //        r_Detail[BaogiaDFields.Loaihang.Name] = 1;
-        //        r_Detail[BaogiaDFields.Mahang.Name] = drv.Row[DanhmucpeFields.Mahieu.Name].ToString();
-        //        r_Detail[BaogiaDFields.Chungloai.Name] = "Túi " + drv.Row[DanhmucpeFields.Mahieu.Name].ToString();
-        //        r_Detail[BaogiaDFields.Kichthuoc.Name] = drv.Row[DanhmucpeFields.Kichthuoc.Name].ToString();
-        //        //try { r_Detail[BaogiaDFields.Trongluongbao.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DanhmucpeFields.Trongluongbao.Name].ToString()); }
-        //        //catch { }
-        //        try { r_Detail[BaogiaDFields.Trongluongpe.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DanhmucpeFields.Trongluong.Name].ToString()); }
-        //        catch { }
-        //        ////------------Lấy sau từ module Tinhgia (thiết kế bảng)
-        //        //try { _BaogiaDEntity.Giavon = LIB.ConvertString.NumbertoDB(drv.Row[DanhmuchanghoaFields.Gia.Name].ToString()); }
-        //        //catch { }
-
-        //        DT_BAOGIA_D_FILL.Rows.Add(r_Detail);
-        //    }
-
-        //    DataView Source_View = new DataView(DT_BAOGIA_D_FILL);
-        //    BS_BAOGIA_D = new BindingSource();
-        //    BS_BAOGIA_D.DataSource = Source_View;
-        //    GRID_BAOGIA_D.DataSource = BS_BAOGIA_D;
-        //    BS_BAOGIA_D.Position = DT_BAOGIA_D_FILL.Rows.Count;
-        //}
-
-        //private void btn_THEMMANH_Click(object sender, EventArgs e)
-        //{
-        //    ListviewJanusC _frm_MultiRows_Select =
-        //        new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANH_CHON.xml", DT_DMMANH_SOI, DanhmucmanhFields.Mahieu.Name, string.Empty);
-        //    _frm_MultiRows_Select.ShowDialog();
-        //    if (_frm_MultiRows_Select._RowsViewSelect == null) return;
-
-        //    foreach (DataRowView drv in _frm_MultiRows_Select._RowsViewSelect)
-        //    {
-        //        DataRow r_Detail = DT_BAOGIA_D_FILL.NewRow();
-        //        r_Detail[BaogiaDFields.Loaihang.Name] = 2;
-        //        r_Detail[BaogiaDFields.Mahang.Name] = drv.Row[DanhmucmanhFields.Mahieu.Name].ToString();
-        //        r_Detail[BaogiaDFields.Chungloai.Name] = "Manh " + drv.Row[DanhmucmanhFields.Tenhieu.Name].ToString();
-        //        try {
-        //            r_Detail[BaogiaDFields.Kichthuoc.Name] = double.Parse(drv.Row[DanhmucmanhSoiFields.Dorong.Name].ToString()).ToString("#.00", new System.Globalization.CultureInfo("vi-VN"));
-        //            //Convert.ToInt32(drv.Row[DanhmucmanhSoiFields.Dorong.Name].ToString(),).ToString();
-        //        }
-        //        catch { }
-        //        try { r_Detail[BaogiaDFields.Trongluongbao.Name] = Convert.ToInt32(drv.Row[DanhmucmanhSoiFields.Trongluong.Name].ToString()); }
-        //        catch { }
-        //        //try { r_Detail[BaogiaDFields.Trongluongpe.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DanhmucmanhFields.Trongluongpe.Name].ToString()); }
-        //        //catch { }
-        //        ////------------Lấy sau từ module Tinhgia (thiết kế bảng)
-        //        //try { _BaogiaDEntity.Giavon = LIB.ConvertString.NumbertoDB(drv.Row[DanhmuchanghoaFields.Gia.Name].ToString()); }
-        //        //catch { }
-
-        //        DT_BAOGIA_D_FILL.Rows.Add(r_Detail);
-        //    }
-
-        //    DataView Source_View = new DataView(DT_BAOGIA_D_FILL);
-        //    BS_BAOGIA_D = new BindingSource();
-        //    BS_BAOGIA_D.DataSource = Source_View;
-        //    GRID_BAOGIA_D.DataSource = BS_BAOGIA_D;
-        //    BS_BAOGIA_D.Position = DT_BAOGIA_D_FILL.Rows.Count;
-        //}
-
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
             ListviewJanusC _frm_MultiRows_Select = 
-                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG_CHON.xml", DT_DMHANG, DmhangFields.Masp.Name, txt_MAKHACH.Text.Trim());
+                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG_CHON.xml", DT_DMHANG, DmhangFields.Makhach.Name, txt_MAKHACH.Text.Trim());
             _frm_MultiRows_Select.ShowDialog();
             if (_frm_MultiRows_Select._RowsViewSelect == null) return;
 
@@ -351,13 +275,21 @@ namespace GD.BBPH.APP.BANHANG
                 DataRow r_Detail = DT_BAOGIA_D_FILL.NewRow();
                 //r_Detail[BaogiaDFields.Loaihang.Name] = 0;
                 r_Detail[BaogiaDFields.Masp.Name] = drv.Row[DmhangFields.Masp.Name].ToString();
-                r_Detail[BaogiaDFields.Tenchungloai.Name] = drv.Row[DmhangFields.Tensp.Name].ToString();
-                r_Detail[BaogiaDFields.Kichthuoc.Name] = drv.Row[DmhangFields.Maloaimuc.Name].ToString();
-                r_Detail[BaogiaDFields.Kichthuoc.Name] = drv.Row[DmhangFields.Maqcthanhpham.Name].ToString();
-                try { r_Detail[BaogiaDFields.Kichthuoc.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Doday.Name].ToString()); }
+                r_Detail[BaogiaDFields.Tensp.Name] = drv.Row[DmhangFields.Tensp.Name].ToString();
+                r_Detail[BaogiaDFields.Maspcuakhach.Name] = drv.Row[DmhangFields.Maspcuakhach.Name].ToString();
+                try { r_Detail[BaogiaDFields.Doday.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Doday.Name].ToString()); }
                 catch { }
-                try { r_Detail[BaogiaDFields.Trongluong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Rong.Name].ToString()); }
+                try { r_Detail[BaogiaDFields.Rong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Rong.Name].ToString()); }
                 catch { }
+                try { r_Detail[BaogiaDFields.Dai.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Dai.Name].ToString()); }
+                catch { }
+                try { r_Detail[BaogiaDFields.Trongluong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Trongluong.Name].ToString()); }
+                catch { }
+                r_Detail[BaogiaDFields.Loaimuc.Name] = drv.Row[DmhangFields.Loaimuc.Name].ToString();
+                r_Detail[BaogiaDFields.Cautrucin.Name] = drv.Row[DmhangFields.Cautrucin.Name].ToString();
+                r_Detail[BaogiaDFields.Tenqcthanhpham.Name] = drv.Row[DmhangFields.Tenqcthanhpham.Name].ToString();
+                r_Detail[BaogiaDFields.Tenqcloaithung.Name] = drv.Row[DmhangFields.Tenqcloaithung.Name].ToString();
+                r_Detail[BaogiaDFields.Tenqcdonggoi.Name] = drv.Row[DmhangFields.Tenqcdonggoi.Name].ToString();
                 ////------------Lấy sau từ module Tinhgia (thiết kế bảng)
                 //try { _BaogiaDEntity.Giavon = LIB.ConvertString.NumbertoDB(drv.Row[DanhmuchanghoaFields.Gia.Name].ToString()); }
                 //catch { }
@@ -377,7 +309,7 @@ namespace GD.BBPH.APP.BANHANG
             string _MAHIEU_PK = _view[BaogiaDFields.Id.Name].ToString();
             string _MAHANG = _view[BaogiaDFields.Masp.Name].ToString();
             string _Sobaogia = _view[BaogiaDFields.Sobaogia.Name].ToString();
-            string _Chungloai = _view[BaogiaDFields.Tenchungloai.Name].ToString();
+            string _Chungloai = _view[BaogiaDFields.Tensp.Name].ToString();
             if(new DonhangDManager().SelectByMahangRDT(_MAHANG).Rows.Count>0)
             {
                 MessageBox.Show("Đã sử dụng trong đơn đặt hàng." + '\n' + "Không thể xóa hàng " + _MAHANG + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -445,14 +377,20 @@ namespace GD.BBPH.APP.BANHANG
                 _BaogiaDEntity.Sobaogia = _BaogiaHEntity.Sobaogia;
                 _BaogiaDEntity.Ngaytao = _BaogiaHEntity.Ngaybaogia;
                 _BaogiaDEntity.Ngaytao = _BaogiaHEntity.Ngayhieuluc;
-                try { _BaogiaDEntity.Tenchungloai = _view[BaogiaDFields.Tenchungloai.Name].ToString(); }
-                catch { }
                 _BaogiaDEntity.Masp = _view[BaogiaDFields.Masp.Name].ToString();
-                _BaogiaDEntity.Tenhang = _view[BaogiaDFields.Tenhang.Name].ToString();
-                _BaogiaDEntity.Tenchungloai = _view[BaogiaDFields.Tenchungloai.Name].ToString();
-                _BaogiaDEntity.Kichthuoc = _view[BaogiaDFields.Kichthuoc.Name].ToString();
+                _BaogiaDEntity.Tensp = _view[BaogiaDFields.Tensp.Name].ToString();
+                _BaogiaDEntity.Maspcuakhach = _view[BaogiaDFields.Maspcuakhach.Name].ToString();
+                _BaogiaDEntity.Loaimuc = _view[BaogiaDFields.Loaimuc.Name].ToString();
+                _BaogiaDEntity.Cautrucin = _view[BaogiaDFields.Cautrucin.Name].ToString();
+                _BaogiaDEntity.Tenqcthanhpham = _view[BaogiaDFields.Tenqcthanhpham.Name].ToString();
+                _BaogiaDEntity.Tenqcloaithung = _view[BaogiaDFields.Tenqcloaithung.Name].ToString();
+                _BaogiaDEntity.Tenqcdonggoi = _view[BaogiaDFields.Tenqcdonggoi.Name].ToString();
                 _BaogiaDEntity.Mota = _view[BaogiaDFields.Mota.Name].ToString();
-                try { _BaogiaDEntity.Kichthuoc = _view[BaogiaDFields.Kichthuoc.Name].ToString(); }
+                try { _BaogiaDEntity.Doday = Convert.ToDecimal(_view[BaogiaDFields.Doday.Name].ToString()); }
+                catch { }
+                try { _BaogiaDEntity.Rong = Convert.ToDecimal(_view[BaogiaDFields.Rong.Name].ToString()); }
+                catch { }
+                try { _BaogiaDEntity.Dai = Convert.ToDecimal(_view[BaogiaDFields.Dai.Name].ToString()); }
                 catch { }
                 try { _BaogiaDEntity.Trongluong = Convert.ToDecimal(_view[BaogiaDFields.Trongluong.Name].ToString()); }
                 catch { }
@@ -481,7 +419,7 @@ namespace GD.BBPH.APP.BANHANG
                     }
                 }
 
-                if (!string.IsNullOrEmpty(_BaogiaDEntity.Tenchungloai))
+                if (!string.IsNullOrEmpty(_BaogiaDEntity.Tensp))
                     _BaogiaDEntityCol.Add(_BaogiaDEntity);
             }
 
@@ -632,21 +570,20 @@ namespace GD.BBPH.APP.BANHANG
                     r_Detail[BaogiaDFields.Sobaogia.Name] = dr[BaogiaDFields.Sobaogia.Name];
                     r_Detail[BaogiaDFields.Ngaytao.Name] = dr[BaogiaDFields.Ngaytao.Name];
                     r_Detail[BaogiaDFields.Ngaysua.Name] = dr[BaogiaDFields.Ngaysua.Name];
-                    r_Detail[BaogiaDFields.Tenchungloai.Name] = dr[BaogiaDFields.Tenchungloai.Name];
                     r_Detail[BaogiaDFields.Masp.Name] = dr[BaogiaDFields.Masp.Name];
-                    r_Detail[BaogiaDFields.Tenhang.Name] = dr[BaogiaDFields.Tenhang.Name];
-                    //r_Detail[BaogiaDFields.Chungloai.Name] = dr[BaogiaDFields.Chungloai.Name];
-                    r_Detail[BaogiaDFields.Kichthuoc.Name] = dr[BaogiaDFields.Kichthuoc.Name];
-                    r_Detail[BaogiaDFields.Trongluong.Name] = dr[BaogiaDFields.Trongluong.Name];
-                    //r_Detail[BaogiaDFields.Trongluongpe.Name] = dr[BaogiaDFields.Trongluongpe.Name];
-                    r_Detail[BaogiaDFields.DongiakhongVat.Name] = dr[BaogiaDFields.DongiakhongVat.Name];
-                    //r_Detail[BaogiaDFields.Dongiapechuavat.Name] = dr[BaogiaDFields.Dongiapechuavat.Name];
-                    //r_Detail[BaogiaDFields.Dongiatongchuavat.Name] = dr[BaogiaDFields.Dongiatongchuavat.Name];
-                    r_Detail[BaogiaDFields.DongiaVat.Name] = dr[BaogiaDFields.DongiaVat.Name];
-                    //r_Detail[BaogiaDFields.Dongiapecovat.Name] = dr[BaogiaDFields.Dongiapecovat.Name];
-                    //r_Detail[BaogiaDFields.Dongiatongcovat.Name] = dr[BaogiaDFields.Dongiatongcovat.Name];
+                    r_Detail[BaogiaDFields.Tensp.Name] = dr[BaogiaDFields.Tensp.Name];
+                    r_Detail[BaogiaDFields.Maspcuakhach.Name] = dr[BaogiaDFields.Maspcuakhach.Name];
+                    r_Detail[BaogiaDFields.Doday.Name] = dr[BaogiaDFields.Doday.Name];
+                    r_Detail[BaogiaDFields.Rong.Name] = dr[BaogiaDFields.Rong.Name];
+                    r_Detail[BaogiaDFields.Dai.Name] = dr[BaogiaDFields.Dai.Name];
+                    r_Detail[BaogiaDFields.Loaimuc.Name] = dr[BaogiaDFields.Loaimuc.Name];
+                    r_Detail[BaogiaDFields.Cautrucin.Name] = dr[BaogiaDFields.Cautrucin.Name];
+                    r_Detail[BaogiaDFields.Tenqcthanhpham.Name] = dr[BaogiaDFields.Tenqcthanhpham.Name];
+                    r_Detail[BaogiaDFields.Tenqcloaithung.Name] = dr[BaogiaDFields.Tenqcloaithung.Name];
+                    r_Detail[BaogiaDFields.Tenqcdonggoi.Name] = dr[BaogiaDFields.Tenqcdonggoi.Name];
                     r_Detail[BaogiaDFields.Mota.Name] = dr[BaogiaDFields.Mota.Name];
-                    //r_Detail[BaogiaDFields.Giavon.Name] = dr[BaogiaDFields.Giavon.Name];
+                    r_Detail[BaogiaDFields.DongiakhongVat.Name] = dr[BaogiaDFields.DongiakhongVat.Name];
+                    r_Detail[BaogiaDFields.DongiaVat.Name] = dr[BaogiaDFields.DongiaVat.Name];
                     DT_BAOGIA_D_FILL.Rows.Add(r_Detail);
                 }
 

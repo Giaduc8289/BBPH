@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 24, 2022 11:18:28 AM
+// Code is generated on: Monday, October 24, 2022 2:13:36 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -21,18 +21,30 @@ namespace GD.BBPH.DAL
 		Id,
 		///<summary>Sobaogia. </summary>
 		Sobaogia,
-		///<summary>Machungloai. </summary>
-		Machungloai,
-		///<summary>Tenchungloai. </summary>
-		Tenchungloai,
 		///<summary>Masp. </summary>
 		Masp,
-		///<summary>Tenhang. </summary>
-		Tenhang,
-		///<summary>Kichthuoc. </summary>
-		Kichthuoc,
+		///<summary>Tensp. </summary>
+		Tensp,
+		///<summary>Maspcuakhach. </summary>
+		Maspcuakhach,
+		///<summary>Doday. </summary>
+		Doday,
+		///<summary>Rong. </summary>
+		Rong,
+		///<summary>Dai. </summary>
+		Dai,
 		///<summary>Trongluong. </summary>
 		Trongluong,
+		///<summary>Loaimuc. </summary>
+		Loaimuc,
+		///<summary>Cautrucin. </summary>
+		Cautrucin,
+		///<summary>Tenqcdonggoi. </summary>
+		Tenqcdonggoi,
+		///<summary>Tenqcloaithung. </summary>
+		Tenqcloaithung,
+		///<summary>Tenqcthanhpham. </summary>
+		Tenqcthanhpham,
 		///<summary>Mota. </summary>
 		Mota,
 		///<summary>DongiakhongVat. </summary>

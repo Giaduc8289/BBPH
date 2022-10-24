@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 24, 2022 11:18:30 AM
+// Code is generated on: Monday, October 24, 2022 2:13:38 PM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -121,22 +121,28 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Inits BaogiaDEntity's mappings</summary>
 		private void InitBaogiaDEntityMappings()
 		{
-			base.AddElementMapping( "BaogiaDEntity", "BBPH", @"dbo", "baogia_d", 15 );
+			base.AddElementMapping( "BaogiaDEntity", "BBPH", @"dbo", "baogia_d", 21 );
 			base.AddElementFieldMapping( "BaogiaDEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "BaogiaDEntity", "Sobaogia", "Sobaogia", false, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 1 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Machungloai", "Machungloai", true, (int)SqlDbType.BigInt, 0, 0, 19, false, "", null, typeof(System.Int64), 2 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Tenchungloai", "Tenchungloai", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 3 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Masp", "Masp", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 4 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Tenhang", "Tenhang", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 5 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Kichthuoc", "Kichthuoc", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 6 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Trongluong", "Trongluong", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 7 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Mota", "Mota", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 8 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "DongiakhongVat", "DongiakhongVAT", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 9 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "DongiaVat", "DongiaVAT", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 10 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Ngaytao", "Ngaytao", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 11 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 12 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 13 );
-			base.AddElementFieldMapping( "BaogiaDEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 14 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Masp", "Masp", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 2 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Tensp", "Tensp", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 3 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Maspcuakhach", "Maspcuakhach", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 4 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Doday", "Doday", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 5 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Rong", "Rong", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 6 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Dai", "Dai", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 7 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Trongluong", "Trongluong", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 8 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Loaimuc", "Loaimuc", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 9 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Cautrucin", "Cautrucin", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 10 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Tenqcdonggoi", "Tenqcdonggoi", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 11 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Tenqcloaithung", "Tenqcloaithung", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 12 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Tenqcthanhpham", "Tenqcthanhpham", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 13 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Mota", "Mota", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 14 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "DongiakhongVat", "DongiakhongVAT", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 15 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "DongiaVat", "DongiaVAT", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 16 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Ngaytao", "Ngaytao", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 17 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 18 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 19 );
+			base.AddElementFieldMapping( "BaogiaDEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 20 );
 		}
 		/// <summary>Inits BaogiaHEntity's mappings</summary>
 		private void InitBaogiaHEntityMappings()
