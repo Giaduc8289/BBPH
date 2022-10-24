@@ -194,7 +194,7 @@
             this.btn_CHONQCTHANHPHAM.Location = new System.Drawing.Point(513, 402);
             this.btn_CHONQCTHANHPHAM.Name = "btn_CHONQCTHANHPHAM";
             this.btn_CHONQCTHANHPHAM.Size = new System.Drawing.Size(80, 23);
-            this.btn_CHONQCTHANHPHAM.TabIndex = 155;
+            this.btn_CHONQCTHANHPHAM.TabIndex = 18;
             this.btn_CHONQCTHANHPHAM.Text = "Chọn QC";
             this.btn_CHONQCTHANHPHAM.UseVisualStyleBackColor = true;
             this.btn_CHONQCTHANHPHAM.Click += new System.EventHandler(this.btn_CHONQCTHANHPHAM_Click);
@@ -207,7 +207,7 @@
             this.btn_CHONLOAIMANG.Location = new System.Drawing.Point(513, 312);
             this.btn_CHONLOAIMANG.Name = "btn_CHONLOAIMANG";
             this.btn_CHONLOAIMANG.Size = new System.Drawing.Size(80, 23);
-            this.btn_CHONLOAIMANG.TabIndex = 154;
+            this.btn_CHONLOAIMANG.TabIndex = 16;
             this.btn_CHONLOAIMANG.Text = "Chọn LM";
             this.btn_CHONLOAIMANG.UseVisualStyleBackColor = true;
             this.btn_CHONLOAIMANG.Click += new System.EventHandler(this.btn_CHONLOAIMANG_Click);
@@ -220,7 +220,7 @@
             this.btn_CHONSOHINH.Location = new System.Drawing.Point(513, 282);
             this.btn_CHONSOHINH.Name = "btn_CHONSOHINH";
             this.btn_CHONSOHINH.Size = new System.Drawing.Size(80, 23);
-            this.btn_CHONSOHINH.TabIndex = 153;
+            this.btn_CHONSOHINH.TabIndex = 14;
             this.btn_CHONSOHINH.Text = "Chọn số hình";
             this.btn_CHONSOHINH.UseVisualStyleBackColor = true;
             this.btn_CHONSOHINH.Click += new System.EventHandler(this.btn_CHONSOHINH_Click);
@@ -233,7 +233,7 @@
             this.btn_CHONSOMAU.Location = new System.Drawing.Point(513, 252);
             this.btn_CHONSOMAU.Name = "btn_CHONSOMAU";
             this.btn_CHONSOMAU.Size = new System.Drawing.Size(80, 23);
-            this.btn_CHONSOMAU.TabIndex = 152;
+            this.btn_CHONSOMAU.TabIndex = 12;
             this.btn_CHONSOMAU.Text = "Chọn số màu";
             this.btn_CHONSOMAU.UseVisualStyleBackColor = true;
             this.btn_CHONSOMAU.Click += new System.EventHandler(this.btn_CHONSOMAU_Click);
@@ -368,7 +368,7 @@
             this.txt_MAQCTHANHPHAM.Name = "txt_MAQCTHANHPHAM";
             this.txt_MAQCTHANHPHAM.Regular_Expression = null;
             this.txt_MAQCTHANHPHAM.Size = new System.Drawing.Size(408, 82);
-            this.txt_MAQCTHANHPHAM.TabIndex = 138;
+            this.txt_MAQCTHANHPHAM.TabIndex = 17;
             // 
             // txt_MALOAIMANG
             // 
@@ -383,7 +383,7 @@
             this.txt_MALOAIMANG.Name = "txt_MALOAIMANG";
             this.txt_MALOAIMANG.Regular_Expression = null;
             this.txt_MALOAIMANG.Size = new System.Drawing.Size(408, 75);
-            this.txt_MALOAIMANG.TabIndex = 137;
+            this.txt_MALOAIMANG.TabIndex = 15;
             // 
             // txt_SOHINHMA
             // 
@@ -397,7 +397,7 @@
             this.txt_SOHINHMA.Name = "txt_SOHINHMA";
             this.txt_SOHINHMA.Regular_Expression = null;
             this.txt_SOHINHMA.Size = new System.Drawing.Size(408, 20);
-            this.txt_SOHINHMA.TabIndex = 136;
+            this.txt_SOHINHMA.TabIndex = 13;
             // 
             // txt_SOMAUMA
             // 
@@ -411,7 +411,7 @@
             this.txt_SOMAUMA.Name = "txt_SOMAUMA";
             this.txt_SOMAUMA.Regular_Expression = null;
             this.txt_SOMAUMA.Size = new System.Drawing.Size(408, 20);
-            this.txt_SOMAUMA.TabIndex = 135;
+            this.txt_SOMAUMA.TabIndex = 11;
             // 
             // txt_CHIEUDAIDEN
             // 
@@ -425,7 +425,7 @@
             this.txt_CHIEUDAIDEN.Name = "txt_CHIEUDAIDEN";
             this.txt_CHIEUDAIDEN.Regular_Expression = null;
             this.txt_CHIEUDAIDEN.Size = new System.Drawing.Size(109, 20);
-            this.txt_CHIEUDAIDEN.TabIndex = 134;
+            this.txt_CHIEUDAIDEN.TabIndex = 10;
             // 
             // txt_CHIEUDAITU
             // 
@@ -439,7 +439,7 @@
             this.txt_CHIEUDAITU.Name = "txt_CHIEUDAITU";
             this.txt_CHIEUDAITU.Regular_Expression = null;
             this.txt_CHIEUDAITU.Size = new System.Drawing.Size(109, 20);
-            this.txt_CHIEUDAITU.TabIndex = 133;
+            this.txt_CHIEUDAITU.TabIndex = 9;
             // 
             // txt_KHODEN
             // 
@@ -453,7 +453,7 @@
             this.txt_KHODEN.Name = "txt_KHODEN";
             this.txt_KHODEN.Regular_Expression = null;
             this.txt_KHODEN.Size = new System.Drawing.Size(109, 20);
-            this.txt_KHODEN.TabIndex = 132;
+            this.txt_KHODEN.TabIndex = 8;
             // 
             // txt_KHOTU
             // 
@@ -467,7 +467,7 @@
             this.txt_KHOTU.Name = "txt_KHOTU";
             this.txt_KHOTU.Regular_Expression = null;
             this.txt_KHOTU.Size = new System.Drawing.Size(109, 20);
-            this.txt_KHOTU.TabIndex = 131;
+            this.txt_KHOTU.TabIndex = 7;
             // 
             // txt_DODAYDEN
             // 
@@ -481,7 +481,7 @@
             this.txt_DODAYDEN.Name = "txt_DODAYDEN";
             this.txt_DODAYDEN.Regular_Expression = null;
             this.txt_DODAYDEN.Size = new System.Drawing.Size(109, 20);
-            this.txt_DODAYDEN.TabIndex = 130;
+            this.txt_DODAYDEN.TabIndex = 6;
             // 
             // txt_DODAYTU
             // 
@@ -495,7 +495,7 @@
             this.txt_DODAYTU.Name = "txt_DODAYTU";
             this.txt_DODAYTU.Regular_Expression = null;
             this.txt_DODAYTU.Size = new System.Drawing.Size(109, 20);
-            this.txt_DODAYTU.TabIndex = 129;
+            this.txt_DODAYTU.TabIndex = 5;
             // 
             // txt_MACONGDOAN
             // 
@@ -509,7 +509,7 @@
             this.txt_MACONGDOAN.Name = "txt_MACONGDOAN";
             this.txt_MACONGDOAN.Regular_Expression = null;
             this.txt_MACONGDOAN.Size = new System.Drawing.Size(109, 20);
-            this.txt_MACONGDOAN.TabIndex = 127;
+            this.txt_MACONGDOAN.TabIndex = 4;
             this.txt_MACONGDOAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_CONGDOAN_Validating);
             // 
             // txt_TENCONGDOAN
@@ -540,7 +540,7 @@
             this.txt_MAMAY.Name = "txt_MAMAY";
             this.txt_MAMAY.Regular_Expression = null;
             this.txt_MAMAY.Size = new System.Drawing.Size(109, 20);
-            this.txt_MAMAY.TabIndex = 125;
+            this.txt_MAMAY.TabIndex = 2;
             this.txt_MAMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMAY_Validating);
             // 
             // txt_TENMAY
@@ -571,7 +571,7 @@
             this.txt_MADONGMAY.Name = "txt_MADONGMAY";
             this.txt_MADONGMAY.Regular_Expression = null;
             this.txt_MADONGMAY.Size = new System.Drawing.Size(109, 20);
-            this.txt_MADONGMAY.TabIndex = 123;
+            this.txt_MADONGMAY.TabIndex = 3;
             this.txt_MADONGMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MADONGMAY_Validating);
             // 
             // txt_TENDONGMAY
@@ -602,7 +602,7 @@
             this.txt_TOCDO.Name = "txt_TOCDO";
             this.txt_TOCDO.Regular_Expression = null;
             this.txt_TOCDO.Size = new System.Drawing.Size(109, 20);
-            this.txt_TOCDO.TabIndex = 2;
+            this.txt_TOCDO.TabIndex = 19;
             // 
             // label1
             // 
@@ -621,7 +621,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(425, 538);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 8;
+            this.btn_Thoat.TabIndex = 24;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -634,7 +634,7 @@
             this.btn_KHOIPHUC.Location = new System.Drawing.Point(178, 538);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 5;
+            this.btn_KHOIPHUC.TabIndex = 21;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -660,7 +660,7 @@
             this.btn_XOA.Location = new System.Drawing.Point(97, 538);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 4;
+            this.btn_XOA.TabIndex = 20;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -673,7 +673,7 @@
             this.btn_THEMMOI.Location = new System.Drawing.Point(343, 538);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 7;
+            this.btn_THEMMOI.TabIndex = 23;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -686,7 +686,7 @@
             this.btn_SUA.Location = new System.Drawing.Point(262, 538);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 6;
+            this.btn_SUA.TabIndex = 22;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);

@@ -54,6 +54,10 @@ namespace GD.BBPH.APP.DANHMUC
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_CONGSUATMAY");
                         DT_CONGSUATMAY = LIB.SESSION_START.DT_CONGSUATMAY;
+                        DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
+                        DT_DMDONGMAY = LIB.SESSION_START.DT_DMDONGMAY;
+                        DT_DMCONGDOAN = LIB.SESSION_START.DT_DMCONGDOAN;
+
 
                         DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
                         DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
@@ -145,6 +149,12 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MALOAIMANG.Text = _Rowview.Row[CongsuatmayFields.Maloaimang.Name].ToString();
                     txt_MAQCTHANHPHAM.Text = _Rowview.Row[CongsuatmayFields.Maqcthanhpham.Name].ToString();
                     txt_TOCDO.Text = _Rowview.Row[CongsuatmayFields.Tocdo.Name].ToString();
+
+                    txt_MAMAY_Validating(new object(), new CancelEventArgs());
+                    txt_MADONGMAY_Validating(new object(), new CancelEventArgs());
+                    txt_CONGDOAN_Validating(new object(), new CancelEventArgs());
+
+
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_CONGSUATMAY_CurrentChanged"); }
