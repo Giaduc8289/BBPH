@@ -65,9 +65,10 @@ namespace GD.BBPH.APP.BANHANG
                         DT_PHIEUGIAOHANG_D_FILL = DT_PHIEUGIAOHANG_D.Clone();
 
                         //DT_BAOGIA_H = LIB.SESSION_START.DT_BAOGIA_H;
-                        DT_DONHANG_H = LIB.SESSION_START.DT_DONHANG_H;
+                        DT_DONHANG_D = LIB.SESSION_START.DT_DONHANG_D;
                         //DT_DONHANG_D = LIB.SESSION_START.DT_DONHANG_D_DCC;
                         DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+                        DT_DMHANGHOA = LIB.SESSION_START.DM_HANG;
                         //DT_DMHANGHOA = LIB.SESSION_START.DT_DMHANGHOA;
                         //DT_DMXE = LIB.SESSION_START.DT_DMXE;
                         _Vat = LIB.ConvertString.NumbertoDB(LIB.Procedures.Laygiatrithamso("Vat"));
@@ -228,10 +229,10 @@ namespace GD.BBPH.APP.BANHANG
                     txt_NGAYGIAO.Text = _Rowview.Row[PhieugiaohangHFields.Ngaygiao.Name].ToString();
                     txt_MAKHACH.Text = _Rowview.Row[PhieugiaohangHFields.Makhach.Name].ToString();
                     txt_TONGTIEN.Text = _Rowview.Row[PhieugiaohangHFields.Tongtien.Name].ToString();
-                    //txt_BIENKIEMSOAT.Text = _Rowview.Row[PhieugiaohangHFields.Bienkiemsoat.Name].ToString();
 
-                    //txt_BIENKIEMSOAT_Validating(new object(), new CancelEventArgs());
                     txt_MAKHACH_Validating(new object(), new CancelEventArgs());
+                    txt_MADONHANG_Validating(new object(), new CancelEventArgs());
+
 
                     txt_VAT.Text = _Rowview.Row[PhieugiaohangHFields.Vat.Name].ToString();
                     if(string.IsNullOrEmpty(txt_VAT.Text))
@@ -508,7 +509,7 @@ namespace GD.BBPH.APP.BANHANG
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_SOPHIEUGIAO.Text = txt_NGAYDAT.Text = txt_MAKHACH.Text = txt_TENKHACH.Text 
-                = txt_MAHANG.Text = txt_MAUIN.Text = txt_LOAI.Text = txt_MADONHANG.Text = txt_NGAYGIAO.Text 
+                = txt_MAHANG.Text = txt_TENHANG.Text = txt_LOAI.Text = txt_MADONHANG.Text = txt_NGAYGIAO.Text 
                /* = txt_SOPO.Text*/ = txt_SOLUONG.Text = txt_DONGIA.Text =/* txt_SOLUONGCONLAI.Text =*/ txt_TONGTIEN.Text 
                 /*= txt_BIENKIEMSOAT.Text = txt_LAIXEHOTEN.Text = txt_LAIXEGHICHU.Text */= string.Empty;
             PhieugiaohangHManager _PhieugiaohangHManager = new PhieugiaohangHManager();
@@ -524,7 +525,7 @@ namespace GD.BBPH.APP.BANHANG
             MAHIEU_PK = "";
             txt_SOPHIEUGIAO.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAYDAT,/* txt_SOPO,*/ txt_TENKHACH,  txt_TONGTIEN, txt_MAUIN, txt_LOAI,/* txt_SOLUONGCONLAI,*//* txt_LAIXEHOTEN, txt_LAIXEGHICHU */}));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAYDAT,/* txt_SOPO,*/ txt_TENKHACH,  txt_TONGTIEN, txt_TENHANG, txt_LOAI,/* txt_SOLUONGCONLAI,*//* txt_LAIXEHOTEN, txt_LAIXEGHICHU */}));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_PHIEUGIAOHANG_H.Enabled = false;
@@ -539,7 +540,7 @@ namespace GD.BBPH.APP.BANHANG
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAYDAT, /*txt_SOPO,*/ txt_TENKHACH,  txt_TONGTIEN, txt_MAUIN, txt_LOAI,/* txt_SOLUONGCONLAI,*/ /*txt_LAIXEHOTEN, txt_LAIXEGHICHU*/ }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAYDAT, /*txt_SOPO,*/ txt_TENKHACH,  txt_TONGTIEN, txt_TENHANG, txt_LOAI,/* txt_SOLUONGCONLAI,*/ /*txt_LAIXEHOTEN, txt_LAIXEGHICHU*/ }));
                 //txt_TENHIEU.Focus();
             }
             GRID_PHIEUGIAOHANG_D.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
@@ -805,49 +806,24 @@ namespace GD.BBPH.APP.BANHANG
         private void txt_MAHANG_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
-            txt_MAUIN.Text = txt_LOAI.Text = string.Empty;
+            txt_TENHANG.Text = txt_LOAI.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MAHANG.Text.Trim()) || DT_DMHANGHOA == null || DT_DMHANGHOA.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MAHANG.Text.Trim().ToUpper();
             _RowViewSelect = checkmaHang(Str_MASIEUTHI, DT_DMHANGHOA);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG_HOADON_TIM.xml",
-                        DT_DMHANGHOA, DonhangDFields.Masp.Name, Str_MASIEUTHI);
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml",
+                        DT_DMHANGHOA, DmhangFields.Masp.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MAHANG.Text = _RowViewSelect[DonhangDFields.Masp.Name].ToString();
-                //txt_MAUIN.Text = _RowViewSelect[DonhangDFields.Mauin.Name].ToString();
-                //txt_LOAI.Text = _RowViewSelect[DonhangDFields.Loaihang.Name].ToString();
-                //txt_LOAIHANG.Text = _RowViewSelect[DonhangDFields.Loaihang.Name].ToString();
-
-                DT_DONHANG_D = new DonhangDManager().SelectByMahangRDT(txt_MAHANG.Text);
-                if (DT_DONHANG_D.Rows.Count == 0)
-                {
-                    txt_MADONHANG.Text = txt_NGAYDAT.Text =/* txt_SOPO.Text = txt_SOLUONGCONLAI.Text =*/ txt_MADONHANG_D.Text = txt_SOLUONG.Text = txt_DONGIA.Text = string.Empty;
-                }
-                else if (DT_DONHANG_D.Rows.Count == 1)
-                {
-                    txt_MADONHANG.Text = DT_DONHANG_D.Rows[0][DonhangDFields.Madon.Name].ToString();
-                    txt_MADONHANG_Validating(new object(), new CancelEventArgs());
-                }
+                txt_MAHANG.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
+                txt_TENHANG.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
             }
             else
             {
-                //txt_MAUIN.Text = _RowViewSelect[DonhangDFields.Mauin.Name].ToString();
-                //txt_LOAI.Text = _RowViewSelect[DonhangDFields.Loaihang.Name].ToString();
-
-                DT_DONHANG_D = new DonhangDManager().SelectByMahangRDT(txt_MAHANG.Text);
-                if(DT_DONHANG_D.Rows.Count == 0)
-                {
-                    txt_MADONHANG.Text = txt_NGAYDAT.Text = /*txt_SOPO.Text = txt_SOLUONGCONLAI.Text =*/ txt_MADONHANG_D.Text = txt_SOLUONG.Text = txt_DONGIA.Text = string.Empty;
-                }
-                else if (DT_DONHANG_D.Rows.Count == 1)
-                {
-                    txt_MADONHANG.Text = DT_DONHANG_D.Rows[0][DonhangDFields.Madon.Name].ToString();
-                    txt_MADONHANG_Validating(new object(), new CancelEventArgs());
-                }
+                txt_TENHANG.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
             }
         }
         private DataRow checkmaHang(string masieuthi, DataTable dt)
@@ -874,7 +850,7 @@ namespace GD.BBPH.APP.BANHANG
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DONDATHANG_D_PGH.xml",
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DONDATHANG_D.xml",
                         DT_DONHANG_D, DonhangDFields.Madon.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
