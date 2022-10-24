@@ -177,6 +177,12 @@
     <Compile Include="DANHMUC\FRM_CONGSUATMAY.designer.cs">
       <DependentUpon>FRM_CONGSUATMAY.cs</DependentUpon>
     </Compile>
+    <Compile Include="DANHMUC\FRM_DMNHOMDINHMUC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMNHOMDINHMUC.designer.cs">
+      <DependentUpon>FRM_DMNHOMDINHMUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMNHOMQUYCACH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,12 @@
     </Compile>
     <Compile Include="DANHMUC\FRM_DMQUYCACH.designer.cs">
       <DependentUpon>FRM_DMQUYCACH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMVATTUSAIHONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMVATTUSAIHONG.designer.cs">
+      <DependentUpon>FRM_DMVATTUSAIHONG.cs</DependentUpon>
     </Compile>
     <Compile Include="HETHONG\FRM_CHONNGAYLAMVIEC.cs">
       <SubType>Form</SubType>
@@ -530,6 +542,9 @@
     <EmbeddedResource Include="DANHMUC\FRM_CONGSUATMAY.resx">
       <DependentUpon>FRM_CONGSUATMAY.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMNHOMDINHMUC.resx">
+      <DependentUpon>FRM_DMNHOMDINHMUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMNHOMQUYCACH.resx">
       <DependentUpon>FRM_DMNHOMQUYCACH.cs</DependentUpon>
     </EmbeddedResource>
@@ -583,6 +598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMQUYCACH.resx">
       <DependentUpon>FRM_DMQUYCACH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMVATTUSAIHONG.resx">
+      <DependentUpon>FRM_DMVATTUSAIHONG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HETHONG\FRM_CHONNGAYLAMVIEC.resx">
       <DependentUpon>FRM_CHONNGAYLAMVIEC.cs</DependentUpon>
@@ -1060,6 +1078,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNHOMDINHMUC.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1070,6 +1089,7 @@
     <Content Include="XMLCONFIG\FRM_DMQUYCACH_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMQUYCACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMVATTUPHU.xml" />
+    <Content Include="XMLCONFIG\FRM_DMVATTUSAIHONG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANG_D.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANG_H.xml" />
     <Content Include="XMLCONFIG\FRM_HANGTRALAI.xml" />
