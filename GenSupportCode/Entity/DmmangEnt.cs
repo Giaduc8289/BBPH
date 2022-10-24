@@ -63,54 +63,54 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_DMMANG_PK)
 		{
-			DmmangEntity _dmmangEntity = new DmmangEntity();
+			DmmangEntity _DmmangEntity = new DmmangEntity();
 			
-			_dmmangEntity.Mamang = txt_MAMANG.Text.Trim();
-			_dmmangEntity.Tenmang = txt_TENMANG.Text.Trim();
-			_dmmangEntity.Makhach = txt_MAKHACH.Text.Trim();
-			_dmmangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-			_dmmangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
-			_dmmangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
-			_dmmangEntity.Mactpt = txt_MACTPT.Text.Trim();
-			_dmmangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_dmmangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_dmmangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_dmmangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
-			_dmmangEntity.Doday = txt_DODAY.Text.Trim();
-			_dmmangEntity.Rong = txt_RONG.Text.Trim();
-			_dmmangEntity.Maloaimang = txt_MALOAIMANG.Text.Trim();
-			_dmmangEntity.Tenloaimang = txt_TENLOAIMANG.Text.Trim();
-			_dmmangEntity.Maqcmang = txt_MAQCMANG.Text.Trim();
-			_dmmangEntity.Tenqcmang = txt_TENQCMANG.Text.Trim();
+			_DmmangEntity.Mamang = txt_MAMANG.Text.Trim();
+			_DmmangEntity.Tenmang = txt_TENMANG.Text.Trim();
+			_DmmangEntity.Makhach = txt_MAKHACH.Text.Trim();
+			_DmmangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
+			_DmmangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
+			_DmmangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
+			_DmmangEntity.Mactpt = txt_MACTPT.Text.Trim();
+			_DmmangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_DmmangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_DmmangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_DmmangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_DmmangEntity.Doday = txt_DODAY.Text.Trim();
+			_DmmangEntity.Rong = txt_RONG.Text.Trim();
+			_DmmangEntity.Maloaimang = txt_MALOAIMANG.Text.Trim();
+			_DmmangEntity.Tenloaimang = txt_TENLOAIMANG.Text.Trim();
+			_DmmangEntity.Maqcmang = txt_MAQCMANG.Text.Trim();
+			_DmmangEntity.Tenqcmang = txt_TENQCMANG.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMMANG_PK))
 			{
-				_str_DMMANG_PK = _DmmangManager.InsertV2(_dmmangEntity, r_Insert, DT_DMMANG, BS_DMMANG);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_dmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_DMMANG_PK = _DmmangManager.InsertV2(_DmmangEntity, r_Insert, DT_DMMANG, BS_DMMANG);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_DmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_DMMANG.ResetCurrentItem();
 			}
 			else
 			{
-				_DmmangManager.Update(_dmmangEntity);
+				_DmmangManager.Update(_DmmangEntity);
 				
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Mamang.Name].Value = _dmmangEntity.Mamang;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenmang.Name].Value = _dmmangEntity.Tenmang;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Makhach.Name].Value = _dmmangEntity.Makhach;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenkhach.Name].Value = _dmmangEntity.Tenkhach;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Kichthuoc.Name].Value = _dmmangEntity.Kichthuoc;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Trongluong.Name].Value = _dmmangEntity.Trongluong;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Mactpt.Name].Value = _dmmangEntity.Mactpt;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Ngaytao.Name].Value = _dmmangEntity.Ngaytao;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Nguoitao.Name].Value = _dmmangEntity.Nguoitao;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Ngaysua.Name].Value = _dmmangEntity.Ngaysua;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Nguoisua.Name].Value = _dmmangEntity.Nguoisua;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Doday.Name].Value = _dmmangEntity.Doday;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Rong.Name].Value = _dmmangEntity.Rong;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Maloaimang.Name].Value = _dmmangEntity.Maloaimang;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenloaimang.Name].Value = _dmmangEntity.Tenloaimang;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Maqcmang.Name].Value = _dmmangEntity.Maqcmang;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenqcmang.Name].Value = _dmmangEntity.Tenqcmang;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_dmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Mamang.Name].Value = _DmmangEntity.Mamang;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenmang.Name].Value = _DmmangEntity.Tenmang;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Makhach.Name].Value = _DmmangEntity.Makhach;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenkhach.Name].Value = _DmmangEntity.Tenkhach;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Kichthuoc.Name].Value = _DmmangEntity.Kichthuoc;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Trongluong.Name].Value = _DmmangEntity.Trongluong;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Mactpt.Name].Value = _DmmangEntity.Mactpt;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Ngaytao.Name].Value = _DmmangEntity.Ngaytao;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Nguoitao.Name].Value = _DmmangEntity.Nguoitao;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Ngaysua.Name].Value = _DmmangEntity.Ngaysua;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Nguoisua.Name].Value = _DmmangEntity.Nguoisua;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Doday.Name].Value = _DmmangEntity.Doday;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Rong.Name].Value = _DmmangEntity.Rong;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Maloaimang.Name].Value = _DmmangEntity.Maloaimang;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenloaimang.Name].Value = _DmmangEntity.Tenloaimang;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Maqcmang.Name].Value = _DmmangEntity.Maqcmang;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenqcmang.Name].Value = _DmmangEntity.Tenqcmang;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_DmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DMMANG_PK;
 		}

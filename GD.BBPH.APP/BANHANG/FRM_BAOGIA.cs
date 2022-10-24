@@ -37,7 +37,7 @@ namespace GD.BBPH.APP.BANHANG
         private string MAKHACHHANG = "", MAHANG = "";
         //private bool _Noidia = false, _Truyenthong = false;
         private decimal _Vat = 10;
-        private DataTable DT_DMKHACH = new DataTable(), DT_DMHANG = new DataTable(), DT_DMCHUNGLOAI = new DataTable(); //, DT_DMPE = new DataTable(), DT_DMMANH_SOI = new DataTable();
+        private DataTable DT_DMKHACH = new DataTable(), DT_DMHANG = new DataTable();//, DT_DMCHUNGLOAI = new DataTable(), DT_DMPE = new DataTable(), DT_DMMANH_SOI = new DataTable();
         //public DataTable DT_HANGCHON = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
@@ -65,6 +65,7 @@ namespace GD.BBPH.APP.BANHANG
                         DT_BAOGIA_D_FILL = DT_BAOGIA_D.Clone();
 
                         DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+                        DT_DMHANG = LIB.SESSION_START.DM_HANG;
                         //DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
                         //DT_DMPE = LIB.SESSION_START.DT_DMPE;
                         //DT_DMMANH_SOI = LIB.SESSION_START.DT_DMMANH_SOI;
@@ -341,7 +342,7 @@ namespace GD.BBPH.APP.BANHANG
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
             ListviewJanusC _frm_MultiRows_Select = 
-                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCHUNGLOAI_CHON.xml", DT_DMCHUNGLOAI, DmchungloaiFields.Machungloai.Name, txt_MAKHACH.Text.Trim());
+                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG_CHON.xml", DT_DMHANG, DmhangFields.Masp.Name, txt_MAKHACH.Text.Trim());
             _frm_MultiRows_Select.ShowDialog();
             if (_frm_MultiRows_Select._RowsViewSelect == null) return;
 
@@ -349,12 +350,13 @@ namespace GD.BBPH.APP.BANHANG
             { 
                 DataRow r_Detail = DT_BAOGIA_D_FILL.NewRow();
                 //r_Detail[BaogiaDFields.Loaihang.Name] = 0;
-                r_Detail[BaogiaDFields.Masp.Name] = drv.Row[DmchungloaiFields.Machungloai.Name].ToString();
-                r_Detail[BaogiaDFields.Tenchungloai.Name] = drv.Row[DmchungloaiFields.Tenchungloai.Name].ToString();
-                r_Detail[BaogiaDFields.Kichthuoc.Name] = drv.Row[DmchungloaiFields.Kichthuoc.Name].ToString();
-                try { r_Detail[BaogiaDFields.Kichthuoc.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmchungloaiFields.Kichthuoc.Name].ToString()); }
+                r_Detail[BaogiaDFields.Masp.Name] = drv.Row[DmhangFields.Masp.Name].ToString();
+                r_Detail[BaogiaDFields.Tenchungloai.Name] = drv.Row[DmhangFields.Tensp.Name].ToString();
+                r_Detail[BaogiaDFields.Kichthuoc.Name] = drv.Row[DmhangFields.Maloaimuc.Name].ToString();
+                r_Detail[BaogiaDFields.Kichthuoc.Name] = drv.Row[DmhangFields.Maqcthanhpham.Name].ToString();
+                try { r_Detail[BaogiaDFields.Kichthuoc.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Doday.Name].ToString()); }
                 catch { }
-                try { r_Detail[BaogiaDFields.Trongluong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmchungloaiFields.Trongluong.Name].ToString()); }
+                try { r_Detail[BaogiaDFields.Trongluong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Rong.Name].ToString()); }
                 catch { }
                 ////------------Lấy sau từ module Tinhgia (thiết kế bảng)
                 //try { _BaogiaDEntity.Giavon = LIB.ConvertString.NumbertoDB(drv.Row[DanhmuchanghoaFields.Gia.Name].ToString()); }

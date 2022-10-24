@@ -58,44 +58,44 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_DMTAIKHOAN_PK)
 		{
-			DmtaikhoanEntity _dmtaikhoanEntity = new DmtaikhoanEntity();
+			DmtaikhoanEntity _DmtaikhoanEntity = new DmtaikhoanEntity();
 			
-			_dmtaikhoanEntity.Matk = txt_MATK.Text.Trim();
-			_dmtaikhoanEntity.Tentk = txt_TENTK.Text.Trim();
-			_dmtaikhoanEntity.Bactk = txt_BACTK.Text.Trim();
-			_dmtaikhoanEntity.Tinhchattk = txt_TINHCHATTK.Text.Trim();
-			_dmtaikhoanEntity.Matkcha = txt_MATKCHA.Text.Trim();
-			_dmtaikhoanEntity.Trongbang = txt_TRONGBANG.Text.Trim();
-			_dmtaikhoanEntity.Doituongtd = txt_DOITUONGTD.Text.Trim();
-			_dmtaikhoanEntity.Khoanmuctd = txt_KHOANMUCTD.Text.Trim();
-			_dmtaikhoanEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_dmtaikhoanEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_dmtaikhoanEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_dmtaikhoanEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_DmtaikhoanEntity.Matk = txt_MATK.Text.Trim();
+			_DmtaikhoanEntity.Tentk = txt_TENTK.Text.Trim();
+			_DmtaikhoanEntity.Bactk = txt_BACTK.Text.Trim();
+			_DmtaikhoanEntity.Tinhchattk = txt_TINHCHATTK.Text.Trim();
+			_DmtaikhoanEntity.Matkcha = txt_MATKCHA.Text.Trim();
+			_DmtaikhoanEntity.Trongbang = txt_TRONGBANG.Text.Trim();
+			_DmtaikhoanEntity.Doituongtd = txt_DOITUONGTD.Text.Trim();
+			_DmtaikhoanEntity.Khoanmuctd = txt_KHOANMUCTD.Text.Trim();
+			_DmtaikhoanEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_DmtaikhoanEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_DmtaikhoanEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_DmtaikhoanEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMTAIKHOAN_PK))
 			{
-				_str_DMTAIKHOAN_PK = _DmtaikhoanManager.InsertV2(_dmtaikhoanEntity, r_Insert, DT_DMTAIKHOAN, BS_DMTAIKHOAN);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmtaikhoanManager.Convert(_dmtaikhoanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_DMTAIKHOAN_PK = _DmtaikhoanManager.InsertV2(_DmtaikhoanEntity, r_Insert, DT_DMTAIKHOAN, BS_DMTAIKHOAN);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmtaikhoanManager.Convert(_DmtaikhoanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_DMTAIKHOAN.ResetCurrentItem();
 			}
 			else
 			{
-				_DmtaikhoanManager.Update(_dmtaikhoanEntity);
+				_DmtaikhoanManager.Update(_DmtaikhoanEntity);
 				
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Matk.Name].Value = _dmtaikhoanEntity.Matk;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Tentk.Name].Value = _dmtaikhoanEntity.Tentk;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Bactk.Name].Value = _dmtaikhoanEntity.Bactk;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Tinhchattk.Name].Value = _dmtaikhoanEntity.Tinhchattk;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Matkcha.Name].Value = _dmtaikhoanEntity.Matkcha;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Trongbang.Name].Value = _dmtaikhoanEntity.Trongbang;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Doituongtd.Name].Value = _dmtaikhoanEntity.Doituongtd;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Khoanmuctd.Name].Value = _dmtaikhoanEntity.Khoanmuctd;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Ngaytao.Name].Value = _dmtaikhoanEntity.Ngaytao;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Nguoitao.Name].Value = _dmtaikhoanEntity.Nguoitao;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Ngaysua.Name].Value = _dmtaikhoanEntity.Ngaysua;
-				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Nguoisua.Name].Value = _dmtaikhoanEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmtaikhoanManager.Convert(_dmtaikhoanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Matk.Name].Value = _DmtaikhoanEntity.Matk;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Tentk.Name].Value = _DmtaikhoanEntity.Tentk;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Bactk.Name].Value = _DmtaikhoanEntity.Bactk;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Tinhchattk.Name].Value = _DmtaikhoanEntity.Tinhchattk;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Matkcha.Name].Value = _DmtaikhoanEntity.Matkcha;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Trongbang.Name].Value = _DmtaikhoanEntity.Trongbang;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Doituongtd.Name].Value = _DmtaikhoanEntity.Doituongtd;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Khoanmuctd.Name].Value = _DmtaikhoanEntity.Khoanmuctd;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Ngaytao.Name].Value = _DmtaikhoanEntity.Ngaytao;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Nguoitao.Name].Value = _DmtaikhoanEntity.Nguoitao;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Ngaysua.Name].Value = _DmtaikhoanEntity.Ngaysua;
+				GRID_DMTAIKHOAN.CurrentRow.Cells[DmtaikhoanFields.Nguoisua.Name].Value = _DmtaikhoanEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmtaikhoanManager.Convert(_DmtaikhoanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DMTAIKHOAN_PK;
 		}

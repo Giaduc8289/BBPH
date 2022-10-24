@@ -55,38 +55,38 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_THAMSO_PK)
 		{
-			ThamsoEntity _thamsoEntity = new ThamsoEntity();
+			ThamsoEntity _ThamsoEntity = new ThamsoEntity();
 			
-			_thamsoEntity.Mahieu = txt_MAHIEU.Text.Trim();
-			_thamsoEntity.Stt = txt_STT.Text.Trim();
-			_thamsoEntity.Tenthamso = txt_TENTHAMSO.Text.Trim();
-			_thamsoEntity.Giatri = txt_GIATRI.Text.Trim();
-			_thamsoEntity.Thaydoi = txt_THAYDOI.Text.Trim();
-			_thamsoEntity.Kieudulieu = txt_KIEUDULIEU.Text.Trim();
-			_thamsoEntity.Ghichu = txt_GHICHU.Text.Trim();
-			_thamsoEntity.Loaithamso = txt_LOAITHAMSO.Text.Trim();
-			_thamsoEntity.An = txt_AN.Text.Trim();
+			_ThamsoEntity.Mahieu = txt_MAHIEU.Text.Trim();
+			_ThamsoEntity.Stt = txt_STT.Text.Trim();
+			_ThamsoEntity.Tenthamso = txt_TENTHAMSO.Text.Trim();
+			_ThamsoEntity.Giatri = txt_GIATRI.Text.Trim();
+			_ThamsoEntity.Thaydoi = txt_THAYDOI.Text.Trim();
+			_ThamsoEntity.Kieudulieu = txt_KIEUDULIEU.Text.Trim();
+			_ThamsoEntity.Ghichu = txt_GHICHU.Text.Trim();
+			_ThamsoEntity.Loaithamso = txt_LOAITHAMSO.Text.Trim();
+			_ThamsoEntity.An = txt_AN.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_THAMSO_PK))
 			{
-				_str_THAMSO_PK = _ThamsoManager.InsertV2(_thamsoEntity, r_Insert, DT_THAMSO, BS_THAMSO);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_ThamsoManager.Convert(_thamsoEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_THAMSO_PK = _ThamsoManager.InsertV2(_ThamsoEntity, r_Insert, DT_THAMSO, BS_THAMSO);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_ThamsoManager.Convert(_ThamsoEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_THAMSO.ResetCurrentItem();
 			}
 			else
 			{
-				_ThamsoManager.Update(_thamsoEntity);
+				_ThamsoManager.Update(_ThamsoEntity);
 				
-				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Mahieu.Name].Value = _thamsoEntity.Mahieu;
-				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Stt.Name].Value = _thamsoEntity.Stt;
-				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Tenthamso.Name].Value = _thamsoEntity.Tenthamso;
-				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Giatri.Name].Value = _thamsoEntity.Giatri;
-				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Thaydoi.Name].Value = _thamsoEntity.Thaydoi;
-				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Kieudulieu.Name].Value = _thamsoEntity.Kieudulieu;
-				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Ghichu.Name].Value = _thamsoEntity.Ghichu;
-				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Loaithamso.Name].Value = _thamsoEntity.Loaithamso;
-				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.An.Name].Value = _thamsoEntity.An;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_ThamsoManager.Convert(_thamsoEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Mahieu.Name].Value = _ThamsoEntity.Mahieu;
+				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Stt.Name].Value = _ThamsoEntity.Stt;
+				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Tenthamso.Name].Value = _ThamsoEntity.Tenthamso;
+				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Giatri.Name].Value = _ThamsoEntity.Giatri;
+				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Thaydoi.Name].Value = _ThamsoEntity.Thaydoi;
+				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Kieudulieu.Name].Value = _ThamsoEntity.Kieudulieu;
+				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Ghichu.Name].Value = _ThamsoEntity.Ghichu;
+				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.Loaithamso.Name].Value = _ThamsoEntity.Loaithamso;
+				GRID_THAMSO.CurrentRow.Cells[ThamsoFields.An.Name].Value = _ThamsoEntity.An;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_ThamsoManager.Convert(_ThamsoEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_THAMSO_PK;
 		}

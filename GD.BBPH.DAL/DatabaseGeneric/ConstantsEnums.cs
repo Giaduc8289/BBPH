@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 22, 2022 11:02:36 AM
+// Code is generated on: Monday, October 24, 2022 11:18:28 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1151,6 +1151,8 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Nangsuat. </summary>
+		Nangsuat,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1237,6 +1239,8 @@ namespace GD.BBPH.DAL
 		Tenmay,
 		///<summary>Tencongnhan. </summary>
 		Tencongnhan,
+		///<summary>Nangsuat. </summary>
+		Nangsuat,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1303,6 +1307,8 @@ namespace GD.BBPH.DAL
 		Tenmay,
 		///<summary>Tencongnhan. </summary>
 		Tencongnhan,
+		///<summary>Nangsuat. </summary>
+		Nangsuat,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1481,6 +1487,8 @@ namespace GD.BBPH.DAL
 		Tenmay,
 		///<summary>Tencongnhan. </summary>
 		Tencongnhan,
+		///<summary>Nangsuat. </summary>
+		Nangsuat,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1553,6 +1561,8 @@ namespace GD.BBPH.DAL
 		Tenmay,
 		///<summary>Tencongnhan. </summary>
 		Tencongnhan,
+		///<summary>Nangsuat. </summary>
+		Nangsuat,
 		/// <summary></summary>
 		AmountOfFields
 	}

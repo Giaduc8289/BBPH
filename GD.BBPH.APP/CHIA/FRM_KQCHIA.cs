@@ -342,51 +342,51 @@ namespace GD.BBPH.APP.CHIA
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                KetquachiaEntity _ketquachiaEntity = new KetquachiaEntity();
-                _ketquachiaEntity.Ngay = _ngayxuat;
-                _ketquachiaEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
-                _ketquachiaEntity.Mamay = txt_MAMAY.Text.Trim();
-                _ketquachiaEntity.Tenmay = txt_TENMAY.Text.Trim();
-                _ketquachiaEntity.Lenh = _view.Row[KetquachiaFields.Lenh.Name].ToString();
-                _ketquachiaEntity.Macongnhan = _view.Row[KetquachiaFields.Macongnhan.Name].ToString();
-                _ketquachiaEntity.Tencongnhan = _view.Row[KetquachiaFields.Tencongnhan.Name].ToString();
-                _ketquachiaEntity.Masanpham = _view.Row[KetquachiaFields.Masanpham.Name].ToString();
-                _ketquachiaEntity.Tensanpham = _view.Row[KetquachiaFields.Tensanpham.Name].ToString();
-                _ketquachiaEntity.Sometvao = Convert.ToDecimal(_view.Row[KetquachiaFields.Sometvao.Name].ToString());
-                _ketquachiaEntity.Sokgvao = Convert.ToDecimal(_view.Row[KetquachiaFields.Sokgvao.Name].ToString());
-                _ketquachiaEntity.Socon = Convert.ToInt32(_view.Row[KetquachiaFields.Socon.Name].ToString());
-                _ketquachiaEntity.Dauraghep = Convert.ToDecimal(_view.Row[KetquachiaFields.Dauraghep.Name].ToString());
-                //_ketquachiaEntity.Chatluong = _view.Row[KetquachiaFields.Chatluong.Name].ToString();
-                //_ketquachiaEntity.Phelieuthucte = Convert.ToDecimal(_view.Row[KetquachiaFields.Phelieuthucte.Name].ToString());
-                //_ketquachiaEntity.Tongsp = Convert.ToDecimal(_view.Row[KetquachiaFields.Tongsp.Name].ToString());
-                _ketquachiaEntity.Thoigiancatdau = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigiancatdau.Name].ToString());
-                _ketquachiaEntity.Thoigianbatdau = Convert.ToDateTime(_view.Row[KetquachiaFields.Thoigianbatdau.Name].ToString());
-                _ketquachiaEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquachiaFields.Thoigianketthuc.Name].ToString());
-                _ketquachiaEntity.Thoigiandoilenh = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigiandoilenh.Name].ToString());
-                _ketquachiaEntity.Solanhacuon = Convert.ToInt32(_view.Row[KetquachiaFields.Solanhacuon.Name].ToString());
-                _ketquachiaEntity.Thoigianlencuon = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigianlencuon.Name].ToString());
-                _ketquachiaEntity.Thoigianhacuon = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigianhacuon.Name].ToString());
-                _ketquachiaEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigiansuco.Name].ToString());
-                //_ketquachiaEntity.Sokgdukiendat = Convert.ToDecimal(_view.Row[KetquachiaFields.Sokgdukiendat.Name].ToString());
-                _ketquachiaEntity.Phein = Convert.ToDecimal(_view.Row[KetquachiaFields.Phein.Name].ToString());
-                _ketquachiaEntity.Pheghep = Convert.ToDecimal(_view.Row[KetquachiaFields.Pheghep.Name].ToString());
-                _ketquachiaEntity.Phechia = Convert.ToDecimal(_view.Row[KetquachiaFields.Phechia.Name].ToString());
-                _ketquachiaEntity.PhethoiNcc = Convert.ToDecimal(_view.Row[KetquachiaFields.PhethoiNcc.Name].ToString());
-                _ketquachiaEntity.Phesx = Convert.ToDecimal(_view.Row[KetquachiaFields.Phesx.Name].ToString());
+                KetquachiaEntity _KetquachiaEntity = new KetquachiaEntity();
+                _KetquachiaEntity.Ngay = _ngayxuat;
+                _KetquachiaEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
+                _KetquachiaEntity.Mamay = txt_MAMAY.Text.Trim();
+                _KetquachiaEntity.Tenmay = txt_TENMAY.Text.Trim();
+                _KetquachiaEntity.Lenh = _view.Row[KetquachiaFields.Lenh.Name].ToString();
+                _KetquachiaEntity.Macongnhan = _view.Row[KetquachiaFields.Macongnhan.Name].ToString();
+                _KetquachiaEntity.Tencongnhan = _view.Row[KetquachiaFields.Tencongnhan.Name].ToString();
+                _KetquachiaEntity.Masanpham = _view.Row[KetquachiaFields.Masanpham.Name].ToString();
+                _KetquachiaEntity.Tensanpham = _view.Row[KetquachiaFields.Tensanpham.Name].ToString();
+                _KetquachiaEntity.Sometvao = Convert.ToDecimal(_view.Row[KetquachiaFields.Sometvao.Name].ToString());
+                _KetquachiaEntity.Sokgvao = Convert.ToDecimal(_view.Row[KetquachiaFields.Sokgvao.Name].ToString());
+                _KetquachiaEntity.Socon = Convert.ToInt32(_view.Row[KetquachiaFields.Socon.Name].ToString());
+                _KetquachiaEntity.Dauraghep = Convert.ToDecimal(_view.Row[KetquachiaFields.Dauraghep.Name].ToString());
+                //_KetquachiaEntity.Chatluong = _view.Row[KetquachiaFields.Chatluong.Name].ToString();
+                //_KetquachiaEntity.Phelieuthucte = Convert.ToDecimal(_view.Row[KetquachiaFields.Phelieuthucte.Name].ToString());
+                //_KetquachiaEntity.Tongsp = Convert.ToDecimal(_view.Row[KetquachiaFields.Tongsp.Name].ToString());
+                _KetquachiaEntity.Thoigiancatdau = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigiancatdau.Name].ToString());
+                _KetquachiaEntity.Thoigianbatdau = Convert.ToDateTime(_view.Row[KetquachiaFields.Thoigianbatdau.Name].ToString());
+                _KetquachiaEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquachiaFields.Thoigianketthuc.Name].ToString());
+                _KetquachiaEntity.Thoigiandoilenh = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigiandoilenh.Name].ToString());
+                _KetquachiaEntity.Solanhacuon = Convert.ToInt32(_view.Row[KetquachiaFields.Solanhacuon.Name].ToString());
+                _KetquachiaEntity.Thoigianlencuon = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigianlencuon.Name].ToString());
+                _KetquachiaEntity.Thoigianhacuon = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigianhacuon.Name].ToString());
+                _KetquachiaEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquachiaFields.Thoigiansuco.Name].ToString());
+                //_KetquachiaEntity.Sokgdukiendat = Convert.ToDecimal(_view.Row[KetquachiaFields.Sokgdukiendat.Name].ToString());
+                _KetquachiaEntity.Phein = Convert.ToDecimal(_view.Row[KetquachiaFields.Phein.Name].ToString());
+                _KetquachiaEntity.Pheghep = Convert.ToDecimal(_view.Row[KetquachiaFields.Pheghep.Name].ToString());
+                _KetquachiaEntity.Phechia = Convert.ToDecimal(_view.Row[KetquachiaFields.Phechia.Name].ToString());
+                _KetquachiaEntity.PhethoiNcc = Convert.ToDecimal(_view.Row[KetquachiaFields.PhethoiNcc.Name].ToString());
+                _KetquachiaEntity.Phesx = Convert.ToDecimal(_view.Row[KetquachiaFields.Phesx.Name].ToString());
 
-                if (!string.IsNullOrEmpty(_ketquachiaEntity.Masanpham))
-                    _KetquachiaEntityCol.Add(_ketquachiaEntity);
+                if (!string.IsNullOrEmpty(_KetquachiaEntity.Masanpham))
+                    _KetquachiaEntityCol.Add(_KetquachiaEntity);
             }
 
-            foreach (KetquachiaEntity _ketquachiaEntity in _KetquachiaEntityCol)
+            foreach (KetquachiaEntity _KetquachiaEntity in _KetquachiaEntityCol)
             {
-                if (_ketquachiaEntity.IsNew)
+                if (_KetquachiaEntity.IsNew)
                 {
                     DataRow _r_Insert = DT_KQCHIA_CHITIET.NewRow();
                     DT_KQCHIA_CHITIET.Rows.Add(_r_Insert);
-                    _KetquachiaManager.InsertV2(_ketquachiaEntity, _r_Insert, DT_KQCHIA_CHITIET, BS_KQCHIA_CHITIET);
+                    _KetquachiaManager.InsertV2(_KetquachiaEntity, _r_Insert, DT_KQCHIA_CHITIET, BS_KQCHIA_CHITIET);
                 }
-                else _KetquachiaManager.Update(_ketquachiaEntity);
+                else _KetquachiaManager.Update(_KetquachiaEntity);
             }
 
             GRID_KQCHIA.CurrentRow.Cells[KetquachiaFields.Ngay.Name].Value = _ngayxuat;

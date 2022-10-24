@@ -60,48 +60,48 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_KETQUAINMAU_PK)
 		{
-			KetquainmauEntity _ketquainmauEntity = new KetquainmauEntity();
+			KetquainmauEntity _KetquainmauEntity = new KetquainmauEntity();
 			
-			_ketquainmauEntity.Id = txt_ID.Text.Trim();
-			_ketquainmauEntity.KetquainId = txt_KETQUAINID.Text.Trim();
-			_ketquainmauEntity.Masp = txt_MASP.Text.Trim();
-			_ketquainmauEntity.Tensp = txt_TENSP.Text.Trim();
-			_ketquainmauEntity.Mamau = txt_MAMAU.Text.Trim();
-			_ketquainmauEntity.Tenmau = txt_TENMAU.Text.Trim();
-			_ketquainmauEntity.Xuatdodang = txt_XUATDODANG.Text.Trim();
-			_ketquainmauEntity.Xuatnguyen = txt_XUATNGUYEN.Text.Trim();
-			_ketquainmauEntity.Nhapdodang = txt_NHAPDODANG.Text.Trim();
-			_ketquainmauEntity.Nhapnguyen = txt_NHAPNGUYEN.Text.Trim();
-			_ketquainmauEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_ketquainmauEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_ketquainmauEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_ketquainmauEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_KetquainmauEntity.Id = txt_ID.Text.Trim();
+			_KetquainmauEntity.KetquainId = txt_KETQUAINID.Text.Trim();
+			_KetquainmauEntity.Masp = txt_MASP.Text.Trim();
+			_KetquainmauEntity.Tensp = txt_TENSP.Text.Trim();
+			_KetquainmauEntity.Mamau = txt_MAMAU.Text.Trim();
+			_KetquainmauEntity.Tenmau = txt_TENMAU.Text.Trim();
+			_KetquainmauEntity.Xuatdodang = txt_XUATDODANG.Text.Trim();
+			_KetquainmauEntity.Xuatnguyen = txt_XUATNGUYEN.Text.Trim();
+			_KetquainmauEntity.Nhapdodang = txt_NHAPDODANG.Text.Trim();
+			_KetquainmauEntity.Nhapnguyen = txt_NHAPNGUYEN.Text.Trim();
+			_KetquainmauEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_KetquainmauEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_KetquainmauEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_KetquainmauEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_KETQUAINMAU_PK))
 			{
-				_str_KETQUAINMAU_PK = _KetquainmauManager.InsertV2(_ketquainmauEntity, r_Insert, DT_KETQUAINMAU, BS_KETQUAINMAU);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainmauManager.Convert(_ketquainmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_KETQUAINMAU_PK = _KetquainmauManager.InsertV2(_KetquainmauEntity, r_Insert, DT_KETQUAINMAU, BS_KETQUAINMAU);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainmauManager.Convert(_KetquainmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_KETQUAINMAU.ResetCurrentItem();
 			}
 			else
 			{
-				_KetquainmauManager.Update(_ketquainmauEntity);
+				_KetquainmauManager.Update(_KetquainmauEntity);
 				
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Id.Name].Value = _ketquainmauEntity.Id;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.KetquainId.Name].Value = _ketquainmauEntity.KetquainId;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Masp.Name].Value = _ketquainmauEntity.Masp;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Tensp.Name].Value = _ketquainmauEntity.Tensp;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Mamau.Name].Value = _ketquainmauEntity.Mamau;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Tenmau.Name].Value = _ketquainmauEntity.Tenmau;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Xuatdodang.Name].Value = _ketquainmauEntity.Xuatdodang;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Xuatnguyen.Name].Value = _ketquainmauEntity.Xuatnguyen;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Nhapdodang.Name].Value = _ketquainmauEntity.Nhapdodang;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Nhapnguyen.Name].Value = _ketquainmauEntity.Nhapnguyen;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Ngaytao.Name].Value = _ketquainmauEntity.Ngaytao;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Nguoitao.Name].Value = _ketquainmauEntity.Nguoitao;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Ngaysua.Name].Value = _ketquainmauEntity.Ngaysua;
-				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Nguoisua.Name].Value = _ketquainmauEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainmauManager.Convert(_ketquainmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Id.Name].Value = _KetquainmauEntity.Id;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.KetquainId.Name].Value = _KetquainmauEntity.KetquainId;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Masp.Name].Value = _KetquainmauEntity.Masp;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Tensp.Name].Value = _KetquainmauEntity.Tensp;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Mamau.Name].Value = _KetquainmauEntity.Mamau;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Tenmau.Name].Value = _KetquainmauEntity.Tenmau;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Xuatdodang.Name].Value = _KetquainmauEntity.Xuatdodang;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Xuatnguyen.Name].Value = _KetquainmauEntity.Xuatnguyen;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Nhapdodang.Name].Value = _KetquainmauEntity.Nhapdodang;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Nhapnguyen.Name].Value = _KetquainmauEntity.Nhapnguyen;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Ngaytao.Name].Value = _KetquainmauEntity.Ngaytao;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Nguoitao.Name].Value = _KetquainmauEntity.Nguoitao;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Ngaysua.Name].Value = _KetquainmauEntity.Ngaysua;
+				GRID_KETQUAINMAU.CurrentRow.Cells[KetquainmauFields.Nguoisua.Name].Value = _KetquainmauEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainmauManager.Convert(_KetquainmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_KETQUAINMAU_PK;
 		}

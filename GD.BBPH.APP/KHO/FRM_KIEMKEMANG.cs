@@ -272,29 +272,29 @@ namespace GD.BBPH.APP.KHO
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                SodumangEntity _nhapkhomangEntity = new SodumangEntity();
-                _nhapkhomangEntity.Ngaykiemke = _ngaynhap;
-                _nhapkhomangEntity.Makho = txt_MAKHO.Text.Trim();
-                _nhapkhomangEntity.Tenkho = txt_TENKHO.Text.Trim();
-                _nhapkhomangEntity.Mamang = _view.Row[SodumangFields.Mamang.Name].ToString();
-                _nhapkhomangEntity.Tenmang = _view.Row[SodumangFields.Tenmang.Name].ToString();
-                _nhapkhomangEntity.Somet = Convert.ToDecimal(_view.Row[SodumangFields.Somet.Name].ToString());
-                _nhapkhomangEntity.Sokg = Convert.ToDecimal(_view.Row[SodumangFields.Sokg.Name].ToString());
+                SodumangEntity _NhapkhomangEntity = new SodumangEntity();
+                _NhapkhomangEntity.Ngaykiemke = _ngaynhap;
+                _NhapkhomangEntity.Makho = txt_MAKHO.Text.Trim();
+                _NhapkhomangEntity.Tenkho = txt_TENKHO.Text.Trim();
+                _NhapkhomangEntity.Mamang = _view.Row[SodumangFields.Mamang.Name].ToString();
+                _NhapkhomangEntity.Tenmang = _view.Row[SodumangFields.Tenmang.Name].ToString();
+                _NhapkhomangEntity.Somet = Convert.ToDecimal(_view.Row[SodumangFields.Somet.Name].ToString());
+                _NhapkhomangEntity.Sokg = Convert.ToDecimal(_view.Row[SodumangFields.Sokg.Name].ToString());
 
 
-                if (!string.IsNullOrEmpty(_nhapkhomangEntity.Mamang))
-                    _SodumangEntityCol.Add(_nhapkhomangEntity);
+                if (!string.IsNullOrEmpty(_NhapkhomangEntity.Mamang))
+                    _SodumangEntityCol.Add(_NhapkhomangEntity);
             }
 
-            foreach (SodumangEntity _nhapkhomangEntity in _SodumangEntityCol)
+            foreach (SodumangEntity _NhapkhomangEntity in _SodumangEntityCol)
             {
-                if (_nhapkhomangEntity.IsNew)
+                if (_NhapkhomangEntity.IsNew)
                 {
                     DataRow _r_Insert = DT_SODUMANG_CHITIET.NewRow();
                     DT_SODUMANG_CHITIET.Rows.Add(_r_Insert);
-                    _SodumangManager.InsertV2(_nhapkhomangEntity, _r_Insert, DT_SODUMANG_CHITIET, BS_SODUMANG_CHITIET);
+                    _SodumangManager.InsertV2(_NhapkhomangEntity, _r_Insert, DT_SODUMANG_CHITIET, BS_SODUMANG_CHITIET);
                 }
-                else _SodumangManager.Update(_nhapkhomangEntity);
+                else _SodumangManager.Update(_NhapkhomangEntity);
             }
 
             //if (string.IsNullOrEmpty(_str_DMCHUONG_PK))

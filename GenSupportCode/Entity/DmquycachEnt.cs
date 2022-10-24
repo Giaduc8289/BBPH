@@ -56,40 +56,40 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_DMQUYCACH_PK)
 		{
-			DmquycachEntity _dmquycachEntity = new DmquycachEntity();
+			DmquycachEntity _DmquycachEntity = new DmquycachEntity();
 			
-			_dmquycachEntity.Maquycach = txt_MAQUYCACH.Text.Trim();
-			_dmquycachEntity.Tenquycach = txt_TENQUYCACH.Text.Trim();
-			_dmquycachEntity.Macongdoan = txt_MACONGDOAN.Text.Trim();
-			_dmquycachEntity.Tencongdoan = txt_TENCONGDOAN.Text.Trim();
-			_dmquycachEntity.Manhom = txt_MANHOM.Text.Trim();
-			_dmquycachEntity.Tennhom = txt_TENNHOM.Text.Trim();
-			_dmquycachEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_dmquycachEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_dmquycachEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_dmquycachEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_DmquycachEntity.Maquycach = txt_MAQUYCACH.Text.Trim();
+			_DmquycachEntity.Tenquycach = txt_TENQUYCACH.Text.Trim();
+			_DmquycachEntity.Macongdoan = txt_MACONGDOAN.Text.Trim();
+			_DmquycachEntity.Tencongdoan = txt_TENCONGDOAN.Text.Trim();
+			_DmquycachEntity.Manhom = txt_MANHOM.Text.Trim();
+			_DmquycachEntity.Tennhom = txt_TENNHOM.Text.Trim();
+			_DmquycachEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_DmquycachEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_DmquycachEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_DmquycachEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMQUYCACH_PK))
 			{
-				_str_DMQUYCACH_PK = _DmquycachManager.InsertV2(_dmquycachEntity, r_Insert, DT_DMQUYCACH, BS_DMQUYCACH);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmquycachManager.Convert(_dmquycachEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_DMQUYCACH_PK = _DmquycachManager.InsertV2(_DmquycachEntity, r_Insert, DT_DMQUYCACH, BS_DMQUYCACH);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmquycachManager.Convert(_DmquycachEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_DMQUYCACH.ResetCurrentItem();
 			}
 			else
 			{
-				_DmquycachManager.Update(_dmquycachEntity);
+				_DmquycachManager.Update(_DmquycachEntity);
 				
-				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Maquycach.Name].Value = _dmquycachEntity.Maquycach;
-				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Tenquycach.Name].Value = _dmquycachEntity.Tenquycach;
-				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Macongdoan.Name].Value = _dmquycachEntity.Macongdoan;
-				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Tencongdoan.Name].Value = _dmquycachEntity.Tencongdoan;
-				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Manhom.Name].Value = _dmquycachEntity.Manhom;
-				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Tennhom.Name].Value = _dmquycachEntity.Tennhom;
-				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Ngaytao.Name].Value = _dmquycachEntity.Ngaytao;
-				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Nguoitao.Name].Value = _dmquycachEntity.Nguoitao;
-				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Ngaysua.Name].Value = _dmquycachEntity.Ngaysua;
-				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Nguoisua.Name].Value = _dmquycachEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmquycachManager.Convert(_dmquycachEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Maquycach.Name].Value = _DmquycachEntity.Maquycach;
+				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Tenquycach.Name].Value = _DmquycachEntity.Tenquycach;
+				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Macongdoan.Name].Value = _DmquycachEntity.Macongdoan;
+				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Tencongdoan.Name].Value = _DmquycachEntity.Tencongdoan;
+				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Manhom.Name].Value = _DmquycachEntity.Manhom;
+				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Tennhom.Name].Value = _DmquycachEntity.Tennhom;
+				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Ngaytao.Name].Value = _DmquycachEntity.Ngaytao;
+				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Nguoitao.Name].Value = _DmquycachEntity.Nguoitao;
+				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Ngaysua.Name].Value = _DmquycachEntity.Ngaysua;
+				GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Nguoisua.Name].Value = _DmquycachEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmquycachManager.Convert(_DmquycachEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DMQUYCACH_PK;
 		}

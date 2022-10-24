@@ -49,26 +49,26 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_ROLES_PK)
 		{
-			RolesEntity _rolesEntity = new RolesEntity();
+			RolesEntity _RolesEntity = new RolesEntity();
 			
-			_rolesEntity.Rolesid = txt_ROLESID.Text.Trim();
-			_rolesEntity.Rolesname = txt_ROLESNAME.Text.Trim();
-			_rolesEntity.Description = txt_DESCRIPTION.Text.Trim();
+			_RolesEntity.Rolesid = txt_ROLESID.Text.Trim();
+			_RolesEntity.Rolesname = txt_ROLESNAME.Text.Trim();
+			_RolesEntity.Description = txt_DESCRIPTION.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_ROLES_PK))
 			{
-				_str_ROLES_PK = _RolesManager.InsertV2(_rolesEntity, r_Insert, DT_ROLES, BS_ROLES);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_RolesManager.Convert(_rolesEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_ROLES_PK = _RolesManager.InsertV2(_RolesEntity, r_Insert, DT_ROLES, BS_ROLES);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_RolesManager.Convert(_RolesEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_ROLES.ResetCurrentItem();
 			}
 			else
 			{
-				_RolesManager.Update(_rolesEntity);
+				_RolesManager.Update(_RolesEntity);
 				
-				GRID_ROLES.CurrentRow.Cells[RolesFields.Rolesid.Name].Value = _rolesEntity.Rolesid;
-				GRID_ROLES.CurrentRow.Cells[RolesFields.Rolesname.Name].Value = _rolesEntity.Rolesname;
-				GRID_ROLES.CurrentRow.Cells[RolesFields.Description.Name].Value = _rolesEntity.Description;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_RolesManager.Convert(_rolesEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_ROLES.CurrentRow.Cells[RolesFields.Rolesid.Name].Value = _RolesEntity.Rolesid;
+				GRID_ROLES.CurrentRow.Cells[RolesFields.Rolesname.Name].Value = _RolesEntity.Rolesname;
+				GRID_ROLES.CurrentRow.Cells[RolesFields.Description.Name].Value = _RolesEntity.Description;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_RolesManager.Convert(_RolesEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_ROLES_PK;
 		}

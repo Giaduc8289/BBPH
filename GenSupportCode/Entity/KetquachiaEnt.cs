@@ -70,6 +70,7 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NGUOITAO.Text = _Rowview.Row[KetquachiaFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[KetquachiaFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[KetquachiaFields.Nguoisua.Name].ToString();
+					txt_NANGSUAT.Text = _Rowview.Row[KetquachiaFields.Nangsuat.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KETQUACHIA_CurrentChanged"); }
@@ -77,82 +78,84 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_KETQUACHIA_PK)
 		{
-			KetquachiaEntity _ketquachiaEntity = new KetquachiaEntity();
+			KetquachiaEntity _KetquachiaEntity = new KetquachiaEntity();
 			
-			_ketquachiaEntity.Id = txt_ID.Text.Trim();
-			_ketquachiaEntity.Ngay = txt_NGAY.Text.Trim();
-			_ketquachiaEntity.Ca = txt_CA.Text.Trim();
-			_ketquachiaEntity.Mamay = txt_MAMAY.Text.Trim();
-			_ketquachiaEntity.Lenh = txt_LENH.Text.Trim();
-			_ketquachiaEntity.Masanpham = txt_MASANPHAM.Text.Trim();
-			_ketquachiaEntity.Macongnhan = txt_MACONGNHAN.Text.Trim();
-			_ketquachiaEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
-			_ketquachiaEntity.Tenmay = txt_TENMAY.Text.Trim();
-			_ketquachiaEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
-			_ketquachiaEntity.Dauraghep = txt_DAURAGHEP.Text.Trim();
-			_ketquachiaEntity.Sometvao = txt_SOMETVAO.Text.Trim();
-			_ketquachiaEntity.Sokgvao = txt_SOKGVAO.Text.Trim();
-			_ketquachiaEntity.Socon = txt_SOCON.Text.Trim();
-			_ketquachiaEntity.Thoigianbatdau = txt_THOIGIANBATDAU.Text.Trim();
-			_ketquachiaEntity.Thoigianketthuc = txt_THOIGIANKETTHUC.Text.Trim();
-			_ketquachiaEntity.Thoigianlencuon = txt_THOIGIANLENCUON.Text.Trim();
-			_ketquachiaEntity.Thoigianhacuon = txt_THOIGIANHACUON.Text.Trim();
-			_ketquachiaEntity.Solanhacuon = txt_SOLANHACUON.Text.Trim();
-			_ketquachiaEntity.Thoigiancatdau = txt_THOIGIANCATDAU.Text.Trim();
-			_ketquachiaEntity.Thoigiandoilenh = txt_THOIGIANDOILENH.Text.Trim();
-			_ketquachiaEntity.Thoigiansuco = txt_THOIGIANSUCO.Text.Trim();
-			_ketquachiaEntity.Phein = txt_PHEIN.Text.Trim();
-			_ketquachiaEntity.Pheghep = txt_PHEGHEP.Text.Trim();
-			_ketquachiaEntity.Phechia = txt_PHECHIA.Text.Trim();
-			_ketquachiaEntity.PhethoiNcc = txt_PHETHOINCC.Text.Trim();
-			_ketquachiaEntity.Phesx = txt_PHESX.Text.Trim();
-			_ketquachiaEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_ketquachiaEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_ketquachiaEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_ketquachiaEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_KetquachiaEntity.Id = txt_ID.Text.Trim();
+			_KetquachiaEntity.Ngay = txt_NGAY.Text.Trim();
+			_KetquachiaEntity.Ca = txt_CA.Text.Trim();
+			_KetquachiaEntity.Mamay = txt_MAMAY.Text.Trim();
+			_KetquachiaEntity.Lenh = txt_LENH.Text.Trim();
+			_KetquachiaEntity.Masanpham = txt_MASANPHAM.Text.Trim();
+			_KetquachiaEntity.Macongnhan = txt_MACONGNHAN.Text.Trim();
+			_KetquachiaEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
+			_KetquachiaEntity.Tenmay = txt_TENMAY.Text.Trim();
+			_KetquachiaEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
+			_KetquachiaEntity.Dauraghep = txt_DAURAGHEP.Text.Trim();
+			_KetquachiaEntity.Sometvao = txt_SOMETVAO.Text.Trim();
+			_KetquachiaEntity.Sokgvao = txt_SOKGVAO.Text.Trim();
+			_KetquachiaEntity.Socon = txt_SOCON.Text.Trim();
+			_KetquachiaEntity.Thoigianbatdau = txt_THOIGIANBATDAU.Text.Trim();
+			_KetquachiaEntity.Thoigianketthuc = txt_THOIGIANKETTHUC.Text.Trim();
+			_KetquachiaEntity.Thoigianlencuon = txt_THOIGIANLENCUON.Text.Trim();
+			_KetquachiaEntity.Thoigianhacuon = txt_THOIGIANHACUON.Text.Trim();
+			_KetquachiaEntity.Solanhacuon = txt_SOLANHACUON.Text.Trim();
+			_KetquachiaEntity.Thoigiancatdau = txt_THOIGIANCATDAU.Text.Trim();
+			_KetquachiaEntity.Thoigiandoilenh = txt_THOIGIANDOILENH.Text.Trim();
+			_KetquachiaEntity.Thoigiansuco = txt_THOIGIANSUCO.Text.Trim();
+			_KetquachiaEntity.Phein = txt_PHEIN.Text.Trim();
+			_KetquachiaEntity.Pheghep = txt_PHEGHEP.Text.Trim();
+			_KetquachiaEntity.Phechia = txt_PHECHIA.Text.Trim();
+			_KetquachiaEntity.PhethoiNcc = txt_PHETHOINCC.Text.Trim();
+			_KetquachiaEntity.Phesx = txt_PHESX.Text.Trim();
+			_KetquachiaEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_KetquachiaEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_KetquachiaEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_KetquachiaEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_KetquachiaEntity.Nangsuat = txt_NANGSUAT.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_KETQUACHIA_PK))
 			{
-				_str_KETQUACHIA_PK = _KetquachiaManager.InsertV2(_ketquachiaEntity, r_Insert, DT_KETQUACHIA, BS_KETQUACHIA);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquachiaManager.Convert(_ketquachiaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_KETQUACHIA_PK = _KetquachiaManager.InsertV2(_KetquachiaEntity, r_Insert, DT_KETQUACHIA, BS_KETQUACHIA);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquachiaManager.Convert(_KetquachiaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_KETQUACHIA.ResetCurrentItem();
 			}
 			else
 			{
-				_KetquachiaManager.Update(_ketquachiaEntity);
+				_KetquachiaManager.Update(_KetquachiaEntity);
 				
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Id.Name].Value = _ketquachiaEntity.Id;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Ngay.Name].Value = _ketquachiaEntity.Ngay;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Ca.Name].Value = _ketquachiaEntity.Ca;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Mamay.Name].Value = _ketquachiaEntity.Mamay;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Lenh.Name].Value = _ketquachiaEntity.Lenh;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Masanpham.Name].Value = _ketquachiaEntity.Masanpham;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Macongnhan.Name].Value = _ketquachiaEntity.Macongnhan;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Tensanpham.Name].Value = _ketquachiaEntity.Tensanpham;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Tenmay.Name].Value = _ketquachiaEntity.Tenmay;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Tencongnhan.Name].Value = _ketquachiaEntity.Tencongnhan;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Dauraghep.Name].Value = _ketquachiaEntity.Dauraghep;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Sometvao.Name].Value = _ketquachiaEntity.Sometvao;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Sokgvao.Name].Value = _ketquachiaEntity.Sokgvao;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Socon.Name].Value = _ketquachiaEntity.Socon;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigianbatdau.Name].Value = _ketquachiaEntity.Thoigianbatdau;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigianketthuc.Name].Value = _ketquachiaEntity.Thoigianketthuc;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigianlencuon.Name].Value = _ketquachiaEntity.Thoigianlencuon;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigianhacuon.Name].Value = _ketquachiaEntity.Thoigianhacuon;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Solanhacuon.Name].Value = _ketquachiaEntity.Solanhacuon;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigiancatdau.Name].Value = _ketquachiaEntity.Thoigiancatdau;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigiandoilenh.Name].Value = _ketquachiaEntity.Thoigiandoilenh;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigiansuco.Name].Value = _ketquachiaEntity.Thoigiansuco;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Phein.Name].Value = _ketquachiaEntity.Phein;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Pheghep.Name].Value = _ketquachiaEntity.Pheghep;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Phechia.Name].Value = _ketquachiaEntity.Phechia;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.PhethoiNcc.Name].Value = _ketquachiaEntity.PhethoiNcc;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Phesx.Name].Value = _ketquachiaEntity.Phesx;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Ngaytao.Name].Value = _ketquachiaEntity.Ngaytao;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Nguoitao.Name].Value = _ketquachiaEntity.Nguoitao;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Ngaysua.Name].Value = _ketquachiaEntity.Ngaysua;
-				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Nguoisua.Name].Value = _ketquachiaEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquachiaManager.Convert(_ketquachiaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Id.Name].Value = _KetquachiaEntity.Id;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Ngay.Name].Value = _KetquachiaEntity.Ngay;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Ca.Name].Value = _KetquachiaEntity.Ca;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Mamay.Name].Value = _KetquachiaEntity.Mamay;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Lenh.Name].Value = _KetquachiaEntity.Lenh;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Masanpham.Name].Value = _KetquachiaEntity.Masanpham;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Macongnhan.Name].Value = _KetquachiaEntity.Macongnhan;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Tensanpham.Name].Value = _KetquachiaEntity.Tensanpham;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Tenmay.Name].Value = _KetquachiaEntity.Tenmay;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Tencongnhan.Name].Value = _KetquachiaEntity.Tencongnhan;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Dauraghep.Name].Value = _KetquachiaEntity.Dauraghep;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Sometvao.Name].Value = _KetquachiaEntity.Sometvao;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Sokgvao.Name].Value = _KetquachiaEntity.Sokgvao;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Socon.Name].Value = _KetquachiaEntity.Socon;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigianbatdau.Name].Value = _KetquachiaEntity.Thoigianbatdau;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigianketthuc.Name].Value = _KetquachiaEntity.Thoigianketthuc;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigianlencuon.Name].Value = _KetquachiaEntity.Thoigianlencuon;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigianhacuon.Name].Value = _KetquachiaEntity.Thoigianhacuon;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Solanhacuon.Name].Value = _KetquachiaEntity.Solanhacuon;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigiancatdau.Name].Value = _KetquachiaEntity.Thoigiancatdau;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigiandoilenh.Name].Value = _KetquachiaEntity.Thoigiandoilenh;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Thoigiansuco.Name].Value = _KetquachiaEntity.Thoigiansuco;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Phein.Name].Value = _KetquachiaEntity.Phein;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Pheghep.Name].Value = _KetquachiaEntity.Pheghep;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Phechia.Name].Value = _KetquachiaEntity.Phechia;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.PhethoiNcc.Name].Value = _KetquachiaEntity.PhethoiNcc;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Phesx.Name].Value = _KetquachiaEntity.Phesx;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Ngaytao.Name].Value = _KetquachiaEntity.Ngaytao;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Nguoitao.Name].Value = _KetquachiaEntity.Nguoitao;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Ngaysua.Name].Value = _KetquachiaEntity.Ngaysua;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Nguoisua.Name].Value = _KetquachiaEntity.Nguoisua;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Nangsuat.Name].Value = _KetquachiaEntity.Nangsuat;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquachiaManager.Convert(_KetquachiaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_KETQUACHIA_PK;
 		}

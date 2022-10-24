@@ -278,38 +278,38 @@ namespace GD.BBPH.APP.THOI
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                TknguyenlieuthoiEntity _tknguyenlieuthoiEntity = new TknguyenlieuthoiEntity();
-                _tknguyenlieuthoiEntity.Ngay = _ngay;
-                _tknguyenlieuthoiEntity.Ca = _ca;
-                _tknguyenlieuthoiEntity.Manguyenlieu = _view.Row[TknguyenlieuthoiFields.Manguyenlieu.Name].ToString();
-                _tknguyenlieuthoiEntity.Tennguyenlieu = _view.Row[TknguyenlieuthoiFields.Tennguyenlieu.Name].ToString();
-                try { _tknguyenlieuthoiEntity.Klnhap = Convert.ToDecimal(_view.Row[TknguyenlieuthoiFields.Klnhap.Name].ToString()); }
+                TknguyenlieuthoiEntity _TknguyenlieuthoiEntity = new TknguyenlieuthoiEntity();
+                _TknguyenlieuthoiEntity.Ngay = _ngay;
+                _TknguyenlieuthoiEntity.Ca = _ca;
+                _TknguyenlieuthoiEntity.Manguyenlieu = _view.Row[TknguyenlieuthoiFields.Manguyenlieu.Name].ToString();
+                _TknguyenlieuthoiEntity.Tennguyenlieu = _view.Row[TknguyenlieuthoiFields.Tennguyenlieu.Name].ToString();
+                try { _TknguyenlieuthoiEntity.Klnhap = Convert.ToDecimal(_view.Row[TknguyenlieuthoiFields.Klnhap.Name].ToString()); }
                 catch { }
-                try { _tknguyenlieuthoiEntity.Klxuat = Convert.ToDecimal(_view.Row[TknguyenlieuthoiFields.Klxuat.Name].ToString()); }
+                try { _TknguyenlieuthoiEntity.Klxuat = Convert.ToDecimal(_view.Row[TknguyenlieuthoiFields.Klxuat.Name].ToString()); }
                 catch { }
                 #region xét isnew
-                try { _tknguyenlieuthoiEntity.Id = Convert.ToInt64(_view[TknguyenlieuthoiFields.Id.Name].ToString()); }
+                try { _TknguyenlieuthoiEntity.Id = Convert.ToInt64(_view[TknguyenlieuthoiFields.Id.Name].ToString()); }
                 catch { }
 
-                _tknguyenlieuthoiEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
-                if (_tknguyenlieuthoiEntity.IsNew)
+                _TknguyenlieuthoiEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_TknguyenlieuthoiEntity.IsNew)
                 {
-                    EntityCollection drDHCT = (new TknguyenlieuthoiManager()).SelectById(_tknguyenlieuthoiEntity.Id);
+                    EntityCollection drDHCT = (new TknguyenlieuthoiManager()).SelectById(_TknguyenlieuthoiEntity.Id);
                     if (drDHCT.Count > 0)
                     {
-                        //_tknguyenlieuthoiEntity.Ngaysua = DateTime.Now;
-                        //_tknguyenlieuthoiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                        _tknguyenlieuthoiEntity.IsNew = false;
+                        //_TknguyenlieuthoiEntity.Ngaysua = DateTime.Now;
+                        //_TknguyenlieuthoiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _TknguyenlieuthoiEntity.IsNew = false;
                     }
                     //else
                     //{
-                    //    _tknguyenlieuthoiEntity.Ngaytao = DateTime.Now;
-                    //    _tknguyenlieuthoiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    //    _TknguyenlieuthoiEntity.Ngaytao = DateTime.Now;
+                    //    _TknguyenlieuthoiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                     //}
                 }
                 #endregion
-                if (!string.IsNullOrEmpty(_tknguyenlieuthoiEntity.Manguyenlieu))
-                    _TknguyenlieuthoiEntityCol.Add(_tknguyenlieuthoiEntity);
+                if (!string.IsNullOrEmpty(_TknguyenlieuthoiEntity.Manguyenlieu))
+                    _TknguyenlieuthoiEntityCol.Add(_TknguyenlieuthoiEntity);
             }
             //if (string.IsNullOrEmpty(_str_Tknguyenlieuthoi_PK))
             //{
@@ -324,17 +324,17 @@ namespace GD.BBPH.APP.THOI
             //else
             //{
                 //_TknguyenlieuthoiManager.Update(_TknguyenlieuthoiEntity);
-                foreach (TknguyenlieuthoiEntity _tknguyenlieuthoiEntity in _TknguyenlieuthoiEntityCol)
+                foreach (TknguyenlieuthoiEntity _TknguyenlieuthoiEntity in _TknguyenlieuthoiEntityCol)
                 {
-                    if (_tknguyenlieuthoiEntity.IsNew)
+                    if (_TknguyenlieuthoiEntity.IsNew)
                     {
                         DataRow _r_Insert = DT_TKNLTHOI_CHITIET.NewRow();
                         DT_TKNLTHOI_CHITIET.Rows.Add(_r_Insert);
-                        _TknguyenlieuthoiManager.InsertV2(_tknguyenlieuthoiEntity, _r_Insert, DT_TKNLTHOI_CHITIET, BS_TKNLTHOI_CHITIET);
+                        _TknguyenlieuthoiManager.InsertV2(_TknguyenlieuthoiEntity, _r_Insert, DT_TKNLTHOI_CHITIET, BS_TKNLTHOI_CHITIET);
                     }
-                    else _TknguyenlieuthoiManager.Update(_tknguyenlieuthoiEntity);
+                    else _TknguyenlieuthoiManager.Update(_TknguyenlieuthoiEntity);
                 }
-            //GRID_TKNLTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Id.Name].Value = _tknguyenlieuthoiEntity.Id;
+            //GRID_TKNLTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Id.Name].Value = _TknguyenlieuthoiEntity.Id;
                 GRID_TKNLTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Ngay.Name].Value = _ngay;
                 GRID_TKNLTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Ca.Name].Value = _ca;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_TknguyenlieuthoiManager.Convert(_TknguyenlieuthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);

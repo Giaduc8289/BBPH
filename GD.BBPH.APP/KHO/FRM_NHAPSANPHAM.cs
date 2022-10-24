@@ -291,55 +291,55 @@ namespace GD.BBPH.APP.KHO
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                NhapkhosanphamEntity _nhapkhosanphamEntity = new NhapkhosanphamEntity();
-                _nhapkhosanphamEntity.Ngaynhap = _ngaynhap;
-                _nhapkhosanphamEntity.Makho = txt_MAKHO.Text.Trim();
-                _nhapkhosanphamEntity.Tenkho = txt_TENKHO.Text.Trim();
-                _nhapkhosanphamEntity.Masanpham = _view.Row[NhapkhosanphamFields.Masanpham.Name].ToString();
-                _nhapkhosanphamEntity.Tensanpham = _view.Row[NhapkhosanphamFields.Tensanpham.Name].ToString();
-                _nhapkhosanphamEntity.Soluong = Convert.ToDecimal(_view.Row[NhapkhosanphamFields.Soluong.Name].ToString());
-                _nhapkhosanphamEntity.Somet = Convert.ToDecimal(_view.Row[NhapkhosanphamFields.Somet.Name].ToString());
-                _nhapkhosanphamEntity.Sokg = Convert.ToDecimal(_view.Row[NhapkhosanphamFields.Sokg.Name].ToString());
-                _nhapkhosanphamEntity.Malydo = _view.Row[NhapkhosanphamFields.Malydo.Name].ToString();
-                _nhapkhosanphamEntity.Tenlydo = _view.Row[NhapkhosanphamFields.Tenlydo.Name].ToString();
-                _nhapkhosanphamEntity.Lenhsx = _view.Row[NhapkhosanphamFields.Lenhsx.Name].ToString();
-                _nhapkhosanphamEntity.Sohopdongmua = _view.Row[NhapkhosanphamFields.Sohopdongmua.Name].ToString();
+                NhapkhosanphamEntity _NhapkhosanphamEntity = new NhapkhosanphamEntity();
+                _NhapkhosanphamEntity.Ngaynhap = _ngaynhap;
+                _NhapkhosanphamEntity.Makho = txt_MAKHO.Text.Trim();
+                _NhapkhosanphamEntity.Tenkho = txt_TENKHO.Text.Trim();
+                _NhapkhosanphamEntity.Masanpham = _view.Row[NhapkhosanphamFields.Masanpham.Name].ToString();
+                _NhapkhosanphamEntity.Tensanpham = _view.Row[NhapkhosanphamFields.Tensanpham.Name].ToString();
+                _NhapkhosanphamEntity.Soluong = Convert.ToDecimal(_view.Row[NhapkhosanphamFields.Soluong.Name].ToString());
+                _NhapkhosanphamEntity.Somet = Convert.ToDecimal(_view.Row[NhapkhosanphamFields.Somet.Name].ToString());
+                _NhapkhosanphamEntity.Sokg = Convert.ToDecimal(_view.Row[NhapkhosanphamFields.Sokg.Name].ToString());
+                _NhapkhosanphamEntity.Malydo = _view.Row[NhapkhosanphamFields.Malydo.Name].ToString();
+                _NhapkhosanphamEntity.Tenlydo = _view.Row[NhapkhosanphamFields.Tenlydo.Name].ToString();
+                _NhapkhosanphamEntity.Lenhsx = _view.Row[NhapkhosanphamFields.Lenhsx.Name].ToString();
+                _NhapkhosanphamEntity.Sohopdongmua = _view.Row[NhapkhosanphamFields.Sohopdongmua.Name].ToString();
 
                 #region xét isnew
-                try { _nhapkhosanphamEntity.Id = Convert.ToInt64(_view[NhapkhosanphamFields.Id.Name].ToString()); }
+                try { _NhapkhosanphamEntity.Id = Convert.ToInt64(_view[NhapkhosanphamFields.Id.Name].ToString()); }
                 catch { }
 
-                _nhapkhosanphamEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
-                if (_nhapkhosanphamEntity.IsNew)
+                _NhapkhosanphamEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_NhapkhosanphamEntity.IsNew)
                 {
-                    EntityCollection drDHCT = (new NhapkhosanphamManager()).SelectById(_nhapkhosanphamEntity.Id);
+                    EntityCollection drDHCT = (new NhapkhosanphamManager()).SelectById(_NhapkhosanphamEntity.Id);
                     if (drDHCT.Count > 0)
                     {
-                        _nhapkhosanphamEntity.Ngaysua = DateTime.Now;
-                        _nhapkhosanphamEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                        _nhapkhosanphamEntity.IsNew = false;
+                        _NhapkhosanphamEntity.Ngaysua = DateTime.Now;
+                        _NhapkhosanphamEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _NhapkhosanphamEntity.IsNew = false;
                     }
                     else
                     {
-                        _nhapkhosanphamEntity.Ngaytao = DateTime.Now;
-                        _nhapkhosanphamEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                        _NhapkhosanphamEntity.Ngaytao = DateTime.Now;
+                        _NhapkhosanphamEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                     }
                 }
                 #endregion
 
-                if (!string.IsNullOrEmpty(_nhapkhosanphamEntity.Masanpham))
-                    _NhapkhosanphamEntityCol.Add(_nhapkhosanphamEntity);
+                if (!string.IsNullOrEmpty(_NhapkhosanphamEntity.Masanpham))
+                    _NhapkhosanphamEntityCol.Add(_NhapkhosanphamEntity);
             }
 
-            foreach (NhapkhosanphamEntity _nhapkhosanphamEntity in _NhapkhosanphamEntityCol)
+            foreach (NhapkhosanphamEntity _NhapkhosanphamEntity in _NhapkhosanphamEntityCol)
             {
-                if (_nhapkhosanphamEntity.IsNew)
+                if (_NhapkhosanphamEntity.IsNew)
                 {
                     DataRow _r_Insert = DT_NHAPSANPHAM_CHITIET.NewRow();
                     DT_NHAPSANPHAM_CHITIET.Rows.Add(_r_Insert);
-                    _NhapkhosanphamManager.InsertV2(_nhapkhosanphamEntity, _r_Insert, DT_NHAPSANPHAM_CHITIET, BS_NHAPSANPHAM_CHITIET);
+                    _NhapkhosanphamManager.InsertV2(_NhapkhosanphamEntity, _r_Insert, DT_NHAPSANPHAM_CHITIET, BS_NHAPSANPHAM_CHITIET);
                 }
-                else _NhapkhosanphamManager.Update(_nhapkhosanphamEntity);
+                else _NhapkhosanphamManager.Update(_NhapkhosanphamEntity);
             }
 
             //if (string.IsNullOrEmpty(_str_DMCHUONG_PK))

@@ -165,6 +165,12 @@
     <Compile Include="CHIA\FRM_KQCHIA.designer.cs">
       <DependentUpon>FRM_KQCHIA.cs</DependentUpon>
     </Compile>
+    <Compile Include="DANHMUC\FRM_DINHMUCTHOIGIAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DINHMUCTHOIGIAN.designer.cs">
+      <DependentUpon>FRM_DINHMUCTHOIGIAN.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMCHUNGLOAI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -535,6 +541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CHIA\FRM_KQCHIA.resx">
       <DependentUpon>FRM_KQCHIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DINHMUCTHOIGIAN.resx">
+      <DependentUpon>FRM_DINHMUCTHOIGIAN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMCHUNGLOAI.resx">
       <DependentUpon>FRM_DMCHUNGLOAI.cs</DependentUpon>
@@ -1063,12 +1072,14 @@
     <Content Include="XMLCONFIG\FRM_CONGSUATMAY.xml" />
     <Content Include="XMLCONFIG\FRM_CTPTMANG.xml" />
     <Content Include="XMLCONFIG\FRM_CTPTMANGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_DINHMUCTHOIGIAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMCHUNGLOAI.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGNHAN_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAY.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_DMBOPHAN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHANG_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMMANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU_CHON.xml" />

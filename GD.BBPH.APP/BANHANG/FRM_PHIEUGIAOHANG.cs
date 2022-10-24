@@ -686,9 +686,9 @@ namespace GD.BBPH.APP.BANHANG
                 string _Maubaocao = "PHIEUGIAOHANG_DC.rdlc";
                 //try
                 //{
-                //    PhieugiaohangHEntity _phieugiaohangHEntity = new PhieugiaohangHManager().SelectOne(_Sophieugiao);
-                //    DondathangHEntity _dondathangHEntity = new DondathangHManager().SelectOne(_PhieugiaohangHEntity.Madon);
-                //    if (_dondathangHEntity.Ngaybaogia < Convert.ToDateTime("01/02/2022") && _phieugiaohangHEntity.Ngaygiao >= Convert.ToDateTime("01/02/2022"))
+                //    PhieugiaohangHEntity _PhieugiaohangHEntity = new PhieugiaohangHManager().SelectOne(_Sophieugiao);
+                //    DondathangHEntity _DondathangHEntity = new DondathangHManager().SelectOne(_PhieugiaohangHEntity.Madon);
+                //    if (_DondathangHEntity.Ngaybaogia < Convert.ToDateTime("01/02/2022") && _PhieugiaohangHEntity.Ngaygiao >= Convert.ToDateTime("01/02/2022"))
                 //    {
                 //        _Maubaocao = "PHIEUGIAOHANG_DC.rdlc";
                 //    }

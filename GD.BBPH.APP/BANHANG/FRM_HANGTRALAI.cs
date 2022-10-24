@@ -147,58 +147,58 @@ namespace GD.BBPH.APP.BANHANG
 
         private string Save_Data(string _str_Hangtralai_PK)
         {
-            HangtralaiEntity _hangtralaiEntity = new HangtralaiEntity();
+            HangtralaiEntity _HangtralaiEntity = new HangtralaiEntity();
 
-            //_hangtralaiEntity.Id = Convert.ToInt64(txt_MAHIEU.Text.Trim());
-            _hangtralaiEntity.Sophieugiao = txt_Sophieugiao.Text.Trim();
-            _hangtralaiEntity.Ngaygiao = Convert.ToDateTime(txt_Ngaygiao.Text.Trim());
-            _hangtralaiEntity.Madon = txt_Madon.Text.Trim();
-            _hangtralaiEntity.Makhach = txt_Makhach.Text.Trim();
-            _hangtralaiEntity.Tenkhach = txt_Tenkhach.Text.Trim();
-            _hangtralaiEntity.Ngaydat = Convert.ToDateTime(txt_Ngaydat.Text.Trim());
-            _hangtralaiEntity.Masp = txt_Masp.Text.Trim();
-            _hangtralaiEntity.Tenhang = txt_Tenhang.Text.Trim();
-            _hangtralaiEntity.Soluonggiao = Convert.ToDecimal(txt_Soluonggiao.Text.Trim());
-            _hangtralaiEntity.Soluongtralai = Convert.ToDecimal(txt_Soluongtralai.Text.Trim());
-            _hangtralaiEntity.Ngaytra = Convert.ToDateTime(txt_Ngaytra.Text.Trim());
-            _hangtralaiEntity.Nguyennhan = txt_Nguyennhan.Text.Trim();
-            //_hangtralaiEntity.Ngaytao = txt_Ngaytao.Text.Trim();
-            //_hangtralaiEntity.Nguoitao = txt_Nguoitao.Text.Trim();
-            //_hangtralaiEntity.Ngaysua = txt_Ngaysua.Text.Trim();
-            //_hangtralaiEntity.Nguoisua = txt_Nguoisua.Text.Trim();
+            //_HangtralaiEntity.Id = Convert.ToInt64(txt_MAHIEU.Text.Trim());
+            _HangtralaiEntity.Sophieugiao = txt_Sophieugiao.Text.Trim();
+            _HangtralaiEntity.Ngaygiao = Convert.ToDateTime(txt_Ngaygiao.Text.Trim());
+            _HangtralaiEntity.Madon = txt_Madon.Text.Trim();
+            _HangtralaiEntity.Makhach = txt_Makhach.Text.Trim();
+            _HangtralaiEntity.Tenkhach = txt_Tenkhach.Text.Trim();
+            _HangtralaiEntity.Ngaydat = Convert.ToDateTime(txt_Ngaydat.Text.Trim());
+            _HangtralaiEntity.Masp = txt_Masp.Text.Trim();
+            _HangtralaiEntity.Tenhang = txt_Tenhang.Text.Trim();
+            _HangtralaiEntity.Soluonggiao = Convert.ToDecimal(txt_Soluonggiao.Text.Trim());
+            _HangtralaiEntity.Soluongtralai = Convert.ToDecimal(txt_Soluongtralai.Text.Trim());
+            _HangtralaiEntity.Ngaytra = Convert.ToDateTime(txt_Ngaytra.Text.Trim());
+            _HangtralaiEntity.Nguyennhan = txt_Nguyennhan.Text.Trim();
+            //_HangtralaiEntity.Ngaytao = txt_Ngaytao.Text.Trim();
+            //_HangtralaiEntity.Nguoitao = txt_Nguoitao.Text.Trim();
+            //_HangtralaiEntity.Ngaysua = txt_Ngaysua.Text.Trim();
+            //_HangtralaiEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 
             if (string.IsNullOrEmpty(_str_Hangtralai_PK))
             {
-                _hangtralaiEntity.Ngaytao = DateTime.Now;
-                _hangtralaiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_Hangtralai_PK = _HangtralaiManager.InsertV2(_hangtralaiEntity, r_Insert, DT_HANGTRALAI, BS_HANGTRALAI);
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_HangtralaiManager.Convert(_hangtralaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                _HangtralaiEntity.Ngaytao = DateTime.Now;
+                _HangtralaiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                _str_Hangtralai_PK = _HangtralaiManager.InsertV2(_HangtralaiEntity, r_Insert, DT_HANGTRALAI, BS_HANGTRALAI);
+                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_HangtralaiManager.Convert(_HangtralaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_HANGTRALAI.ResetCurrentItem();
             }
             else
             {
-                _hangtralaiEntity.Ngaysua = DateTime.Now;
-                _hangtralaiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                _HangtralaiManager.Update(_hangtralaiEntity);
+                _HangtralaiEntity.Ngaysua = DateTime.Now;
+                _HangtralaiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                _HangtralaiManager.Update(_HangtralaiEntity);
 
-                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Id.Name].Value = _hangtralaiEntity.Id;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Sophieugiao.Name].Value = _hangtralaiEntity.Sophieugiao;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaygiao.Name].Value = _hangtralaiEntity.Ngaygiao;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Madon.Name].Value = _hangtralaiEntity.Madon;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Makhach.Name].Value = _hangtralaiEntity.Makhach;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Tenkhach.Name].Value = _hangtralaiEntity.Tenkhach;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaydat.Name].Value = _hangtralaiEntity.Ngaydat;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Masp.Name].Value = _hangtralaiEntity.Masp;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Tenhang.Name].Value = _hangtralaiEntity.Tenhang;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Soluonggiao.Name].Value = _hangtralaiEntity.Soluonggiao;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Soluongtralai.Name].Value = _hangtralaiEntity.Soluongtralai;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaytra.Name].Value = _hangtralaiEntity.Ngaytra;
-                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguyennhan.Name].Value = _hangtralaiEntity.Nguyennhan;
-                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaytao.Name].Value = _hangtralaiEntity.Ngaytao;
-                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguoitao.Name].Value = _hangtralaiEntity.Nguoitao;
-                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaysua.Name].Value = _hangtralaiEntity.Ngaysua;
-                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguoisua.Name].Value = _hangtralaiEntity.Nguoisua;
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_HangtralaiManager.Convert(_hangtralaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Id.Name].Value = _HangtralaiEntity.Id;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Sophieugiao.Name].Value = _HangtralaiEntity.Sophieugiao;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaygiao.Name].Value = _HangtralaiEntity.Ngaygiao;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Madon.Name].Value = _HangtralaiEntity.Madon;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Makhach.Name].Value = _HangtralaiEntity.Makhach;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Tenkhach.Name].Value = _HangtralaiEntity.Tenkhach;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaydat.Name].Value = _HangtralaiEntity.Ngaydat;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Masp.Name].Value = _HangtralaiEntity.Masp;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Tenhang.Name].Value = _HangtralaiEntity.Tenhang;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Soluonggiao.Name].Value = _HangtralaiEntity.Soluonggiao;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Soluongtralai.Name].Value = _HangtralaiEntity.Soluongtralai;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaytra.Name].Value = _HangtralaiEntity.Ngaytra;
+                GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguyennhan.Name].Value = _HangtralaiEntity.Nguyennhan;
+                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaytao.Name].Value = _HangtralaiEntity.Ngaytao;
+                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguoitao.Name].Value = _HangtralaiEntity.Nguoitao;
+                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaysua.Name].Value = _HangtralaiEntity.Ngaysua;
+                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguoisua.Name].Value = _HangtralaiEntity.Nguoisua;
+                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_HangtralaiManager.Convert(_HangtralaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_Hangtralai_PK;
         }

@@ -65,58 +65,58 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_PHIEUGIAOHANGD_PK)
 		{
-			PhieugiaohangDEntity _phieugiaohangDEntity = new PhieugiaohangDEntity();
+			PhieugiaohangDEntity _PhieugiaohangDEntity = new PhieugiaohangDEntity();
 			
-			_phieugiaohangDEntity.Id = txt_ID.Text.Trim();
-			_phieugiaohangDEntity.Sophieu = txt_SOPHIEU.Text.Trim();
-			_phieugiaohangDEntity.Ngaygiao = txt_NGAYGIAO.Text.Trim();
-			_phieugiaohangDEntity.Madon = txt_MADON.Text.Trim();
-			_phieugiaohangDEntity.DonchitietId = txt_DONCHITIETID.Text.Trim();
-			_phieugiaohangDEntity.Ngaydat = txt_NGAYDAT.Text.Trim();
-			_phieugiaohangDEntity.Makhach = txt_MAKHACH.Text.Trim();
-			_phieugiaohangDEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-			_phieugiaohangDEntity.Loaihang = txt_LOAIHANG.Text.Trim();
-			_phieugiaohangDEntity.Masp = txt_MASP.Text.Trim();
-			_phieugiaohangDEntity.Tenhang = txt_TENHANG.Text.Trim();
-			_phieugiaohangDEntity.Soluong = txt_SOLUONG.Text.Trim();
-			_phieugiaohangDEntity.Dongia = txt_DONGIA.Text.Trim();
-			_phieugiaohangDEntity.Thanhtien = txt_THANHTIEN.Text.Trim();
-			_phieugiaohangDEntity.Ghichu = txt_GHICHU.Text.Trim();
-			_phieugiaohangDEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_phieugiaohangDEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_phieugiaohangDEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_phieugiaohangDEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_PhieugiaohangDEntity.Id = txt_ID.Text.Trim();
+			_PhieugiaohangDEntity.Sophieu = txt_SOPHIEU.Text.Trim();
+			_PhieugiaohangDEntity.Ngaygiao = txt_NGAYGIAO.Text.Trim();
+			_PhieugiaohangDEntity.Madon = txt_MADON.Text.Trim();
+			_PhieugiaohangDEntity.DonchitietId = txt_DONCHITIETID.Text.Trim();
+			_PhieugiaohangDEntity.Ngaydat = txt_NGAYDAT.Text.Trim();
+			_PhieugiaohangDEntity.Makhach = txt_MAKHACH.Text.Trim();
+			_PhieugiaohangDEntity.Tenkhach = txt_TENKHACH.Text.Trim();
+			_PhieugiaohangDEntity.Loaihang = txt_LOAIHANG.Text.Trim();
+			_PhieugiaohangDEntity.Masp = txt_MASP.Text.Trim();
+			_PhieugiaohangDEntity.Tenhang = txt_TENHANG.Text.Trim();
+			_PhieugiaohangDEntity.Soluong = txt_SOLUONG.Text.Trim();
+			_PhieugiaohangDEntity.Dongia = txt_DONGIA.Text.Trim();
+			_PhieugiaohangDEntity.Thanhtien = txt_THANHTIEN.Text.Trim();
+			_PhieugiaohangDEntity.Ghichu = txt_GHICHU.Text.Trim();
+			_PhieugiaohangDEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_PhieugiaohangDEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_PhieugiaohangDEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_PhieugiaohangDEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_PHIEUGIAOHANGD_PK))
 			{
-				_str_PHIEUGIAOHANGD_PK = _PhieugiaohangDManager.InsertV2(_phieugiaohangDEntity, r_Insert, DT_PHIEUGIAOHANGD, BS_PHIEUGIAOHANGD);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_PhieugiaohangDManager.Convert(_phieugiaohangDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_PHIEUGIAOHANGD_PK = _PhieugiaohangDManager.InsertV2(_PhieugiaohangDEntity, r_Insert, DT_PHIEUGIAOHANGD, BS_PHIEUGIAOHANGD);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_PhieugiaohangDManager.Convert(_PhieugiaohangDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_PHIEUGIAOHANGD.ResetCurrentItem();
 			}
 			else
 			{
-				_PhieugiaohangDManager.Update(_phieugiaohangDEntity);
+				_PhieugiaohangDManager.Update(_PhieugiaohangDEntity);
 				
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Id.Name].Value = _phieugiaohangDEntity.Id;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Sophieu.Name].Value = _phieugiaohangDEntity.Sophieu;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Ngaygiao.Name].Value = _phieugiaohangDEntity.Ngaygiao;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Madon.Name].Value = _phieugiaohangDEntity.Madon;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.DonchitietId.Name].Value = _phieugiaohangDEntity.DonchitietId;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Ngaydat.Name].Value = _phieugiaohangDEntity.Ngaydat;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Makhach.Name].Value = _phieugiaohangDEntity.Makhach;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Tenkhach.Name].Value = _phieugiaohangDEntity.Tenkhach;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Loaihang.Name].Value = _phieugiaohangDEntity.Loaihang;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Masp.Name].Value = _phieugiaohangDEntity.Masp;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Tenhang.Name].Value = _phieugiaohangDEntity.Tenhang;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Soluong.Name].Value = _phieugiaohangDEntity.Soluong;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Dongia.Name].Value = _phieugiaohangDEntity.Dongia;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Thanhtien.Name].Value = _phieugiaohangDEntity.Thanhtien;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Ghichu.Name].Value = _phieugiaohangDEntity.Ghichu;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Ngaytao.Name].Value = _phieugiaohangDEntity.Ngaytao;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Nguoitao.Name].Value = _phieugiaohangDEntity.Nguoitao;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Ngaysua.Name].Value = _phieugiaohangDEntity.Ngaysua;
-				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Nguoisua.Name].Value = _phieugiaohangDEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_PhieugiaohangDManager.Convert(_phieugiaohangDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Id.Name].Value = _PhieugiaohangDEntity.Id;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Sophieu.Name].Value = _PhieugiaohangDEntity.Sophieu;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Ngaygiao.Name].Value = _PhieugiaohangDEntity.Ngaygiao;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Madon.Name].Value = _PhieugiaohangDEntity.Madon;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.DonchitietId.Name].Value = _PhieugiaohangDEntity.DonchitietId;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Ngaydat.Name].Value = _PhieugiaohangDEntity.Ngaydat;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Makhach.Name].Value = _PhieugiaohangDEntity.Makhach;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Tenkhach.Name].Value = _PhieugiaohangDEntity.Tenkhach;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Loaihang.Name].Value = _PhieugiaohangDEntity.Loaihang;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Masp.Name].Value = _PhieugiaohangDEntity.Masp;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Tenhang.Name].Value = _PhieugiaohangDEntity.Tenhang;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Soluong.Name].Value = _PhieugiaohangDEntity.Soluong;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Dongia.Name].Value = _PhieugiaohangDEntity.Dongia;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Thanhtien.Name].Value = _PhieugiaohangDEntity.Thanhtien;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Ghichu.Name].Value = _PhieugiaohangDEntity.Ghichu;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Ngaytao.Name].Value = _PhieugiaohangDEntity.Ngaytao;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Nguoitao.Name].Value = _PhieugiaohangDEntity.Nguoitao;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Ngaysua.Name].Value = _PhieugiaohangDEntity.Ngaysua;
+				GRID_PHIEUGIAOHANGD.CurrentRow.Cells[PhieugiaohangDFields.Nguoisua.Name].Value = _PhieugiaohangDEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_PhieugiaohangDManager.Convert(_PhieugiaohangDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_PHIEUGIAOHANGD_PK;
 		}

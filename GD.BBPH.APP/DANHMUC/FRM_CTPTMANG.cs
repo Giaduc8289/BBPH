@@ -334,8 +334,8 @@ namespace GD.BBPH.APP.DANHMUC
                 _CtptmangHEntity.Ngaytao = DateTime.Now;
                 _CtptmangHEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_DMCHUONG_PK = _CtptmangHManager.InsertV2(_CtptmangHEntity, r_Insert, DT_CTPTMANG_H, BS_CTPTMANG_H);
-                foreach (CtptmangDEntity _tpsEntity in _CtptmangDEntityCol)
-                    _tpsEntity.IdH = _CtptmangHEntity.Id;
+                foreach (CtptmangDEntity _TpsEntity in _CtptmangDEntityCol)
+                    _TpsEntity.IdH = _CtptmangHEntity.Id;
                 _CtptmangDManager.InsertCollection(_CtptmangDEntityCol);
                 GRID_CTPTMANG_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_CTPTMANG_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -351,8 +351,8 @@ namespace GD.BBPH.APP.DANHMUC
                 _CtptmangHEntity.Ngaysua = DateTime.Now;
                 _CtptmangHEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _CtptmangHManager.Update(_CtptmangHEntity);
-                foreach (CtptmangDEntity _tpsEntity in _CtptmangDEntityCol)
-                    _tpsEntity.IdH = _CtptmangHEntity.Id;
+                foreach (CtptmangDEntity _TpsEntity in _CtptmangDEntityCol)
+                    _TpsEntity.IdH = _CtptmangHEntity.Id;
                 foreach (CtptmangDEntity _CtptmangDEntity in _CtptmangDEntityCol)
                 {
                     if (_CtptmangDEntity.IsNew)

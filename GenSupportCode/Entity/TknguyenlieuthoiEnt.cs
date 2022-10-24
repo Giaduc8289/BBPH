@@ -53,34 +53,34 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_TKNGUYENLIEUTHOI_PK)
 		{
-			TknguyenlieuthoiEntity _tknguyenlieuthoiEntity = new TknguyenlieuthoiEntity();
+			TknguyenlieuthoiEntity _TknguyenlieuthoiEntity = new TknguyenlieuthoiEntity();
 			
-			_tknguyenlieuthoiEntity.Id = txt_ID.Text.Trim();
-			_tknguyenlieuthoiEntity.Ngay = txt_NGAY.Text.Trim();
-			_tknguyenlieuthoiEntity.Ca = txt_CA.Text.Trim();
-			_tknguyenlieuthoiEntity.Manguyenlieu = txt_MANGUYENLIEU.Text.Trim();
-			_tknguyenlieuthoiEntity.Tennguyenlieu = txt_TENNGUYENLIEU.Text.Trim();
-			_tknguyenlieuthoiEntity.Klnhap = txt_KLNHAP.Text.Trim();
-			_tknguyenlieuthoiEntity.Klxuat = txt_KLXUAT.Text.Trim();
+			_TknguyenlieuthoiEntity.Id = txt_ID.Text.Trim();
+			_TknguyenlieuthoiEntity.Ngay = txt_NGAY.Text.Trim();
+			_TknguyenlieuthoiEntity.Ca = txt_CA.Text.Trim();
+			_TknguyenlieuthoiEntity.Manguyenlieu = txt_MANGUYENLIEU.Text.Trim();
+			_TknguyenlieuthoiEntity.Tennguyenlieu = txt_TENNGUYENLIEU.Text.Trim();
+			_TknguyenlieuthoiEntity.Klnhap = txt_KLNHAP.Text.Trim();
+			_TknguyenlieuthoiEntity.Klxuat = txt_KLXUAT.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_TKNGUYENLIEUTHOI_PK))
 			{
-				_str_TKNGUYENLIEUTHOI_PK = _TknguyenlieuthoiManager.InsertV2(_tknguyenlieuthoiEntity, r_Insert, DT_TKNGUYENLIEUTHOI, BS_TKNGUYENLIEUTHOI);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_TknguyenlieuthoiManager.Convert(_tknguyenlieuthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_TKNGUYENLIEUTHOI_PK = _TknguyenlieuthoiManager.InsertV2(_TknguyenlieuthoiEntity, r_Insert, DT_TKNGUYENLIEUTHOI, BS_TKNGUYENLIEUTHOI);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_TknguyenlieuthoiManager.Convert(_TknguyenlieuthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_TKNGUYENLIEUTHOI.ResetCurrentItem();
 			}
 			else
 			{
-				_TknguyenlieuthoiManager.Update(_tknguyenlieuthoiEntity);
+				_TknguyenlieuthoiManager.Update(_TknguyenlieuthoiEntity);
 				
-				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Id.Name].Value = _tknguyenlieuthoiEntity.Id;
-				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Ngay.Name].Value = _tknguyenlieuthoiEntity.Ngay;
-				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Ca.Name].Value = _tknguyenlieuthoiEntity.Ca;
-				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Manguyenlieu.Name].Value = _tknguyenlieuthoiEntity.Manguyenlieu;
-				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Tennguyenlieu.Name].Value = _tknguyenlieuthoiEntity.Tennguyenlieu;
-				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Klnhap.Name].Value = _tknguyenlieuthoiEntity.Klnhap;
-				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Klxuat.Name].Value = _tknguyenlieuthoiEntity.Klxuat;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_TknguyenlieuthoiManager.Convert(_tknguyenlieuthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Id.Name].Value = _TknguyenlieuthoiEntity.Id;
+				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Ngay.Name].Value = _TknguyenlieuthoiEntity.Ngay;
+				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Ca.Name].Value = _TknguyenlieuthoiEntity.Ca;
+				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Manguyenlieu.Name].Value = _TknguyenlieuthoiEntity.Manguyenlieu;
+				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Tennguyenlieu.Name].Value = _TknguyenlieuthoiEntity.Tennguyenlieu;
+				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Klnhap.Name].Value = _TknguyenlieuthoiEntity.Klnhap;
+				GRID_TKNGUYENLIEUTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Klxuat.Name].Value = _TknguyenlieuthoiEntity.Klxuat;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_TknguyenlieuthoiManager.Convert(_TknguyenlieuthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_TKNGUYENLIEUTHOI_PK;
 		}
