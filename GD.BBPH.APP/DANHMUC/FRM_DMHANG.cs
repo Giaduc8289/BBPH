@@ -139,6 +139,7 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_MAUCUAHANG.DeletingRecord += GRID_MAUCUAHANG_DeletingRecord;
             GRID_MAUCUAHANG.FormattingRow += GRID_MAUCUAHANG_FormattingRow;
             GRID_MAUCUAHANG.RootTable.Columns[MaucuahangFields.Tenmau.Name].EditType = EditType.NoEdit;
+            GRID_MAUCUAHANG.KeyDown += GRID_MAUCUAHANG_KeyDown;
             GRID_TRUCCUAHANG.DeletingRecord += GRID_TRUCCUAHANG_DeletingRecord;
             DataView Source_View = new DataView(DT_DMHANGHOA);
             BS_DMHANGHOA = new BindingSource();
@@ -226,6 +227,7 @@ namespace GD.BBPH.APP.DANHMUC
             }
             GRID_TRUCCUAHANG.Enabled = true;
         }
+        //-----Hiện thị màu theo mã màu
         private void GRID_MAUCUAHANG_FormattingRow(object sender, RowLoadEventArgs e)
         {
             try
@@ -239,6 +241,18 @@ namespace GD.BBPH.APP.DANHMUC
             }
             catch { }
         }
+        //-----Hiện form danh mục màu để xem tỷ lệ màu pha
+        private void GRID_MAUCUAHANG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.F4)
+            {
+                FRM_DMMAU frm_Dm = new FRM_DMMAU();
+                frm_Dm.Text = "Danh mục màu";
+                frm_Dm.ShowDialog();
+                DT_DMMAU = new DmmauManager().SelectAllRDT();
+            }
+        }
+
         #endregion
 
         #region Load dữ liệu
