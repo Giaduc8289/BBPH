@@ -596,6 +596,20 @@ namespace GD.BBPH.APP.LIB
             set { _DT_KQIN = value; }
         }
         #endregion
+
+        #region KQHOANTHIEN
+        private static DataTable _DT_KQHOANTHIEN = null;
+        public static DataTable DT_KQHOANTHIEN
+        {
+            get
+            {
+                _DT_KQHOANTHIEN = new KetquathanhphamManager().SelectAllRDT();
+                return _DT_KQHOANTHIEN;
+            }
+            set { _DT_KQHOANTHIEN = value; }
+        }
+        #endregion
+
         #region HANGTRALAI
         private static DataTable _DT_HANGTRALAI = null;
         public static DataTable DT_HANGTRALAI
