@@ -115,9 +115,13 @@ namespace GD.BBPH.APP.HETHONG
 
                         //  GD.BBPH.APP.LIB.USERS._RoleEntity = (new RolesManager()).SelectOne(GD.BBPH.APP.LIB.USERS._Current.Rolesid);
                         islogin = true;
-                        LIB.SESSION_START.TS_NGAYLAMVIEC = Convert.ToDateTime(txt_NGAYLAMVIEC.Text);//Convert.ToDateTime(_Rowview.Row[DanhmucdoituongthanhtoanFields.Ngaycap.Name]).ToString("dd/MM/yyyy");
+                        LIB.SESSION_START.TS_NGAYLAMVIEC = Convert.ToDateTime(txt_NGAYLAMVIEC.Text);
                         LIB.SESSION_START.TS_NGAYDAUTHANG = LIB.SESSION_START.TS_NGAYLAMVIEC.AddDays(1 - LIB.SESSION_START.TS_NGAYLAMVIEC.Day);
                         LIB.SESSION_START.TS_NGAYCUOITHANG = LIB.SESSION_START.TS_NGAYLAMVIEC.AddMonths(1).AddDays(-LIB.SESSION_START.TS_NGAYLAMVIEC.AddMonths(1).Day);
+                        LIB.SESSION_START.TS_NGAYDAUQUY = LIB.SESSION_START.TS_NGAYLAMVIEC.AddMonths(-(LIB.SESSION_START.TS_NGAYLAMVIEC.Month - 1) % 3).AddDays(1 - LIB.SESSION_START.TS_NGAYLAMVIEC.Day);
+                        LIB.SESSION_START.TS_NGAYCUOIQUY = LIB.SESSION_START.TS_NGAYLAMVIEC.AddMonths(3 - (LIB.SESSION_START.TS_NGAYLAMVIEC.Month - 1) % 3).AddDays(-LIB.SESSION_START.TS_NGAYLAMVIEC.AddMonths(3 - (LIB.SESSION_START.TS_NGAYLAMVIEC.Month - 1) % 3).Day);
+                        LIB.SESSION_START.TS_NGAYDAUNAM = LIB.SESSION_START.TS_NGAYLAMVIEC.AddDays(1 - LIB.SESSION_START.TS_NGAYLAMVIEC.DayOfYear);
+                        LIB.SESSION_START.TS_NGAYCUOINAM = LIB.SESSION_START.TS_NGAYLAMVIEC.AddYears(1).AddDays(-LIB.SESSION_START.TS_NGAYLAMVIEC.AddYears(1).DayOfYear);
                         this.Close();
                     }
                     else

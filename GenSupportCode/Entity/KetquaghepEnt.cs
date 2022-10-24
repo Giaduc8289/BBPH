@@ -77,6 +77,7 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_TENSANPHAM.Text = _Rowview.Row[KetquaghepFields.Tensanpham.Name].ToString();
 					txt_TENMAY.Text = _Rowview.Row[KetquaghepFields.Tenmay.Name].ToString();
 					txt_TENCONGNHAN.Text = _Rowview.Row[KetquaghepFields.Tencongnhan.Name].ToString();
+					txt_NANGSUAT.Text = _Rowview.Row[KetquaghepFields.Nangsuat.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KETQUAGHEP_CurrentChanged"); }
@@ -124,6 +125,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_KetquaghepEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
 			_KetquaghepEntity.Tenmay = txt_TENMAY.Text.Trim();
 			_KetquaghepEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
+			_KetquaghepEntity.Nangsuat = txt_NANGSUAT.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_KETQUAGHEP_PK))
 			{
@@ -173,6 +175,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_KETQUAGHEP.CurrentRow.Cells[KetquaghepFields.Tensanpham.Name].Value = _KetquaghepEntity.Tensanpham;
 				GRID_KETQUAGHEP.CurrentRow.Cells[KetquaghepFields.Tenmay.Name].Value = _KetquaghepEntity.Tenmay;
 				GRID_KETQUAGHEP.CurrentRow.Cells[KetquaghepFields.Tencongnhan.Name].Value = _KetquaghepEntity.Tencongnhan;
+				GRID_KETQUAGHEP.CurrentRow.Cells[KetquaghepFields.Nangsuat.Name].Value = _KetquaghepEntity.Nangsuat;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquaghepManager.Convert(_KetquaghepEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_KETQUAGHEP_PK;

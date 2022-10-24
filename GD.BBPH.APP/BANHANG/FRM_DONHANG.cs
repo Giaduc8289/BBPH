@@ -65,7 +65,7 @@ namespace GD.BBPH.APP.BANHANG
 
                         DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
                         DT_DMHANG = LIB.SESSION_START.DM_HANG;
-                        //DT_BAOGIA_H = LIB.SESSION_START.DT_BAOGIA_H;
+                        DT_BAOGIA_H = new BaogiaHManager().SelectAllRDT();
                         //DT_BAOGIA_D = LIB.SESSION_START.DT_BAOGIA_D;
                         DT_NHANVIEN = new DmcongnhanManager().SelectPhongbanChuanghi(new string[] {"KD"});//LIB.SESSION_START.DT_NHANVIEN;
                     }

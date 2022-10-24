@@ -22,4 +22,4 @@ Create Procedure dbo.Danhsachbaogia
 
 Go
 
-Exec Danhsachbaogia '04/01/2021', '04/30/2021','','',''
+Exec Danhsachbaogia '01/01/2022', '12/30/2022','','',''

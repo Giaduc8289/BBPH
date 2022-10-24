@@ -454,6 +454,7 @@ namespace GD.BBPH.LIB
                     || dv[i]["name"].ToString() == "Ngaytrang" || dv[i]["name"].ToString() == "Ngayin1"
                     || dv[i]["name"].ToString() == "Ngayin2" || dv[i]["name"].ToString() == "Ngayxuat"
                     || dv[i]["name"].ToString() == "Ngaykiemke" || dv[i]["name"].ToString() == "Ngaydieuchuyen"
+                    || dv[i]["name"].ToString() == "Ngaybaogia" || dv[i]["name"].ToString() == "Ngayhieuluc"
                     || dv[i]["name"].ToString() == "Ngayhoadon" || dv[i]["name"].ToString() == "Ngayctkt")
                 {
                 CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
@@ -623,6 +624,7 @@ namespace GD.BBPH.LIB
                     || dv[i]["name"].ToString() == "Ngaytrang" || dv[i]["name"].ToString() == "Ngayin1"
                     || dv[i]["name"].ToString() == "Ngayin2" || dv[i]["name"].ToString() == "Ngayxuat"
                     || dv[i]["name"].ToString() == "Ngaykiemke" || dv[i]["name"].ToString() == "Ngaydieuchuyen"
+                    || dv[i]["name"].ToString() == "Ngaybaogia" || dv[i]["name"].ToString() == "Ngayhieuluc"
                     || dv[i]["name"].ToString() == "Ngayhoadon" || dv[i]["name"].ToString() == "Ngayctkt")
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"

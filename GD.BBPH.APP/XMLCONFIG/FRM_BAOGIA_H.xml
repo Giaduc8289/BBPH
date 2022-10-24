@@ -32,7 +32,7 @@
   <viewgrid>
     <value>1</value>
     <name>Sobaogia</name>
-    <headerText>Sobaogia</headerText>
+    <headerText>Số báo giá</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -41,7 +41,7 @@
   <viewgrid>
     <value>1</value>
     <name>Ngaybaogia</name>
-    <headerText>Ngaybaogia</headerText>
+    <headerText>Ngày báo giá</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -50,16 +50,16 @@
   <viewgrid>
     <value>1</value>
     <name>Ngayhieuluc</name>
-    <headerText>Ngayhieuluc</headerText>
+    <headerText>Ngày hiệu lực</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Makhach</name>
-    <headerText>Makhach</headerText>
+    <headerText>Mã khách</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -68,14 +68,14 @@
   <viewgrid>
     <value>1</value>
     <name>Tenkhach</name>
-    <headerText>Tenkhach</headerText>
+    <headerText>Tên khách</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Noidung</name>
     <headerText>Noidung</headerText>
     <BackColor>0</BackColor>
@@ -84,7 +84,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Phuongthuctt</name>
     <headerText>Phuongthuctt</headerText>
     <BackColor>0</BackColor>
@@ -93,7 +93,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Diadiemgiao</name>
     <headerText>Diadiemgiao</headerText>
     <BackColor>0</BackColor>
@@ -102,7 +102,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaytao</name>
     <headerText>Ngaytao</headerText>
     <BackColor>0</BackColor>
@@ -111,7 +111,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoitao</name>
     <headerText>Nguoitao</headerText>
     <BackColor>0</BackColor>
@@ -120,7 +120,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaysua</name>
     <headerText>Ngaysua</headerText>
     <BackColor>0</BackColor>
@@ -129,7 +129,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoisua</name>
     <headerText>Nguoisua</headerText>
     <BackColor>0</BackColor>
@@ -138,7 +138,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>
-    <name>tablename</name>
-    <headerText>Danh sách tendanhsach</headerText>
+    <name>BaogiaH</name>
+    <headerText>Danh sách báo giá</headerText>
   </tablename>
 </NewDataSet>

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 22, 2022 11:02:37 AM
+// Code is generated on: Monday, October 24, 2022 4:31:52 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -564,6 +564,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Socon", fieldHashtable);
 		}
 		#endregion
 
@@ -1044,6 +1047,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquathanhphamFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)KetquathanhphamFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Socon property of the Entity Ketquathanhpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathanhpham"."Socon"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Int32> Socon
+		{
+			get { return (Nullable<System.Int32>)GetValue((int)KetquathanhphamFieldIndex.Socon, false); }
+			set	{ SetValue((int)KetquathanhphamFieldIndex.Socon, value); }
 		}
 
 
