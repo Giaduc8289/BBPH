@@ -58,44 +58,44 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_SODUNGUYENLIEU_PK)
 		{
-			SodunguyenlieuEntity _sodunguyenlieuEntity = new SodunguyenlieuEntity();
+			SodunguyenlieuEntity _SodunguyenlieuEntity = new SodunguyenlieuEntity();
 			
-			_sodunguyenlieuEntity.Id = txt_ID.Text.Trim();
-			_sodunguyenlieuEntity.Ngaykiemke = txt_NGAYKIEMKE.Text.Trim();
-			_sodunguyenlieuEntity.Makho = txt_MAKHO.Text.Trim();
-			_sodunguyenlieuEntity.Tenkho = txt_TENKHO.Text.Trim();
-			_sodunguyenlieuEntity.Manguyenlieu = txt_MANGUYENLIEU.Text.Trim();
-			_sodunguyenlieuEntity.Tennguyenlieu = txt_TENNGUYENLIEU.Text.Trim();
-			_sodunguyenlieuEntity.Donvitinh = txt_DONVITINH.Text.Trim();
-			_sodunguyenlieuEntity.Soluong = txt_SOLUONG.Text.Trim();
-			_sodunguyenlieuEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_sodunguyenlieuEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_sodunguyenlieuEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_sodunguyenlieuEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_SodunguyenlieuEntity.Id = txt_ID.Text.Trim();
+			_SodunguyenlieuEntity.Ngaykiemke = txt_NGAYKIEMKE.Text.Trim();
+			_SodunguyenlieuEntity.Makho = txt_MAKHO.Text.Trim();
+			_SodunguyenlieuEntity.Tenkho = txt_TENKHO.Text.Trim();
+			_SodunguyenlieuEntity.Manguyenlieu = txt_MANGUYENLIEU.Text.Trim();
+			_SodunguyenlieuEntity.Tennguyenlieu = txt_TENNGUYENLIEU.Text.Trim();
+			_SodunguyenlieuEntity.Donvitinh = txt_DONVITINH.Text.Trim();
+			_SodunguyenlieuEntity.Soluong = txt_SOLUONG.Text.Trim();
+			_SodunguyenlieuEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_SodunguyenlieuEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_SodunguyenlieuEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_SodunguyenlieuEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_SODUNGUYENLIEU_PK))
 			{
-				_str_SODUNGUYENLIEU_PK = _SodunguyenlieuManager.InsertV2(_sodunguyenlieuEntity, r_Insert, DT_SODUNGUYENLIEU, BS_SODUNGUYENLIEU);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodunguyenlieuManager.Convert(_sodunguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_SODUNGUYENLIEU_PK = _SodunguyenlieuManager.InsertV2(_SodunguyenlieuEntity, r_Insert, DT_SODUNGUYENLIEU, BS_SODUNGUYENLIEU);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodunguyenlieuManager.Convert(_SodunguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_SODUNGUYENLIEU.ResetCurrentItem();
 			}
 			else
 			{
-				_SodunguyenlieuManager.Update(_sodunguyenlieuEntity);
+				_SodunguyenlieuManager.Update(_SodunguyenlieuEntity);
 				
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Id.Name].Value = _sodunguyenlieuEntity.Id;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Ngaykiemke.Name].Value = _sodunguyenlieuEntity.Ngaykiemke;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Makho.Name].Value = _sodunguyenlieuEntity.Makho;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Tenkho.Name].Value = _sodunguyenlieuEntity.Tenkho;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Manguyenlieu.Name].Value = _sodunguyenlieuEntity.Manguyenlieu;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Tennguyenlieu.Name].Value = _sodunguyenlieuEntity.Tennguyenlieu;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Donvitinh.Name].Value = _sodunguyenlieuEntity.Donvitinh;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Soluong.Name].Value = _sodunguyenlieuEntity.Soluong;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Ngaytao.Name].Value = _sodunguyenlieuEntity.Ngaytao;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Nguoitao.Name].Value = _sodunguyenlieuEntity.Nguoitao;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Ngaysua.Name].Value = _sodunguyenlieuEntity.Ngaysua;
-				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Nguoisua.Name].Value = _sodunguyenlieuEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodunguyenlieuManager.Convert(_sodunguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Id.Name].Value = _SodunguyenlieuEntity.Id;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Ngaykiemke.Name].Value = _SodunguyenlieuEntity.Ngaykiemke;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Makho.Name].Value = _SodunguyenlieuEntity.Makho;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Tenkho.Name].Value = _SodunguyenlieuEntity.Tenkho;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Manguyenlieu.Name].Value = _SodunguyenlieuEntity.Manguyenlieu;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Tennguyenlieu.Name].Value = _SodunguyenlieuEntity.Tennguyenlieu;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Donvitinh.Name].Value = _SodunguyenlieuEntity.Donvitinh;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Soluong.Name].Value = _SodunguyenlieuEntity.Soluong;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Ngaytao.Name].Value = _SodunguyenlieuEntity.Ngaytao;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Nguoitao.Name].Value = _SodunguyenlieuEntity.Nguoitao;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Ngaysua.Name].Value = _SodunguyenlieuEntity.Ngaysua;
+				GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Nguoisua.Name].Value = _SodunguyenlieuEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodunguyenlieuManager.Convert(_SodunguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_SODUNGUYENLIEU_PK;
 		}

@@ -53,34 +53,34 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_DMDONGMAY_PK)
 		{
-			DmdongmayEntity _dmdongmayEntity = new DmdongmayEntity();
+			DmdongmayEntity _DmdongmayEntity = new DmdongmayEntity();
 			
-			_dmdongmayEntity.Madm = txt_MADM.Text.Trim();
-			_dmdongmayEntity.Tendongmay = txt_TENDONGMAY.Text.Trim();
-			_dmdongmayEntity.Macd = txt_MACD.Text.Trim();
-			_dmdongmayEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_dmdongmayEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_dmdongmayEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_dmdongmayEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_DmdongmayEntity.Madm = txt_MADM.Text.Trim();
+			_DmdongmayEntity.Tendongmay = txt_TENDONGMAY.Text.Trim();
+			_DmdongmayEntity.Macd = txt_MACD.Text.Trim();
+			_DmdongmayEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_DmdongmayEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_DmdongmayEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_DmdongmayEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMDONGMAY_PK))
 			{
-				_str_DMDONGMAY_PK = _DmdongmayManager.InsertV2(_dmdongmayEntity, r_Insert, DT_DMDONGMAY, BS_DMDONGMAY);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmdongmayManager.Convert(_dmdongmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_DMDONGMAY_PK = _DmdongmayManager.InsertV2(_DmdongmayEntity, r_Insert, DT_DMDONGMAY, BS_DMDONGMAY);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmdongmayManager.Convert(_DmdongmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_DMDONGMAY.ResetCurrentItem();
 			}
 			else
 			{
-				_DmdongmayManager.Update(_dmdongmayEntity);
+				_DmdongmayManager.Update(_DmdongmayEntity);
 				
-				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Madm.Name].Value = _dmdongmayEntity.Madm;
-				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Tendongmay.Name].Value = _dmdongmayEntity.Tendongmay;
-				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Macd.Name].Value = _dmdongmayEntity.Macd;
-				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Ngaytao.Name].Value = _dmdongmayEntity.Ngaytao;
-				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Nguoitao.Name].Value = _dmdongmayEntity.Nguoitao;
-				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Ngaysua.Name].Value = _dmdongmayEntity.Ngaysua;
-				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Nguoisua.Name].Value = _dmdongmayEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmdongmayManager.Convert(_dmdongmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Madm.Name].Value = _DmdongmayEntity.Madm;
+				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Tendongmay.Name].Value = _DmdongmayEntity.Tendongmay;
+				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Macd.Name].Value = _DmdongmayEntity.Macd;
+				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Ngaytao.Name].Value = _DmdongmayEntity.Ngaytao;
+				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Nguoitao.Name].Value = _DmdongmayEntity.Nguoitao;
+				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Ngaysua.Name].Value = _DmdongmayEntity.Ngaysua;
+				GRID_DMDONGMAY.CurrentRow.Cells[DmdongmayFields.Nguoisua.Name].Value = _DmdongmayEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmdongmayManager.Convert(_DmdongmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DMDONGMAY_PK;
 		}

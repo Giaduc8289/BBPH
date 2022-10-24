@@ -69,66 +69,66 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_DMCHUNGLOAI_PK)
 		{
-			DmchungloaiEntity _dmchungloaiEntity = new DmchungloaiEntity();
+			DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity();
 			
-			_dmchungloaiEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
-			_dmchungloaiEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
-			_dmchungloaiEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
-			_dmchungloaiEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
-			_dmchungloaiEntity.Somau = txt_SOMAU.Text.Trim();
-			_dmchungloaiEntity.Sohinh = txt_SOHINH.Text.Trim();
-			_dmchungloaiEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
-			_dmchungloaiEntity.Ghichu = txt_GHICHU.Text.Trim();
-			_dmchungloaiEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_dmchungloaiEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_dmchungloaiEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_dmchungloaiEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
-			_dmchungloaiEntity.Rong = txt_RONG.Text.Trim();
-			_dmchungloaiEntity.Dai = txt_DAI.Text.Trim();
-			_dmchungloaiEntity.Somauma = txt_SOMAUMA.Text.Trim();
-			_dmchungloaiEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
-			_dmchungloaiEntity.Maqcdonggoi = txt_MAQCDONGGOI.Text.Trim();
-			_dmchungloaiEntity.Tenqcdonggoi = txt_TENQCDONGGOI.Text.Trim();
-			_dmchungloaiEntity.Maqcloaithung = txt_MAQCLOAITHUNG.Text.Trim();
-			_dmchungloaiEntity.Tenqcloaithung = txt_TENQCLOAITHUNG.Text.Trim();
-			_dmchungloaiEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
-			_dmchungloaiEntity.Tenqcthanhpham = txt_TENQCTHANHPHAM.Text.Trim();
-			_dmchungloaiEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
+			_DmchungloaiEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
+			_DmchungloaiEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
+			_DmchungloaiEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
+			_DmchungloaiEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
+			_DmchungloaiEntity.Somau = txt_SOMAU.Text.Trim();
+			_DmchungloaiEntity.Sohinh = txt_SOHINH.Text.Trim();
+			_DmchungloaiEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
+			_DmchungloaiEntity.Ghichu = txt_GHICHU.Text.Trim();
+			_DmchungloaiEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_DmchungloaiEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_DmchungloaiEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_DmchungloaiEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_DmchungloaiEntity.Rong = txt_RONG.Text.Trim();
+			_DmchungloaiEntity.Dai = txt_DAI.Text.Trim();
+			_DmchungloaiEntity.Somauma = txt_SOMAUMA.Text.Trim();
+			_DmchungloaiEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
+			_DmchungloaiEntity.Maqcdonggoi = txt_MAQCDONGGOI.Text.Trim();
+			_DmchungloaiEntity.Tenqcdonggoi = txt_TENQCDONGGOI.Text.Trim();
+			_DmchungloaiEntity.Maqcloaithung = txt_MAQCLOAITHUNG.Text.Trim();
+			_DmchungloaiEntity.Tenqcloaithung = txt_TENQCLOAITHUNG.Text.Trim();
+			_DmchungloaiEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
+			_DmchungloaiEntity.Tenqcthanhpham = txt_TENQCTHANHPHAM.Text.Trim();
+			_DmchungloaiEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMCHUNGLOAI_PK))
 			{
-				_str_DMCHUNGLOAI_PK = _DmchungloaiManager.InsertV2(_dmchungloaiEntity, r_Insert, DT_DMCHUNGLOAI, BS_DMCHUNGLOAI);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchungloaiManager.Convert(_dmchungloaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_DMCHUNGLOAI_PK = _DmchungloaiManager.InsertV2(_DmchungloaiEntity, r_Insert, DT_DMCHUNGLOAI, BS_DMCHUNGLOAI);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchungloaiManager.Convert(_DmchungloaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_DMCHUNGLOAI.ResetCurrentItem();
 			}
 			else
 			{
-				_DmchungloaiManager.Update(_dmchungloaiEntity);
+				_DmchungloaiManager.Update(_DmchungloaiEntity);
 				
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Machungloai.Name].Value = _dmchungloaiEntity.Machungloai;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenchungloai.Name].Value = _dmchungloaiEntity.Tenchungloai;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Kichthuoc.Name].Value = _dmchungloaiEntity.Kichthuoc;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Trongluong.Name].Value = _dmchungloaiEntity.Trongluong;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Somau.Name].Value = _dmchungloaiEntity.Somau;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Sohinh.Name].Value = _dmchungloaiEntity.Sohinh;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Loaimuc.Name].Value = _dmchungloaiEntity.Loaimuc;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Ghichu.Name].Value = _dmchungloaiEntity.Ghichu;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Ngaytao.Name].Value = _dmchungloaiEntity.Ngaytao;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Nguoitao.Name].Value = _dmchungloaiEntity.Nguoitao;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Ngaysua.Name].Value = _dmchungloaiEntity.Ngaysua;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Nguoisua.Name].Value = _dmchungloaiEntity.Nguoisua;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Rong.Name].Value = _dmchungloaiEntity.Rong;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Dai.Name].Value = _dmchungloaiEntity.Dai;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Somauma.Name].Value = _dmchungloaiEntity.Somauma;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Sohinhma.Name].Value = _dmchungloaiEntity.Sohinhma;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maqcdonggoi.Name].Value = _dmchungloaiEntity.Maqcdonggoi;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenqcdonggoi.Name].Value = _dmchungloaiEntity.Tenqcdonggoi;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maqcloaithung.Name].Value = _dmchungloaiEntity.Maqcloaithung;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenqcloaithung.Name].Value = _dmchungloaiEntity.Tenqcloaithung;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maqcthanhpham.Name].Value = _dmchungloaiEntity.Maqcthanhpham;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenqcthanhpham.Name].Value = _dmchungloaiEntity.Tenqcthanhpham;
-				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maloaimuc.Name].Value = _dmchungloaiEntity.Maloaimuc;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchungloaiManager.Convert(_dmchungloaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Machungloai.Name].Value = _DmchungloaiEntity.Machungloai;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenchungloai.Name].Value = _DmchungloaiEntity.Tenchungloai;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Kichthuoc.Name].Value = _DmchungloaiEntity.Kichthuoc;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Trongluong.Name].Value = _DmchungloaiEntity.Trongluong;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Somau.Name].Value = _DmchungloaiEntity.Somau;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Sohinh.Name].Value = _DmchungloaiEntity.Sohinh;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Loaimuc.Name].Value = _DmchungloaiEntity.Loaimuc;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Ghichu.Name].Value = _DmchungloaiEntity.Ghichu;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Ngaytao.Name].Value = _DmchungloaiEntity.Ngaytao;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Nguoitao.Name].Value = _DmchungloaiEntity.Nguoitao;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Ngaysua.Name].Value = _DmchungloaiEntity.Ngaysua;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Nguoisua.Name].Value = _DmchungloaiEntity.Nguoisua;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Rong.Name].Value = _DmchungloaiEntity.Rong;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Dai.Name].Value = _DmchungloaiEntity.Dai;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Somauma.Name].Value = _DmchungloaiEntity.Somauma;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Sohinhma.Name].Value = _DmchungloaiEntity.Sohinhma;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maqcdonggoi.Name].Value = _DmchungloaiEntity.Maqcdonggoi;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenqcdonggoi.Name].Value = _DmchungloaiEntity.Tenqcdonggoi;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maqcloaithung.Name].Value = _DmchungloaiEntity.Maqcloaithung;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenqcloaithung.Name].Value = _DmchungloaiEntity.Tenqcloaithung;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maqcthanhpham.Name].Value = _DmchungloaiEntity.Maqcthanhpham;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Tenqcthanhpham.Name].Value = _DmchungloaiEntity.Tenqcthanhpham;
+				GRID_DMCHUNGLOAI.CurrentRow.Cells[DmchungloaiFields.Maloaimuc.Name].Value = _DmchungloaiEntity.Maloaimuc;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchungloaiManager.Convert(_DmchungloaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DMCHUNGLOAI_PK;
 		}

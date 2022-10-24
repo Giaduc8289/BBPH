@@ -54,36 +54,36 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_USERS_PK)
 		{
-			UsersEntity _usersEntity = new UsersEntity();
+			UsersEntity _UsersEntity = new UsersEntity();
 			
-			_usersEntity.Userid = txt_USERID.Text.Trim();
-			_usersEntity.Rolesid = txt_ROLESID.Text.Trim();
-			_usersEntity.Username = txt_USERNAME.Text.Trim();
-			_usersEntity.Fullname = txt_FULLNAME.Text.Trim();
-			_usersEntity.Phone = txt_PHONE.Text.Trim();
-			_usersEntity.Address = txt_ADDRESS.Text.Trim();
-			_usersEntity.Password = txt_PASSWORD.Text.Trim();
-			_usersEntity.Active = txt_ACTIVE.Text.Trim();
+			_UsersEntity.Userid = txt_USERID.Text.Trim();
+			_UsersEntity.Rolesid = txt_ROLESID.Text.Trim();
+			_UsersEntity.Username = txt_USERNAME.Text.Trim();
+			_UsersEntity.Fullname = txt_FULLNAME.Text.Trim();
+			_UsersEntity.Phone = txt_PHONE.Text.Trim();
+			_UsersEntity.Address = txt_ADDRESS.Text.Trim();
+			_UsersEntity.Password = txt_PASSWORD.Text.Trim();
+			_UsersEntity.Active = txt_ACTIVE.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_USERS_PK))
 			{
-				_str_USERS_PK = _UsersManager.InsertV2(_usersEntity, r_Insert, DT_USERS, BS_USERS);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_UsersManager.Convert(_usersEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_USERS_PK = _UsersManager.InsertV2(_UsersEntity, r_Insert, DT_USERS, BS_USERS);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_UsersManager.Convert(_UsersEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_USERS.ResetCurrentItem();
 			}
 			else
 			{
-				_UsersManager.Update(_usersEntity);
+				_UsersManager.Update(_UsersEntity);
 				
-				GRID_USERS.CurrentRow.Cells[UsersFields.Userid.Name].Value = _usersEntity.Userid;
-				GRID_USERS.CurrentRow.Cells[UsersFields.Rolesid.Name].Value = _usersEntity.Rolesid;
-				GRID_USERS.CurrentRow.Cells[UsersFields.Username.Name].Value = _usersEntity.Username;
-				GRID_USERS.CurrentRow.Cells[UsersFields.Fullname.Name].Value = _usersEntity.Fullname;
-				GRID_USERS.CurrentRow.Cells[UsersFields.Phone.Name].Value = _usersEntity.Phone;
-				GRID_USERS.CurrentRow.Cells[UsersFields.Address.Name].Value = _usersEntity.Address;
-				GRID_USERS.CurrentRow.Cells[UsersFields.Password.Name].Value = _usersEntity.Password;
-				GRID_USERS.CurrentRow.Cells[UsersFields.Active.Name].Value = _usersEntity.Active;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_UsersManager.Convert(_usersEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_USERS.CurrentRow.Cells[UsersFields.Userid.Name].Value = _UsersEntity.Userid;
+				GRID_USERS.CurrentRow.Cells[UsersFields.Rolesid.Name].Value = _UsersEntity.Rolesid;
+				GRID_USERS.CurrentRow.Cells[UsersFields.Username.Name].Value = _UsersEntity.Username;
+				GRID_USERS.CurrentRow.Cells[UsersFields.Fullname.Name].Value = _UsersEntity.Fullname;
+				GRID_USERS.CurrentRow.Cells[UsersFields.Phone.Name].Value = _UsersEntity.Phone;
+				GRID_USERS.CurrentRow.Cells[UsersFields.Address.Name].Value = _UsersEntity.Address;
+				GRID_USERS.CurrentRow.Cells[UsersFields.Password.Name].Value = _UsersEntity.Password;
+				GRID_USERS.CurrentRow.Cells[UsersFields.Active.Name].Value = _UsersEntity.Active;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_UsersManager.Convert(_UsersEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_USERS_PK;
 		}

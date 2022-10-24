@@ -61,50 +61,50 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_BAOGIAD_PK)
 		{
-			BaogiaDEntity _baogiaDEntity = new BaogiaDEntity();
+			BaogiaDEntity _BaogiaDEntity = new BaogiaDEntity();
 			
-			_baogiaDEntity.Id = txt_ID.Text.Trim();
-			_baogiaDEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
-			_baogiaDEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
-			_baogiaDEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
-			_baogiaDEntity.Masp = txt_MASP.Text.Trim();
-			_baogiaDEntity.Tenhang = txt_TENHANG.Text.Trim();
-			_baogiaDEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
-			_baogiaDEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
-			_baogiaDEntity.Mota = txt_MOTA.Text.Trim();
-			_baogiaDEntity.DongiakhongVat = txt_DONGIAKHONGVAT.Text.Trim();
-			_baogiaDEntity.DongiaVat = txt_DONGIAVAT.Text.Trim();
-			_baogiaDEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_baogiaDEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_baogiaDEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_baogiaDEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_BaogiaDEntity.Id = txt_ID.Text.Trim();
+			_BaogiaDEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
+			_BaogiaDEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
+			_BaogiaDEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
+			_BaogiaDEntity.Masp = txt_MASP.Text.Trim();
+			_BaogiaDEntity.Tenhang = txt_TENHANG.Text.Trim();
+			_BaogiaDEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
+			_BaogiaDEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
+			_BaogiaDEntity.Mota = txt_MOTA.Text.Trim();
+			_BaogiaDEntity.DongiakhongVat = txt_DONGIAKHONGVAT.Text.Trim();
+			_BaogiaDEntity.DongiaVat = txt_DONGIAVAT.Text.Trim();
+			_BaogiaDEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_BaogiaDEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_BaogiaDEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_BaogiaDEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_BAOGIAD_PK))
 			{
-				_str_BAOGIAD_PK = _BaogiaDManager.InsertV2(_baogiaDEntity, r_Insert, DT_BAOGIAD, BS_BAOGIAD);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_BaogiaDManager.Convert(_baogiaDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_BAOGIAD_PK = _BaogiaDManager.InsertV2(_BaogiaDEntity, r_Insert, DT_BAOGIAD, BS_BAOGIAD);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_BaogiaDManager.Convert(_BaogiaDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_BAOGIAD.ResetCurrentItem();
 			}
 			else
 			{
-				_BaogiaDManager.Update(_baogiaDEntity);
+				_BaogiaDManager.Update(_BaogiaDEntity);
 				
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Id.Name].Value = _baogiaDEntity.Id;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Sobaogia.Name].Value = _baogiaDEntity.Sobaogia;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Machungloai.Name].Value = _baogiaDEntity.Machungloai;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Tenchungloai.Name].Value = _baogiaDEntity.Tenchungloai;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Masp.Name].Value = _baogiaDEntity.Masp;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Tenhang.Name].Value = _baogiaDEntity.Tenhang;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Kichthuoc.Name].Value = _baogiaDEntity.Kichthuoc;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Trongluong.Name].Value = _baogiaDEntity.Trongluong;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Mota.Name].Value = _baogiaDEntity.Mota;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.DongiakhongVat.Name].Value = _baogiaDEntity.DongiakhongVat;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.DongiaVat.Name].Value = _baogiaDEntity.DongiaVat;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Ngaytao.Name].Value = _baogiaDEntity.Ngaytao;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Nguoitao.Name].Value = _baogiaDEntity.Nguoitao;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Ngaysua.Name].Value = _baogiaDEntity.Ngaysua;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Nguoisua.Name].Value = _baogiaDEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_BaogiaDManager.Convert(_baogiaDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Id.Name].Value = _BaogiaDEntity.Id;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Sobaogia.Name].Value = _BaogiaDEntity.Sobaogia;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Machungloai.Name].Value = _BaogiaDEntity.Machungloai;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Tenchungloai.Name].Value = _BaogiaDEntity.Tenchungloai;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Masp.Name].Value = _BaogiaDEntity.Masp;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Tenhang.Name].Value = _BaogiaDEntity.Tenhang;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Kichthuoc.Name].Value = _BaogiaDEntity.Kichthuoc;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Trongluong.Name].Value = _BaogiaDEntity.Trongluong;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Mota.Name].Value = _BaogiaDEntity.Mota;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.DongiakhongVat.Name].Value = _BaogiaDEntity.DongiakhongVat;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.DongiaVat.Name].Value = _BaogiaDEntity.DongiaVat;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Ngaytao.Name].Value = _BaogiaDEntity.Ngaytao;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Nguoitao.Name].Value = _BaogiaDEntity.Nguoitao;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Ngaysua.Name].Value = _BaogiaDEntity.Ngaysua;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Nguoisua.Name].Value = _BaogiaDEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_BaogiaDManager.Convert(_BaogiaDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_BAOGIAD_PK;
 		}

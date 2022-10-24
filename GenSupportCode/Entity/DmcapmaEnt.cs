@@ -49,26 +49,26 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_DMCAPMA_PK)
 		{
-			DmcapmaEntity _dmcapmaEntity = new DmcapmaEntity();
+			DmcapmaEntity _DmcapmaEntity = new DmcapmaEntity();
 			
-			_dmcapmaEntity.Macappk = txt_MACAPPK.Text.Trim();
-			_dmcapmaEntity.Loaima = txt_LOAIMA.Text.Trim();
-			_dmcapmaEntity.Mastart = txt_MASTART.Text.Trim();
+			_DmcapmaEntity.Macappk = txt_MACAPPK.Text.Trim();
+			_DmcapmaEntity.Loaima = txt_LOAIMA.Text.Trim();
+			_DmcapmaEntity.Mastart = txt_MASTART.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMCAPMA_PK))
 			{
-				_str_DMCAPMA_PK = _DmcapmaManager.InsertV2(_dmcapmaEntity, r_Insert, DT_DMCAPMA, BS_DMCAPMA);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcapmaManager.Convert(_dmcapmaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_DMCAPMA_PK = _DmcapmaManager.InsertV2(_DmcapmaEntity, r_Insert, DT_DMCAPMA, BS_DMCAPMA);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcapmaManager.Convert(_DmcapmaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_DMCAPMA.ResetCurrentItem();
 			}
 			else
 			{
-				_DmcapmaManager.Update(_dmcapmaEntity);
+				_DmcapmaManager.Update(_DmcapmaEntity);
 				
-				GRID_DMCAPMA.CurrentRow.Cells[DmcapmaFields.Macappk.Name].Value = _dmcapmaEntity.Macappk;
-				GRID_DMCAPMA.CurrentRow.Cells[DmcapmaFields.Loaima.Name].Value = _dmcapmaEntity.Loaima;
-				GRID_DMCAPMA.CurrentRow.Cells[DmcapmaFields.Mastart.Name].Value = _dmcapmaEntity.Mastart;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcapmaManager.Convert(_dmcapmaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_DMCAPMA.CurrentRow.Cells[DmcapmaFields.Macappk.Name].Value = _DmcapmaEntity.Macappk;
+				GRID_DMCAPMA.CurrentRow.Cells[DmcapmaFields.Loaima.Name].Value = _DmcapmaEntity.Loaima;
+				GRID_DMCAPMA.CurrentRow.Cells[DmcapmaFields.Mastart.Name].Value = _DmcapmaEntity.Mastart;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcapmaManager.Convert(_DmcapmaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DMCAPMA_PK;
 		}

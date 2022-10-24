@@ -48,24 +48,24 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_MENUROLE_PK)
 		{
-			MenuroleEntity _menuroleEntity = new MenuroleEntity();
+			MenuroleEntity _MenuroleEntity = new MenuroleEntity();
 			
-			_menuroleEntity.Menuid = txt_MENUID.Text.Trim();
-			_menuroleEntity.Rolesid = txt_ROLESID.Text.Trim();
+			_MenuroleEntity.Menuid = txt_MENUID.Text.Trim();
+			_MenuroleEntity.Rolesid = txt_ROLESID.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_MENUROLE_PK))
 			{
-				_str_MENUROLE_PK = _MenuroleManager.InsertV2(_menuroleEntity, r_Insert, DT_MENUROLE, BS_MENUROLE);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_MenuroleManager.Convert(_menuroleEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_MENUROLE_PK = _MenuroleManager.InsertV2(_MenuroleEntity, r_Insert, DT_MENUROLE, BS_MENUROLE);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_MenuroleManager.Convert(_MenuroleEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_MENUROLE.ResetCurrentItem();
 			}
 			else
 			{
-				_MenuroleManager.Update(_menuroleEntity);
+				_MenuroleManager.Update(_MenuroleEntity);
 				
-				GRID_MENUROLE.CurrentRow.Cells[MenuroleFields.Menuid.Name].Value = _menuroleEntity.Menuid;
-				GRID_MENUROLE.CurrentRow.Cells[MenuroleFields.Rolesid.Name].Value = _menuroleEntity.Rolesid;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_MenuroleManager.Convert(_menuroleEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_MENUROLE.CurrentRow.Cells[MenuroleFields.Menuid.Name].Value = _MenuroleEntity.Menuid;
+				GRID_MENUROLE.CurrentRow.Cells[MenuroleFields.Rolesid.Name].Value = _MenuroleEntity.Rolesid;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_MenuroleManager.Convert(_MenuroleEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_MENUROLE_PK;
 		}

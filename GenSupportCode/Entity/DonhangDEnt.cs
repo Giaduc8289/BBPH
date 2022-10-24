@@ -62,52 +62,52 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_DONHANGD_PK)
 		{
-			DonhangDEntity _donhangDEntity = new DonhangDEntity();
+			DonhangDEntity _DonhangDEntity = new DonhangDEntity();
 			
-			_donhangDEntity.Id = txt_ID.Text.Trim();
-			_donhangDEntity.Madon = txt_MADON.Text.Trim();
-			_donhangDEntity.Ngaydat = txt_NGAYDAT.Text.Trim();
-			_donhangDEntity.Makhach = txt_MAKHACH.Text.Trim();
-			_donhangDEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
-			_donhangDEntity.Loaihang = txt_LOAIHANG.Text.Trim();
-			_donhangDEntity.Masp = txt_MASP.Text.Trim();
-			_donhangDEntity.Tenhang = txt_TENHANG.Text.Trim();
-			_donhangDEntity.Soluong = txt_SOLUONG.Text.Trim();
-			_donhangDEntity.Dongia = txt_DONGIA.Text.Trim();
-			_donhangDEntity.Ngaygiao = txt_NGAYGIAO.Text.Trim();
-			_donhangDEntity.Ghichu = txt_GHICHU.Text.Trim();
-			_donhangDEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_donhangDEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_donhangDEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_donhangDEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_DonhangDEntity.Id = txt_ID.Text.Trim();
+			_DonhangDEntity.Madon = txt_MADON.Text.Trim();
+			_DonhangDEntity.Ngaydat = txt_NGAYDAT.Text.Trim();
+			_DonhangDEntity.Makhach = txt_MAKHACH.Text.Trim();
+			_DonhangDEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
+			_DonhangDEntity.Loaihang = txt_LOAIHANG.Text.Trim();
+			_DonhangDEntity.Masp = txt_MASP.Text.Trim();
+			_DonhangDEntity.Tenhang = txt_TENHANG.Text.Trim();
+			_DonhangDEntity.Soluong = txt_SOLUONG.Text.Trim();
+			_DonhangDEntity.Dongia = txt_DONGIA.Text.Trim();
+			_DonhangDEntity.Ngaygiao = txt_NGAYGIAO.Text.Trim();
+			_DonhangDEntity.Ghichu = txt_GHICHU.Text.Trim();
+			_DonhangDEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_DonhangDEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_DonhangDEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_DonhangDEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DONHANGD_PK))
 			{
-				_str_DONHANGD_PK = _DonhangDManager.InsertV2(_donhangDEntity, r_Insert, DT_DONHANGD, BS_DONHANGD);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DonhangDManager.Convert(_donhangDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_DONHANGD_PK = _DonhangDManager.InsertV2(_DonhangDEntity, r_Insert, DT_DONHANGD, BS_DONHANGD);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DonhangDManager.Convert(_DonhangDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_DONHANGD.ResetCurrentItem();
 			}
 			else
 			{
-				_DonhangDManager.Update(_donhangDEntity);
+				_DonhangDManager.Update(_DonhangDEntity);
 				
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Id.Name].Value = _donhangDEntity.Id;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Madon.Name].Value = _donhangDEntity.Madon;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Ngaydat.Name].Value = _donhangDEntity.Ngaydat;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Makhach.Name].Value = _donhangDEntity.Makhach;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Sobaogia.Name].Value = _donhangDEntity.Sobaogia;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Loaihang.Name].Value = _donhangDEntity.Loaihang;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Masp.Name].Value = _donhangDEntity.Masp;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Tenhang.Name].Value = _donhangDEntity.Tenhang;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Soluong.Name].Value = _donhangDEntity.Soluong;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Dongia.Name].Value = _donhangDEntity.Dongia;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Ngaygiao.Name].Value = _donhangDEntity.Ngaygiao;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Ghichu.Name].Value = _donhangDEntity.Ghichu;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Ngaytao.Name].Value = _donhangDEntity.Ngaytao;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Nguoitao.Name].Value = _donhangDEntity.Nguoitao;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Ngaysua.Name].Value = _donhangDEntity.Ngaysua;
-				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Nguoisua.Name].Value = _donhangDEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DonhangDManager.Convert(_donhangDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Id.Name].Value = _DonhangDEntity.Id;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Madon.Name].Value = _DonhangDEntity.Madon;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Ngaydat.Name].Value = _DonhangDEntity.Ngaydat;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Makhach.Name].Value = _DonhangDEntity.Makhach;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Sobaogia.Name].Value = _DonhangDEntity.Sobaogia;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Loaihang.Name].Value = _DonhangDEntity.Loaihang;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Masp.Name].Value = _DonhangDEntity.Masp;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Tenhang.Name].Value = _DonhangDEntity.Tenhang;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Soluong.Name].Value = _DonhangDEntity.Soluong;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Dongia.Name].Value = _DonhangDEntity.Dongia;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Ngaygiao.Name].Value = _DonhangDEntity.Ngaygiao;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Ghichu.Name].Value = _DonhangDEntity.Ghichu;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Ngaytao.Name].Value = _DonhangDEntity.Ngaytao;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Nguoitao.Name].Value = _DonhangDEntity.Nguoitao;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Ngaysua.Name].Value = _DonhangDEntity.Ngaysua;
+				GRID_DONHANGD.CurrentRow.Cells[DonhangDFields.Nguoisua.Name].Value = _DonhangDEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DonhangDManager.Convert(_DonhangDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DONHANGD_PK;
 		}

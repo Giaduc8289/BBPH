@@ -58,44 +58,44 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_SODUSANPHAM_PK)
 		{
-			SodusanphamEntity _sodusanphamEntity = new SodusanphamEntity();
+			SodusanphamEntity _SodusanphamEntity = new SodusanphamEntity();
 			
-			_sodusanphamEntity.Id = txt_ID.Text.Trim();
-			_sodusanphamEntity.Ngaykiemke = txt_NGAYKIEMKE.Text.Trim();
-			_sodusanphamEntity.Makho = txt_MAKHO.Text.Trim();
-			_sodusanphamEntity.Tenkho = txt_TENKHO.Text.Trim();
-			_sodusanphamEntity.Masanpham = txt_MASANPHAM.Text.Trim();
-			_sodusanphamEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
-			_sodusanphamEntity.Somet = txt_SOMET.Text.Trim();
-			_sodusanphamEntity.Soluong = txt_SOLUONG.Text.Trim();
-			_sodusanphamEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_sodusanphamEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_sodusanphamEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_sodusanphamEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_SodusanphamEntity.Id = txt_ID.Text.Trim();
+			_SodusanphamEntity.Ngaykiemke = txt_NGAYKIEMKE.Text.Trim();
+			_SodusanphamEntity.Makho = txt_MAKHO.Text.Trim();
+			_SodusanphamEntity.Tenkho = txt_TENKHO.Text.Trim();
+			_SodusanphamEntity.Masanpham = txt_MASANPHAM.Text.Trim();
+			_SodusanphamEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
+			_SodusanphamEntity.Somet = txt_SOMET.Text.Trim();
+			_SodusanphamEntity.Soluong = txt_SOLUONG.Text.Trim();
+			_SodusanphamEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_SodusanphamEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_SodusanphamEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_SodusanphamEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_SODUSANPHAM_PK))
 			{
-				_str_SODUSANPHAM_PK = _SodusanphamManager.InsertV2(_sodusanphamEntity, r_Insert, DT_SODUSANPHAM, BS_SODUSANPHAM);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodusanphamManager.Convert(_sodusanphamEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_SODUSANPHAM_PK = _SodusanphamManager.InsertV2(_SodusanphamEntity, r_Insert, DT_SODUSANPHAM, BS_SODUSANPHAM);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodusanphamManager.Convert(_SodusanphamEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_SODUSANPHAM.ResetCurrentItem();
 			}
 			else
 			{
-				_SodusanphamManager.Update(_sodusanphamEntity);
+				_SodusanphamManager.Update(_SodusanphamEntity);
 				
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Id.Name].Value = _sodusanphamEntity.Id;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Ngaykiemke.Name].Value = _sodusanphamEntity.Ngaykiemke;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Makho.Name].Value = _sodusanphamEntity.Makho;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Tenkho.Name].Value = _sodusanphamEntity.Tenkho;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Masanpham.Name].Value = _sodusanphamEntity.Masanpham;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Tensanpham.Name].Value = _sodusanphamEntity.Tensanpham;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Somet.Name].Value = _sodusanphamEntity.Somet;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Soluong.Name].Value = _sodusanphamEntity.Soluong;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Ngaytao.Name].Value = _sodusanphamEntity.Ngaytao;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Nguoitao.Name].Value = _sodusanphamEntity.Nguoitao;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Ngaysua.Name].Value = _sodusanphamEntity.Ngaysua;
-				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Nguoisua.Name].Value = _sodusanphamEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodusanphamManager.Convert(_sodusanphamEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Id.Name].Value = _SodusanphamEntity.Id;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Ngaykiemke.Name].Value = _SodusanphamEntity.Ngaykiemke;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Makho.Name].Value = _SodusanphamEntity.Makho;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Tenkho.Name].Value = _SodusanphamEntity.Tenkho;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Masanpham.Name].Value = _SodusanphamEntity.Masanpham;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Tensanpham.Name].Value = _SodusanphamEntity.Tensanpham;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Somet.Name].Value = _SodusanphamEntity.Somet;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Soluong.Name].Value = _SodusanphamEntity.Soluong;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Ngaytao.Name].Value = _SodusanphamEntity.Ngaytao;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Nguoitao.Name].Value = _SodusanphamEntity.Nguoitao;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Ngaysua.Name].Value = _SodusanphamEntity.Ngaysua;
+				GRID_SODUSANPHAM.CurrentRow.Cells[SodusanphamFields.Nguoisua.Name].Value = _SodusanphamEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodusanphamManager.Convert(_SodusanphamEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_SODUSANPHAM_PK;
 		}

@@ -60,48 +60,48 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_DMCONGNHAN_PK)
 		{
-			DmcongnhanEntity _dmcongnhanEntity = new DmcongnhanEntity();
+			DmcongnhanEntity _DmcongnhanEntity = new DmcongnhanEntity();
 			
-			_dmcongnhanEntity.Macn = txt_MACN.Text.Trim();
-			_dmcongnhanEntity.Hovatencongnhan = txt_HOVATENCONGNHAN.Text.Trim();
-			_dmcongnhanEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
-			_dmcongnhanEntity.Mabp = txt_MABP.Text.Trim();
-			_dmcongnhanEntity.Macv = txt_MACV.Text.Trim();
-			_dmcongnhanEntity.Sodienthoai = txt_SODIENTHOAI.Text.Trim();
-			_dmcongnhanEntity.Tinhtrang = txt_TINHTRANG.Text.Trim();
-			_dmcongnhanEntity.Phongban = txt_PHONGBAN.Text.Trim();
-			_dmcongnhanEntity.Chucvu = txt_CHUCVU.Text.Trim();
-			_dmcongnhanEntity.Danghi = txt_DANGHI.Text.Trim();
-			_dmcongnhanEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_dmcongnhanEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_dmcongnhanEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_dmcongnhanEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_DmcongnhanEntity.Macn = txt_MACN.Text.Trim();
+			_DmcongnhanEntity.Hovatencongnhan = txt_HOVATENCONGNHAN.Text.Trim();
+			_DmcongnhanEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
+			_DmcongnhanEntity.Mabp = txt_MABP.Text.Trim();
+			_DmcongnhanEntity.Macv = txt_MACV.Text.Trim();
+			_DmcongnhanEntity.Sodienthoai = txt_SODIENTHOAI.Text.Trim();
+			_DmcongnhanEntity.Tinhtrang = txt_TINHTRANG.Text.Trim();
+			_DmcongnhanEntity.Phongban = txt_PHONGBAN.Text.Trim();
+			_DmcongnhanEntity.Chucvu = txt_CHUCVU.Text.Trim();
+			_DmcongnhanEntity.Danghi = txt_DANGHI.Text.Trim();
+			_DmcongnhanEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_DmcongnhanEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_DmcongnhanEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_DmcongnhanEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMCONGNHAN_PK))
 			{
-				_str_DMCONGNHAN_PK = _DmcongnhanManager.InsertV2(_dmcongnhanEntity, r_Insert, DT_DMCONGNHAN, BS_DMCONGNHAN);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcongnhanManager.Convert(_dmcongnhanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_DMCONGNHAN_PK = _DmcongnhanManager.InsertV2(_DmcongnhanEntity, r_Insert, DT_DMCONGNHAN, BS_DMCONGNHAN);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcongnhanManager.Convert(_DmcongnhanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_DMCONGNHAN.ResetCurrentItem();
 			}
 			else
 			{
-				_DmcongnhanManager.Update(_dmcongnhanEntity);
+				_DmcongnhanManager.Update(_DmcongnhanEntity);
 				
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Macn.Name].Value = _dmcongnhanEntity.Macn;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Hovatencongnhan.Name].Value = _dmcongnhanEntity.Hovatencongnhan;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Tencongnhan.Name].Value = _dmcongnhanEntity.Tencongnhan;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Mabp.Name].Value = _dmcongnhanEntity.Mabp;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Macv.Name].Value = _dmcongnhanEntity.Macv;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Sodienthoai.Name].Value = _dmcongnhanEntity.Sodienthoai;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Tinhtrang.Name].Value = _dmcongnhanEntity.Tinhtrang;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Phongban.Name].Value = _dmcongnhanEntity.Phongban;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Chucvu.Name].Value = _dmcongnhanEntity.Chucvu;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Danghi.Name].Value = _dmcongnhanEntity.Danghi;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Ngaytao.Name].Value = _dmcongnhanEntity.Ngaytao;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Nguoitao.Name].Value = _dmcongnhanEntity.Nguoitao;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Ngaysua.Name].Value = _dmcongnhanEntity.Ngaysua;
-				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Nguoisua.Name].Value = _dmcongnhanEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcongnhanManager.Convert(_dmcongnhanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Macn.Name].Value = _DmcongnhanEntity.Macn;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Hovatencongnhan.Name].Value = _DmcongnhanEntity.Hovatencongnhan;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Tencongnhan.Name].Value = _DmcongnhanEntity.Tencongnhan;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Mabp.Name].Value = _DmcongnhanEntity.Mabp;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Macv.Name].Value = _DmcongnhanEntity.Macv;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Sodienthoai.Name].Value = _DmcongnhanEntity.Sodienthoai;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Tinhtrang.Name].Value = _DmcongnhanEntity.Tinhtrang;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Phongban.Name].Value = _DmcongnhanEntity.Phongban;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Chucvu.Name].Value = _DmcongnhanEntity.Chucvu;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Danghi.Name].Value = _DmcongnhanEntity.Danghi;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Ngaytao.Name].Value = _DmcongnhanEntity.Ngaytao;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Nguoitao.Name].Value = _DmcongnhanEntity.Nguoitao;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Ngaysua.Name].Value = _DmcongnhanEntity.Ngaysua;
+				GRID_DMCONGNHAN.CurrentRow.Cells[DmcongnhanFields.Nguoisua.Name].Value = _DmcongnhanEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmcongnhanManager.Convert(_DmcongnhanEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DMCONGNHAN_PK;
 		}

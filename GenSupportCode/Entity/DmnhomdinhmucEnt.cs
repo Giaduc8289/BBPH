@@ -53,34 +53,34 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		private string Save_Data(string _str_DMNHOMDINHMUC_PK)
 		{
-			DmnhomdinhmucEntity _dmnhomdinhmucEntity = new DmnhomdinhmucEntity();
+			DmnhomdinhmucEntity _DmnhomdinhmucEntity = new DmnhomdinhmucEntity();
 			
-			_dmnhomdinhmucEntity.Manhom = txt_MANHOM.Text.Trim();
-			_dmnhomdinhmucEntity.Tennhom = txt_TENNHOM.Text.Trim();
-			_dmnhomdinhmucEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
-			_dmnhomdinhmucEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-			_dmnhomdinhmucEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_dmnhomdinhmucEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-			_dmnhomdinhmucEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_DmnhomdinhmucEntity.Manhom = txt_MANHOM.Text.Trim();
+			_DmnhomdinhmucEntity.Tennhom = txt_TENNHOM.Text.Trim();
+			_DmnhomdinhmucEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
+			_DmnhomdinhmucEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			_DmnhomdinhmucEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
+			_DmnhomdinhmucEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			_DmnhomdinhmucEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMNHOMDINHMUC_PK))
 			{
-				_str_DMNHOMDINHMUC_PK = _DmnhomdinhmucManager.InsertV2(_dmnhomdinhmucEntity, r_Insert, DT_DMNHOMDINHMUC, BS_DMNHOMDINHMUC);
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnhomdinhmucManager.Convert(_dmnhomdinhmucEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				_str_DMNHOMDINHMUC_PK = _DmnhomdinhmucManager.InsertV2(_DmnhomdinhmucEntity, r_Insert, DT_DMNHOMDINHMUC, BS_DMNHOMDINHMUC);
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnhomdinhmucManager.Convert(_DmnhomdinhmucEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 				BS_DMNHOMDINHMUC.ResetCurrentItem();
 			}
 			else
 			{
-				_DmnhomdinhmucManager.Update(_dmnhomdinhmucEntity);
+				_DmnhomdinhmucManager.Update(_DmnhomdinhmucEntity);
 				
-				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Manhom.Name].Value = _dmnhomdinhmucEntity.Manhom;
-				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Tennhom.Name].Value = _dmnhomdinhmucEntity.Tennhom;
-				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Tenrutgon.Name].Value = _dmnhomdinhmucEntity.Tenrutgon;
-				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Ngaytao.Name].Value = _dmnhomdinhmucEntity.Ngaytao;
-				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Nguoitao.Name].Value = _dmnhomdinhmucEntity.Nguoitao;
-				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Ngaysua.Name].Value = _dmnhomdinhmucEntity.Ngaysua;
-				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Nguoisua.Name].Value = _dmnhomdinhmucEntity.Nguoisua;
-				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnhomdinhmucManager.Convert(_dmnhomdinhmucEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Manhom.Name].Value = _DmnhomdinhmucEntity.Manhom;
+				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Tennhom.Name].Value = _DmnhomdinhmucEntity.Tennhom;
+				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Tenrutgon.Name].Value = _DmnhomdinhmucEntity.Tenrutgon;
+				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Ngaytao.Name].Value = _DmnhomdinhmucEntity.Ngaytao;
+				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Nguoitao.Name].Value = _DmnhomdinhmucEntity.Nguoitao;
+				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Ngaysua.Name].Value = _DmnhomdinhmucEntity.Ngaysua;
+				GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Nguoisua.Name].Value = _DmnhomdinhmucEntity.Nguoisua;
+				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnhomdinhmucManager.Convert(_DmnhomdinhmucEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DMNHOMDINHMUC_PK;
 		}
