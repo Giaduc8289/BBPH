@@ -276,29 +276,29 @@ namespace GD.BBPH.APP.KHO
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                SodusanphamEntity _nhapkhosanphamEntity = new SodusanphamEntity();
-                _nhapkhosanphamEntity.Ngaykiemke = _ngaynhap;
-                _nhapkhosanphamEntity.Makho = txt_MAKHO.Text.Trim();
-                _nhapkhosanphamEntity.Tenkho = txt_TENKHO.Text.Trim();
-                _nhapkhosanphamEntity.Masanpham = _view.Row[SodusanphamFields.Masanpham.Name].ToString();
-                _nhapkhosanphamEntity.Tensanpham = _view.Row[SodusanphamFields.Tensanpham.Name].ToString();
-                _nhapkhosanphamEntity.Soluong = Convert.ToDecimal(_view.Row[SodusanphamFields.Soluong.Name].ToString());
-                _nhapkhosanphamEntity.Somet = Convert.ToDecimal(_view.Row[SodusanphamFields.Somet.Name].ToString());
+                SodusanphamEntity _NhapkhosanphamEntity = new SodusanphamEntity();
+                _NhapkhosanphamEntity.Ngaykiemke = _ngaynhap;
+                _NhapkhosanphamEntity.Makho = txt_MAKHO.Text.Trim();
+                _NhapkhosanphamEntity.Tenkho = txt_TENKHO.Text.Trim();
+                _NhapkhosanphamEntity.Masanpham = _view.Row[SodusanphamFields.Masanpham.Name].ToString();
+                _NhapkhosanphamEntity.Tensanpham = _view.Row[SodusanphamFields.Tensanpham.Name].ToString();
+                _NhapkhosanphamEntity.Soluong = Convert.ToDecimal(_view.Row[SodusanphamFields.Soluong.Name].ToString());
+                _NhapkhosanphamEntity.Somet = Convert.ToDecimal(_view.Row[SodusanphamFields.Somet.Name].ToString());
 
 
-                if (!string.IsNullOrEmpty(_nhapkhosanphamEntity.Masanpham))
-                    _SodusanphamEntityCol.Add(_nhapkhosanphamEntity);
+                if (!string.IsNullOrEmpty(_NhapkhosanphamEntity.Masanpham))
+                    _SodusanphamEntityCol.Add(_NhapkhosanphamEntity);
             }
 
-            foreach (SodusanphamEntity _nhapkhosanphamEntity in _SodusanphamEntityCol)
+            foreach (SodusanphamEntity _NhapkhosanphamEntity in _SodusanphamEntityCol)
             {
-                if (_nhapkhosanphamEntity.IsNew)
+                if (_NhapkhosanphamEntity.IsNew)
                 {
                     DataRow _r_Insert = DT_SODUSANPHAM_CHITIET.NewRow();
                     DT_SODUSANPHAM_CHITIET.Rows.Add(_r_Insert);
-                    _SodusanphamManager.InsertV2(_nhapkhosanphamEntity, _r_Insert, DT_SODUSANPHAM_CHITIET, BS_SODUSANPHAM_CHITIET);
+                    _SodusanphamManager.InsertV2(_NhapkhosanphamEntity, _r_Insert, DT_SODUSANPHAM_CHITIET, BS_SODUSANPHAM_CHITIET);
                 }
-                else _SodusanphamManager.Update(_nhapkhosanphamEntity);
+                else _SodusanphamManager.Update(_NhapkhosanphamEntity);
             }
 
             //if (string.IsNullOrEmpty(_str_DMCHUONG_PK))

@@ -309,68 +309,68 @@ namespace GD.BBPH.APP.IN
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                KetquainEntity _ketquainEntity = new KetquainEntity();
-                _ketquainEntity.Ngay = _ngay;
-                _ketquainEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
-                _ketquainEntity.Mamay = txt_MAMAY.Text.Trim();
-                _ketquainEntity.Tenmay = txt_TENMAY.Text.Trim();
-                _ketquainEntity.Lenhin = _view.Row[KetquainFields.Lenhin.Name].ToString();
-                _ketquainEntity.Macongnhan = _view.Row[KetquainFields.Macongnhan.Name].ToString();
-                _ketquainEntity.Tencongnhan = _view.Row[KetquainFields.Tencongnhan.Name].ToString();
-                _ketquainEntity.Masanpham = _view.Row[KetquainFields.Masanpham.Name].ToString();
-                _ketquainEntity.Tensanpham = _view.Row[KetquainFields.Tensanpham.Name].ToString();
-                _ketquainEntity.SometLsx = Convert.ToDecimal(_view.Row[KetquainFields.SometLsx.Name].ToString());
-                _ketquainEntity.Sometcap = Convert.ToDecimal(_view.Row[KetquainFields.Sometcap.Name].ToString());
-                _ketquainEntity.Sokgcap = Convert.ToDecimal(_view.Row[KetquainFields.Sokgcap.Name].ToString());
-                _ketquainEntity.Thuctein = Convert.ToDecimal(_view.Row[KetquainFields.Thuctein.Name].ToString());
-                _ketquainEntity.Sokgin = Convert.ToDecimal(_view.Row[KetquainFields.Sokgin.Name].ToString());
-                _ketquainEntity.Saihongthucte = Convert.ToDecimal(_view.Row[KetquainFields.Saihongthucte.Name].ToString());
-                _ketquainEntity.PheNcc = Convert.ToDecimal(_view.Row[KetquainFields.PheNcc.Name].ToString());
-                _ketquainEntity.PheSx = Convert.ToDecimal(_view.Row[KetquainFields.PheSx.Name].ToString());
-                _ketquainEntity.Tongm2dm = Convert.ToDecimal(_view.Row[KetquainFields.Tongm2dm.Name].ToString());
-                _ketquainEntity.M2saihongtt = Convert.ToDecimal(_view.Row[KetquainFields.M2saihongtt.Name].ToString());
-                _ketquainEntity.Thoigianbatdau = Convert.ToDateTime(_view.Row[KetquainFields.Thoigianbatdau.Name].ToString());
-                _ketquainEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquainFields.Thoigianketthuc.Name].ToString());
-                _ketquainEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquainFields.Thoigianchuanbi.Name].ToString());
-                _ketquainEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquainFields.Thoigiansuco.Name].ToString());
+                KetquainEntity _KetquainEntity = new KetquainEntity();
+                _KetquainEntity.Ngay = _ngay;
+                _KetquainEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
+                _KetquainEntity.Mamay = txt_MAMAY.Text.Trim();
+                _KetquainEntity.Tenmay = txt_TENMAY.Text.Trim();
+                _KetquainEntity.Lenhin = _view.Row[KetquainFields.Lenhin.Name].ToString();
+                _KetquainEntity.Macongnhan = _view.Row[KetquainFields.Macongnhan.Name].ToString();
+                _KetquainEntity.Tencongnhan = _view.Row[KetquainFields.Tencongnhan.Name].ToString();
+                _KetquainEntity.Masanpham = _view.Row[KetquainFields.Masanpham.Name].ToString();
+                _KetquainEntity.Tensanpham = _view.Row[KetquainFields.Tensanpham.Name].ToString();
+                _KetquainEntity.SometLsx = Convert.ToDecimal(_view.Row[KetquainFields.SometLsx.Name].ToString());
+                _KetquainEntity.Sometcap = Convert.ToDecimal(_view.Row[KetquainFields.Sometcap.Name].ToString());
+                _KetquainEntity.Sokgcap = Convert.ToDecimal(_view.Row[KetquainFields.Sokgcap.Name].ToString());
+                _KetquainEntity.Thuctein = Convert.ToDecimal(_view.Row[KetquainFields.Thuctein.Name].ToString());
+                _KetquainEntity.Sokgin = Convert.ToDecimal(_view.Row[KetquainFields.Sokgin.Name].ToString());
+                _KetquainEntity.Saihongthucte = Convert.ToDecimal(_view.Row[KetquainFields.Saihongthucte.Name].ToString());
+                _KetquainEntity.PheNcc = Convert.ToDecimal(_view.Row[KetquainFields.PheNcc.Name].ToString());
+                _KetquainEntity.PheSx = Convert.ToDecimal(_view.Row[KetquainFields.PheSx.Name].ToString());
+                _KetquainEntity.Tongm2dm = Convert.ToDecimal(_view.Row[KetquainFields.Tongm2dm.Name].ToString());
+                _KetquainEntity.M2saihongtt = Convert.ToDecimal(_view.Row[KetquainFields.M2saihongtt.Name].ToString());
+                _KetquainEntity.Thoigianbatdau = Convert.ToDateTime(_view.Row[KetquainFields.Thoigianbatdau.Name].ToString());
+                _KetquainEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquainFields.Thoigianketthuc.Name].ToString());
+                _KetquainEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquainFields.Thoigianchuanbi.Name].ToString());
+                _KetquainEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquainFields.Thoigiansuco.Name].ToString());
 
 
                 #region xét isnew
-                try { _ketquainEntity.Id = Convert.ToInt64(_view[KetquainFields.Id.Name].ToString()); }
+                try { _KetquainEntity.Id = Convert.ToInt64(_view[KetquainFields.Id.Name].ToString()); }
                 catch { }
 
-                _ketquainEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
-                if (_ketquainEntity.IsNew)
+                _KetquainEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_KetquainEntity.IsNew)
                 {
-                    EntityCollection drDHCT = (new KetquainManager()).SelectById(_ketquainEntity.Id);
+                    EntityCollection drDHCT = (new KetquainManager()).SelectById(_KetquainEntity.Id);
                     if (drDHCT.Count > 0)
                     {
-                        _ketquainEntity.Ngaysua = DateTime.Now;
-                        _ketquainEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                        _ketquainEntity.IsNew = false;
+                        _KetquainEntity.Ngaysua = DateTime.Now;
+                        _KetquainEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _KetquainEntity.IsNew = false;
                     }
                     else
                     {
-                        _ketquainEntity.Ngaytao = DateTime.Now;
-                        _ketquainEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                        _KetquainEntity.Ngaytao = DateTime.Now;
+                        _KetquainEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                     }
                 }
                 #endregion
-                if (!string.IsNullOrEmpty(_ketquainEntity.Masanpham))
-                    _KetquainEntityCol.Add(_ketquainEntity);
+                if (!string.IsNullOrEmpty(_KetquainEntity.Masanpham))
+                    _KetquainEntityCol.Add(_KetquainEntity);
                
             }
 
 
-            foreach (KetquainEntity _ketquainEntity in _KetquainEntityCol)
+            foreach (KetquainEntity _KetquainEntity in _KetquainEntityCol)
             {
-                if (_ketquainEntity.IsNew)
+                if (_KetquainEntity.IsNew)
                 {
                     DataRow _r_Insert = DT_KQIN_CHITIET.NewRow();
                     DT_KQIN_CHITIET.Rows.Add(_r_Insert);
-                    _KetquainManager.InsertV2(_ketquainEntity, _r_Insert, DT_KQIN_CHITIET, BS_KQIN_CHITIET);
+                    _KetquainManager.InsertV2(_KetquainEntity, _r_Insert, DT_KQIN_CHITIET, BS_KQIN_CHITIET);
                 }
-                else _KetquainManager.Update(_ketquainEntity);
+                else _KetquainManager.Update(_KetquainEntity);
             }
 
             GRID_KQIN.CurrentRow.Cells[KetquainFields.Ngay.Name].Value = _ngay;

@@ -281,12 +281,12 @@ namespace GD.BBPH.APP.DANHMUC
 
         private string Save_Data(string _str_DMCHUONG_PK)
         {
-            CtptmangHEntity _ctptmangHEntity = new CtptmangHEntity();
-            _ctptmangHEntity.Mactpt = txt_MACONGTHUC.Text.Trim();
-            _ctptmangHEntity.Tenctpt = txt_TENCONGTHUC.Text.Trim();
-            try { _ctptmangHEntity.Ngayapdung = Convert.ToDateTime(txt_NGAYAPDUNG.Text.Trim()); }
+            CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity();
+            _CtptmangHEntity.Mactpt = txt_MACONGTHUC.Text.Trim();
+            _CtptmangHEntity.Tenctpt = txt_TENCONGTHUC.Text.Trim();
+            try { _CtptmangHEntity.Ngayapdung = Convert.ToDateTime(txt_NGAYAPDUNG.Text.Trim()); }
             catch { }
-            try { _ctptmangHEntity.Id = Convert.ToInt64(_str_DMCHUONG_PK); }
+            try { _CtptmangHEntity.Id = Convert.ToInt64(_str_DMCHUONG_PK); }
             catch { }
 
             EntityCollection _CtptmangDEntityCol = new EntityCollection();
@@ -295,52 +295,52 @@ namespace GD.BBPH.APP.DANHMUC
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                CtptmangDEntity _ctptmangDEntity = new CtptmangDEntity();
-                _ctptmangDEntity.Mact = txt_MACONGTHUC.Text.Trim();
-                _ctptmangDEntity.Tenct = txt_TENCONGTHUC.Text.Trim();
-                //_ctptmangDEntity.Ngayapdung = _CtptmangHEntity.Ngayapdung;
-                _ctptmangDEntity.Manl = _view[CtptmangDFields.Manl.Name].ToString();
-                _ctptmangDEntity.Tennguyenlieu = _view[CtptmangDFields.Tennguyenlieu.Name].ToString();
-                try { _ctptmangDEntity.Trongluong = Convert.ToDecimal(_view[CtptmangDFields.Trongluong.Name].ToString()); }
+                CtptmangDEntity _CtptmangDEntity = new CtptmangDEntity();
+                _CtptmangDEntity.Mact = txt_MACONGTHUC.Text.Trim();
+                _CtptmangDEntity.Tenct = txt_TENCONGTHUC.Text.Trim();
+                //_CtptmangDEntity.Ngayapdung = _CtptmangHEntity.Ngayapdung;
+                _CtptmangDEntity.Manl = _view[CtptmangDFields.Manl.Name].ToString();
+                _CtptmangDEntity.Tennguyenlieu = _view[CtptmangDFields.Tennguyenlieu.Name].ToString();
+                try { _CtptmangDEntity.Trongluong = Convert.ToDecimal(_view[CtptmangDFields.Trongluong.Name].ToString()); }
                 catch { }
-                try { _ctptmangDEntity.Tyle = Convert.ToDecimal(_view[CtptmangDFields.Tyle.Name].ToString()); }
+                try { _CtptmangDEntity.Tyle = Convert.ToDecimal(_view[CtptmangDFields.Tyle.Name].ToString()); }
                 catch { }
-                try { _ctptmangDEntity.Id = Convert.ToInt64(_view[CtptmangDFields.Id.Name].ToString()); }
+                try { _CtptmangDEntity.Id = Convert.ToInt64(_view[CtptmangDFields.Id.Name].ToString()); }
                 catch { }
 
-                _ctptmangDEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
-                if (_ctptmangDEntity.IsNew)
+                _CtptmangDEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_CtptmangDEntity.IsNew)
                 {
-                    EntityCollection drDHCT = (new CtptmangDManager()).SelectById(_ctptmangDEntity.Id);
+                    EntityCollection drDHCT = (new CtptmangDManager()).SelectById(_CtptmangDEntity.Id);
                     if (drDHCT.Count > 0)
                     {
-                        _ctptmangDEntity.Ngaysua = DateTime.Now;
-                        _ctptmangDEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                        _ctptmangDEntity.IsNew = false;
+                        _CtptmangDEntity.Ngaysua = DateTime.Now;
+                        _CtptmangDEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _CtptmangDEntity.IsNew = false;
                     }
                     else
                     {
-                        _ctptmangDEntity.Ngaytao = DateTime.Now;
-                        _ctptmangDEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                        _CtptmangDEntity.Ngaytao = DateTime.Now;
+                        _CtptmangDEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                     }
                 }
 
 
-                _CtptmangDEntityCol.Add(_ctptmangDEntity);
+                _CtptmangDEntityCol.Add(_CtptmangDEntity);
             }
 
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
-                _ctptmangHEntity.Ngaytao = DateTime.Now;
-                _ctptmangHEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _CtptmangHManager.InsertV2(_ctptmangHEntity, r_Insert, DT_CTPTMANG_H, BS_CTPTMANG_H);
-                foreach (CtptmangDEntity _tpsEntity in _CtptmangDEntityCol)
-                    _tpsEntity.IdH = _CtptmangHEntity.Id;
+                _CtptmangHEntity.Ngaytao = DateTime.Now;
+                _CtptmangHEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                _str_DMCHUONG_PK = _CtptmangHManager.InsertV2(_CtptmangHEntity, r_Insert, DT_CTPTMANG_H, BS_CTPTMANG_H);
+                foreach (CtptmangDEntity _TpsEntity in _CtptmangDEntityCol)
+                    _TpsEntity.IdH = _CtptmangHEntity.Id;
                 _CtptmangDManager.InsertCollection(_CtptmangDEntityCol);
                 GRID_CTPTMANG_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_CTPTMANG_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_CTPTMANG_D.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CtptmangHManager.Convert(_ctptmangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CtptmangHManager.Convert(_CtptmangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_XOADONG.Enabled = false;
                 BS_CTPTMANG_H.ResetCurrentItem();
                 BS_CTPTMANG_H_CurrentChanged(new object(), new EventArgs());
@@ -348,25 +348,25 @@ namespace GD.BBPH.APP.DANHMUC
             }
             else
             {
-                _ctptmangHEntity.Ngaysua = DateTime.Now;
-                _ctptmangHEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                _CtptmangHManager.Update(_ctptmangHEntity);
-                foreach (CtptmangDEntity _tpsEntity in _CtptmangDEntityCol)
-                    _tpsEntity.IdH = _CtptmangHEntity.Id;
-                foreach (CtptmangDEntity _ctptmangDEntity in _CtptmangDEntityCol)
+                _CtptmangHEntity.Ngaysua = DateTime.Now;
+                _CtptmangHEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                _CtptmangHManager.Update(_CtptmangHEntity);
+                foreach (CtptmangDEntity _TpsEntity in _CtptmangDEntityCol)
+                    _TpsEntity.IdH = _CtptmangHEntity.Id;
+                foreach (CtptmangDEntity _CtptmangDEntity in _CtptmangDEntityCol)
                 {
                     if (_CtptmangDEntity.IsNew)
                     {
                         DataRow _r_Insert = DT_CTPTMANG_D.NewRow();
                         DT_CTPTMANG_D.Rows.Add(_r_Insert);
-                        _CtptmangDManager.InsertV2(_ctptmangDEntity, _r_Insert, DT_CTPTMANG_D, BS_CTPTMANG_D);
+                        _CtptmangDManager.InsertV2(_CtptmangDEntity, _r_Insert, DT_CTPTMANG_D, BS_CTPTMANG_D);
                     }
-                    else _CtptmangDManager.Update(_ctptmangDEntity);
+                    else _CtptmangDManager.Update(_CtptmangDEntity);
                 }
-                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Ngayapdung.Name].Value = _ctptmangHEntity.Ngayapdung;
-                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Mactpt.Name].Value = _ctptmangHEntity.Mactpt;
-                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Tenctpt.Name].Value = _ctptmangHEntity.Tenctpt;
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CtptmangHManager.Convert(_ctptmangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Ngayapdung.Name].Value = _CtptmangHEntity.Ngayapdung;
+                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Mactpt.Name].Value = _CtptmangHEntity.Mactpt;
+                GRID_CTPTMANG_H.CurrentRow.Cells[CtptmangHFields.Tenctpt.Name].Value = _CtptmangHEntity.Tenctpt;
+                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CtptmangHManager.Convert(_CtptmangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_CTPTMANG_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_CTPTMANG_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_CTPTMANG_D.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;

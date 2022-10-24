@@ -284,51 +284,51 @@ namespace GD.BBPH.APP.KHO
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                XuatkhonguyenlieuEntity _xuatkhonguyenlieuEntity = new XuatkhonguyenlieuEntity();
-                _xuatkhonguyenlieuEntity.Ngayxuat = _ngayxuat;
-                _xuatkhonguyenlieuEntity.Makho = txt_MAKHO.Text.Trim();
-                _xuatkhonguyenlieuEntity.Tenkho = txt_TENKHO.Text.Trim();
-                _xuatkhonguyenlieuEntity.Manguyenlieu = _view.Row[XuatkhonguyenlieuFields.Manguyenlieu.Name].ToString();
-                _xuatkhonguyenlieuEntity.Tennguyenlieu = _view.Row[XuatkhonguyenlieuFields.Tennguyenlieu.Name].ToString();
-                _xuatkhonguyenlieuEntity.Donvitinh = _view.Row[XuatkhonguyenlieuFields.Donvitinh.Name].ToString();
-                _xuatkhonguyenlieuEntity.Soluong = Convert.ToDecimal(_view.Row[XuatkhonguyenlieuFields.Soluong.Name].ToString());
-                _xuatkhonguyenlieuEntity.Malydo = _view.Row[XuatkhonguyenlieuFields.Malydo.Name].ToString();
-                _xuatkhonguyenlieuEntity.Tenlydo = _view.Row[XuatkhonguyenlieuFields.Tenlydo.Name].ToString();
-                _xuatkhonguyenlieuEntity.Lenhxuat = _view.Row[XuatkhonguyenlieuFields.Lenhxuat.Name].ToString();
+                XuatkhonguyenlieuEntity _XuatkhonguyenlieuEntity = new XuatkhonguyenlieuEntity();
+                _XuatkhonguyenlieuEntity.Ngayxuat = _ngayxuat;
+                _XuatkhonguyenlieuEntity.Makho = txt_MAKHO.Text.Trim();
+                _XuatkhonguyenlieuEntity.Tenkho = txt_TENKHO.Text.Trim();
+                _XuatkhonguyenlieuEntity.Manguyenlieu = _view.Row[XuatkhonguyenlieuFields.Manguyenlieu.Name].ToString();
+                _XuatkhonguyenlieuEntity.Tennguyenlieu = _view.Row[XuatkhonguyenlieuFields.Tennguyenlieu.Name].ToString();
+                _XuatkhonguyenlieuEntity.Donvitinh = _view.Row[XuatkhonguyenlieuFields.Donvitinh.Name].ToString();
+                _XuatkhonguyenlieuEntity.Soluong = Convert.ToDecimal(_view.Row[XuatkhonguyenlieuFields.Soluong.Name].ToString());
+                _XuatkhonguyenlieuEntity.Malydo = _view.Row[XuatkhonguyenlieuFields.Malydo.Name].ToString();
+                _XuatkhonguyenlieuEntity.Tenlydo = _view.Row[XuatkhonguyenlieuFields.Tenlydo.Name].ToString();
+                _XuatkhonguyenlieuEntity.Lenhxuat = _view.Row[XuatkhonguyenlieuFields.Lenhxuat.Name].ToString();
 
-                try { _xuatkhonguyenlieuEntity.Id = Convert.ToInt64(_view[XuatkhonguyenlieuFields.Id.Name].ToString()); }
+                try { _XuatkhonguyenlieuEntity.Id = Convert.ToInt64(_view[XuatkhonguyenlieuFields.Id.Name].ToString()); }
                 catch { }
 
-                _xuatkhonguyenlieuEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
-                if (_xuatkhonguyenlieuEntity.IsNew)
+                _XuatkhonguyenlieuEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_XuatkhonguyenlieuEntity.IsNew)
                 {
-                    EntityCollection drDHCT = (new XuatkhonguyenlieuManager()).SelectById(_xuatkhonguyenlieuEntity.Id);
+                    EntityCollection drDHCT = (new XuatkhonguyenlieuManager()).SelectById(_XuatkhonguyenlieuEntity.Id);
                     if (drDHCT.Count > 0)
                     {
-                        _xuatkhonguyenlieuEntity.Ngaysua = DateTime.Now;
-                        _xuatkhonguyenlieuEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                        _xuatkhonguyenlieuEntity.IsNew = false;
+                        _XuatkhonguyenlieuEntity.Ngaysua = DateTime.Now;
+                        _XuatkhonguyenlieuEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _XuatkhonguyenlieuEntity.IsNew = false;
                     }
                     else
                     {
-                        _xuatkhonguyenlieuEntity.Ngaytao = DateTime.Now;
-                        _xuatkhonguyenlieuEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                        _XuatkhonguyenlieuEntity.Ngaytao = DateTime.Now;
+                        _XuatkhonguyenlieuEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                     }
                 }
 
-                if (!string.IsNullOrEmpty(_xuatkhonguyenlieuEntity.Manguyenlieu))
-                    _XuatkhonguyenlieuEntityCol.Add(_xuatkhonguyenlieuEntity);
+                if (!string.IsNullOrEmpty(_XuatkhonguyenlieuEntity.Manguyenlieu))
+                    _XuatkhonguyenlieuEntityCol.Add(_XuatkhonguyenlieuEntity);
             }
 
-            foreach (XuatkhonguyenlieuEntity _xuatkhonguyenlieuEntity in _XuatkhonguyenlieuEntityCol)
+            foreach (XuatkhonguyenlieuEntity _XuatkhonguyenlieuEntity in _XuatkhonguyenlieuEntityCol)
             {
-                if (_xuatkhonguyenlieuEntity.IsNew)
+                if (_XuatkhonguyenlieuEntity.IsNew)
                 {
                     DataRow _r_Insert = DT_XUATNGUYENLIEU_CHITIET.NewRow();
                     DT_XUATNGUYENLIEU_CHITIET.Rows.Add(_r_Insert);
-                    _XuatkhonguyenlieuManager.InsertV2(_xuatkhonguyenlieuEntity, _r_Insert, DT_XUATNGUYENLIEU_CHITIET, BS_XUATNGUYENLIEU_CHITIET);
+                    _XuatkhonguyenlieuManager.InsertV2(_XuatkhonguyenlieuEntity, _r_Insert, DT_XUATNGUYENLIEU_CHITIET, BS_XUATNGUYENLIEU_CHITIET);
                 }
-                else _XuatkhonguyenlieuManager.Update(_xuatkhonguyenlieuEntity);
+                else _XuatkhonguyenlieuManager.Update(_XuatkhonguyenlieuEntity);
             }
 
             //if (string.IsNullOrEmpty(_str_DMCHUONG_PK))

@@ -319,12 +319,12 @@ namespace GD.SXBB.APP.DANHMUC
 
             if (_ThanhphansoiEntityCol.Count > 0)
             {
-                foreach (ThanhphansoiEntity _tpsEntity in _ThanhphansoiEntityCol)
+                foreach (ThanhphansoiEntity _TpsEntity in _ThanhphansoiEntityCol)
                 {
-                    if (_tpsEntity.IsNew)
-                        _ThanhphansoiManager.Insert(_tpsEntity);
+                    if (_TpsEntity.IsNew)
+                        _ThanhphansoiManager.Insert(_TpsEntity);
                     else
-                        _ThanhphansoiManager.Update(_tpsEntity);
+                        _ThanhphansoiManager.Update(_TpsEntity);
                 }
 
                 _ThanhphansoiEntity.Macongthuc = txt_MACONGTHUC.Text.Trim();

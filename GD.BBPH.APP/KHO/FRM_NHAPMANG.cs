@@ -291,54 +291,54 @@ namespace GD.BBPH.APP.KHO
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                NhapkhomangEntity _nhapkhomangEntity = new NhapkhomangEntity();
-                _nhapkhomangEntity.Ngaynhap = _ngaynhap;
-                _nhapkhomangEntity.Makho = txt_MAKHO.Text.Trim();
-                _nhapkhomangEntity.Tenkho = txt_TENKHO.Text.Trim();
-                _nhapkhomangEntity.Mamang = _view.Row[NhapkhomangFields.Mamang.Name].ToString();
-                _nhapkhomangEntity.Tenmang = _view.Row[NhapkhomangFields.Tenmang.Name].ToString();
-                _nhapkhomangEntity.Somet = Convert.ToDecimal(_view.Row[NhapkhomangFields.Somet.Name].ToString());
-                _nhapkhomangEntity.Sokg = Convert.ToDecimal(_view.Row[NhapkhomangFields.Sokg.Name].ToString());
-                _nhapkhomangEntity.Malydo = _view.Row[NhapkhomangFields.Malydo.Name].ToString();
-                _nhapkhomangEntity.Tenlydo = _view.Row[NhapkhomangFields.Tenlydo.Name].ToString();
-                _nhapkhomangEntity.Lenhsx = _view.Row[NhapkhomangFields.Lenhsx.Name].ToString();
-                _nhapkhomangEntity.Sohopdongmua = _view.Row[NhapkhomangFields.Sohopdongmua.Name].ToString();
+                NhapkhomangEntity _NhapkhomangEntity = new NhapkhomangEntity();
+                _NhapkhomangEntity.Ngaynhap = _ngaynhap;
+                _NhapkhomangEntity.Makho = txt_MAKHO.Text.Trim();
+                _NhapkhomangEntity.Tenkho = txt_TENKHO.Text.Trim();
+                _NhapkhomangEntity.Mamang = _view.Row[NhapkhomangFields.Mamang.Name].ToString();
+                _NhapkhomangEntity.Tenmang = _view.Row[NhapkhomangFields.Tenmang.Name].ToString();
+                _NhapkhomangEntity.Somet = Convert.ToDecimal(_view.Row[NhapkhomangFields.Somet.Name].ToString());
+                _NhapkhomangEntity.Sokg = Convert.ToDecimal(_view.Row[NhapkhomangFields.Sokg.Name].ToString());
+                _NhapkhomangEntity.Malydo = _view.Row[NhapkhomangFields.Malydo.Name].ToString();
+                _NhapkhomangEntity.Tenlydo = _view.Row[NhapkhomangFields.Tenlydo.Name].ToString();
+                _NhapkhomangEntity.Lenhsx = _view.Row[NhapkhomangFields.Lenhsx.Name].ToString();
+                _NhapkhomangEntity.Sohopdongmua = _view.Row[NhapkhomangFields.Sohopdongmua.Name].ToString();
 
                 #region xét isnew
-                try { _nhapkhomangEntity.Id = Convert.ToInt64(_view[NhapkhomangFields.Id.Name].ToString()); }
+                try { _NhapkhomangEntity.Id = Convert.ToInt64(_view[NhapkhomangFields.Id.Name].ToString()); }
                 catch { }
 
-                _nhapkhomangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
-                if (_nhapkhomangEntity.IsNew)
+                _NhapkhomangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_NhapkhomangEntity.IsNew)
                 {
-                    EntityCollection drDHCT = (new NhapkhomangManager()).SelectById(_nhapkhomangEntity.Id);
+                    EntityCollection drDHCT = (new NhapkhomangManager()).SelectById(_NhapkhomangEntity.Id);
                     if (drDHCT.Count > 0)
                     {
-                        _nhapkhomangEntity.Ngaysua = DateTime.Now;
-                        _nhapkhomangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                        _nhapkhomangEntity.IsNew = false;
+                        _NhapkhomangEntity.Ngaysua = DateTime.Now;
+                        _NhapkhomangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _NhapkhomangEntity.IsNew = false;
                     }
                     else
                     {
-                        _nhapkhomangEntity.Ngaytao = DateTime.Now;
-                        _nhapkhomangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                        _NhapkhomangEntity.Ngaytao = DateTime.Now;
+                        _NhapkhomangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                     }
                 }
                 #endregion
 
-                if (!string.IsNullOrEmpty(_nhapkhomangEntity.Mamang))
-                    _NhapkhomangEntityCol.Add(_nhapkhomangEntity);
+                if (!string.IsNullOrEmpty(_NhapkhomangEntity.Mamang))
+                    _NhapkhomangEntityCol.Add(_NhapkhomangEntity);
             }
 
-            foreach (NhapkhomangEntity _nhapkhomangEntity in _NhapkhomangEntityCol)
+            foreach (NhapkhomangEntity _NhapkhomangEntity in _NhapkhomangEntityCol)
             {
-                if (_nhapkhomangEntity.IsNew)
+                if (_NhapkhomangEntity.IsNew)
                 {
                     DataRow _r_Insert = DT_NHAPMANG_CHITIET.NewRow();
                     DT_NHAPMANG_CHITIET.Rows.Add(_r_Insert);
-                    _NhapkhomangManager.InsertV2(_nhapkhomangEntity, _r_Insert, DT_NHAPMANG_CHITIET, BS_NHAPMANG_CHITIET);
+                    _NhapkhomangManager.InsertV2(_NhapkhomangEntity, _r_Insert, DT_NHAPMANG_CHITIET, BS_NHAPMANG_CHITIET);
                 }
-                else _NhapkhomangManager.Update(_nhapkhomangEntity);
+                else _NhapkhomangManager.Update(_NhapkhomangEntity);
             }
 
             //if (string.IsNullOrEmpty(_str_DMCHUONG_PK))

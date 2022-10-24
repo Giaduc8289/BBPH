@@ -273,15 +273,15 @@ namespace GD.BBPH.APP.DANHMUC
 
         private string Save_Data(string _str_DMCHUONG_PK)
         {
-            DmmauEntity _dmmauEntity = new DmmauEntity();
+            DmmauEntity _DmmauEntity = new DmmauEntity();
 
-            _dmmauEntity.Mamau = txt_MAMAU.Text.Trim();
-            _dmmauEntity.Tenmau = txt_TENMAU.Text.Trim();
-            _dmmauEntity.MaArgb = txt_MAARGB.BackColor.ToArgb();
+            _DmmauEntity.Mamau = txt_MAMAU.Text.Trim();
+            _DmmauEntity.Tenmau = txt_TENMAU.Text.Trim();
+            _DmmauEntity.MaArgb = txt_MAARGB.BackColor.ToArgb();
             if (chk_LAMAUGOC.Checked)
-                _dmmauEntity.Lamaugoc = true;
+                _DmmauEntity.Lamaugoc = true;
             else
-                _dmmauEntity.Lamaugoc = false;
+                _DmmauEntity.Lamaugoc = false;
 
             EntityCollection _ThanhphanmauEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_TPMAU.GetDataRows();
@@ -289,53 +289,53 @@ namespace GD.BBPH.APP.DANHMUC
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                ThanhphanmauEntity _thanhphanmauEntity = new ThanhphanmauEntity();
+                ThanhphanmauEntity _ThanhphanmauEntity = new ThanhphanmauEntity();
 
-                _thanhphanmauEntity.Mamau = txt_MAMAU.Text.Trim();
-                _thanhphanmauEntity.Tenmau = txt_TENMAU.Text.Trim();
-                _thanhphanmauEntity.Mausudung = _view[ThanhphanmauFields.Mausudung.Name].ToString();
-                _thanhphanmauEntity.Tenmausudung = _view[ThanhphanmauFields.Tenmausudung.Name].ToString();
-                try { _thanhphanmauEntity.Tyle = Convert.ToDecimal(_view[ThanhphanmauFields.Tyle.Name].ToString()); }
+                _ThanhphanmauEntity.Mamau = txt_MAMAU.Text.Trim();
+                _ThanhphanmauEntity.Tenmau = txt_TENMAU.Text.Trim();
+                _ThanhphanmauEntity.Mausudung = _view[ThanhphanmauFields.Mausudung.Name].ToString();
+                _ThanhphanmauEntity.Tenmausudung = _view[ThanhphanmauFields.Tenmausudung.Name].ToString();
+                try { _ThanhphanmauEntity.Tyle = Convert.ToDecimal(_view[ThanhphanmauFields.Tyle.Name].ToString()); }
                 catch { }
-                try { _thanhphanmauEntity.Id = Convert.ToInt64(_view[ThanhphanmauFields.Id.Name].ToString()); }
+                try { _ThanhphanmauEntity.Id = Convert.ToInt64(_view[ThanhphanmauFields.Id.Name].ToString()); }
                 catch { }
 
-                _thanhphanmauEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
-                if (_thanhphanmauEntity.IsNew)
+                _ThanhphanmauEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_ThanhphanmauEntity.IsNew)
                 {
-                    EntityCollection drDHCT = (new ThanhphanmauManager()).SelectById(_thanhphanmauEntity.Id);
+                    EntityCollection drDHCT = (new ThanhphanmauManager()).SelectById(_ThanhphanmauEntity.Id);
                     if (drDHCT.Count > 0)
                     {
-                        _thanhphanmauEntity.Ngaysua = DateTime.Now;
-                        _thanhphanmauEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                        _thanhphanmauEntity.IsNew = false;
+                        _ThanhphanmauEntity.Ngaysua = DateTime.Now;
+                        _ThanhphanmauEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _ThanhphanmauEntity.IsNew = false;
                     }
                     else
                     {
-                        _thanhphanmauEntity.Ngaytao = DateTime.Now;
-                        _thanhphanmauEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                        _ThanhphanmauEntity.Ngaytao = DateTime.Now;
+                        _ThanhphanmauEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                     }
                 }
 
-                _ThanhphanmauEntityCol.Add(_thanhphanmauEntity);
+                _ThanhphanmauEntityCol.Add(_ThanhphanmauEntity);
             }
 
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
-                _dmmauEntity.Ngaytao = DateTime.Now;
-                _dmmauEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _DmmauManager.InsertV2(_dmmauEntity, r_Insert, DT_DMMAU, BS_DMMAU);
+                _DmmauEntity.Ngaytao = DateTime.Now;
+                _DmmauEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                _str_DMCHUONG_PK = _DmmauManager.InsertV2(_DmmauEntity, r_Insert, DT_DMMAU, BS_DMMAU);
 
                 //---Xử lý trường hợp khi thêm mới màu gốc, thì thành phần màu tự bổ sung với tỷ lệ 100%
-                if(_dmmauEntity.Lamaugoc==true)
+                if(_DmmauEntity.Lamaugoc==true)
                 {
-                    ThanhphanmauEntity _thanhphanmauEntity = new ThanhphanmauEntity();
-                    _thanhphanmauEntity.Mamau = txt_MAMAU.Text.Trim();
-                    _thanhphanmauEntity.Tenmau = txt_TENMAU.Text.Trim();
-                    _thanhphanmauEntity.Mausudung = txt_MAMAU.Text.Trim();
-                    _thanhphanmauEntity.Tenmausudung = txt_TENMAU.Text.Trim();
-                    _thanhphanmauEntity.Tyle = 100;
-                    _ThanhphanmauEntityCol.Add(_thanhphanmauEntity);
+                    ThanhphanmauEntity _ThanhphanmauEntity = new ThanhphanmauEntity();
+                    _ThanhphanmauEntity.Mamau = txt_MAMAU.Text.Trim();
+                    _ThanhphanmauEntity.Tenmau = txt_TENMAU.Text.Trim();
+                    _ThanhphanmauEntity.Mausudung = txt_MAMAU.Text.Trim();
+                    _ThanhphanmauEntity.Tenmausudung = txt_TENMAU.Text.Trim();
+                    _ThanhphanmauEntity.Tyle = 100;
+                    _ThanhphanmauEntityCol.Add(_ThanhphanmauEntity);
                 }
                 _ThanhphanmauManager.InsertCollection(_ThanhphanmauEntityCol);
 
@@ -350,25 +350,25 @@ namespace GD.BBPH.APP.DANHMUC
             }
             else
             {
-                _dmmauEntity.Ngaysua = DateTime.Now;
-                _dmmauEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                _DmmauManager.Update(_dmmauEntity);
+                _DmmauEntity.Ngaysua = DateTime.Now;
+                _DmmauEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                _DmmauManager.Update(_DmmauEntity);
 
-                //foreach (ThanhphanmauEntity _thanhphanmauEntity in _ThanhphanmauEntityCol)
-                //    _thanhphanmauEntity.Mamau = _dmmauEntity.Mamau;
-                foreach (ThanhphanmauEntity _thanhphanmauEntity in _ThanhphanmauEntityCol)
+                //foreach (ThanhphanmauEntity _ThanhphanmauEntity in _ThanhphanmauEntityCol)
+                //    _ThanhphanmauEntity.Mamau = _DmmauEntity.Mamau;
+                foreach (ThanhphanmauEntity _ThanhphanmauEntity in _ThanhphanmauEntityCol)
                 {
-                    if (_thanhphanmauEntity.IsNew)
+                    if (_ThanhphanmauEntity.IsNew)
                     {
                         DataRow _r_Insert = DT_TPMAU.NewRow();
                         DT_TPMAU.Rows.Add(_r_Insert);
-                        _ThanhphanmauManager.InsertV2(_thanhphanmauEntity, _r_Insert, DT_TPMAU, BS_TPMAU);
+                        _ThanhphanmauManager.InsertV2(_ThanhphanmauEntity, _r_Insert, DT_TPMAU, BS_TPMAU);
                     }
-                    else _ThanhphanmauManager.Update(_thanhphanmauEntity);
+                    else _ThanhphanmauManager.Update(_ThanhphanmauEntity);
                 }
 
-                GRID_DMMAU.CurrentRow.Cells[DmmauFields.Mamau.Name].Value = _dmmauEntity.Mamau;
-                GRID_DMMAU.CurrentRow.Cells[DmmauFields.Tenmau.Name].Value = _dmmauEntity.Tenmau;
+                GRID_DMMAU.CurrentRow.Cells[DmmauFields.Mamau.Name].Value = _DmmauEntity.Mamau;
+                GRID_DMMAU.CurrentRow.Cells[DmmauFields.Tenmau.Name].Value = _DmmauEntity.Tenmau;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmauManager.Convert(_DmmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_TPMAU.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TPMAU.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;

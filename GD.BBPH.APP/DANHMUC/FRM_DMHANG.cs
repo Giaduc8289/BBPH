@@ -382,46 +382,46 @@ namespace GD.BBPH.APP.DANHMUC
 
         private string Save_Data(string _str_DMCHUONG_PK)
         {
-            DmhangEntity _dmhangEntity = new DmhangEntity();
+            DmhangEntity _DmhangEntity = new DmhangEntity();
 
-            _dmhangEntity.Masp = txt_MASP.Text.Trim();
-            _dmhangEntity.Tensp = txt_TENSP.Text.Trim();
-            _dmhangEntity.Makhach = txt_MAKHACH.Text.Trim();
-            _dmhangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-            _dmhangEntity.Maspcuakhach = txt_MASPCUAKHACH.Text.Trim();
-            //_dmhangEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
-            //_dmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
-            _dmhangEntity.Trongluong = LIB.ConvertString.NumbertoDB(txt_TRONGLUONG.Text.Trim());
-            _dmhangEntity.Doday = LIB.ConvertString.NumbertoDB(txt_DODAY.Text.Trim());
-            _dmhangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
-            _dmhangEntity.Dai = LIB.ConvertString.NumbertoDB(txt_DAI.Text.Trim());
-            _dmhangEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
-            _dmhangEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
-            _dmhangEntity.Somauma = txt_SOMAUMA.Text.Trim();
-            try { _dmhangEntity.Somau = Int32.Parse(txt_SOMAU.Text.Trim()); }
+            _DmhangEntity.Masp = txt_MASP.Text.Trim();
+            _DmhangEntity.Tensp = txt_TENSP.Text.Trim();
+            _DmhangEntity.Makhach = txt_MAKHACH.Text.Trim();
+            _DmhangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
+            _DmhangEntity.Maspcuakhach = txt_MASPCUAKHACH.Text.Trim();
+            //_DmhangEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
+            //_DmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
+            _DmhangEntity.Trongluong = LIB.ConvertString.NumbertoDB(txt_TRONGLUONG.Text.Trim());
+            _DmhangEntity.Doday = LIB.ConvertString.NumbertoDB(txt_DODAY.Text.Trim());
+            _DmhangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
+            _DmhangEntity.Dai = LIB.ConvertString.NumbertoDB(txt_DAI.Text.Trim());
+            _DmhangEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
+            _DmhangEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
+            _DmhangEntity.Somauma = txt_SOMAUMA.Text.Trim();
+            try { _DmhangEntity.Somau = Int32.Parse(txt_SOMAU.Text.Trim()); }
             catch { }
-            _dmhangEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
-            try { _dmhangEntity.Sohinh = Int32.Parse(txt_SOHINH.Text.Trim()); }
+            _DmhangEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
+            try { _DmhangEntity.Sohinh = Int32.Parse(txt_SOHINH.Text.Trim()); }
             catch { }
-            _dmhangEntity.Cautrucin = txt_CAUTRUCIN.Text.Trim();
-            _dmhangEntity.Khoiluongmuc = LIB.ConvertString.NumbertoDB(txt_KHOILUONGMUC.Text.Trim());
-            _dmhangEntity.Mamang1 = txt_MAMANG1.Text.Trim();
-            _dmhangEntity.Tenmang1 = txt_TENMANG1.Text.Trim();
-            _dmhangEntity.Tlmanglop1 = LIB.ConvertString.NumbertoDB(txt_TLMANG1.Text.Trim());
-            _dmhangEntity.Tlkeolop1 = LIB.ConvertString.NumbertoDB(txt_TLKEO1.Text.Trim());
-            _dmhangEntity.Mamang2 = txt_MAMANG2.Text.Trim();
-            _dmhangEntity.Tenmang2 = txt_TENMANG2.Text.Trim();
-            _dmhangEntity.Tlmanglop2 = LIB.ConvertString.NumbertoDB(txt_TLMANG2.Text.Trim());
-            _dmhangEntity.Tlkeolop2 = LIB.ConvertString.NumbertoDB(txt_TLKEO2.Text.Trim());
-            _dmhangEntity.Dinhluongkeo = LIB.ConvertString.NumbertoDB(txt_DINHLUONGKEO.Text.Trim());
-            _dmhangEntity.Kichthuoctruc = txt_KICHTHUOCTRUC.Text.Trim();
-            _dmhangEntity.Vitri = txt_VITRI.Text.Trim();
-            _dmhangEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
-            _dmhangEntity.Tenqcthanhpham = txt_TENQCTHANHPHAM.Text.Trim();
-            _dmhangEntity.Maqcdonggoi = txt_MAQCDONGGOI.Text.Trim();
-            _dmhangEntity.Tenqcdonggoi = txt_TENQCDONGGOI.Text.Trim();
-            _dmhangEntity.Maqcloaithung = txt_MAQCLOAITHUNG.Text.Trim();
-            _dmhangEntity.Tenqcloaithung = txt_TENQCLOAITHUNG.Text.Trim();
+            _DmhangEntity.Cautrucin = txt_CAUTRUCIN.Text.Trim();
+            _DmhangEntity.Khoiluongmuc = LIB.ConvertString.NumbertoDB(txt_KHOILUONGMUC.Text.Trim());
+            _DmhangEntity.Mamang1 = txt_MAMANG1.Text.Trim();
+            _DmhangEntity.Tenmang1 = txt_TENMANG1.Text.Trim();
+            _DmhangEntity.Tlmanglop1 = LIB.ConvertString.NumbertoDB(txt_TLMANG1.Text.Trim());
+            _DmhangEntity.Tlkeolop1 = LIB.ConvertString.NumbertoDB(txt_TLKEO1.Text.Trim());
+            _DmhangEntity.Mamang2 = txt_MAMANG2.Text.Trim();
+            _DmhangEntity.Tenmang2 = txt_TENMANG2.Text.Trim();
+            _DmhangEntity.Tlmanglop2 = LIB.ConvertString.NumbertoDB(txt_TLMANG2.Text.Trim());
+            _DmhangEntity.Tlkeolop2 = LIB.ConvertString.NumbertoDB(txt_TLKEO2.Text.Trim());
+            _DmhangEntity.Dinhluongkeo = LIB.ConvertString.NumbertoDB(txt_DINHLUONGKEO.Text.Trim());
+            _DmhangEntity.Kichthuoctruc = txt_KICHTHUOCTRUC.Text.Trim();
+            _DmhangEntity.Vitri = txt_VITRI.Text.Trim();
+            _DmhangEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
+            _DmhangEntity.Tenqcthanhpham = txt_TENQCTHANHPHAM.Text.Trim();
+            _DmhangEntity.Maqcdonggoi = txt_MAQCDONGGOI.Text.Trim();
+            _DmhangEntity.Tenqcdonggoi = txt_TENQCDONGGOI.Text.Trim();
+            _DmhangEntity.Maqcloaithung = txt_MAQCLOAITHUNG.Text.Trim();
+            _DmhangEntity.Tenqcloaithung = txt_TENQCLOAITHUNG.Text.Trim();
 
             #region Lấy dữ liệu lưới chi tiết
             EntityCollection _MaucuahangEntityCol = new EntityCollection();
@@ -430,36 +430,36 @@ namespace GD.BBPH.APP.DANHMUC
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                MaucuahangEntity _maucuahangEntity = new MaucuahangEntity();
-                _maucuahangEntity.Masp = txt_MASP.Text.Trim();
-                _maucuahangEntity.Tensp = txt_TENSP.Text.Trim();
-                _maucuahangEntity.Mamau = _view[MaucuahangFields.Mamau.Name].ToString();
-                _maucuahangEntity.Tenmau = _view[MaucuahangFields.Tenmau.Name].ToString();
-                _maucuahangEntity.Klmau = LIB.ConvertString.NumbertoDB(_view[MaucuahangFields.Klmau.Name].ToString());
-                _maucuahangEntity.Tylebaophu = LIB.ConvertString.NumbertoDB(_view[MaucuahangFields.Tylebaophu.Name].ToString());
-                try { _maucuahangEntity.MaArgb = int.Parse(_view[MaucuahangFields.MaArgb.Name].ToString()); }
+                MaucuahangEntity _MaucuahangEntity = new MaucuahangEntity();
+                _MaucuahangEntity.Masp = txt_MASP.Text.Trim();
+                _MaucuahangEntity.Tensp = txt_TENSP.Text.Trim();
+                _MaucuahangEntity.Mamau = _view[MaucuahangFields.Mamau.Name].ToString();
+                _MaucuahangEntity.Tenmau = _view[MaucuahangFields.Tenmau.Name].ToString();
+                _MaucuahangEntity.Klmau = LIB.ConvertString.NumbertoDB(_view[MaucuahangFields.Klmau.Name].ToString());
+                _MaucuahangEntity.Tylebaophu = LIB.ConvertString.NumbertoDB(_view[MaucuahangFields.Tylebaophu.Name].ToString());
+                try { _MaucuahangEntity.MaArgb = int.Parse(_view[MaucuahangFields.MaArgb.Name].ToString()); }
                 catch { }
-                try { _maucuahangEntity.Id = Convert.ToInt64(_view[MaucuahangFields.Id.Name].ToString()); }
+                try { _MaucuahangEntity.Id = Convert.ToInt64(_view[MaucuahangFields.Id.Name].ToString()); }
                 catch { }
 
-                _maucuahangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
-                if (_maucuahangEntity.IsNew)
+                _MaucuahangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_MaucuahangEntity.IsNew)
                 {
-                    EntityCollection drDHCT = (new MaucuahangManager()).SelectById(_maucuahangEntity.Id);
+                    EntityCollection drDHCT = (new MaucuahangManager()).SelectById(_MaucuahangEntity.Id);
                     if (drDHCT.Count > 0)
                     {
-                        _maucuahangEntity.Ngaysua = DateTime.Now;
-                        _maucuahangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                        _maucuahangEntity.IsNew = false;
+                        _MaucuahangEntity.Ngaysua = DateTime.Now;
+                        _MaucuahangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _MaucuahangEntity.IsNew = false;
                     }
                     else
                     {
-                        _maucuahangEntity.Ngaytao = DateTime.Now;
-                        _maucuahangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                        _MaucuahangEntity.Ngaytao = DateTime.Now;
+                        _MaucuahangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                     }
                 }
 
-                _MaucuahangEntityCol.Add(_maucuahangEntity);
+                _MaucuahangEntityCol.Add(_MaucuahangEntity);
             }
             EntityCollection _TruccuahangEntityCol = new EntityCollection();
             GridEXRow[] listGridTruc = GRID_TRUCCUAHANG.GetDataRows();
@@ -467,42 +467,42 @@ namespace GD.BBPH.APP.DANHMUC
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                TruccuahangEntity _truccuahangEntity = new TruccuahangEntity();
+                TruccuahangEntity _TruccuahangEntity = new TruccuahangEntity();
 
-                _truccuahangEntity.Masp = txt_MASP.Text.Trim();
-                _truccuahangEntity.Tensp = txt_TENSP.Text.Trim();
-                try { _truccuahangEntity.Stttruc = Convert.ToInt32(_view[TruccuahangFields.Stttruc.Name].ToString()); }
+                _TruccuahangEntity.Masp = txt_MASP.Text.Trim();
+                _TruccuahangEntity.Tensp = txt_TENSP.Text.Trim();
+                try { _TruccuahangEntity.Stttruc = Convert.ToInt32(_view[TruccuahangFields.Stttruc.Name].ToString()); }
                 catch { }
-                _truccuahangEntity.Matruc = _view[TruccuahangFields.Matruc.Name].ToString();
-                try { _truccuahangEntity.Id = Convert.ToInt64(_view[TruccuahangFields.Id.Name].ToString()); }
+                _TruccuahangEntity.Matruc = _view[TruccuahangFields.Matruc.Name].ToString();
+                try { _TruccuahangEntity.Id = Convert.ToInt64(_view[TruccuahangFields.Id.Name].ToString()); }
                 catch { }
 
-                _truccuahangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
-                if (_truccuahangEntity.IsNew)
+                _TruccuahangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_TruccuahangEntity.IsNew)
                 {
-                    EntityCollection drDHCT = (new TruccuahangManager()).SelectById(_truccuahangEntity.Id);
+                    EntityCollection drDHCT = (new TruccuahangManager()).SelectById(_TruccuahangEntity.Id);
                     if (drDHCT.Count > 0)
                     {
-                        _truccuahangEntity.Ngaysua = DateTime.Now;
-                        _truccuahangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                        _truccuahangEntity.IsNew = false;
+                        _TruccuahangEntity.Ngaysua = DateTime.Now;
+                        _TruccuahangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _TruccuahangEntity.IsNew = false;
                     }
                     else
                     {
-                        _truccuahangEntity.Ngaytao = DateTime.Now;
-                        _truccuahangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                        _TruccuahangEntity.Ngaytao = DateTime.Now;
+                        _TruccuahangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                     }
                 }
 
-                _TruccuahangEntityCol.Add(_truccuahangEntity);
+                _TruccuahangEntityCol.Add(_TruccuahangEntity);
             }
             #endregion
 
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
-                _dmhangEntity.Ngaytao = DateTime.Now;
-                _dmhangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _DmhangManager.InsertV2(_dmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
+                _DmhangEntity.Ngaytao = DateTime.Now;
+                _DmhangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                _str_DMCHUONG_PK = _DmhangManager.InsertV2(_DmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
                 new MaucuahangManager().InsertCollection(_MaucuahangEntityCol);
                 new TruccuahangManager().InsertCollection(_TruccuahangEntityCol);
                 GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -511,74 +511,74 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmhangManager.Convert(_dmhangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmhangManager.Convert(_DmhangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMHANGHOA.ResetCurrentItem();
                 BS_DMHANGHOA_CurrentChanged(new object(), new EventArgs());
             }
             else
             {
-                _dmhangEntity.Ngaysua = DateTime.Now;
-                _dmhangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-                _DmhangManager.Update(_dmhangEntity);
-                foreach (MaucuahangEntity _maucuahangEntity in _MaucuahangEntityCol)
+                _DmhangEntity.Ngaysua = DateTime.Now;
+                _DmhangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                _DmhangManager.Update(_DmhangEntity);
+                foreach (MaucuahangEntity _MaucuahangEntity in _MaucuahangEntityCol)
                 {
-                    if (_maucuahangEntity.IsNew)
+                    if (_MaucuahangEntity.IsNew)
                     {
                         DataRow _r_Insert = DT_MAUCUAHANG.NewRow();
                         DT_MAUCUAHANG.Rows.Add(_r_Insert);
-                        new MaucuahangManager().InsertV2(_maucuahangEntity, _r_Insert, DT_MAUCUAHANG, BS_MAUCUAHANG);
+                        new MaucuahangManager().InsertV2(_MaucuahangEntity, _r_Insert, DT_MAUCUAHANG, BS_MAUCUAHANG);
                     }
-                    else new MaucuahangManager().Update(_maucuahangEntity);
+                    else new MaucuahangManager().Update(_MaucuahangEntity);
                 }
-                foreach (TruccuahangEntity _truccuahangEntity in _TruccuahangEntityCol)
+                foreach (TruccuahangEntity _TruccuahangEntity in _TruccuahangEntityCol)
                 {
-                    if (_truccuahangEntity.IsNew)
+                    if (_TruccuahangEntity.IsNew)
                     {
                         DataRow _r_Insert = DT_TRUCCUAHANG.NewRow();
                         DT_TRUCCUAHANG.Rows.Add(_r_Insert);
-                        new TruccuahangManager().InsertV2(_truccuahangEntity, _r_Insert, DT_TRUCCUAHANG, BS_TRUCCUAHANG);
+                        new TruccuahangManager().InsertV2(_TruccuahangEntity, _r_Insert, DT_TRUCCUAHANG, BS_TRUCCUAHANG);
                     }
-                    else new TruccuahangManager().Update(_truccuahangEntity);
+                    else new TruccuahangManager().Update(_TruccuahangEntity);
                 }
                 #region Update lưới chính
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Masp.Name].Value = _dmhangEntity.Masp;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tensp.Name].Value = _dmhangEntity.Tensp;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maspcuakhach.Name].Value = _dmhangEntity.Maspcuakhach;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Machungloai.Name].Value = _dmhangEntity.Machungloai;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenchungloai.Name].Value = _dmhangEntity.Tenchungloai;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Makhach.Name].Value = _dmhangEntity.Makhach;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenkhach.Name].Value = _dmhangEntity.Tenkhach;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Doday.Name].Value = _dmhangEntity.Doday;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Trongluong.Name].Value = _dmhangEntity.Trongluong;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Sohinh.Name].Value = _dmhangEntity.Sohinh;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somau.Name].Value = _dmhangEntity.Somau;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Loaimuc.Name].Value = _dmhangEntity.Loaimuc;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Khoiluongmuc.Name].Value = _dmhangEntity.Khoiluongmuc;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Cautrucin.Name].Value = _dmhangEntity.Cautrucin;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Mamang1.Name].Value = _dmhangEntity.Mamang1;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenmang1.Name].Value = _dmhangEntity.Tenmang1;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlmanglop1.Name].Value = _dmhangEntity.Tlmanglop1;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlkeolop1.Name].Value = _dmhangEntity.Tlkeolop1;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Mamang2.Name].Value = _dmhangEntity.Mamang2;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenmang2.Name].Value = _dmhangEntity.Tenmang2;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlmanglop2.Name].Value = _dmhangEntity.Tlmanglop2;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlkeolop2.Name].Value = _dmhangEntity.Tlkeolop2;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Dinhluongkeo.Name].Value = _dmhangEntity.Dinhluongkeo;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Kichthuoctruc.Name].Value = _dmhangEntity.Kichthuoctruc;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Vitri.Name].Value = _dmhangEntity.Vitri;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maqcdonggoi.Name].Value = _dmhangEntity.Maqcdonggoi;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenqcdonggoi.Name].Value = _dmhangEntity.Tenqcdonggoi;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maqcloaithung.Name].Value = _dmhangEntity.Maqcloaithung;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenqcloaithung.Name].Value = _dmhangEntity.Tenqcloaithung;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maqcthanhpham.Name].Value = _dmhangEntity.Maqcthanhpham;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenqcthanhpham.Name].Value = _dmhangEntity.Tenqcthanhpham;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Rong.Name].Value = _dmhangEntity.Rong;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Dai.Name].Value = _dmhangEntity.Dai;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somauma.Name].Value = _dmhangEntity.Somauma;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Sohinhma.Name].Value = _dmhangEntity.Sohinhma;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maloaimuc.Name].Value = _dmhangEntity.Maloaimuc;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Masp.Name].Value = _DmhangEntity.Masp;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tensp.Name].Value = _DmhangEntity.Tensp;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maspcuakhach.Name].Value = _DmhangEntity.Maspcuakhach;
+                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Machungloai.Name].Value = _DmhangEntity.Machungloai;
+                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenchungloai.Name].Value = _DmhangEntity.Tenchungloai;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Makhach.Name].Value = _DmhangEntity.Makhach;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenkhach.Name].Value = _DmhangEntity.Tenkhach;
+                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Doday.Name].Value = _DmhangEntity.Doday;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Trongluong.Name].Value = _DmhangEntity.Trongluong;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Sohinh.Name].Value = _DmhangEntity.Sohinh;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somau.Name].Value = _DmhangEntity.Somau;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Loaimuc.Name].Value = _DmhangEntity.Loaimuc;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Khoiluongmuc.Name].Value = _DmhangEntity.Khoiluongmuc;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Cautrucin.Name].Value = _DmhangEntity.Cautrucin;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Mamang1.Name].Value = _DmhangEntity.Mamang1;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenmang1.Name].Value = _DmhangEntity.Tenmang1;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlmanglop1.Name].Value = _DmhangEntity.Tlmanglop1;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlkeolop1.Name].Value = _DmhangEntity.Tlkeolop1;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Mamang2.Name].Value = _DmhangEntity.Mamang2;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenmang2.Name].Value = _DmhangEntity.Tenmang2;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlmanglop2.Name].Value = _DmhangEntity.Tlmanglop2;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlkeolop2.Name].Value = _DmhangEntity.Tlkeolop2;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Dinhluongkeo.Name].Value = _DmhangEntity.Dinhluongkeo;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Kichthuoctruc.Name].Value = _DmhangEntity.Kichthuoctruc;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Vitri.Name].Value = _DmhangEntity.Vitri;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maqcdonggoi.Name].Value = _DmhangEntity.Maqcdonggoi;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenqcdonggoi.Name].Value = _DmhangEntity.Tenqcdonggoi;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maqcloaithung.Name].Value = _DmhangEntity.Maqcloaithung;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenqcloaithung.Name].Value = _DmhangEntity.Tenqcloaithung;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maqcthanhpham.Name].Value = _DmhangEntity.Maqcthanhpham;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenqcthanhpham.Name].Value = _DmhangEntity.Tenqcthanhpham;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Rong.Name].Value = _DmhangEntity.Rong;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Dai.Name].Value = _DmhangEntity.Dai;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somauma.Name].Value = _DmhangEntity.Somauma;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Sohinhma.Name].Value = _DmhangEntity.Sohinhma;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maloaimuc.Name].Value = _DmhangEntity.Maloaimuc;
                 #endregion
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmhangManager.Convert(_dmhangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmhangManager.Convert(_DmhangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
