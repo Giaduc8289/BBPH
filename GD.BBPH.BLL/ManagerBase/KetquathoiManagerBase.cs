@@ -985,7 +985,7 @@ namespace GD.BBPH.BLL
 			return _KetquathoiEntity;
 		}
 
-		public KetquathoiEntity Insert(System.DateTime Ngay, System.Int32 Ca, System.String Mamay, System.String Lenhthoi, System.String Mamang, System.String Macongnhan, System.Decimal Somet, System.Decimal Sokg, System.Decimal Sokgquydoi, System.Decimal Chenhlechkg, System.String Chatluong, System.Decimal Phelieuthucte, System.Decimal Tongsp, System.DateTime Thoigianbatdau, System.DateTime Thoigianketthuc, System.Decimal Thoigianchuanbi, System.Decimal Thoigiansuco, System.Decimal Sokgdukiendat, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Tenmang, System.String Tenmay, System.String Tencongnhan, System.Decimal Nangsuat, )//ko co mahieu
+		public KetquathoiEntity Insert(System.DateTime Ngay, System.Int32 Ca, System.String Mamay, System.String Lenhthoi, System.String Mamang, System.String Macongnhan, System.Decimal Somet, System.Decimal Sokg, System.Decimal Sokgquydoi, System.Decimal Chenhlechkg, System.String Chatluong, System.Decimal Phelieuthucte, System.Decimal Tongsp, System.DateTime Thoigianbatdau, System.DateTime Thoigianketthuc, System.Decimal Thoigianchuanbi, System.Decimal Thoigiansuco, System.Decimal Sokgdukiendat, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Tenmang, System.String Tenmay, System.String Tencongnhan, System.Decimal Nangsuat)//ko co mahieu
 		{
 			KetquathoiEntity _KetquathoiEntity = new KetquathoiEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

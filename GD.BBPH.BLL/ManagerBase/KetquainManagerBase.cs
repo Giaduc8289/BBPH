@@ -1049,7 +1049,7 @@ namespace GD.BBPH.BLL
 			return _KetquainEntity;
 		}
 
-		public KetquainEntity Insert(System.DateTime Ngay, System.Int32 Ca, System.String Mamay, System.String Lenhin, System.String Masanpham, System.String Macongnhan, System.Decimal SometLsx, System.Decimal Sometcap, System.Decimal Sokgcap, System.Decimal Thuctein, System.Decimal Sokgin, System.Decimal Saihongthucte, System.DateTime Thoigianbatdau, System.DateTime Thoigianketthuc, System.Decimal Thoigianchuanbi, System.Decimal Thoigiansuco, System.Decimal PheNcc, System.Decimal PheSx, System.Decimal Tongm2dm, System.Decimal M2saihongtt, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Tensanpham, System.String Tenmay, System.String Tencongnhan, System.Decimal Nangsuat, )//ko co mahieu
+		public KetquainEntity Insert(System.DateTime Ngay, System.Int32 Ca, System.String Mamay, System.String Lenhin, System.String Masanpham, System.String Macongnhan, System.Decimal SometLsx, System.Decimal Sometcap, System.Decimal Sokgcap, System.Decimal Thuctein, System.Decimal Sokgin, System.Decimal Saihongthucte, System.DateTime Thoigianbatdau, System.DateTime Thoigianketthuc, System.Decimal Thoigianchuanbi, System.Decimal Thoigiansuco, System.Decimal PheNcc, System.Decimal PheSx, System.Decimal Tongm2dm, System.Decimal M2saihongtt, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Tensanpham, System.String Tenmay, System.String Tencongnhan, System.Decimal Nangsuat)//ko co mahieu
 		{
 			KetquainEntity _KetquainEntity = new KetquainEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

@@ -1061,6 +1061,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_DMBOPHAN.xml" />
+    <Content Include="XMLCONFIG\FRM_DMHANG_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMMANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU_CHON.xml" />
