@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, October 22, 2022 11:02:37 AM
+// Code is generated on: Monday, October 24, 2022 11:18:29 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -540,6 +540,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tencongnhan", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nangsuat", fieldHashtable);
 		}
 		#endregion
 
@@ -932,6 +935,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquathoiFieldIndex.Tencongnhan, true); }
 			set	{ SetValue((int)KetquathoiFieldIndex.Tencongnhan, value); }
+		}
+
+		/// <summary> The Nangsuat property of the Entity Ketquathoi<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathoi"."Nangsuat"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Nangsuat
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquathoiFieldIndex.Nangsuat, false); }
+			set	{ SetValue((int)KetquathoiFieldIndex.Nangsuat, value); }
 		}
 
 

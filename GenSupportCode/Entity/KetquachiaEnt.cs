@@ -70,6 +70,7 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NGUOITAO.Text = _Rowview.Row[KetquachiaFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[KetquachiaFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[KetquachiaFields.Nguoisua.Name].ToString();
+					txt_NANGSUAT.Text = _Rowview.Row[KetquachiaFields.Nangsuat.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KETQUACHIA_CurrentChanged"); }
@@ -110,6 +111,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_KetquachiaEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
 			_KetquachiaEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
 			_KetquachiaEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_KetquachiaEntity.Nangsuat = txt_NANGSUAT.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_KETQUACHIA_PK))
 			{
@@ -152,6 +154,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Nguoitao.Name].Value = _KetquachiaEntity.Nguoitao;
 				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Ngaysua.Name].Value = _KetquachiaEntity.Ngaysua;
 				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Nguoisua.Name].Value = _KetquachiaEntity.Nguoisua;
+				GRID_KETQUACHIA.CurrentRow.Cells[KetquachiaFields.Nangsuat.Name].Value = _KetquachiaEntity.Nangsuat;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquachiaManager.Convert(_KetquachiaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_KETQUACHIA_PK;
