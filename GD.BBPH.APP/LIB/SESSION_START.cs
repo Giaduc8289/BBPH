@@ -239,6 +239,33 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region DT_VATTUSAIHONG
+
+        private static DataTable _DT_DMVATTUSAIHONG = null;
+        public static DataTable DT_DMVATTUSAIHONG
+        {
+            get
+            {
+                _DT_DMVATTUSAIHONG = new DinhmucvattuManager().SelectAllRDT();
+                return _DT_DMVATTUSAIHONG;
+            }
+            set { _DT_DMVATTUSAIHONG = value; }
+        }
+        #endregion
+        #region DT_DMNHOMDINHMUC
+
+        private static DataTable _DT_DMNHOMDINHMUC = null;
+        public static DataTable DT_DMNHOMDINHMUC
+        {
+            get
+            {
+                _DT_DMNHOMDINHMUC = new DmnhomdinhmucManager().SelectAllRDT();
+                return _DT_DMNHOMDINHMUC;
+            }
+            set { _DT_DMNHOMDINHMUC = value; }
+        }
+        #endregion
+
         #region CONGSUATMAY
         private static DataTable _DT_CONGSUATMAY = null;
         public static DataTable DT_CONGSUATMAY

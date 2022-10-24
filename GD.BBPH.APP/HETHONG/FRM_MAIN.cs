@@ -737,6 +737,20 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_LYDONHAPXUAT()), mmru.Text);
                     break;
+                case "FRM_DMNHOMDINHMUC":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMNHOMDINHMUC") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMNHOMDINHMUC()), mmru.Text);
+                    break;
+                case "FRM_DMVATTUSAIHONG":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DMVATTUSAIHONG") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DMVATTUSAIHONG()), mmru.Text);
+                    break;
 
                 #region Danh mục công đoạn
                 case "FRM_DMCONGDOAN":
