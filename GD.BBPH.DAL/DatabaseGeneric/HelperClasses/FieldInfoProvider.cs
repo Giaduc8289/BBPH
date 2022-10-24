@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 24, 2022 2:13:36 PM
+// Code is generated on: Monday, October 24, 2022 4:31:51 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -798,6 +798,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquathanhphamEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)KetquathanhphamFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("KetquathanhphamEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("KetquathanhphamEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)KetquathanhphamFieldIndex.Nguoisua, 50, 0, 0);
+			base.AddElementFieldInfo("KetquathanhphamEntity", "Socon", typeof(Nullable<System.Int32>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Socon, 0, 0, 10);
 		}
 		/// <summary>Inits KetquathoiEntity's FieldInfo objects</summary>
 		private void InitKetquathoiEntityInfos()
