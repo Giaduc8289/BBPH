@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_DMVATTUSAIHONG));
             this.uiPanelManager1 = new Janus.Windows.UI.Dock.UIPanelManager(this.components);
             this.uiPanel0 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
@@ -194,8 +195,10 @@
             // btn_SAOCHEP
             // 
             this.btn_SAOCHEP.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_SAOCHEP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_SAOCHEP.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SAOCHEP.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_SAOCHEP.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_SAOCHEP.Location = new System.Drawing.Point(424, 482);
             this.btn_SAOCHEP.Name = "btn_SAOCHEP";
             this.btn_SAOCHEP.Size = new System.Drawing.Size(75, 23);
@@ -207,6 +210,7 @@
             // btn_CHONLOAIMUC
             // 
             this.btn_CHONLOAIMUC.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_CHONLOAIMUC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_CHONLOAIMUC.BackgroundImage")));
             this.btn_CHONLOAIMUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_CHONLOAIMUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
             this.btn_CHONLOAIMUC.Location = new System.Drawing.Point(519, 178);
