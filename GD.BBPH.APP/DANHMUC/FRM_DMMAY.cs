@@ -293,8 +293,7 @@ namespace GD.BBPH.APP.DANHMUC
             catch { return null; }
         }
         #endregion
-
-
+        
         #region Shortcut Key
         private void txt_MADONGMAY_KeyDown(object sender, KeyEventArgs e)
         {
@@ -307,6 +306,7 @@ namespace GD.BBPH.APP.DANHMUC
             }
         }
         #endregion
+
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)

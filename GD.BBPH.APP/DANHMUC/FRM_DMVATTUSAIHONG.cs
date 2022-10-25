@@ -16,6 +16,7 @@ using GD.BBPH.LIB;
 using Janus.Data;
 using Janus.Windows.GridEX;
 using Janus.Windows.Common;
+using System.Text.RegularExpressions;
 
 namespace GD.BBPH.APP.DANHMUC
 {
@@ -169,6 +170,7 @@ namespace GD.BBPH.APP.DANHMUC
             DT_DMVATTUSAIHONG.Rows.Add(r_Insert);
             BS_DMVATTUSAIHONG.Position = DT_DMVATTUSAIHONG.Rows.Count;
             MAHIEU_PK = "";
+            txt_MADINHMUC.Text = GetMadinhmuc("DM");
             txt_MADINHMUC.Focus();
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENNHOM, txt_TENMAY, txt_TENDONGMAY, txt_TENCONGDOAN }));
@@ -220,6 +222,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_DINHMUC.Text = drCopy[0][DinhmucvattuFields.Dinhmuc.Name].ToString();
 
                 MAHIEU_PK = "";
+                txt_MADINHMUC.Text = GetMadinhmuc("DM");
                 txt_MADINHMUC.Focus();
                 //TEXTBOX_Only_Control(false, null);
                 // txt_MAHIEU.Text = DmcapmaManager.GET_MA_INT(DmcapmaManager.LOAI_MA_HIEU, false, KTXPT.DATA);
@@ -360,6 +363,7 @@ namespace GD.BBPH.APP.DANHMUC
         private void txt_MANHOM_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
+            txt_TENNHOM.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MANHOM.Text.Trim()) || DT_DMNHOMDINHMUC == null || DT_DMNHOMDINHMUC.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MANHOM.Text.Trim().ToUpper();
             _RowViewSelect = checkmaNhomdinhmuc(Str_MASIEUTHI, DT_DMNHOMDINHMUC);
@@ -390,6 +394,7 @@ namespace GD.BBPH.APP.DANHMUC
         private void txt_MAMAY_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
+            txt_TENMAY.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MAMAY.Text.Trim()) || DT_DMMAY == null || DT_DMMAY.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MAMAY.Text.Trim().ToUpper();
             _RowViewSelect = checkmaMay(Str_MASIEUTHI, DT_DMMAY);
@@ -428,6 +433,7 @@ namespace GD.BBPH.APP.DANHMUC
         private void txt_MADONGMAY_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
+            txt_TENDONGMAY.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MADONGMAY.Text.Trim()) || DT_DMDONGMAY == null || DT_DMDONGMAY.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MADONGMAY.Text.Trim().ToUpper();
             _RowViewSelect = checkmaDongmay(Str_MASIEUTHI, DT_DMDONGMAY);
@@ -465,6 +471,7 @@ namespace GD.BBPH.APP.DANHMUC
         private void txt_MACONGDOAN_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
+            txt_TENCONGDOAN.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MACONGDOAN.Text.Trim()) || DT_DMCONGDOAN == null || DT_DMCONGDOAN.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MACONGDOAN.Text.Trim().ToUpper();
             _RowViewSelect = checkmaCongdoan(Str_MASIEUTHI, DT_DMCONGDOAN);
@@ -562,6 +569,114 @@ namespace GD.BBPH.APP.DANHMUC
         }
 
         #endregion
+
+        #region Shortcut Key
+        private void txt_MANHOM_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMNHOMDINHMUC frm_Dm = new FRM_DMNHOMDINHMUC();
+                frm_Dm.Text = "Danh mục nhóm định mức";
+                frm_Dm.ShowDialog();
+                DT_DMNHOMDINHMUC = new DmnhomdinhmucManager().SelectAllRDT();
+            }
+        }
+        private void txt_MAMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMMAY frm_Dm = new FRM_DMMAY();
+                frm_Dm.Text = "Danh mục máy";
+                frm_Dm.ShowDialog();
+                DT_DMMAY = new DmmayManager().SelectAllRDT();
+            }
+        }
+        private void txt_MADONGMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMDONGMAY frm_Dm = new FRM_DMDONGMAY();
+                frm_Dm.Text = "Danh mục dòng máy";
+                frm_Dm.ShowDialog();
+                DT_DMDONGMAY = new DmdongmayManager().SelectAllRDT();
+            }
+        }
+        private void txt_MACONGDOAN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCONGDOAN frm_Dm = new FRM_DMCONGDOAN();
+                frm_Dm.Text = "Danh mục công đoạn";
+                frm_Dm.ShowDialog();
+                DT_DMCONGDOAN = new DmcongdoanManager().SelectAllRDT();
+            }
+        }
+        private void txt_SOMAUMA_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách";
+                frm_Dm.ShowDialog();
+                DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
+            }
+        }
+        private void txt_MALOAIMUC_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách";
+                frm_Dm.ShowDialog();
+                DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
+            }
+        }
+        private void txt_MAQCTHANHPHAM_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMQUYCACH frm_Dm = new FRM_DMQUYCACH();
+                frm_Dm.Text = "Danh mục quy cách";
+                frm_Dm.ShowDialog();
+                DT_QCTHANHPHAM = new DmquycachManager().SelectByManhomRDT("N06");
+            }
+        }
+        #endregion
+
+        private string GetMadinhmuc(string m_Tiento)
+        {
+            long m_sohieu = 0, m_newsohieu = 0;
+
+            DataTable _table = new DinhmucvattuManager().SelectAllRDT();
+            if (_table.Rows.Count == 0) return m_Tiento + "001";
+            DataRow[] _row = _table.Select();
+
+            int max_sohieu = 0;
+            string alphaPart = "";
+            for (int i = 0; i < _row.Length; i++)
+            {
+                int _sohieu = 0;
+                // alphaPart = "";
+                // kiem tra chuoi co ca so va chu 
+                string m_sohieu_chucai_so = _row[i][DinhmucvattuFields.Madinhmuc.Name].ToString();
+                Regex re = new Regex(@"([a-zA-Z]+)(\d+)");
+                Match result = re.Match(m_sohieu_chucai_so);
+                if (result.Length == 0) int.TryParse(_row[i][DinhmucvattuFields.Madinhmuc.Name].ToString(), out _sohieu);
+                else
+                {
+                    alphaPart = result.Groups[1].Value;
+                    string numberPart = result.Groups[2].Value;
+                    int.TryParse(numberPart, out _sohieu);
+                }
+                max_sohieu = (max_sohieu < _sohieu) ? _sohieu : max_sohieu;
+            }
+            max_sohieu++;
+            if (max_sohieu == 1) alphaPart = m_Tiento;
+            m_sohieu = (m_newsohieu > max_sohieu) ? m_newsohieu : max_sohieu;
+            m_newsohieu = m_sohieu;
+
+            return (alphaPart + m_newsohieu.ToString().PadLeft(3, '0'));
+        }
 
         private void uiPanel0_Resize(object sender, EventArgs e)
         {

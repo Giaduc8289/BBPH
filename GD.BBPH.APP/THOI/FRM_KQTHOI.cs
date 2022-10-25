@@ -681,11 +681,6 @@ namespace GD.BBPH.APP.THOI
         }
         #endregion
 
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)

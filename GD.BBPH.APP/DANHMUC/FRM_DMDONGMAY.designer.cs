@@ -35,7 +35,7 @@
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.txt_TENCONGDOAN = new GD.BBPH.CONTROL.TEXTBOX();
-            this.txt_CONGDOAN = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_MACONGDOAN = new GD.BBPH.CONTROL.TEXTBOX();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
             this.btn_KHOIPHUC = new GD.BBPH.CONTROL.BUTTON();
@@ -105,7 +105,7 @@
             // uiPanel1Container
             // 
             this.uiPanel1Container.Controls.Add(this.txt_TENCONGDOAN);
-            this.uiPanel1Container.Controls.Add(this.txt_CONGDOAN);
+            this.uiPanel1Container.Controls.Add(this.txt_MACONGDOAN);
             this.uiPanel1Container.Controls.Add(this.label1);
             this.uiPanel1Container.Controls.Add(this.btn_Thoat);
             this.uiPanel1Container.Controls.Add(this.btn_KHOIPHUC);
@@ -138,20 +138,21 @@
             this.txt_TENCONGDOAN.TabIndex = 3;
             this.txt_TENCONGDOAN.TabStop = false;
             // 
-            // txt_CONGDOAN
+            // txt_MACONGDOAN
             // 
-            this.txt_CONGDOAN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CONGDOAN.BannerText = null;
-            this.txt_CONGDOAN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_CONGDOAN.FormNametoShow = "";
-            this.txt_CONGDOAN.Is_DateTime = false;
-            this.txt_CONGDOAN.IsShowForm = false;
-            this.txt_CONGDOAN.Location = new System.Drawing.Point(111, 117);
-            this.txt_CONGDOAN.Name = "txt_CONGDOAN";
-            this.txt_CONGDOAN.Regular_Expression = null;
-            this.txt_CONGDOAN.Size = new System.Drawing.Size(138, 20);
-            this.txt_CONGDOAN.TabIndex = 2;
-            this.txt_CONGDOAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_CONGDOAN_Validating);
+            this.txt_MACONGDOAN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MACONGDOAN.BannerText = null;
+            this.txt_MACONGDOAN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_MACONGDOAN.FormNametoShow = "";
+            this.txt_MACONGDOAN.Is_DateTime = false;
+            this.txt_MACONGDOAN.IsShowForm = false;
+            this.txt_MACONGDOAN.Location = new System.Drawing.Point(111, 117);
+            this.txt_MACONGDOAN.Name = "txt_MACONGDOAN";
+            this.txt_MACONGDOAN.Regular_Expression = null;
+            this.txt_MACONGDOAN.Size = new System.Drawing.Size(138, 20);
+            this.txt_MACONGDOAN.TabIndex = 2;
+            this.txt_MACONGDOAN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MACONGDOAN_KeyDown);
+            this.txt_MACONGDOAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_CONGDOAN_Validating);
             // 
             // label1
             // 
@@ -325,7 +326,7 @@
         private GD.BBPH.CONTROL.BUTTON btn_THEMMOI;
         private GD.BBPH.CONTROL.BUTTON btn_SUA;
         private GD.BBPH.CONTROL.BUTTON btn_Thoat;
-        private CONTROL.TEXTBOX txt_CONGDOAN;
+        private CONTROL.TEXTBOX txt_MACONGDOAN;
         private CONTROL.LABEL label1;
         private CONTROL.TEXTBOX txt_TENCONGDOAN;
     }
