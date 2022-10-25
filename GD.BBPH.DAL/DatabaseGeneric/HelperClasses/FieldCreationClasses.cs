@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 24, 2022 4:31:52 PM
+// Code is generated on: Wednesday, October 26, 2022 12:54:34 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -2932,6 +2932,21 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Macongnhan);}
 		}
+		/// <summary>Creates a new KetquathoiEntity.Tenmang field instance</summary>
+		public static EntityField2 Tenmang
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Tenmang);}
+		}
+		/// <summary>Creates a new KetquathoiEntity.Tenmay field instance</summary>
+		public static EntityField2 Tenmay
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Tenmay);}
+		}
+		/// <summary>Creates a new KetquathoiEntity.Tencongnhan field instance</summary>
+		public static EntityField2 Tencongnhan
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Tencongnhan);}
+		}
 		/// <summary>Creates a new KetquathoiEntity.Somet field instance</summary>
 		public static EntityField2 Somet
 		{
@@ -2942,30 +2957,10 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Sokg);}
 		}
-		/// <summary>Creates a new KetquathoiEntity.Sokgquydoi field instance</summary>
-		public static EntityField2 Sokgquydoi
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Sokgquydoi);}
-		}
-		/// <summary>Creates a new KetquathoiEntity.Chenhlechkg field instance</summary>
-		public static EntityField2 Chenhlechkg
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Chenhlechkg);}
-		}
-		/// <summary>Creates a new KetquathoiEntity.Chatluong field instance</summary>
-		public static EntityField2 Chatluong
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Chatluong);}
-		}
 		/// <summary>Creates a new KetquathoiEntity.Phelieuthucte field instance</summary>
 		public static EntityField2 Phelieuthucte
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Phelieuthucte);}
-		}
-		/// <summary>Creates a new KetquathoiEntity.Tongsp field instance</summary>
-		public static EntityField2 Tongsp
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Tongsp);}
 		}
 		/// <summary>Creates a new KetquathoiEntity.Thoigianbatdau field instance</summary>
 		public static EntityField2 Thoigianbatdau
@@ -2987,10 +2982,15 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Thoigiansuco);}
 		}
-		/// <summary>Creates a new KetquathoiEntity.Sokgdukiendat field instance</summary>
-		public static EntityField2 Sokgdukiendat
+		/// <summary>Creates a new KetquathoiEntity.Chatluong field instance</summary>
+		public static EntityField2 Chatluong
 		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Sokgdukiendat);}
+			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Chatluong);}
+		}
+		/// <summary>Creates a new KetquathoiEntity.Nangsuat field instance</summary>
+		public static EntityField2 Nangsuat
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Nangsuat);}
 		}
 		/// <summary>Creates a new KetquathoiEntity.Ngaytao field instance</summary>
 		public static EntityField2 Ngaytao
@@ -3011,26 +3011,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Nguoisua);}
-		}
-		/// <summary>Creates a new KetquathoiEntity.Tenmang field instance</summary>
-		public static EntityField2 Tenmang
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Tenmang);}
-		}
-		/// <summary>Creates a new KetquathoiEntity.Tenmay field instance</summary>
-		public static EntityField2 Tenmay
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Tenmay);}
-		}
-		/// <summary>Creates a new KetquathoiEntity.Tencongnhan field instance</summary>
-		public static EntityField2 Tencongnhan
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Tencongnhan);}
-		}
-		/// <summary>Creates a new KetquathoiEntity.Nangsuat field instance</summary>
-		public static EntityField2 Nangsuat
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Nangsuat);}
 		}
 	}
 

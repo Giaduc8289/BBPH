@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 24, 2022 4:31:51 PM
+// Code is generated on: Wednesday, October 26, 2022 12:54:34 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1463,20 +1463,18 @@ namespace GD.BBPH.DAL
 		Mamang,
 		///<summary>Macongnhan. </summary>
 		Macongnhan,
+		///<summary>Tenmang. </summary>
+		Tenmang,
+		///<summary>Tenmay. </summary>
+		Tenmay,
+		///<summary>Tencongnhan. </summary>
+		Tencongnhan,
 		///<summary>Somet. </summary>
 		Somet,
 		///<summary>Sokg. </summary>
 		Sokg,
-		///<summary>Sokgquydoi. </summary>
-		Sokgquydoi,
-		///<summary>Chenhlechkg. </summary>
-		Chenhlechkg,
-		///<summary>Chatluong. </summary>
-		Chatluong,
 		///<summary>Phelieuthucte. </summary>
 		Phelieuthucte,
-		///<summary>Tongsp. </summary>
-		Tongsp,
 		///<summary>Thoigianbatdau. </summary>
 		Thoigianbatdau,
 		///<summary>Thoigianketthuc. </summary>
@@ -1485,8 +1483,10 @@ namespace GD.BBPH.DAL
 		Thoigianchuanbi,
 		///<summary>Thoigiansuco. </summary>
 		Thoigiansuco,
-		///<summary>Sokgdukiendat. </summary>
-		Sokgdukiendat,
+		///<summary>Chatluong. </summary>
+		Chatluong,
+		///<summary>Nangsuat. </summary>
+		Nangsuat,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -1495,14 +1495,6 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
-		///<summary>Tenmang. </summary>
-		Tenmang,
-		///<summary>Tenmay. </summary>
-		Tenmay,
-		///<summary>Tencongnhan. </summary>
-		Tencongnhan,
-		///<summary>Nangsuat. </summary>
-		Nangsuat,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -2407,6 +2399,7 @@ namespace GD.BBPH.DAL
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START CustomUserConstants
 	// __LLBLGENPRO_USER_CODE_REGION_END
+	
 	#endregion
 
 	#region Included code

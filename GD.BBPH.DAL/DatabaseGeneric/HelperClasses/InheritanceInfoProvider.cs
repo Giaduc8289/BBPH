@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 24, 2022 4:31:51 PM
+// Code is generated on: Wednesday, October 26, 2022 12:54:34 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -17,6 +17,7 @@ namespace GD.BBPH.DAL.HelperClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
+	
 	
 	/// <summary>
 	/// Singleton implementation of the inheritanceInfoProvider. This class is the singleton wrapper through which the actual instance is retrieved.
@@ -49,6 +50,7 @@ namespace GD.BBPH.DAL.HelperClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomInheritanceInfoProviderSingletonCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
+		
 		#endregion
 	}
 

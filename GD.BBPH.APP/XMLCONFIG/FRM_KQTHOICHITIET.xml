@@ -107,7 +107,7 @@
     <headerText>Mã công nhân</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -123,61 +123,25 @@
   <viewgrid>
     <value>1</value>
     <name>Somet</name>
-    <headerText>Số M</headerText>
+    <headerText>Số mét</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Sokg</name>
-    <headerText>Số Kg</headerText>
+    <headerText>Số kg</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Sokgquydoi</name>
-    <headerText>Số Kg quy đổi</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Chenhlechkg</name>
-    <headerText>Chênh lệch Kg</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Chatluong</name>
-    <headerText>Chất lượng</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Phelieuthucte</name>
     <headerText>Phế liệu thực tế</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tongsp</name>
-    <headerText>Tổng sản phẩm</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -195,7 +159,7 @@
   <viewgrid>
     <value>1</value>
     <name>Thoigianketthuc</name>
-    <headerText>Thòi gian kết thúc</headerText>
+    <headerText>Thời gian kết thúc</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -204,28 +168,37 @@
   <viewgrid>
     <value>1</value>
     <name>Thoigianchuanbi</name>
-    <headerText>Thời gian chuẩn bị</headerText>
+    <headerText>TG chuẩn bị</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Thoigiansuco</name>
-    <headerText>Thòi gian sự cố</headerText>
+    <headerText>TG sự cố</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Sokgdukiendat</name>
-    <headerText>Số Kg dự kiến đạt</headerText>
+    <name>Chatluong</name>
+    <headerText>Chất lượng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>65</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Nangsuat</name>
+    <headerText>Năng suất</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>75</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>

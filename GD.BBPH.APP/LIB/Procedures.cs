@@ -1640,6 +1640,8 @@ namespace GD.BBPH.APP.LIB
         }
 
         #region BBPH
+
+        #region Hàm trả về bảng dữ liệu
         public static DataTable Danhsachctpt()
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
@@ -2080,6 +2082,24 @@ namespace GD.BBPH.APP.LIB
             parameters.CopyTo(myArr, 0);
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachxuatnguyenlieuchitiet", "Danhsachxuatnguyenlieuchitiet", myArr).Tables[0];
         }
+        #endregion
+
+        #region Hàm trả về giá trị
+        public static decimal fTinhtocdomay(string Mamay, string Masanpham)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Mamay", SqlDbType.NVarChar, 0), Mamay);
+            parameters.Add(new SqlParameter("@Masanpham", SqlDbType.NVarChar, 0), Masanpham);
+
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+
+            decimal gtri = Convert.ToDecimal(_SimpleStoredProcedure.ExecuteScalarSP("fTinhtocdomay", myArr));
+            return gtri;
+        }
+        #endregion
+
         #endregion
 
         #region Khác

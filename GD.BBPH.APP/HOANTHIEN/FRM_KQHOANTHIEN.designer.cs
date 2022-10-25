@@ -235,7 +235,6 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(737, 725);
             this.uiPanel1Container.TabIndex = 0;
-            this.uiPanel1Container.Click += new System.EventHandler(this.uiPanel1Container_Click);
             // 
             // txt_DGNANGSUAT
             // 
@@ -797,7 +796,6 @@
             this.label9.Size = new System.Drawing.Size(41, 13);
             this.label9.TabIndex = 176;
             this.label9.Text = "Số con";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // txt_SOKGVAO
             // 

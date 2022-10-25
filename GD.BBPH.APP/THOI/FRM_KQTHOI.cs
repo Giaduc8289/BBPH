@@ -174,20 +174,17 @@ namespace GD.BBPH.APP.THOI
                     txt_MAMANG_Validating(new object(), new CancelEventArgs());
                     txt_SOM.Text = _Rowview.Row[KetquathoiFields.Somet.Name].ToString();
                     txt_SOKG.Text = _Rowview.Row[KetquathoiFields.Sokg.Name].ToString();
-                    txt_SOKGQUYDOI.Text = _Rowview.Row[KetquathoiFields.Sokgquydoi.Name].ToString();
-                    txt_CHENHLECHKG.Text = _Rowview.Row[KetquathoiFields.Chenhlechkg.Name].ToString();
-                    txt_CHATLUONG.Text = _Rowview.Row[KetquathoiFields.Chatluong.Name].ToString();
                     txt_PHELIEUTHUCTE.Text = _Rowview.Row[KetquathoiFields.Phelieuthucte.Name].ToString();
-                    txt_TONGSP.Text = _Rowview.Row[KetquathoiFields.Tongsp.Name].ToString();
+                    //txt_SOKGQUYDOI.Text = _Rowview.Row[KetquathoiFields.Sokgquydoi.Name].ToString();
+                    //txt_CHATLUONG.Text = _Rowview.Row[KetquathoiFields.Chenhlechkg.Name].ToString();
                     txt_THOIGIANBATDAU.Text = _Rowview.Row[KetquathoiFields.Thoigianbatdau.Name].ToString();
                     txt_THOIGIANKETTHUC.Text = _Rowview.Row[KetquathoiFields.Thoigianketthuc.Name].ToString();
                     txt_THOIGIANCHUANBI.Text = _Rowview.Row[KetquathoiFields.Thoigianchuanbi.Name].ToString();
                     txt_THOIGIANSUCO.Text = _Rowview.Row[KetquathoiFields.Thoigiansuco.Name].ToString();
-                    txt_SOKGDUKIEN.Text = _Rowview.Row[KetquathoiFields.Sokgdukiendat.Name].ToString();
+                    //txt_SOKGDUKIEN.Text = _Rowview.Row[KetquathoiFields.Sokgdukiendat.Name].ToString();
 
-
-
-
+                    txt_CHATLUONG.Text = _Rowview.Row[KetquathoiFields.Chatluong.Name].ToString();
+                    txt_NANGSUAT.Text = _Rowview.Row[KetquathoiFields.Nangsuat.Name].ToString();
                 }
                 //else
                 //{
@@ -227,24 +224,17 @@ namespace GD.BBPH.APP.THOI
             r_Detail[KetquathoiFields.Tencongnhan.Name] = txt_TENCONGNHAN.Text;
             r_Detail[KetquathoiFields.Mamang.Name] = txt_MAMANG.Text;
             r_Detail[KetquathoiFields.Tenmang.Name] = txt_TENMANG.Text;
-            try { r_Detail[KetquathoiFields.Sokgquydoi.Name] = LIB.ConvertString.NumbertoDB(txt_SOKGQUYDOI.Text.Trim()); }
-            catch { }
-            try { r_Detail[KetquathoiFields.Somet.Name] = LIB.ConvertString.NumbertoDB(txt_SOM.Text.Trim()); }
-            catch { }
-            try { r_Detail[KetquathoiFields.Sokg.Name] = LIB.ConvertString.NumbertoDB(txt_SOKG.Text.Trim()); }
-            catch { }
-            try { r_Detail[KetquathoiFields.Chenhlechkg.Name] = LIB.ConvertString.NumbertoDB(txt_CHENHLECHKG.Text.Trim()); }
-            catch { }
-            r_Detail[KetquathoiFields.Chatluong.Name] = txt_CHATLUONG.Text;
-            r_Detail[KetquathoiFields.Phelieuthucte.Name] = LIB.ConvertString.NumbertoDB(txt_PHELIEUTHUCTE.Text.Trim());
-            r_Detail[KetquathoiFields.Tongsp.Name] = LIB.ConvertString.NumbertoDB(txt_TONGSP.Text.Trim());
+            r_Detail[KetquathoiFields.Somet.Name] = LIB.ConvertString.NumbertoDB(txt_SOM.Text.Trim()); 
+            r_Detail[KetquathoiFields.Sokg.Name] = LIB.ConvertString.NumbertoDB(txt_SOKG.Text.Trim()); 
+            r_Detail[KetquathoiFields.Phelieuthucte.Name] = LIB.ConvertString.NumbertoDB(txt_PHELIEUTHUCTE.Text.Trim()); 
             r_Detail[KetquathoiFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text;
             r_Detail[KetquathoiFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text;
             r_Detail[KetquathoiFields.Thoigianchuanbi.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim());
             r_Detail[KetquathoiFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
-            try { r_Detail[KetquathoiFields.Sokgdukiendat.Name] = LIB.ConvertString.NumbertoDB(txt_SOKGDUKIEN.Text.Trim()); }
-            catch { }
-        
+
+            r_Detail[KetquathoiFields.Chatluong.Name] = LIB.ConvertString.NumbertoDB(txt_CHATLUONG.Text.Trim()); 
+            r_Detail[KetquathoiFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim()); 
+
             DT_KQTHOI_CHITIET_FILL.Rows.Add(r_Detail);
 
             DataView Source_View = new DataView(DT_KQTHOI_CHITIET_FILL);
@@ -324,18 +314,15 @@ namespace GD.BBPH.APP.THOI
                 _KetquathoiEntity.Tencongnhan = _view.Row[KetquathoiFields.Tencongnhan.Name].ToString();
                 _KetquathoiEntity.Mamang = _view.Row[KetquathoiFields.Mamang.Name].ToString();
                 _KetquathoiEntity.Tenmang = _view.Row[KetquathoiFields.Tenmang.Name].ToString();
-                _KetquathoiEntity.Somet = Convert.ToDecimal(_view.Row[KetquathoiFields.Somet.Name].ToString());
-                _KetquathoiEntity.Sokg = Convert.ToDecimal(_view.Row[KetquathoiFields.Sokg.Name].ToString());
-                _KetquathoiEntity.Sokgquydoi = Convert.ToDecimal(_view.Row[KetquathoiFields.Sokgquydoi.Name].ToString());
-                _KetquathoiEntity.Chenhlechkg = Convert.ToDecimal(_view.Row[KetquathoiFields.Chenhlechkg.Name].ToString());
-                _KetquathoiEntity.Chatluong = _view.Row[KetquathoiFields.Chatluong.Name].ToString();
-                _KetquathoiEntity.Phelieuthucte = Convert.ToDecimal(_view.Row[KetquathoiFields.Phelieuthucte.Name].ToString());
-                _KetquathoiEntity.Tongsp = Convert.ToDecimal(_view.Row[KetquathoiFields.Tongsp.Name].ToString());
+                _KetquathoiEntity.Somet = LIB.ConvertString.NumbertoDB(_view.Row[KetquathoiFields.Somet.Name].ToString());
+                _KetquathoiEntity.Sokg = LIB.ConvertString.NumbertoDB(_view.Row[KetquathoiFields.Sokg.Name].ToString());
+                _KetquathoiEntity.Phelieuthucte = LIB.ConvertString.NumbertoDB(_view.Row[KetquathoiFields.Phelieuthucte.Name].ToString());
                 _KetquathoiEntity.Thoigianbatdau = Convert.ToDateTime(_view.Row[KetquathoiFields.Thoigianbatdau.Name].ToString());
                 _KetquathoiEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquathoiFields.Thoigianketthuc.Name].ToString());
-                _KetquathoiEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquathoiFields.Thoigianchuanbi.Name].ToString());
-                _KetquathoiEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquathoiFields.Thoigiansuco.Name].ToString());
-                _KetquathoiEntity.Sokgdukiendat = Convert.ToDecimal(_view.Row[KetquathoiFields.Sokgdukiendat.Name].ToString());
+                _KetquathoiEntity.Thoigianchuanbi = LIB.ConvertString.NumbertoDB(_view.Row[KetquathoiFields.Thoigianchuanbi.Name].ToString());
+                _KetquathoiEntity.Thoigiansuco = LIB.ConvertString.NumbertoDB(_view.Row[KetquathoiFields.Thoigiansuco.Name].ToString());
+                _KetquathoiEntity.Chatluong = LIB.ConvertString.NumbertoDB(_view.Row[KetquathoiFields.Chatluong.Name].ToString());
+                _KetquathoiEntity.Nangsuat = LIB.ConvertString.NumbertoDB(_view.Row[KetquathoiFields.Nangsuat.Name].ToString());
 
                 try { _KetquathoiEntity.Id = Convert.ToInt64(_view[KetquathoiFields.Id.Name].ToString()); }
                 catch { }
@@ -386,8 +373,8 @@ namespace GD.BBPH.APP.THOI
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENHTHOI.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MAMANG.Text = txt_TENMANG.Text = txt_SOM.Text = txt_SOKG.Text = txt_SOKGQUYDOI.Text = txt_CHENHLECHKG.Text = txt_CHATLUONG.Text = txt_PHELIEUTHUCTE.Text = txt_TONGSP.Text
-                = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_THOIGIANSUCO.Text = txt_SOKGDUKIEN.Text = string.Empty;
+            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENHTHOI.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MAMANG.Text = txt_TENMANG.Text = txt_SOM.Text = txt_SOKG.Text = txt_CHATLUONG.Text = txt_CHATLUONG.Text = txt_PHELIEUTHUCTE.Text = txt_NANGSUAT.Text
+                = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_THOIGIANSUCO.Text = string.Empty;
             //txt_PHONGBAN.Text = string.Empty;
             //txt_CHUCVU.Text = string.Empty;
             KetquathoiManager _KetquathoiManager = new KetquathoiManager();
@@ -398,7 +385,7 @@ namespace GD.BBPH.APP.THOI
             MAHIEU_PK = "";
             txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENMANG, txt_TENMAY }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENMANG, txt_TENMAY, txt_CHATLUONG, txt_NANGSUAT }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_KQTHOI.Enabled = false;
@@ -413,7 +400,7 @@ namespace GD.BBPH.APP.THOI
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENCONGNHAN, txt_TENMANG, txt_TENMAY }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENCONGNHAN, txt_TENMANG, txt_TENMAY, txt_CHATLUONG, txt_NANGSUAT }));
             }
             GRID_KQTHOICHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             GRID_KQTHOICHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
@@ -541,6 +528,7 @@ namespace GD.BBPH.APP.THOI
                 txt_TENMAY.Text = _RowViewSelect[DmmayFields.Tenmay.Name].ToString();
             }
         }
+
         private DataRow checkmamay(string masieuthi, DataTable dt)
         {
             try
@@ -650,6 +638,26 @@ namespace GD.BBPH.APP.THOI
                 return dt.Select(DmcongnhanFields.Macn.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
+        }
+        #endregion
+
+        #region Text Changed
+        private void Tinhnangsuat()
+        {
+            try
+            {
+                decimal _timerun = 0, _tocdo = 0, _sokg = 0;
+                _sokg = LIB.ConvertString.NumbertoDB(txt_SOKG.Text.Trim());
+                _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MAMANG.Text);
+                _timerun = Convert.ToDecimal(Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text))
+                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
+                txt_NANGSUAT.Text = (_sokg / _tocdo / _timerun).ToString();
+            }
+            catch { }
+        }
+        private void txt_THOIGIAN_TextChanged(object sender, EventArgs e)
+        {
+            Tinhnangsuat();
         }
         #endregion
 
