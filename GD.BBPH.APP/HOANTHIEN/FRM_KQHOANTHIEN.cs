@@ -467,7 +467,7 @@ namespace GD.BBPH.APP.HOANTHIEN
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             if (string.IsNullOrEmpty(MAHIEU_PK)) return;
             //_KetquathanhphamEntity = _KetquathanhphamManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
-            if (_KetquathanhphamEntity != null && MessageBox.Show("Xóa kết quả hoàn thiện: Ngày " + txt_NGAY.Text + " Máy " + txt_TENMAY.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_KetquathanhphamEntity != null && MessageBox.Show("Xóa kết quả hoàn thiện: Ngày " + txt_NGAY.Text + " Máy " + txt_MAMAY.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -484,7 +484,8 @@ namespace GD.BBPH.APP.HOANTHIEN
                         }
                     }
                     //_KetquathanhphamManager.Delete(Convert.ToInt64(MAHIEU_PK));
-                    GRID_KQHOANTHIEN.CurrentRow.Delete();
+                    try { GRID_KQHOANTHIEN.CurrentRow.Delete(); }
+                    catch { }
                     BS_KQHOANTHIEN_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
                     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquathanhphamManager.Convert(_KetquathanhphamEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
@@ -492,7 +493,7 @@ namespace GD.BBPH.APP.HOANTHIEN
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa kết quả hoàn thiện: Ngày " + txt_NGAY.Text + " Máy " + txt_TENMAY.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa kết quả hoàn thiện: Ngày " + txt_NGAY.Text + " Máy " + txt_MAMAY.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_KQHOANTHIEN.Enabled = true;
@@ -501,39 +502,23 @@ namespace GD.BBPH.APP.HOANTHIEN
             GRID_KQHOANTHIENCHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiPanel1Container_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(MAHIEU_PK) && _KetquathanhphamManager.SelectOne(txt_MAMAY.Text.Trim()) != null)
-            //{
-            //    MessageBox.Show("Mã công nhân bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txt_MAMAY.Focus();
-            //    return;
-            //}
             if (txt_NGAY.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập mã công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập ngày!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_NGAY.Focus();
                 return;
             }
             else if (txt_CA.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập ca!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_CA.Focus();
                 return;
             }
             else if (txt_MAMAY.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập máy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAMAY.Focus();
                 return;
             }

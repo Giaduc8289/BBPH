@@ -446,7 +446,7 @@ namespace GD.BBPH.APP.IN
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             if (string.IsNullOrEmpty(MAHIEU_PK)) return;
             //_KetquainEntity = _KetquainManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
-            if (_KetquainEntity != null && MessageBox.Show("Xóa kết quả in: Ngày " + txt_NGAY.Text + " Máy " + txt_TENMAY.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_KetquainEntity != null && MessageBox.Show("Xóa kết quả in: Ngày " + txt_NGAY.Text + " Máy " + txt_MAMAY.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -463,7 +463,8 @@ namespace GD.BBPH.APP.IN
                         }
                     }
                     //_KetquathoiManager.Delete(Convert.ToInt64(MAHIEU_PK));
-                    GRID_KQIN.CurrentRow.Delete();
+                    try { GRID_KQIN.CurrentRow.Delete(); }
+                    catch { }
                     BS_KQIN_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
                     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainManager.Convert(_KetquainEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
@@ -471,7 +472,7 @@ namespace GD.BBPH.APP.IN
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa kết quả in: Ngày " + txt_NGAY.Text + " Máy " + txt_TENMAY.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa kết quả in: Ngày " + txt_NGAY.Text + " Máy " + txt_MAMAY.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_KQIN.Enabled = true;
@@ -481,27 +482,21 @@ namespace GD.BBPH.APP.IN
         }
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(MAHIEU_PK) && _KetquathoiManager.SelectOne(txt_MAMAY.Text.Trim()) != null)
-            //{
-            //    MessageBox.Show("Mã công nhân bị trùng! \nNhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txt_MAMAY.Focus();
-            //    return;
-            //}
             if (txt_NGAY.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập mã công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập ngày!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_NGAY.Focus();
                 return;
             }
             else if (txt_CA.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập ca!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_CA.Focus();
                 return;
             }
             else if (txt_MAMAY.Text == "")
             {
-                MessageBox.Show("Yêu cầu nhập tên công nhân!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Yêu cầu nhập máy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txt_MAMAY.Focus();
                 return;
             }
