@@ -405,6 +405,9 @@ namespace GD.BBPH.APP.IN
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_KQIN.Enabled = false;
+
+            //---tu dong dien tham so
+            txt_NGAY.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {
@@ -442,24 +445,33 @@ namespace GD.BBPH.APP.IN
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             if (string.IsNullOrEmpty(MAHIEU_PK)) return;
-            KetquathoiManager _KetquathoiManager = new KetquathoiManager();
-            KetquathoiEntity _KetquathoiEntity = new KetquathoiEntity();
-            _KetquathoiEntity = _KetquathoiManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
-            if (_KetquathoiEntity != null && MessageBox.Show("Xóa công nhân: " + MAHIEU_PK + " - " + txt_LENHIN.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            //_KetquainEntity = _KetquainManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
+            if (_KetquainEntity != null && MessageBox.Show("Xóa kết quả in: Ngày " + txt_NGAY.Text + " Máy " + txt_TENMAY.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
                 {
-                    _KetquathoiManager.Delete(Convert.ToInt64(MAHIEU_PK));
+                    GridEXRow[] listGrid = GRID_KQINCHITIET.GetDataRows();
+                    foreach (GridEXRow _grid in listGrid)
+                    {
+                        DataRowView _view = (DataRowView)_grid.DataRow;
+                        if (_view == null) continue;
+                        if (!string.IsNullOrEmpty(_view[KetquainFields.Id.Name].ToString()))
+                        {
+                            try { _KetquainManager.Delete(Convert.ToInt64(_view[KetquainFields.Id.Name].ToString())); }
+                            catch { }
+                        }
+                    }
+                    //_KetquathoiManager.Delete(Convert.ToInt64(MAHIEU_PK));
                     GRID_KQIN.CurrentRow.Delete();
                     BS_KQIN_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
-                    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquathoiManager.Convert(_KetquathoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainManager.Convert(_KetquainEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                     btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa công nhân " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa kết quả in: Ngày " + txt_NGAY.Text + " Máy " + txt_TENMAY.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_KQIN.Enabled = true;

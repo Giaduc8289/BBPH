@@ -236,12 +236,12 @@ namespace GD.BBPH.APP.THOI
             try { r_Detail[KetquathoiFields.Chenhlechkg.Name] = LIB.ConvertString.NumbertoDB(txt_CHENHLECHKG.Text.Trim()); }
             catch { }
             r_Detail[KetquathoiFields.Chatluong.Name] = txt_CHATLUONG.Text;
-            r_Detail[KetquathoiFields.Phelieuthucte.Name] = txt_PHELIEUTHUCTE.Text;
-            r_Detail[KetquathoiFields.Tongsp.Name] = txt_TONGSP.Text;
+            r_Detail[KetquathoiFields.Phelieuthucte.Name] = LIB.ConvertString.NumbertoDB(txt_PHELIEUTHUCTE.Text.Trim());
+            r_Detail[KetquathoiFields.Tongsp.Name] = LIB.ConvertString.NumbertoDB(txt_TONGSP.Text.Trim());
             r_Detail[KetquathoiFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text;
             r_Detail[KetquathoiFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text;
-            r_Detail[KetquathoiFields.Thoigianchuanbi.Name] = txt_THOIGIANCHUANBI.Text;
-            r_Detail[KetquathoiFields.Thoigiansuco.Name] = txt_THOIGIANSUCO.Text;
+            r_Detail[KetquathoiFields.Thoigianchuanbi.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim());
+            r_Detail[KetquathoiFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
             try { r_Detail[KetquathoiFields.Sokgdukiendat.Name] = LIB.ConvertString.NumbertoDB(txt_SOKGDUKIEN.Text.Trim()); }
             catch { }
         
@@ -306,7 +306,7 @@ namespace GD.BBPH.APP.THOI
 
         private string Save_Data(string _str_DMCHUONG_PK)
         {
-            DateTime _ngayxuat = Convert.ToDateTime(txt_NGAY.Text.Trim());
+            DateTime _ngaysx = Convert.ToDateTime(txt_NGAY.Text.Trim());
 
             EntityCollection _KetquathoiEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_KQTHOICHITIET.GetDataRows();
@@ -315,7 +315,7 @@ namespace GD.BBPH.APP.THOI
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
                 KetquathoiEntity _KetquathoiEntity = new KetquathoiEntity();
-                _KetquathoiEntity.Ngay = _ngayxuat;
+                _KetquathoiEntity.Ngay = _ngaysx;
                 _KetquathoiEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
                 _KetquathoiEntity.Mamay = txt_MAMAY.Text.Trim();
                 _KetquathoiEntity.Tenmay = txt_TENMAY.Text.Trim();
@@ -372,7 +372,7 @@ namespace GD.BBPH.APP.THOI
                 else _KetquathoiManager.Update(_KetquathoiEntity);
             }
 
-            GRID_KQTHOI.CurrentRow.Cells[KetquathoiFields.Ngay.Name].Value = _ngayxuat;
+            GRID_KQTHOI.CurrentRow.Cells[KetquathoiFields.Ngay.Name].Value = _ngaysx;
             GRID_KQTHOI.CurrentRow.Cells[KetquathoiFields.Ca.Name].Value = txt_CA.Text.Trim();
             GRID_KQTHOI.CurrentRow.Cells[KetquathoiFields.Mamay.Name].Value = txt_MAMAY.Text.Trim();
 
@@ -402,6 +402,9 @@ namespace GD.BBPH.APP.THOI
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_KQTHOI.Enabled = false;
+
+            //---tu dong dien tham so
+            txt_NGAY.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {
@@ -439,16 +442,26 @@ namespace GD.BBPH.APP.THOI
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             if (string.IsNullOrEmpty(MAHIEU_PK)) return;
-            KetquathoiManager _KetquathoiManager = new KetquathoiManager();
-            KetquathoiEntity _KetquathoiEntity = new KetquathoiEntity();
-            _KetquathoiEntity = _KetquathoiManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
-            if (_KetquathoiEntity != null && MessageBox.Show("Xóa công nhân: " + MAHIEU_PK + " - " + txt_LENHTHOI.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            //_KetquathoiEntity = _KetquathoiManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
+            if (_KetquathoiEntity != null && MessageBox.Show("Xóa kết quả thổi: Ngày " + txt_NGAY.Text + " Máy " + txt_TENMAY.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
                 {
-                    _KetquathoiManager.Delete(Convert.ToInt64(MAHIEU_PK));
-                    GRID_KQTHOI.CurrentRow.Delete();
+                    GridEXRow[] listGrid = GRID_KQTHOICHITIET.GetDataRows();
+                    foreach (GridEXRow _grid in listGrid)
+                    {
+                        DataRowView _view = (DataRowView)_grid.DataRow;
+                        if (_view == null) continue;
+                        if (!string.IsNullOrEmpty(_view[KetquathoiFields.Id.Name].ToString()))
+                        {
+                            try { _KetquathoiManager.Delete(Convert.ToInt64(_view[KetquathoiFields.Id.Name].ToString())); }
+                            catch { }
+                        }
+                    }
+                    //_KetquathoiManager.Delete(Convert.ToInt64(MAHIEU_PK));
+                    try { GRID_KQTHOI.CurrentRow.Delete(); }
+                    catch { }
                     BS_KQTHOI_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
                     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquathoiManager.Convert(_KetquathoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
@@ -456,7 +469,7 @@ namespace GD.BBPH.APP.THOI
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa công nhân " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa kết quả thổi: Ngày " + txt_NGAY.Text + " Máy " + txt_TENMAY.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_KQTHOI.Enabled = true;

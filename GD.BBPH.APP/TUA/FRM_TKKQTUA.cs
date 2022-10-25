@@ -432,6 +432,9 @@ namespace GD.BBPH.APP.TUA
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_TKKQTUA.Enabled = false;
+
+            //---tu dong dien tham so
+            txt_NGAY.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {
@@ -487,15 +490,24 @@ namespace GD.BBPH.APP.TUA
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             if (string.IsNullOrEmpty(MAHIEU_PK)) return;
-            KetquatuaManager _KetquatuaManager = new KetquatuaManager();
-            KetquatuaEntity _KetquatuaEntity = new KetquatuaEntity();
-            _KetquatuaEntity = _KetquatuaManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
-            if (_KetquatuaEntity != null && MessageBox.Show("Xóa khách hàng: " + MAHIEU_PK + " - "/* + txt_TENHIEU.Text*/, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            //_KetquatuaEntity = _KetquatuaManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
+            if (_KetquatuaEntity != null && MessageBox.Show("Xóa kết quả tua: Ngày " + txt_NGAY.Text + " Máy " + txt_TENMAY.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
                 {
-                    _KetquatuaManager.Delete(Convert.ToInt64(MAHIEU_PK));
+                    GridEXRow[] listGrid = GRID_TKKQTUA_CHITIET.GetDataRows();
+                    foreach (GridEXRow _grid in listGrid)
+                    {
+                        DataRowView _view = (DataRowView)_grid.DataRow;
+                        if (_view == null) continue;
+                        if (!string.IsNullOrEmpty(_view[KetquatuaFields.Id.Name].ToString()))
+                        {
+                            try { _KetquatuaManager.Delete(Convert.ToInt64(_view[KetquatuaFields.Id.Name].ToString())); }
+                            catch { }
+                        }
+                    }
+                    //_KetquatuaManager.Delete(Convert.ToInt64(MAHIEU_PK));
                     GRID_TKKQTUA.CurrentRow.Delete();
                     BS_TKKQTUA_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
@@ -504,7 +516,7 @@ namespace GD.BBPH.APP.TUA
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa khách hàng " + MAHIEU_PK + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa kết quả tua: Ngày " + txt_NGAY.Text + " Máy " + txt_TENMAY.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_TKKQTUA.Enabled = true;
