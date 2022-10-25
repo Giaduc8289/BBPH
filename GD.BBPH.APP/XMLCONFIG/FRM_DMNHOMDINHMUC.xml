@@ -35,7 +35,7 @@
     <headerText>Mã nhóm</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -44,11 +44,11 @@
     <headerText>Tên nhóm</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>150</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tenrutgon</name>
     <headerText>Tên rút gọn</headerText>
     <BackColor>0</BackColor>
