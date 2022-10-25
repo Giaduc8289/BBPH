@@ -1,9 +1,9 @@
-﻿------------------------Hàm tính công suất-------------
-If Object_ID('dbo.fTinhcongsuatmay','FN') is not null
-	Drop FUNCTION dbo.fTinhcongsuatmay
+﻿------------------------Hàm tính tốc độ máy-------------
+If Object_ID('dbo.fTinhtocdomay','FN') is not null
+	Drop FUNCTION dbo.fTinhtocdomay
 Go
 
-Create FUNCTION dbo.fTinhcongsuatmay(@Mamay Nvarchar(50), @Masanpham Nvarchar(50)) RETURNS DECIMAL(20,2)
+Create FUNCTION dbo.fTinhtocdomay(@Mamay Nvarchar(50), @Masanpham Nvarchar(50)) RETURNS DECIMAL(20,2)
 AS
 BEGIN
 
@@ -51,7 +51,7 @@ END
 	
 Go
 
-SELECT dbo.fTinhcongsuatmay('T1', 'PE20x850')
+SELECT dbo.fTinhtocdomay('T1', 'PE20x850')
 
 GO	
 

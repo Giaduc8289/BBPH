@@ -27,7 +27,7 @@ BEGIN
 	
 	--Tính chất lượng căn cứ: Độ dày * Rộng * Số mét * 0,925/1000000
 	--Tính năng suất căn cứ: Thời gian chạy * Tốc độ
-	Select @v_Tocdo=dbo.fTinhcongsuatmay(@v_Mamay, @v_Mamang)
+	Select @v_Tocdo=dbo.fTinhtocdomay(@v_Mamay, @v_Mamang)
 
 	Set @v_Sokgdukien=@v_Thoigianchay*@v_Tocdo
 	If (@v_Sokgdukien <> 0) 
