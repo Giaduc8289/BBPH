@@ -379,7 +379,6 @@
             this.label12.Size = new System.Drawing.Size(79, 13);
             this.label12.TabIndex = 185;
             this.label12.Text = "T.gian kết thúc";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // txt_THOIGIANBATDAU
             // 

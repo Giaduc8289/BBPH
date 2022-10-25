@@ -125,7 +125,7 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[DmdongmayFields.Madm.Name].ToString();
                     txt_MAHIEU.Text = _Rowview.Row[DmdongmayFields.Madm.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmdongmayFields.Tendongmay.Name].ToString();
-                    txt_CONGDOAN.Text = _Rowview.Row[DmdongmayFields.Macd.Name].ToString();
+                    txt_MACONGDOAN.Text = _Rowview.Row[DmdongmayFields.Macd.Name].ToString();
 
                     txt_CONGDOAN_Validating(new object(), new CancelEventArgs());
                 }
@@ -138,7 +138,7 @@ namespace GD.BBPH.APP.DANHMUC
             DmdongmayEntity _DmdongmayEntity = new DmdongmayEntity();
             _DmdongmayEntity.Madm = txt_MAHIEU.Text.Trim();
             _DmdongmayEntity.Tendongmay = txt_TENHIEU.Text.Trim();
-            _DmdongmayEntity.Macd = txt_CONGDOAN.Text.Trim();
+            _DmdongmayEntity.Macd = txt_MACONGDOAN.Text.Trim();
             if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
             {
                 _DmdongmayEntity.Ngaytao = DateTime.Now;
@@ -262,8 +262,8 @@ namespace GD.BBPH.APP.DANHMUC
         private void txt_CONGDOAN_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_CONGDOAN.Text.Trim()) || DT_DMCONGDOAN == null || DT_DMCONGDOAN.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_CONGDOAN.Text.Trim().ToUpper();
+            if (string.IsNullOrEmpty(txt_MACONGDOAN.Text.Trim()) || DT_DMCONGDOAN == null || DT_DMCONGDOAN.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MACONGDOAN.Text.Trim().ToUpper();
             _RowViewSelect = checkmaCongdoan(Str_MASIEUTHI, DT_DMCONGDOAN);
             if (_RowViewSelect == null)
             {
@@ -273,7 +273,7 @@ namespace GD.BBPH.APP.DANHMUC
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_CONGDOAN.Text = _RowViewSelect[DmcongdoanFields.Macd.Name].ToString();
+                txt_MACONGDOAN.Text = _RowViewSelect[DmcongdoanFields.Macd.Name].ToString();
                 txt_TENCONGDOAN.Text = _RowViewSelect[DmcongdoanFields.Tencongdoan.Name].ToString();
             }
             else
@@ -286,6 +286,19 @@ namespace GD.BBPH.APP.DANHMUC
                 return dt.Select(DmcongdoanFields.Macd.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
+        }
+        #endregion
+
+        #region Shortcut Key
+        private void txt_MACONGDOAN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCONGDOAN frm_Dm = new FRM_DMCONGDOAN();
+                frm_Dm.Text = "Danh mục công đoạn";
+                frm_Dm.ShowDialog();
+                DT_DMCONGDOAN = new DmcongdoanManager().SelectAllRDT();
+            }
         }
         #endregion
 
