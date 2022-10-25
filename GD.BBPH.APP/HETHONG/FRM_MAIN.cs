@@ -928,6 +928,13 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Hoàn thiện
+                case "FRM_KQHOANTHIEN":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KQHOANTHIEN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.HOANTHIEN.FRM_KQHOANTHIEN()), mmru.Text);
+                    break;
                 #endregion
 
                 #region Kho

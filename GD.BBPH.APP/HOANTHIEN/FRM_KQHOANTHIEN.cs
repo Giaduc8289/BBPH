@@ -57,7 +57,7 @@ namespace GD.BBPH.APP.HOANTHIEN
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQHOANTHIEN");
-                        DT_KQHOANTHIEN = LIB.Procedures.Danhsachketquachia(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); // LIB.SESSION_START.DT_KQHOANTHIEN;
+                        DT_KQHOANTHIEN = LIB.Procedures.Danhsachketquahoanthien(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); // LIB.SESSION_START.DT_KQHOANTHIEN;
                         DT_KQHOANTHIEN_CHITIET = LIB.SESSION_START.DT_KQHOANTHIEN;
 
                         //DT_DMPHONGBAN = LIB.SESSION_START.DT_DMPHONGBAN;
@@ -411,7 +411,7 @@ namespace GD.BBPH.APP.HOANTHIEN
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_SOLSX.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_SOMETVAO.Text = txt_SOKGVAO.Text = txt_SOCON.Text = txt_THOIGIANCATDAU.Text = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_TITRONGTUI.Text = txt_THOIGIANLENCUON.Text = txt_THOIGIANHACUON.Text = txt_THOIGIANSUCO.Text = txt_PHEIN.Text = txt_PHEGHEP.Text = txt_PHEKHAC.Text = string.Empty;
+            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_SOLSX.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_SOMETVAO.Text = txt_SOKGVAO.Text = txt_SOCON.Text = txt_THOIGIANCATDAU.Text = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_TITRONGTUI.Text = txt_THOIGIANLENCUON.Text = txt_THOIGIANHACUON.Text = txt_THOIGIANSUCO.Text = txt_PHEIN.Text = txt_PHEGHEP.Text = txt_PHETHOI.Text = txt_PHEBIEN.Text = txt_PHEKHAC.Text = txt_PHECHINHMAY.Text= string.Empty;
             //txt_PHONGBAN.Text = string.Empty;
             //txt_CHUCVU.Text = string.Empty;
             KetquathanhphamManager _KetquathanhphamManager = new KetquathanhphamManager();
@@ -422,7 +422,7 @@ namespace GD.BBPH.APP.HOANTHIEN
             MAHIEU_PK = "";
             txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY, txt_SOLSX, txt_MACONGNHAN, txt_TENCONGNHAN, txt_MASANPHAM, txt_TENSANPHAM, txt_SOMETVAO, txt_SOKGVAO, txt_SOCON, txt_THOIGIANCATDAU, txt_THOIGIANBATDAU, txt_THOIGIANKETTHUC, txt_THOIGIANCHUANBI, txt_TITRONGTUI, txt_THOIGIANLENCUON, txt_THOIGIANHACUON, txt_THOIGIANSUCO, txt_PHEIN, txt_PHEGHEP, txt_PHEKHAC }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY, txt_SOLSX, txt_MACONGNHAN, txt_TENCONGNHAN, txt_MASANPHAM, txt_TENSANPHAM, txt_SOMETVAO, txt_SOKGVAO, txt_SOCON, txt_THOIGIANCATDAU, txt_THOIGIANBATDAU, txt_THOIGIANKETTHUC, txt_THOIGIANCHUANBI, txt_TITRONGTUI, txt_THOIGIANLENCUON, txt_THOIGIANHACUON, txt_THOIGIANSUCO, txt_PHEIN, txt_PHEGHEP, txt_PHETHOI, txt_PHEBIEN, txt_PHEKHAC, txt_PHECHINHMAY }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_KQHOANTHIEN.Enabled = false;
@@ -434,7 +434,7 @@ namespace GD.BBPH.APP.HOANTHIEN
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY, txt_SOLSX, txt_MACONGNHAN, txt_TENCONGNHAN, txt_MASANPHAM, txt_TENSANPHAM, txt_SOMETVAO, txt_SOKGVAO, txt_SOCON, txt_THOIGIANCATDAU, txt_THOIGIANBATDAU, txt_THOIGIANKETTHUC, txt_THOIGIANCHUANBI, txt_TITRONGTUI, txt_THOIGIANLENCUON, txt_THOIGIANHACUON, txt_THOIGIANSUCO, txt_PHEIN, txt_PHEGHEP, txt_PHEKHAC }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY, txt_SOLSX, txt_MACONGNHAN, txt_TENCONGNHAN, txt_MASANPHAM, txt_TENSANPHAM, txt_SOMETVAO, txt_SOKGVAO, txt_SOCON, txt_THOIGIANCATDAU, txt_THOIGIANBATDAU, txt_THOIGIANKETTHUC, txt_THOIGIANCHUANBI, txt_TITRONGTUI, txt_THOIGIANLENCUON, txt_THOIGIANHACUON, txt_THOIGIANSUCO, txt_PHEIN, txt_PHEGHEP, txt_PHETHOI, txt_PHEBIEN, txt_PHEKHAC, txt_PHECHINHMAY }));
             }
             GRID_KQHOANTHIENCHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             GRID_KQHOANTHIENCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
