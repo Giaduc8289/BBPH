@@ -718,7 +718,7 @@
             this.txt_MASPCUAKHACH.Location = new System.Drawing.Point(95, 71);
             this.txt_MASPCUAKHACH.Name = "txt_MASPCUAKHACH";
             this.txt_MASPCUAKHACH.Regular_Expression = null;
-            this.txt_MASPCUAKHACH.Size = new System.Drawing.Size(315, 20);
+            this.txt_MASPCUAKHACH.Size = new System.Drawing.Size(234, 20);
             this.txt_MASPCUAKHACH.TabIndex = 4;
             // 
             // txt_CAUTRUCIN
