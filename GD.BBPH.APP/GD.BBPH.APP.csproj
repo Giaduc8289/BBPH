@@ -363,6 +363,12 @@
     <Compile Include="HETHONG\FRM_USERS.designer.cs">
       <DependentUpon>FRM_USERS.cs</DependentUpon>
     </Compile>
+    <Compile Include="HOANTHIEN\FRM_KQHOANTHIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HOANTHIEN\FRM_KQHOANTHIEN.designer.cs">
+      <DependentUpon>FRM_KQHOANTHIEN.cs</DependentUpon>
+    </Compile>
     <Compile Include="IN\FRM_KQIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -640,6 +646,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HETHONG\FRM_USERS.resx">
       <DependentUpon>FRM_USERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HOANTHIEN\FRM_KQHOANTHIEN.resx">
+      <DependentUpon>FRM_KQHOANTHIEN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IN\FRM_KQIN.resx">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
@@ -1384,7 +1393,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="GHEP\" />
-    <Folder Include="HOANTHIEN\" />
     <Folder Include="LOC\" />
     <Folder Include="MUAHANG\" />
     <Folder Include="TINHGIA\" />

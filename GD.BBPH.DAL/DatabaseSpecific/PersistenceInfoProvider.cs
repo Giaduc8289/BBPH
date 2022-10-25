@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 24, 2022 2:13:38 PM
+// Code is generated on: Monday, October 24, 2022 4:31:53 PM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -797,7 +797,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Inits KetquathanhphamEntity's mappings</summary>
 		private void InitKetquathanhphamEntityMappings()
 		{
-			base.AddElementMapping( "KetquathanhphamEntity", "BBPH", @"dbo", "Ketquathanhpham", 34 );
+			base.AddElementMapping( "KetquathanhphamEntity", "BBPH", @"dbo", "Ketquathanhpham", 35 );
 			base.AddElementFieldMapping( "KetquathanhphamEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "KetquathanhphamEntity", "Ngay", "Ngay", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 1 );
 			base.AddElementFieldMapping( "KetquathanhphamEntity", "Ca", "Ca", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 2 );
@@ -832,6 +832,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "KetquathanhphamEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 31 );
 			base.AddElementFieldMapping( "KetquathanhphamEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 32 );
 			base.AddElementFieldMapping( "KetquathanhphamEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 33 );
+			base.AddElementFieldMapping( "KetquathanhphamEntity", "Socon", "Socon", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 34 );
 		}
 		/// <summary>Inits KetquathoiEntity's mappings</summary>
 		private void InitKetquathoiEntityMappings()

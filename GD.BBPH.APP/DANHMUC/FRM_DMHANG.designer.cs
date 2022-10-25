@@ -34,6 +34,7 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_DODAY = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_DINHLUONGKEO = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.label27 = new GD.BBPH.CONTROL.LABEL();
             this.txt_LOAIMUC = new GD.BBPH.CONTROL.TEXTBOX();
@@ -98,7 +99,6 @@
             this.btn_XOA = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
-            this.txt_DODAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label3 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAKHACH = new GD.BBPH.CONTROL.TEXTBOX();
             this.label2 = new GD.BBPH.CONTROL.LABEL();
@@ -164,6 +164,7 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_DODAY);
             this.uiPanel1Container.Controls.Add(this.txt_DINHLUONGKEO);
             this.uiPanel1Container.Controls.Add(this.label27);
             this.uiPanel1Container.Controls.Add(this.txt_LOAIMUC);
@@ -226,7 +227,6 @@
             this.uiPanel1Container.Controls.Add(this.btn_XOA);
             this.uiPanel1Container.Controls.Add(this.btn_THEMMOI);
             this.uiPanel1Container.Controls.Add(this.btn_SUA);
-            this.uiPanel1Container.Controls.Add(this.txt_DODAY);
             this.uiPanel1Container.Controls.Add(this.label3);
             this.uiPanel1Container.Controls.Add(this.txt_MAKHACH);
             this.uiPanel1Container.Controls.Add(this.label2);
@@ -238,6 +238,21 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(815, 588);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_DODAY
+            // 
+            this.txt_DODAY.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DODAY.BannerText = null;
+            this.txt_DODAY.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_DODAY.Giatrithapphan = 0;
+            this.txt_DODAY.IsSoNguyen = false;
+            this.txt_DODAY.Location = new System.Drawing.Point(247, 99);
+            this.txt_DODAY.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_DODAY.Name = "txt_DODAY";
+            this.txt_DODAY.Regular_Expression = "";
+            this.txt_DODAY.Size = new System.Drawing.Size(82, 20);
+            this.txt_DODAY.TabIndex = 6;
+            this.txt_DODAY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_DINHLUONGKEO
             // 
@@ -291,7 +306,7 @@
             this.txt_TRONGLUONG.Name = "txt_TRONGLUONG";
             this.txt_TRONGLUONG.Regular_Expression = "";
             this.txt_TRONGLUONG.Size = new System.Drawing.Size(82, 20);
-            this.txt_TRONGLUONG.TabIndex = 7;
+            this.txt_TRONGLUONG.TabIndex = 5;
             this.txt_TRONGLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label26
@@ -645,11 +660,9 @@
             this.txt_DAI.Location = new System.Drawing.Point(578, 99);
             this.txt_DAI.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_DAI.Name = "txt_DAI";
-            this.txt_DAI.ReadOnly = true;
             this.txt_DAI.Regular_Expression = "";
             this.txt_DAI.Size = new System.Drawing.Size(82, 20);
             this.txt_DAI.TabIndex = 10;
-            this.txt_DAI.TabStop = false;
             this.txt_DAI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label13
@@ -671,11 +684,9 @@
             this.txt_RONG.Location = new System.Drawing.Point(414, 99);
             this.txt_RONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_RONG.Name = "txt_RONG";
-            this.txt_RONG.ReadOnly = true;
             this.txt_RONG.Regular_Expression = "";
             this.txt_RONG.Size = new System.Drawing.Size(82, 20);
             this.txt_RONG.TabIndex = 9;
-            this.txt_RONG.TabStop = false;
             this.txt_RONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label12
@@ -1067,21 +1078,6 @@
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
             // 
-            // txt_DODAY
-            // 
-            this.txt_DODAY.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DODAY.BannerText = null;
-            this.txt_DODAY.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_DODAY.FormNametoShow = "";
-            this.txt_DODAY.Is_DateTime = false;
-            this.txt_DODAY.IsShowForm = false;
-            this.txt_DODAY.Location = new System.Drawing.Point(247, 99);
-            this.txt_DODAY.Name = "txt_DODAY";
-            this.txt_DODAY.Regular_Expression = null;
-            this.txt_DODAY.Size = new System.Drawing.Size(82, 20);
-            this.txt_DODAY.TabIndex = 8;
-            this.txt_DODAY.TextChanged += new System.EventHandler(this.txt_KICHTHUOC_TextChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -1193,7 +1189,6 @@
         private Janus.Windows.UI.Dock.UIPanelInnerContainer uiPanel0Container;
         private Janus.Windows.UI.Dock.UIPanel uiPanel1;
         private Janus.Windows.UI.Dock.UIPanelInnerContainer uiPanel1Container;
-        private GD.BBPH.CONTROL.TEXTBOX txt_DODAY;
         private GD.BBPH.CONTROL.LABEL label3;
         private GD.BBPH.CONTROL.TEXTBOX txt_MAKHACH;
         private GD.BBPH.CONTROL.LABEL label2;
@@ -1265,5 +1260,6 @@
         private CONTROL.TEXTBOX txt_LOAIMUC;
         private CONTROL.TEXTBOXNUMBER txt_DINHLUONGKEO;
         private CONTROL.LABEL label27;
+        private CONTROL.TEXTBOXNUMBER txt_DODAY;
     }
 }
