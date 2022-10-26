@@ -221,9 +221,9 @@ namespace GD.BBPH.APP.TUA
             r_Detail[KetquatuaFields.Phesx.Name] = txt_PHESANXUAT.Text.Trim(); 
 
             r_Detail[KetquatuaFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text.Trim(); 
-            r_Detail[KetquatuaFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text.Trim(); 
-            //r_Detail[KetquatuaFields.Thoigianchuanbi.Name] = txt_THOIGIANCHUANBI.Text.Trim(); 
-            r_Detail[KetquatuaFields.Thoigianhacuon.Name] = txt_THOIGIANHACUON.Text.Trim(); 
+            r_Detail[KetquatuaFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text.Trim();
+            r_Detail[KetquatuaFields.Thoigiandauca.Name] = txt_THOIGIANDAUCA.Text.Trim();
+            r_Detail[KetquatuaFields.Thoigianhacuon.Name] = txt_THOIGIANLENHACUON.Text.Trim(); 
             r_Detail[KetquatuaFields.Thoigiancatdau.Name] = txt_THOIGIANCATDAU.Text.Trim();
             r_Detail[KetquatuaFields.Thoigiandoilenh.Name] = txt_THOIGIANDOILENH.Text.Trim();
             r_Detail[KetquatuaFields.Thoigiansuco.Name] = txt_THOIGIANSUCO.Text.Trim();
@@ -349,8 +349,8 @@ namespace GD.BBPH.APP.TUA
                 catch { }
                 try { _KetquatuaEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquatuaFields.Thoigianketthuc.Name].ToString()); }
                 catch { }
-                //try { _KetquatuaEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigianchuanbi.Name].ToString()); }
-                //catch { }
+                try { _KetquatuaEntity.Thoigiandauca = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigiandauca.Name].ToString()); }
+                catch { }
                 try { _KetquatuaEntity.Thoigianhacuon = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigianhacuon.Name].ToString()); }
                 catch { }
                 try { _KetquatuaEntity.Thoigiancatdau = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigiancatdau.Name].ToString()); }
@@ -674,7 +674,8 @@ namespace GD.BBPH.APP.TUA
                 _somet = LIB.ConvertString.NumbertoDB(txt_SOMETRA.Text.Trim());
                 _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text);
                 _timerun = (Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).Minutes
-                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
+                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANDAUCA.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim()) 
+                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANDOILENH.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANLENHACUON.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANCATDAU.Text.Trim());
                 txt_NANGSUAT.Text = decimal.Round(_somet / _tocdo / _timerun * 60, 3).ToString();
             }
             catch { }
