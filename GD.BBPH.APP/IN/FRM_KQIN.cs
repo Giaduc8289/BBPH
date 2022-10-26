@@ -188,6 +188,9 @@ namespace GD.BBPH.APP.IN
                     txt_THOIGIANCHUANBI.Text = _Rowview.Row[KetquainFields.Thoigianchuanbi.Name].ToString();
                     txt_THOIGIANSUCO.Text = _Rowview.Row[KetquainFields.Thoigiansuco.Name].ToString();
 
+                    txt_NANGSUAT.Text = _Rowview.Row[KetquathoiFields.Nangsuat.Name].ToString();
+                    txt_CHATLUONG.Text = _Rowview.Row[KetquathoiFields.Chatluong.Name].ToString();
+
                 }
             }
             catch
@@ -242,6 +245,9 @@ namespace GD.BBPH.APP.IN
             r_Detail[KetquainFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text;
             r_Detail[KetquainFields.Thoigianchuanbi.Name] = txt_THOIGIANCHUANBI.Text;
             r_Detail[KetquainFields.Thoigiansuco.Name] = txt_THOIGIANSUCO.Text;
+            r_Detail[KetquathoiFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
+            r_Detail[KetquathoiFields.Chatluong.Name] = LIB.ConvertString.NumbertoDB(txt_CHATLUONG.Text.Trim());
+
 
             DT_KQIN_CHITIET_FILL.Rows.Add(r_Detail);
 
@@ -390,7 +396,7 @@ namespace GD.BBPH.APP.IN
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENHIN.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASP.Text = txt_TENSP.Text = txt_SOMLSX.Text = txt_SOMCAP.Text = txt_SOKGCAP.Text = txt_THUCTEIN.Text = txt_SOKGIN.Text = txt_SAIHONGTHUCTE.Text = txt_PHENCC.Text = txt_PHESX.Text =
-               txt_TONGM2DM.Text = txt_M2SAIHONGTT.Text = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_THOIGIANSUCO.Text =  string.Empty;
+               txt_TONGM2DM.Text = txt_M2SAIHONGTT.Text = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_THOIGIANSUCO.Text = txt_NANGSUAT.Text = txt_CHATLUONG.Text = string.Empty;
             //txt_PHONGBAN.Text = string.Empty;
             //txt_CHUCVU.Text = string.Empty;
             KetquathoiManager _KetquathoiManager = new KetquathoiManager();
@@ -401,7 +407,7 @@ namespace GD.BBPH.APP.IN
             MAHIEU_PK = "";
             txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSP, txt_TENMAY }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSP, txt_TENMAY, txt_CHATLUONG, txt_NANGSUAT }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_KQIN.Enabled = false;
@@ -416,7 +422,7 @@ namespace GD.BBPH.APP.IN
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSP, txt_TENMAY }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSP, txt_TENMAY, txt_CHATLUONG, txt_NANGSUAT }));
             }
             GRID_KQINCHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             GRID_KQINCHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
@@ -652,6 +658,26 @@ namespace GD.BBPH.APP.IN
                 return dt.Select(DmcongnhanFields.Macn.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
+        }
+        #endregion
+
+        #region  Text change
+        private void Tinhnangsuat()
+        {
+            try
+            {
+                decimal _timerun = 0, _tocdo = 0, _somet = 0;
+                _somet = LIB.ConvertString.NumbertoDB(txt_THUCTEIN.Text.Trim());
+                _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASP.Text);
+                _timerun = Convert.ToDecimal(Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text))
+                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
+                txt_NANGSUAT.Text = (_somet / _tocdo / _timerun).ToString();
+            }
+            catch { }
+        }
+        private void txt_THOIGIAN_TextChanged(object sender, EventArgs e)
+        {
+            Tinhnangsuat();
         }
         #endregion
 
