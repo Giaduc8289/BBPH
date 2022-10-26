@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 26, 2022 11:01:55 AM
+// Code is generated on: Wednesday, October 26, 2022 3:31:07 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -491,6 +491,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Maqcthanhpham", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Macautrucins", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Makhachs", fieldHashtable);
 		}
 		#endregion
 
@@ -774,6 +780,28 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maqcthanhpham, true); }
 			set	{ SetValue((int)CongsuatmayFieldIndex.Maqcthanhpham, value); }
+		}
+
+		/// <summary> The Macautrucins property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Macautrucins"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Macautrucins
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Macautrucins, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Macautrucins, value); }
+		}
+
+		/// <summary> The Makhachs property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Makhachs"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Makhachs
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Makhachs, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Makhachs, value); }
 		}
 
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 26, 2022 11:01:54 AM
+// Code is generated on: Wednesday, October 26, 2022 3:31:06 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -183,6 +183,8 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("CongsuatmayEntity", "Sohinhma", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Sohinhma, 2147483647, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Maloaimang", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Maloaimang, 2147483647, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Maqcthanhpham", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Maqcthanhpham, 2147483647, 0, 0);
+			base.AddElementFieldInfo("CongsuatmayEntity", "Macautrucins", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Macautrucins, 2147483647, 0, 0);
+			base.AddElementFieldInfo("CongsuatmayEntity", "Makhachs", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Makhachs, 2147483647, 0, 0);
 		}
 		/// <summary>Inits CtptmangDEntity's FieldInfo objects</summary>
 		private void InitCtptmangDEntityInfos()
@@ -401,6 +403,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmhangEntity", "Sohinhma", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Sohinhma, 50, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Maloaimuc", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Maloaimuc, 50, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Doday", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmhangFieldIndex.Doday, 0, 3, 20);
+			base.AddElementFieldInfo("DmhangEntity", "Macautrucin", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Macautrucin, 50, 0, 0);
 		}
 		/// <summary>Inits DmkhachEntity's FieldInfo objects</summary>
 		private void InitDmkhachEntityInfos()

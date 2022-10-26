@@ -33,7 +33,7 @@ namespace GD.BBPH.APP.DANHMUC
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MAMAUCHITIET = "", MATRUCCHITIET = "";
 
         private DataTable DT_DMKHACH = new DataTable(), DT_DMCHUNGLOAI = new DataTable(), DT_DMMANG = new DataTable(), DT_DMMAU = new DataTable()
-            , DT_LOAIMUC = new DataTable(), DT_SOMAU = new DataTable(), DT_SOHINH = new DataTable()
+            , DT_LOAIMUC = new DataTable(), DT_SOMAU = new DataTable(), DT_SOHINH = new DataTable(), DT_CAUTRUCIN = new DataTable()
             , DT_QCTHANHPHAM = new DataTable(), DT_QCDONGGOI = new DataTable(), DT_QCLOAITHUNG = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
@@ -65,6 +65,7 @@ namespace GD.BBPH.APP.DANHMUC
                         DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
                         DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
                         DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
+                        DT_CAUTRUCIN = new DmquycachManager().SelectByManhomRDT("N02");
                         DT_QCTHANHPHAM = new DmquycachManager().SelectByManhomRDT("N06");
                         DT_QCDONGGOI = new DmquycachManager().SelectByManhomRDT("N07");
                         DT_QCLOAITHUNG = new DmquycachManager().SelectByManhomRDT("N08");
@@ -103,6 +104,7 @@ namespace GD.BBPH.APP.DANHMUC
             DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
             DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
             DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
+            DT_CAUTRUCIN = new DmquycachManager().SelectByManhomRDT("N02");
             DT_QCTHANHPHAM = new DmquycachManager().SelectByManhomRDT("N06");
             DT_QCDONGGOI = new DmquycachManager().SelectByManhomRDT("N07");
             DT_QCLOAITHUNG = new DmquycachManager().SelectByManhomRDT("N08");
@@ -280,7 +282,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
                     txt_SOMAUMA.Text = _Rowview.Row[DmhangFields.Somauma.Name].ToString();
                     txt_SOHINHMA.Text = _Rowview.Row[DmhangFields.Sohinhma.Name].ToString();
-                    txt_CAUTRUCIN.Text = _Rowview.Row[DmhangFields.Cautrucin.Name].ToString();
+                    txt_MACAUTRUCIN.Text = _Rowview.Row[DmhangFields.Macautrucin.Name].ToString();
                     txt_KHOILUONGMUC.Text = _Rowview.Row[DmhangFields.Khoiluongmuc.Name].ToString();
                     txt_MAMANG1.Text = _Rowview.Row[DmhangFields.Mamang1.Name].ToString();
                     txt_TLMANG1.Text = _Rowview.Row[DmhangFields.Tlmanglop1.Name].ToString();
@@ -299,6 +301,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MALOAIMUC_Validating(new object(), new CancelEventArgs());
                     txt_SOMAUMA_Validating(new object(), new CancelEventArgs());
                     txt_SOHINHMA_Validating(new object(), new CancelEventArgs());
+                    txt_MACAUTRUCIN_Validating(new object(), new CancelEventArgs());
                     txt_MAMANG1_Validating(new object(), new CancelEventArgs());
                     txt_MAMANG2_Validating(new object(), new CancelEventArgs());
                     txt_MAQCTHANHPHAM_Validating(new object(), new CancelEventArgs());
@@ -404,6 +407,7 @@ namespace GD.BBPH.APP.DANHMUC
             _DmhangEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
             try { _DmhangEntity.Sohinh = Int32.Parse(txt_SOHINH.Text.Trim()); }
             catch { }
+            _DmhangEntity.Macautrucin = txt_MACAUTRUCIN.Text.Trim();
             _DmhangEntity.Cautrucin = txt_CAUTRUCIN.Text.Trim();
             _DmhangEntity.Khoiluongmuc = LIB.ConvertString.NumbertoDB(txt_KHOILUONGMUC.Text.Trim());
             _DmhangEntity.Mamang1 = txt_MAMANG1.Text.Trim();
@@ -555,6 +559,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somau.Name].Value = _DmhangEntity.Somau;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Loaimuc.Name].Value = _DmhangEntity.Loaimuc;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Khoiluongmuc.Name].Value = _DmhangEntity.Khoiluongmuc;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Macautrucin.Name].Value = _DmhangEntity.Macautrucin;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Cautrucin.Name].Value = _DmhangEntity.Cautrucin;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Mamang1.Name].Value = _DmhangEntity.Mamang1;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenmang1.Name].Value = _DmhangEntity.Tenmang1;
@@ -615,7 +620,7 @@ namespace GD.BBPH.APP.DANHMUC
             MAHIEU_PK = "";
             txt_MASP.Focus();
             TEXTBOX_Only_Control(false, null);
-            //GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH, txt_TENSP }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH, txt_LOAIMUC, txt_SOMAU, txt_SOHINH, txt_CAUTRUCIN, txt_TENMANG1, txt_TENMANG2, txt_TENQCTHANHPHAM, txt_TENQCDONGGOI, txt_TENQCLOAITHUNG }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_DMHANGHOA.Enabled = false;
         }
@@ -626,8 +631,8 @@ namespace GD.BBPH.APP.DANHMUC
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MASP }));
-                //txt_TENHIEU.Focus();
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MASP, txt_TENKHACH, txt_LOAIMUC, txt_SOMAU, txt_SOHINH, txt_CAUTRUCIN, txt_TENMANG1, txt_TENMANG2, txt_TENQCTHANHPHAM, txt_TENQCDONGGOI, txt_TENQCLOAITHUNG }));
+                txt_TENSP.Focus();
                 //txt_MAKHO.Focus();
 
             }
@@ -947,6 +952,26 @@ namespace GD.BBPH.APP.DANHMUC
             }
             else
                 txt_SOHINH.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
+        }
+        private void txt_MACAUTRUCIN_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MACAUTRUCIN.Text.Trim()) || DT_CAUTRUCIN == null || DT_CAUTRUCIN.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MACAUTRUCIN.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaQuycach(Str_MASIEUTHI, DT_CAUTRUCIN);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH.xml",
+                        DT_CAUTRUCIN, DmquycachFields.Maquycach.Name, Str_MASIEUTHI);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MACAUTRUCIN.Text = _RowViewSelect[DmquycachFields.Maquycach.Name].ToString();
+                txt_CAUTRUCIN.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
+            }
+            else
+                txt_CAUTRUCIN.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
         }
 
         private void txt_MAMANG1_Validating(object sender, CancelEventArgs e)

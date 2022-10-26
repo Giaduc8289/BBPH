@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 26, 2022 11:01:55 AM
+// Code is generated on: Wednesday, October 26, 2022 3:31:07 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -554,6 +554,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Doday", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Macautrucin", fieldHashtable);
 		}
 		#endregion
 
@@ -1068,6 +1071,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Doday, false); }
 			set	{ SetValue((int)DmhangFieldIndex.Doday, value); }
+		}
+
+		/// <summary> The Macautrucin property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Macautrucin"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Macautrucin
+		{
+			get { return (System.String)GetValue((int)DmhangFieldIndex.Macautrucin, true); }
+			set	{ SetValue((int)DmhangFieldIndex.Macautrucin, value); }
 		}
 
 
