@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 26, 2022 12:54:34 AM
+// Code is generated on: Wednesday, October 26, 2022 11:01:55 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -26,7 +26,6 @@ namespace GD.BBPH.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 
 	/// <summary>
 	/// Entity class which represents the entity 'Ketquatua'.<br/><br/>
@@ -35,8 +34,7 @@ namespace GD.BBPH.DAL.EntityClasses
 	[Serializable]
 	public partial class KetquatuaEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END
-			
+		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
 
@@ -46,7 +44,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Statics
@@ -132,7 +129,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 		}
 
 		
@@ -315,7 +311,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			base.GetObjectData(info, context);
 		}
 
@@ -456,7 +451,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			OnInitClassMembersComplete();
 		}
 
@@ -515,9 +509,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Thoigianketthuc", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Thoigianchuanbi", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Thoigianhacuon", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -564,6 +555,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nangsuat", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Thoigiandauca", fieldHashtable);
 		}
 		#endregion
 
@@ -615,7 +609,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 
 			OnInitialized();
 		}
@@ -838,17 +831,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)KetquatuaFieldIndex.Thoigianketthuc, value); }
 		}
 
-		/// <summary> The Thoigianchuanbi property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigianchuanbi"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Thoigianchuanbi
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Thoigianchuanbi, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Thoigianchuanbi, value); }
-		}
-
 		/// <summary> The Thoigianhacuon property of the Entity Ketquatua<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigianhacuon"<br/>
@@ -1025,6 +1007,17 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)KetquatuaFieldIndex.Nangsuat, value); }
 		}
 
+		/// <summary> The Thoigiandauca property of the Entity Ketquatua<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigiandauca"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Thoigiandauca
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Thoigiandauca, false); }
+			set	{ SetValue((int)KetquatuaFieldIndex.Thoigiandauca, value); }
+		}
+
 
 
 		/// <summary> Gets / sets related entity of type 'DmmayEntity' which has to be set using a fetch action earlier. If no related entity
@@ -1089,7 +1082,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Included code
