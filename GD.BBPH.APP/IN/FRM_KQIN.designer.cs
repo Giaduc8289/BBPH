@@ -34,6 +34,10 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_TILESAIHONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_NANGSUAT = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label24 = new GD.BBPH.CONTROL.LABEL();
+            this.label25 = new GD.BBPH.CONTROL.LABEL();
             this.label23 = new System.Windows.Forms.Label();
             this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
@@ -89,10 +93,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_TILESAIHONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.txt_NANGSUAT = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.label24 = new GD.BBPH.CONTROL.LABEL();
-            this.label25 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -213,6 +213,58 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(775, 603);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_TILESAIHONG
+            // 
+            this.txt_TILESAIHONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TILESAIHONG.BannerText = null;
+            this.txt_TILESAIHONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TILESAIHONG.Giatrithapphan = 0;
+            this.txt_TILESAIHONG.IsSoNguyen = false;
+            this.txt_TILESAIHONG.Location = new System.Drawing.Point(303, 346);
+            this.txt_TILESAIHONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_TILESAIHONG.Name = "txt_TILESAIHONG";
+            this.txt_TILESAIHONG.ReadOnly = true;
+            this.txt_TILESAIHONG.Regular_Expression = "";
+            this.txt_TILESAIHONG.Size = new System.Drawing.Size(93, 20);
+            this.txt_TILESAIHONG.TabIndex = 251;
+            this.txt_TILESAIHONG.TabStop = false;
+            this.txt_TILESAIHONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_NANGSUAT
+            // 
+            this.txt_NANGSUAT.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NANGSUAT.BannerText = null;
+            this.txt_NANGSUAT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_NANGSUAT.Giatrithapphan = 0;
+            this.txt_NANGSUAT.IsSoNguyen = false;
+            this.txt_NANGSUAT.Location = new System.Drawing.Point(493, 345);
+            this.txt_NANGSUAT.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_NANGSUAT.Name = "txt_NANGSUAT";
+            this.txt_NANGSUAT.ReadOnly = true;
+            this.txt_NANGSUAT.Regular_Expression = "";
+            this.txt_NANGSUAT.Size = new System.Drawing.Size(93, 20);
+            this.txt_NANGSUAT.TabIndex = 252;
+            this.txt_NANGSUAT.TabStop = false;
+            this.txt_NANGSUAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(428, 347);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(56, 13);
+            this.label24.TabIndex = 253;
+            this.label24.Text = "Năng suất";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(239, 348);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 13);
+            this.label25.TabIndex = 250;
+            this.label25.Text = "% sai hòng";
             // 
             // label23
             // 
@@ -879,58 +931,6 @@
             this.label22.Size = new System.Drawing.Size(44, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã máy";
-            // 
-            // txt_TILESAIHONG
-            // 
-            this.txt_TILESAIHONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TILESAIHONG.BannerText = null;
-            this.txt_TILESAIHONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TILESAIHONG.Giatrithapphan = 0;
-            this.txt_TILESAIHONG.IsSoNguyen = false;
-            this.txt_TILESAIHONG.Location = new System.Drawing.Point(303, 346);
-            this.txt_TILESAIHONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_TILESAIHONG.Name = "txt_TILESAIHONG";
-            this.txt_TILESAIHONG.ReadOnly = true;
-            this.txt_TILESAIHONG.Regular_Expression = "";
-            this.txt_TILESAIHONG.Size = new System.Drawing.Size(93, 20);
-            this.txt_TILESAIHONG.TabIndex = 251;
-            this.txt_TILESAIHONG.TabStop = false;
-            this.txt_TILESAIHONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_NANGSUAT
-            // 
-            this.txt_NANGSUAT.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NANGSUAT.BannerText = null;
-            this.txt_NANGSUAT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_NANGSUAT.Giatrithapphan = 0;
-            this.txt_NANGSUAT.IsSoNguyen = false;
-            this.txt_NANGSUAT.Location = new System.Drawing.Point(483, 346);
-            this.txt_NANGSUAT.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_NANGSUAT.Name = "txt_NANGSUAT";
-            this.txt_NANGSUAT.ReadOnly = true;
-            this.txt_NANGSUAT.Regular_Expression = "";
-            this.txt_NANGSUAT.Size = new System.Drawing.Size(93, 20);
-            this.txt_NANGSUAT.TabIndex = 252;
-            this.txt_NANGSUAT.TabStop = false;
-            this.txt_NANGSUAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(418, 348);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(56, 13);
-            this.label24.TabIndex = 253;
-            this.label24.Text = "Năng suất";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(239, 348);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(58, 13);
-            this.label25.TabIndex = 250;
-            this.label25.Text = "% sai hòng";
             // 
             // FRM_KQIN
             // 

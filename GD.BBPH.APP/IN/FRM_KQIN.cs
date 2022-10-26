@@ -633,7 +633,7 @@ namespace GD.BBPH.APP.IN
                 _somet = LIB.ConvertString.NumbertoDB(txt_THUCTEIN.Text.Trim());
                 _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASP.Text);
                 _timerun = Convert.ToDecimal((Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).TotalMinutes)
-                    - Convert.ToDecimal(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
+                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
                 _nangsuat = _somet / _tocdo / _timerun * 100;
                 txt_NANGSUAT.Text = Math.Round(_nangsuat).ToString();
             }

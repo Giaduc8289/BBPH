@@ -213,20 +213,20 @@ namespace GD.BBPH.APP.TUA
 
             r_Detail[KetquatuaFields.SoMetvao.Name] =txt_SOMETVAO.Text.Trim();
             r_Detail[KetquatuaFields.SoMetra.Name] = txt_SOMETRA.Text.Trim();
-           r_Detail[KetquatuaFields.SoKgvao.Name] = txt_KHOILUONGVAO.Text.Trim();             
+            r_Detail[KetquatuaFields.SoKgvao.Name] = txt_KHOILUONGVAO.Text.Trim();             
             r_Detail[KetquatuaFields.SoKgra.Name] = txt_KHOILUONGRA.Text.Trim();
-            r_Detail[KetquatuaFields.Phethoi.Name] = txt_PHETHOI.Text.Trim();            
-            r_Detail[KetquatuaFields.Pheghep.Name] = txt_PHEGHEP.Text.Trim();            
-            r_Detail[KetquatuaFields.Phein.Name] = txt_PHEIN.Text.Trim(); 
-            r_Detail[KetquatuaFields.Phesx.Name] = txt_PHESANXUAT.Text.Trim(); 
+            r_Detail[KetquatuaFields.Phethoi.Name] = LIB.ConvertString.NumbertoDB(txt_PHETHOI.Text.Trim());            
+            r_Detail[KetquatuaFields.Pheghep.Name] = LIB.ConvertString.NumbertoDB(txt_PHEGHEP.Text.Trim());            
+            r_Detail[KetquatuaFields.Phein.Name] = LIB.ConvertString.NumbertoDB(txt_PHEIN.Text.Trim()); 
+            r_Detail[KetquatuaFields.Phesx.Name] = LIB.ConvertString.NumbertoDB(txt_PHESANXUAT.Text.Trim()); 
 
             r_Detail[KetquatuaFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text.Trim(); 
             r_Detail[KetquatuaFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text.Trim();
-            r_Detail[KetquatuaFields.Thoigiandauca.Name] = txt_THOIGIANDAUCA.Text.Trim();
-            r_Detail[KetquatuaFields.Thoigianhacuon.Name] = txt_THOIGIANLENHACUON.Text.Trim(); 
-            r_Detail[KetquatuaFields.Thoigiancatdau.Name] = txt_THOIGIANCATDAU.Text.Trim();
-            r_Detail[KetquatuaFields.Thoigiandoilenh.Name] = txt_THOIGIANDOILENH.Text.Trim();
-            r_Detail[KetquatuaFields.Thoigiansuco.Name] = txt_THOIGIANSUCO.Text.Trim();
+            r_Detail[KetquatuaFields.Thoigiandauca.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANDAUCA.Text.Trim());
+            r_Detail[KetquatuaFields.Thoigianhacuon.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANLENHACUON.Text.Trim()); 
+            r_Detail[KetquatuaFields.Thoigiancatdau.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANCATDAU.Text.Trim());
+            r_Detail[KetquatuaFields.Thoigiandoilenh.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANDOILENH.Text.Trim());
+            r_Detail[KetquatuaFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
 
             r_Detail[KetquatuaFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
 
@@ -670,13 +670,14 @@ namespace GD.BBPH.APP.TUA
         {
             try
             {
-                decimal _timerun = 0, _tocdo = 0, _somet = 0;
+                decimal _timerun = 0, _tocdo = 0, _somet = 0, _nangsuat = 0;
                 _somet = LIB.ConvertString.NumbertoDB(txt_SOMETRA.Text.Trim());
                 _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text);
-                _timerun = (Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).Minutes
+                _timerun = Convert.ToDecimal((Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).TotalMinutes)
                     - LIB.ConvertString.NumbertoDB(txt_THOIGIANDAUCA.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim()) 
                     - LIB.ConvertString.NumbertoDB(txt_THOIGIANDOILENH.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANLENHACUON.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANCATDAU.Text.Trim());
-                txt_NANGSUAT.Text = decimal.Round(_somet / _tocdo / _timerun * 60, 3).ToString();
+                _nangsuat = _somet / _tocdo / _timerun * 100;
+                txt_NANGSUAT.Text = Math.Round(_nangsuat).ToString();
             }
             catch { }
         }

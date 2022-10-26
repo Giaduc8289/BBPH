@@ -651,7 +651,7 @@ namespace GD.BBPH.APP.THOI
                 _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MAMANG.Text);
                 _timerun = Convert.ToDecimal((Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).TotalMinutes)
                     - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
-                _nangsuat = _sokg / _tocdo / _timerun * 60 * 100;
+                _nangsuat = (_sokg / ((_tocdo/60) * _timerun)) * 100;
                 txt_NANGSUAT.Text = Math.Round(_nangsuat).ToString();
             }
             catch { }
