@@ -303,6 +303,12 @@
     <Compile Include="DANHMUC\FRM_DMVATTUSAIHONG.designer.cs">
       <DependentUpon>FRM_DMVATTUSAIHONG.cs</DependentUpon>
     </Compile>
+    <Compile Include="GHEP\FRM_KQGHEP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GHEP\FRM_KQGHEP.designer.cs">
+      <DependentUpon>FRM_KQGHEP.cs</DependentUpon>
+    </Compile>
     <Compile Include="HETHONG\FRM_CHONNGAYLAMVIEC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -616,6 +622,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMVATTUSAIHONG.resx">
       <DependentUpon>FRM_DMVATTUSAIHONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GHEP\FRM_KQGHEP.resx">
+      <DependentUpon>FRM_KQGHEP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HETHONG\FRM_CHONNGAYLAMVIEC.resx">
       <DependentUpon>FRM_CHONNGAYLAMVIEC.cs</DependentUpon>
@@ -1394,7 +1403,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GHEP\" />
     <Folder Include="LOC\" />
     <Folder Include="MUAHANG\" />
     <Folder Include="TINHGIA\" />

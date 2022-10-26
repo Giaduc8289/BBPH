@@ -905,6 +905,13 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Ghép
+                case "FRM_KQGHEP":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KQGHEP") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.GHEP.FRM_KQGHEP()), mmru.Text);
+                    break;
                 #endregion
 
                 #region Tua

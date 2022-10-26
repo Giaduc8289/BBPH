@@ -611,6 +611,19 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
+        #region KQGHEP
+        private static DataTable _DT_KQGHEP = null;
+        public static DataTable DT_KQGHEP
+        {
+            get
+            {
+                _DT_KQGHEP = new KetquachiaManager().SelectAllRDT();
+                return _DT_KQGHEP;
+            }
+            set { _DT_KQGHEP = value; }
+        }
+        #endregion
+
         #region KQIN
         private static DataTable _DT_KQIN = null;
         public static DataTable DT_KQIN
