@@ -203,7 +203,7 @@
             this.txt_CHATLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CHATLUONG.BannerText = null;
             this.txt_CHATLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_CHATLUONG.Giatrithapphan = 0;
+            this.txt_CHATLUONG.Giatrithapphan = 2;
             this.txt_CHATLUONG.IsSoNguyen = false;
             this.txt_CHATLUONG.Location = new System.Drawing.Point(476, 230);
             this.txt_CHATLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -220,7 +220,7 @@
             this.txt_NANGSUAT.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NANGSUAT.BannerText = null;
             this.txt_NANGSUAT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_NANGSUAT.Giatrithapphan = 0;
+            this.txt_NANGSUAT.Giatrithapphan = 2;
             this.txt_NANGSUAT.IsSoNguyen = false;
             this.txt_NANGSUAT.Location = new System.Drawing.Point(656, 230);
             this.txt_NANGSUAT.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);

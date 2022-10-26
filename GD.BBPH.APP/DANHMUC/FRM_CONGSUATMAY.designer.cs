@@ -34,6 +34,7 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.btn_SAOCHEP = new GD.BBPH.CONTROL.BUTTON();
             this.txt_TOCDO = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.btn_CHONQCTHANHPHAM = new GD.BBPH.CONTROL.BUTTON();
             this.btn_CHONLOAIMANG = new GD.BBPH.CONTROL.BUTTON();
@@ -136,6 +137,7 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.btn_SAOCHEP);
             this.uiPanel1Container.Controls.Add(this.txt_TOCDO);
             this.uiPanel1Container.Controls.Add(this.btn_CHONQCTHANHPHAM);
             this.uiPanel1Container.Controls.Add(this.btn_CHONLOAIMANG);
@@ -185,6 +187,21 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(610, 578);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // btn_SAOCHEP
+            // 
+            this.btn_SAOCHEP.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_SAOCHEP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_SAOCHEP.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_SAOCHEP.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_SAOCHEP.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_SAOCHEP.Location = new System.Drawing.Point(425, 538);
+            this.btn_SAOCHEP.Name = "btn_SAOCHEP";
+            this.btn_SAOCHEP.Size = new System.Drawing.Size(75, 23);
+            this.btn_SAOCHEP.TabIndex = 171;
+            this.btn_SAOCHEP.Text = "Sao &chép";
+            this.btn_SAOCHEP.UseVisualStyleBackColor = true;
+            this.btn_SAOCHEP.Click += new System.EventHandler(this.btn_SAOCHEP_Click);
             // 
             // txt_TOCDO
             // 
@@ -526,7 +543,7 @@
             this.txt_MACONGDOAN.Size = new System.Drawing.Size(109, 20);
             this.txt_MACONGDOAN.TabIndex = 4;
             this.txt_MACONGDOAN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MACONGDOAN_KeyDown);
-            this.txt_MACONGDOAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_CONGDOAN_Validating);
+            this.txt_MACONGDOAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACONGDOAN_Validating);
             // 
             // txt_TENCONGDOAN
             // 
@@ -622,7 +639,7 @@
             this.btn_Thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_Thoat.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(425, 538);
+            this.btn_Thoat.Location = new System.Drawing.Point(506, 538);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
             this.btn_Thoat.TabIndex = 25;
@@ -815,5 +832,6 @@
         private CONTROL.BUTTON btn_CHONSOHINH;
         private CONTROL.BUTTON btn_CHONSOMAU;
         private CONTROL.TEXTBOXNUMBER txt_TOCDO;
+        private CONTROL.BUTTON btn_SAOCHEP;
     }
 }

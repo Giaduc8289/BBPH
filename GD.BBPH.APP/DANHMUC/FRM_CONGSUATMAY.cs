@@ -16,6 +16,7 @@ using GD.BBPH.LIB;
 using Janus.Data;
 using Janus.Windows.GridEX;
 using Janus.Windows.Common;
+using System.Text.RegularExpressions;
 
 namespace GD.BBPH.APP.DANHMUC
 {
@@ -106,6 +107,7 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_THEMMOI, btn_THEMMOI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_XOA, btn_XOA.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_KHOIPHUC, btn_KHOIPHUC.Name + ".xml");
+            GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SAOCHEP, btn_SAOCHEP.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_CONGSUATMAY.xml", GRID_CONGSUATMAY, uiPanel0Container);
             //GRID_CONGSUATMAY.RootTable.SortKeys.Add(CongsuatmayFields.Sothutucongdoan.Name, Janus.Windows.GridEX.SortOrder.Ascending);
@@ -152,9 +154,7 @@ namespace GD.BBPH.APP.DANHMUC
 
                     txt_MAMAY_Validating(new object(), new CancelEventArgs());
                     txt_MADONGMAY_Validating(new object(), new CancelEventArgs());
-                    txt_CONGDOAN_Validating(new object(), new CancelEventArgs());
-
-
+                    txt_MACONGDOAN_Validating(new object(), new CancelEventArgs());
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_CONGSUATMAY_CurrentChanged"); }
@@ -170,6 +170,7 @@ namespace GD.BBPH.APP.DANHMUC
             DT_CONGSUATMAY.Rows.Add(r_Insert);
             BS_CONGSUATMAY.Position = DT_CONGSUATMAY.Rows.Count;
             MAHIEU_PK = "";
+            txt_MACONGSUAT.Text = GetMacongsuat("CS");
             txt_MACONGSUAT.Focus();
             txt_MAMAY.Text = txt_TENMAY.Text = txt_MADONGMAY.Text = txt_TENDONGMAY.Text = txt_MACONGDOAN.Text = txt_TENCONGDOAN.Text = string.Empty;
             TEXTBOX_Only_Control(false, null);
@@ -189,6 +190,51 @@ namespace GD.BBPH.APP.DANHMUC
             }
             GRID_CONGSUATMAY.Enabled = false;
             btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = true;
+        }
+        private void btn_SAOCHEP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
+                CongsuatmayManager _CongsuatmayManager = new CongsuatmayManager();
+                CongsuatmayEntity _CongsuatmayEntity = new CongsuatmayEntity();
+                r_Insert = DT_CONGSUATMAY.NewRow();
+                DT_CONGSUATMAY.Rows.Add(r_Insert);
+                DataRow[] drCopy = DT_CONGSUATMAY.Select(CongsuatmayFields.Macongsuat.Name + "= '" + MAHIEU_PK + "'");
+                BS_CONGSUATMAY.Position = DT_CONGSUATMAY.Rows.Count;
+
+                txt_MACONGSUAT.Text = drCopy[0][CongsuatmayFields.Macongsuat.Name].ToString();
+                txt_TENCONGSUAT.Text = drCopy[0][CongsuatmayFields.Tencongsuat.Name].ToString();
+                txt_MAMAY.Text = drCopy[0][CongsuatmayFields.Mamay.Name].ToString();
+                txt_MADONGMAY.Text = drCopy[0][CongsuatmayFields.Madongmay.Name].ToString();
+                txt_MACONGDOAN.Text = drCopy[0][CongsuatmayFields.Macongdoan.Name].ToString();
+                txt_DODAYTU.Text = drCopy[0][CongsuatmayFields.Dodaytu.Name].ToString();
+                txt_DODAYDEN.Text = drCopy[0][CongsuatmayFields.Dodayden.Name].ToString();
+                txt_KHOTU.Text = drCopy[0][CongsuatmayFields.Khotu.Name].ToString();
+                txt_KHODEN.Text = drCopy[0][CongsuatmayFields.Khoden.Name].ToString();
+                txt_CHIEUDAITU.Text = drCopy[0][CongsuatmayFields.Chieudaitu.Name].ToString();
+                txt_CHIEUDAIDEN.Text = drCopy[0][CongsuatmayFields.Chieudaiden.Name].ToString();
+                txt_SOMAUMA.Text = drCopy[0][CongsuatmayFields.Somauma.Name].ToString();
+                txt_SOHINHMA.Text = drCopy[0][CongsuatmayFields.Sohinhma.Name].ToString();
+                txt_MALOAIMANG.Text = drCopy[0][CongsuatmayFields.Maloaimang.Name].ToString();
+                txt_MAQCTHANHPHAM.Text = drCopy[0][CongsuatmayFields.Maqcthanhpham.Name].ToString();
+                txt_TOCDO.Text = drCopy[0][CongsuatmayFields.Tocdo.Name].ToString();
+
+                txt_MAMAY_Validating(new object(), new CancelEventArgs());
+                txt_MADONGMAY_Validating(new object(), new CancelEventArgs());
+                txt_MACONGDOAN_Validating(new object(), new CancelEventArgs());
+
+                MAHIEU_PK = "";
+                txt_MACONGSUAT.Text = GetMacongsuat("CS");
+                txt_MACONGSUAT.Focus();
+                //TEXTBOX_Only_Control(false, null);
+                // txt_MAHIEU.Text = DmcapmaManager.GET_MA_INT(DmcapmaManager.LOAI_MA_HIEU, false, KTXPT.DATA);
+                BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENMAY, txt_TENDONGMAY, txt_TENCONGDOAN }));
+                BBPH.BLL.MenuroleManager.set_Enable_controls(BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                GRID_CONGSUATMAY.Enabled = false;
+                btn_CHONSOMAU.Enabled = btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONSOHINH.Enabled = true;
+            }
+            catch { }
         }
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
@@ -325,9 +371,10 @@ namespace GD.BBPH.APP.DANHMUC
         private void txt_MAMAY_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
+            txt_TENMAY.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MAMAY.Text.Trim()) || DT_DMMAY == null || DT_DMMAY.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MAMAY.Text.Trim().ToUpper();
-            _RowViewSelect = checkmamay(Str_MASIEUTHI, DT_DMMAY);
+            _RowViewSelect = checkmaMay(Str_MASIEUTHI, DT_DMMAY);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
@@ -338,14 +385,20 @@ namespace GD.BBPH.APP.DANHMUC
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_MAMAY.Text = _RowViewSelect[DmmayFields.Mamay.Name].ToString();
                 txt_TENMAY.Text = _RowViewSelect[DmmayFields.Tenmay.Name].ToString();
+
+                txt_MADONGMAY.Text = _RowViewSelect[DmmayFields.Madm.Name].ToString();
+                txt_MADONGMAY_Validating(new object(), new CancelEventArgs());
             }
             else
             {
                 txt_TENMAY.Text = _RowViewSelect[DmmayFields.Tenmay.Name].ToString();
+
+                txt_MADONGMAY.Text = _RowViewSelect[DmmayFields.Madm.Name].ToString();
+                txt_MADONGMAY_Validating(new object(), new CancelEventArgs());
             }
         }
 
-        private DataRow checkmamay(string masieuthi, DataTable dt)
+        private DataRow checkmaMay(string masieuthi, DataTable dt)
         {
             try
             {
@@ -357,6 +410,7 @@ namespace GD.BBPH.APP.DANHMUC
         private void txt_MADONGMAY_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
+            txt_TENDONGMAY.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MADONGMAY.Text.Trim()) || DT_DMDONGMAY == null || DT_DMDONGMAY.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MADONGMAY.Text.Trim().ToUpper();
             _RowViewSelect = checkmaDongmay(Str_MASIEUTHI, DT_DMDONGMAY);
@@ -370,9 +424,17 @@ namespace GD.BBPH.APP.DANHMUC
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_MADONGMAY.Text = _RowViewSelect[DmdongmayFields.Madm.Name].ToString();
                 txt_TENDONGMAY.Text = _RowViewSelect[DmdongmayFields.Tendongmay.Name].ToString();
+
+                txt_MACONGDOAN.Text = _RowViewSelect[DmdongmayFields.Macd.Name].ToString();
+                txt_MACONGDOAN_Validating(new object(), new CancelEventArgs());
             }
             else
+            {
                 txt_TENDONGMAY.Text = _RowViewSelect[DmdongmayFields.Tendongmay.Name].ToString();
+
+                txt_MACONGDOAN.Text = _RowViewSelect[DmdongmayFields.Macd.Name].ToString();
+                txt_MACONGDOAN_Validating(new object(), new CancelEventArgs());
+            }
         }
         private DataRow checkmaDongmay(string masieuthi, DataTable dt)
         {
@@ -383,9 +445,10 @@ namespace GD.BBPH.APP.DANHMUC
             catch { return null; }
         }
 
-        private void txt_CONGDOAN_Validating(object sender, CancelEventArgs e)
+        private void txt_MACONGDOAN_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
+            txt_TENCONGDOAN.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MACONGDOAN.Text.Trim()) || DT_DMCONGDOAN == null || DT_DMCONGDOAN.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MACONGDOAN.Text.Trim().ToUpper();
             _RowViewSelect = checkmaCongdoan(Str_MASIEUTHI, DT_DMCONGDOAN);
@@ -502,6 +565,41 @@ namespace GD.BBPH.APP.DANHMUC
             }
         }
         #endregion
+
+        private string GetMacongsuat(string m_Tiento)
+        {
+            long m_sohieu = 0, m_newsohieu = 0;
+
+            DataTable _table = new CongsuatmayManager().SelectAllRDT();
+            if (_table.Rows.Count == 0) return m_Tiento + "001";
+            DataRow[] _row = _table.Select();
+
+            int max_sohieu = 0;
+            string alphaPart = "";
+            for (int i = 0; i < _row.Length; i++)
+            {
+                int _sohieu = 0;
+                // alphaPart = "";
+                // kiem tra chuoi co ca so va chu 
+                string m_sohieu_chucai_so = _row[i][CongsuatmayFields.Macongsuat.Name].ToString();
+                Regex re = new Regex(@"([a-zA-Z]+)(\d+)");
+                Match result = re.Match(m_sohieu_chucai_so);
+                if (result.Length == 0) int.TryParse(_row[i][CongsuatmayFields.Macongsuat.Name].ToString(), out _sohieu);
+                else
+                {
+                    alphaPart = result.Groups[1].Value;
+                    string numberPart = result.Groups[2].Value;
+                    int.TryParse(numberPart, out _sohieu);
+                }
+                max_sohieu = (max_sohieu < _sohieu) ? _sohieu : max_sohieu;
+            }
+            max_sohieu++;
+            if (max_sohieu == 1) alphaPart = m_Tiento;
+            m_sohieu = (m_newsohieu > max_sohieu) ? m_newsohieu : max_sohieu;
+            m_newsohieu = m_sohieu;
+
+            return (alphaPart + m_newsohieu.ToString().PadLeft(3, '0'));
+        }
 
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
