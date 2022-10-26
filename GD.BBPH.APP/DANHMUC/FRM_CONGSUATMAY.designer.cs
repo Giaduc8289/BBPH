@@ -34,6 +34,12 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.btn_CHONCAUTRUC = new GD.BBPH.CONTROL.BUTTON();
+            this.label16 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_MACAUTRUCINS = new GD.BBPH.CONTROL.TEXTBOX();
+            this.btn_CHONKHACH = new GD.BBPH.CONTROL.BUTTON();
+            this.label14 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_MAKHACHS = new GD.BBPH.CONTROL.TEXTBOX();
             this.btn_SAOCHEP = new GD.BBPH.CONTROL.BUTTON();
             this.txt_TOCDO = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.btn_CHONQCTHANHPHAM = new GD.BBPH.CONTROL.BUTTON();
@@ -99,8 +105,8 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(972, 602), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(612, 602), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(1096, 742), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(611, 742), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -112,7 +118,7 @@
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(972, 602);
+            this.uiPanel0.Size = new System.Drawing.Size(1096, 742);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Danh sách";
             this.uiPanel0.Resize += new System.EventHandler(this.uiPanel0_Resize);
@@ -121,7 +127,7 @@
             // 
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(966, 578);
+            this.uiPanel0Container.Size = new System.Drawing.Size(1090, 718);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // uiPanel1
@@ -129,14 +135,20 @@
             this.uiPanel1.CloseButtonVisible = Janus.Windows.UI.InheritableBoolean.False;
             this.uiPanel1.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
-            this.uiPanel1.Location = new System.Drawing.Point(975, 3);
+            this.uiPanel1.Location = new System.Drawing.Point(1099, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(612, 602);
+            this.uiPanel1.Size = new System.Drawing.Size(611, 742);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.btn_CHONCAUTRUC);
+            this.uiPanel1Container.Controls.Add(this.label16);
+            this.uiPanel1Container.Controls.Add(this.txt_MACAUTRUCINS);
+            this.uiPanel1Container.Controls.Add(this.btn_CHONKHACH);
+            this.uiPanel1Container.Controls.Add(this.label14);
+            this.uiPanel1Container.Controls.Add(this.txt_MAKHACHS);
             this.uiPanel1Container.Controls.Add(this.btn_SAOCHEP);
             this.uiPanel1Container.Controls.Add(this.txt_TOCDO);
             this.uiPanel1Container.Controls.Add(this.btn_CHONQCTHANHPHAM);
@@ -185,8 +197,81 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(610, 578);
+            this.uiPanel1Container.Size = new System.Drawing.Size(609, 718);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // btn_CHONCAUTRUC
+            // 
+            this.btn_CHONCAUTRUC.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_CHONCAUTRUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_CHONCAUTRUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_CHONCAUTRUC.Location = new System.Drawing.Point(513, 312);
+            this.btn_CHONCAUTRUC.Name = "btn_CHONCAUTRUC";
+            this.btn_CHONCAUTRUC.Size = new System.Drawing.Size(80, 23);
+            this.btn_CHONCAUTRUC.TabIndex = 16;
+            this.btn_CHONCAUTRUC.Text = "Chọn cấu trúc";
+            this.btn_CHONCAUTRUC.UseVisualStyleBackColor = true;
+            this.btn_CHONCAUTRUC.Click += new System.EventHandler(this.btn_CHONCAUTRUC_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(15, 318);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(47, 13);
+            this.label16.TabIndex = 177;
+            this.label16.Text = "Cấu trúc";
+            // 
+            // txt_MACAUTRUCINS
+            // 
+            this.txt_MACAUTRUCINS.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MACAUTRUCINS.BannerText = null;
+            this.txt_MACAUTRUCINS.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_MACAUTRUCINS.FormNametoShow = "";
+            this.txt_MACAUTRUCINS.Is_DateTime = false;
+            this.txt_MACAUTRUCINS.IsShowForm = false;
+            this.txt_MACAUTRUCINS.Location = new System.Drawing.Point(92, 314);
+            this.txt_MACAUTRUCINS.Name = "txt_MACAUTRUCINS";
+            this.txt_MACAUTRUCINS.Regular_Expression = null;
+            this.txt_MACAUTRUCINS.Size = new System.Drawing.Size(408, 20);
+            this.txt_MACAUTRUCINS.TabIndex = 15;
+            // 
+            // btn_CHONKHACH
+            // 
+            this.btn_CHONKHACH.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_CHONKHACH.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_CHONKHACH.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_CHONKHACH.Location = new System.Drawing.Point(513, 532);
+            this.btn_CHONKHACH.Name = "btn_CHONKHACH";
+            this.btn_CHONKHACH.Size = new System.Drawing.Size(80, 23);
+            this.btn_CHONKHACH.TabIndex = 22;
+            this.btn_CHONKHACH.Text = "Chọn khách";
+            this.btn_CHONKHACH.UseVisualStyleBackColor = true;
+            this.btn_CHONKHACH.Click += new System.EventHandler(this.btn_CHONKHACH_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(15, 534);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 13);
+            this.label14.TabIndex = 174;
+            this.label14.Text = "Khách hàng";
+            // 
+            // txt_MAKHACHS
+            // 
+            this.txt_MAKHACHS.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MAKHACHS.BannerText = null;
+            this.txt_MAKHACHS.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_MAKHACHS.FormNametoShow = "";
+            this.txt_MAKHACHS.Is_DateTime = false;
+            this.txt_MAKHACHS.IsShowForm = false;
+            this.txt_MAKHACHS.Location = new System.Drawing.Point(92, 534);
+            this.txt_MAKHACHS.Multiline = true;
+            this.txt_MAKHACHS.Name = "txt_MAKHACHS";
+            this.txt_MAKHACHS.Regular_Expression = null;
+            this.txt_MAKHACHS.Size = new System.Drawing.Size(408, 82);
+            this.txt_MAKHACHS.TabIndex = 21;
             // 
             // btn_SAOCHEP
             // 
@@ -195,10 +280,10 @@
             this.btn_SAOCHEP.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SAOCHEP.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
             this.btn_SAOCHEP.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_SAOCHEP.Location = new System.Drawing.Point(425, 538);
+            this.btn_SAOCHEP.Location = new System.Drawing.Point(425, 676);
             this.btn_SAOCHEP.Name = "btn_SAOCHEP";
             this.btn_SAOCHEP.Size = new System.Drawing.Size(75, 23);
-            this.btn_SAOCHEP.TabIndex = 171;
+            this.btn_SAOCHEP.TabIndex = 29;
             this.btn_SAOCHEP.Text = "Sao &chép";
             this.btn_SAOCHEP.UseVisualStyleBackColor = true;
             this.btn_SAOCHEP.Click += new System.EventHandler(this.btn_SAOCHEP_Click);
@@ -210,12 +295,12 @@
             this.txt_TOCDO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_TOCDO.Giatrithapphan = 0;
             this.txt_TOCDO.IsSoNguyen = false;
-            this.txt_TOCDO.Location = new System.Drawing.Point(92, 497);
+            this.txt_TOCDO.Location = new System.Drawing.Point(92, 629);
             this.txt_TOCDO.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_TOCDO.Name = "txt_TOCDO";
             this.txt_TOCDO.Regular_Expression = "";
             this.txt_TOCDO.Size = new System.Drawing.Size(109, 20);
-            this.txt_TOCDO.TabIndex = 19;
+            this.txt_TOCDO.TabIndex = 23;
             this.txt_TOCDO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn_CHONQCTHANHPHAM
@@ -223,10 +308,10 @@
             this.btn_CHONQCTHANHPHAM.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_CHONQCTHANHPHAM.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_CHONQCTHANHPHAM.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_CHONQCTHANHPHAM.Location = new System.Drawing.Point(513, 402);
+            this.btn_CHONQCTHANHPHAM.Location = new System.Drawing.Point(513, 436);
             this.btn_CHONQCTHANHPHAM.Name = "btn_CHONQCTHANHPHAM";
             this.btn_CHONQCTHANHPHAM.Size = new System.Drawing.Size(80, 23);
-            this.btn_CHONQCTHANHPHAM.TabIndex = 18;
+            this.btn_CHONQCTHANHPHAM.TabIndex = 20;
             this.btn_CHONQCTHANHPHAM.Text = "Chọn QC";
             this.btn_CHONQCTHANHPHAM.UseVisualStyleBackColor = true;
             this.btn_CHONQCTHANHPHAM.Click += new System.EventHandler(this.btn_CHONQCTHANHPHAM_Click);
@@ -236,10 +321,10 @@
             this.btn_CHONLOAIMANG.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_CHONLOAIMANG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_CHONLOAIMANG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_CHONLOAIMANG.Location = new System.Drawing.Point(513, 312);
+            this.btn_CHONLOAIMANG.Location = new System.Drawing.Point(513, 346);
             this.btn_CHONLOAIMANG.Name = "btn_CHONLOAIMANG";
             this.btn_CHONLOAIMANG.Size = new System.Drawing.Size(80, 23);
-            this.btn_CHONLOAIMANG.TabIndex = 16;
+            this.btn_CHONLOAIMANG.TabIndex = 18;
             this.btn_CHONLOAIMANG.Text = "Chọn LM";
             this.btn_CHONLOAIMANG.UseVisualStyleBackColor = true;
             this.btn_CHONLOAIMANG.Click += new System.EventHandler(this.btn_CHONLOAIMANG_Click);
@@ -273,7 +358,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 404);
+            this.label15.Location = new System.Drawing.Point(15, 438);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(70, 13);
             this.label15.TabIndex = 151;
@@ -282,7 +367,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 314);
+            this.label13.Location = new System.Drawing.Point(15, 348);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(56, 13);
             this.label13.TabIndex = 150;
@@ -395,12 +480,12 @@
             this.txt_MAQCTHANHPHAM.FormNametoShow = "";
             this.txt_MAQCTHANHPHAM.Is_DateTime = false;
             this.txt_MAQCTHANHPHAM.IsShowForm = false;
-            this.txt_MAQCTHANHPHAM.Location = new System.Drawing.Point(92, 404);
+            this.txt_MAQCTHANHPHAM.Location = new System.Drawing.Point(92, 438);
             this.txt_MAQCTHANHPHAM.Multiline = true;
             this.txt_MAQCTHANHPHAM.Name = "txt_MAQCTHANHPHAM";
             this.txt_MAQCTHANHPHAM.Regular_Expression = null;
             this.txt_MAQCTHANHPHAM.Size = new System.Drawing.Size(408, 82);
-            this.txt_MAQCTHANHPHAM.TabIndex = 17;
+            this.txt_MAQCTHANHPHAM.TabIndex = 19;
             // 
             // txt_MALOAIMANG
             // 
@@ -410,12 +495,12 @@
             this.txt_MALOAIMANG.FormNametoShow = "";
             this.txt_MALOAIMANG.Is_DateTime = false;
             this.txt_MALOAIMANG.IsShowForm = false;
-            this.txt_MALOAIMANG.Location = new System.Drawing.Point(92, 314);
+            this.txt_MALOAIMANG.Location = new System.Drawing.Point(92, 348);
             this.txt_MALOAIMANG.Multiline = true;
             this.txt_MALOAIMANG.Name = "txt_MALOAIMANG";
             this.txt_MALOAIMANG.Regular_Expression = null;
             this.txt_MALOAIMANG.Size = new System.Drawing.Size(408, 75);
-            this.txt_MALOAIMANG.TabIndex = 15;
+            this.txt_MALOAIMANG.TabIndex = 17;
             // 
             // txt_SOHINHMA
             // 
@@ -628,7 +713,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 500);
+            this.label1.Location = new System.Drawing.Point(15, 632);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 122;
@@ -639,10 +724,10 @@
             this.btn_Thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_Thoat.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(506, 538);
+            this.btn_Thoat.Location = new System.Drawing.Point(506, 676);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 25;
+            this.btn_Thoat.TabIndex = 30;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -652,10 +737,10 @@
             this.btn_KHOIPHUC.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_KHOIPHUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(178, 538);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(178, 676);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 22;
+            this.btn_KHOIPHUC.TabIndex = 26;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -665,10 +750,10 @@
             this.btn_LUULAI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_LUULAI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(18, 538);
+            this.btn_LUULAI.Location = new System.Drawing.Point(18, 676);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LUULAI.TabIndex = 20;
+            this.btn_LUULAI.TabIndex = 24;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
             this.btn_LUULAI.Click += new System.EventHandler(this.btn_LUULAI_Click);
@@ -678,10 +763,10 @@
             this.btn_XOA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_XOA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(97, 538);
+            this.btn_XOA.Location = new System.Drawing.Point(97, 676);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 21;
+            this.btn_XOA.TabIndex = 25;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -691,10 +776,10 @@
             this.btn_THEMMOI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_THEMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(343, 538);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(343, 676);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 24;
+            this.btn_THEMMOI.TabIndex = 28;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -704,10 +789,10 @@
             this.btn_SUA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_SUA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(262, 538);
+            this.btn_SUA.Location = new System.Drawing.Point(262, 676);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 23;
+            this.btn_SUA.TabIndex = 27;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
@@ -762,7 +847,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1590, 608);
+            this.ClientSize = new System.Drawing.Size(1713, 748);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -833,5 +918,11 @@
         private CONTROL.BUTTON btn_CHONSOMAU;
         private CONTROL.TEXTBOXNUMBER txt_TOCDO;
         private CONTROL.BUTTON btn_SAOCHEP;
+        private CONTROL.BUTTON btn_CHONCAUTRUC;
+        private CONTROL.LABEL label16;
+        private CONTROL.TEXTBOX txt_MACAUTRUCINS;
+        private CONTROL.BUTTON btn_CHONKHACH;
+        private CONTROL.LABEL label14;
+        private CONTROL.TEXTBOX txt_MAKHACHS;
     }
 }

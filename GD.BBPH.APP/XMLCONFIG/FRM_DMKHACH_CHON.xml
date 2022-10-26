@@ -29,7 +29,16 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
-  
+
+  <viewgrid>
+    <value>1</value>
+    <name>C</name>
+    <headerText>Chọn</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>60</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Makhach</name>

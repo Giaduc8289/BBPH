@@ -148,6 +148,15 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Macautrucins</name>
+    <headerText>Cấu trúc</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Maloaimang</name>
     <headerText>Loại màng</headerText>
     <BackColor>0</BackColor>
@@ -159,6 +168,15 @@
     <value>1</value>
     <name>Maqcthanhpham</name>
     <headerText>Quy cách TP</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Makhachs</name>
+    <headerText>Khách</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>

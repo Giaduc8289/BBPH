@@ -15,6 +15,8 @@ BEGIN
 			@v_Sohinhma				Nvarchar(50),
 			@v_Maloaimang			Nvarchar(50),
 			@v_Maqcthanhpham		Nvarchar(50),
+			@v_Macautrucin			Nvarchar(50),
+			@v_Makhach				Nvarchar(50),
 			@v_Tocdo			Decimal(20,3)
 
 	Select @v_Madongmay=Madm From dmmay Where Mamay=@Mamay
@@ -32,6 +34,7 @@ BEGIN
 	Begin
 		Select @v_Doday=Doday, @v_Rong=Rong, @v_Dai=Dai
 			, @v_Somauma=Somauma, @v_Sohinhma=Sohinhma, @v_Maqcthanhpham=Maqcthanhpham
+			, @v_Macautrucin=Cautrucin, @v_Makhach=Makhach
 		From dmhang Where Masp=@Masanpham
 		
 		Select @v_Tocdo=Tocdo
@@ -44,6 +47,8 @@ BEGIN
 			AND	(CHARINDEX(@v_Sohinhma+',',Sohinhma)>0 OR ISNULL(Sohinhma,'') = '')
 			AND	(CHARINDEX(@v_Somauma+',',Somauma)>0 OR ISNULL(Somauma,'') = '')
 			AND (CHARINDEX(@v_Maqcthanhpham+',',Maqcthanhpham)>0 OR ISNULL(Maqcthanhpham,'') = '')			
+			AND	(CHARINDEX(@v_Macautrucin+',',Macautrucins)>0 OR ISNULL(Macautrucins,'') = '')
+			AND (CHARINDEX(@v_Makhach+',',Makhachs)>0 OR ISNULL(Makhachs,'') = '')			
 	End
 
 	RETURN ISNULL(@v_Tocdo,0);
