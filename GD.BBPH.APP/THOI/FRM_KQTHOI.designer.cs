@@ -97,7 +97,7 @@
             // 
             this.uiPanelManager1.BeginPanelInfo();
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(284, 527), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(946, 527), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(772, 527), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -128,7 +128,7 @@
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(287, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(946, 527);
+            this.uiPanel1.Size = new System.Drawing.Size(772, 527);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
@@ -179,7 +179,7 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(944, 503);
+            this.uiPanel1Container.Size = new System.Drawing.Size(770, 503);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // txt_THOIGIANSUCO
@@ -196,7 +196,7 @@
             this.txt_THOIGIANSUCO.Size = new System.Drawing.Size(93, 20);
             this.txt_THOIGIANSUCO.TabIndex = 15;
             this.txt_THOIGIANSUCO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_THOIGIANSUCO.TextChanged += new System.EventHandler(this.txt_THOIGIAN_TextChanged);
+            this.txt_THOIGIANSUCO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // txt_CHATLUONG
             // 
@@ -246,7 +246,7 @@
             this.txt_THOIGIANCHUANBI.Size = new System.Drawing.Size(93, 20);
             this.txt_THOIGIANCHUANBI.TabIndex = 14;
             this.txt_THOIGIANCHUANBI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_THOIGIANCHUANBI.TextChanged += new System.EventHandler(this.txt_THOIGIAN_TextChanged);
+            this.txt_THOIGIANCHUANBI.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // txt_PHELIEUTHUCTE
             // 
@@ -301,7 +301,7 @@
             this.label19.Location = new System.Drawing.Point(0, 64);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(944, 2);
+            this.label19.Size = new System.Drawing.Size(770, 2);
             this.label19.TabIndex = 248;
             // 
             // btn_XOADONG
@@ -385,7 +385,7 @@
             this.pne_CHITIET.Location = new System.Drawing.Point(8, 267);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(928, 177);
+            this.pne_CHITIET.Size = new System.Drawing.Size(754, 177);
             this.pne_CHITIET.TabIndex = 20;
             // 
             // label14
@@ -419,6 +419,7 @@
             this.txt_THOIGIANKETTHUC.Regular_Expression = null;
             this.txt_THOIGIANKETTHUC.Size = new System.Drawing.Size(93, 20);
             this.txt_THOIGIANKETTHUC.TabIndex = 13;
+            this.txt_THOIGIANKETTHUC.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label12
             // 
@@ -442,6 +443,7 @@
             this.txt_THOIGIANBATDAU.Regular_Expression = null;
             this.txt_THOIGIANBATDAU.Size = new System.Drawing.Size(93, 20);
             this.txt_THOIGIANBATDAU.TabIndex = 12;
+            this.txt_THOIGIANBATDAU.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label13
             // 
@@ -725,10 +727,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1236, 533);
+            this.ClientSize = new System.Drawing.Size(1062, 533);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_KQTHOI";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_KQTHOI_FormClosing);

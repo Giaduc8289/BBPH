@@ -649,13 +649,13 @@ namespace GD.BBPH.APP.THOI
                 decimal _timerun = 0, _tocdo = 0, _sokg = 0;
                 _sokg = LIB.ConvertString.NumbertoDB(txt_SOKG.Text.Trim());
                 _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MAMANG.Text);
-                _timerun = Convert.ToDecimal(Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text))
+                _timerun = (Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).Minutes
                     - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
-                txt_NANGSUAT.Text = (_sokg / _tocdo / _timerun).ToString();
+                txt_NANGSUAT.Text = decimal.Round(_sokg / _tocdo / _timerun * 60, 3).ToString();
             }
             catch { }
         }
-        private void txt_THOIGIAN_TextChanged(object sender, EventArgs e)
+        private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
         {
             Tinhnangsuat();
         }
