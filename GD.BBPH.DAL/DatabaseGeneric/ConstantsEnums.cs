@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 26, 2022 12:54:34 AM
+// Code is generated on: Wednesday, October 26, 2022 11:01:53 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1535,8 +1535,6 @@ namespace GD.BBPH.DAL
 		Thoigianbatdau,
 		///<summary>Thoigianketthuc. </summary>
 		Thoigianketthuc,
-		///<summary>Thoigianchuanbi. </summary>
-		Thoigianchuanbi,
 		///<summary>Thoigianhacuon. </summary>
 		Thoigianhacuon,
 		///<summary>Thoigiancatdau. </summary>
@@ -1569,6 +1567,8 @@ namespace GD.BBPH.DAL
 		Tencongnhan,
 		///<summary>Nangsuat. </summary>
 		Nangsuat,
+		///<summary>Thoigiandauca. </summary>
+		Thoigiandauca,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -2399,7 +2399,6 @@ namespace GD.BBPH.DAL
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START CustomUserConstants
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 	#endregion
 
 	#region Included code

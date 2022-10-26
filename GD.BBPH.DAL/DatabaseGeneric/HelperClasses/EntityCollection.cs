@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 26, 2022 12:54:34 AM
+// Code is generated on: Wednesday, October 26, 2022 11:01:53 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -27,7 +27,6 @@ namespace GD.BBPH.DAL.HelperClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 
 	/// <summary>
 	/// EntityCollection implementation which is used for backwards compatibility and for design time databinding. 
@@ -59,7 +58,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCollectionCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 		
 		#region Included Code
@@ -122,7 +120,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCollectionCodeGeneric
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 		
 		#region Included Code

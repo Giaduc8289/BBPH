@@ -219,7 +219,7 @@ namespace GD.BBPH.APP.TUA
 
             r_Detail[KetquatuaFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text.Trim(); 
             r_Detail[KetquatuaFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text.Trim(); 
-            r_Detail[KetquatuaFields.Thoigianchuanbi.Name] = txt_THOIGIANCHUANBI.Text.Trim(); 
+            //r_Detail[KetquatuaFields.Thoigianchuanbi.Name] = txt_THOIGIANCHUANBI.Text.Trim(); 
             r_Detail[KetquatuaFields.Thoigianhacuon.Name] = txt_THOIGIANHACUON.Text.Trim(); 
             r_Detail[KetquatuaFields.Thoigiancatdau.Name] = txt_THOIGIANCATDAU.Text.Trim();
             r_Detail[KetquatuaFields.Thoigiandoilenh.Name] = txt_THOIGIANDOILENH.Text.Trim();
@@ -343,8 +343,8 @@ namespace GD.BBPH.APP.TUA
                 catch { }
                 try { _KetquatuaEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquatuaFields.Thoigianketthuc.Name].ToString()); }
                 catch { }
-                try { _KetquatuaEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigianchuanbi.Name].ToString()); }
-                catch { }
+                //try { _KetquatuaEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigianchuanbi.Name].ToString()); }
+                //catch { }
                 try { _KetquatuaEntity.Thoigianhacuon = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigianhacuon.Name].ToString()); }
                 catch { }
                 try { _KetquatuaEntity.Thoigiancatdau = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigiancatdau.Name].ToString()); }
