@@ -392,11 +392,15 @@ namespace GD.BBPH.APP.KHO
             BS_NHAPSANPHAM.Position = DT_NHAPSANPHAM.Rows.Count;
             MAHIEU_PK = "";
             txt_NGAY.Focus();
+            txt_MAKHO.Text = txt_TENKHO.Text = txt_SOLUONG.Text = txt_SOKG.Text = txt_SOM.Text = txt_MASP.Text = txt_TENSP.Text = txt_MALYDO.Text = txt_TENLYDO.Text = txt_LENHSX.Text = txt_SOHD.Text = string.Empty;
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENKHO, txt_TENSP }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_NHAPSANPHAM.Enabled = false;
+
+            //---tu dong dien tham so
+            txt_NGAY.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {

@@ -339,11 +339,15 @@ namespace GD.BBPH.APP.KHO
             GRID_SODUNGUYENLIEU_CHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             MAHIEU_PK = "";
             txt_NGAYNHAP.Focus();
+            txt_MAKHO.Text = txt_TENKHO.Text = txt_SOLUONG.Text = txt_DONVITINH.Text = txt_MANGUYENLIEU.Text = txt_TENNGUYENLIEU.Text = string.Empty;
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_SODUNGUYENLIEU.Enabled = false;
+
+            //---tu dong dien tham so
+            txt_NGAYNHAP.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {

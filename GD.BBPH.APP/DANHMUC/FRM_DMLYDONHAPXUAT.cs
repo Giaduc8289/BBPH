@@ -293,6 +293,20 @@ namespace GD.BBPH.APP.DANHMUC
 
         #endregion
 
+        #region Shortcut Key
+        private void txt_MANHOM_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_LYDONHAPXUAT frm_Dm = new FRM_LYDONHAPXUAT();
+                frm_Dm.Text = "Danh sách nhóm lý do nhập xuất";
+                frm_Dm.ShowDialog();
+                DT_DMLYDONHAPXUAT = new DmlydonhapxuatManager().SelectAllRDT();
+            }
+        }
+     
+        #endregion
+
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)

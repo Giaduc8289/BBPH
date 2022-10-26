@@ -413,7 +413,13 @@ namespace GD.BBPH.APP.DANHMUC
         #region Shortcut Key
         private void txt_MAKHACH_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMKHACH frm_Dm = new FRM_DMKHACH();
+                frm_Dm.Text = "Danh sách khách hàng";
+                frm_Dm.ShowDialog();
+                DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+            }
         }
         private void txt_MALOAIMANG_KeyDown(object sender, KeyEventArgs e)
         {

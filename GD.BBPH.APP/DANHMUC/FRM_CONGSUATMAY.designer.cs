@@ -525,6 +525,7 @@
             this.txt_MACONGDOAN.Regular_Expression = null;
             this.txt_MACONGDOAN.Size = new System.Drawing.Size(109, 20);
             this.txt_MACONGDOAN.TabIndex = 4;
+            this.txt_MACONGDOAN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MACONGDOAN_KeyDown);
             this.txt_MACONGDOAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_CONGDOAN_Validating);
             // 
             // txt_TENCONGDOAN
@@ -556,6 +557,7 @@
             this.txt_MAMAY.Regular_Expression = null;
             this.txt_MAMAY.Size = new System.Drawing.Size(109, 20);
             this.txt_MAMAY.TabIndex = 2;
+            this.txt_MAMAY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAMAY_KeyDown);
             this.txt_MAMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMAY_Validating);
             // 
             // txt_TENMAY
@@ -587,6 +589,7 @@
             this.txt_MADONGMAY.Regular_Expression = null;
             this.txt_MADONGMAY.Size = new System.Drawing.Size(109, 20);
             this.txt_MADONGMAY.TabIndex = 3;
+            this.txt_MADONGMAY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MADONGMAY_KeyDown);
             this.txt_MADONGMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MADONGMAY_Validating);
             // 
             // txt_TENDONGMAY

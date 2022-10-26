@@ -174,12 +174,14 @@ namespace GD.BBPH.APP.DANHMUC
             DT_DINHMUCTHOIGIAN.Rows.Add(r_Insert);
             BS_DINHMUCTHOIGIAN.Position = DT_DINHMUCTHOIGIAN.Rows.Count;
             MAHIEU_PK = "";
+            txt_MAMAY.Text = txt_TENMAY.Text = txt_MADONGMAY.Text = txt_TENDONGMAY.Text = txt_MACONGDOAN.Text = txt_TENCONGDOAN.Text = string.Empty;
             txt_MADINHMUC.Focus();
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_DINHMUCTHOIGIAN.Enabled = false;
             btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = true;
+           
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {
@@ -484,6 +486,39 @@ namespace GD.BBPH.APP.DANHMUC
             txt_MAQCTHANHPHAM.Text = str;
         }
 
+        #endregion
+
+        #region Shortcut Key
+        private void txt_MAMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMMAY frm_Dm = new FRM_DMMAY();
+                frm_Dm.Text = "Danh sách máy";
+                frm_Dm.ShowDialog();
+                DT_DMMAY = new DmmayManager().SelectAllRDT();
+            }
+        }
+        private void txt_MADONGMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMDONGMAY frm_Dm = new FRM_DMDONGMAY();
+                frm_Dm.Text = "Danh mục dòng máy";
+                frm_Dm.ShowDialog();
+                DT_DMDONGMAY = new DmdongmayManager().SelectAllRDT();
+            }
+        }
+        private void txt_MACONGDOAN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCONGDOAN frm_Dm = new FRM_DMCONGDOAN();
+                frm_Dm.Text = "Danh mục công đoạn";
+                frm_Dm.ShowDialog();
+                DT_DMCONGDOAN = new DmcongdoanManager().SelectAllRDT();
+            }
+        }
         #endregion
 
         private void uiPanel0_Resize(object sender, EventArgs e)

@@ -171,6 +171,7 @@ namespace GD.BBPH.APP.DANHMUC
             BS_CONGSUATMAY.Position = DT_CONGSUATMAY.Rows.Count;
             MAHIEU_PK = "";
             txt_MACONGSUAT.Focus();
+            txt_MAMAY.Text = txt_TENMAY.Text = txt_MADONGMAY.Text = txt_TENDONGMAY.Text = txt_MACONGDOAN.Text = txt_TENCONGDOAN.Text = string.Empty;
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
@@ -467,6 +468,39 @@ namespace GD.BBPH.APP.DANHMUC
             txt_MAQCTHANHPHAM.Text = str;
         }
 
+        #endregion
+
+        #region Shortcut Key
+        private void txt_MAMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMMAY frm_Dm = new FRM_DMMAY();
+                frm_Dm.Text = "Danh sách máy";
+                frm_Dm.ShowDialog();
+                DT_DMMAY = new DmmayManager().SelectAllRDT();
+            }
+        }
+        private void txt_MADONGMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMDONGMAY frm_Dm = new FRM_DMDONGMAY();
+                frm_Dm.Text = "Danh mục dòng máy";
+                frm_Dm.ShowDialog();
+                DT_DMDONGMAY = new DmdongmayManager().SelectAllRDT();
+            }
+        }
+        private void txt_MACONGDOAN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCONGDOAN frm_Dm = new FRM_DMCONGDOAN();
+                frm_Dm.Text = "Danh mục công đoạn";
+                frm_Dm.ShowDialog();
+                DT_DMCONGDOAN = new DmcongdoanManager().SelectAllRDT();
+            }
+        }
         #endregion
 
         private void uiPanel0_Resize(object sender, EventArgs e)
