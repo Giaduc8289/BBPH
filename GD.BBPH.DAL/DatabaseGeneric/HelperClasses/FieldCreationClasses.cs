@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 26, 2022 11:01:55 AM
+// Code is generated on: Wednesday, October 26, 2022 3:31:07 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -291,6 +291,16 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Maqcthanhpham
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Maqcthanhpham);}
+		}
+		/// <summary>Creates a new CongsuatmayEntity.Macautrucins field instance</summary>
+		public static EntityField2 Macautrucins
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Macautrucins);}
+		}
+		/// <summary>Creates a new CongsuatmayEntity.Makhachs field instance</summary>
+		public static EntityField2 Makhachs
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Makhachs);}
 		}
 	}
 
@@ -1201,6 +1211,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Doday
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Doday);}
+		}
+		/// <summary>Creates a new DmhangEntity.Macautrucin field instance</summary>
+		public static EntityField2 Macautrucin
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Macautrucin);}
 		}
 	}
 
