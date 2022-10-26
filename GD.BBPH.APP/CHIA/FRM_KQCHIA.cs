@@ -418,7 +418,7 @@ namespace GD.BBPH.APP.CHIA
             MAHIEU_PK = "";
             txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY, txt_LENH, txt_MACONGNHAN, txt_TENCONGNHAN, txt_MASANPHAM, txt_TENSANPHAM, txt_SOMVAO, txt_SOKGVAO, txt_DAURAGHEP, txt_SOCON, txt_THOIGIANCATDAU, txt_THOIGIANBATDAU, txt_THOIGIANKETTHUC, txt_THOIGIANDOILENH, txt_SOLANHACUON, txt_THOIGIANLENCUON, txt_THOIGIANHACUON, txt_THOIGIANSUCO, txt_PHEIN, txt_PHEGHEP, txt_PHECHIA, txt_PHESANXUAT }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_KQCHIA.Enabled = false;
@@ -534,6 +534,11 @@ namespace GD.BBPH.APP.CHIA
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
 
@@ -670,6 +675,28 @@ namespace GD.BBPH.APP.CHIA
                 return dt.Select(DmcongnhanFields.Macn.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
+        }
+        #endregion
+
+        #region  Text change
+        private void Tinhnangsuat()
+        {
+            try
+            {
+                decimal _timerun = 0, _tocdo = 0, _somet = 0, _nangsuat = 0;
+                _somet = LIB.ConvertString.NumbertoDB(txt_SOMVAO.Text.Trim());
+                _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text);
+                _timerun = Convert.ToDecimal((Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).TotalMinutes)
+                    - (Convert.ToDecimal(txt_THOIGIANLENCUON.Text.Trim()) + Convert.ToDecimal(txt_THOIGIANHACUON.Text.Trim()) + Convert.ToDecimal(txt_THOIGIANCATDAU.Text.Trim()) + Convert.ToDecimal(txt_THOIGIANDOILENH.Text.Trim()))
+                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
+                _nangsuat = _somet / _tocdo / _timerun * 100;
+                txt_NANGSUAT.Text = Math.Round(_nangsuat).ToString();
+            }
+            catch { }
+        }
+        private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
+        {
+            Tinhnangsuat();
         }
         #endregion
 
