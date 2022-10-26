@@ -89,7 +89,7 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_CHATLUONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_TILESAIHONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_NANGSUAT = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.label24 = new GD.BBPH.CONTROL.LABEL();
             this.label25 = new GD.BBPH.CONTROL.LABEL();
@@ -150,7 +150,7 @@
             // 
             // uiPanel1Container
             // 
-            this.uiPanel1Container.Controls.Add(this.txt_CHATLUONG);
+            this.uiPanel1Container.Controls.Add(this.txt_TILESAIHONG);
             this.uiPanel1Container.Controls.Add(this.txt_NANGSUAT);
             this.uiPanel1Container.Controls.Add(this.label24);
             this.uiPanel1Container.Controls.Add(this.label25);
@@ -453,6 +453,7 @@
             this.txt_THOIGIANSUCO.Regular_Expression = null;
             this.txt_THOIGIANSUCO.Size = new System.Drawing.Size(93, 20);
             this.txt_THOIGIANSUCO.TabIndex = 22;
+            this.txt_THOIGIANSUCO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label14
             // 
@@ -462,6 +463,7 @@
             this.label14.Size = new System.Drawing.Size(66, 13);
             this.label14.TabIndex = 189;
             this.label14.Text = "T.gian sự cố";
+            this.label14.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // txt_THOIGIANCHUANBI
             // 
@@ -476,6 +478,7 @@
             this.txt_THOIGIANCHUANBI.Regular_Expression = null;
             this.txt_THOIGIANCHUANBI.Size = new System.Drawing.Size(93, 20);
             this.txt_THOIGIANCHUANBI.TabIndex = 21;
+            this.txt_THOIGIANCHUANBI.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label15
             // 
@@ -499,6 +502,7 @@
             this.txt_THOIGIANKETTHUC.Regular_Expression = null;
             this.txt_THOIGIANKETTHUC.Size = new System.Drawing.Size(93, 20);
             this.txt_THOIGIANKETTHUC.TabIndex = 20;
+            this.txt_THOIGIANKETTHUC.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label12
             // 
@@ -509,6 +513,7 @@
             this.label12.TabIndex = 185;
             this.label12.Text = "T.gian kết thúc";
             this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.label12.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // txt_THOIGIANBATDAU
             // 
@@ -523,6 +528,7 @@
             this.txt_THOIGIANBATDAU.Regular_Expression = null;
             this.txt_THOIGIANBATDAU.Size = new System.Drawing.Size(93, 20);
             this.txt_THOIGIANBATDAU.TabIndex = 19;
+            this.txt_THOIGIANBATDAU.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label13
             // 
@@ -874,22 +880,22 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã máy";
             // 
-            // txt_CHATLUONG
+            // txt_TILESAIHONG
             // 
-            this.txt_CHATLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CHATLUONG.BannerText = null;
-            this.txt_CHATLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_CHATLUONG.Giatrithapphan = 0;
-            this.txt_CHATLUONG.IsSoNguyen = false;
-            this.txt_CHATLUONG.Location = new System.Drawing.Point(303, 346);
-            this.txt_CHATLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_CHATLUONG.Name = "txt_CHATLUONG";
-            this.txt_CHATLUONG.ReadOnly = true;
-            this.txt_CHATLUONG.Regular_Expression = "";
-            this.txt_CHATLUONG.Size = new System.Drawing.Size(93, 20);
-            this.txt_CHATLUONG.TabIndex = 251;
-            this.txt_CHATLUONG.TabStop = false;
-            this.txt_CHATLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_TILESAIHONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TILESAIHONG.BannerText = null;
+            this.txt_TILESAIHONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TILESAIHONG.Giatrithapphan = 0;
+            this.txt_TILESAIHONG.IsSoNguyen = false;
+            this.txt_TILESAIHONG.Location = new System.Drawing.Point(303, 346);
+            this.txt_TILESAIHONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_TILESAIHONG.Name = "txt_TILESAIHONG";
+            this.txt_TILESAIHONG.ReadOnly = true;
+            this.txt_TILESAIHONG.Regular_Expression = "";
+            this.txt_TILESAIHONG.Size = new System.Drawing.Size(93, 20);
+            this.txt_TILESAIHONG.TabIndex = 251;
+            this.txt_TILESAIHONG.TabStop = false;
+            this.txt_TILESAIHONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_NANGSUAT
             // 
@@ -924,7 +930,7 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(58, 13);
             this.label25.TabIndex = 250;
-            this.label25.Text = "Chất lượng";
+            this.label25.Text = "% sai hòng";
             // 
             // FRM_KQIN
             // 
@@ -1010,7 +1016,7 @@
         private CONTROL.BUTTON btn_XOADONG;
         private CONTROL.BUTTON btn_THEMDONG;
         private System.Windows.Forms.Label label23;
-        private CONTROL.TEXTBOXNUMBER txt_CHATLUONG;
+        private CONTROL.TEXTBOXNUMBER txt_TILESAIHONG;
         private CONTROL.TEXTBOXNUMBER txt_NANGSUAT;
         private CONTROL.LABEL label24;
         private CONTROL.LABEL label25;
