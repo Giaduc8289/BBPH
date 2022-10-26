@@ -149,11 +149,11 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_CHIEUDAIDEN.Text = _Rowview.Row[CongsuatmayFields.Chieudaiden.Name].ToString();
                     txt_SOMAUMA.Text = _Rowview.Row[CongsuatmayFields.Somauma.Name].ToString();
                     txt_SOHINHMA.Text = _Rowview.Row[CongsuatmayFields.Sohinhma.Name].ToString();
-                    txt_MACAUTRUCINS.Text = _Rowview.Row[CongsuatmayFields.Macautrucins.Name].ToString();
                     txt_MALOAIMANG.Text = _Rowview.Row[CongsuatmayFields.Maloaimang.Name].ToString();
                     txt_MAQCTHANHPHAM.Text = _Rowview.Row[CongsuatmayFields.Maqcthanhpham.Name].ToString();
-                    txt_MAKHACHS.Text = _Rowview.Row[CongsuatmayFields.Makhachs.Name].ToString();
                     txt_TOCDO.Text = _Rowview.Row[CongsuatmayFields.Tocdo.Name].ToString();
+                    txt_MACAUTRUCINS.Text = _Rowview.Row[CongsuatmayFields.Macautrucins.Name].ToString();
+                    txt_MAKHACHS.Text = _Rowview.Row[CongsuatmayFields.Makhachs.Name].ToString();
 
                     txt_MAMAY_Validating(new object(), new CancelEventArgs());
                     txt_MADONGMAY_Validating(new object(), new CancelEventArgs());
@@ -222,6 +222,8 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_MALOAIMANG.Text = drCopy[0][CongsuatmayFields.Maloaimang.Name].ToString();
                 txt_MAQCTHANHPHAM.Text = drCopy[0][CongsuatmayFields.Maqcthanhpham.Name].ToString();
                 txt_TOCDO.Text = drCopy[0][CongsuatmayFields.Tocdo.Name].ToString();
+                txt_MACAUTRUCINS.Text = drCopy[0][CongsuatmayFields.Macautrucins.Name].ToString();
+                txt_MAKHACHS.Text = drCopy[0][CongsuatmayFields.Makhachs.Name].ToString();
 
                 txt_MAMAY_Validating(new object(), new CancelEventArgs());
                 txt_MADONGMAY_Validating(new object(), new CancelEventArgs());

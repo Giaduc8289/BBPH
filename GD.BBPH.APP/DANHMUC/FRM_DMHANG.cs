@@ -279,6 +279,8 @@ namespace GD.BBPH.APP.DANHMUC
                     //txt_MACHUNGLOAI.Text = _Rowview.Row[DmhangFields.Machungloai.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmhangFields.Trongluong.Name].ToString();
                     txt_DODAY.Text = _Rowview.Row[DmhangFields.Doday.Name].ToString();
+                    txt_RONG.Text = _Rowview.Row[DmhangFields.Rong.Name].ToString();
+                    txt_DAI.Text = _Rowview.Row[DmhangFields.Dai.Name].ToString();
                     txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
                     txt_SOMAUMA.Text = _Rowview.Row[DmhangFields.Somauma.Name].ToString();
                     txt_SOHINHMA.Text = _Rowview.Row[DmhangFields.Sohinhma.Name].ToString();
@@ -297,7 +299,8 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MAQCDONGGOI.Text = _Rowview.Row[DmhangFields.Maqcdonggoi.Name].ToString();
                     txt_MAQCLOAITHUNG.Text = _Rowview.Row[DmhangFields.Maqcloaithung.Name].ToString();
 
-                    txt_MACHUNGLOAI_Validating(new object(), new CancelEventArgs());
+                    txt_MAKHACH_Validating(new object(), new CancelEventArgs());
+                    //txt_MACHUNGLOAI_Validating(new object(), new CancelEventArgs());
                     txt_MALOAIMUC_Validating(new object(), new CancelEventArgs());
                     txt_SOMAUMA_Validating(new object(), new CancelEventArgs());
                     txt_SOHINHMA_Validating(new object(), new CancelEventArgs());
@@ -763,46 +766,41 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_MASP.Text = drCopy[0][DmhangFields.Masp.Name].ToString();
                 txt_TENSP.Text = drCopy[0][DmhangFields.Tensp.Name].ToString();
                 txt_MAKHACH.Text = drCopy[0][DmhangFields.Makhach.Name].ToString();
-                txt_MAKHACH_Validating(new object(), new CancelEventArgs());
-
-                txt_TENKHACH.Text = drCopy[0][DmhangFields.Tenkhach.Name].ToString();
+                txt_MASPCUAKHACH.Text = drCopy[0][DmhangFields.Maspcuakhach.Name].ToString();
+                //txt_MACHUNGLOAI.Text = drCopy[0][DmhangFields.Machungloai.Name].ToString();
+                txt_TRONGLUONG.Text = drCopy[0][DmhangFields.Trongluong.Name].ToString();
                 txt_DODAY.Text = drCopy[0][DmhangFields.Doday.Name].ToString();
+                txt_RONG.Text = drCopy[0][DmhangFields.Rong.Name].ToString();
+                txt_DAI.Text = drCopy[0][DmhangFields.Dai.Name].ToString();
+                txt_MALOAIMUC.Text = drCopy[0][DmhangFields.Maloaimuc.Name].ToString();
+                txt_SOMAUMA.Text = drCopy[0][DmhangFields.Somauma.Name].ToString();
+                txt_SOHINHMA.Text = drCopy[0][DmhangFields.Sohinhma.Name].ToString();
+                txt_MACAUTRUCIN.Text = drCopy[0][DmhangFields.Macautrucin.Name].ToString();
                 txt_KHOILUONGMUC.Text = drCopy[0][DmhangFields.Khoiluongmuc.Name].ToString();
-                txt_SOHINH.Text = drCopy[0][DmhangFields.Sohinh.Name].ToString();
-                txt_CAUTRUCIN.Text = drCopy[0][DmhangFields.Cautrucin.Name].ToString();
-                txt_SOMAU.Text = drCopy[0][DmhangFields.Somau.Name].ToString();
-                txt_MALOAIMUC.Text = drCopy[0][DmhangFields.Loaimuc.Name].ToString();
+                txt_MAMANG1.Text = drCopy[0][DmhangFields.Mamang1.Name].ToString();
+                txt_TLMANG1.Text = drCopy[0][DmhangFields.Tlmanglop1.Name].ToString();
+                txt_TLKEO1.Text = drCopy[0][DmhangFields.Tlkeolop1.Name].ToString();
+                txt_MAMANG2.Text = drCopy[0][DmhangFields.Mamang2.Name].ToString();
+                txt_TLMANG2.Text = drCopy[0][DmhangFields.Tlmanglop2.Name].ToString();
+                txt_TLKEO2.Text = drCopy[0][DmhangFields.Tlkeolop2.Name].ToString();
+                txt_DINHLUONGKEO.Text = drCopy[0][DmhangFields.Dinhluongkeo.Name].ToString();
                 txt_KICHTHUOCTRUC.Text = drCopy[0][DmhangFields.Kichthuoctruc.Name].ToString();
                 txt_VITRI.Text = drCopy[0][DmhangFields.Vitri.Name].ToString();
+                txt_MAQCTHANHPHAM.Text = drCopy[0][DmhangFields.Maqcthanhpham.Name].ToString();
                 txt_MAQCDONGGOI.Text = drCopy[0][DmhangFields.Maqcdonggoi.Name].ToString();
                 txt_MAQCLOAITHUNG.Text = drCopy[0][DmhangFields.Maqcloaithung.Name].ToString();
-                //try
-                //{
-                //    txt_TLPHOI.Text = double.Parse(drCopy[0][DmhangFields.Trongluongphoi.Name].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN"));
-                //    txt_TLKHONGPE.Text = double.Parse(drCopy[0][DmhangFields.TrongluongkhongPe.Name].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN"));
-                //    txt_TONGTL.Text = double.Parse(drCopy[0][DmhangFields.Tongtrongluong.Name].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN"));
-                //    txt_CHIEUDAICAT.Text = double.Parse(drCopy[0][DmhangFields.Chieudaicat.Name].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN"));
-                //}
-                //catch { }
-                //txt_KTBAO.Text = drCopy[0][DmhangFields.Kichthuocbao.Name].ToString();
-                //txt_KTCAT.Text = drCopy[0][DmhangFields.Kichthuoccat.Name].ToString();
-                //txt_MAMANH.Text = drCopy[0][DmhangFields.Mamanh.Name].ToString();
-                //txt_MAMANH_Validating(new object(), new CancelEventArgs());
-                //txt_MASOI.Text = drCopy[0][DmhangFields.Masoi.Name].ToString();
-                //txt_MASOI_Validating(new object(), new CancelEventArgs());
-                //txt_DONGMAYIN.Text = drCopy[0][DmhangFields.Loaimayin.Name].ToString();
-                //txt_DONGMAYIN_Validating(new object(), new CancelEventArgs());
-                //txt_LOAICHIMAY.Text = drCopy[0][DmhangFields.Loaichimay.Name].ToString();
-                //txt_MAPE.Text = drCopy[0][DmhangFields.LongHdpe.Name].ToString();
-                //txt_KIEUGAP.Text = drCopy[0][DmhangFields.Kieugap.Name].ToString();
-                //txt_KIEUMAYDAY.Text = drCopy[0][DmhangFields.Kieumayday.Name].ToString();
-                //txt_KIEUVIENMIENG.Text = drCopy[0][DmhangFields.Kieuvienmieng.Name].ToString();
-                //txt_KIEUDONGKIEN.Text = drCopy[0][DmhangFields.Kieudongkien.Name].ToString();
 
-                //txt_KIEUGAP_Validating(new object(), new CancelEventArgs());
-                //txt_KIEUMAYDAY_Validating(new object(), new CancelEventArgs());
-                //txt_KIEUVIENMIENG_Validating(new object(), new CancelEventArgs());
-                //txt_KIEUDONGKIEN_Validating(new object(), new CancelEventArgs());
+                txt_MAKHACH_Validating(new object(), new CancelEventArgs());
+                //txt_MACHUNGLOAI_Validating(new object(), new CancelEventArgs());
+                txt_MALOAIMUC_Validating(new object(), new CancelEventArgs());
+                txt_SOMAUMA_Validating(new object(), new CancelEventArgs());
+                txt_SOHINHMA_Validating(new object(), new CancelEventArgs());
+                txt_MACAUTRUCIN_Validating(new object(), new CancelEventArgs());
+                txt_MAMANG1_Validating(new object(), new CancelEventArgs());
+                txt_MAMANG2_Validating(new object(), new CancelEventArgs());
+                txt_MAQCTHANHPHAM_Validating(new object(), new CancelEventArgs());
+                txt_MAQCDONGGOI_Validating(new object(), new CancelEventArgs());
+                txt_MAQCLOAITHUNG_Validating(new object(), new CancelEventArgs());
 
                 MAHIEU_PK = "";
                 txt_MASP.Focus();
