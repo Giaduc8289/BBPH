@@ -34,6 +34,7 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.label23 = new System.Windows.Forms.Label();
             this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
             this.txt_M2SAIHONGTT = new GD.BBPH.CONTROL.TEXTBOX();
@@ -88,7 +89,10 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.label23 = new System.Windows.Forms.Label();
+            this.txt_CHATLUONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_NANGSUAT = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label24 = new GD.BBPH.CONTROL.LABEL();
+            this.label25 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -146,6 +150,10 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_CHATLUONG);
+            this.uiPanel1Container.Controls.Add(this.txt_NANGSUAT);
+            this.uiPanel1Container.Controls.Add(this.label24);
+            this.uiPanel1Container.Controls.Add(this.label25);
             this.uiPanel1Container.Controls.Add(this.label23);
             this.uiPanel1Container.Controls.Add(this.btn_XOADONG);
             this.uiPanel1Container.Controls.Add(this.btn_THEMDONG);
@@ -205,6 +213,17 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(775, 603);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.BackColor = System.Drawing.Color.Gray;
+            this.label23.Location = new System.Drawing.Point(-1, 70);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(777, 2);
+            this.label23.TabIndex = 249;
             // 
             // btn_XOADONG
             // 
@@ -855,16 +874,57 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã máy";
             // 
-            // label23
+            // txt_CHATLUONG
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.BackColor = System.Drawing.Color.Gray;
-            this.label23.Location = new System.Drawing.Point(-1, 70);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(777, 2);
-            this.label23.TabIndex = 249;
+            this.txt_CHATLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CHATLUONG.BannerText = null;
+            this.txt_CHATLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_CHATLUONG.Giatrithapphan = 0;
+            this.txt_CHATLUONG.IsSoNguyen = false;
+            this.txt_CHATLUONG.Location = new System.Drawing.Point(303, 346);
+            this.txt_CHATLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_CHATLUONG.Name = "txt_CHATLUONG";
+            this.txt_CHATLUONG.ReadOnly = true;
+            this.txt_CHATLUONG.Regular_Expression = "";
+            this.txt_CHATLUONG.Size = new System.Drawing.Size(93, 20);
+            this.txt_CHATLUONG.TabIndex = 251;
+            this.txt_CHATLUONG.TabStop = false;
+            this.txt_CHATLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_NANGSUAT
+            // 
+            this.txt_NANGSUAT.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NANGSUAT.BannerText = null;
+            this.txt_NANGSUAT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_NANGSUAT.Giatrithapphan = 0;
+            this.txt_NANGSUAT.IsSoNguyen = false;
+            this.txt_NANGSUAT.Location = new System.Drawing.Point(483, 346);
+            this.txt_NANGSUAT.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_NANGSUAT.Name = "txt_NANGSUAT";
+            this.txt_NANGSUAT.ReadOnly = true;
+            this.txt_NANGSUAT.Regular_Expression = "";
+            this.txt_NANGSUAT.Size = new System.Drawing.Size(93, 20);
+            this.txt_NANGSUAT.TabIndex = 252;
+            this.txt_NANGSUAT.TabStop = false;
+            this.txt_NANGSUAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(418, 348);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(56, 13);
+            this.label24.TabIndex = 253;
+            this.label24.Text = "Năng suất";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(239, 348);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 13);
+            this.label25.TabIndex = 250;
+            this.label25.Text = "Chất lượng";
             // 
             // FRM_KQIN
             // 
@@ -950,5 +1010,9 @@
         private CONTROL.BUTTON btn_XOADONG;
         private CONTROL.BUTTON btn_THEMDONG;
         private System.Windows.Forms.Label label23;
+        private CONTROL.TEXTBOXNUMBER txt_CHATLUONG;
+        private CONTROL.TEXTBOXNUMBER txt_NANGSUAT;
+        private CONTROL.LABEL label24;
+        private CONTROL.LABEL label25;
     }
 }
