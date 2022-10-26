@@ -93,6 +93,8 @@
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_NANGSUAT = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label25 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -150,6 +152,8 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_NANGSUAT);
+            this.uiPanel1Container.Controls.Add(this.label25);
             this.uiPanel1Container.Controls.Add(this.label24);
             this.uiPanel1Container.Controls.Add(this.txt_THOIGIANSUCO);
             this.uiPanel1Container.Controls.Add(this.label23);
@@ -214,6 +218,7 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(1073, 535);
             this.uiPanel1Container.TabIndex = 0;
             this.uiPanel1Container.Click += new System.EventHandler(this.uiPanel1Container_Click);
+            this.uiPanel1Container.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label24
             // 
@@ -237,6 +242,7 @@
             this.txt_THOIGIANSUCO.Regular_Expression = null;
             this.txt_THOIGIANSUCO.Size = new System.Drawing.Size(138, 20);
             this.txt_THOIGIANSUCO.TabIndex = 15;
+            this.txt_THOIGIANSUCO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label23
             // 
@@ -379,7 +385,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(275, 210);
+            this.label15.Location = new System.Drawing.Point(258, 210);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(92, 13);
             this.label15.TabIndex = 272;
@@ -425,11 +431,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(275, 184);
+            this.label11.Location = new System.Drawing.Point(258, 184);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 13);
+            this.label11.Size = new System.Drawing.Size(110, 13);
             this.label11.TabIndex = 266;
-            this.label11.Text = "Thời gian hạ cuộn";
+            this.label11.Text = "Thời gian lên hạ cuộn";
             // 
             // label12
             // 
@@ -467,11 +473,12 @@
             this.txt_THOIGIANCHUANBI.Regular_Expression = null;
             this.txt_THOIGIANCHUANBI.Size = new System.Drawing.Size(138, 20);
             this.txt_THOIGIANCHUANBI.TabIndex = 11;
+            this.txt_THOIGIANCHUANBI.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(275, 158);
+            this.label13.Location = new System.Drawing.Point(258, 158);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(93, 13);
             this.label13.TabIndex = 268;
@@ -490,6 +497,7 @@
             this.txt_THOIGIANKETTHUC.Regular_Expression = null;
             this.txt_THOIGIANKETTHUC.Size = new System.Drawing.Size(122, 20);
             this.txt_THOIGIANKETTHUC.TabIndex = 10;
+            this.txt_THOIGIANKETTHUC.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label14
             // 
@@ -515,6 +523,7 @@
             this.txt_THOIGIANBATDAU.Size = new System.Drawing.Size(138, 20);
             this.txt_THOIGIANBATDAU.TabIndex = 9;
             this.txt_THOIGIANBATDAU.TextChanged += new System.EventHandler(this.textbox7_TextChanged);
+            this.txt_THOIGIANBATDAU.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // txt_MAMAY
             // 
@@ -934,6 +943,32 @@
             this.label21.TabIndex = 120;
             this.label21.Text = "Ngày";
             // 
+            // txt_NANGSUAT
+            // 
+            this.txt_NANGSUAT.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NANGSUAT.BannerText = null;
+            this.txt_NANGSUAT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_NANGSUAT.Giatrithapphan = 0;
+            this.txt_NANGSUAT.IsSoNguyen = false;
+            this.txt_NANGSUAT.Location = new System.Drawing.Point(374, 236);
+            this.txt_NANGSUAT.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_NANGSUAT.Name = "txt_NANGSUAT";
+            this.txt_NANGSUAT.ReadOnly = true;
+            this.txt_NANGSUAT.Regular_Expression = "";
+            this.txt_NANGSUAT.Size = new System.Drawing.Size(122, 20);
+            this.txt_NANGSUAT.TabIndex = 289;
+            this.txt_NANGSUAT.TabStop = false;
+            this.txt_NANGSUAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(258, 236);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(56, 13);
+            this.label25.TabIndex = 290;
+            this.label25.Text = "Năng suất";
+            // 
             // FRM_TKKQTUA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1022,5 +1057,7 @@
         private CONTROL.TEXTBOX txt_DAURAIN;
         private CONTROL.LABEL label24;
         private CONTROL.TEXTBOX txt_THOIGIANSUCO;
+        private CONTROL.TEXTBOXNUMBER txt_NANGSUAT;
+        private CONTROL.LABEL label25;
     }
 }

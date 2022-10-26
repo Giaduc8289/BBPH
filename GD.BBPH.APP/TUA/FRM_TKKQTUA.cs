@@ -166,6 +166,9 @@ namespace GD.BBPH.APP.TUA
                     DataRowView _Rowview = (DataRowView)this.BS_TKKQTUA_CHITIET.Current;
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[KetquatuaFields.Id.Name].ToString();
+
+                    txt_NANGSUAT.Text = _Rowview.Row[KetquatuaFields.Nangsuat.Name].ToString();
+
                 }
                 //else
                 //{
@@ -224,6 +227,9 @@ namespace GD.BBPH.APP.TUA
             r_Detail[KetquatuaFields.Thoigiancatdau.Name] = txt_THOIGIANCATDAU.Text.Trim();
             r_Detail[KetquatuaFields.Thoigiandoilenh.Name] = txt_THOIGIANDOILENH.Text.Trim();
             r_Detail[KetquatuaFields.Thoigiansuco.Name] = txt_THOIGIANSUCO.Text.Trim();
+
+            r_Detail[KetquatuaFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
+
 
             //try { r_Detail[KetquatuaFields.SoMetvao.Name] = LIB.ConvertString.NumbertoDB(txt_SOMETVAO.Text.Trim()); }
             //try { r_Detail[KetquatuaFields.SoMetra.Name] = LIB.ConvertString.NumbertoDB(txt_SOMETRA.Text.Trim()); }
@@ -659,6 +665,26 @@ namespace GD.BBPH.APP.TUA
         }
         #endregion
 
+        #region Text change
+        private void Tinhnangsuat()
+        {
+            try
+            {
+                decimal _timerun = 0, _tocdo = 0, _somet = 0;
+                _somet = LIB.ConvertString.NumbertoDB(txt_SOMETRA.Text.Trim());
+                _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text);
+                _timerun = (Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).Minutes
+                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
+                txt_NANGSUAT.Text = decimal.Round(_somet / _tocdo / _timerun * 60, 3).ToString();
+            }
+            catch { }
+        }
+        private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
+        {
+            Tinhnangsuat();
+        }
+
+        #endregion
         #region Shortcut Key
         private void txt_MAMAY_KeyDown(object sender, KeyEventArgs e)
         {
