@@ -646,12 +646,13 @@ namespace GD.BBPH.APP.THOI
         {
             try
             {
-                decimal _timerun = 0, _tocdo = 0, _sokg = 0;
+                decimal _timerun = 0, _tocdo = 0, _sokg = 0, _nangsuat = 0;
                 _sokg = LIB.ConvertString.NumbertoDB(txt_SOKG.Text.Trim());
                 _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MAMANG.Text);
-                _timerun = (Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).Minutes
+                _timerun = Convert.ToDecimal((Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).TotalMinutes)
                     - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
-                txt_NANGSUAT.Text = decimal.Round(_sokg / _tocdo / _timerun * 60, 3).ToString();
+                _nangsuat = _sokg / _tocdo / _timerun * 60 * 100;
+                txt_NANGSUAT.Text = Math.Round(_nangsuat).ToString();
             }
             catch { }
         }

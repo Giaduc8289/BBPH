@@ -236,15 +236,15 @@ namespace GD.BBPH.APP.IN
             catch { }
             try { r_Detail[KetquainFields.Sokgin.Name] = LIB.ConvertString.NumbertoDB(txt_SOKGIN.Text.Trim()); }
             catch { }
-            r_Detail[KetquainFields.Saihongthucte.Name] = txt_SAIHONGTHUCTE.Text;
-            r_Detail[KetquainFields.PheNcc.Name] = txt_PHENCC.Text;
-            r_Detail[KetquainFields.PheSx.Name] = txt_PHESX.Text;
-            r_Detail[KetquainFields.Tongm2dm.Name] = txt_TONGM2DM.Text;
-            r_Detail[KetquainFields.M2saihongtt.Name] = txt_M2SAIHONGTT.Text;
+            r_Detail[KetquainFields.Saihongthucte.Name] = LIB.ConvertString.NumbertoDB(txt_SAIHONGTHUCTE.Text.Trim());
+            r_Detail[KetquainFields.PheNcc.Name] = LIB.ConvertString.NumbertoDB(txt_PHENCC.Text.Trim());
+            r_Detail[KetquainFields.PheSx.Name] = LIB.ConvertString.NumbertoDB(txt_PHESX.Text.Trim());
+            r_Detail[KetquainFields.Tongm2dm.Name] = LIB.ConvertString.NumbertoDB(txt_TONGM2DM.Text.Trim());
+            r_Detail[KetquainFields.M2saihongtt.Name] = LIB.ConvertString.NumbertoDB(txt_M2SAIHONGTT.Text.Trim());
             r_Detail[KetquainFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text;
             r_Detail[KetquainFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text;
-            r_Detail[KetquainFields.Thoigianchuanbi.Name] = txt_THOIGIANCHUANBI.Text;
-            r_Detail[KetquainFields.Thoigiansuco.Name] = txt_THOIGIANSUCO.Text;
+            r_Detail[KetquainFields.Thoigianchuanbi.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim());
+            r_Detail[KetquainFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
             r_Detail[KetquainFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
             //r_Detail[KetquainFields.Chatluong.Name] = LIB.ConvertString.NumbertoDB(txt_TILESAIHONG.Text.Trim());
 
@@ -567,7 +567,7 @@ namespace GD.BBPH.APP.IN
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANG.xml",
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml",
                         DT_DMSP, DmhangFields.Masp.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
@@ -629,12 +629,13 @@ namespace GD.BBPH.APP.IN
         {
             try
             {
-                decimal _timerun = 0, _tocdo = 0, _somet = 0;
+                decimal _timerun = 0, _tocdo = 0, _somet = 0, _nangsuat = 0;
                 _somet = LIB.ConvertString.NumbertoDB(txt_THUCTEIN.Text.Trim());
                 _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASP.Text);
-                _timerun = Convert.ToDecimal(Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text))
-                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
-                txt_NANGSUAT.Text = decimal.Round(_somet / _tocdo / _timerun * 60, 3).ToString();
+                _timerun = Convert.ToDecimal((Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).TotalMinutes)
+                    - Convert.ToDecimal(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
+                _nangsuat = _somet / _tocdo / _timerun * 100;
+                txt_NANGSUAT.Text = Math.Round(_nangsuat).ToString();
             }
             catch { }
         }
