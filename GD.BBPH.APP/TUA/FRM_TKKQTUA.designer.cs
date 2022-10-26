@@ -54,8 +54,8 @@
             this.txt_THOIGIANCATDAU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label11 = new GD.BBPH.CONTROL.LABEL();
             this.label12 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_THOIGIANHACUON = new GD.BBPH.CONTROL.TEXTBOX();
-            this.txt_THOIGIANCHUANBI = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_THOIGIANLENHACUON = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_THOIGIANDAUCA = new GD.BBPH.CONTROL.TEXTBOX();
             this.label13 = new GD.BBPH.CONTROL.LABEL();
             this.txt_THOIGIANKETTHUC = new GD.BBPH.CONTROL.TEXTBOX();
             this.label14 = new GD.BBPH.CONTROL.LABEL();
@@ -174,8 +174,8 @@
             this.uiPanel1Container.Controls.Add(this.txt_THOIGIANCATDAU);
             this.uiPanel1Container.Controls.Add(this.label11);
             this.uiPanel1Container.Controls.Add(this.label12);
-            this.uiPanel1Container.Controls.Add(this.txt_THOIGIANHACUON);
-            this.uiPanel1Container.Controls.Add(this.txt_THOIGIANCHUANBI);
+            this.uiPanel1Container.Controls.Add(this.txt_THOIGIANLENHACUON);
+            this.uiPanel1Container.Controls.Add(this.txt_THOIGIANDAUCA);
             this.uiPanel1Container.Controls.Add(this.label13);
             this.uiPanel1Container.Controls.Add(this.txt_THOIGIANKETTHUC);
             this.uiPanel1Container.Controls.Add(this.label14);
@@ -442,38 +442,38 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(12, 184);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 13);
+            this.label12.Size = new System.Drawing.Size(88, 13);
             this.label12.TabIndex = 270;
-            this.label12.Text = "Thời gian chuẩn bị";
+            this.label12.Text = "Thời gian đầu ca";
             // 
-            // txt_THOIGIANHACUON
+            // txt_THOIGIANLENHACUON
             // 
-            this.txt_THOIGIANHACUON.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_THOIGIANHACUON.BannerText = null;
-            this.txt_THOIGIANHACUON.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_THOIGIANHACUON.FormNametoShow = "";
-            this.txt_THOIGIANHACUON.Is_DateTime = false;
-            this.txt_THOIGIANHACUON.IsShowForm = false;
-            this.txt_THOIGIANHACUON.Location = new System.Drawing.Point(374, 181);
-            this.txt_THOIGIANHACUON.Name = "txt_THOIGIANHACUON";
-            this.txt_THOIGIANHACUON.Regular_Expression = null;
-            this.txt_THOIGIANHACUON.Size = new System.Drawing.Size(122, 20);
-            this.txt_THOIGIANHACUON.TabIndex = 12;
+            this.txt_THOIGIANLENHACUON.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_THOIGIANLENHACUON.BannerText = null;
+            this.txt_THOIGIANLENHACUON.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_THOIGIANLENHACUON.FormNametoShow = "";
+            this.txt_THOIGIANLENHACUON.Is_DateTime = false;
+            this.txt_THOIGIANLENHACUON.IsShowForm = false;
+            this.txt_THOIGIANLENHACUON.Location = new System.Drawing.Point(374, 181);
+            this.txt_THOIGIANLENHACUON.Name = "txt_THOIGIANLENHACUON";
+            this.txt_THOIGIANLENHACUON.Regular_Expression = null;
+            this.txt_THOIGIANLENHACUON.Size = new System.Drawing.Size(122, 20);
+            this.txt_THOIGIANLENHACUON.TabIndex = 12;
             // 
-            // txt_THOIGIANCHUANBI
+            // txt_THOIGIANDAUCA
             // 
-            this.txt_THOIGIANCHUANBI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_THOIGIANCHUANBI.BannerText = null;
-            this.txt_THOIGIANCHUANBI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_THOIGIANCHUANBI.FormNametoShow = "";
-            this.txt_THOIGIANCHUANBI.Is_DateTime = false;
-            this.txt_THOIGIANCHUANBI.IsShowForm = false;
-            this.txt_THOIGIANCHUANBI.Location = new System.Drawing.Point(111, 181);
-            this.txt_THOIGIANCHUANBI.Name = "txt_THOIGIANCHUANBI";
-            this.txt_THOIGIANCHUANBI.Regular_Expression = null;
-            this.txt_THOIGIANCHUANBI.Size = new System.Drawing.Size(138, 20);
-            this.txt_THOIGIANCHUANBI.TabIndex = 11;
-            this.txt_THOIGIANCHUANBI.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
+            this.txt_THOIGIANDAUCA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_THOIGIANDAUCA.BannerText = null;
+            this.txt_THOIGIANDAUCA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_THOIGIANDAUCA.FormNametoShow = "";
+            this.txt_THOIGIANDAUCA.Is_DateTime = false;
+            this.txt_THOIGIANDAUCA.IsShowForm = false;
+            this.txt_THOIGIANDAUCA.Location = new System.Drawing.Point(111, 181);
+            this.txt_THOIGIANDAUCA.Name = "txt_THOIGIANDAUCA";
+            this.txt_THOIGIANDAUCA.Regular_Expression = null;
+            this.txt_THOIGIANDAUCA.Size = new System.Drawing.Size(138, 20);
+            this.txt_THOIGIANDAUCA.TabIndex = 11;
+            this.txt_THOIGIANDAUCA.Validating += new System.ComponentModel.CancelEventHandler(this.txt_THOIGIAN_Validating);
             // 
             // label13
             // 
@@ -1021,8 +1021,8 @@
         private CONTROL.LABEL label5;
         private CONTROL.LABEL label11;
         private CONTROL.LABEL label12;
-        private CONTROL.TEXTBOX txt_THOIGIANHACUON;
-        private CONTROL.TEXTBOX txt_THOIGIANCHUANBI;
+        private CONTROL.TEXTBOX txt_THOIGIANLENHACUON;
+        private CONTROL.TEXTBOX txt_THOIGIANDAUCA;
         private CONTROL.LABEL label13;
         private CONTROL.TEXTBOX txt_THOIGIANKETTHUC;
         private CONTROL.LABEL label14;
