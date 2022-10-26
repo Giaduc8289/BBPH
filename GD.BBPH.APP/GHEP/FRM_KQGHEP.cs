@@ -60,8 +60,7 @@ namespace GD.BBPH.APP.GHEP
                         DT_KQGHEP = LIB.Procedures.Danhsachketquaghep(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); // LIB.SESSION_START.DT_KQGHEP;
                         DT_KQGHEP_CHITIET = LIB.SESSION_START.DT_KQGHEP;
 
-                        //DT_DMPHONGBAN = LIB.SESSION_START.DT_DMPHONGBAN;
-                        DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("GH");// LIB.SESSION_START.DT_DMMAY;
                         DT_DMHANG = LIB.SESSION_START.DM_HANG;
                         DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
                     }
@@ -527,7 +526,7 @@ namespace GD.BBPH.APP.GHEP
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             if (string.IsNullOrEmpty(MAHIEU_PK)) return;
             //_KetquaghepEntity = _KetquaghepManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
-            if (_KetquaghepEntity != null && MessageBox.Show("Xóa kết quả ghep: Ngày " + txt_NGAY.Text + " Máy " + txt_MAMAY.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_KetquaghepEntity != null && MessageBox.Show("Xóa kết quả ghép: Ngày " + txt_NGAY.Text + " Máy " + txt_MAMAY.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -553,7 +552,7 @@ namespace GD.BBPH.APP.GHEP
                 }
                 catch
                 {
-                    MessageBox.Show("Không thể xóa kết quả ghep: Ngày " + txt_NGAY.Text + " Máy " + txt_MAMAY.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không thể xóa kết quả ghép: Ngày " + txt_NGAY.Text + " Máy " + txt_MAMAY.Text + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             GRID_KQGHEP.Enabled = true;

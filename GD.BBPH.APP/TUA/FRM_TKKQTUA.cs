@@ -57,7 +57,7 @@ namespace GD.BBPH.APP.TUA
                         DT_TKKQTUA = LIB.Procedures.Danhsachketquatua(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); //LIB.SESSION_START.DT_TKKQTUA;
                         DT_TKKQTUA_CHITIET = LIB.SESSION_START.DT_TKKQTUA;
 
-                        DT_HANG = LIB.SESSION_START.DM_HANG;
+                        DT_HANG = new DmmayManager().SelectByMadmRDT("KT");// LIB.SESSION_START.DM_HANG;
                         DT_DMCONGNHAN = LIB.SESSION_START.DT_DMCONGNHAN;
                         DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
                     }

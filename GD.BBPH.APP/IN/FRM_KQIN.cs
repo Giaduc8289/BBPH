@@ -59,12 +59,9 @@ namespace GD.BBPH.APP.IN
                         DT_KQIN = LIB.Procedures.Danhsachketquain(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); // LIB.SESSION_START.DT_KQIN;
                         DT_KQIN_CHITIET = LIB.SESSION_START.DT_KQIN;
 
-
-                        DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("IN");// LIB.SESSION_START.DT_DMMAY;
                         DT_DMSP = LIB.SESSION_START.DM_HANG;
                         DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
-
-                        //DT_DMPHONGBAN = LIB.SESSION_START.DT_DMPHONGBAN;
                     }
                 };
                 worker.RunWorkerCompleted += delegate

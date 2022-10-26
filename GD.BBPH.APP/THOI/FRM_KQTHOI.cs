@@ -60,8 +60,7 @@ namespace GD.BBPH.APP.THOI
                         DT_KQTHOI = LIB.Procedures.Danhsachketquathoi(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); // LIB.SESSION_START.DT_KQTHOI;
                         DT_KQTHOI_CHITIET = LIB.SESSION_START.DT_KQTHOI;
 
-                        //DT_DMPHONGBAN = LIB.SESSION_START.DT_DMPHONGBAN;
-                        DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("TH");// LIB.SESSION_START.DT_DMMAY;
                         DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
                         DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
                     }
