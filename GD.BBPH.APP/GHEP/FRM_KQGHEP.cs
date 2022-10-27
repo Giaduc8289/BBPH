@@ -101,9 +101,9 @@ namespace GD.BBPH.APP.GHEP
             InitializeComponent();
             KetquaghepManager _KetquaghepManager = new KetquaghepManager();
             DataTable dt111 = LIB.Procedures.Danhsachketquaghep(Ngaydauthang, Ngaycuoithang, Convert.ToInt32(CA), MASP);
-            GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQGHEP.xml");
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQGHEP.xml");
             dt111 = LIB.Procedures.Danhsachketquaghepchitiet(MAHIEU_PK, Convert.ToInt32(CA), MASP);
-            GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQGHEPCHITIET.xml");
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQGHEPCHITIET.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_THEMDONG, btn_THEMDONG.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_XOADONG, btn_XOADONG.Name + ".xml");

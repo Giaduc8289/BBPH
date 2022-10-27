@@ -1142,6 +1142,8 @@
     <Content Include="XMLCONFIG\FRM_KIEMKESANPHAMCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KQCHIA.xml" />
     <Content Include="XMLCONFIG\FRM_KQCHIACHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_KQGHEP.xml" />
+    <Content Include="XMLCONFIG\FRM_KQGHEPCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KQHOANTHIEN.xml" />
     <Content Include="XMLCONFIG\FRM_KQHOANTHIENCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOI.xml" />
