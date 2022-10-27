@@ -1639,6 +1639,7 @@ namespace GD.BBPH.APP.LIB
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachmaysudungnguyenlieu", "Danhsachmaysudungnguyenlieu", myArr).Tables[0];
         }
 
+
         #region BBPH
 
         #region Hàm trả về bảng dữ liệu
@@ -2120,6 +2121,22 @@ namespace GD.BBPH.APP.LIB
             parameters.CopyTo(myArr, 0);
 
             decimal gtri = Convert.ToDecimal(_SimpleStoredProcedure.ExecuteScalarSP("fTinhtocdomay", myArr));
+            return gtri;
+        }
+
+        public static decimal fTinhdinhmucsaihong(string Mamay, string Masanpham, string Manhomdinhmuc)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Mamay", SqlDbType.NVarChar, 0), Mamay);
+            parameters.Add(new SqlParameter("@Masanpham", SqlDbType.NVarChar, 0), Masanpham);
+            parameters.Add(new SqlParameter("@Manhomdinhmuc", SqlDbType.NVarChar, 0), Manhomdinhmuc);
+
+
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+
+            decimal gtri = Convert.ToDecimal(_SimpleStoredProcedure.ExecuteScalarSP("fTinhdinhmucsaihong", myArr));
             return gtri;
         }
         #endregion

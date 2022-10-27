@@ -639,31 +639,37 @@ namespace GD.BBPH.APP.IN
             }
             catch { }
         }
+
         private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
         {
             Tinhnangsuat();
         }
 
-        //private void Tinhchatluong()
-        //{
-        //    try
-        //    {
-        //        decimal _doday = 0, _rong = 0, _saihongthucte = 0, _tylesaihong = 0, _saihongdm = 0;
-        //        _saihongthucte = LIB.ConvertString.NumbertoDB(txt_SAIHONGTHUCTE.Text.Trim());
-        //        DmhangEntity _DmmangEntity = new DmhangManager().SelectOne(txt_MASP.Text);
-        //        _doday = Convert.ToDecimal(_DmmangEntity.Doday);
-        //        _rong = Convert.ToDecimal(_DmmangEntity.Rong);
-        //        _saihongdm = _doday / 1000 * _rong / 1000 * Convert.ToDecimal(1.4);
-        //        _tylesaihong = _saihongthucte / _saihongdm * 100;
-        //        txt_TILESAIHONG.Text = Math.Round(_tylesaihong).ToString();
-        //    }
-        //    catch { }
-        //}
+        private void Tinhtylesaihong()
+        {
+            try
+            {
+                decimal _doday = 0, _rong = 0, _saihongthucte = 0, _tylesaihong = 0, _saihongdm = 0, _saihongphamuc = 0, _sangcuon = 0, _xulyloi = 0;
+                _saihongthucte = LIB.ConvertString.NumbertoDB(txt_SAIHONGTHUCTE.Text.Trim());
+                DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(txt_MASP.Text);
 
-        //private void txt_SANLUONG_Validating(object sender, CancelEventArgs e)
-        //{
-        //    Tinhchatluong();
-        //}
+                _doday = Convert.ToDecimal(_DmhangEntity.Doday);
+                _rong = Convert.ToDecimal(_DmhangEntity.Rong);
+                _saihongphamuc = LIB.Procedures.fTinhdinhmucsaihong(txt_MAMAY.Text, txt_MASP.Text, "DM03");
+                _sangcuon = LIB.Procedures.fTinhdinhmucsaihong(txt_MAMAY.Text, txt_MASP.Text, "DM01");
+                _xulyloi = LIB.Procedures.fTinhdinhmucsaihong(txt_MAMAY.Text, txt_MASP.Text, "DM02");
+                _saihongdm = _doday / 1000 * _rong / 1000 * (_saihongphamuc + _sangcuon + _xulyloi) * Convert.ToDecimal(1.4);
+
+                _tylesaihong = _saihongthucte / _saihongdm * 100;
+                txt_TILESAIHONG.Text = Math.Round(_tylesaihong).ToString();
+            }
+            catch { }
+        }
+
+        private void txt_TYLESAIHONG_Validated(object sender, EventArgs e)
+        {
+            Tinhtylesaihong();
+        }
         #endregion
 
         #region Shortcut Key

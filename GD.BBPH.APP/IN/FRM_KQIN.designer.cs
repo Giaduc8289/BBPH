@@ -748,6 +748,7 @@
             this.txt_MASP.TabIndex = 7;
             this.txt_MASP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MASP_KeyDown);
             this.txt_MASP.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASP_Validating);
+            this.txt_MASP.Validated += new System.EventHandler(this.txt_TYLESAIHONG_Validated);
             // 
             // label4
             // 
@@ -922,6 +923,7 @@
             this.txt_MAMAY.TabIndex = 2;
             this.txt_MAMAY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAMAY_KeyDown);
             this.txt_MAMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMAY_Validating);
+            this.txt_MAMAY.Validated += new System.EventHandler(this.txt_TYLESAIHONG_Validated);
             // 
             // label22
             // 
