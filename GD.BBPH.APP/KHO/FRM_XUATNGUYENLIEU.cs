@@ -300,7 +300,6 @@ namespace GD.BBPH.APP.KHO
 
                 try { _XuatkhonguyenlieuEntity.Id = Convert.ToInt64(_view[XuatkhonguyenlieuFields.Id.Name].ToString()); }
                 catch { }
-
                 _XuatkhonguyenlieuEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
                 if (_XuatkhonguyenlieuEntity.IsNew)
                 {

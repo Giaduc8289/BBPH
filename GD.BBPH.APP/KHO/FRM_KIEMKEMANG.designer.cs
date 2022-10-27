@@ -237,7 +237,6 @@
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 203;
             this.label6.Text = "Số mét";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txt_SOM
             // 

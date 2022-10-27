@@ -87,13 +87,13 @@ namespace GD.BBPH.LIB
         {
             txtKeySearch.Focus();
             //--------Check các row đã lựa chọn
-            string _Paramsearch = txtKeySearch.Text;
+            string _Paramsearch = "," + txtKeySearch.Text.Trim();
             Janus.Windows.GridEX.GridEXRow[] listGrid = GRID_LIST.GetDataRows();
             foreach (Janus.Windows.GridEX.GridEXRow _grid in listGrid)
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                string gtri = _view[_Fieldname_Search].ToString() + ",";
+                string gtri = "," + _view[_Fieldname_Search].ToString().Trim() + ",";
                 if (_Paramsearch.Contains(gtri))
                     _grid.CheckState = Janus.Windows.GridEX.RowCheckState.Checked;
             }

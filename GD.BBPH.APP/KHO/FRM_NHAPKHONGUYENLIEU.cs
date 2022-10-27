@@ -293,6 +293,7 @@ namespace GD.BBPH.APP.KHO
                 _NhapkhonguyenlieuEntity.Donvitinh = _view.Row[NhapkhonguyenlieuFields.Donvitinh.Name].ToString();
                 _NhapkhonguyenlieuEntity.Malydo = _view.Row[NhapkhonguyenlieuFields.Malydo.Name].ToString();
                 _NhapkhonguyenlieuEntity.Tenlydo = _view.Row[NhapkhonguyenlieuFields.Tenlydo.Name].ToString();
+
                 #region xét isnew
                 try { _NhapkhonguyenlieuEntity.Id = Convert.ToInt64(_view[NhapkhonguyenlieuFields.Id.Name].ToString()); }
                 catch { }
@@ -314,6 +315,7 @@ namespace GD.BBPH.APP.KHO
                     }
                 }
                 #endregion
+
                 if (!string.IsNullOrEmpty(_NhapkhonguyenlieuEntity.Manguyenlieu))
                     _NhapkhonguyenlieuEntityCol.Add(_NhapkhonguyenlieuEntity);
             }
@@ -328,7 +330,7 @@ namespace GD.BBPH.APP.KHO
                 }
                 else _NhapkhonguyenlieuManager.Update(_NhapkhonguyenlieuEntity);
             }
-            //GRID_NHAPKHONGUYENLIEU.CurrentRow.Cells[NhapkhonguyenlieuFields.Id.Name].Value = _NhapkhonguyenlieuEntity.Id;
+
             GRID_NHAPKHONGUYENLIEU.CurrentRow.Cells[NhapkhonguyenlieuFields.Ngaynhap.Name].Value = _ngay;
             GRID_NHAPKHONGUYENLIEU.CurrentRow.Cells[NhapkhonguyenlieuFields.Makho.Name].Value = _kho;
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_NhapkhonguyenlieuManager.Convert(_NhapkhonguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);

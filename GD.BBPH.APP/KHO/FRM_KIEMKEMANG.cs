@@ -34,8 +34,6 @@ namespace GD.BBPH.APP.KHO
         private string MAMANG = "", MAKHO = "";
         private DataTable DT_DMMANG = new DataTable(), DT_DMKHO = new DataTable();
 
-
-
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -197,7 +195,6 @@ namespace GD.BBPH.APP.KHO
             BS_SODUMANG_CHITIET_CurrentChanged((new object()), (new EventArgs()));
         }
 
-
         #region Xu ly dong chi tiet
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
@@ -262,8 +259,6 @@ namespace GD.BBPH.APP.KHO
         }
         #endregion
 
-
-
         private string Save_Data(string _str_MAHIEU_PK)
         {
             DateTime _ngaynhap = Convert.ToDateTime(txt_NGAY.Text.Trim());
@@ -274,63 +269,57 @@ namespace GD.BBPH.APP.KHO
             {
                 DataRowView _view = (DataRowView)_grid.DataRow;
                 if (_view == null) continue;
-                SodumangEntity _NhapkhomangEntity = new SodumangEntity();
-                _NhapkhomangEntity.Ngaykiemke = _ngaynhap;
-                _NhapkhomangEntity.Makho = txt_MAKHO.Text.Trim();
-                _NhapkhomangEntity.Tenkho = txt_TENKHO.Text.Trim();
-                _NhapkhomangEntity.Mamang = _view.Row[SodumangFields.Mamang.Name].ToString();
-                _NhapkhomangEntity.Tenmang = _view.Row[SodumangFields.Tenmang.Name].ToString();
-                _NhapkhomangEntity.Somet = Convert.ToDecimal(_view.Row[SodumangFields.Somet.Name].ToString());
-                _NhapkhomangEntity.Sokg = Convert.ToDecimal(_view.Row[SodumangFields.Sokg.Name].ToString());
+                SodumangEntity _SodumangEntity = new SodumangEntity();
+                _SodumangEntity.Ngaykiemke = _ngaynhap;
+                _SodumangEntity.Makho = txt_MAKHO.Text.Trim();
+                _SodumangEntity.Tenkho = txt_TENKHO.Text.Trim();
+                _SodumangEntity.Mamang = _view.Row[SodumangFields.Mamang.Name].ToString();
+                _SodumangEntity.Tenmang = _view.Row[SodumangFields.Tenmang.Name].ToString();
+                _SodumangEntity.Somet = Convert.ToDecimal(_view.Row[SodumangFields.Somet.Name].ToString());
+                _SodumangEntity.Sokg = Convert.ToDecimal(_view.Row[SodumangFields.Sokg.Name].ToString());
 
+                try { _SodumangEntity.Id = Convert.ToInt64(_view[SodumangFields.Id.Name].ToString()); }
+                catch { }
+                _SodumangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_SodumangEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new SodumangManager()).SelectById(_SodumangEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _SodumangEntity.Ngaysua = DateTime.Now;
+                        _SodumangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _SodumangEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _SodumangEntity.Ngaytao = DateTime.Now;
+                        _SodumangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
 
-                if (!string.IsNullOrEmpty(_NhapkhomangEntity.Mamang))
-                    _SodumangEntityCol.Add(_NhapkhomangEntity);
+                if (!string.IsNullOrEmpty(_SodumangEntity.Mamang))
+                    _SodumangEntityCol.Add(_SodumangEntity);
             }
 
             _str_MAHIEU_PK = txt_NGAY.Text.Trim();
 
-            foreach (SodumangEntity _NhapkhomangEntity in _SodumangEntityCol)
+            foreach (SodumangEntity _SodumangEntity in _SodumangEntityCol)
             {
-                if (_NhapkhomangEntity.IsNew)
+                if (_SodumangEntity.IsNew)
                 {
                     DataRow _r_Insert = DT_SODUMANG_CHITIET.NewRow();
                     DT_SODUMANG_CHITIET.Rows.Add(_r_Insert);
-                    _SodumangManager.InsertV2(_NhapkhomangEntity, _r_Insert, DT_SODUMANG_CHITIET, BS_SODUMANG_CHITIET);
+                    _SodumangManager.InsertV2(_SodumangEntity, _r_Insert, DT_SODUMANG_CHITIET, BS_SODUMANG_CHITIET);
                 }
-                else _SodumangManager.Update(_NhapkhomangEntity);
+                else _SodumangManager.Update(_SodumangEntity);
             }
 
-            //if (string.IsNullOrEmpty(_str_MAHIEU_PK))
-            //{
-            //    _SodumangEntity.Ngaytao = DateTime.Now;
-            //    _SodumangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _str_MAHIEU_PK = _SodumangManager.InsertV2(_SodumangEntity, r_Insert, DT_SODUMANG, BS_SODUMANG);
-            //     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodumangManager.Convert(_SodumangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            //    BS_SODUMANG.ResetCurrentItem();
-            //}
-            //else
-            //{
-            //    _SodumangEntity.Ngaysua = DateTime.Now;
-            //    _SodumangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _SodumangManager.Update(_SodumangEntity);
             GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Ngaykiemke.Name].Value = _ngaynhap;
             GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Makho.Name].Value = txt_MAKHO.Text.Trim();
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Tenkho.Name].Value = txt_TENKHO.Text.Trim();
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Mamang.Name].Value = _SodumangEntity.Mamang;
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Tenmang.Name].Value = _SodumangEntity.Tenmang;
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Soluong.Name].Value = _SodumangEntity.Soluong;
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Somet.Name].Value = _SodumangEntity.Somet;
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Sokg.Name].Value = _SodumangEntity.Sokg;
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Malydo.Name].Value = _SodumangEntity.Malydo;
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Tenlydo.Name].Value = _SodumangEntity.Tenlydo;
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Lenhsx.Name].Value = _SodumangEntity.Lenhsx;
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Sophieugiao.Name].Value = _SodumangEntity.Sophieugiao;
-            //GRID_SODUMANG.CurrentRow.Cells[SodumangFields.Madonhang.Name].Value = _SodumangEntity.Madonhang;
 
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodumangManager.Convert(_SodumangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
-            //}
+
             return _str_MAHIEU_PK;
         }
 
@@ -537,31 +526,6 @@ namespace GD.BBPH.APP.KHO
         //    }
         //}
         #endregion
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
