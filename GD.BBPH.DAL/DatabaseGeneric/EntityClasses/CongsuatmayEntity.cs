@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 27, 2022 10:17:27 AM
+// Code is generated on: Thursday, October 27, 2022 4:52:16 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -497,6 +497,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Makhachs", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Mahangs", fieldHashtable);
 		}
 		#endregion
 
@@ -802,6 +805,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Makhachs, true); }
 			set	{ SetValue((int)CongsuatmayFieldIndex.Makhachs, value); }
+		}
+
+		/// <summary> The Mahangs property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Mahangs"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Mahangs
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Mahangs, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Mahangs, value); }
 		}
 
 

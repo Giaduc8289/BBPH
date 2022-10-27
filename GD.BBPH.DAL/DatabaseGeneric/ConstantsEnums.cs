@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 27, 2022 10:17:26 AM
+// Code is generated on: Thursday, October 27, 2022 4:52:14 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -147,6 +147,8 @@ namespace GD.BBPH.DAL
 		Macautrucins,
 		///<summary>Makhachs. </summary>
 		Makhachs,
+		///<summary>Mahangs. </summary>
+		Mahangs,
 		/// <summary></summary>
 		AmountOfFields
 	}

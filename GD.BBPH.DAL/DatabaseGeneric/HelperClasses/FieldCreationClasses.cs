@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 27, 2022 10:17:28 AM
+// Code is generated on: Thursday, October 27, 2022 4:52:16 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -301,6 +301,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Makhachs
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Makhachs);}
+		}
+		/// <summary>Creates a new CongsuatmayEntity.Mahangs field instance</summary>
+		public static EntityField2 Mahangs
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Mahangs);}
 		}
 	}
 

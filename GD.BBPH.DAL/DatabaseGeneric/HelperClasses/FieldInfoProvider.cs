@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 27, 2022 10:17:26 AM
+// Code is generated on: Thursday, October 27, 2022 4:52:14 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -185,6 +185,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("CongsuatmayEntity", "Maqcthanhpham", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Maqcthanhpham, 2147483647, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Macautrucins", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Macautrucins, 2147483647, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Makhachs", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Makhachs, 2147483647, 0, 0);
+			base.AddElementFieldInfo("CongsuatmayEntity", "Mahangs", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Mahangs, 2147483647, 0, 0);
 		}
 		/// <summary>Inits CtptmangDEntity's FieldInfo objects</summary>
 		private void InitCtptmangDEntityInfos()

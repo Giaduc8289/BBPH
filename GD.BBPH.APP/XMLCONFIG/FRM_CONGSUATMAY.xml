@@ -184,6 +184,15 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Mahangs</name>
+    <headerText>Sản phẩm</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Tocdo</name>
     <headerText>Tốc độ</headerText>
     <BackColor>0</BackColor>
