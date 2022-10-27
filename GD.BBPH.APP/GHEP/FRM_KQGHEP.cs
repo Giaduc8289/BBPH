@@ -748,6 +748,27 @@ namespace GD.BBPH.APP.GHEP
         //}
         #endregion
 
+        #region  Text change
+        private void Tinhnangsuat()
+        {
+            try
+            {
+                decimal _timerun = 0, _tocdo = 0, _somet = 0, _nangsuat = 0;
+                _somet = LIB.ConvertString.NumbertoDB(txt_THUCTEMET.Text.Trim());
+                _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text);
+                _timerun = Convert.ToDecimal((Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).TotalMinutes)
+                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
+                _nangsuat = _somet / _tocdo / _timerun * 100;
+                txt_NANGSUAT.Text = Math.Round(_nangsuat).ToString();
+            }
+            catch { }
+        }
+        private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
+        {
+            Tinhnangsuat();
+        }
+        #endregion
+
         private void label12_Click(object sender, EventArgs e)
         {
 
