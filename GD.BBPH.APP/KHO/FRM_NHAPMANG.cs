@@ -205,7 +205,6 @@ namespace GD.BBPH.APP.KHO
             BS_NHAPMANG_CHITIET_CurrentChanged((new object()), (new EventArgs()));
         }
 
-
         #region Xu ly dong chi tiet
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
@@ -280,8 +279,6 @@ namespace GD.BBPH.APP.KHO
 
 
         #endregion
-
-
 
         private string Save_Data(string _str_MAHIEU_PK)
         {

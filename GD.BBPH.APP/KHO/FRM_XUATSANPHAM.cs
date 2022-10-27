@@ -311,7 +311,6 @@ namespace GD.BBPH.APP.KHO
 
                 try { _XuatkhosanphamEntity.Id = Convert.ToInt64(_view[XuatkhosanphamFields.Id.Name].ToString()); }
                 catch { }
-
                 _XuatkhosanphamEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
                 if (_XuatkhosanphamEntity.IsNew)
                 {

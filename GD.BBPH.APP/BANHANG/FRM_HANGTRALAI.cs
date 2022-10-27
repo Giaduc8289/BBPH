@@ -145,7 +145,7 @@ namespace GD.BBPH.APP.BANHANG
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_HANGTRALAI_CurrentChanged"); }
         }
 
-        private string Save_Data(string _str_Hangtralai_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             HangtralaiEntity _HangtralaiEntity = new HangtralaiEntity();
 
@@ -162,16 +162,12 @@ namespace GD.BBPH.APP.BANHANG
             _HangtralaiEntity.Soluongtralai = Convert.ToDecimal(txt_Soluongtralai.Text.Trim());
             _HangtralaiEntity.Ngaytra = Convert.ToDateTime(txt_Ngaytra.Text.Trim());
             _HangtralaiEntity.Nguyennhan = txt_Nguyennhan.Text.Trim();
-            //_HangtralaiEntity.Ngaytao = txt_Ngaytao.Text.Trim();
-            //_HangtralaiEntity.Nguoitao = txt_Nguoitao.Text.Trim();
-            //_HangtralaiEntity.Ngaysua = txt_Ngaysua.Text.Trim();
-            //_HangtralaiEntity.Nguoisua = txt_Nguoisua.Text.Trim();
 
-            if (string.IsNullOrEmpty(_str_Hangtralai_PK))
+            if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _HangtralaiEntity.Ngaytao = DateTime.Now;
                 _HangtralaiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_Hangtralai_PK = _HangtralaiManager.InsertV2(_HangtralaiEntity, r_Insert, DT_HANGTRALAI, BS_HANGTRALAI);
+                _str_MAHIEU_PK = _HangtralaiManager.InsertV2(_HangtralaiEntity, r_Insert, DT_HANGTRALAI, BS_HANGTRALAI);
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_HangtralaiManager.Convert(_HangtralaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_HANGTRALAI.ResetCurrentItem();
             }
@@ -181,7 +177,6 @@ namespace GD.BBPH.APP.BANHANG
                 _HangtralaiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _HangtralaiManager.Update(_HangtralaiEntity);
 
-                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Id.Name].Value = _HangtralaiEntity.Id;
                 GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Sophieugiao.Name].Value = _HangtralaiEntity.Sophieugiao;
                 GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaygiao.Name].Value = _HangtralaiEntity.Ngaygiao;
                 GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Madon.Name].Value = _HangtralaiEntity.Madon;
@@ -194,13 +189,9 @@ namespace GD.BBPH.APP.BANHANG
                 GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Soluongtralai.Name].Value = _HangtralaiEntity.Soluongtralai;
                 GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaytra.Name].Value = _HangtralaiEntity.Ngaytra;
                 GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguyennhan.Name].Value = _HangtralaiEntity.Nguyennhan;
-                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaytao.Name].Value = _HangtralaiEntity.Ngaytao;
-                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguoitao.Name].Value = _HangtralaiEntity.Nguoitao;
-                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaysua.Name].Value = _HangtralaiEntity.Ngaysua;
-                //GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguoisua.Name].Value = _HangtralaiEntity.Nguoisua;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_HangtralaiManager.Convert(_HangtralaiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
-            return _str_Hangtralai_PK;
+            return _str_MAHIEU_PK;
         }
         #region Button
         private void btn_THEMMOI_Click(object sender, EventArgs e)

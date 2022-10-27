@@ -15,6 +15,31 @@ namespace GD.BBPH.LIB
 {
     public class CustomViewGrid : ViewGridBase
     {
+        //-----Danh sách các cột số nguyên
+        private static string[] _colInt = {
+            "Sotien", "Soluong", "Tongsoluong", "Gia", "Tien", "TienNsnn", "Dutoan", "DutoanNsnn", "Dutoanbosung", "DutoanbosungNsnn", "Dutoanhuy", "DutoanhuyNsnn"
+                , "Dunoluongdau", "Ducoluongdau", "Dunodauky", "Ducodauky", "Luykenoluong", "Luykecoluong", "Luykeno", "Luykeco", "Luykenotukhoidau", "Luykecotukhoidau"
+                , "DunoNsnn", "DucoNsnn", "LuykenoNsnn", "LuykecoNsnn", "Phatsinhno", "Phatsinhco", "Phatsinhnoluong", "Phatsinhcoluong", "PhatsinhnoNsnn", "PhatsinhcoNsnn"
+                , "Thu", "Chi", "Tiennopthue", "Tienthanhtoandvh"
+                , "Dorong", "Trongluong", "Congsuat", "Ca", "Lanha", "Sodau", "Socuoi", "Chieudai", "Luong", "Songaytruluisoi", "Songaytruluidet", "Trongluongphoi"
+                , "TrongluongkhongPE", "Tongtrongluong", "Chieudaicat", "Khoiluongsoi", "Khoiluongmanh", "Soluong", "Trangthai", "Klsoihoanthanh"
+                , "Klmanhhoanthanh", "Kldukien", "Tongnhucausoi", "Catrong", "Congsuattrong", "Chieudaixuat", "Khoiluongxuat", "Cong", "Congthaykho"
+                , "Dongia", "Thanhtien", "Soluongconlai", "Khoiluongconlai", "Tongsonhapkho", "Tongsohieuchinh", "Soluonghieuchinh", "Soluongtinhluong"
+                , "Soluongchuatinhluong", "Sometchuain", "Sosanpham1", "Sosanpham2", "Somet1", "Somet2", "Tientamung"
+        };
+
+        //-----Danh sách các cột số thập phân
+        private static string[] _colDecimal = {
+            "Tylehaomon", "Khoiluong", "Sokg", "Sokgdukien", "Doben", "Dodandai", "Khoiluongphe", "Tylephantram"
+        };
+
+        //-----Danh sách các cột ngày
+        private static string[] _colDate = {
+            "Ngaychungtu", "Ngayhachtoan", "Ngaydat", "Ngaygiao", "Ngaychay", "Ngay", "Ngayapdung", "Ngaymarket", "Ngayha", "Ngaynhap"
+                , "Ngayhoanthanh", "Ngaycuoink", "Ngaytrang", "Ngayin1", "Ngayin2", "Ngayxuat", "Ngaykiemke", "Ngaydieuchuyen"
+                , "Ngaybaogia", "Ngayhieuluc", "Ngayhoadon", "Ngayctkt"
+        };
+
         public static DataTable RebindRotator(string path)
         {
             DataTable rotatorData = new DataTable();
@@ -319,17 +344,7 @@ namespace GD.BBPH.LIB
                                                + "<ActAsSelector>" + "True" + "</ActAsSelector>"
                                                + "</Column" + 0 + ">";
                 }
-                if (dv[i]["name"].ToString() == "Ngaychungtu" || dv[i]["name"].ToString() == "Ngayhachtoan"
-                    || dv[i]["name"].ToString() == "Ngaydat" || dv[i]["name"].ToString() == "Ngaygiao"
-                    || dv[i]["name"].ToString() == "Ngaychay" || dv[i]["name"].ToString() == "Ngay"
-                    || dv[i]["name"].ToString() == "Ngayapdung" || dv[i]["name"].ToString() == "Ngaymarket"
-                    || dv[i]["name"].ToString() == "Ngayha" || dv[i]["name"].ToString() == "Ngaynhap"
-                    || dv[i]["name"].ToString() == "Ngayhoanthanh" || dv[i]["name"].ToString() == "Ngaycuoink"
-                    || dv[i]["name"].ToString() == "Ngaytrang" || dv[i]["name"].ToString() == "Ngayin1"
-                    || dv[i]["name"].ToString() == "Ngayin2" || dv[i]["name"].ToString() == "Ngayxuat"
-                    || dv[i]["name"].ToString() == "Ngaykiemke" || dv[i]["name"].ToString() == "Ngaydieuchuyen"
-                    || dv[i]["name"].ToString() == "Ngaybaogia" || dv[i]["name"].ToString() == "Ngayhieuluc"
-                    || dv[i]["name"].ToString() == "Ngayhoadon" || dv[i]["name"].ToString() == "Ngayctkt")
+                if (Array.Exists(_colDate, gtri => gtri == dv[i]["name"].ToString()))
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
                                               + "<Caption>" + dv[i]["headerText"].ToString() + "</Caption>"
@@ -339,47 +354,7 @@ namespace GD.BBPH.LIB
                                                + "<Width>" + dv[i]["Width"].ToString() + "</Width>"
                                               + "<Position>" + i + "</Position></Column" + i + ">";
                 }
-                if (dv[i]["name"].ToString() == "Sotien"
-                    || dv[i]["name"].ToString() == "Soluong" || dv[i]["name"].ToString() == "Tongsoluong" || dv[i]["name"].ToString() == "Gia"
-                    || dv[i]["name"].ToString() == "Tien" || dv[i]["name"].ToString() == "TienNsnn"
-                    || dv[i]["name"].ToString() == "Dutoan" || dv[i]["name"].ToString() == "DutoanNsnn"
-                    || dv[i]["name"].ToString() == "Dutoanbosung" || dv[i]["name"].ToString() == "DutoanbosungNsnn"
-                    || dv[i]["name"].ToString() == "Dutoanhuy" || dv[i]["name"].ToString() == "DutoanhuyNsnn"
-                    || dv[i]["name"].ToString() == "Dunoluongdau" || dv[i]["name"].ToString() == "Ducoluongdau"
-                    || dv[i]["name"].ToString() == "Dunodauky" || dv[i]["name"].ToString() == "Ducodauky"
-                    || dv[i]["name"].ToString() == "Luykenoluong" || dv[i]["name"].ToString() == "Luykecoluong"
-                    || dv[i]["name"].ToString() == "Luykeno" || dv[i]["name"].ToString() == "Luykeco"
-                    || dv[i]["name"].ToString() == "Luykenotukhoidau" || dv[i]["name"].ToString() == "Luykecotukhoidau"
-                    || dv[i]["name"].ToString() == "DunoNsnn" || dv[i]["name"].ToString() == "DucoNsnn"
-                    || dv[i]["name"].ToString() == "LuykenoNsnn" || dv[i]["name"].ToString() == "LuykecoNsnn"
-                    || dv[i]["name"].ToString() == "Phatsinhno" || dv[i]["name"].ToString() == "Phatsinhco"
-                    || dv[i]["name"].ToString() == "Phatsinhnoluong" || dv[i]["name"].ToString() == "Phatsinhcoluong"
-                    || dv[i]["name"].ToString() == "PhatsinhnoNsnn" || dv[i]["name"].ToString() == "PhatsinhcoNsnn"
-                    || dv[i]["name"].ToString() == "Thu" || dv[i]["name"].ToString() == "Chi"
-                    || dv[i]["name"].ToString() == "Tiennopthue" || dv[i]["name"].ToString() == "Tienthanhtoandvh"
-                    || dv[i]["name"].ToString() == "Dorong" || dv[i]["name"].ToString() == "Trongluong"
-                    || dv[i]["name"].ToString() == "Congsuat" || dv[i]["name"].ToString() == "Ca"
-                    || dv[i]["name"].ToString() == "Lanha" || dv[i]["name"].ToString() == "Sodau"
-                    || dv[i]["name"].ToString() == "Socuoi"
-                    || dv[i]["name"].ToString() == "Chieudai" || dv[i]["name"].ToString() == "Luong"
-                    || dv[i]["name"].ToString() == "Songaytruluisoi" || dv[i]["name"].ToString() == "Songaytruluidet"
-                    || dv[i]["name"].ToString() == "Trongluongphoi" || dv[i]["name"].ToString() == "TrongluongkhongPE"
-                    || dv[i]["name"].ToString() == "Tongtrongluong" || dv[i]["name"].ToString() == "Chieudaicat"
-                    || dv[i]["name"].ToString() == "Khoiluongsoi" || dv[i]["name"].ToString() == "Khoiluongmanh"
-                    || dv[i]["name"].ToString() == "Soluong" || dv[i]["name"].ToString() == "Trangthai"
-                    || dv[i]["name"].ToString() == "Klsoihoanthanh" || dv[i]["name"].ToString() == "Klmanhhoanthanh"
-                    || dv[i]["name"].ToString() == "Kldukien" || dv[i]["name"].ToString() == "Tongnhucausoi"
-                    || dv[i]["name"].ToString() == "Catrong" || dv[i]["name"].ToString() == "Congsuattrong"
-                    || dv[i]["name"].ToString() == "Chieudaixuat" || dv[i]["name"].ToString() == "Khoiluongxuat"
-                    || dv[i]["name"].ToString() == "Cong" || dv[i]["name"].ToString() == "Congthaykho"
-                    || dv[i]["name"].ToString() == "Dongia" || dv[i]["name"].ToString() == "Thanhtien"
-                    || dv[i]["name"].ToString() == "Soluongconlai" || dv[i]["name"].ToString() == "Khoiluongconlai"
-                    || dv[i]["name"].ToString() == "Tongsonhapkho" || dv[i]["name"].ToString() == "Tongsohieuchinh"
-                    || dv[i]["name"].ToString() == "Soluonghieuchinh" || dv[i]["name"].ToString() == "Soluongtinhluong"
-                    || dv[i]["name"].ToString() == "Soluongchuatinhluong" || dv[i]["name"].ToString() == "Sometchuain"
-                    || dv[i]["name"].ToString() == "Sosanpham1" || dv[i]["name"].ToString() == "Sosanpham2"
-                    || dv[i]["name"].ToString() == "Somet1" || dv[i]["name"].ToString() == "Somet2"
-                    || dv[i]["name"].ToString() == "Tientamung")
+                if (Array.Exists(_colInt, gtri => gtri == dv[i]["name"].ToString()))
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
                                               + "<Caption>" + dv[i]["headerText"].ToString() + "</Caption>"
@@ -390,10 +365,7 @@ namespace GD.BBPH.LIB
                                               + "<Width>" + dv[i]["Width"].ToString() + "</Width>"
                                               + "<Position>" + i + "</Position></Column" + i + ">";
                 }
-                else if (dv[i]["name"].ToString() == "Tylehaomon" || dv[i]["name"].ToString() == "Khoiluong"
-                    || dv[i]["name"].ToString() == "Sokg" || dv[i]["name"].ToString() == "Sokgdukien"
-                    || dv[i]["name"].ToString() == "Doben" || dv[i]["name"].ToString() == "Dodandai"
-                    || dv[i]["name"].ToString() == "Khoiluongphe" || dv[i]["name"].ToString() == "Tylephantram")
+                else if (Array.Exists(_colDecimal, gtri => gtri == dv[i]["name"].ToString()))
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
                                               + "<Caption>" + dv[i]["headerText"].ToString() + "</Caption>"
@@ -581,17 +553,7 @@ namespace GD.BBPH.LIB
             string CCollection = string.Empty;
             for (int i = 0; i < dv.Count; i++)
             {
-                if (dv[i]["name"].ToString() == "Ngaychungtu" || dv[i]["name"].ToString() == "Ngayhachtoan"
-                    || dv[i]["name"].ToString() == "Ngaydat" || dv[i]["name"].ToString() == "Ngaygiao"
-                    || dv[i]["name"].ToString() == "Ngaychay" || dv[i]["name"].ToString() == "Ngay"
-                    || dv[i]["name"].ToString() == "Ngayapdung" || dv[i]["name"].ToString() == "Ngaymarket"
-                    || dv[i]["name"].ToString() == "Ngayha" || dv[i]["name"].ToString() == "Ngaynhap"
-                    || dv[i]["name"].ToString() == "Ngayhoanthanh" || dv[i]["name"].ToString() == "Ngaycuoink"
-                    || dv[i]["name"].ToString() == "Ngaytrang" || dv[i]["name"].ToString() == "Ngayin1"
-                    || dv[i]["name"].ToString() == "Ngayin2" || dv[i]["name"].ToString() == "Ngayxuat"
-                    || dv[i]["name"].ToString() == "Ngaykiemke" || dv[i]["name"].ToString() == "Ngaydieuchuyen"
-                    || dv[i]["name"].ToString() == "Ngaybaogia" || dv[i]["name"].ToString() == "Ngayhieuluc"
-                    || dv[i]["name"].ToString() == "Ngayhoadon" || dv[i]["name"].ToString() == "Ngayctkt")
+                if (Array.Exists(_colDate, gtri => gtri == dv[i]["name"].ToString()))
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
                                               + "<Caption>" + dv[i]["headerText"].ToString() + "</Caption>"
@@ -601,47 +563,7 @@ namespace GD.BBPH.LIB
                                                + "<Width>" + dv[i]["Width"].ToString() + "</Width>"
                                               + "<Position>" + i + "</Position></Column" + i + ">";
                 }
-                if (dv[i]["name"].ToString() == "Sotien"
-                    || dv[i]["name"].ToString() == "Soluong" || dv[i]["name"].ToString() == "Tongsoluong" || dv[i]["name"].ToString() == "Gia"
-                    || dv[i]["name"].ToString() == "Tien" || dv[i]["name"].ToString() == "TienNsnn"
-                    || dv[i]["name"].ToString() == "Dutoan" || dv[i]["name"].ToString() == "DutoanNsnn"
-                    || dv[i]["name"].ToString() == "Dutoanbosung" || dv[i]["name"].ToString() == "DutoanbosungNsnn"
-                    || dv[i]["name"].ToString() == "Dutoanhuy" || dv[i]["name"].ToString() == "DutoanhuyNsnn"
-                    || dv[i]["name"].ToString() == "Dunoluongdau" || dv[i]["name"].ToString() == "Ducoluongdau"
-                    || dv[i]["name"].ToString() == "Dunodauky" || dv[i]["name"].ToString() == "Ducodauky"
-                    || dv[i]["name"].ToString() == "Luykenoluong" || dv[i]["name"].ToString() == "Luykecoluong"
-                    || dv[i]["name"].ToString() == "Luykeno" || dv[i]["name"].ToString() == "Luykeco"
-                    || dv[i]["name"].ToString() == "Luykenotukhoidau" || dv[i]["name"].ToString() == "Luykecotukhoidau"
-                    || dv[i]["name"].ToString() == "DunoNsnn" || dv[i]["name"].ToString() == "DucoNsnn"
-                    || dv[i]["name"].ToString() == "LuykenoNsnn" || dv[i]["name"].ToString() == "LuykecoNsnn"
-                    || dv[i]["name"].ToString() == "Phatsinhno" || dv[i]["name"].ToString() == "Phatsinhco"
-                    || dv[i]["name"].ToString() == "Phatsinhnoluong" || dv[i]["name"].ToString() == "Phatsinhcoluong"
-                    || dv[i]["name"].ToString() == "PhatsinhnoNsnn" || dv[i]["name"].ToString() == "PhatsinhcoNsnn"
-                    || dv[i]["name"].ToString() == "Thu" || dv[i]["name"].ToString() == "Chi"
-                    || dv[i]["name"].ToString() == "Tiennopthue" || dv[i]["name"].ToString() == "Tienthanhtoandvh"
-                    || dv[i]["name"].ToString() == "Dorong" || dv[i]["name"].ToString() == "Trongluong"
-                    || dv[i]["name"].ToString() == "Congsuat" || dv[i]["name"].ToString() == "Ca"
-                    || dv[i]["name"].ToString() == "Lanha" || dv[i]["name"].ToString() == "Sodau"
-                    || dv[i]["name"].ToString() == "Socuoi"
-                    || dv[i]["name"].ToString() == "Chieudai" || dv[i]["name"].ToString() == "Luong"
-                    || dv[i]["name"].ToString() == "Songaytruluisoi" || dv[i]["name"].ToString() == "Songaytruluidet"
-                    || dv[i]["name"].ToString() == "Trongluongphoi" || dv[i]["name"].ToString() == "TrongluongkhongPE"
-                    || dv[i]["name"].ToString() == "Tongtrongluong" || dv[i]["name"].ToString() == "Chieudaicat"
-                    || dv[i]["name"].ToString() == "Khoiluongsoi" || dv[i]["name"].ToString() == "Khoiluongmanh"
-                    || dv[i]["name"].ToString() == "Soluong" || dv[i]["name"].ToString() == "Trangthai"
-                    || dv[i]["name"].ToString() == "Klsoihoanthanh" || dv[i]["name"].ToString() == "Klmanhhoanthanh"
-                    || dv[i]["name"].ToString() == "Kldukien" || dv[i]["name"].ToString() == "Tongnhucausoi"
-                    || dv[i]["name"].ToString() == "Catrong" || dv[i]["name"].ToString() == "Congsuattrong"
-                    || dv[i]["name"].ToString() == "Chieudaixuat" || dv[i]["name"].ToString() == "Khoiluongxuat"
-                    || dv[i]["name"].ToString() == "Cong" || dv[i]["name"].ToString() == "Congthaykho"
-                    || dv[i]["name"].ToString() == "Dongia" || dv[i]["name"].ToString() == "Thanhtien"
-                    || dv[i]["name"].ToString() == "Soluongconlai" || dv[i]["name"].ToString() == "Khoiluongconlai"
-                    || dv[i]["name"].ToString() == "Tongsonhapkho" || dv[i]["name"].ToString() == "Tongsohieuchinh"
-                    || dv[i]["name"].ToString() == "Soluonghieuchinh" || dv[i]["name"].ToString() == "Soluongtinhluong"
-                    || dv[i]["name"].ToString() == "Soluongchuatinhluong" || dv[i]["name"].ToString() == "Sometchuain"
-                    || dv[i]["name"].ToString() == "Sosanpham1" || dv[i]["name"].ToString() == "Sosanpham2"
-                    || dv[i]["name"].ToString() == "Somet1" || dv[i]["name"].ToString() == "Somet2"
-                    || dv[i]["name"].ToString() == "Tientamung")
+                if (Array.Exists(_colInt, gtri => gtri == dv[i]["name"].ToString()))
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
                                               + "<Caption>" + dv[i]["headerText"].ToString() + "</Caption>"
@@ -652,10 +574,7 @@ namespace GD.BBPH.LIB
                                               + "<Width>" + dv[i]["Width"].ToString() + "</Width>"
                                               + "<Position>" + i + "</Position></Column" + i + ">";
                 }
-                else if (dv[i]["name"].ToString() == "Tylehaomon" || dv[i]["name"].ToString() == "Khoiluong"
-                    || dv[i]["name"].ToString() == "Sokg" || dv[i]["name"].ToString() == "Sokgdukien"
-                    || dv[i]["name"].ToString() == "Doben" || dv[i]["name"].ToString() == "Dodandai"
-                    || dv[i]["name"].ToString() == "Khoiluongphe" || dv[i]["name"].ToString() == "Tylephantram")
+                else if (Array.Exists(_colDecimal, gtri => gtri == dv[i]["name"].ToString()))
                 {
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
                                               + "<Caption>" + dv[i]["headerText"].ToString() + "</Caption>"

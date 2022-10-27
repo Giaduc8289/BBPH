@@ -285,8 +285,25 @@ namespace GD.BBPH.APP.KHO
                 try { _SodunguyenlieuEntity.Soluong = Convert.ToDecimal(_view.Row[SodunguyenlieuFields.Soluong.Name].ToString()); }
                 catch { }
                 _SodunguyenlieuEntity.Donvitinh = _view.Row[SodunguyenlieuFields.Donvitinh.Name].ToString();
-                //_SodunguyenlieuEntity.Malydo = _view.Row[SodunguyenlieuFields.Malydo.Name].ToString();
-                //_SodunguyenlieuEntity.Tenlydo = _view.Row[SodunguyenlieuFields.Tenlydo.Name].ToString();
+
+                try { _SodunguyenlieuEntity.Id = Convert.ToInt64(_view[SodunguyenlieuFields.Id.Name].ToString()); }
+                catch { }
+                _SodunguyenlieuEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_SodunguyenlieuEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new SodunguyenlieuManager()).SelectById(_SodunguyenlieuEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _SodunguyenlieuEntity.Ngaysua = DateTime.Now;
+                        _SodunguyenlieuEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _SodunguyenlieuEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _SodunguyenlieuEntity.Ngaytao = DateTime.Now;
+                        _SodunguyenlieuEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
 
                 if (!string.IsNullOrEmpty(_SodunguyenlieuEntity.Manguyenlieu))
                     _SodunguyenlieuEntityCol.Add(_SodunguyenlieuEntity);
@@ -304,7 +321,6 @@ namespace GD.BBPH.APP.KHO
                 }
                 else _SodunguyenlieuManager.Update(_SodunguyenlieuEntity);
             }
-            //GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Id.Name].Value = _SodunguyenlieuEntity.Id;
             GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Ngaykiemke.Name].Value = _ngaynhap;
             GRID_SODUNGUYENLIEU.CurrentRow.Cells[SodunguyenlieuFields.Makho.Name].Value = txt_MAKHO.Text.Trim(); ;
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodunguyenlieuManager.Convert(_SodunguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);

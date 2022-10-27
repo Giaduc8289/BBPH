@@ -492,7 +492,7 @@ namespace GD.BBPH.APP.BANHANG
                 try { _DonhangDEntity.Loaihang = Convert.ToInt32(_view[DonhangDFields.Loaihang.Name].ToString()); }
                 catch { }
                 _DonhangDEntity.Masp = _view[DonhangDFields.Masp.Name].ToString();
-                //_DonhangDEntity.Tenhang = _view[DonhangDFields.Tenhang.Name].ToString();
+                _DonhangDEntity.Tenhang = _view[DonhangDFields.Tenhang.Name].ToString();
                 //_DonhangDEntity.Chungloai = _view[DonhangDFields.Chungloai.Name].ToString();
                 //_DonhangDEntity.Mauin = _view[DonhangDFields.Mauin.Name].ToString();
                 //_DonhangDEntity.Loai = _view[DonhangDFields.Loai.Name].ToString();
@@ -503,23 +503,6 @@ namespace GD.BBPH.APP.BANHANG
                 catch { }
                 try { _DonhangDEntity.Ngaygiao = Convert.ToDateTime(_view[DonhangDFields.Ngaygiao.Name].ToString()); }
                 catch { }
-
-                //try { _DonhangDEntity.Iddieuchinhtruoc = Convert.ToInt64(_view[DonhangDFields.Iddieuchinhtruoc.Name].ToString()); }
-                //catch { }
-                //try { _DonhangDEntity.Ngaydieuchinh = Convert.ToDateTime(_view[DonhangDFields.Ngaydieuchinh.Name].ToString()); }
-                //catch { }
-                //_DonhangDEntity.Sobaogiadieuchinh = _view[DonhangDFields.Sobaogiadieuchinh.Name].ToString();
-                //try { _DonhangDEntity.Soluongdieuchinh = Convert.ToInt32(_view[DonhangDFields.Soluongdieuchinh.Name].ToString()); }
-                //catch { }
-                //try { _DonhangDEntity.Dongiadieuchinh = Convert.ToDecimal(_view[DonhangDFields.Dongiadieuchinh.Name].ToString()); }
-                //catch { }
-                //try { _DonhangDEntity.Ngaygiaodieuchinh = Convert.ToDateTime(_view[DonhangDFields.Ngaygiaodieuchinh.Name].ToString()); }
-                //catch { }
-
-                //try { _DonhangDEntity.Ngayhethanpo = Convert.ToDateTime(_view[DonhangDFields.Ngayhethanpo.Name].ToString()); }
-                //catch { }
-                //try { _DonhangDEntity.Ngaymarket = Convert.ToDateTime(_view[DonhangDFields.Ngaymarket.Name].ToString()); }
-                //catch { }
                 _DonhangDEntity.Ghichu = _view[DonhangDFields.Ghichu.Name].ToString();
 
                 try { _DonhangDEntity.Id = Convert.ToInt64(_view[DonhangDFields.Id.Name].ToString()); }
