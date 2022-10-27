@@ -277,6 +277,7 @@
             this.txt_SOKG.Size = new System.Drawing.Size(93, 20);
             this.txt_SOKG.TabIndex = 10;
             this.txt_SOKG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOKG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_SANLUONG_Validating);
             // 
             // txt_SOM
             // 
@@ -292,6 +293,7 @@
             this.txt_SOM.Size = new System.Drawing.Size(93, 20);
             this.txt_SOM.TabIndex = 9;
             this.txt_SOM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_SANLUONG_Validating);
             // 
             // label19
             // 
