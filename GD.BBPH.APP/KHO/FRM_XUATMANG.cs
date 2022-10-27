@@ -281,7 +281,7 @@ namespace GD.BBPH.APP.KHO
         #endregion
 
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DateTime _ngayxuat = Convert.ToDateTime(txt_NGAY.Text.Trim());
 
@@ -340,11 +340,11 @@ namespace GD.BBPH.APP.KHO
                 else _XuatkhomangManager.Update(_XuatkhomangEntity);
             }
 
-            //if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            //if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             //{
             //    _XuatkhomangEntity.Ngaytao = DateTime.Now;
             //    _XuatkhomangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _str_DMCHUONG_PK = _XuatkhomangManager.InsertV2(_XuatkhomangEntity, r_Insert, DT_XUATMANG, BS_XUATMANG);
+            //    _str_MAHIEU_PK = _XuatkhomangManager.InsertV2(_XuatkhomangEntity, r_Insert, DT_XUATMANG, BS_XUATMANG);
             //     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_XuatkhomangManager.Convert(_XuatkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             //    BS_XUATMANG.ResetCurrentItem();
             //}
@@ -370,7 +370,7 @@ namespace GD.BBPH.APP.KHO
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_XuatkhomangManager.Convert(_XuatkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
             //}
-            return _str_DMCHUONG_PK;
+            return _str_MAHIEU_PK;
         }
 
 

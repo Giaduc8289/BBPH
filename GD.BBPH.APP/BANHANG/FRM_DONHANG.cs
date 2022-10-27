@@ -462,7 +462,7 @@ namespace GD.BBPH.APP.BANHANG
         }
         #endregion
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DonhangHEntity _DonhangHEntity = new DonhangHEntity();
             _DonhangHEntity.Madon = txt_MADONDATHANG.Text.Trim();
@@ -546,11 +546,11 @@ namespace GD.BBPH.APP.BANHANG
                     _DonhangDEntityCol.Add(_DonhangDEntity);
             }
 
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _DonhangHEntity.Ngaytao = DateTime.Now;
                 _DonhangHEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _DonhangHManager.InsertV2(_DonhangHEntity, r_Insert, DT_DONDATHANG_H, BS_DONDATHANG_H);
+                _str_MAHIEU_PK = _DonhangHManager.InsertV2(_DonhangHEntity, r_Insert, DT_DONDATHANG_H, BS_DONDATHANG_H);
                 _DonhangDManager.InsertCollection(_DonhangDEntityCol);
                 GRID_DONHANG_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_DONHANG_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -594,7 +594,7 @@ namespace GD.BBPH.APP.BANHANG
                 BS_DONDATHANG_H.ResetCurrentItem();
                 BS_DONDATHANG_H_CurrentChanged(new object(), new EventArgs());
             }
-            return _str_DMCHUONG_PK;
+            return _str_MAHIEU_PK;
         }
 
         #region Button

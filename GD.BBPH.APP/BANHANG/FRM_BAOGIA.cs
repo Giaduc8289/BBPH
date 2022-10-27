@@ -355,7 +355,7 @@ namespace GD.BBPH.APP.BANHANG
         }
         #endregion
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             BaogiaHEntity _BaogiaHEntity = new BaogiaHEntity();
             _BaogiaHEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
@@ -425,11 +425,11 @@ namespace GD.BBPH.APP.BANHANG
                     _BaogiaDEntityCol.Add(_BaogiaDEntity);
             }
 
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _BaogiaHEntity.Ngaytao = DateTime.Now;
                 _BaogiaHEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _BaogiaHManager.InsertV2(_BaogiaHEntity, r_Insert, DT_BAOGIA_H, BS_BAOGIA_H);
+                _str_MAHIEU_PK = _BaogiaHManager.InsertV2(_BaogiaHEntity, r_Insert, DT_BAOGIA_H, BS_BAOGIA_H);
                 _BaogiaDManager.InsertCollection(_BaogiaDEntityCol);
                 GRID_BAOGIA_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_BAOGIA_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -471,7 +471,7 @@ namespace GD.BBPH.APP.BANHANG
                 BS_BAOGIA_H.ResetCurrentItem();
                 BS_BAOGIA_H_CurrentChanged(new object(), new EventArgs());
             }
-            return _str_DMCHUONG_PK;
+            return _str_MAHIEU_PK;
         }
 
         #region Button

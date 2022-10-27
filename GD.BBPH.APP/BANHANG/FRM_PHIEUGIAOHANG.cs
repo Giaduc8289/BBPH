@@ -384,7 +384,7 @@ namespace GD.BBPH.APP.BANHANG
         }
         #endregion
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             PhieugiaohangHEntity _PhieugiaohangHEntity = new PhieugiaohangHEntity();
             _PhieugiaohangHEntity.Sophieu = txt_SOPHIEUGIAO.Text.Trim();
@@ -455,11 +455,11 @@ namespace GD.BBPH.APP.BANHANG
                     _PhieugiaohangDEntityCol.Add(_PhieugiaohangDEntity);
             }
 
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _PhieugiaohangHEntity.Ngaytao = DateTime.Now;
                 _PhieugiaohangHEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _PhieugiaohangHManager.InsertV2(_PhieugiaohangHEntity, r_Insert, DT_PHIEUGIAOHANG_H, BS_PHIEUGIAOHANG_H);
+                _str_MAHIEU_PK = _PhieugiaohangHManager.InsertV2(_PhieugiaohangHEntity, r_Insert, DT_PHIEUGIAOHANG_H, BS_PHIEUGIAOHANG_H);
                 _PhieugiaohangDManager.InsertCollection(_PhieugiaohangDEntityCol);
                 GRID_PHIEUGIAOHANG_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_PHIEUGIAOHANG_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -503,7 +503,7 @@ namespace GD.BBPH.APP.BANHANG
                 BS_PHIEUGIAOHANG_H.ResetCurrentItem();
                 BS_PHIEUGIAOHANG_H_CurrentChanged(new object(), new EventArgs());
             }
-            return _str_DMCHUONG_PK;
+            return _str_MAHIEU_PK;
         }
 
         #region Button

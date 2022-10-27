@@ -303,7 +303,7 @@ namespace GD.BBPH.APP.TUA
             btn_XOADONG_Click(new object(), new EventArgs());
         }
         #endregion
-        private string Save_Data(string _str_Tknguyenlieuthoi_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DateTime _ngay = Convert.ToDateTime(txt_NGAY.Text.Trim());
             int _ca = Convert.ToInt32(txt_CA.Text.Trim());
@@ -385,11 +385,11 @@ namespace GD.BBPH.APP.TUA
                 if (!string.IsNullOrEmpty(_KetquatuaEntity.Masanpham))
                     _KetquatuaEntityCol.Add(_KetquatuaEntity);
             }
-            //if (string.IsNullOrEmpty(_str_Tknguyenlieuthoi_PK))
+            //if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             //{
             //    //_KetquatuaEntity.Ngaytao = DateTime.Now;
             //    //_KetquatuaEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _str_Tknguyenlieuthoi_PK = _KetquatuaManager.InsertV2(_KetquatuaEntity, r_Insert, DT_TKKQTUA, BS_TKKQTUA);
+            //    _str_MAHIEU_PK = _KetquatuaManager.InsertV2(_KetquatuaEntity, r_Insert, DT_TKKQTUA, BS_TKKQTUA);
             //    _KetquatuaManager.InsertCollection(_KetquatuaEntityCol);
             //    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquatuaManager.Convert(_KetquatuaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             //    btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
@@ -414,7 +414,7 @@ namespace GD.BBPH.APP.TUA
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquatuaManager.Convert(_KetquatuaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
             //}
-            return _str_Tknguyenlieuthoi_PK;
+            return _str_MAHIEU_PK;
         }
 
         #region Button

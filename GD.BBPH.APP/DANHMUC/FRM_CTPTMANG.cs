@@ -281,14 +281,14 @@ namespace GD.BBPH.APP.DANHMUC
             BS_CTPTMANG_D_CurrentChanged((new object()), (new EventArgs()));
         }
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity();
             _CtptmangHEntity.Mactpt = txt_MACONGTHUC.Text.Trim();
             _CtptmangHEntity.Tenctpt = txt_TENCONGTHUC.Text.Trim();
             try { _CtptmangHEntity.Ngayapdung = Convert.ToDateTime(txt_NGAYAPDUNG.Text.Trim()); }
             catch { }
-            try { _CtptmangHEntity.Id = Convert.ToInt64(_str_DMCHUONG_PK); }
+            try { _CtptmangHEntity.Id = Convert.ToInt64(_str_MAHIEU_PK); }
             catch { }
 
             EntityCollection _CtptmangDEntityCol = new EntityCollection();
@@ -331,11 +331,11 @@ namespace GD.BBPH.APP.DANHMUC
                 _CtptmangDEntityCol.Add(_CtptmangDEntity);
             }
 
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _CtptmangHEntity.Ngaytao = DateTime.Now;
                 _CtptmangHEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _CtptmangHManager.InsertV2(_CtptmangHEntity, r_Insert, DT_CTPTMANG_H, BS_CTPTMANG_H);
+                _str_MAHIEU_PK = _CtptmangHManager.InsertV2(_CtptmangHEntity, r_Insert, DT_CTPTMANG_H, BS_CTPTMANG_H);
                 foreach (CtptmangDEntity _TpsEntity in _CtptmangDEntityCol)
                     _TpsEntity.IdH = _CtptmangHEntity.Id;
                 _CtptmangDManager.InsertCollection(_CtptmangDEntityCol);
@@ -377,7 +377,7 @@ namespace GD.BBPH.APP.DANHMUC
                 BS_CTPTMANG_H_CurrentChanged(new object(), new EventArgs());
             }
 
-            return _str_DMCHUONG_PK;      
+            return _str_MAHIEU_PK;      
         }
 
         #region Button

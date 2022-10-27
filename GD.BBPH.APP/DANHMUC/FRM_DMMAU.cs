@@ -274,7 +274,7 @@ namespace GD.BBPH.APP.DANHMUC
             BS_TPMAU_CurrentChanged((new object()), (new EventArgs()));
         }
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DmmauEntity _DmmauEntity = new DmmauEntity();
 
@@ -323,11 +323,11 @@ namespace GD.BBPH.APP.DANHMUC
                 _ThanhphanmauEntityCol.Add(_ThanhphanmauEntity);
             }
 
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _DmmauEntity.Ngaytao = DateTime.Now;
                 _DmmauEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _DmmauManager.InsertV2(_DmmauEntity, r_Insert, DT_DMMAU, BS_DMMAU);
+                _str_MAHIEU_PK = _DmmauManager.InsertV2(_DmmauEntity, r_Insert, DT_DMMAU, BS_DMMAU);
 
                 //---Xử lý trường hợp khi thêm mới màu gốc, thì thành phần màu tự bổ sung với tỷ lệ 100%
                 if(_DmmauEntity.Lamaugoc==true)
@@ -381,7 +381,7 @@ namespace GD.BBPH.APP.DANHMUC
                 BS_DMMAU_CurrentChanged(new object(), new EventArgs());
             }
 
-            return _str_DMCHUONG_PK;      
+            return _str_MAHIEU_PK;      
         }
 
         private void btn_CHONMAU_Click(object sender, EventArgs e)
