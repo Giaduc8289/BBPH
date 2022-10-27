@@ -186,7 +186,7 @@ namespace GD.BBPH.APP.IN
                     txt_THOIGIANSUCO.Text = _Rowview.Row[KetquainFields.Thoigiansuco.Name].ToString();
 
                     txt_NANGSUAT.Text = _Rowview.Row[KetquainFields.Nangsuat.Name].ToString();
-                    //txt_TILESAIHONG.Text = _Rowview.Row[KetquainFields.Chatluong.Name].ToString();
+                    txt_TILESAIHONG.Text = _Rowview.Row[KetquainFields.Tylesaihong.Name].ToString();
 
                 }
             }
@@ -243,7 +243,7 @@ namespace GD.BBPH.APP.IN
             r_Detail[KetquainFields.Thoigianchuanbi.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim());
             r_Detail[KetquainFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
             r_Detail[KetquainFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
-            //r_Detail[KetquainFields.Chatluong.Name] = LIB.ConvertString.NumbertoDB(txt_TILESAIHONG.Text.Trim());
+            r_Detail[KetquainFields.Tylesaihong.Name] = LIB.ConvertString.NumbertoDB(txt_TILESAIHONG.Text.Trim());
 
 
             DT_KQIN_CHITIET_FILL.Rows.Add(r_Detail);
@@ -338,6 +338,8 @@ namespace GD.BBPH.APP.IN
                 _KetquainEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquainFields.Thoigianketthuc.Name].ToString());
                 _KetquainEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquainFields.Thoigianchuanbi.Name].ToString());
                 _KetquainEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquainFields.Thoigiansuco.Name].ToString());
+                _KetquainEntity.Nangsuat = Convert.ToDecimal(_view.Row[KetquainFields.Nangsuat.Name].ToString());
+                _KetquainEntity.Tylesaihong = Convert.ToDecimal(_view.Row[KetquainFields.Tylesaihong.Name].ToString());
 
 
                 #region xét isnew
@@ -641,6 +643,27 @@ namespace GD.BBPH.APP.IN
         {
             Tinhnangsuat();
         }
+
+        //private void Tinhchatluong()
+        //{
+        //    try
+        //    {
+        //        decimal _doday = 0, _rong = 0, _saihongthucte = 0, _tylesaihong = 0, _saihongdm = 0;
+        //        _saihongthucte = LIB.ConvertString.NumbertoDB(txt_SAIHONGTHUCTE.Text.Trim());
+        //        DmhangEntity _DmmangEntity = new DmhangManager().SelectOne(txt_MASP.Text);
+        //        _doday = Convert.ToDecimal(_DmmangEntity.Doday);
+        //        _rong = Convert.ToDecimal(_DmmangEntity.Rong);
+        //        _saihongdm = _doday / 1000 * _rong / 1000 * Convert.ToDecimal(1.4);
+        //        _tylesaihong = _saihongthucte / _saihongdm * 100;
+        //        txt_TILESAIHONG.Text = Math.Round(_tylesaihong).ToString();
+        //    }
+        //    catch { }
+        //}
+
+        //private void txt_SANLUONG_Validating(object sender, CancelEventArgs e)
+        //{
+        //    Tinhchatluong();
+        //}
         #endregion
 
         #region Shortcut Key
