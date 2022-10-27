@@ -131,17 +131,17 @@ namespace GD.BBPH.APP.DANHMUC
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMNHOMNGUYENLIEU_CurrentChanged"); }
         }
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DmnhomnguyenlieuEntity _DmnhomnguyenlieuEntity = new DmnhomnguyenlieuEntity();
             _DmnhomnguyenlieuEntity.Manhom = txt_MANHOM.Text.Trim();
             _DmnhomnguyenlieuEntity.Tennhomnguyenlieu = txt_TENNL.Text.Trim();
             _DmnhomnguyenlieuEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _DmnhomnguyenlieuEntity.Ngaytao = DateTime.Now;
                 _DmnhomnguyenlieuEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _DmnhomnguyenlieuManager.InsertV2(_DmnhomnguyenlieuEntity, r_Insert, DT_DMNHOMNGUYENLIEU, BS_DMNHOMNGUYENLIEU);
+                _str_MAHIEU_PK = _DmnhomnguyenlieuManager.InsertV2(_DmnhomnguyenlieuEntity, r_Insert, DT_DMNHOMNGUYENLIEU, BS_DMNHOMNGUYENLIEU);
                  GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnhomnguyenlieuManager.Convert(_DmnhomnguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMNHOMNGUYENLIEU.ResetCurrentItem();
             }
@@ -155,7 +155,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMNHOMNGUYENLIEU.CurrentRow.Cells[DmnhomnguyenlieuFields.Tenrutgon.Name].Value = _DmnhomnguyenlieuEntity.Tenrutgon;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnhomnguyenlieuManager.Convert(_DmnhomnguyenlieuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
-            return _str_DMCHUONG_PK;
+            return _str_MAHIEU_PK;
         }
 
         #region Button

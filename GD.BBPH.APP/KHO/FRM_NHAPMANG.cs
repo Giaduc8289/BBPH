@@ -31,7 +31,7 @@ namespace GD.BBPH.APP.KHO
         private GD.BBPH.CONTROL.JGridEX GRID_NHAPMANG = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_NHAPMANGCHITIET = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET = "";
-        private string MAMANG = "", MAKHO ="" ;
+        private string MAMANG = "", MAKHO = "";
         private DataTable DT_DMMANG = new DataTable(), DT_DMKHO = new DataTable(), DT_DMLYDONHAPXUAT = new DataTable();
 
 
@@ -283,7 +283,7 @@ namespace GD.BBPH.APP.KHO
 
 
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DateTime _ngaynhap = Convert.ToDateTime(txt_NGAY.Text.Trim());
 
@@ -343,37 +343,13 @@ namespace GD.BBPH.APP.KHO
                 else _NhapkhomangManager.Update(_NhapkhomangEntity);
             }
 
-            //if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
-            //{
-            //    _NhapkhomangEntity.Ngaytao = DateTime.Now;
-            //    _NhapkhomangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _str_DMCHUONG_PK = _NhapkhomangManager.InsertV2(_NhapkhomangEntity, r_Insert, DT_NHAPMANG, BS_NHAPMANG);
-            //     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_NhapkhomangManager.Convert(_NhapkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            //    BS_NHAPMANG.ResetCurrentItem();
-            //}
-            //else
-            //{
-            //    _NhapkhomangEntity.Ngaysua = DateTime.Now;
-            //    _NhapkhomangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _NhapkhomangManager.Update(_NhapkhomangEntity);
             GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Ngaynhap.Name].Value = _ngaynhap;
             GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Makho.Name].Value = txt_MAKHO.Text.Trim();
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Tenkho.Name].Value = txt_TENKHO.Text.Trim();
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Mamang.Name].Value = _NhapkhomangEntity.Mamang;
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Tenmang.Name].Value = _NhapkhomangEntity.Tenmang;
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Soluong.Name].Value = _NhapkhomangEntity.Soluong;
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Somet.Name].Value = _NhapkhomangEntity.Somet;
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Sokg.Name].Value = _NhapkhomangEntity.Sokg;
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Malydo.Name].Value = _NhapkhomangEntity.Malydo;
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Tenlydo.Name].Value = _NhapkhomangEntity.Tenlydo;
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Lenhsx.Name].Value = _NhapkhomangEntity.Lenhsx;
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Sophieugiao.Name].Value = _NhapkhomangEntity.Sophieugiao;
-            //GRID_NHAPMANG.CurrentRow.Cells[NhapkhomangFields.Madonhang.Name].Value = _NhapkhomangEntity.Madonhang;
 
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_NhapkhomangManager.Convert(_NhapkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
-            //}
-            return _str_DMCHUONG_PK;
+
+            return _str_MAHIEU_PK;
         }
 
         #region Button
@@ -391,7 +367,7 @@ namespace GD.BBPH.APP.KHO
             txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
             txt_MAKHO.Text = txt_TENKHO.Text = txt_SOKG.Text = txt_SOM.Text = txt_MAMANG.Text = txt_TENMANG.Text = txt_MALYDO.Text = txt_TENLYDO.Text = txt_LENHSX.Text = txt_SOHD.Text = string.Empty;
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENKHO, txt_TENMANG }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHO, txt_TENMANG }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_NHAPMANG.Enabled = false;

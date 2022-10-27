@@ -387,7 +387,7 @@ namespace GD.BBPH.APP.DANHMUC
         }
         #endregion
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DmhangEntity _DmhangEntity = new DmhangEntity();
 
@@ -506,11 +506,11 @@ namespace GD.BBPH.APP.DANHMUC
             }
             #endregion
 
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _DmhangEntity.Ngaytao = DateTime.Now;
                 _DmhangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _DmhangManager.InsertV2(_DmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
+                _str_MAHIEU_PK = _DmhangManager.InsertV2(_DmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
                 new MaucuahangManager().InsertCollection(_MaucuahangEntityCol);
                 new TruccuahangManager().InsertCollection(_TruccuahangEntityCol);
                 GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -597,7 +597,7 @@ namespace GD.BBPH.APP.DANHMUC
                 BS_DMHANGHOA.ResetCurrentItem();
                 BS_DMHANGHOA_CurrentChanged(new object(), new EventArgs());
             }
-            return _str_DMCHUONG_PK;
+            return _str_MAHIEU_PK;
         }
 
         #region Button

@@ -126,18 +126,18 @@ namespace GD.BBPH.APP.DANHMUC
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMNHOMDINHMUC_CurrentChanged"); }
         }
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DmnhomdinhmucEntity _DmnhomdinhmucEntity = new DmnhomdinhmucEntity();
             _DmnhomdinhmucEntity.Manhom = txt_MANHOM.Text.Trim();
             _DmnhomdinhmucEntity.Tennhom = txt_TENNHOM.Text.Trim();
             _DmnhomdinhmucEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
 
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _DmnhomdinhmucEntity.Ngaytao = DateTime.Now;
                 _DmnhomdinhmucEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _DmnhomdinhmucManager.InsertV2(_DmnhomdinhmucEntity, r_Insert, DT_DMNHOMDINHMUC, BS_DMNHOMDINHMUC);
+                _str_MAHIEU_PK = _DmnhomdinhmucManager.InsertV2(_DmnhomdinhmucEntity, r_Insert, DT_DMNHOMDINHMUC, BS_DMNHOMDINHMUC);
                  GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnhomdinhmucManager.Convert(_DmnhomdinhmucEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMNHOMDINHMUC.ResetCurrentItem();
             }
@@ -151,7 +151,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMNHOMDINHMUC.CurrentRow.Cells[DmnhomdinhmucFields.Tenrutgon.Name].Value = _DmnhomdinhmucEntity.Tenrutgon;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnhomdinhmucManager.Convert(_DmnhomdinhmucEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
-            return _str_DMCHUONG_PK;
+            return _str_MAHIEU_PK;
         }
 
         #region Button

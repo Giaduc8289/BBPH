@@ -31,7 +31,7 @@ namespace GD.BBPH.APP.KHO
         private GD.BBPH.CONTROL.JGridEX GRID_SODUMANG = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_SODUMANGCHITIET = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET = "";
-        private string MAMANG = "", MAKHO ="" ;
+        private string MAMANG = "", MAKHO = "";
         private DataTable DT_DMMANG = new DataTable(), DT_DMKHO = new DataTable();
 
 
@@ -165,7 +165,7 @@ namespace GD.BBPH.APP.KHO
                     txt_TENMANG.Text = _Rowview.Row[SodumangFields.Tenmang.Name].ToString();
                     txt_SOM.Text = _Rowview.Row[SodumangFields.Somet.Name].ToString();
                     txt_SOKG.Text = _Rowview.Row[SodumangFields.Sokg.Name].ToString();
-       
+
                     txt_MAMANG_Validating(new object(), new CancelEventArgs());
                 }
                 //else
@@ -264,7 +264,7 @@ namespace GD.BBPH.APP.KHO
 
 
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DateTime _ngaynhap = Convert.ToDateTime(txt_NGAY.Text.Trim());
 
@@ -288,6 +288,8 @@ namespace GD.BBPH.APP.KHO
                     _SodumangEntityCol.Add(_NhapkhomangEntity);
             }
 
+            _str_MAHIEU_PK = txt_NGAY.Text.Trim();
+
             foreach (SodumangEntity _NhapkhomangEntity in _SodumangEntityCol)
             {
                 if (_NhapkhomangEntity.IsNew)
@@ -299,11 +301,11 @@ namespace GD.BBPH.APP.KHO
                 else _SodumangManager.Update(_NhapkhomangEntity);
             }
 
-            //if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            //if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             //{
             //    _SodumangEntity.Ngaytao = DateTime.Now;
             //    _SodumangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _str_DMCHUONG_PK = _SodumangManager.InsertV2(_SodumangEntity, r_Insert, DT_SODUMANG, BS_SODUMANG);
+            //    _str_MAHIEU_PK = _SodumangManager.InsertV2(_SodumangEntity, r_Insert, DT_SODUMANG, BS_SODUMANG);
             //     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodumangManager.Convert(_SodumangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             //    BS_SODUMANG.ResetCurrentItem();
             //}
@@ -329,7 +331,7 @@ namespace GD.BBPH.APP.KHO
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_SodumangManager.Convert(_SodumangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
             //}
-            return _str_DMCHUONG_PK;
+            return _str_MAHIEU_PK;
         }
 
         #region Button
@@ -347,7 +349,7 @@ namespace GD.BBPH.APP.KHO
             txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
             txt_MAKHO.Text = txt_TENKHO.Text = txt_SOKG.Text = txt_SOM.Text = txt_MAMANG.Text = txt_TENMANG.Text = string.Empty;
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENKHO, txt_TENMANG }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHO, txt_TENMANG }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_SODUMANG.Enabled = false;

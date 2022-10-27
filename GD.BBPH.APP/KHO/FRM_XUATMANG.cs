@@ -31,7 +31,7 @@ namespace GD.BBPH.APP.KHO
         private GD.BBPH.CONTROL.JGridEX GRID_XUATMANG = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_XUATMANGCHITIET = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET = "";
-        private string MAMANG = "", MAKHO ="" ;
+        private string MAMANG = "", MAKHO = "";
         private DataTable DT_DMMANG = new DataTable(), DT_DMKHO = new DataTable(), DT_DMLYDONHAPXUAT = new DataTable();
 
 
@@ -281,7 +281,7 @@ namespace GD.BBPH.APP.KHO
         #endregion
 
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DateTime _ngayxuat = Convert.ToDateTime(txt_NGAY.Text.Trim());
 
@@ -329,6 +329,8 @@ namespace GD.BBPH.APP.KHO
                     _XuatkhomangEntityCol.Add(_XuatkhomangEntity);
             }
 
+            _str_MAHIEU_PK = txt_NGAY.Text.Trim();
+
             foreach (XuatkhomangEntity _XuatkhomangEntity in _XuatkhomangEntityCol)
             {
                 if (_XuatkhomangEntity.IsNew)
@@ -340,37 +342,13 @@ namespace GD.BBPH.APP.KHO
                 else _XuatkhomangManager.Update(_XuatkhomangEntity);
             }
 
-            //if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
-            //{
-            //    _XuatkhomangEntity.Ngaytao = DateTime.Now;
-            //    _XuatkhomangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _str_DMCHUONG_PK = _XuatkhomangManager.InsertV2(_XuatkhomangEntity, r_Insert, DT_XUATMANG, BS_XUATMANG);
-            //     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_XuatkhomangManager.Convert(_XuatkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            //    BS_XUATMANG.ResetCurrentItem();
-            //}
-            //else
-            //{
-            //    _XuatkhomangEntity.Ngaysua = DateTime.Now;
-            //    _XuatkhomangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _XuatkhomangManager.Update(_XuatkhomangEntity);
-                GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Ngayxuat.Name].Value = _ngayxuat;
-                GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Makho.Name].Value = txt_MAKHO.Text.Trim();
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Tenkho.Name].Value = txt_TENKHO.Text.Trim();
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Masanpham.Name].Value = _XuatkhomangEntity.Masanpham;
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Tensanpham.Name].Value = _XuatkhomangEntity.Tensanpham;
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Soluong.Name].Value = _XuatkhomangEntity.Soluong;
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Somet.Name].Value = _XuatkhomangEntity.Somet;
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Sokg.Name].Value = _XuatkhomangEntity.Sokg;
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Malydo.Name].Value = _XuatkhomangEntity.Malydo;
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Tenlydo.Name].Value = _XuatkhomangEntity.Tenlydo;
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Lenhsx.Name].Value = _XuatkhomangEntity.Lenhsx;
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Sophieugiao.Name].Value = _XuatkhomangEntity.Sophieugiao;
-                //GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Madonhang.Name].Value = _XuatkhomangEntity.Madonhang;
+            GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Ngayxuat.Name].Value = _ngayxuat;
+            GRID_XUATMANG.CurrentRow.Cells[XuatkhomangFields.Makho.Name].Value = txt_MAKHO.Text.Trim();
 
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_XuatkhomangManager.Convert(_XuatkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
-            //}
-            return _str_DMCHUONG_PK;
+            GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_XuatkhomangManager.Convert(_XuatkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+
+            return _str_MAHIEU_PK;
         }
 
 
@@ -388,7 +366,7 @@ namespace GD.BBPH.APP.KHO
             txt_NGAY.Focus();
             txt_MAKHO.Text = txt_TENKHO.Text = txt_SOKG.Text = txt_SOM.Text = txt_MAMANG.Text = txt_TENMANG.Text = txt_MALYDO.Text = txt_TENLYDO.Text = txt_LENHSX.Text = txt_SOPHIEUGIAO.Text = txt_MADH.Text = string.Empty;
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENKHO, txt_TENMANG }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHO, txt_TENMANG }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_XUATMANG.Enabled = false;

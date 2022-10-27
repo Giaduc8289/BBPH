@@ -308,7 +308,7 @@ namespace GD.BBPH.APP.DANHMUC
 
         #endregion
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DinhmucvattuEntity _DinhmucvattuEntity = new DinhmucvattuEntity();
 
@@ -326,11 +326,11 @@ namespace GD.BBPH.APP.DANHMUC
             _DinhmucvattuEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
             _DinhmucvattuEntity.Dinhmuc = LIB.ConvertString.NumbertoDB(txt_DINHMUC.Text.Trim());
 
-            if (string.IsNullOrEmpty(_str_DMCHUONG_PK))
+            if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _DinhmucvattuEntity.Ngaytao = DateTime.Now;
                 _DinhmucvattuEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                _str_DMCHUONG_PK = _DinhmucvattuManager.InsertV2(_DinhmucvattuEntity, r_Insert, DT_DMVATTUSAIHONG, BS_DMVATTUSAIHONG);
+                _str_MAHIEU_PK = _DinhmucvattuManager.InsertV2(_DinhmucvattuEntity, r_Insert, DT_DMVATTUSAIHONG, BS_DMVATTUSAIHONG);
                  GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DinhmucvattuManager.Convert(_DinhmucvattuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_CHONSOMAU.Enabled = btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONLOAIMUC.Enabled = btn_CHONMAMAU.Enabled = false;
                 BS_DMVATTUSAIHONG.ResetCurrentItem();
@@ -356,7 +356,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DinhmucvattuManager.Convert(_DinhmucvattuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_CHONSOMAU.Enabled = btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONLOAIMUC.Enabled = btn_CHONMAMAU.Enabled = false;
             }
-            return _str_DMCHUONG_PK;
+            return _str_MAHIEU_PK;
         }
 
         #region Validate

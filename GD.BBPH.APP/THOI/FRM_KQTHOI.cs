@@ -293,7 +293,7 @@ namespace GD.BBPH.APP.THOI
 
         #endregion
 
-        private string Save_Data(string _str_DMCHUONG_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DateTime _ngaysx = Convert.ToDateTime(txt_NGAY.Text.Trim());
 
@@ -347,6 +347,8 @@ namespace GD.BBPH.APP.THOI
                     _KetquathoiEntityCol.Add(_KetquathoiEntity);
             }
 
+            _str_MAHIEU_PK = txt_NGAY.Text.Trim();
+
             foreach (KetquathoiEntity _KetquathoiEntity in _KetquathoiEntityCol)
             {
                 if (_KetquathoiEntity.IsNew)
@@ -364,8 +366,8 @@ namespace GD.BBPH.APP.THOI
 
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquathoiManager.Convert(_KetquathoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
-            //}
-            return _str_DMCHUONG_PK;
+
+            return _str_MAHIEU_PK;
         }
 
         #region Button
@@ -652,15 +654,21 @@ namespace GD.BBPH.APP.THOI
                     - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
                 _nangsuat = (_sokg / ((_tocdo/60) * _timerun)) * 100;
                 txt_NANGSUAT.Text = Math.Round(_nangsuat).ToString();
-
-                //-----Tính chất lượng
-                decimal _doday = 0, _rong = 0, _somet = 0, _sokgtieuchuan = 0, _chatluong = 0;
+            }
+            catch { }
+        }
+        private void Tinhchatluong()
+        {
+            try
+            {
+                decimal _doday = 0, _rong = 0, _sokg = 0, _somet = 0, _sokgtieuchuan = 0, _chatluong = 0;
+                _sokg = LIB.ConvertString.NumbertoDB(txt_SOKG.Text.Trim());
                 _somet = LIB.ConvertString.NumbertoDB(txt_SOM.Text.Trim());
                 DmmangEntity _DmmangEntity = new DmmangManager().SelectOne(txt_MAMANG.Text);
                 _doday = Convert.ToDecimal(_DmmangEntity.Doday);
                 _rong = Convert.ToDecimal(_DmmangEntity.Rong);
                 _sokgtieuchuan = _doday * _rong * _somet * Convert.ToDecimal(0.925) / 1000000;
-                _chatluong = (_sokg - _sokgtieuchuan)/ _sokgtieuchuan;
+                _chatluong = (_sokg - _sokgtieuchuan) / _sokgtieuchuan * 100;
                 txt_CHATLUONG.Text = Math.Round(_chatluong).ToString();
             }
             catch { }
@@ -668,6 +676,10 @@ namespace GD.BBPH.APP.THOI
         private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
         {
             Tinhnangsuat();
+        }
+        private void txt_SANLUONG_Validating(object sender, CancelEventArgs e)
+        {
+            Tinhchatluong();
         }
         #endregion
 

@@ -269,7 +269,7 @@ namespace GD.BBPH.APP.THOI
             btn_XOADONG_Click(new object(), new EventArgs());
         }
         #endregion
-        private string Save_Data(string _str_Tknguyenlieuthoi_PK)
+        private string Save_Data(string _str_MAHIEU_PK)
         {
             DateTime _ngay = Convert.ToDateTime(txt_Ngaythongke.Text.Trim());
             int _ca = Convert.ToInt32(txt_Ca.Text.Trim());
@@ -313,11 +313,11 @@ namespace GD.BBPH.APP.THOI
                 if (!string.IsNullOrEmpty(_TknguyenlieuthoiEntity.Manguyenlieu))
                     _TknguyenlieuthoiEntityCol.Add(_TknguyenlieuthoiEntity);
             }
-            //if (string.IsNullOrEmpty(_str_Tknguyenlieuthoi_PK))
+            //if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             //{
             //    //_TknguyenlieuthoiEntity.Ngaytao = DateTime.Now;
             //    //_TknguyenlieuthoiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _str_Tknguyenlieuthoi_PK = _TknguyenlieuthoiManager.InsertV2(_TknguyenlieuthoiEntity, r_Insert, DT_TKNLTHOI, BS_TKNLTHOI);
+            //    _str_MAHIEU_PK = _TknguyenlieuthoiManager.InsertV2(_TknguyenlieuthoiEntity, r_Insert, DT_TKNLTHOI, BS_TKNLTHOI);
             //    _TknguyenlieuthoiManager.InsertCollection(_TknguyenlieuthoiEntityCol);
             //    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_TknguyenlieuthoiManager.Convert(_TknguyenlieuthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             //    btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
@@ -342,7 +342,7 @@ namespace GD.BBPH.APP.THOI
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_TknguyenlieuthoiManager.Convert(_TknguyenlieuthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
             //}
-            return _str_Tknguyenlieuthoi_PK;
+            return _str_MAHIEU_PK;
         }
 
         #region Button

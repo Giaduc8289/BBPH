@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, October 26, 2022 3:31:07 PM
+// Code is generated on: Thursday, October 27, 2022 10:17:27 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -549,6 +549,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nangsuat", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tylesaihong", fieldHashtable);
 		}
 		#endregion
 
@@ -974,6 +977,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)KetquainFieldIndex.Nangsuat, false); }
 			set	{ SetValue((int)KetquainFieldIndex.Nangsuat, value); }
+		}
+
+		/// <summary> The Tylesaihong property of the Entity Ketquain<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquain"."Tylesaihong"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tylesaihong
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquainFieldIndex.Tylesaihong, false); }
+			set	{ SetValue((int)KetquainFieldIndex.Tylesaihong, value); }
 		}
 
 
