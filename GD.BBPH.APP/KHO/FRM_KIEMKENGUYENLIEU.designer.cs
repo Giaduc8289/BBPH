@@ -43,7 +43,7 @@
             this.pne_CHITIET = new System.Windows.Forms.Panel();
             this.txt_MAKHO = new GD.BBPH.CONTROL.TEXTBOX();
             this.label4 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_NGAYNHAP = new System.Windows.Forms.MaskedTextBox();
+            this.txt_NGAY = new System.Windows.Forms.MaskedTextBox();
             this.txt_MANGUYENLIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_TENNGUYENLIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label2 = new GD.BBPH.CONTROL.LABEL();
@@ -122,7 +122,7 @@
             this.uiPanel1Container.Controls.Add(this.pne_CHITIET);
             this.uiPanel1Container.Controls.Add(this.txt_MAKHO);
             this.uiPanel1Container.Controls.Add(this.label4);
-            this.uiPanel1Container.Controls.Add(this.txt_NGAYNHAP);
+            this.uiPanel1Container.Controls.Add(this.txt_NGAY);
             this.uiPanel1Container.Controls.Add(this.txt_MANGUYENLIEU);
             this.uiPanel1Container.Controls.Add(this.txt_TENNGUYENLIEU);
             this.uiPanel1Container.Controls.Add(this.label2);
@@ -250,15 +250,15 @@
             this.label4.TabIndex = 129;
             this.label4.Text = "Mã kho";
             // 
-            // txt_NGAYNHAP
+            // txt_NGAY
             // 
-            this.txt_NGAYNHAP.Location = new System.Drawing.Point(106, 13);
-            this.txt_NGAYNHAP.Mask = "00/00/0000";
-            this.txt_NGAYNHAP.Name = "txt_NGAYNHAP";
-            this.txt_NGAYNHAP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_NGAYNHAP.Size = new System.Drawing.Size(140, 20);
-            this.txt_NGAYNHAP.TabIndex = 0;
-            this.txt_NGAYNHAP.ValidatingType = typeof(System.DateTime);
+            this.txt_NGAY.Location = new System.Drawing.Point(106, 13);
+            this.txt_NGAY.Mask = "00/00/0000";
+            this.txt_NGAY.Name = "txt_NGAY";
+            this.txt_NGAY.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_NGAY.Size = new System.Drawing.Size(140, 20);
+            this.txt_NGAY.TabIndex = 0;
+            this.txt_NGAY.ValidatingType = typeof(System.DateTime);
             // 
             // txt_MANGUYENLIEU
             // 
@@ -459,7 +459,7 @@
         private CONTROL.TEXTBOX txt_TENNGUYENLIEU;
         private CONTROL.TEXTBOX txt_MANGUYENLIEU;
         private CONTROL.LABEL label4;
-        private System.Windows.Forms.MaskedTextBox txt_NGAYNHAP;
+        private System.Windows.Forms.MaskedTextBox txt_NGAY;
         private CONTROL.TEXTBOX txt_MAKHO;
         private CONTROL.BUTTON btn_XOADONG;
         private CONTROL.BUTTON btn_THEMDONG;

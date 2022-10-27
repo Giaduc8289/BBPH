@@ -383,6 +383,8 @@ namespace GD.BBPH.APP.HOANTHIEN
                     _KetquathanhphamEntityCol.Add(_KetquathanhphamEntity);
             }
 
+            _str_MAHIEU_PK = txt_NGAY.Text.Trim();
+
             foreach (KetquathanhphamEntity _KetquathanhphamEntity in _KetquathanhphamEntityCol)
             {
                 if (_KetquathanhphamEntity.IsNew)
@@ -402,7 +404,7 @@ namespace GD.BBPH.APP.HOANTHIEN
 
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquathanhphamManager.Convert(_KetquathanhphamEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
-            //}
+
             return _str_MAHIEU_PK;
         }
 

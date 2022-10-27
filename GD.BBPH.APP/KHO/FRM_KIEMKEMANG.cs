@@ -31,7 +31,7 @@ namespace GD.BBPH.APP.KHO
         private GD.BBPH.CONTROL.JGridEX GRID_SODUMANG = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_SODUMANGCHITIET = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET = "";
-        private string MAMANG = "", MAKHO ="" ;
+        private string MAMANG = "", MAKHO = "";
         private DataTable DT_DMMANG = new DataTable(), DT_DMKHO = new DataTable();
 
 
@@ -165,7 +165,7 @@ namespace GD.BBPH.APP.KHO
                     txt_TENMANG.Text = _Rowview.Row[SodumangFields.Tenmang.Name].ToString();
                     txt_SOM.Text = _Rowview.Row[SodumangFields.Somet.Name].ToString();
                     txt_SOKG.Text = _Rowview.Row[SodumangFields.Sokg.Name].ToString();
-       
+
                     txt_MAMANG_Validating(new object(), new CancelEventArgs());
                 }
                 //else
@@ -349,7 +349,7 @@ namespace GD.BBPH.APP.KHO
             txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
             txt_MAKHO.Text = txt_TENKHO.Text = txt_SOKG.Text = txt_SOM.Text = txt_MAMANG.Text = txt_TENMANG.Text = string.Empty;
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENKHO, txt_TENMANG }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHO, txt_TENMANG }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_SODUMANG.Enabled = false;
