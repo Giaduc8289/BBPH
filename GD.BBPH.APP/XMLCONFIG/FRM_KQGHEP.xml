@@ -32,7 +32,7 @@
   <viewgrid>
     <value>1</value>
     <name>Ngay</name>
-    <headerText>Ngay</headerText>
+    <headerText>Ngày</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -50,14 +50,14 @@
   <viewgrid>
     <value>1</value>
     <name>Mamay</name>
-    <headerText>Mamay</headerText>
+    <headerText>Mã máy</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Masanpham</name>
     <headerText>Masanpham</headerText>
     <BackColor>0</BackColor>
@@ -67,6 +67,6 @@
   </viewgrid>
   <tablename>
     <name>tablename</name>
-    <headerText>Danh sách tendanhsach</headerText>
+    <headerText>Danh sách kết quả ghép</headerText>
   </tablename>
 </NewDataSet>
