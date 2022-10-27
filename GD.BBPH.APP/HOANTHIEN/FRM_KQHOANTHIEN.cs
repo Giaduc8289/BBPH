@@ -676,6 +676,31 @@ namespace GD.BBPH.APP.HOANTHIEN
         }
         #endregion
 
+
+        #region  Text change
+        private void Tinhnangsuat()
+        {
+            try
+            {
+                decimal _timerun = 0, _tocdo = 0, _somet = 0, _nangsuat = 0;
+                _somet = LIB.ConvertString.NumbertoDB(txt_SOMETVAO.Text.Trim());
+                _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text);
+                _timerun = Convert.ToDecimal((Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).TotalMinutes)
+                    - (Convert.ToDecimal(txt_THOIGIANLENCUON.Text.Trim()) + Convert.ToDecimal(txt_THOIGIANHACUON.Text.Trim())
+                    + Convert.ToDecimal(txt_THOIGIANCATDAU.Text.Trim()) + Convert.ToDecimal(txt_THOIGIANCHUANBI.Text.Trim()))
+                    - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
+                _nangsuat = _somet / _tocdo / _timerun * 100;     
+               
+                txt_DGNANGSUAT.Text = Math.Round(_nangsuat).ToString(); ;
+            }
+            catch { }
+        }
+        private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
+        {
+            Tinhnangsuat();
+        }
+        #endregion
+
         #region Shortcut Key
         //private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
         //{

@@ -432,7 +432,7 @@ namespace GD.BBPH.APP.CHIA
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY, txt_LENH, txt_MACONGNHAN, txt_TENCONGNHAN, txt_MASANPHAM, txt_TENSANPHAM, txt_SOMVAO, txt_SOKGVAO, txt_DAURAGHEP, txt_SOCON, txt_THOIGIANCATDAU, txt_THOIGIANBATDAU, txt_THOIGIANKETTHUC, txt_THOIGIANDOILENH, txt_SOLANHACUON, txt_THOIGIANLENCUON, txt_THOIGIANHACUON, txt_THOIGIANSUCO, txt_PHEIN, txt_PHEGHEP, txt_PHECHIA, txt_PHESANXUAT }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY}));
             }
             GRID_KQCHIACHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             GRID_KQCHIACHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
@@ -689,9 +689,13 @@ namespace GD.BBPH.APP.CHIA
                     - (Convert.ToDecimal(txt_THOIGIANLENCUON.Text.Trim()) + Convert.ToDecimal(txt_THOIGIANHACUON.Text.Trim()) + Convert.ToDecimal(txt_THOIGIANCATDAU.Text.Trim()) + Convert.ToDecimal(txt_THOIGIANDOILENH.Text.Trim()))
                     - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
                 _nangsuat = _somet / _tocdo / _timerun * 100;
-                txt_NANGSUAT.Text = Math.Round(_nangsuat).ToString();
+                    txt_NANGSUAT.Text = Math.Round(_nangsuat).ToString();
+
             }
-            catch { }
+            catch  {
+               
+            }
+            
         }
         private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
         {
