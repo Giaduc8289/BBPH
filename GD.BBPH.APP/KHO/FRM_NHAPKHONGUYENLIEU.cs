@@ -146,7 +146,7 @@ namespace GD.BBPH.APP.KHO
                         MAHIEU_PK = _Rowview.Row[NhapkhonguyenlieuFields.Ngaynhap.Name].ToString();
 
                     //txt_MAHIEU.Text = _Rowview.Row[NhapkhonguyenlieuFields.Id.Name].ToString();
-                    txt_NGAYNHAP.Text = _Rowview.Row[NhapkhonguyenlieuFields.Ngaynhap.Name].ToString();
+                    txt_NGAY.Text = _Rowview.Row[NhapkhonguyenlieuFields.Ngaynhap.Name].ToString();
                     txt_MAKHO.Text = _Rowview.Row[NhapkhonguyenlieuFields.Makho.Name].ToString();
                     txt_MALYDO.Text = _Rowview.Row[NhapkhonguyenlieuFields.Malydo.Name].ToString();
 
@@ -185,7 +185,7 @@ namespace GD.BBPH.APP.KHO
             }
             else
             {
-                DT_NHAPKHONGUYENLIEU_CHITIET_FILL = new NhapkhonguyenlieuManager().SelectByNgayKhoLydoRDT(Convert.ToDateTime(txt_NGAYNHAP.Text.Trim()), txt_MAKHO.Text.Trim(), txt_MALYDO.Text.Trim());
+                DT_NHAPKHONGUYENLIEU_CHITIET_FILL = new NhapkhonguyenlieuManager().SelectByNgayKhoLydoRDT(Convert.ToDateTime(txt_NGAY.Text.Trim()), txt_MAKHO.Text.Trim(), txt_MALYDO.Text.Trim());
 
                 DataView Source_View = new DataView(DT_NHAPKHONGUYENLIEU_CHITIET_FILL);
                 BS_NHAPKHONGUYENLIEU_CHITIET = new BindingSource();
@@ -272,7 +272,7 @@ namespace GD.BBPH.APP.KHO
         #endregion
         private string Save_Data(string _str_MAHIEU_PK)
         {
-            DateTime _ngay = Convert.ToDateTime(txt_NGAYNHAP.Text.Trim());
+            DateTime _ngay = Convert.ToDateTime(txt_NGAY.Text.Trim());
             String _kho = txt_MAKHO.Text.Trim();
             String _tenkho = txt_TENKHO.Text.Trim();
 
@@ -352,7 +352,7 @@ namespace GD.BBPH.APP.KHO
             GRID_NHAPKHONGUYENLIEU_CHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
             GRID_NHAPKHONGUYENLIEU_CHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             MAHIEU_PK = "";
-            txt_NGAYNHAP.Focus();
+            txt_NGAY.Focus();
             txt_MAKHO.Text = txt_TENKHO.Text = txt_SOLUONG.Text = txt_DONVITINH.Text = txt_MANGUYENLIEU.Text = txt_TENNGUYENLIEU.Text = txt_MALYDO.Text = txt_TENLYDO.Text = string.Empty;
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
@@ -361,7 +361,7 @@ namespace GD.BBPH.APP.KHO
             GRID_NHAPKHONGUYENLIEU.Enabled = false;
 
             //---tu dong dien tham so
-            txt_NGAYNHAP.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
+            txt_NGAY.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {
@@ -370,7 +370,7 @@ namespace GD.BBPH.APP.KHO
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAYNHAP }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAY }));
                 //txt_TENHIEU.Focus();
             }
             GRID_NHAPKHONGUYENLIEU_CHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
