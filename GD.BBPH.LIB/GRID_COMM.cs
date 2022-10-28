@@ -26,6 +26,7 @@ namespace GD.BBPH.LIB
                 , "Klmanhhoanthanh", "Kldukien", "Tongnhucausoi", "Catrong", "Congsuattrong", "Chieudaixuat", "Khoiluongxuat", "Cong", "Congthaykho"
                 , "Dongia", "Thanhtien", "Soluongconlai", "Khoiluongconlai", "Tongsonhapkho", "Tongsohieuchinh", "Soluonghieuchinh", "Soluongtinhluong"
                 , "Soluongchuatinhluong", "Sometchuain", "Sosanpham1", "Sosanpham2", "Somet1", "Somet2", "Tientamung"
+                , "Dodaytu", "Dodayden", "Khotu", "Khoden", "Chieudaitu", "Chieudaiden", "Tocdo"
         };
 
         //-----Danh sách các cột số thập phân
