@@ -54,12 +54,12 @@ namespace GD.BBPH.APP.TUA
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_TKKQTUA");
-                        DT_TKKQTUA = LIB.Procedures.Danhsachketquatua(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); //LIB.SESSION_START.DT_TKKQTUA;
+                        DT_TKKQTUA = LIB.Procedures.Danhsachketquatua(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); //LIB.SESSION_START.DT_TKKQTUA;
                         DT_TKKQTUA_CHITIET = LIB.SESSION_START.DT_TKKQTUA;
 
-                        DT_HANG = new DmmayManager().SelectByMadmRDT("KT");// LIB.SESSION_START.DM_HANG;
+                        DT_HANG = LIB.SESSION_START.DM_HANG;
                         DT_DMCONGNHAN = LIB.SESSION_START.DT_DMCONGNHAN;
-                        DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("KT");// LIB.SESSION_START.DT_DMMAY;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -94,10 +94,10 @@ namespace GD.BBPH.APP.TUA
         public FRM_TKKQTUA()
         {
             InitializeComponent();
-            KetquatuaManager _KetquatuaManager = new KetquatuaManager();
-            DataTable dt111 = LIB.Procedures.Danhsachketquatua(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty);
+            //KetquatuaManager _KetquatuaManager = new KetquatuaManager();
+            //DataTable dt111 = LIB.Procedures.Danhsachketquatua(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty);
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_TKKQTUA.xml");
-            dt111 = _KetquatuaManager.Clone();
+            //dt111 = _KetquatuaManager.Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_TKKQTUA_CHITIET.xml");
 
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
@@ -145,11 +145,12 @@ namespace GD.BBPH.APP.TUA
                     DataRowView _Rowview = (DataRowView)this.BS_TKKQTUA.Current;
                     if (_Rowview != null)
                         MAHIEU_PK = _Rowview.Row[KetquatuaFields.Ngay.Name].ToString();
-
                     //txt_MAHIEU.Text = _Rowview.Row[KetquatuaFields.Id.Name].ToString();
                     txt_NGAY.Text = _Rowview.Row[KetquatuaFields.Ngay.Name].ToString();
                     txt_CA.Text = _Rowview.Row[KetquatuaFields.Ca.Name].ToString();
-                    txt_LENHTUA.Text = _Rowview.Row[KetquatuaFields.Lenhtua.Name].ToString();
+                    txt_MAMAY.Text = _Rowview.Row[KetquatuaFields.Mamay.Name].ToString();
+                    txt_MAMAY_Validating(new object(), new CancelEventArgs());
+
                     SHOWGRID(MAHIEU_PK);
                 }
                 else
@@ -168,7 +169,6 @@ namespace GD.BBPH.APP.TUA
                         MACHITIET = _Rowview.Row[KetquatuaFields.Id.Name].ToString();
 
                     txt_NANGSUAT.Text = _Rowview.Row[KetquatuaFields.Nangsuat.Name].ToString();
-
                 }
                 //else
                 //{
@@ -188,7 +188,7 @@ namespace GD.BBPH.APP.TUA
             }
             else
             {
-                DT_TKKQTUA_CHITIET_FILL = LIB.Procedures.Danhsachketquatuachitiet(Convert.ToDateTime(txt_NGAY.Text.Trim()), Convert.ToInt32(txt_CA.Text.Trim()), txt_LENHTUA.Text.Trim(), string.Empty);
+                DT_TKKQTUA_CHITIET_FILL = LIB.Procedures.Danhsachketquatuachitiet(Convert.ToDateTime(txt_NGAY.Text.Trim()), Convert.ToInt32(txt_CA.Text.Trim()), txt_MAMAY.Text.Trim(), string.Empty, string.Empty);
                 // new KetquatuaManager().SelectByNgayCaLenhtuaRDT(Convert.ToDateTime(txt_Ngaythongke.Text.Trim()), Convert.ToInt32(txt_Ca.Text.Trim()));
 
                 DataView Source_View = new DataView(DT_TKKQTUA_CHITIET_FILL);
@@ -204,8 +204,8 @@ namespace GD.BBPH.APP.TUA
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
             DataRow r_Detail = DT_TKKQTUA_CHITIET_FILL.NewRow();
-            r_Detail[KetquatuaFields.Mamay.Name] = txt_MAMAY.Text;
-            r_Detail[KetquatuaFields.Tenmay.Name] = txt_TENMAY.Text;
+
+            r_Detail[KetquatuaFields.Lenhtua.Name] = txt_LENHTUA.Text;
             r_Detail[KetquatuaFields.Masanpham.Name] = txt_MASANPHAM.Text;
             r_Detail[KetquatuaFields.Tensanpham.Name] = txt_TENSANPHAM.Text;
             r_Detail[KetquatuaFields.Macongnhan.Name] = txt_MACONGNHAN.Text;
@@ -229,7 +229,6 @@ namespace GD.BBPH.APP.TUA
             r_Detail[KetquatuaFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
 
             r_Detail[KetquatuaFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
-
 
             //try { r_Detail[KetquatuaFields.SoMetvao.Name] = LIB.ConvertString.NumbertoDB(txt_SOMETVAO.Text.Trim()); }
             //try { r_Detail[KetquatuaFields.SoMetra.Name] = LIB.ConvertString.NumbertoDB(txt_SOMETRA.Text.Trim()); }
@@ -307,6 +306,7 @@ namespace GD.BBPH.APP.TUA
         {
             DateTime _ngay = Convert.ToDateTime(txt_NGAY.Text.Trim());
             int _ca = Convert.ToInt32(txt_CA.Text.Trim());
+            string _mamay = txt_MAMAY.Text.Trim();
 
             EntityCollection _KetquatuaEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_TKKQTUA_CHITIET.GetDataRows();
@@ -317,9 +317,9 @@ namespace GD.BBPH.APP.TUA
                 KetquatuaEntity _KetquatuaEntity = new KetquatuaEntity();
                 _KetquatuaEntity.Ngay = _ngay;
                 _KetquatuaEntity.Ca = _ca;
-                _KetquatuaEntity.Lenhtua = _view.Row[KetquatuaFields.Lenhtua.Name].ToString();
-                _KetquatuaEntity.Mamay = _view.Row[KetquatuaFields.Mamay.Name].ToString();
+                _KetquatuaEntity.Mamay = _mamay;
                 _KetquatuaEntity.Tenmay = _view.Row[KetquatuaFields.Tenmay.Name].ToString();
+                _KetquatuaEntity.Lenhtua = _view.Row[KetquatuaFields.Lenhtua.Name].ToString();
                 _KetquatuaEntity.Macongnhan = _view.Row[KetquatuaFields.Macongnhan.Name].ToString();
                 _KetquatuaEntity.Tencongnhan = _view.Row[KetquatuaFields.Tencongnhan.Name].ToString();
                 _KetquatuaEntity.Masanpham = _view.Row[KetquatuaFields.Masanpham.Name].ToString();
@@ -401,6 +401,7 @@ namespace GD.BBPH.APP.TUA
 
             GRID_TKKQTUA.CurrentRow.Cells[KetquatuaFields.Ngay.Name].Value = _ngay;
             GRID_TKKQTUA.CurrentRow.Cells[KetquatuaFields.Ca.Name].Value = _ca;
+            GRID_TKKQTUA.CurrentRow.Cells[KetquatuaFields.Mamay.Name].Value = _mamay;
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquatuaManager.Convert(_KetquatuaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
 

@@ -49,15 +49,15 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Lenhtua</name>
-    <headerText>Lệnh tua</headerText>
+    <name>Mamay</name>
+    <headerText>Mã máy</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>
-    <name>tablename</name>
-    <headerText>Danh sách tendanhsach</headerText>
+    <name>Ketquatua</name>
+    <headerText>Danh sách kết quả tua</headerText>
   </tablename>
 </NewDataSet>
