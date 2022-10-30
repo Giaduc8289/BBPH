@@ -376,10 +376,6 @@ namespace GD.BBPH.APP.THOI
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENHTHOI.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MAMANG.Text = txt_TENMANG.Text = txt_SOM.Text = txt_SOKG.Text = txt_CHATLUONG.Text = txt_PHELIEUTHUCTE.Text = txt_NANGSUAT.Text
                 = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_THOIGIANSUCO.Text = string.Empty;
-            //txt_PHONGBAN.Text = string.Empty;
-            //txt_CHUCVU.Text = string.Empty;
-            KetquathoiManager _KetquathoiManager = new KetquathoiManager();
-            KetquathoiEntity _KetquathoiEntity = new KetquathoiEntity();
             r_Insert = DT_KQTHOI.NewRow();
             DT_KQTHOI.Rows.Add(r_Insert);
             BS_KQTHOI.Position = DT_KQTHOI.Rows.Count;

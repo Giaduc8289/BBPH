@@ -399,8 +399,6 @@ namespace GD.BBPH.APP.DANHMUC
             string _Maydet = txt_MAMAU.Text.Trim();
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_TENMAU.Text = string.Empty;
-            ThanhphanmauManager _ThanhphanmauManager = new ThanhphanmauManager();
-            ThanhphanmauEntity _ThanhphanmauEntity = new ThanhphanmauEntity();
             r_Insert = DT_DMMAU.NewRow();
             DT_DMMAU.Rows.Add(r_Insert);
             BS_DMMAU.Position = DT_DMMAU.Rows.Count;

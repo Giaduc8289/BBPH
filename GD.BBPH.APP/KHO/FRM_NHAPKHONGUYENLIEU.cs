@@ -343,8 +343,6 @@ namespace GD.BBPH.APP.KHO
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            NhapkhonguyenlieuManager _NhapkhonguyenlieuManager = new NhapkhonguyenlieuManager();
-            NhapkhonguyenlieuEntity _NhapkhonguyenlieuEntity = new NhapkhonguyenlieuEntity();
             r_Insert = DT_NHAPKHONGUYENLIEU.NewRow();
             DT_NHAPKHONGUYENLIEU.Rows.Add(r_Insert);
             BS_NHAPKHONGUYENLIEU.Position = DT_NHAPKHONGUYENLIEU.Rows.Count;

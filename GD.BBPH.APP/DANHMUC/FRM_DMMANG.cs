@@ -194,8 +194,6 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            DmmangManager _DmmangManager = new DmmangManager();
-            DmmangEntity _DmmangEntity = new DmmangEntity();
             r_Insert = DT_DMMANG.NewRow();
             DT_DMMANG.Rows.Add(r_Insert);
             BS_DMMANG.Position = DT_DMMANG.Rows.Count;

@@ -353,10 +353,6 @@ namespace GD.BBPH.APP.KHO
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            //txt_PHONGBAN.Text = string.Empty;
-            //txt_CHUCVU.Text = string.Empty;
-            NhapkhomangManager _NhapkhomangManager = new NhapkhomangManager();
-            NhapkhomangEntity _NhapkhomangEntity = new NhapkhomangEntity();
             r_Insert = DT_NHAPMANG.NewRow();
             DT_NHAPMANG.Rows.Add(r_Insert);
             BS_NHAPMANG.Position = DT_NHAPMANG.Rows.Count;

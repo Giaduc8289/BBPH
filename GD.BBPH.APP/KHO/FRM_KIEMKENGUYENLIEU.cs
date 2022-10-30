@@ -333,8 +333,6 @@ namespace GD.BBPH.APP.KHO
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            SodunguyenlieuManager _SodunguyenlieuManager = new SodunguyenlieuManager();
-            SodunguyenlieuEntity _SodunguyenlieuEntity = new SodunguyenlieuEntity();
             r_Insert = DT_SODUNGUYENLIEU.NewRow();
             DT_SODUNGUYENLIEU.Rows.Add(r_Insert);
             BS_SODUNGUYENLIEU.Position = DT_SODUNGUYENLIEU.Rows.Count;

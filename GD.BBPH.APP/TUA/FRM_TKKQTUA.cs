@@ -412,8 +412,6 @@ namespace GD.BBPH.APP.TUA
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            KetquatuaManager _KetquatuaManager = new KetquatuaManager();
-            KetquatuaEntity _KetquatuaEntity = new KetquatuaEntity();
             r_Insert = DT_TKKQTUA.NewRow();
             DT_TKKQTUA.Rows.Add(r_Insert);
             BS_TKKQTUA.Position = DT_TKKQTUA.Rows.Count;

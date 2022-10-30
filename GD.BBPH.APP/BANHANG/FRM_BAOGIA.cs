@@ -480,8 +480,6 @@ namespace GD.BBPH.APP.BANHANG
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_SOBAOGIA.Text = txt_MAKHACH.Text = txt_TENKHACH.Text = string.Empty;
             txt_PHUONGTHUCTT.Text = txt_DIADIEMGIAO.Text = txt_NOIDUNG.Text = string.Empty;
-            BaogiaHManager _BaogiaHManager = new BaogiaHManager();
-            BaogiaHEntity _BaogiaHEntity = new BaogiaHEntity();
             r_Insert = DT_BAOGIA_H.NewRow();
             DT_BAOGIA_H.Rows.Add(r_Insert);
             BS_BAOGIA_H.Position = DT_BAOGIA_H.Rows.Count;

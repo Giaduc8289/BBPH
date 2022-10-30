@@ -438,10 +438,6 @@ namespace GD.BBPH.APP.GHEP
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_SOLSX.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_MANGINMET.Text = txt_MANGINKG.Text = txt_MANGCAPMET.Text = txt_MANGCAPKG.Text = txt_THUCTEKEO.Text = txt_DAURATUA.Text = txt_THUCTEKG.Text = txt_THUCTEMET.Text = txt_THUCTEKEO.Text = txt_THUCTEDONGRAN.Text = txt_THUCTEDUNGMOI.Text =  txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_SOLOPGHEP.Text = txt_THOIGIANSUCO.Text = txt_PHEIN.Text = txt_PHEINTUI.Text = txt_PHEGHEP.Text = txt_PHEGHEPTUI.Text = txt_PHESXTUI.Text = txt_PHESX.Text = txt_PHENCC.Text = txt_PHETHOI_NCC.Text = txt_NANGSUAT.Text= string.Empty;
-            //txt_PHONGBAN.Text = string.Empty;
-            //txt_CHUCVU.Text = string.Empty;
-            KetquaghepManager _KetquaghepManager = new KetquaghepManager();
-            KetquaghepEntity _KetquaghepEntity = new KetquaghepEntity();
             r_Insert = DT_KQGHEP.NewRow();
             DT_KQGHEP.Rows.Add(r_Insert);
             BS_KQGHEP.Position = DT_KQGHEP.Rows.Count;

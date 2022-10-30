@@ -585,8 +585,6 @@ namespace GD.BBPH.APP.BANHANG
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_MADONDATHANG.Text = txt_MAKHACH.Text = txt_TENKHACH.Text = txt_NGAYBAOGIA.Text = txt_HOTEN.Text = string.Empty;
-            DonhangHManager _DonhangHManager = new DonhangHManager();
-            DonhangHEntity _DonhangHEntity = new DonhangHEntity();
             r_Insert = DT_DONDATHANG_H.NewRow();
             DT_DONDATHANG_H.Rows.Add(r_Insert);
             BS_DONDATHANG_H.Position = DT_DONDATHANG_H.Rows.Count;

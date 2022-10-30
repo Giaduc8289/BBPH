@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 27, 2022 4:52:15 PM
+// Code is generated on: Sunday, October 30, 2022 3:14:13 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -521,12 +521,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("PheSx", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tongm2dm", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("M2saihongtt", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -552,6 +546,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tylesaihong", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tongmdm", fieldHashtable);
 		}
 		#endregion
 
@@ -869,28 +866,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)KetquainFieldIndex.PheSx, value); }
 		}
 
-		/// <summary> The Tongm2dm property of the Entity Ketquain<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquain"."Tongm2dm"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Tongm2dm
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquainFieldIndex.Tongm2dm, false); }
-			set	{ SetValue((int)KetquainFieldIndex.Tongm2dm, value); }
-		}
-
-		/// <summary> The M2saihongtt property of the Entity Ketquain<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquain"."M2saihongtt"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> M2saihongtt
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquainFieldIndex.M2saihongtt, false); }
-			set	{ SetValue((int)KetquainFieldIndex.M2saihongtt, value); }
-		}
-
 		/// <summary> The Ngaytao property of the Entity Ketquain<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquain"."Ngaytao"<br/>
@@ -988,6 +963,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)KetquainFieldIndex.Tylesaihong, false); }
 			set	{ SetValue((int)KetquainFieldIndex.Tylesaihong, value); }
+		}
+
+		/// <summary> The Tongmdm property of the Entity Ketquain<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquain"."Tongmdm"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tongmdm
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquainFieldIndex.Tongmdm, false); }
+			set	{ SetValue((int)KetquainFieldIndex.Tongmdm, value); }
 		}
 
 

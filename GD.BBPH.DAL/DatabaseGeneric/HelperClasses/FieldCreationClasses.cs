@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 27, 2022 4:52:16 PM
+// Code is generated on: Sunday, October 30, 2022 3:14:13 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -2607,16 +2607,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.PheSx);}
 		}
-		/// <summary>Creates a new KetquainEntity.Tongm2dm field instance</summary>
-		public static EntityField2 Tongm2dm
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.Tongm2dm);}
-		}
-		/// <summary>Creates a new KetquainEntity.M2saihongtt field instance</summary>
-		public static EntityField2 M2saihongtt
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.M2saihongtt);}
-		}
 		/// <summary>Creates a new KetquainEntity.Ngaytao field instance</summary>
 		public static EntityField2 Ngaytao
 		{
@@ -2661,6 +2651,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Tylesaihong
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.Tylesaihong);}
+		}
+		/// <summary>Creates a new KetquainEntity.Tongmdm field instance</summary>
+		public static EntityField2 Tongmdm
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.Tongmdm);}
 		}
 	}
 

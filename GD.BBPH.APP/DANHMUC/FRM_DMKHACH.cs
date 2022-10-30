@@ -176,8 +176,6 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            DmkhachManager _DmkhachManager = new DmkhachManager();
-            DmkhachEntity _DmkhachEntity = new DmkhachEntity();
             r_Insert = DT_DMKHACH.NewRow();
             DT_DMKHACH.Rows.Add(r_Insert);
             BS_DMKHACH.Position = DT_DMKHACH.Rows.Count;

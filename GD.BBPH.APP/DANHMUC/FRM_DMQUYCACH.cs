@@ -145,8 +145,6 @@ namespace GD.BBPH.APP.DANHMUC
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_TENCD.Text = txt_TENNHOMQC.Text = string.Empty;
-            DmquycachManager _DmquycachManager = new DmquycachManager();
-            DmquycachEntity _DmquycachEntity = new DmquycachEntity();
             r_Insert = DT_DMQUYCACH.NewRow();
             DT_DMQUYCACH.Rows.Add(r_Insert);
             BS_DMQUYCACH.Position = DT_DMQUYCACH.Rows.Count;

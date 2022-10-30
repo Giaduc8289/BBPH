@@ -349,8 +349,6 @@ namespace GD.BBPH.APP.THOI
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            TknguyenlieuthoiManager _TknguyenlieuthoiManager = new TknguyenlieuthoiManager();
-            TknguyenlieuthoiEntity _TknguyenlieuthoiEntity = new TknguyenlieuthoiEntity();
             r_Insert = DT_TKNLTHOI.NewRow();
             DT_TKNLTHOI.Rows.Add(r_Insert);
             BS_TKNLTHOI.Position = DT_TKNLTHOI.Rows.Count;

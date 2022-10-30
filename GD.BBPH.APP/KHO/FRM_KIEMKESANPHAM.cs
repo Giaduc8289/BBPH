@@ -337,11 +337,6 @@ namespace GD.BBPH.APP.KHO
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             //txt_NGAY.Text = txt_MAKHO.Text = txt_TENKHO.Text = txt_MASP.Text = txt_TENSP.Text = txt_SOLUONG.Text = txt_SOM.Text = txt_SOKG.Text = txt_MALYDO.Text = txt_TENKHO.Text = txt_LENHSX.Text = txt_SOHD.Text = string.Empty;
-
-            //txt_PHONGBAN.Text = string.Empty;
-            //txt_CHUCVU.Text = string.Empty;
-            SodusanphamManager _SodusanphamManager = new SodusanphamManager();
-            SodusanphamEntity _SodusanphamEntity = new SodusanphamEntity();
             r_Insert = DT_SODUSANPHAM.NewRow();
             DT_SODUSANPHAM.Rows.Add(r_Insert);
             BS_SODUSANPHAM.Position = DT_SODUSANPHAM.Rows.Count;

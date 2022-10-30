@@ -360,11 +360,6 @@ namespace GD.BBPH.APP.KHO
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_NGAY.Text = txt_MAKHO.Text = txt_TENKHO.Text = txt_MASP.Text = txt_TENSP.Text = txt_SOLUONG.Text = txt_SOM.Text = txt_SOKG.Text = txt_MALYDO.Text = txt_TENKHO.Text = txt_LENHSX.Text = txt_SOHD.Text = string.Empty;
-
-            //txt_PHONGBAN.Text = string.Empty;
-            //txt_CHUCVU.Text = string.Empty;
-            NhapkhosanphamManager _NhapkhosanphamManager = new NhapkhosanphamManager();
-            NhapkhosanphamEntity _NhapkhosanphamEntity = new NhapkhosanphamEntity();
             r_Insert = DT_NHAPSANPHAM.NewRow();
             DT_NHAPSANPHAM.Rows.Add(r_Insert);
             BS_NHAPSANPHAM.Position = DT_NHAPSANPHAM.Rows.Count;

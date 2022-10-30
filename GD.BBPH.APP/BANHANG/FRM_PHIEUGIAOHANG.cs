@@ -514,8 +514,6 @@ namespace GD.BBPH.APP.BANHANG
                 = txt_MAHANG.Text = txt_TENHANG.Text = txt_LOAI.Text = txt_MADONHANG.Text = txt_NGAYGIAO.Text 
                /* = txt_SOPO.Text*/ = txt_SOLUONG.Text = txt_DONGIA.Text =/* txt_SOLUONGCONLAI.Text =*/ txt_TONGTIEN.Text 
                 /*= txt_BIENKIEMSOAT.Text = txt_LAIXEHOTEN.Text = txt_LAIXEGHICHU.Text */= string.Empty;
-            PhieugiaohangHManager _PhieugiaohangHManager = new PhieugiaohangHManager();
-            PhieugiaohangHEntity _PhieugiaohangHEntity = new PhieugiaohangHEntity();
             r_Insert = DT_PHIEUGIAOHANG_H.NewRow();
             DT_PHIEUGIAOHANG_H.Rows.Add(r_Insert);
             BS_PHIEUGIAOHANG_H.Position = DT_PHIEUGIAOHANG_H.Rows.Count;

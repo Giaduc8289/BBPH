@@ -158,8 +158,6 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            DmnhomquycachManager _DmnhomquycachManager = new DmnhomquycachManager();
-            DmnhomquycachEntity _DmnhomquycachEntity = new DmnhomquycachEntity();
             r_Insert = DT_DMNHOMQUYCACH.NewRow();
             DT_DMNHOMQUYCACH.Rows.Add(r_Insert);
             BS_DMNHOMQUYCACH.Position = DT_DMNHOMQUYCACH.Rows.Count;

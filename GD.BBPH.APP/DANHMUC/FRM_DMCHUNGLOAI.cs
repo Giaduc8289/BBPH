@@ -222,8 +222,6 @@ namespace GD.BBPH.APP.DANHMUC
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_SOMAU.Text = txt_SOHINH.Text = txt_LOAIMUC.Text = txt_TENQCDONGGOI.Text = txt_TENQCLOAITHUNG.Text = txt_TENQCTHANHPHAM.Text = string.Empty;            
-            DmchungloaiManager _DmchungloaiManager = new DmchungloaiManager();
-            DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity();
             r_Insert = DT_DMCHUNGLOAI.NewRow();
             DT_DMCHUNGLOAI.Rows.Add(r_Insert);
             BS_DMCHUNGLOAI.Position = DT_DMCHUNGLOAI.Rows.Count;

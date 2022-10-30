@@ -413,10 +413,6 @@ namespace GD.BBPH.APP.HOANTHIEN
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_SOLSX.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_SOMETVAO.Text = txt_SOKGVAO.Text = txt_SOCON.Text = txt_THOIGIANCATDAU.Text = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_TITRONGTUI.Text = txt_THOIGIANLENCUON.Text = txt_THOIGIANHACUON.Text = txt_THOIGIANSUCO.Text = txt_PHEIN.Text = txt_PHEGHEP.Text = txt_PHETHOI.Text = txt_PHEBIEN.Text = txt_PHEKHAC.Text = txt_PHECHINHMAY.Text= string.Empty;
-            //txt_PHONGBAN.Text = string.Empty;
-            //txt_CHUCVU.Text = string.Empty;
-            KetquathanhphamManager _KetquathanhphamManager = new KetquathanhphamManager();
-            KetquathanhphamEntity _KetquathanhphamEntity = new KetquathanhphamEntity();
             r_Insert = DT_KQHOANTHIEN.NewRow();
             DT_KQHOANTHIEN.Rows.Add(r_Insert);
             BS_KQHOANTHIEN.Position = DT_KQHOANTHIEN.Rows.Count;

@@ -605,8 +605,6 @@ namespace GD.BBPH.APP.DANHMUC
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_TENKHACH.Text = string.Empty;
-            DmhangManager _DmhangManager = new DmhangManager();
-            DmhangEntity _DmhangEntity = new DmhangEntity();
             r_Insert = DT_DMHANGHOA.NewRow();
             DT_DMHANGHOA.Rows.Add(r_Insert);
             BS_DMHANGHOA.Position = DT_DMHANGHOA.Rows.Count;

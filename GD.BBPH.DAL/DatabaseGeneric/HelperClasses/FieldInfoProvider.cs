@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 27, 2022 4:52:14 PM
+// Code is generated on: Sunday, October 30, 2022 3:14:12 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -736,8 +736,6 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquainEntity", "Thoigiansuco", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquainFieldIndex.Thoigiansuco, 0, 3, 20);
 			base.AddElementFieldInfo("KetquainEntity", "PheNcc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquainFieldIndex.PheNcc, 0, 3, 20);
 			base.AddElementFieldInfo("KetquainEntity", "PheSx", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquainFieldIndex.PheSx, 0, 3, 20);
-			base.AddElementFieldInfo("KetquainEntity", "Tongm2dm", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquainFieldIndex.Tongm2dm, 0, 3, 20);
-			base.AddElementFieldInfo("KetquainEntity", "M2saihongtt", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquainFieldIndex.M2saihongtt, 0, 3, 20);
 			base.AddElementFieldInfo("KetquainEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquainFieldIndex.Ngaytao, 0, 0, 0);
 			base.AddElementFieldInfo("KetquainEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)KetquainFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("KetquainEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquainFieldIndex.Ngaysua, 0, 0, 0);
@@ -747,6 +745,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquainEntity", "Tencongnhan", typeof(System.String), false, false, false, true,  (int)KetquainFieldIndex.Tencongnhan, 250, 0, 0);
 			base.AddElementFieldInfo("KetquainEntity", "Nangsuat", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquainFieldIndex.Nangsuat, 0, 3, 20);
 			base.AddElementFieldInfo("KetquainEntity", "Tylesaihong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquainFieldIndex.Tylesaihong, 0, 3, 20);
+			base.AddElementFieldInfo("KetquainEntity", "Tongmdm", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquainFieldIndex.Tongmdm, 0, 3, 20);
 		}
 		/// <summary>Inits KetquainmauEntity's FieldInfo objects</summary>
 		private void InitKetquainmauEntityInfos()

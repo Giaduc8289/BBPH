@@ -386,8 +386,6 @@ namespace GD.BBPH.APP.DANHMUC
             string _Maydet = txt_MACONGTHUC.Text.Trim();
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_TENCONGTHUC.Text = string.Empty;
-            CtptmangDManager _CtptmangDManager = new CtptmangDManager();
-            CtptmangDEntity _CtptmangDEntity = new CtptmangDEntity();
             r_Insert = DT_CTPTMANG_H.NewRow();
             DT_CTPTMANG_H.Rows.Add(r_Insert);
             BS_CTPTMANG_H.Position = DT_CTPTMANG_H.Rows.Count;

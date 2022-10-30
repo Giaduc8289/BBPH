@@ -187,8 +187,6 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            DmnguyenlieuManager _DmnguyenlieuManager = new DmnguyenlieuManager();
-            DmnguyenlieuEntity _DmnguyenlieuEntity = new DmnguyenlieuEntity();
             r_Insert = DT_DMNGUYENLIEU.NewRow();
             DT_DMNGUYENLIEU.Rows.Add(r_Insert);
             BS_DMNGUYENLIEU.Position = DT_DMNGUYENLIEU.Rows.Count;

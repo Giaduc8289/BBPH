@@ -356,8 +356,6 @@ namespace GD.BBPH.APP.KHO
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_NGAY.Text = txt_MAKHO.Text = txt_TENKHO.Text = txt_MAMANG.Text = txt_TENMANG.Text = txt_SOM.Text = txt_SOKG.Text = txt_MALYDO.Text = txt_TENLYDO.Text = txt_LENHSX.Text = txt_SOPHIEUGIAO.Text = txt_MADH.Text = string.Empty;
-            XuatkhomangManager _XuatkhomangManager = new XuatkhomangManager();
-            XuatkhomangEntity _XuatkhomangEntity = new XuatkhomangEntity();
             r_Insert = DT_XUATMANG.NewRow();
             DT_XUATMANG.Rows.Add(r_Insert);
             BS_XUATMANG.Position = DT_XUATMANG.Rows.Count;

@@ -160,10 +160,6 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            //txt_PHONGBAN.Text = string.Empty;
-            //txt_CHUCVU.Text = string.Empty;
-            DmchucvuManager _DmchucvuManager = new DmchucvuManager();
-            DmchucvuEntity _DmchucvuEntity = new DmchucvuEntity();
             r_Insert = DT_DMCHUCVU.NewRow();
             DT_DMCHUCVU.Rows.Add(r_Insert);
             BS_DMCHUCVU.Position = DT_DMCHUCVU.Rows.Count;

@@ -327,10 +327,6 @@ namespace GD.BBPH.APP.KHO
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            //txt_PHONGBAN.Text = string.Empty;
-            //txt_CHUCVU.Text = string.Empty;
-            SodumangManager _SodumangManager = new SodumangManager();
-            SodumangEntity _SodumangEntity = new SodumangEntity();
             r_Insert = DT_SODUMANG.NewRow();
             DT_SODUMANG.Rows.Add(r_Insert);
             BS_SODUMANG.Position = DT_SODUMANG.Rows.Count;

@@ -170,8 +170,6 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            CongsuatmayManager _CongsuatmayManager = new CongsuatmayManager();
-            CongsuatmayEntity _CongsuatmayEntity = new CongsuatmayEntity();
             r_Insert = DT_CONGSUATMAY.NewRow();
             DT_CONGSUATMAY.Rows.Add(r_Insert);
             BS_CONGSUATMAY.Position = DT_CONGSUATMAY.Rows.Count;

@@ -128,10 +128,7 @@ namespace GD.BBPH.APP.HETHONG
         }
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
-            //txt_username.ReadOnly = txt_password.ReadOnly = txt_fullname.ReadOnly = txt_phone.ReadOnly = txt_address.ReadOnly = true;
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            RolesManager _RolesManager = new RolesManager();
-            RolesEntity _RolesEntity = new RolesEntity();
             r_Insert = DT_ROLES.NewRow();
             DT_ROLES.Rows.Add(r_Insert);
             BS_ROLES.Position = DT_ROLES.Rows.Count;

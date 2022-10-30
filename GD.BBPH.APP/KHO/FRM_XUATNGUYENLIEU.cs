@@ -349,8 +349,6 @@ namespace GD.BBPH.APP.KHO
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_NGAY.Text = txt_MAKHO.Text = txt_TENKHO.Text = txt_MANGUYENLIEU.Text = txt_TENNGUYENLIEU.Text = txt_DVTINH.Text = txt_SOLUONG.Text = txt_MALYDO.Text = txt_TENLYDO.Text = txt_LENHXUAT.Text = string.Empty;
-            XuatkhonguyenlieuManager _XuatkhonguyenlieuManager = new XuatkhonguyenlieuManager();
-            XuatkhonguyenlieuEntity _XuatkhonguyenlieuEntity = new XuatkhonguyenlieuEntity();
             r_Insert = DT_XUATNGUYENLIEU.NewRow();
             DT_XUATNGUYENLIEU.Rows.Add(r_Insert);
             BS_XUATNGUYENLIEU.Position = DT_XUATNGUYENLIEU.Rows.Count;

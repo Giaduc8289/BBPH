@@ -190,8 +190,6 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_PHONGBAN.Text = string.Empty;
             txt_CHUCVU.Text = string.Empty;
-            DmcongnhanManager _DmcongnhanManager = new DmcongnhanManager();
-            DmcongnhanEntity _DmcongnhanEntity = new DmcongnhanEntity();
             r_Insert = DT_DMCONGNHAN.NewRow();
             DT_DMCONGNHAN.Rows.Add(r_Insert);
             BS_DMCONGNHAN.Position = DT_DMCONGNHAN.Rows.Count;

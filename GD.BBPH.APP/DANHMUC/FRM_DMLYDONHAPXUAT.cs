@@ -161,8 +161,6 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            DmlydonhapxuatManager _DmlydonhapxuatManager = new DmlydonhapxuatManager();
-            DmlydonhapxuatEntity _DmlydonhapxuatEntity = new DmlydonhapxuatEntity();
             r_Insert = DT_DMLYDONHAPXUAT.NewRow();
             DT_DMLYDONHAPXUAT.Rows.Add(r_Insert);
             BS_LYDONHAPXUAT.Position = DT_DMLYDONHAPXUAT.Rows.Count;

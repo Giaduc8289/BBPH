@@ -158,8 +158,6 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            DmkhoManager _DmkhoManager = new DmkhoManager();
-            DmkhoEntity _DmkhoEntity = new DmkhoEntity();
             r_Insert = DT_DMKHO.NewRow();
             DT_DMKHO.Rows.Add(r_Insert);
             BS_DMKHO.Position = DT_DMKHO.Rows.Count;

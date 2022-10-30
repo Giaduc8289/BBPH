@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, October 27, 2022 4:52:14 PM
+// Code is generated on: Sunday, October 30, 2022 3:14:12 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1309,10 +1309,6 @@ namespace GD.BBPH.DAL
 		PheNcc,
 		///<summary>PheSx. </summary>
 		PheSx,
-		///<summary>Tongm2dm. </summary>
-		Tongm2dm,
-		///<summary>M2saihongtt. </summary>
-		M2saihongtt,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -1331,6 +1327,8 @@ namespace GD.BBPH.DAL
 		Nangsuat,
 		///<summary>Tylesaihong. </summary>
 		Tylesaihong,
+		///<summary>Tongmdm. </summary>
+		Tongmdm,
 		/// <summary></summary>
 		AmountOfFields
 	}

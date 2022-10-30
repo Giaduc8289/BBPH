@@ -64,10 +64,6 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_PheSx="PheSx";				
 		
-		public const String Field_Tongm2dm="Tongm2dm";				
-		
-		public const String Field_M2saihongtt="M2saihongtt";				
-		
 		public const String Field_Ngaytao="Ngaytao";				
 		
 		public const String Field_Nguoitao="Nguoitao";				
@@ -85,6 +81,8 @@ namespace GD.BBPH.BLL
 		public const String Field_Nangsuat="Nangsuat";				
 		
 		public const String Field_Tylesaihong="Tylesaihong";				
+		
+		public const String Field_Tongmdm="Tongmdm";				
 		
 				
 		#endregion	
@@ -139,10 +137,6 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_PheSx,typeof(System.Decimal));
 			
-			dt.Columns.Add(Field_Tongm2dm,typeof(System.Decimal));
-			
-			dt.Columns.Add(Field_M2saihongtt,typeof(System.Decimal));
-			
 			dt.Columns.Add(Field_Ngaytao,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Nguoitao,typeof(System.String));
@@ -160,6 +154,8 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Nangsuat,typeof(System.Decimal));
 			
 			dt.Columns.Add(Field_Tylesaihong,typeof(System.Decimal));
+			
+			dt.Columns.Add(Field_Tongmdm,typeof(System.Decimal));
 									
 		            
 			return dt;			
@@ -287,18 +283,6 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_Tongm2dm]=_KetquainEntity.Tongm2dm;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_M2saihongtt]=_KetquainEntity.M2saihongtt;
-			}
-			catch { }
-			
-			try
-			{
 				r[Field_Ngaytao]=_KetquainEntity.Ngaytao;
 			}
 			catch { }
@@ -348,6 +332,12 @@ namespace GD.BBPH.BLL
 			try
 			{
 				r[Field_Tylesaihong]=_KetquainEntity.Tylesaihong;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Tongmdm]=_KetquainEntity.Tongmdm;
 			}
 			catch { }
 									
@@ -473,18 +463,6 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_KetquainEntity.Tongm2dm= System.Decimal.Parse(r[Field_Tongm2dm].ToString());						
-			}
-			catch { }
-			
-			try
-			{
-				_KetquainEntity.M2saihongtt= System.Decimal.Parse(r[Field_M2saihongtt].ToString());						
-			}
-			catch { }
-			
-			try
-			{
 				_KetquainEntity.Ngaytao= System.DateTime.Parse(r[Field_Ngaytao].ToString());						
 			}
 			catch { }
@@ -536,6 +514,12 @@ namespace GD.BBPH.BLL
 				_KetquainEntity.Tylesaihong= System.Decimal.Parse(r[Field_Tylesaihong].ToString());						
 			}
 			catch { }
+			
+			try
+			{
+				_KetquainEntity.Tongmdm= System.Decimal.Parse(r[Field_Tongmdm].ToString());						
+			}
+			catch { }
 									
 									
 			return _KetquainEntity;
@@ -583,10 +567,6 @@ namespace GD.BBPH.BLL
 			
 			_KetquainEntity.PheSx= _KetquainEntity_XML.PheSx;
 			
-			_KetquainEntity.Tongm2dm= _KetquainEntity_XML.Tongm2dm;
-			
-			_KetquainEntity.M2saihongtt= _KetquainEntity_XML.M2saihongtt;
-			
 			_KetquainEntity.Ngaytao= _KetquainEntity_XML.Ngaytao;
 			
 			_KetquainEntity.Nguoitao= _KetquainEntity_XML.Nguoitao;
@@ -604,6 +584,8 @@ namespace GD.BBPH.BLL
 			_KetquainEntity.Nangsuat= _KetquainEntity_XML.Nangsuat;
 			
 			_KetquainEntity.Tylesaihong= _KetquainEntity_XML.Tylesaihong;
+			
+			_KetquainEntity.Tongmdm= _KetquainEntity_XML.Tongmdm;
 									
 				
 			return _KetquainEntity;
@@ -735,18 +717,6 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Tongm2dm,_KetquainEntity.Tongm2dm);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_M2saihongtt,_KetquainEntity.M2saihongtt);
-			}
-			catch { }
-			
-			try
-			{
 				r.SetField(Field_Ngaytao,_KetquainEntity.Ngaytao);
 			}
 			catch { }
@@ -796,6 +766,12 @@ namespace GD.BBPH.BLL
 			try
 			{
 				r.SetField(Field_Tylesaihong,_KetquainEntity.Tylesaihong);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Tongmdm,_KetquainEntity.Tongmdm);
 			}
 			catch { }
 									
@@ -924,18 +900,6 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Tongm2dm,_KetquainEntity.Tongm2dm);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_M2saihongtt,_KetquainEntity.M2saihongtt);
-			}
-			catch { }
-			
-			try
-			{
 				r.SetField(Field_Ngaytao,_KetquainEntity.Ngaytao);
 			}
 			catch { }
@@ -987,6 +951,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Tylesaihong,_KetquainEntity.Tylesaihong);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Tongmdm,_KetquainEntity.Tongmdm);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -1009,7 +979,7 @@ namespace GD.BBPH.BLL
 			return KetquainEntity;
 		}
 
-		public KetquainEntity Insert(System.Int64  Id, System.DateTime  Ngay, System.Int32  Ca, System.String  Mamay, System.String  Lenhin, System.String  Masanpham, System.String  Macongnhan, System.Decimal  SometLsx, System.Decimal  Sometcap, System.Decimal  Sokgcap, System.Decimal  Thuctein, System.Decimal  Sokgin, System.Decimal  Saihongthucte, System.DateTime  Thoigianbatdau, System.DateTime  Thoigianketthuc, System.Decimal  Thoigianchuanbi, System.Decimal  Thoigiansuco, System.Decimal  PheNcc, System.Decimal  PheSx, System.Decimal  Tongm2dm, System.Decimal  M2saihongtt, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.String  Tensanpham, System.String  Tenmay, System.String  Tencongnhan, System.Decimal  Nangsuat, System.Decimal  Tylesaihong)
+		public KetquainEntity Insert(System.Int64  Id, System.DateTime  Ngay, System.Int32  Ca, System.String  Mamay, System.String  Lenhin, System.String  Masanpham, System.String  Macongnhan, System.Decimal  SometLsx, System.Decimal  Sometcap, System.Decimal  Sokgcap, System.Decimal  Thuctein, System.Decimal  Sokgin, System.Decimal  Saihongthucte, System.DateTime  Thoigianbatdau, System.DateTime  Thoigianketthuc, System.Decimal  Thoigianchuanbi, System.Decimal  Thoigiansuco, System.Decimal  PheNcc, System.Decimal  PheSx, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.String  Tensanpham, System.String  Tenmay, System.String  Tencongnhan, System.Decimal  Nangsuat, System.Decimal  Tylesaihong, System.Decimal  Tongmdm)
 		{
 			KetquainEntity _KetquainEntity = new KetquainEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1053,10 +1023,6 @@ namespace GD.BBPH.BLL
 				
 				_KetquainEntity.PheSx = PheSx;
 				
-				_KetquainEntity.Tongm2dm = Tongm2dm;
-				
-				_KetquainEntity.M2saihongtt = M2saihongtt;
-				
 				_KetquainEntity.Ngaytao = Ngaytao;
 				
 				_KetquainEntity.Nguoitao = Nguoitao;
@@ -1074,6 +1040,8 @@ namespace GD.BBPH.BLL
 				_KetquainEntity.Nangsuat = Nangsuat;
 				
 				_KetquainEntity.Tylesaihong = Tylesaihong;
+				
+				_KetquainEntity.Tongmdm = Tongmdm;
 					
 					
 				adapter.SaveEntity(_KetquainEntity, true);
@@ -1081,7 +1049,7 @@ namespace GD.BBPH.BLL
 			return _KetquainEntity;
 		}
 
-		public KetquainEntity Insert(System.DateTime Ngay, System.Int32 Ca, System.String Mamay, System.String Lenhin, System.String Masanpham, System.String Macongnhan, System.Decimal SometLsx, System.Decimal Sometcap, System.Decimal Sokgcap, System.Decimal Thuctein, System.Decimal Sokgin, System.Decimal Saihongthucte, System.DateTime Thoigianbatdau, System.DateTime Thoigianketthuc, System.Decimal Thoigianchuanbi, System.Decimal Thoigiansuco, System.Decimal PheNcc, System.Decimal PheSx, System.Decimal Tongm2dm, System.Decimal M2saihongtt, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Tensanpham, System.String Tenmay, System.String Tencongnhan, System.Decimal Nangsuat, System.Decimal Tylesaihong)//ko co mahieu
+		public KetquainEntity Insert(System.DateTime Ngay, System.Int32 Ca, System.String Mamay, System.String Lenhin, System.String Masanpham, System.String Macongnhan, System.Decimal SometLsx, System.Decimal Sometcap, System.Decimal Sokgcap, System.Decimal Thuctein, System.Decimal Sokgin, System.Decimal Saihongthucte, System.DateTime Thoigianbatdau, System.DateTime Thoigianketthuc, System.Decimal Thoigianchuanbi, System.Decimal Thoigiansuco, System.Decimal PheNcc, System.Decimal PheSx, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Tensanpham, System.String Tenmay, System.String Tencongnhan, System.Decimal Nangsuat, System.Decimal Tylesaihong, System.Decimal Tongmdm)//ko co mahieu
 		{
 			KetquainEntity _KetquainEntity = new KetquainEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1124,10 +1092,6 @@ namespace GD.BBPH.BLL
 				
 				_KetquainEntity.PheSx = PheSx;
 				
-				_KetquainEntity.Tongm2dm = Tongm2dm;
-				
-				_KetquainEntity.M2saihongtt = M2saihongtt;
-				
 				_KetquainEntity.Ngaytao = Ngaytao;
 				
 				_KetquainEntity.Nguoitao = Nguoitao;
@@ -1145,6 +1109,8 @@ namespace GD.BBPH.BLL
 				_KetquainEntity.Nangsuat = Nangsuat;
 				
 				_KetquainEntity.Tylesaihong = Tylesaihong;
+				
+				_KetquainEntity.Tongmdm = Tongmdm;
 					
 
 				adapter.SaveEntity(_KetquainEntity, true);
@@ -1182,7 +1148,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.DateTime Ngay, System.Int32 Ca, System.String Mamay, System.String Lenhin, System.String Masanpham, System.String Macongnhan, System.Decimal SometLsx, System.Decimal Sometcap, System.Decimal Sokgcap, System.Decimal Thuctein, System.Decimal Sokgin, System.Decimal Saihongthucte, System.DateTime Thoigianbatdau, System.DateTime Thoigianketthuc, System.Decimal Thoigianchuanbi, System.Decimal Thoigiansuco, System.Decimal PheNcc, System.Decimal PheSx, System.Decimal Tongm2dm, System.Decimal M2saihongtt, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Tensanpham, System.String Tenmay, System.String Tencongnhan, System.Decimal Nangsuat, System.Decimal Tylesaihong)
+		public bool Update(System.Int64 Id, System.DateTime Ngay, System.Int32 Ca, System.String Mamay, System.String Lenhin, System.String Masanpham, System.String Macongnhan, System.Decimal SometLsx, System.Decimal Sometcap, System.Decimal Sokgcap, System.Decimal Thuctein, System.Decimal Sokgin, System.Decimal Saihongthucte, System.DateTime Thoigianbatdau, System.DateTime Thoigianketthuc, System.Decimal Thoigianchuanbi, System.Decimal Thoigiansuco, System.Decimal PheNcc, System.Decimal PheSx, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Tensanpham, System.String Tenmay, System.String Tencongnhan, System.Decimal Nangsuat, System.Decimal Tylesaihong, System.Decimal Tongmdm)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1229,10 +1195,6 @@ namespace GD.BBPH.BLL
 					
 					_KetquainEntity.PheSx = PheSx;
 					
-					_KetquainEntity.Tongm2dm = Tongm2dm;
-					
-					_KetquainEntity.M2saihongtt = M2saihongtt;
-					
 					_KetquainEntity.Ngaytao = Ngaytao;
 					
 					_KetquainEntity.Nguoitao = Nguoitao;
@@ -1250,6 +1212,8 @@ namespace GD.BBPH.BLL
 					_KetquainEntity.Nangsuat = Nangsuat;
 					
 					_KetquainEntity.Tylesaihong = Tylesaihong;
+					
+					_KetquainEntity.Tongmdm = Tongmdm;
 						
 
 					adapter.SaveEntity(_KetquainEntity, true);
@@ -1588,38 +1552,6 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByTongm2dm(System.Decimal Tongm2dm)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(KetquainFields.Tongm2dm == Tongm2dm);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("KetquainEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByM2saihongtt(System.Decimal M2saihongtt)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(KetquainFields.M2saihongtt == M2saihongtt);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("KetquainEntity", filter);
-			}
-			return toReturn;
-		}		
-		
 		public int DeleteByNgaytao(System.DateTime Ngaytao)
 		{
 			int toReturn = 0;
@@ -1755,6 +1687,22 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(KetquainFields.Tylesaihong == Tylesaihong);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("KetquainEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByTongmdm(System.Decimal Tongmdm)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KetquainFields.Tongmdm == Tongmdm);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -2451,74 +2399,6 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByTongm2dm(System.Decimal Tongm2dm)
-		{
-			EntityCollection _KetquainCollection = new EntityCollection(new KetquainEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(KetquainFields.Tongm2dm == Tongm2dm);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_KetquainCollection, filter, 0, null);
-			}
-			return _KetquainCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByTongm2dmRDT(System.Decimal Tongm2dm)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _KetquainCollection = new EntityCollection(new KetquainEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(KetquainFields.Tongm2dm == Tongm2dm);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_KetquainCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByM2saihongtt(System.Decimal M2saihongtt)
-		{
-			EntityCollection _KetquainCollection = new EntityCollection(new KetquainEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(KetquainFields.M2saihongtt == M2saihongtt);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_KetquainCollection, filter, 0, null);
-			}
-			return _KetquainCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByM2saihongttRDT(System.Decimal M2saihongtt)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _KetquainCollection = new EntityCollection(new KetquainEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(KetquainFields.M2saihongtt == M2saihongtt);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_KetquainCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
 		public EntityCollection SelectByNgaytao(System.DateTime Ngaytao)
 		{
 			EntityCollection _KetquainCollection = new EntityCollection(new KetquainEntityFactory());
@@ -2815,6 +2695,40 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(KetquainFields.Tylesaihong == Tylesaihong);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_KetquainCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByTongmdm(System.Decimal Tongmdm)
+		{
+			EntityCollection _KetquainCollection = new EntityCollection(new KetquainEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KetquainFields.Tongmdm == Tongmdm);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_KetquainCollection, filter, 0, null);
+			}
+			return _KetquainCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByTongmdmRDT(System.Decimal Tongmdm)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _KetquainCollection = new EntityCollection(new KetquainEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KetquainFields.Tongmdm == Tongmdm);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

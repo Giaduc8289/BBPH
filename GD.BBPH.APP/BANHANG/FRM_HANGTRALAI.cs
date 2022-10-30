@@ -197,8 +197,6 @@ namespace GD.BBPH.APP.BANHANG
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            HangtralaiManager _HangtralaiManager = new HangtralaiManager();
-            HangtralaiEntity _HangtralaiEntity = new HangtralaiEntity();
             r_Insert = DT_HANGTRALAI.NewRow();
             DT_HANGTRALAI.Rows.Add(r_Insert);
             BS_HANGTRALAI.Position = DT_HANGTRALAI.Rows.Count;

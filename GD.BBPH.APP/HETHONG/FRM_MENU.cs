@@ -223,8 +223,6 @@ namespace GD.BBPH.APP.HETHONG
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MENUPARENTNAME }));
             txt_MENUPARENTNAME.Text = string.Empty;
-            MenuManager _MenuManager = new MenuManager();
-            MenuEntity _MenuEntity = new MenuEntity();
             r_Insert = DT_MENU.NewRow();
             DT_MENU.Rows.Add(r_Insert);
             BS_MENU.Position = DT_MENU.Rows.Count;

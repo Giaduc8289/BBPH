@@ -169,8 +169,6 @@ namespace GD.BBPH.APP.DANHMUC
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_TENDONGMAY.Text = string.Empty;
-            DmmayManager _DmmayManager = new DmmayManager();
-            DmmayEntity _DmmayEntity = new DmmayEntity();
             r_Insert = DT_DMMAY.NewRow();
             DT_DMMAY.Rows.Add(r_Insert);
             BS_DMMAY.Position = DT_DMMAY.Rows.Count;

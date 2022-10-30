@@ -131,8 +131,6 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            DmcongdoanManager _DmcongdoanManager = new DmcongdoanManager();
-            DmcongdoanEntity _DmcongdoanEntity = new DmcongdoanEntity();
             r_Insert = DT_DMCONGDOAN.NewRow();
             DT_DMCONGDOAN.Rows.Add(r_Insert);
             BS_DMCONGDOAN.Position = DT_DMCONGDOAN.Rows.Count;

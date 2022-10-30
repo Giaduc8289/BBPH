@@ -164,8 +164,6 @@ namespace GD.BBPH.APP.DANHMUC
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_TENNHOM.Text = txt_TENMAY.Text = txt_TENDONGMAY.Text = txt_TENCONGDOAN.Text = string.Empty;
-            DinhmucvattuManager _DinhmucvattuManager = new DinhmucvattuManager();
-            DinhmucvattuEntity _DinhmucvattuEntity = new DinhmucvattuEntity();
             r_Insert = DT_DMVATTUSAIHONG.NewRow();
             DT_DMVATTUSAIHONG.Rows.Add(r_Insert);
             BS_DMVATTUSAIHONG.Position = DT_DMVATTUSAIHONG.Rows.Count;

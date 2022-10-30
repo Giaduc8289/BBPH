@@ -158,7 +158,7 @@
   <viewgrid>
     <value>1</value>
     <name>Thoigianketthuc</name>
-    <headerText>Thòi gian kết thúc</headerText>
+    <headerText>Thời gian kết thúc</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -176,7 +176,7 @@
   <viewgrid>
     <value>1</value>
     <name>Thoigiansuco</name>
-    <headerText>Thòi gian sự cố</headerText>
+    <headerText>Thời gian sự cố</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -195,24 +195,6 @@
     <value>1</value>
     <name>PheSX</name>
     <headerText>Phế SX</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tongm2dm</name>
-    <headerText>Tổng M2 ĐM</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>M2saihongtt</name>
-    <headerText>M2 sai hỏng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>

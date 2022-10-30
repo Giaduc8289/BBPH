@@ -409,10 +409,6 @@ namespace GD.BBPH.APP.CHIA
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENH.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_SOMVAO.Text = txt_SOKGVAO.Text = txt_DAURAGHEP.Text = txt_SOCON.Text = txt_THOIGIANCATDAU.Text = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANDOILENH.Text = txt_SOLANHACUON.Text = txt_THOIGIANLENCUON.Text = txt_THOIGIANHACUON.Text = txt_THOIGIANSUCO.Text = txt_PHEIN.Text = txt_PHEGHEP.Text = txt_PHECHIA.Text = txt_PHESANXUAT.Text = string.Empty;
-            //txt_PHONGBAN.Text = string.Empty;
-            //txt_CHUCVU.Text = string.Empty;
-            KetquachiaManager _KetquachiaManager = new KetquachiaManager();
-            KetquachiaEntity _KetquachiaEntity = new KetquachiaEntity();
             r_Insert = DT_KQCHIA.NewRow();
             DT_KQCHIA.Rows.Add(r_Insert);
             BS_KQCHIA.Position = DT_KQCHIA.Rows.Count;

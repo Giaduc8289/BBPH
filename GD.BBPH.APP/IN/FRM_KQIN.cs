@@ -178,8 +178,8 @@ namespace GD.BBPH.APP.IN
                     txt_SAIHONGTHUCTE.Text = _Rowview.Row[KetquainFields.Saihongthucte.Name].ToString();
                     txt_PHENCC.Text = _Rowview.Row[KetquainFields.PheNcc.Name].ToString();
                     txt_PHESX.Text = _Rowview.Row[KetquainFields.PheSx.Name].ToString();
-                    txt_TONGM2DM.Text = _Rowview.Row[KetquainFields.Tongm2dm.Name].ToString();
-                    txt_M2SAIHONGTT.Text = _Rowview.Row[KetquainFields.M2saihongtt.Name].ToString();
+                    //txt_TONGM2DM.Text = _Rowview.Row[KetquainFields.Tongm2dm.Name].ToString();
+                    //txt_M2SAIHONGTT.Text = _Rowview.Row[KetquainFields.M2saihongtt.Name].ToString();
                     txt_THOIGIANBATDAU.Text = _Rowview.Row[KetquainFields.Thoigianbatdau.Name].ToString();
                     txt_THOIGIANKETTHUC.Text = _Rowview.Row[KetquainFields.Thoigianketthuc.Name].ToString();
                     txt_THOIGIANCHUANBI.Text = _Rowview.Row[KetquainFields.Thoigianchuanbi.Name].ToString();
@@ -236,8 +236,8 @@ namespace GD.BBPH.APP.IN
             r_Detail[KetquainFields.Saihongthucte.Name] = LIB.ConvertString.NumbertoDB(txt_SAIHONGTHUCTE.Text.Trim());
             r_Detail[KetquainFields.PheNcc.Name] = LIB.ConvertString.NumbertoDB(txt_PHENCC.Text.Trim());
             r_Detail[KetquainFields.PheSx.Name] = LIB.ConvertString.NumbertoDB(txt_PHESX.Text.Trim());
-            r_Detail[KetquainFields.Tongm2dm.Name] = LIB.ConvertString.NumbertoDB(txt_TONGM2DM.Text.Trim());
-            r_Detail[KetquainFields.M2saihongtt.Name] = LIB.ConvertString.NumbertoDB(txt_M2SAIHONGTT.Text.Trim());
+            //r_Detail[KetquainFields.Tongm2dm.Name] = LIB.ConvertString.NumbertoDB(txt_TONGM2DM.Text.Trim());
+            //r_Detail[KetquainFields.M2saihongtt.Name] = LIB.ConvertString.NumbertoDB(txt_M2SAIHONGTT.Text.Trim());
             r_Detail[KetquainFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text;
             r_Detail[KetquainFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text;
             r_Detail[KetquainFields.Thoigianchuanbi.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim());
@@ -332,8 +332,8 @@ namespace GD.BBPH.APP.IN
                 _KetquainEntity.Saihongthucte = Convert.ToDecimal(_view.Row[KetquainFields.Saihongthucte.Name].ToString());
                 _KetquainEntity.PheNcc = Convert.ToDecimal(_view.Row[KetquainFields.PheNcc.Name].ToString());
                 _KetquainEntity.PheSx = Convert.ToDecimal(_view.Row[KetquainFields.PheSx.Name].ToString());
-                _KetquainEntity.Tongm2dm = Convert.ToDecimal(_view.Row[KetquainFields.Tongm2dm.Name].ToString());
-                _KetquainEntity.M2saihongtt = Convert.ToDecimal(_view.Row[KetquainFields.M2saihongtt.Name].ToString());
+                //_KetquainEntity.Tongm2dm = Convert.ToDecimal(_view.Row[KetquainFields.Tongm2dm.Name].ToString());
+                //_KetquainEntity.M2saihongtt = Convert.ToDecimal(_view.Row[KetquainFields.M2saihongtt.Name].ToString());
                 _KetquainEntity.Thoigianbatdau = Convert.ToDateTime(_view.Row[KetquainFields.Thoigianbatdau.Name].ToString());
                 _KetquainEntity.Thoigianketthuc = Convert.ToDateTime(_view.Row[KetquainFields.Thoigianketthuc.Name].ToString());
                 _KetquainEntity.Thoigianchuanbi = Convert.ToDecimal(_view.Row[KetquainFields.Thoigianchuanbi.Name].ToString());
@@ -396,11 +396,7 @@ namespace GD.BBPH.APP.IN
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENHIN.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASP.Text = txt_TENSP.Text = txt_SOMLSX.Text = txt_SOMCAP.Text = txt_SOKGCAP.Text = txt_THUCTEIN.Text = txt_SOKGIN.Text = txt_SAIHONGTHUCTE.Text = txt_PHENCC.Text = txt_PHESX.Text =
-               txt_TONGM2DM.Text = txt_M2SAIHONGTT.Text = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_THOIGIANSUCO.Text = txt_NANGSUAT.Text = txt_TILESAIHONG.Text = string.Empty;
-            //txt_PHONGBAN.Text = string.Empty;
-            //txt_CHUCVU.Text = string.Empty;
-            KetquainManager _KetquainManager = new KetquainManager();
-            KetquainEntity _KetquainEntity = new KetquainEntity();
+               /*txt_TONGM2DM.Text = txt_M2SAIHONGTT.Text = */txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_THOIGIANSUCO.Text = txt_NANGSUAT.Text = txt_TILESAIHONG.Text = string.Empty;
             r_Insert = DT_KQIN.NewRow();
             DT_KQIN.Rows.Add(r_Insert);
             BS_KQIN.Position = DT_KQIN.Rows.Count;
