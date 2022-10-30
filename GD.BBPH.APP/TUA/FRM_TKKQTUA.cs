@@ -145,7 +145,7 @@ namespace GD.BBPH.APP.TUA
                     DataRowView _Rowview = (DataRowView)this.BS_TKKQTUA.Current;
                     if (_Rowview != null)
                         MAHIEU_PK = _Rowview.Row[KetquatuaFields.Ngay.Name].ToString();
-                    //txt_MAHIEU.Text = _Rowview.Row[KetquatuaFields.Id.Name].ToString();
+
                     txt_NGAY.Text = _Rowview.Row[KetquatuaFields.Ngay.Name].ToString();
                     txt_CA.Text = _Rowview.Row[KetquatuaFields.Ca.Name].ToString();
                     txt_MAMAY.Text = _Rowview.Row[KetquatuaFields.Mamay.Name].ToString();
@@ -189,7 +189,6 @@ namespace GD.BBPH.APP.TUA
             else
             {
                 DT_TKKQTUA_CHITIET_FILL = LIB.Procedures.Danhsachketquatuachitiet(Convert.ToDateTime(txt_NGAY.Text.Trim()), Convert.ToInt32(txt_CA.Text.Trim()), txt_MAMAY.Text.Trim(), string.Empty, string.Empty);
-                // new KetquatuaManager().SelectByNgayCaLenhtuaRDT(Convert.ToDateTime(txt_Ngaythongke.Text.Trim()), Convert.ToInt32(txt_Ca.Text.Trim()));
 
                 DataView Source_View = new DataView(DT_TKKQTUA_CHITIET_FILL);
                 BS_TKKQTUA_CHITIET = new BindingSource();
@@ -229,22 +228,6 @@ namespace GD.BBPH.APP.TUA
             r_Detail[KetquatuaFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
 
             r_Detail[KetquatuaFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
-
-            //try { r_Detail[KetquatuaFields.SoMetvao.Name] = LIB.ConvertString.NumbertoDB(txt_SOMETVAO.Text.Trim()); }
-            //try { r_Detail[KetquatuaFields.SoMetra.Name] = LIB.ConvertString.NumbertoDB(txt_SOMETRA.Text.Trim()); }
-            //catch { }
-            //try { r_Detail[KetquatuaFields.SoKgvao.Name] = LIB.ConvertString.NumbertoDB(txt_KHOILUONGVAO.Text.Trim()); }
-            //catch { }
-            //try { r_Detail[KetquatuaFields.SoKgra.Name] = LIB.ConvertString.NumbertoDB(txt_KHOILUONGRA.Text.Trim()); }
-            //catch { }
-            //try { r_Detail[KetquatuaFields.Phethoi.Name] = LIB.ConvertString.NumbertoDB(txt_PHETHOI.Text.Trim()); }
-            //catch { }
-            //try { r_Detail[KetquatuaFields.Pheghep.Name] = LIB.ConvertString.NumbertoDB(txt_PHEGHEP.Text.Trim()); }
-            //catch { }
-            //try { r_Detail[KetquatuaFields.Phein.Name] = LIB.ConvertString.NumbertoDB(txt_PHEIN.Text.Trim()); }
-            //catch { }
-            //try { r_Detail[KetquatuaFields.Phesx.Name] = LIB.ConvertString.NumbertoDB(txt_PHESANXUAT.Text.Trim()); }
-            //catch { }
 
             DT_TKKQTUA_CHITIET_FILL.Rows.Add(r_Detail);
 
@@ -334,8 +317,6 @@ namespace GD.BBPH.APP.TUA
                 try { _KetquatuaEntity.SoKgra = Convert.ToDecimal(_view.Row[KetquatuaFields.SoKgra.Name].ToString()); }
                 catch { }
                 try { _KetquatuaEntity.SoMetvao = Convert.ToDecimal(_view.Row[KetquatuaFields.SoMetvao.Name].ToString()); }
-                catch { }
-                try { _KetquatuaEntity.Saihongthucte = Convert.ToDecimal(_view.Row[KetquatuaFields.Saihongthucte.Name].ToString()); }
                 catch { }
                 try { _KetquatuaEntity.Phein = Convert.ToDecimal(_view.Row[KetquatuaFields.Phein.Name].ToString()); }
                 catch { }
@@ -463,21 +444,6 @@ namespace GD.BBPH.APP.TUA
             GRID_TKKQTUA_CHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_TKKQTUA_CHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_TKKQTUA_CHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
-
-        }
-
-        private void textbox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
 
         }
 

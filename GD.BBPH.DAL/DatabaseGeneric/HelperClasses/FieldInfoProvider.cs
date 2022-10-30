@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, October 30, 2022 4:47:07 PM
+// Code is generated on: Monday, October 31, 2022 2:45:37 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -842,7 +842,6 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquatuaEntity", "SoKgvao", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquatuaFieldIndex.SoKgvao, 0, 3, 20);
 			base.AddElementFieldInfo("KetquatuaEntity", "SoMetra", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquatuaFieldIndex.SoMetra, 0, 3, 20);
 			base.AddElementFieldInfo("KetquatuaEntity", "SoKgra", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquatuaFieldIndex.SoKgra, 0, 3, 20);
-			base.AddElementFieldInfo("KetquatuaEntity", "Saihongthucte", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquatuaFieldIndex.Saihongthucte, 0, 3, 20);
 			base.AddElementFieldInfo("KetquatuaEntity", "Thoigianbatdau", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquatuaFieldIndex.Thoigianbatdau, 0, 0, 0);
 			base.AddElementFieldInfo("KetquatuaEntity", "Thoigianketthuc", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquatuaFieldIndex.Thoigianketthuc, 0, 0, 0);
 			base.AddElementFieldInfo("KetquatuaEntity", "Thoigianhacuon", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquatuaFieldIndex.Thoigianhacuon, 0, 3, 20);
@@ -862,6 +861,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquatuaEntity", "Tencongnhan", typeof(System.String), false, false, false, true,  (int)KetquatuaFieldIndex.Tencongnhan, 250, 0, 0);
 			base.AddElementFieldInfo("KetquatuaEntity", "Nangsuat", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquatuaFieldIndex.Nangsuat, 0, 3, 20);
 			base.AddElementFieldInfo("KetquatuaEntity", "Thoigiandauca", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquatuaFieldIndex.Thoigiandauca, 0, 3, 20);
+			base.AddElementFieldInfo("KetquatuaEntity", "Chenhlechkg", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquatuaFieldIndex.Chenhlechkg, 0, 3, 20);
 		}
 		/// <summary>Inits LogbackupEntity's FieldInfo objects</summary>
 		private void InitLogbackupEntityInfos()

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, October 30, 2022 4:47:08 PM
+// Code is generated on: Monday, October 31, 2022 2:45:37 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -500,9 +500,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("SoKgra", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Saihongthucte", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Thoigianbatdau", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -558,6 +555,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Thoigiandauca", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Chenhlechkg", fieldHashtable);
 		}
 		#endregion
 
@@ -798,17 +798,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)KetquatuaFieldIndex.SoKgra, value); }
 		}
 
-		/// <summary> The Saihongthucte property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Saihongthucte"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Saihongthucte
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Saihongthucte, false); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Saihongthucte, value); }
-		}
-
 		/// <summary> The Thoigianbatdau property of the Entity Ketquatua<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquatua"."Thoigianbatdau"<br/>
@@ -1016,6 +1005,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Thoigiandauca, false); }
 			set	{ SetValue((int)KetquatuaFieldIndex.Thoigiandauca, value); }
+		}
+
+		/// <summary> The Chenhlechkg property of the Entity Ketquatua<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquatua"."Chenhlechkg"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Chenhlechkg
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquatuaFieldIndex.Chenhlechkg, false); }
+			set	{ SetValue((int)KetquatuaFieldIndex.Chenhlechkg, value); }
 		}
 
 

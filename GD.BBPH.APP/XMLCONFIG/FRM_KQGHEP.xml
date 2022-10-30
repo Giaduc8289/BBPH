@@ -35,7 +35,7 @@
     <headerText>Ngày</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>80</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -44,7 +44,7 @@
     <headerText>Ca</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>35</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -53,7 +53,7 @@
     <headerText>Mã máy</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>50</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>

@@ -66,6 +66,24 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
+    <value>2</value>
+    <name>Tenmay</name>
+    <headerText>Tên máy</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Nangsuat</name>
+    <headerText>Năng suất</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
     <value>1</value>
     <name>Lenhin</name>
     <headerText>Lệnh in</headerText>
@@ -77,7 +95,7 @@
   <viewgrid>
     <value>1</value>
     <name>Masanpham</name>
-    <headerText>Mã sản phẩm</headerText>
+    <headerText>Mã SP</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -85,8 +103,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Macongnhan</name>
-    <headerText>Mã công nhân</headerText>
+    <name>Tensanpham</name>
+    <headerText>Tên sản phẩm</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -103,8 +121,26 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Macongnhan</name>
+    <headerText>Mã CN</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tencongnhan</name>
+    <headerText>Tên công nhân</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Sometcap</name>
-    <headerText>Số m cấp</headerText>
+    <headerText>Mét cấp</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -113,7 +149,7 @@
   <viewgrid>
     <value>1</value>
     <name>Sokgcap</name>
-    <headerText>Số Kg cấp</headerText>
+    <headerText>Kg cấp</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -122,7 +158,7 @@
   <viewgrid>
     <value>1</value>
     <name>Thuctein</name>
-    <headerText>Thực tế in</headerText>
+    <headerText>Kết quả (m)</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -131,7 +167,7 @@
   <viewgrid>
     <value>1</value>
     <name>Sokgin</name>
-    <headerText>Số Kg in</headerText>
+    <headerText>Kết quả (kg)</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -149,7 +185,7 @@
   <viewgrid>
     <value>1</value>
     <name>Thoigianbatdau</name>
-    <headerText>Thời gian bắt đầu</headerText>
+    <headerText>TG bắt đầu</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -158,7 +194,7 @@
   <viewgrid>
     <value>1</value>
     <name>Thoigianketthuc</name>
-    <headerText>Thời gian kết thúc</headerText>
+    <headerText>TG kết thúc</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -167,7 +203,7 @@
   <viewgrid>
     <value>1</value>
     <name>Thoigianchuanbi</name>
-    <headerText>Thời gian chuẩn bị</headerText>
+    <headerText>TG chuẩn bị</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -176,7 +212,7 @@
   <viewgrid>
     <value>1</value>
     <name>Thoigiansuco</name>
-    <headerText>Thời gian sự cố</headerText>
+    <headerText>TG sự cố</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -231,33 +267,6 @@
     <value>2</value>
     <name>Nguoisua</name>
     <headerText>Nguoisua</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tensanpham</name>
-    <headerText>Tên sản phẩm</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tenmay</name>
-    <headerText>Tên máy</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tencongnhan</name>
-    <headerText>Tên công nhân</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>

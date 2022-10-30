@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, October 30, 2022 4:47:08 PM
+// Code is generated on: Monday, October 31, 2022 2:45:38 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -3077,11 +3077,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquatuaFieldIndex.SoKgra);}
 		}
-		/// <summary>Creates a new KetquatuaEntity.Saihongthucte field instance</summary>
-		public static EntityField2 Saihongthucte
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquatuaFieldIndex.Saihongthucte);}
-		}
 		/// <summary>Creates a new KetquatuaEntity.Thoigianbatdau field instance</summary>
 		public static EntityField2 Thoigianbatdau
 		{
@@ -3176,6 +3171,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Thoigiandauca
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquatuaFieldIndex.Thoigiandauca);}
+		}
+		/// <summary>Creates a new KetquatuaEntity.Chenhlechkg field instance</summary>
+		public static EntityField2 Chenhlechkg
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquatuaFieldIndex.Chenhlechkg);}
 		}
 	}
 
