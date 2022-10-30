@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, October 30, 2022 3:14:13 PM
+// Code is generated on: Sunday, October 30, 2022 4:47:08 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -545,18 +545,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Phethoi", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Pheintui", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Phegheptui", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("PhethoiNcc", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Phesxtui", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -982,50 +970,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)KetquaghepFieldIndex.Phethoi, false); }
 			set	{ SetValue((int)KetquaghepFieldIndex.Phethoi, value); }
-		}
-
-		/// <summary> The Pheintui property of the Entity Ketquaghep<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquaghep"."Pheintui"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Pheintui
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquaghepFieldIndex.Pheintui, false); }
-			set	{ SetValue((int)KetquaghepFieldIndex.Pheintui, value); }
-		}
-
-		/// <summary> The Phegheptui property of the Entity Ketquaghep<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquaghep"."Phegheptui"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Phegheptui
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquaghepFieldIndex.Phegheptui, false); }
-			set	{ SetValue((int)KetquaghepFieldIndex.Phegheptui, value); }
-		}
-
-		/// <summary> The PhethoiNcc property of the Entity Ketquaghep<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquaghep"."Phethoi_NCC"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> PhethoiNcc
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquaghepFieldIndex.PhethoiNcc, false); }
-			set	{ SetValue((int)KetquaghepFieldIndex.PhethoiNcc, value); }
-		}
-
-		/// <summary> The Phesxtui property of the Entity Ketquaghep<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquaghep"."Phesxtui"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Phesxtui
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquaghepFieldIndex.Phesxtui, false); }
-			set	{ SetValue((int)KetquaghepFieldIndex.Phesxtui, value); }
 		}
 
 		/// <summary> The Ngaytao property of the Entity Ketquaghep<br/><br/>

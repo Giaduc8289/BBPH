@@ -341,7 +341,6 @@ namespace GD.BBPH.APP.IN
                 _KetquainEntity.Nangsuat = Convert.ToDecimal(_view.Row[KetquainFields.Nangsuat.Name].ToString());
                 _KetquainEntity.Tylesaihong = Convert.ToDecimal(_view.Row[KetquainFields.Tylesaihong.Name].ToString());
 
-
                 #region xét isnew
                 try { _KetquainEntity.Id = Convert.ToInt64(_view[KetquainFields.Id.Name].ToString()); }
                 catch { }
@@ -363,6 +362,7 @@ namespace GD.BBPH.APP.IN
                     }
                 }
                 #endregion
+
                 if (!string.IsNullOrEmpty(_KetquainEntity.Masanpham))
                     _KetquainEntityCol.Add(_KetquainEntity);
                

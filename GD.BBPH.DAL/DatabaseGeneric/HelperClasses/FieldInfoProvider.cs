@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, October 30, 2022 3:14:12 PM
+// Code is generated on: Sunday, October 30, 2022 4:47:07 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -701,10 +701,6 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquaghepEntity", "PheNcc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquaghepFieldIndex.PheNcc, 0, 3, 20);
 			base.AddElementFieldInfo("KetquaghepEntity", "PheSx", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquaghepFieldIndex.PheSx, 0, 3, 20);
 			base.AddElementFieldInfo("KetquaghepEntity", "Phethoi", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquaghepFieldIndex.Phethoi, 0, 3, 20);
-			base.AddElementFieldInfo("KetquaghepEntity", "Pheintui", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquaghepFieldIndex.Pheintui, 0, 3, 20);
-			base.AddElementFieldInfo("KetquaghepEntity", "Phegheptui", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquaghepFieldIndex.Phegheptui, 0, 3, 20);
-			base.AddElementFieldInfo("KetquaghepEntity", "PhethoiNcc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquaghepFieldIndex.PhethoiNcc, 0, 3, 20);
-			base.AddElementFieldInfo("KetquaghepEntity", "Phesxtui", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquaghepFieldIndex.Phesxtui, 0, 3, 20);
 			base.AddElementFieldInfo("KetquaghepEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquaghepFieldIndex.Ngaytao, 0, 0, 0);
 			base.AddElementFieldInfo("KetquaghepEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)KetquaghepFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("KetquaghepEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquaghepFieldIndex.Ngaysua, 0, 0, 0);

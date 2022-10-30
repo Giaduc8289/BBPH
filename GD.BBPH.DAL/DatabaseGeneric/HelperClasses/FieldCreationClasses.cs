@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, October 30, 2022 3:14:13 PM
+// Code is generated on: Sunday, October 30, 2022 4:47:08 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -2446,26 +2446,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Phethoi
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.Phethoi);}
-		}
-		/// <summary>Creates a new KetquaghepEntity.Pheintui field instance</summary>
-		public static EntityField2 Pheintui
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.Pheintui);}
-		}
-		/// <summary>Creates a new KetquaghepEntity.Phegheptui field instance</summary>
-		public static EntityField2 Phegheptui
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.Phegheptui);}
-		}
-		/// <summary>Creates a new KetquaghepEntity.PhethoiNcc field instance</summary>
-		public static EntityField2 PhethoiNcc
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.PhethoiNcc);}
-		}
-		/// <summary>Creates a new KetquaghepEntity.Phesxtui field instance</summary>
-		public static EntityField2 Phesxtui
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.Phesxtui);}
 		}
 		/// <summary>Creates a new KetquaghepEntity.Ngaytao field instance</summary>
 		public static EntityField2 Ngaytao

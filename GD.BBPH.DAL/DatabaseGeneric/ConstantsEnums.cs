@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, October 30, 2022 3:14:12 PM
+// Code is generated on: Sunday, October 30, 2022 4:47:07 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1237,14 +1237,6 @@ namespace GD.BBPH.DAL
 		PheSx,
 		///<summary>Phethoi. </summary>
 		Phethoi,
-		///<summary>Pheintui. </summary>
-		Pheintui,
-		///<summary>Phegheptui. </summary>
-		Phegheptui,
-		///<summary>PhethoiNcc. </summary>
-		PhethoiNcc,
-		///<summary>Phesxtui. </summary>
-		Phesxtui,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>

@@ -144,7 +144,6 @@ namespace GD.BBPH.APP.GHEP
                     txt_CA.Text = _Rowview.Row[KetquaghepFields.Ca.Name].ToString();
                     txt_MAMAY.Text = _Rowview.Row[KetquaghepFields.Mamay.Name].ToString();
 
-                    //txt_TENKHO.Text = _Rowview.Row[KetquaghepFields.Tenkho.Name].ToString();
                     txt_MAMAY_Validating(new object(), new CancelEventArgs());
 
                     SHOWGRID(MAHIEU_PK);
@@ -165,9 +164,6 @@ namespace GD.BBPH.APP.GHEP
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[KetquaghepFields.Id.Name].ToString();
 
-                    //txt_NGAY.Text = _Rowview.Row[KetquaghepFields.Ngay.Name].ToString();
-                    //txt_CA.Text = _Rowview.Row[KetquaghepFields.Ca.Name].ToString();
-                    //txt_MAMAY.Text = _Rowview.Row[KetquaghepFields.Mamay.Name].ToString();
                     txt_SOLSX.Text = _Rowview.Row[KetquaghepFields.Lenhghep.Name].ToString();
                     txt_MASANPHAM.Text = _Rowview.Row[KetquaghepFields.Masanpham.Name].ToString();
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquaghepFields.Macongnhan.Name].ToString();
@@ -191,20 +187,11 @@ namespace GD.BBPH.APP.GHEP
                     txt_PHENCC.Text = _Rowview.Row[KetquaghepFields.PheNcc.Name].ToString();
                     txt_PHESX.Text = _Rowview.Row[KetquaghepFields.PheSx.Name].ToString();
                     txt_PHENCC.Text = _Rowview.Row[KetquaghepFields.Phethoi.Name].ToString();
-                    txt_PHEINTUI.Text = _Rowview.Row[KetquaghepFields.Pheintui.Name].ToString();
-                    txt_PHEGHEPTUI.Text = _Rowview.Row[KetquaghepFields.Phegheptui.Name].ToString();
-                    txt_PHETHOI_NCC.Text = _Rowview.Row[KetquaghepFields.PhethoiNcc.Name].ToString();
-                    txt_PHESXTUI.Text = _Rowview.Row[KetquaghepFields.Phesxtui.Name].ToString();
-                    //txt_NGAYTAO.Text = _Rowview.Row[KetquaghepFields.Ngaytao.Name].ToString();
-                    //txt_NGUOITAO.Text = _Rowview.Row[KetquaghepFields.Nguoitao.Name].ToString();
-                    //txt_NGAYSUA.Text = _Rowview.Row[KetquaghepFields.Ngaysua.Name].ToString();
-                    //txt_NGUOISUA.Text = _Rowview.Row[KetquaghepFields.Nguoisua.Name].ToString();
-                    txt_TENSANPHAM.Text = _Rowview.Row[KetquaghepFields.Tensanpham.Name].ToString();
-                    txt_TENMAY.Text = _Rowview.Row[KetquaghepFields.Tenmay.Name].ToString();
-                    txt_TENCONGNHAN.Text = _Rowview.Row[KetquaghepFields.Tencongnhan.Name].ToString();
+
+                    txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
+                    txt_MACONGNHAN_Validating(new object(), new CancelEventArgs());
+
                     txt_NANGSUAT.Text = _Rowview.Row[KetquaghepFields.Nangsuat.Name].ToString();
-
-
                 }
                 //else
                 //{
@@ -274,31 +261,18 @@ namespace GD.BBPH.APP.GHEP
             catch { }
             try { r_Detail[KetquaghepFields.Phein.Name] = LIB.ConvertString.NumbertoDB(txt_PHEIN.Text.Trim()); }
             catch { }
-            try { r_Detail[KetquaghepFields.Pheintui.Name] = LIB.ConvertString.NumbertoDB(txt_PHEINTUI.Text.Trim()); }
-            catch { }
-
             try { r_Detail[KetquaghepFields.Pheghep.Name] = LIB.ConvertString.NumbertoDB(txt_PHEGHEP.Text.Trim()); }
             catch { }
-            try { r_Detail[KetquaghepFields.Phegheptui.Name] = LIB.ConvertString.NumbertoDB(txt_PHEGHEPTUI.Text.Trim()); }
-            catch { }
-
             try { r_Detail[KetquaghepFields.Phethoi.Name] = LIB.ConvertString.NumbertoDB(txt_PHENCC.Text.Trim()); }
-            catch { }
-            try { r_Detail[KetquaghepFields.PhethoiNcc.Name] = LIB.ConvertString.NumbertoDB(txt_PHETHOI_NCC.Text.Trim()); }
             catch { }
             try { r_Detail[KetquaghepFields.PheSx.Name] = LIB.ConvertString.NumbertoDB(txt_PHESX.Text.Trim()); }
             catch { }
-            try { r_Detail[KetquaghepFields.Phesxtui.Name] = LIB.ConvertString.NumbertoDB(txt_PHESXTUI.Text.Trim()); }
-            catch { }
-            //r_Detail[KetquaghepFields.Chatluong.Name] = txt_CHATLUONG.Text;
-            //r_Detail[KetquaghepFields.Phelieuthucte.Name] = txt_PHELIEUTHUCTE.Text;
-            //r_Detail[KetquaghepFields.Tongsp.Name] = txt_TONGSP.Text;
             r_Detail[KetquaghepFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text;
             r_Detail[KetquaghepFields.Thoigianketthuc.Name] = txt_THOIGIANKETTHUC.Text;
             r_Detail[KetquaghepFields.Thoigianchuanbi.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text);
             r_Detail[KetquaghepFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text);
-            //try { r_Detail[KetquaghepFields.Sokgdukiendat.Name] = LIB.ConvertString.NumbertoDB(txt_SOKGDUKIEN.Text.Trim()); }
-            //catch { }
+            try { r_Detail[KetquaghepFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim()); }
+            catch { }
 
             DT_KQGHEP_CHITIET_FILL.Rows.Add(r_Detail);
 
@@ -355,7 +329,7 @@ namespace GD.BBPH.APP.GHEP
 
         private string Save_Data(string _str_MAHIEU_PK)
         {
-            DateTime _ngayxuat = Convert.ToDateTime(txt_NGAY.Text.Trim());
+            DateTime _ngay = Convert.ToDateTime(txt_NGAY.Text.Trim());
 
             EntityCollection _KetquaghepEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_KQGHEPCHITIET.GetDataRows();
@@ -365,7 +339,7 @@ namespace GD.BBPH.APP.GHEP
                 if (_view == null) continue;
                 KetquaghepEntity _KetquaghepEntity = new KetquaghepEntity();
                 //_KetquaghepEntity.Id = txt_ID.Text.Trim();
-                _KetquaghepEntity.Ngay = _ngayxuat;
+                _KetquaghepEntity.Ngay = _ngay;
                 _KetquaghepEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
                 _KetquaghepEntity.Mamay = txt_MAMAY.Text.Trim();
                 _KetquaghepEntity.Lenhghep = txt_SOLSX.Text.Trim();
@@ -391,18 +365,32 @@ namespace GD.BBPH.APP.GHEP
                 _KetquaghepEntity.PheNcc = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.PheNcc.Name].ToString());
                 _KetquaghepEntity.PheSx = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.PheSx.Name].ToString());
                 _KetquaghepEntity.Phethoi = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.Phethoi.Name].ToString());
-                _KetquaghepEntity.Pheintui = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.Pheintui.Name].ToString());
-                _KetquaghepEntity.Phegheptui = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.Phegheptui.Name].ToString());
-                _KetquaghepEntity.PhethoiNcc = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.PhethoiNcc.Name].ToString());
-                _KetquaghepEntity.Phesxtui = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.Phesxtui.Name].ToString());
-                //_KetquaghepEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
-                //_KetquaghepEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-                //_KetquaghepEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
-                //_KetquaghepEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
                 _KetquaghepEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
                 _KetquaghepEntity.Tenmay = txt_TENMAY.Text.Trim();
                 _KetquaghepEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
                 _KetquaghepEntity.Nangsuat = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.Nangsuat.Name].ToString());
+
+                #region xét isnew
+                try { _KetquaghepEntity.Id = Convert.ToInt64(_view[KetquaghepFields.Id.Name].ToString()); }
+                catch { }
+
+                _KetquaghepEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_KetquaghepEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new KetquaghepManager()).SelectById(_KetquaghepEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _KetquaghepEntity.Ngaysua = DateTime.Now;
+                        _KetquaghepEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _KetquaghepEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _KetquaghepEntity.Ngaytao = DateTime.Now;
+                        _KetquaghepEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+                #endregion
 
                 if (!string.IsNullOrEmpty(_KetquaghepEntity.Masanpham))
                     _KetquaghepEntityCol.Add(_KetquaghepEntity);
@@ -424,7 +412,7 @@ namespace GD.BBPH.APP.GHEP
             _KetquaghepManager.Update(_KetquaghepEntity);
 
             //GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Id.Name].Value = _KetquaghepEntity.Id;
-            GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Ngay.Name].Value = _KetquaghepEntity.Ngay;
+            GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Ngay.Name].Value = _ngay;
             GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Ca.Name].Value = _KetquaghepEntity.Ca;
             GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Mamay.Name].Value = _KetquaghepEntity.Mamay;
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquaghepManager.Convert(_KetquaghepEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
@@ -437,7 +425,7 @@ namespace GD.BBPH.APP.GHEP
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_SOLSX.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_MANGINMET.Text = txt_MANGINKG.Text = txt_MANGCAPMET.Text = txt_MANGCAPKG.Text = txt_THUCTEKEO.Text = txt_DAURATUA.Text = txt_THUCTEKG.Text = txt_THUCTEMET.Text = txt_THUCTEKEO.Text = txt_THUCTEDONGRAN.Text = txt_THUCTEDUNGMOI.Text =  txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_SOLOPGHEP.Text = txt_THOIGIANSUCO.Text = txt_PHEIN.Text = txt_PHEINTUI.Text = txt_PHEGHEP.Text = txt_PHEGHEPTUI.Text = txt_PHESXTUI.Text = txt_PHESX.Text = txt_PHENCC.Text = txt_PHETHOI_NCC.Text = txt_NANGSUAT.Text= string.Empty;
+            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_SOLSX.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_MANGINMET.Text = txt_MANGINKG.Text = txt_MANGCAPMET.Text = txt_MANGCAPKG.Text = txt_THUCTEKEO.Text = txt_DAURATUA.Text = txt_THUCTEKG.Text = txt_THUCTEMET.Text = txt_THUCTEKEO.Text = txt_THUCTEDONGRAN.Text = txt_THUCTEDUNGMOI.Text =  txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_SOLOPGHEP.Text = txt_THOIGIANSUCO.Text = txt_PHEIN.Text = txt_PHEGHEP.Text = txt_PHESX.Text = txt_PHENCC.Text = txt_NANGSUAT.Text= string.Empty;
             r_Insert = DT_KQGHEP.NewRow();
             DT_KQGHEP.Rows.Add(r_Insert);
             BS_KQGHEP.Position = DT_KQGHEP.Rows.Count;
