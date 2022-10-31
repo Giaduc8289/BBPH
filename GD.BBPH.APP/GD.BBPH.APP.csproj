@@ -1331,17 +1331,12 @@
     <Content Include="XMLCONFIG\FRM_NHAPMANH_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANG.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANGCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATMANH_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPMANH_D.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATMANH_D.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPMANH_H.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATMANH_H.xml" />
     <Content Include="XMLCONFIG\FRM_XUATNGUYENLIEU.xml" />
     <Content Include="XMLCONFIG\FRM_XUATNGUYENLIEUCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_XUATSANPHAM.xml" />
     <Content Include="XMLCONFIG\FRM_XUATSANPHAMCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATSOI_D.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATSOI_H.xml" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

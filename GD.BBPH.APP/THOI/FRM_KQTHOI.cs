@@ -638,7 +638,7 @@ namespace GD.BBPH.APP.THOI
         }
         #endregion
 
-        #region Text Changed
+        #region Tính năng suất và chất lượng
         private void Tinhnangsuat()
         {
             try
@@ -669,12 +669,9 @@ namespace GD.BBPH.APP.THOI
             }
             catch { }
         }
-        private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
+        private void txt_NANGSUAT_CHATLUONG_Validated(object sender, EventArgs e)
         {
             Tinhnangsuat();
-        }
-        private void txt_SANLUONG_Validating(object sender, CancelEventArgs e)
-        {
             Tinhchatluong();
         }
         #endregion

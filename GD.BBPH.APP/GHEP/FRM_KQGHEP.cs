@@ -699,7 +699,7 @@ namespace GD.BBPH.APP.GHEP
         //}
         #endregion
 
-        #region  Text change
+        #region  Tính năng suất
         private void Tinhnangsuat()
         {
             try
@@ -714,7 +714,7 @@ namespace GD.BBPH.APP.GHEP
             }
             catch { }
         }
-        private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
+        private void txt_NANGSUAT_Validated(object sender, EventArgs e)
         {
             Tinhnangsuat();
         }

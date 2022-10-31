@@ -620,7 +620,7 @@ namespace GD.BBPH.APP.IN
         }
         #endregion
 
-        #region  Text change
+        #region  Tính năng suất và tỉ lệ sai hỏng
         private void Tinhnangsuat()
         {
             try
@@ -636,7 +636,7 @@ namespace GD.BBPH.APP.IN
             catch { }
         }
 
-        private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
+        private void txt_NANGSUAT_Validated(object sender, EventArgs e)
         {
             Tinhnangsuat();
         }

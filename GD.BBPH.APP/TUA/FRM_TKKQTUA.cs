@@ -620,7 +620,7 @@ namespace GD.BBPH.APP.TUA
         }
         #endregion
 
-        #region Text change
+        #region Tính năng suất và khối lượng chênh lệch
         private void Tinhnangsuat()
         {
             try
@@ -636,12 +636,31 @@ namespace GD.BBPH.APP.TUA
             }
             catch { }
         }
-        private void txt_THOIGIAN_Validating(object sender, CancelEventArgs e)
+        private void txt_NANGSUAT_Validated(object sender, EventArgs e)
         {
             Tinhnangsuat();
         }
 
+        private void Tinhchenhlechkg()
+        {
+            try
+            {
+                decimal _kgvao = 0, _kgra = 0, _kgphe = 0, _kgchenhlech = 0;
+                _kgvao = LIB.ConvertString.NumbertoDB(txt_SOMETVAO.Text.Trim());
+                _kgra = LIB.ConvertString.NumbertoDB(txt_SOMETRA.Text.Trim());
+                _kgphe = LIB.ConvertString.NumbertoDB(txt_PHEIN.Text.Trim()) + LIB.ConvertString.NumbertoDB(txt_PHEGHEP.Text.Trim())
+                    + LIB.ConvertString.NumbertoDB(txt_PHETHOI.Text.Trim()) + LIB.ConvertString.NumbertoDB(txt_PHESANXUAT.Text.Trim());
+                _kgchenhlech = _kgvao - _kgra - _kgphe;
+                txt_CHENHLECHKG.Text = Math.Round(_kgchenhlech).ToString();
+            }
+            catch { }
+        }
+        private void txt_CHENHLECHKG_Validated(object sender, EventArgs e)
+        {
+            Tinhchenhlechkg();
+        }
         #endregion
+
         #region Shortcut Key
         private void txt_MAMAY_KeyDown(object sender, KeyEventArgs e)
         {
