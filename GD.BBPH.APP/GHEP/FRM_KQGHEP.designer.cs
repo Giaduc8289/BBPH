@@ -821,7 +821,6 @@
             this.txt_MASANPHAM.Size = new System.Drawing.Size(74, 20);
             this.txt_MASANPHAM.TabIndex = 5;
             this.txt_MASANPHAM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASANPHAM_Validating);
-            this.txt_MASANPHAM.Validated += new System.EventHandler(this.txt_NANGSUAT_Validated);
             // 
             // label4
             // 
@@ -1012,7 +1011,7 @@
             this.ClientSize = new System.Drawing.Size(1193, 701);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_KQGHEP";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_KQGHEP_FormClosing);

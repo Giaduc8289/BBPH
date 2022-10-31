@@ -541,7 +541,6 @@
             this.txt_MAMANG.TabIndex = 7;
             this.txt_MAMANG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MANG_KeyDown);
             this.txt_MAMANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMANG_Validating);
-            this.txt_MAMANG.Validated += new System.EventHandler(this.txt_NANGSUAT_CHATLUONG_Validated);
             // 
             // label4
             // 

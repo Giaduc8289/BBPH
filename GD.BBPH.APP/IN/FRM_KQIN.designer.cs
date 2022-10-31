@@ -692,10 +692,8 @@
             this.txt_MASP.Regular_Expression = null;
             this.txt_MASP.Size = new System.Drawing.Size(93, 20);
             this.txt_MASP.TabIndex = 8;
-            this.txt_MASP.TextChanged += new System.EventHandler(this.txt_TYLESAIHONG_Validated);
             this.txt_MASP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MASP_KeyDown);
             this.txt_MASP.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASP_Validating);
-            this.txt_MASP.Validated += new System.EventHandler(this.txt_NANGSUAT_Validated);
             // 
             // label4
             // 
@@ -889,7 +887,7 @@
             this.ClientSize = new System.Drawing.Size(1086, 633);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_KQIN";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_KQIN_FormClosing);

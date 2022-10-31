@@ -836,7 +836,6 @@
             this.txt_MASANPHAM.TabIndex = 5;
             this.txt_MASANPHAM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MASANPHAM_KeyDown);
             this.txt_MASANPHAM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASANPHAM_Validating);
-            this.txt_MASANPHAM.Validated += new System.EventHandler(this.txt_NANGSUAT_Validated);
             // 
             // txt_TENSANPHAM
             // 
