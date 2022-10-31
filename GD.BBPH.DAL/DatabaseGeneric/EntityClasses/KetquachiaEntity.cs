@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 31, 2022 2:45:37 AM
+// Code is generated on: Monday, October 31, 2022 5:06:48 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -472,9 +472,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Sokgvao", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Socon", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Thoigianbatdau", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -527,6 +524,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nangsuat", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tylesaihong", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Socuon", fieldHashtable);
 		}
 		#endregion
 
@@ -735,17 +738,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)KetquachiaFieldIndex.Sokgvao, value); }
 		}
 
-		/// <summary> The Socon property of the Entity Ketquachia<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquachia"."Socon"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Int32> Socon
-		{
-			get { return (Nullable<System.Int32>)GetValue((int)KetquachiaFieldIndex.Socon, false); }
-			set	{ SetValue((int)KetquachiaFieldIndex.Socon, value); }
-		}
-
 		/// <summary> The Thoigianbatdau property of the Entity Ketquachia<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquachia"."Thoigianbatdau"<br/>
@@ -942,6 +934,28 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)KetquachiaFieldIndex.Nangsuat, false); }
 			set	{ SetValue((int)KetquachiaFieldIndex.Nangsuat, value); }
+		}
+
+		/// <summary> The Tylesaihong property of the Entity Ketquachia<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquachia"."Tylesaihong"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tylesaihong
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquachiaFieldIndex.Tylesaihong, false); }
+			set	{ SetValue((int)KetquachiaFieldIndex.Tylesaihong, value); }
+		}
+
+		/// <summary> The Socuon property of the Entity Ketquachia<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquachia"."Socuon"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Int32> Socuon
+		{
+			get { return (Nullable<System.Int32>)GetValue((int)KetquachiaFieldIndex.Socuon, false); }
+			set	{ SetValue((int)KetquachiaFieldIndex.Socuon, value); }
 		}
 
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 31, 2022 2:45:37 AM
+// Code is generated on: Monday, October 31, 2022 5:06:47 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1135,8 +1135,6 @@ namespace GD.BBPH.DAL
 		Sometvao,
 		///<summary>Sokgvao. </summary>
 		Sokgvao,
-		///<summary>Socon. </summary>
-		Socon,
 		///<summary>Thoigianbatdau. </summary>
 		Thoigianbatdau,
 		///<summary>Thoigianketthuc. </summary>
@@ -1173,6 +1171,10 @@ namespace GD.BBPH.DAL
 		Nguoisua,
 		///<summary>Nangsuat. </summary>
 		Nangsuat,
+		///<summary>Tylesaihong. </summary>
+		Tylesaihong,
+		///<summary>Socuon. </summary>
+		Socuon,
 		/// <summary></summary>
 		AmountOfFields
 	}

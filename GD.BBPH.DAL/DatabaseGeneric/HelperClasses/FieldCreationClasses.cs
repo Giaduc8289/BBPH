@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 31, 2022 2:45:38 AM
+// Code is generated on: Monday, October 31, 2022 5:06:49 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -2212,11 +2212,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Sokgvao);}
 		}
-		/// <summary>Creates a new KetquachiaEntity.Socon field instance</summary>
-		public static EntityField2 Socon
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Socon);}
-		}
 		/// <summary>Creates a new KetquachiaEntity.Thoigianbatdau field instance</summary>
 		public static EntityField2 Thoigianbatdau
 		{
@@ -2306,6 +2301,16 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nangsuat
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Nangsuat);}
+		}
+		/// <summary>Creates a new KetquachiaEntity.Tylesaihong field instance</summary>
+		public static EntityField2 Tylesaihong
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tylesaihong);}
+		}
+		/// <summary>Creates a new KetquachiaEntity.Socuon field instance</summary>
+		public static EntityField2 Socuon
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Socuon);}
 		}
 	}
 
