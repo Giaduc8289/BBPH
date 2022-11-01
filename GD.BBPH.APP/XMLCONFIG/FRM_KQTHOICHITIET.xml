@@ -76,6 +76,24 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Chatluong</name>
+    <headerText>Chất lượng</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>65</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Nangsuat</name>
+    <headerText>Năng suất</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>75</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Lenhthoi</name>
     <headerText>Lệnh thổi</headerText>
     <BackColor>0</BackColor>
@@ -119,7 +137,6 @@
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
-
   <viewgrid>
     <value>1</value>
     <name>Somet</name>
@@ -181,24 +198,6 @@
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>60</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Chatluong</name>
-    <headerText>Chất lượng</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>65</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Nangsuat</name>
-    <headerText>Năng suất</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>75</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>

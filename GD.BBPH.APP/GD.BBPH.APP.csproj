@@ -1228,19 +1228,6 @@
     <Content Include="XMLCONFIG\FRM_KIEMKESOICHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="XMLCONFIG\FRM_LENHHT.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_LENHHT_D.xml" />
-    <Content Include="XMLCONFIG\FRM_LENHSXCHAYMAYKEOSOI_D.xml" />
-    <Content Include="XMLCONFIG\FRM_LENHSXCHAYMAYKEOSOI.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_LENHPE_D.xml" />
-    <Content Include="XMLCONFIG\FRM_LENHPE.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_LUONGHT_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KHO.xml" />
     <Content Include="XMLCONFIG\FRM_MENU.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEHANGHOA.xml" />
@@ -1262,18 +1249,6 @@
     <Content Include="XMLCONFIG\FRM_KHTRANG.xml" />
     <Content Include="XMLCONFIG\FRM_KQIN.xml" />
     <Content Include="XMLCONFIG\FRM_KQINCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_KQTRANGCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_KQTRANG.xml" />
-    <Content Include="XMLCONFIG\FRM_LENHIN.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_LENHIN_D.xml" />
-    <Content Include="XMLCONFIG\FRM_LENHTRANG_D.xml" />
-    <Content Include="XMLCONFIG\FRM_LENHTRANG.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_NCTRANGTHANG.xml" />
@@ -1313,10 +1288,6 @@
     <Content Include="XMLCONFIG\FRM_DONHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANGCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KHSXSOITHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_LENHSXDET_D.xml" />
-    <Content Include="XMLCONFIG\FRM_LENHSXDET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_THANHPHANSOI.xml">
       <SubType>Designer</SubType>
     </Content>
