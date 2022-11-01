@@ -112,6 +112,24 @@
   </viewgrid>
   <viewgrid>
     <value>2</value>
+    <name>Solopghepma</name>
+    <headerText>Solopghepma</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Solopghep</name>
+    <headerText>Solopghep</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
     <name>Loaimuc</name>
     <headerText>Loaimuc</headerText>
     <BackColor>0</BackColor>
