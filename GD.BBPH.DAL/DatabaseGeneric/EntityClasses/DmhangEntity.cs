@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 31, 2022 5:06:48 PM
+// Code is generated on: Monday, October 31, 2022 8:36:48 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -557,6 +557,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Macautrucin", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Solopghepma", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Solopghep", fieldHashtable);
 		}
 		#endregion
 
@@ -1082,6 +1088,28 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmhangFieldIndex.Macautrucin, true); }
 			set	{ SetValue((int)DmhangFieldIndex.Macautrucin, value); }
+		}
+
+		/// <summary> The Solopghepma property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Solopghepma"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Solopghepma
+		{
+			get { return (System.String)GetValue((int)DmhangFieldIndex.Solopghepma, true); }
+			set	{ SetValue((int)DmhangFieldIndex.Solopghepma, value); }
+		}
+
+		/// <summary> The Solopghep property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Solopghep"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Int32> Solopghep
+		{
+			get { return (Nullable<System.Int32>)GetValue((int)DmhangFieldIndex.Solopghep, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Solopghep, value); }
 		}
 
 

@@ -110,6 +110,10 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Macautrucin="Macautrucin";				
 		
+		public const String Field_Solopghepma="Solopghepma";				
+		
+		public const String Field_Solopghep="Solopghep";				
+		
 				
 		#endregion	
 
@@ -208,6 +212,10 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Doday,typeof(System.Decimal));
 			
 			dt.Columns.Add(Field_Macautrucin,typeof(System.String));
+			
+			dt.Columns.Add(Field_Solopghepma,typeof(System.String));
+			
+			dt.Columns.Add(Field_Solopghep,typeof(System.Int32));
 									
 		            
 			return dt;			
@@ -470,6 +478,18 @@ namespace GD.BBPH.BLL
 				r[Field_Macautrucin]=_DmhangEntity.Macautrucin;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_Solopghepma]=_DmhangEntity.Solopghepma;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Solopghep]=_DmhangEntity.Solopghep;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -728,6 +748,18 @@ namespace GD.BBPH.BLL
 				_DmhangEntity.Macautrucin= r[Field_Macautrucin].ToString();						
 			}
 			catch { }
+			
+			try
+			{
+				_DmhangEntity.Solopghepma= r[Field_Solopghepma].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_DmhangEntity.Solopghep= System.Int32.Parse(r[Field_Solopghep].ToString());						
+			}
+			catch { }
 									
 									
 			return _DmhangEntity;
@@ -820,6 +852,10 @@ namespace GD.BBPH.BLL
 			_DmhangEntity.Doday= _DmhangEntity_XML.Doday;
 			
 			_DmhangEntity.Macautrucin= _DmhangEntity_XML.Macautrucin;
+			
+			_DmhangEntity.Solopghepma= _DmhangEntity_XML.Solopghepma;
+			
+			_DmhangEntity.Solopghep= _DmhangEntity_XML.Solopghep;
 									
 				
 			return _DmhangEntity;
@@ -1086,6 +1122,18 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Macautrucin,_DmhangEntity.Macautrucin);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Solopghepma,_DmhangEntity.Solopghepma);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Solopghep,_DmhangEntity.Solopghep);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -1347,6 +1395,18 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Macautrucin,_DmhangEntity.Macautrucin);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Solopghepma,_DmhangEntity.Solopghepma);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Solopghep,_DmhangEntity.Solopghep);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -1369,7 +1429,7 @@ namespace GD.BBPH.BLL
 			return DmhangEntity;
 		}
 
-		public DmhangEntity Insert(System.String  Masp, System.String  Tensp, System.String  Maspcuakhach, System.String  Machungloai, System.String  Tenchungloai, System.String  Makhach, System.String  Tenkhach, System.String  Kichthuoc, System.Decimal  Trongluong, System.Int32  Sohinh, System.Int32  Somau, System.String  Loaimuc, System.Decimal  Khoiluongmuc, System.String  Cautrucin, System.String  Mamang1, System.String  Tenmang1, System.Decimal  Tlmanglop1, System.Decimal  Tlkeolop1, System.String  Mamang2, System.String  Tenmang2, System.Decimal  Tlmanglop2, System.Decimal  Tlkeolop2, System.Decimal  Dinhluongkeo, System.String  Kichthuoctruc, System.String  Vitri, System.String  Maqcdonggoi, System.String  Tenqcdonggoi, System.String  Maqcloaithung, System.String  Tenqcloaithung, System.String  Maqcthanhpham, System.String  Tenqcthanhpham, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Decimal  Rong, System.Decimal  Dai, System.String  Somauma, System.String  Sohinhma, System.String  Maloaimuc, System.Decimal  Doday, System.String  Macautrucin)
+		public DmhangEntity Insert(System.String  Masp, System.String  Tensp, System.String  Maspcuakhach, System.String  Machungloai, System.String  Tenchungloai, System.String  Makhach, System.String  Tenkhach, System.String  Kichthuoc, System.Decimal  Trongluong, System.Int32  Sohinh, System.Int32  Somau, System.String  Loaimuc, System.Decimal  Khoiluongmuc, System.String  Cautrucin, System.String  Mamang1, System.String  Tenmang1, System.Decimal  Tlmanglop1, System.Decimal  Tlkeolop1, System.String  Mamang2, System.String  Tenmang2, System.Decimal  Tlmanglop2, System.Decimal  Tlkeolop2, System.Decimal  Dinhluongkeo, System.String  Kichthuoctruc, System.String  Vitri, System.String  Maqcdonggoi, System.String  Tenqcdonggoi, System.String  Maqcloaithung, System.String  Tenqcloaithung, System.String  Maqcthanhpham, System.String  Tenqcthanhpham, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Decimal  Rong, System.Decimal  Dai, System.String  Somauma, System.String  Sohinhma, System.String  Maloaimuc, System.Decimal  Doday, System.String  Macautrucin, System.String  Solopghepma, System.Int32  Solopghep)
 		{
 			DmhangEntity _DmhangEntity = new DmhangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1458,6 +1518,10 @@ namespace GD.BBPH.BLL
 				_DmhangEntity.Doday = Doday;
 				
 				_DmhangEntity.Macautrucin = Macautrucin;
+				
+				_DmhangEntity.Solopghepma = Solopghepma;
+				
+				_DmhangEntity.Solopghep = Solopghep;
 					
 					
 				adapter.SaveEntity(_DmhangEntity, true);
@@ -1465,7 +1529,7 @@ namespace GD.BBPH.BLL
 			return _DmhangEntity;
 		}
 
-		public DmhangEntity Insert(System.String Tensp, System.String Maspcuakhach, System.String Machungloai, System.String Tenchungloai, System.String Makhach, System.String Tenkhach, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Sohinh, System.Int32 Somau, System.String Loaimuc, System.Decimal Khoiluongmuc, System.String Cautrucin, System.String Mamang1, System.String Tenmang1, System.Decimal Tlmanglop1, System.Decimal Tlkeolop1, System.String Mamang2, System.String Tenmang2, System.Decimal Tlmanglop2, System.Decimal Tlkeolop2, System.Decimal Dinhluongkeo, System.String Kichthuoctruc, System.String Vitri, System.String Maqcdonggoi, System.String Tenqcdonggoi, System.String Maqcloaithung, System.String Tenqcloaithung, System.String Maqcthanhpham, System.String Tenqcthanhpham, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Rong, System.Decimal Dai, System.String Somauma, System.String Sohinhma, System.String Maloaimuc, System.Decimal Doday, System.String Macautrucin)//ko co mahieu
+		public DmhangEntity Insert(System.String Tensp, System.String Maspcuakhach, System.String Machungloai, System.String Tenchungloai, System.String Makhach, System.String Tenkhach, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Sohinh, System.Int32 Somau, System.String Loaimuc, System.Decimal Khoiluongmuc, System.String Cautrucin, System.String Mamang1, System.String Tenmang1, System.Decimal Tlmanglop1, System.Decimal Tlkeolop1, System.String Mamang2, System.String Tenmang2, System.Decimal Tlmanglop2, System.Decimal Tlkeolop2, System.Decimal Dinhluongkeo, System.String Kichthuoctruc, System.String Vitri, System.String Maqcdonggoi, System.String Tenqcdonggoi, System.String Maqcloaithung, System.String Tenqcloaithung, System.String Maqcthanhpham, System.String Tenqcthanhpham, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Rong, System.Decimal Dai, System.String Somauma, System.String Sohinhma, System.String Maloaimuc, System.Decimal Doday, System.String Macautrucin, System.String Solopghepma, System.Int32 Solopghep)//ko co mahieu
 		{
 			DmhangEntity _DmhangEntity = new DmhangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1553,6 +1617,10 @@ namespace GD.BBPH.BLL
 				_DmhangEntity.Doday = Doday;
 				
 				_DmhangEntity.Macautrucin = Macautrucin;
+				
+				_DmhangEntity.Solopghepma = Solopghepma;
+				
+				_DmhangEntity.Solopghep = Solopghep;
 					
 
 				adapter.SaveEntity(_DmhangEntity, true);
@@ -1590,7 +1658,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Masp, System.String Tensp, System.String Maspcuakhach, System.String Machungloai, System.String Tenchungloai, System.String Makhach, System.String Tenkhach, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Sohinh, System.Int32 Somau, System.String Loaimuc, System.Decimal Khoiluongmuc, System.String Cautrucin, System.String Mamang1, System.String Tenmang1, System.Decimal Tlmanglop1, System.Decimal Tlkeolop1, System.String Mamang2, System.String Tenmang2, System.Decimal Tlmanglop2, System.Decimal Tlkeolop2, System.Decimal Dinhluongkeo, System.String Kichthuoctruc, System.String Vitri, System.String Maqcdonggoi, System.String Tenqcdonggoi, System.String Maqcloaithung, System.String Tenqcloaithung, System.String Maqcthanhpham, System.String Tenqcthanhpham, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Rong, System.Decimal Dai, System.String Somauma, System.String Sohinhma, System.String Maloaimuc, System.Decimal Doday, System.String Macautrucin)
+		public bool Update(System.String Masp, System.String Tensp, System.String Maspcuakhach, System.String Machungloai, System.String Tenchungloai, System.String Makhach, System.String Tenkhach, System.String Kichthuoc, System.Decimal Trongluong, System.Int32 Sohinh, System.Int32 Somau, System.String Loaimuc, System.Decimal Khoiluongmuc, System.String Cautrucin, System.String Mamang1, System.String Tenmang1, System.Decimal Tlmanglop1, System.Decimal Tlkeolop1, System.String Mamang2, System.String Tenmang2, System.Decimal Tlmanglop2, System.Decimal Tlkeolop2, System.Decimal Dinhluongkeo, System.String Kichthuoctruc, System.String Vitri, System.String Maqcdonggoi, System.String Tenqcdonggoi, System.String Maqcloaithung, System.String Tenqcloaithung, System.String Maqcthanhpham, System.String Tenqcthanhpham, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Rong, System.Decimal Dai, System.String Somauma, System.String Sohinhma, System.String Maloaimuc, System.Decimal Doday, System.String Macautrucin, System.String Solopghepma, System.Int32 Solopghep)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1682,6 +1750,10 @@ namespace GD.BBPH.BLL
 					_DmhangEntity.Doday = Doday;
 					
 					_DmhangEntity.Macautrucin = Macautrucin;
+					
+					_DmhangEntity.Solopghepma = Solopghepma;
+					
+					_DmhangEntity.Solopghep = Solopghep;
 						
 
 					adapter.SaveEntity(_DmhangEntity, true);
@@ -2379,6 +2451,38 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DmhangFields.Macautrucin == Macautrucin);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmhangEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteBySolopghepma(System.String Solopghepma)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmhangFields.Solopghepma == Solopghepma);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmhangEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteBySolopghep(System.Int32 Solopghep)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmhangFields.Solopghep == Solopghep);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -3847,6 +3951,74 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DmhangFields.Macautrucin == Macautrucin);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmhangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectBySolopghepma(System.String Solopghepma)
+		{
+			EntityCollection _DmhangCollection = new EntityCollection(new DmhangEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmhangFields.Solopghepma == Solopghepma);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmhangCollection, filter, 0, null);
+			}
+			return _DmhangCollection;
+		}
+		// Return DataTable
+		public DataTable SelectBySolopghepmaRDT(System.String Solopghepma)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmhangCollection = new EntityCollection(new DmhangEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmhangFields.Solopghepma == Solopghepma);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmhangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectBySolopghep(System.Int32 Solopghep)
+		{
+			EntityCollection _DmhangCollection = new EntityCollection(new DmhangEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmhangFields.Solopghep == Solopghep);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmhangCollection, filter, 0, null);
+			}
+			return _DmhangCollection;
+		}
+		// Return DataTable
+		public DataTable SelectBySolopghepRDT(System.Int32 Solopghep)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmhangCollection = new EntityCollection(new DmhangEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmhangFields.Solopghep == Solopghep);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

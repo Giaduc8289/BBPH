@@ -168,12 +168,36 @@ namespace GD.BBPH.APP.TUA
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[KetquatuaFields.Id.Name].ToString();
 
+                    txt_LENHTUA.Text = _Rowview.Row[KetquatuaFields.Lenhtua.Name].ToString();
+                    txt_MASANPHAM.Text = _Rowview.Row[KetquatuaFields.Masanpham.Name].ToString();
+                    txt_MACONGNHAN.Text = _Rowview.Row[KetquatuaFields.Macongnhan.Name].ToString();
+                    txt_DAURAIN.Text = _Rowview.Row[KetquatuaFields.Daurain.Name].ToString();
+                    txt_SOMETVAO.Text = _Rowview.Row[KetquatuaFields.SoMetvao.Name].ToString();
+                    txt_KHOILUONGVAO.Text = _Rowview.Row[KetquatuaFields.SoKgvao.Name].ToString();
+                    txt_SOMETRA.Text = _Rowview.Row[KetquatuaFields.SoMetra.Name].ToString();
+                    txt_KHOILUONGRA.Text = _Rowview.Row[KetquatuaFields.SoKgra.Name].ToString();
+                    txt_THOIGIANBATDAU.Text = _Rowview.Row[KetquatuaFields.Thoigianbatdau.Name].ToString();
+                    txt_THOIGIANKETTHUC.Text = _Rowview.Row[KetquatuaFields.Thoigianketthuc.Name].ToString();
+                    txt_THOIGIANLENHACUON.Text = _Rowview.Row[KetquatuaFields.Thoigianhacuon.Name].ToString();
+                    txt_THOIGIANCATDAU.Text = _Rowview.Row[KetquatuaFields.Thoigiancatdau.Name].ToString();
+                    txt_THOIGIANDOILENH.Text = _Rowview.Row[KetquatuaFields.Thoigiandoilenh.Name].ToString();
+                    txt_THOIGIANSUCO.Text = _Rowview.Row[KetquatuaFields.Thoigiansuco.Name].ToString();
+                    txt_PHEIN.Text = _Rowview.Row[KetquatuaFields.Phein.Name].ToString();
+                    txt_PHEGHEP.Text = _Rowview.Row[KetquatuaFields.Pheghep.Name].ToString();
+                    txt_PHETHOI.Text = _Rowview.Row[KetquatuaFields.Phethoi.Name].ToString();
+                    txt_PHESANXUAT.Text = _Rowview.Row[KetquatuaFields.Phesx.Name].ToString();
+                    txt_TENSANPHAM.Text = _Rowview.Row[KetquatuaFields.Tensanpham.Name].ToString();
+                    txt_TENMAY.Text = _Rowview.Row[KetquatuaFields.Tenmay.Name].ToString();
+                    txt_TENCONGNHAN.Text = _Rowview.Row[KetquatuaFields.Tencongnhan.Name].ToString();
+
                     txt_NANGSUAT.Text = _Rowview.Row[KetquatuaFields.Nangsuat.Name].ToString();
+                    txt_THOIGIANDAUCA.Text = _Rowview.Row[KetquatuaFields.Thoigiandauca.Name].ToString();
+                    txt_CHENHLECHKG.Text = _Rowview.Row[KetquatuaFields.Chenhlechkg.Name].ToString();
                 }
-                //else
-                //{
-                //    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-                //}
+                else
+                {
+                    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                }
             }
             catch
             { }
@@ -393,6 +417,7 @@ namespace GD.BBPH.APP.TUA
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
+            txt_TENMAY.Text = txt_TENCONGNHAN.Text = txt_TENSANPHAM.Text = string.Empty;
             r_Insert = DT_TKKQTUA.NewRow();
             DT_TKKQTUA.Rows.Add(r_Insert);
             BS_TKKQTUA.Position = DT_TKKQTUA.Rows.Count;
@@ -404,7 +429,7 @@ namespace GD.BBPH.APP.TUA
             MAHIEU_PK = "";
             //txt_MAHIEU.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENMAY, txt_TENCONGNHAN, txt_TENSANPHAM }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_TKKQTUA.Enabled = false;
@@ -419,7 +444,7 @@ namespace GD.BBPH.APP.TUA
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAY }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAY, txt_TENMAY, txt_TENCONGNHAN, txt_TENSANPHAM }));
                 //txt_TENHIEU.Focus();
             }
             GRID_TKKQTUA_CHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;

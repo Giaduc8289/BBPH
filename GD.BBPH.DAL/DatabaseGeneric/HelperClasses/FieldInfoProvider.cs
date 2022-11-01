@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 31, 2022 5:06:47 PM
+// Code is generated on: Monday, October 31, 2022 8:36:48 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -405,6 +405,8 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmhangEntity", "Maloaimuc", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Maloaimuc, 50, 0, 0);
 			base.AddElementFieldInfo("DmhangEntity", "Doday", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmhangFieldIndex.Doday, 0, 3, 20);
 			base.AddElementFieldInfo("DmhangEntity", "Macautrucin", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Macautrucin, 50, 0, 0);
+			base.AddElementFieldInfo("DmhangEntity", "Solopghepma", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Solopghepma, 50, 0, 0);
+			base.AddElementFieldInfo("DmhangEntity", "Solopghep", typeof(Nullable<System.Int32>), false, false, false, true,  (int)DmhangFieldIndex.Solopghep, 0, 0, 10);
 		}
 		/// <summary>Inits DmkhachEntity's FieldInfo objects</summary>
 		private void InitDmkhachEntityInfos()

@@ -193,10 +193,10 @@ namespace GD.BBPH.APP.GHEP
 
                     txt_NANGSUAT.Text = _Rowview.Row[KetquaghepFields.Nangsuat.Name].ToString();
                 }
-                //else
-                //{
-                //    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-                //}
+                else
+                {
+                    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                }
             }
             catch
             { }
@@ -425,7 +425,7 @@ namespace GD.BBPH.APP.GHEP
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_SOLSX.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_MANGINMET.Text = txt_MANGINKG.Text = txt_MANGCAPMET.Text = txt_MANGCAPKG.Text = txt_THUCTEKEO.Text = txt_DAURATUA.Text = txt_THUCTEKG.Text = txt_THUCTEMET.Text = txt_THUCTEKEO.Text = txt_THUCTEDONGRAN.Text = txt_THUCTEDUNGMOI.Text =  txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_SOLOPGHEP.Text = txt_THOIGIANSUCO.Text = txt_PHEIN.Text = txt_PHEGHEP.Text = txt_PHESX.Text = txt_PHENCC.Text = txt_NANGSUAT.Text= string.Empty;
+            txt_TENMAY.Text = txt_TENCONGNHAN.Text = txt_TENSANPHAM.Text = string.Empty;
             r_Insert = DT_KQGHEP.NewRow();
             DT_KQGHEP.Rows.Add(r_Insert);
             BS_KQGHEP.Position = DT_KQGHEP.Rows.Count;

@@ -185,10 +185,10 @@ namespace GD.BBPH.APP.THOI
                     txt_CHATLUONG.Text = _Rowview.Row[KetquathoiFields.Chatluong.Name].ToString();
                     txt_NANGSUAT.Text = _Rowview.Row[KetquathoiFields.Nangsuat.Name].ToString();
                 }
-                //else
-                //{
-                //    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-                //}
+                else
+                {
+                    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                }
             }
             catch
             { }
@@ -374,8 +374,7 @@ namespace GD.BBPH.APP.THOI
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENHTHOI.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MAMANG.Text = txt_TENMANG.Text = txt_SOM.Text = txt_SOKG.Text = txt_CHATLUONG.Text = txt_PHELIEUTHUCTE.Text = txt_NANGSUAT.Text
-                = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANCHUANBI.Text = txt_THOIGIANSUCO.Text = string.Empty;
+            txt_TENMAY.Text = txt_TENCONGNHAN.Text = txt_TENMANG.Text = string.Empty;
             r_Insert = DT_KQTHOI.NewRow();
             DT_KQTHOI.Rows.Add(r_Insert);
             BS_KQTHOI.Position = DT_KQTHOI.Rows.Count;

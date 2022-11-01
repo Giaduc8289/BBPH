@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 31, 2022 5:06:50 PM
+// Code is generated on: Monday, October 31, 2022 8:36:49 PM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -376,7 +376,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Inits DmhangEntity's mappings</summary>
 		private void InitDmhangEntityMappings()
 		{
-			base.AddElementMapping( "DmhangEntity", "BBPH", @"dbo", "dmhang", 42 );
+			base.AddElementMapping( "DmhangEntity", "BBPH", @"dbo", "dmhang", 44 );
 			base.AddElementFieldMapping( "DmhangEntity", "Masp", "Masp", false, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 0 );
 			base.AddElementFieldMapping( "DmhangEntity", "Tensp", "Tensp", false, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "DmhangEntity", "Maspcuakhach", "Maspcuakhach", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 2 );
@@ -419,6 +419,8 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "DmhangEntity", "Maloaimuc", "Maloaimuc", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 39 );
 			base.AddElementFieldMapping( "DmhangEntity", "Doday", "Doday", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 40 );
 			base.AddElementFieldMapping( "DmhangEntity", "Macautrucin", "Macautrucin", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 41 );
+			base.AddElementFieldMapping( "DmhangEntity", "Solopghepma", "Solopghepma", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 42 );
+			base.AddElementFieldMapping( "DmhangEntity", "Solopghep", "Solopghep", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 43 );
 		}
 		/// <summary>Inits DmkhachEntity's mappings</summary>
 		private void InitDmkhachEntityMappings()

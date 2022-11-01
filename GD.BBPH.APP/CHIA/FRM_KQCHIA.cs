@@ -197,10 +197,10 @@ namespace GD.BBPH.APP.CHIA
                     txt_SOCUON.Text = _Rowview.Row[KetquachiaFields.Socuon.Name].ToString();
 
                 }
-                //else
-                //{
-                //    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-                //}
+                else
+                {
+                    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                }
             }
             catch
             { }
@@ -370,6 +370,28 @@ namespace GD.BBPH.APP.CHIA
                 _KetquachiaEntity.Tylesaihong = Convert.ToDecimal(_view.Row[KetquachiaFields.Tylesaihong.Name].ToString());
                 _KetquachiaEntity.Socuon = Convert.ToInt32(_view.Row[KetquachiaFields.Socuon.Name].ToString());
 
+                #region xét isnew
+                try { _KetquachiaEntity.Id = Convert.ToInt64(_view[KetquachiaFields.Id.Name].ToString()); }
+                catch { }
+
+                _KetquachiaEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_KetquachiaEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new KetquachiaManager()).SelectById(_KetquachiaEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _KetquachiaEntity.Ngaysua = DateTime.Now;
+                        _KetquachiaEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _KetquachiaEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _KetquachiaEntity.Ngaytao = DateTime.Now;
+                        _KetquachiaEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+                #endregion
+
                 if (!string.IsNullOrEmpty(_KetquachiaEntity.Masanpham))
                     _KetquachiaEntityCol.Add(_KetquachiaEntity);
             }
@@ -402,7 +424,6 @@ namespace GD.BBPH.APP.CHIA
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_TENCONGNHAN.Text = txt_TENSANPHAM.Text = txt_TENMAY.Text = string.Empty;
-            //txt_NGAY.Text = txt_CA.Text = txt_MAMAY.Text = txt_TENMAY.Text = txt_LENH.Text = txt_MACONGNHAN.Text = txt_TENCONGNHAN.Text = txt_MASANPHAM.Text = txt_TENSANPHAM.Text = txt_SOMVAO.Text = txt_SOKGVAO.Text = txt_DAURAGHEP.Text = txt_THOIGIANCATDAU.Text = txt_THOIGIANBATDAU.Text = txt_THOIGIANKETTHUC.Text = txt_THOIGIANDOILENH.Text = txt_SOLANHACUON.Text = txt_THOIGIANLENCUON.Text = txt_THOIGIANHACUON.Text = txt_THOIGIANSUCO.Text = txt_PHEIN.Text = txt_PHEGHEP.Text = txt_PHECHIA.Text = txt_PHESANXUAT.Text = string.Empty;
             r_Insert = DT_KQCHIA.NewRow();
             DT_KQCHIA.Rows.Add(r_Insert);
             BS_KQCHIA.Position = DT_KQCHIA.Rows.Count;
