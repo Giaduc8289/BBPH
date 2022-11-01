@@ -34,6 +34,9 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_SOLOPGHEPMA = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_SOLOPGHEP = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label25 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MACAUTRUCIN = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_DODAY = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_DINHLUONGKEO = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
@@ -107,9 +110,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MASP = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_SOLOPGHEPMA = new GD.BBPH.CONTROL.TEXTBOX();
-            this.txt_SOLOPGHEP = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.label25 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -250,6 +250,49 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(1214, 731);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_SOLOPGHEPMA
+            // 
+            this.txt_SOLOPGHEPMA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOLOPGHEPMA.BannerText = null;
+            this.txt_SOLOPGHEPMA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOLOPGHEPMA.FormNametoShow = "";
+            this.txt_SOLOPGHEPMA.Is_DateTime = false;
+            this.txt_SOLOPGHEPMA.IsShowForm = false;
+            this.txt_SOLOPGHEPMA.Location = new System.Drawing.Point(771, 159);
+            this.txt_SOLOPGHEPMA.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_SOLOPGHEPMA.Name = "txt_SOLOPGHEPMA";
+            this.txt_SOLOPGHEPMA.Regular_Expression = null;
+            this.txt_SOLOPGHEPMA.Size = new System.Drawing.Size(71, 22);
+            this.txt_SOLOPGHEPMA.TabIndex = 12;
+            this.txt_SOLOPGHEPMA.Validating += new System.ComponentModel.CancelEventHandler(this.txt_SOLOPGHEPMA_Validating);
+            // 
+            // txt_SOLOPGHEP
+            // 
+            this.txt_SOLOPGHEP.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOLOPGHEP.BannerText = null;
+            this.txt_SOLOPGHEP.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOLOPGHEP.Giatrithapphan = 0;
+            this.txt_SOLOPGHEP.IsSoNguyen = false;
+            this.txt_SOLOPGHEP.Location = new System.Drawing.Point(847, 159);
+            this.txt_SOLOPGHEP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_SOLOPGHEP.Name = "txt_SOLOPGHEP";
+            this.txt_SOLOPGHEP.ReadOnly = true;
+            this.txt_SOLOPGHEP.Regular_Expression = "";
+            this.txt_SOLOPGHEP.Size = new System.Drawing.Size(31, 22);
+            this.txt_SOLOPGHEP.TabIndex = 231;
+            this.txt_SOLOPGHEP.TabStop = false;
+            this.txt_SOLOPGHEP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(683, 162);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(84, 17);
+            this.label25.TabIndex = 232;
+            this.label25.Text = "Số lớp ghép";
             // 
             // txt_MACAUTRUCIN
             // 
@@ -1242,48 +1285,6 @@
             this.label22.Size = new System.Drawing.Size(93, 17);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã sản phẩm";
-            // 
-            // txt_SOLOPGHEPMA
-            // 
-            this.txt_SOLOPGHEPMA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOLOPGHEPMA.BannerText = null;
-            this.txt_SOLOPGHEPMA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOLOPGHEPMA.FormNametoShow = "";
-            this.txt_SOLOPGHEPMA.Is_DateTime = false;
-            this.txt_SOLOPGHEPMA.IsShowForm = false;
-            this.txt_SOLOPGHEPMA.Location = new System.Drawing.Point(771, 159);
-            this.txt_SOLOPGHEPMA.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_SOLOPGHEPMA.Name = "txt_SOLOPGHEPMA";
-            this.txt_SOLOPGHEPMA.Regular_Expression = null;
-            this.txt_SOLOPGHEPMA.Size = new System.Drawing.Size(71, 22);
-            this.txt_SOLOPGHEPMA.TabIndex = 12;
-            // 
-            // txt_SOLOPGHEP
-            // 
-            this.txt_SOLOPGHEP.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOLOPGHEP.BannerText = null;
-            this.txt_SOLOPGHEP.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOLOPGHEP.Giatrithapphan = 0;
-            this.txt_SOLOPGHEP.IsSoNguyen = false;
-            this.txt_SOLOPGHEP.Location = new System.Drawing.Point(847, 159);
-            this.txt_SOLOPGHEP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_SOLOPGHEP.Name = "txt_SOLOPGHEP";
-            this.txt_SOLOPGHEP.ReadOnly = true;
-            this.txt_SOLOPGHEP.Regular_Expression = "";
-            this.txt_SOLOPGHEP.Size = new System.Drawing.Size(31, 22);
-            this.txt_SOLOPGHEP.TabIndex = 231;
-            this.txt_SOLOPGHEP.TabStop = false;
-            this.txt_SOLOPGHEP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(683, 162);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(84, 17);
-            this.label25.TabIndex = 232;
-            this.label25.Text = "Số lớp ghép";
             // 
             // FRM_DMHANG
             // 
