@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 31, 2022 8:36:48 PM
+// Code is generated on: Tuesday, November 1, 2022 8:33:09 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1265,6 +1265,84 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Ketquahoanthien.
+	/// </summary>
+	public enum KetquahoanthienFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Ngay. </summary>
+		Ngay,
+		///<summary>Ca. </summary>
+		Ca,
+		///<summary>Mamay. </summary>
+		Mamay,
+		///<summary>Tenmay. </summary>
+		Tenmay,
+		///<summary>Lenhhoanthien. </summary>
+		Lenhhoanthien,
+		///<summary>Masanpham. </summary>
+		Masanpham,
+		///<summary>Tensanpham. </summary>
+		Tensanpham,
+		///<summary>Macongnhan. </summary>
+		Macongnhan,
+		///<summary>Tencongnhan. </summary>
+		Tencongnhan,
+		///<summary>Daurachiaghep. </summary>
+		Daurachiaghep,
+		///<summary>Dauvaomet. </summary>
+		Dauvaomet,
+		///<summary>Dauvaokg. </summary>
+		Dauvaokg,
+		///<summary>Thoigianbatdau. </summary>
+		Thoigianbatdau,
+		///<summary>Thoigianketthuc. </summary>
+		Thoigianketthuc,
+		///<summary>Thoigianchuanbi. </summary>
+		Thoigianchuanbi,
+		///<summary>Thoigianlenhacuon. </summary>
+		Thoigianlenhacuon,
+		///<summary>Thoigiancatdau. </summary>
+		Thoigiancatdau,
+		///<summary>Thoigiansuco. </summary>
+		Thoigiansuco,
+		///<summary>Ketquatui. </summary>
+		Ketquatui,
+		///<summary>Phein. </summary>
+		Phein,
+		///<summary>Pheghep. </summary>
+		Pheghep,
+		///<summary>Phechia. </summary>
+		Phechia,
+		///<summary>Phebien. </summary>
+		Phebien,
+		///<summary>Phethoi. </summary>
+		Phethoi,
+		///<summary>Phechinhmay. </summary>
+		Phechinhmay,
+		///<summary>Phekhac. </summary>
+		Phekhac,
+		///<summary>Kiemtra. </summary>
+		Kiemtra,
+		///<summary>Chatluongtui. </summary>
+		Chatluongtui,
+		///<summary>Nangsuat. </summary>
+		Nangsuat,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Ketquain.
 	/// </summary>
 	public enum KetquainFieldIndex:int
@@ -1365,86 +1443,6 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
-		/// <summary></summary>
-		AmountOfFields
-	}
-
-
-	/// <summary>
-	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Ketquathanhpham.
-	/// </summary>
-	public enum KetquathanhphamFieldIndex:int
-	{
-		///<summary>Id. </summary>
-		Id,
-		///<summary>Ngay. </summary>
-		Ngay,
-		///<summary>Ca. </summary>
-		Ca,
-		///<summary>Mamay. </summary>
-		Mamay,
-		///<summary>SoLsx. </summary>
-		SoLsx,
-		///<summary>Masanpham. </summary>
-		Masanpham,
-		///<summary>Macongnhan. </summary>
-		Macongnhan,
-		///<summary>Tensanpham. </summary>
-		Tensanpham,
-		///<summary>Tenmay. </summary>
-		Tenmay,
-		///<summary>Tencongnhan. </summary>
-		Tencongnhan,
-		///<summary>SoMetvao. </summary>
-		SoMetvao,
-		///<summary>SoKgvao. </summary>
-		SoKgvao,
-		///<summary>Thoigianbatdau. </summary>
-		Thoigianbatdau,
-		///<summary>Thoigianketthuc. </summary>
-		Thoigianketthuc,
-		///<summary>Thoigianchuanbi. </summary>
-		Thoigianchuanbi,
-		///<summary>Thoigianhacuon. </summary>
-		Thoigianhacuon,
-		///<summary>Thoigiancatdau. </summary>
-		Thoigiancatdau,
-		///<summary>Thoigiansuco. </summary>
-		Thoigiansuco,
-		///<summary>Dgnangsuat. </summary>
-		Dgnangsuat,
-		///<summary>Dmtui. </summary>
-		Dmtui,
-		///<summary>Ttetui. </summary>
-		Ttetui,
-		///<summary>Kiemtra. </summary>
-		Kiemtra,
-		///<summary>Phein. </summary>
-		Phein,
-		///<summary>Pheghep. </summary>
-		Pheghep,
-		///<summary>Phechia. </summary>
-		Phechia,
-		///<summary>Phebien. </summary>
-		Phebien,
-		///<summary>Phethoi. </summary>
-		Phethoi,
-		///<summary>Phechinhmay. </summary>
-		Phechinhmay,
-		///<summary>Phekhac. </summary>
-		Phekhac,
-		///<summary>Titrongtui. </summary>
-		Titrongtui,
-		///<summary>Ngaytao. </summary>
-		Ngaytao,
-		///<summary>Nguoitao. </summary>
-		Nguoitao,
-		///<summary>Ngaysua. </summary>
-		Ngaysua,
-		///<summary>Nguoisua. </summary>
-		Nguoisua,
-		///<summary>Socon. </summary>
-		Socon,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -2344,12 +2342,12 @@ namespace GD.BBPH.DAL
 		KetquachiaEntity,
 		///<summary>Ketquaghep</summary>
 		KetquaghepEntity,
+		///<summary>Ketquahoanthien</summary>
+		KetquahoanthienEntity,
 		///<summary>Ketquain</summary>
 		KetquainEntity,
 		///<summary>Ketquainmau</summary>
 		KetquainmauEntity,
-		///<summary>Ketquathanhpham</summary>
-		KetquathanhphamEntity,
 		///<summary>Ketquathoi</summary>
 		KetquathoiEntity,
 		///<summary>Ketquatua</summary>
@@ -2405,6 +2403,7 @@ namespace GD.BBPH.DAL
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START CustomUserConstants
 	// __LLBLGENPRO_USER_CODE_REGION_END
+	
 	#endregion
 
 	#region Included code

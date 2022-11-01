@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 31, 2022 8:36:48 PM
+// Code is generated on: Tuesday, November 1, 2022 8:33:09 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -17,15 +17,15 @@ using SD.LLBLGen.Pro.ORMSupportClasses;
 
 namespace GD.BBPH.DAL.RelationClasses
 {
-	/// <summary>Implements the static Relations variant for the entity: Ketquathanhpham. </summary>
-	public partial class KetquathanhphamRelations
+	/// <summary>Implements the static Relations variant for the entity: Ketquahoanthien. </summary>
+	public partial class KetquahoanthienRelations
 	{
 		/// <summary>CTor</summary>
-		public KetquathanhphamRelations()
+		public KetquahoanthienRelations()
 		{
 		}
 
-		/// <summary>Gets all relations of the KetquathanhphamEntity as a list of IEntityRelation objects.</summary>
+		/// <summary>Gets all relations of the KetquahoanthienEntity as a list of IEntityRelation objects.</summary>
 		/// <returns>a list of IEntityRelation objects</returns>
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
@@ -40,17 +40,17 @@ namespace GD.BBPH.DAL.RelationClasses
 
 
 
-		/// <summary>Returns a new IEntityRelation object, between KetquathanhphamEntity and DmmayEntity over the m:1 relation they have, using the relation between the fields:
-		/// Ketquathanhpham.Mamay - Dmmay.Mamay
+		/// <summary>Returns a new IEntityRelation object, between KetquahoanthienEntity and DmmayEntity over the m:1 relation they have, using the relation between the fields:
+		/// Ketquahoanthien.Mamay - Dmmay.Mamay
 		/// </summary>
 		public virtual IEntityRelation DmmayEntityUsingMamay
 		{
 			get
 			{
 				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmmay", false);
-				relation.AddEntityFieldPair(DmmayFields.Mamay, KetquathanhphamFields.Mamay);
+				relation.AddEntityFieldPair(DmmayFields.Mamay, KetquahoanthienFields.Mamay);
 				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", false);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KetquathanhphamEntity", true);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KetquahoanthienEntity", true);
 				return relation;
 			}
 		}

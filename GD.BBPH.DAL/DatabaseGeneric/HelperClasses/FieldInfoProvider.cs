@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 31, 2022 8:36:48 PM
+// Code is generated on: Tuesday, November 1, 2022 8:33:09 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -15,6 +15,7 @@ namespace GD.BBPH.DAL.HelperClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
+	
 	
 	/// <summary>
 	/// Singleton implementation of the FieldInfoProvider. This class is the singleton wrapper through which the actual instance is retrieved.
@@ -89,9 +90,9 @@ namespace GD.BBPH.DAL.HelperClasses
 			InitHangtralaiEntityInfos();
 			InitKetquachiaEntityInfos();
 			InitKetquaghepEntityInfos();
+			InitKetquahoanthienEntityInfos();
 			InitKetquainEntityInfos();
 			InitKetquainmauEntityInfos();
-			InitKetquathanhphamEntityInfos();
 			InitKetquathoiEntityInfos();
 			InitKetquatuaEntityInfos();
 			InitLogbackupEntityInfos();
@@ -713,6 +714,44 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquaghepEntity", "Tencongnhan", typeof(System.String), false, false, false, true,  (int)KetquaghepFieldIndex.Tencongnhan, 250, 0, 0);
 			base.AddElementFieldInfo("KetquaghepEntity", "Nangsuat", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquaghepFieldIndex.Nangsuat, 0, 3, 20);
 		}
+		/// <summary>Inits KetquahoanthienEntity's FieldInfo objects</summary>
+		private void InitKetquahoanthienEntityInfos()
+		{
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)KetquahoanthienFieldIndex.Id, 0, 0, 19);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Ngay", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Ngay, 0, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Ca", typeof(Nullable<System.Int32>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Ca, 0, 0, 10);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Mamay", typeof(System.String), false, true, false, true,  (int)KetquahoanthienFieldIndex.Mamay, 50, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Tenmay", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Tenmay, 250, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Lenhhoanthien", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Lenhhoanthien, 50, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Masanpham", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Masanpham, 50, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Tensanpham", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Tensanpham, 250, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Macongnhan", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Macongnhan, 2147483647, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Tencongnhan", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Tencongnhan, 2147483647, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Daurachiaghep", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Daurachiaghep, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Dauvaomet", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Dauvaomet, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Dauvaokg", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Dauvaokg, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Thoigianbatdau", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Thoigianbatdau, 0, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Thoigianketthuc", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Thoigianketthuc, 0, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Thoigianchuanbi", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Thoigianchuanbi, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Thoigianlenhacuon", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Thoigianlenhacuon, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Thoigiancatdau", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Thoigiancatdau, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Thoigiansuco", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Thoigiansuco, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Ketquatui", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Ketquatui, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Phein", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Phein, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Pheghep", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Pheghep, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Phechia", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Phechia, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Phebien", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Phebien, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Phethoi", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Phethoi, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Phechinhmay", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Phechinhmay, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Phekhac", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Phekhac, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Kiemtra", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Kiemtra, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Chatluongtui", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Chatluongtui, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Nangsuat", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Nangsuat, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Nguoisua, 50, 0, 0);
+		}
 		/// <summary>Inits KetquainEntity's FieldInfo objects</summary>
 		private void InitKetquainEntityInfos()
 		{
@@ -763,45 +802,6 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquainmauEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)KetquainmauFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("KetquainmauEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquainmauFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("KetquainmauEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)KetquainmauFieldIndex.Nguoisua, 50, 0, 0);
-		}
-		/// <summary>Inits KetquathanhphamEntity's FieldInfo objects</summary>
-		private void InitKetquathanhphamEntityInfos()
-		{
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Id", typeof(System.Int64), true, false, true, false,  (int)KetquathanhphamFieldIndex.Id, 0, 0, 19);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Ngay", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Ngay, 0, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Ca", typeof(Nullable<System.Int32>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Ca, 0, 0, 10);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Mamay", typeof(System.String), false, true, false, true,  (int)KetquathanhphamFieldIndex.Mamay, 50, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "SoLsx", typeof(System.String), false, false, false, true,  (int)KetquathanhphamFieldIndex.SoLsx, 50, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Masanpham", typeof(System.String), false, false, false, true,  (int)KetquathanhphamFieldIndex.Masanpham, 50, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Macongnhan", typeof(System.String), false, false, false, true,  (int)KetquathanhphamFieldIndex.Macongnhan, 50, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Tensanpham", typeof(System.String), false, false, false, true,  (int)KetquathanhphamFieldIndex.Tensanpham, 250, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Tenmay", typeof(System.String), false, false, false, true,  (int)KetquathanhphamFieldIndex.Tenmay, 250, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Tencongnhan", typeof(System.String), false, false, false, true,  (int)KetquathanhphamFieldIndex.Tencongnhan, 250, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "SoMetvao", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.SoMetvao, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "SoKgvao", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.SoKgvao, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Thoigianbatdau", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Thoigianbatdau, 0, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Thoigianketthuc", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Thoigianketthuc, 0, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Thoigianchuanbi", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Thoigianchuanbi, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Thoigianhacuon", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Thoigianhacuon, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Thoigiancatdau", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Thoigiancatdau, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Thoigiansuco", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Thoigiansuco, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Dgnangsuat", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Dgnangsuat, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Dmtui", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Dmtui, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Ttetui", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Ttetui, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Kiemtra", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Kiemtra, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Phein", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Phein, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Pheghep", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Pheghep, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Phechia", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Phechia, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Phebien", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Phebien, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Phethoi", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Phethoi, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Phechinhmay", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Phechinhmay, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Phekhac", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Phekhac, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Titrongtui", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Titrongtui, 0, 3, 20);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Ngaytao, 0, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)KetquathanhphamFieldIndex.Nguoitao, 50, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Ngaysua, 0, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)KetquathanhphamFieldIndex.Nguoisua, 50, 0, 0);
-			base.AddElementFieldInfo("KetquathanhphamEntity", "Socon", typeof(Nullable<System.Int32>), false, false, false, true,  (int)KetquathanhphamFieldIndex.Socon, 0, 0, 10);
 		}
 		/// <summary>Inits KetquathoiEntity's FieldInfo objects</summary>
 		private void InitKetquathoiEntityInfos()

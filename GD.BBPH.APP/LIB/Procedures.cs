@@ -1853,24 +1853,26 @@ namespace GD.BBPH.APP.LIB
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachketquaghepchitiet", "Danhsachketquaghepchitiet", myArr).Tables[0];
         }
 
-        public static DataTable Danhsachketquahoanthien(DateTime Tungay, DateTime Denngay, int Ca, string Masp)
+        public static DataTable Danhsachketquahoanthien(DateTime Tungay, DateTime Denngay, int Ca, string Mamay, string Masp)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
             ListDictionary parameters = new ListDictionary();
             parameters.Add(new SqlParameter("@Tungay", SqlDbType.Date, 0), Tungay);
             parameters.Add(new SqlParameter("@Denngay", SqlDbType.Date, 0), Denngay);
             parameters.Add(new SqlParameter("@Ca", SqlDbType.Int, 0), Ca);
+            parameters.Add(new SqlParameter("@Mamay", SqlDbType.NVarChar, 0), Mamay);
             parameters.Add(new SqlParameter("@Masp", SqlDbType.NVarChar, 0), Masp);
             DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
             parameters.CopyTo(myArr, 0);
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachketquahoanthien", "Danhsachketquahoanthien", myArr).Tables[0];
         }
-        public static DataTable Danhsachketquahoanthienchitiet(string MAHIEU_PK, int ca, string Masp)
+        public static DataTable Danhsachketquahoanthienchitiet(DateTime Ngay, int Ca, string Mamay, string Masp)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
             ListDictionary parameters = new ListDictionary();
-            parameters.Add(new SqlParameter("@Maketquathoi", SqlDbType.NVarChar, 0), MAHIEU_PK);
-            parameters.Add(new SqlParameter("@Ca", SqlDbType.Int, 0), ca);
+            parameters.Add(new SqlParameter("@Ngay", SqlDbType.Date, 0), Ngay);
+            parameters.Add(new SqlParameter("@Ca", SqlDbType.Int, 0), Ca);
+            parameters.Add(new SqlParameter("@Mamay", SqlDbType.NVarChar, 0), Mamay);
             parameters.Add(new SqlParameter("@Masp", SqlDbType.NVarChar, 0), Masp);
             DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
             parameters.CopyTo(myArr, 0);

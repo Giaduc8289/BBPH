@@ -139,9 +139,9 @@
     <Compile Include="ManagerBase\HangtralaiManagerBase.cs" />
     <Compile Include="ManagerBase\KetquachiaManagerBase.cs" />
     <Compile Include="ManagerBase\KetquaghepManagerBase.cs" />
+    <Compile Include="ManagerBase\KetquahoanthienManagerBase.cs" />
     <Compile Include="ManagerBase\KetquainManagerBase.cs" />
     <Compile Include="ManagerBase\KetquainmauManagerBase.cs" />
-    <Compile Include="ManagerBase\KetquathanhphamManagerBase.cs" />
     <Compile Include="ManagerBase\KetquathoiManagerBase.cs" />
     <Compile Include="ManagerBase\KetquatuaManagerBase.cs" />
     <Compile Include="ManagerBase\LogbackupManagerBase.cs" />

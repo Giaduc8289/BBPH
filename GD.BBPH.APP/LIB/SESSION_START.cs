@@ -643,7 +643,7 @@ namespace GD.BBPH.APP.LIB
         {
             get
             {
-                _DT_KQHOANTHIEN = new KetquathanhphamManager().SelectAllRDT();
+                _DT_KQHOANTHIEN = new KetquahoanthienManager().SelectAllRDT();
                 return _DT_KQHOANTHIEN;
             }
             set { _DT_KQHOANTHIEN = value; }

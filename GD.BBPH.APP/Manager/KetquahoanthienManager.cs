@@ -1,7 +1,7 @@
 ﻿
 /*
 '===============================================================================
-'  GD.BBPH.BL.KetquathanhphamManager
+'  GD.BBPH.BL.KetquahoanthienManager
 '===============================================================================
 */
 
@@ -18,12 +18,12 @@ using SD.LLBLGen.Pro.ORMSupportClasses;
 
 namespace GD.BBPH.BLL
 {
-	public class KetquathanhphamManager : KetquathanhphamManagerBase
+	public class KetquahoanthienManager : KetquahoanthienManagerBase
 	{
 		/// <summary>
 		/// Purpose: Class constructor.
 		/// </summary>
-		public KetquathanhphamManager()
+		public KetquahoanthienManager()
 		{
 			// Nothing for now.
 		}
@@ -31,20 +31,21 @@ namespace GD.BBPH.BLL
         public DataTable SelectByNgayCaMamayRDT(System.DateTime Ngay, System.Int32 Ca, System.String Mamay)
         {
             DataTable toReturn = new DataTable();
-            EntityCollection _KetquachiaCollection = new EntityCollection(new KetquachiaEntityFactory());
+            EntityCollection _KetquahoanthienCollection = new EntityCollection(new KetquahoanthienEntityFactory());
             RelationPredicateBucket filter = new RelationPredicateBucket();
 
             IPredicateExpression _PredicateExpression = new PredicateExpression();
-            _PredicateExpression.Add(KetquachiaFields.Ngay == Ngay);
-            _PredicateExpression.Add(KetquachiaFields.Ca == Ca);
-            _PredicateExpression.Add(KetquachiaFields.Mamay == Mamay);
+            _PredicateExpression.Add(KetquahoanthienFields.Ngay == Ngay);
+            _PredicateExpression.Add(KetquahoanthienFields.Ca == Ca);
+            _PredicateExpression.Add(KetquahoanthienFields.Mamay == Mamay);
             filter.PredicateExpression.Add(_PredicateExpression);
 
             using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
             {
-                adapter.FetchTypedList(_KetquachiaCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+                adapter.FetchTypedList(_KetquahoanthienCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
             }
             return toReturn;
         }
+
     }
 }

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, October 31, 2022 8:36:50 PM
+// Code is generated on: Tuesday, November 1, 2022 8:33:10 AM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -31,6 +31,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
+	
 
 	/// <summary>
 	/// Data access adapter class, which controls the complete database interaction with the database for all objects.
@@ -443,6 +444,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 						
 						// __LLBLGENPRO_USER_CODE_REGION_START InsertPersistenceInfoObjectsPredicate
 						// __LLBLGENPRO_USER_CODE_REGION_END
+						
 						OnInsertPersistenceObjects(currentPredicate);
 						break;
 				}
@@ -652,6 +654,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomDataAccessAdapterCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
+		
 		#endregion
 		
 		#region Included Code
