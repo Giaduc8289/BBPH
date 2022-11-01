@@ -5,10 +5,9 @@ Go
 
 Create Procedure dbo.Danhsachketquatuachitiet
 	@Ngay		Datetime,
-	@Ca				NVARCHAR(50),
-	@Mamay			Nvarchar(50),
-	@Lenhtua		NVARCHAR(50),
-	@Masanpham		NVARCHAR(50)
+	@Ca				Int,
+	@Mamay		Nvarchar(50),
+	@Masp		NVARCHAR(50)
 As
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
@@ -16,12 +15,11 @@ As
 	Select * 
 	FROM dbo.Ketquatua
 	WHERE Ngay = @Ngay
-		AND (Ca=@Ca OR @Ca= 0 )
-		AND (Mamay=@Mamay OR @Mamay='')
-		AND (Lenhtua=@Lenhtua OR @Lenhtua='')
-		AND (Masanpham=@Masanpham OR @Masanpham='')
+		AND (Ca = @Ca OR @Ca = 0)
+		AND	(Mamay = @Mamay Or @Mamay='')
+		AND (Masanpham = @Masp OR @Masp='')
 
 GO
 
-Exec Danhsachketquatuachitiet  '10/10/2022', 1, 'L1', '', ''
+Exec Danhsachketquatuachitiet  '10/15/2022', 0, '', ''
 

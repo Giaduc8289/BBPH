@@ -54,7 +54,7 @@ namespace GD.BBPH.APP.TUA
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_TKKQTUA");
-                        DT_TKKQTUA = LIB.Procedures.Danhsachketquatua(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); //LIB.SESSION_START.DT_TKKQTUA;
+                        DT_TKKQTUA = LIB.Procedures.Danhsachketquatua(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); //LIB.SESSION_START.DT_TKKQTUA;
                         DT_TKKQTUA_CHITIET = LIB.SESSION_START.DT_TKKQTUA;
 
                         DT_HANG = LIB.SESSION_START.DM_HANG;
@@ -212,7 +212,7 @@ namespace GD.BBPH.APP.TUA
             }
             else
             {
-                DT_TKKQTUA_CHITIET_FILL = LIB.Procedures.Danhsachketquatuachitiet(Convert.ToDateTime(txt_NGAY.Text.Trim()), Convert.ToInt32(txt_CA.Text.Trim()), txt_MAMAY.Text.Trim(), string.Empty, string.Empty);
+                DT_TKKQTUA_CHITIET_FILL = LIB.Procedures.Danhsachketquatuachitiet(Convert.ToDateTime(txt_NGAY.Text.Trim()), Convert.ToInt32(txt_CA.Text.Trim()), txt_MAMAY.Text.Trim(), string.Empty);
 
                 DataView Source_View = new DataView(DT_TKKQTUA_CHITIET_FILL);
                 BS_TKKQTUA_CHITIET = new BindingSource();

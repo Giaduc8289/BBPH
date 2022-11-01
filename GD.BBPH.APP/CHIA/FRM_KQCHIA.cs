@@ -57,7 +57,7 @@ namespace GD.BBPH.APP.CHIA
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQCHIA");
-                        DT_KQCHIA = LIB.Procedures.Danhsachketquachia(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); // LIB.SESSION_START.DT_KQCHIA;
+                        DT_KQCHIA = LIB.Procedures.Danhsachketquachia(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // LIB.SESSION_START.DT_KQCHIA;
                         DT_KQCHIA_CHITIET = LIB.SESSION_START.DT_KQCHIA;
 
                         DT_DMMAY = new DmmayManager().SelectByMadmRDT("KT");// LIB.SESSION_START.DT_DMMAY;
@@ -99,11 +99,10 @@ namespace GD.BBPH.APP.CHIA
             DateTime Ngaydauthang = LIB.SESSION_START.TS_NGAYDAUTHANG;
             DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
             InitializeComponent();
-            KetquachiaManager _KetquachiaManager = new KetquachiaManager();
-            DataTable dt111 = LIB.Procedures.Danhsachketquachia(Ngaydauthang, Ngaycuoithang, Convert.ToInt32(CA), MASP);
-            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQCHIA.xml");
-            dt111 = LIB.Procedures.Danhsachketquachiachitiet(MAHIEU_PK, Convert.ToInt32(CA), MASP);
-            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQCHIACHITIET.xml");
+            //DataTable dt111 = LIB.Procedures.Danhsachketquachia(Ngaydauthang, Ngaycuoithang, 0, string.Empty, string.Empty);
+            ////GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQCHIA.xml");
+            //dt111 = new KetquachiaManager().Clone();
+            ////GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQCHIACHITIET.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_THEMDONG, btn_THEMDONG.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_XOADONG, btn_XOADONG.Name + ".xml");
@@ -690,7 +689,7 @@ namespace GD.BBPH.APP.CHIA
         }
         #endregion
 
-        #region  Text change
+        #region  Tính năng suất, số cuộn, tỷ lệ sai hỏng
         private void Tinhnangsuat()
         {
             try

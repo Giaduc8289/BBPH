@@ -678,8 +678,7 @@ namespace GD.BBPH.APP.HOANTHIEN
         }
         #endregion
 
-
-        #region  Text change
+        #region  Tính năng suất, chất lượng
         private void Tinhnangsuat()
         {
             try
@@ -697,9 +696,34 @@ namespace GD.BBPH.APP.HOANTHIEN
             }
             catch { }
         }
-        private void txt_THOIGIAN_Validated(object sender, EventArgs e)
+        private void Tinhchatluong()
+        {
+            try
+            {
+                decimal _somet = 0, _dai = 0, _sohinh = 0, _sotuitt = 0, _dmlensp = 0, _dmsaihong = 0, _sotuidm = 0, _chatluong = 0;
+                _sotuitt = LIB.ConvertString.NumbertoDB(txt_KETQUATUI.Text.Trim());
+                _somet = LIB.ConvertString.NumbertoDB(txt_DAUVAOMET.Text.Trim());
+                DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(txt_MASANPHAM.Text.Trim());
+                _dai = Convert.ToDecimal(_DmhangEntity.Dai) / 1000;
+                _sohinh = Convert.ToDecimal(_DmhangEntity.Sohinh);
+                _dmlensp = LIB.Procedures.fTinhdinhmucsaihong(txt_MAMAY.Text, txt_MASANPHAM.Text, "DM15");
+                _somet = _somet - _dmlensp;
+                _dmsaihong = LIB.Procedures.fTinhdinhmucsaihong(txt_MAMAY.Text, txt_MASANPHAM.Text, "DM14");
+                _somet = _somet - _somet * _dmsaihong / 100;
+                _sotuidm = _somet / _dai;
+
+                _chatluong = _sotuitt / _sotuidm * 100;
+                txt_CHATLUONGTUI.Text = Math.Round(_chatluong).ToString(); 
+            }
+            catch { }
+        }
+        private void txt_NANGSUAT_Validated(object sender, EventArgs e)
         {
             Tinhnangsuat();
+        }
+        private void txt_CHATLUONG_Validated(object sender, EventArgs e)
+        {
+            Tinhchatluong();
         }
         #endregion
 

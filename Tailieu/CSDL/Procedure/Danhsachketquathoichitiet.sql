@@ -4,8 +4,9 @@ If Object_ID('dbo.Danhsachketquathoichitiet','P') is not null
 Go
 
 Create Procedure dbo.Danhsachketquathoichitiet
-	@Maketquathoi	NVARCHAR(50),
+	@Ngay		Datetime,
 	@Ca				Int,
+	@Mamay		Nvarchar(50),
 	@Mamang			NVARCHAR(50)
   As
 	SET NOCOUNT ON;
@@ -13,10 +14,11 @@ Create Procedure dbo.Danhsachketquathoichitiet
 	
 	Select * 
 	FROM dbo.Ketquathoi
-	WHERE (Id = @Maketquathoi OR @Maketquathoi = '')
+	WHERE Ngay = @Ngay
 		AND (Ca = @Ca OR @Ca = 0)
+		AND	(Mamay = @Mamay Or @Mamay='')
 		AND (Mamang=@Mamang OR @Mamang='')
 
 GO
 
-Exec Danhsachketquathoichitiet  '', 0, ''
+Exec Danhsachketquathoichitiet  '10/15/2022', 0, '', ''

@@ -56,7 +56,7 @@ namespace GD.BBPH.APP.IN
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQIN");
-                        DT_KQIN = LIB.Procedures.Danhsachketquain(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); // LIB.SESSION_START.DT_KQIN;
+                        DT_KQIN = LIB.Procedures.Danhsachketquain(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // LIB.SESSION_START.DT_KQIN;
                         DT_KQIN_CHITIET = LIB.SESSION_START.DT_KQIN;
 
                         DT_DMMAY = new DmmayManager().SelectByMadmRDT("IN");// LIB.SESSION_START.DT_DMMAY;
@@ -98,11 +98,10 @@ namespace GD.BBPH.APP.IN
             DateTime Ngaydauthang = LIB.SESSION_START.TS_NGAYDAUTHANG;
             DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
             InitializeComponent();
-            KetquainManager _KetquainManager = new KetquainManager();
-            DataTable dt111 = LIB.Procedures.Danhsachketquain(Ngaydauthang, Ngaycuoithang, Convert.ToInt32(CA), MASP);
-            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQIN.xml");
-            dt111 = LIB.Procedures.Danhsachketquainchitiet(MAHIEU_PK, Convert.ToInt32(CA), MASP);
-            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQINCHITIET.xml");
+            //DataTable dt111 = LIB.Procedures.Danhsachketquain(Ngaydauthang, Ngaycuoithang, 0, string.Empty, string.Empty);
+            ////GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQIN.xml");
+            //dt111 = new KetquainManager().Clone();
+            ////GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQINCHITIET.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_THEMDONG, btn_THEMDONG.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_XOADONG, btn_XOADONG.Name + ".xml");
