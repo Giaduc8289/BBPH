@@ -164,6 +164,11 @@
     </Compile>
     <Compile Include="BAOCAO\FRM_BCKQTUACHITIET.Designer.cs">
       <DependentUpon>FRM_BCKQTUACHITIET.cs</DependentUpon>
+    <Compile Include="BAOCAO\FRM_BCKQCHIACHITIET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BCKQCHIACHITIET.Designer.cs">
+      <DependentUpon>FRM_BCKQCHIACHITIET.cs</DependentUpon>
     </Compile>
     <Compile Include="BAOCAO\FRM_BCKQGHEPCHITIET.cs">
       <SubType>Form</SubType>
@@ -577,6 +582,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCKQTUACHITIET.resx">
       <DependentUpon>FRM_BCKQTUACHITIET.cs</DependentUpon>
+    <EmbeddedResource Include="BAOCAO\FRM_BCKQCHIACHITIET.resx">
+      <DependentUpon>FRM_BCKQCHIACHITIET.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCKQGHEPCHITIET.resx">
       <DependentUpon>FRM_BCKQGHEPCHITIET.cs</DependentUpon>
@@ -739,6 +746,7 @@
     <EmbeddedResource Include="RDLC\KQTUACHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQTHOICHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQINTONGHOP.rdlc" />
+    <EmbeddedResource Include="RDLC\KQCHIACHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQINCHITIET.rdlc" />
     <EmbeddedResource Include="THOI\FRM_KQTHOI.resx">
       <DependentUpon>FRM_KQTHOI.cs</DependentUpon>
