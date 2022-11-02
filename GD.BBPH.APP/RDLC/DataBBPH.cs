@@ -4,6 +4,10 @@
 
     public partial class DataBBPH
     {
+        partial class KetquasanxuatDataTable
+        {
+        }
+
         partial class ThamsoDataTable
         {
         }

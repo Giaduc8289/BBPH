@@ -749,6 +749,10 @@ namespace GD.BBPH.APP.RDLC {
             
             private global::System.Data.DataColumn columnSolopghep;
             
+            private global::System.Data.DataColumn columnDauraghep;
+            
+            private global::System.Data.DataColumn columnSocuon;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public KetquasanxuatDataTable() {
@@ -1144,6 +1148,22 @@ namespace GD.BBPH.APP.RDLC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DauraghepColumn {
+                get {
+                    return this.columnDauraghep;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SocuonColumn {
+                get {
+                    return this.columnSocuon;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1224,7 +1244,9 @@ namespace GD.BBPH.APP.RDLC {
                         string Manginkg, 
                         string Mangcapmet, 
                         string Mangcapkg, 
-                        string Solopghep) {
+                        string Solopghep, 
+                        string Dauraghep, 
+                        string Socuon) {
                 KetquasanxuatRow rowKetquasanxuatRow = ((KetquasanxuatRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Mamay,
@@ -1271,7 +1293,9 @@ namespace GD.BBPH.APP.RDLC {
                         Manginkg,
                         Mangcapmet,
                         Mangcapkg,
-                        Solopghep};
+                        Solopghep,
+                        Dauraghep,
+                        Socuon};
                 rowKetquasanxuatRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKetquasanxuatRow);
                 return rowKetquasanxuatRow;
@@ -1339,6 +1363,8 @@ namespace GD.BBPH.APP.RDLC {
                 this.columnMangcapmet = base.Columns["Mangcapmet"];
                 this.columnMangcapkg = base.Columns["Mangcapkg"];
                 this.columnSolopghep = base.Columns["Solopghep"];
+                this.columnDauraghep = base.Columns["Dauraghep"];
+                this.columnSocuon = base.Columns["Socuon"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1434,6 +1460,10 @@ namespace GD.BBPH.APP.RDLC {
                 base.Columns.Add(this.columnMangcapkg);
                 this.columnSolopghep = new global::System.Data.DataColumn("Solopghep", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSolopghep);
+                this.columnDauraghep = new global::System.Data.DataColumn("Dauraghep", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDauraghep);
+                this.columnSocuon = new global::System.Data.DataColumn("Socuon", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSocuon);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2535,6 +2565,38 @@ namespace GD.BBPH.APP.RDLC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Dauraghep {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.DauraghepColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Dauraghep\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.DauraghepColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Socuon {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.SocuonColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Socuon\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.SocuonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMamayNull() {
                 return this.IsNull(this.tableKetquasanxuat.MamayColumn);
             }
@@ -3071,6 +3133,30 @@ namespace GD.BBPH.APP.RDLC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSolopghepNull() {
                 this[this.tableKetquasanxuat.SolopghepColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDauraghepNull() {
+                return this.IsNull(this.tableKetquasanxuat.DauraghepColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDauraghepNull() {
+                this[this.tableKetquasanxuat.DauraghepColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSocuonNull() {
+                return this.IsNull(this.tableKetquasanxuat.SocuonColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSocuonNull() {
+                this[this.tableKetquasanxuat.SocuonColumn] = global::System.Convert.DBNull;
             }
         }
         
