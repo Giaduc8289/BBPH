@@ -153,6 +153,12 @@
     <Compile Include="BANHANG\FRM_PHIEUGIAOHANG.designer.cs">
       <DependentUpon>FRM_PHIEUGIAOHANG.cs</DependentUpon>
     </Compile>
+    <Compile Include="BAOCAO\FRM_BCKQINCHITIET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BCKQINCHITIET.Designer.cs">
+      <DependentUpon>FRM_BCKQINCHITIET.cs</DependentUpon>
+    </Compile>
     <Compile Include="BAOCAO\FRM_REPORTVIEWER.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -510,13 +516,13 @@
     <Compile Include="Manager\XuatkhosanphamManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RDLC\DataSXBB.cs">
-      <DependentUpon>DataSXBB.xsd</DependentUpon>
+    <Compile Include="RDLC\DataBBPH.cs">
+      <DependentUpon>DataBBPH.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RDLC\DataSXBB.Designer.cs">
+    <Compile Include="RDLC\DataBBPH.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSXBB.xsd</DependentUpon>
+      <DependentUpon>DataBBPH.xsd</DependentUpon>
     </Compile>
     <Compile Include="THOI\FRM_KQTHOI.cs">
       <SubType>Form</SubType>
@@ -547,6 +553,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BANHANG\FRM_PHIEUGIAOHANG.resx">
       <DependentUpon>FRM_PHIEUGIAOHANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BCKQINCHITIET.resx">
+      <DependentUpon>FRM_BCKQINCHITIET.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
@@ -700,289 +709,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RDLC\KQINTB.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NHAPMANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NXTONMANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NXTONKHOTHANHPHAM.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NXTONMANHTRANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NXTONMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NXTONPE.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NXTONNGUYENLIEU.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\QUYETTOANHOANTHIENPE.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\QUYETTOANTRANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\QUYETTOANHOANTHIEN.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\QUYETTOANIN.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\QUYETTOANMANHGOC.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\QUYETTOANPE.rdlc" />
-    <EmbeddedResource Include="RDLC\TONHANGHOA.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\TONMANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\XUATHANGHOA.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NHAPPE.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NHAPNGUYENLIEU.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NHAPMANHTRANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\QUYETTOANMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\BCLUONGHTRG.rdlc" />
-    <EmbeddedResource Include="RDLC\BCSUDUNGPE.rdlc" />
-    <EmbeddedResource Include="RDLC\BCTHLUONGHT.rdlc" />
-    <EmbeddedResource Include="RDLC\BCCTLUONGHT_Mau4.rdlc" />
-    <EmbeddedResource Include="RDLC\BCCTLUONGHT_Mau3.rdlc" />
-    <EmbeddedResource Include="RDLC\BCCTLUONGHT_Mau2.rdlc" />
-    <EmbeddedResource Include="RDLC\BCSODOMAYDET.rdlc" />
-    <EmbeddedResource Include="RDLC\CTKHHT_CD.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\CTKHHT.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQHTTRUOCCATCT_MH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQHTTRUOCCATCT_CD.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\BCCTLUONGHT_Mau1.rdlc" />
-    <EmbeddedResource Include="RDLC\KQHTTH_THEOCD.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\QUYETTOANSOI.rdlc" />
-    <EmbeddedResource Include="RDLC\KQSXTH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQSXCT.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\LENHHT.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\LENHPE.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\LUONGINRUTGON.rdlc" />
-    <EmbeddedResource Include="RDLC\LUONGINTHUCTE_Bak.rdlc" />
-    <EmbeddedResource Include="RDLC\LUONGINTHUCTE.rdlc" />
-    <EmbeddedResource Include="RDLC\THKHHT.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\DSCUONMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\BCKQSXSDSOI.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQHTTRUOCCATCT.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQHTSAUCAT.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQHTTRUOCCATTH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQSXSOIRG.rdlc" />
-    <EmbeddedResource Include="RDLC\LUONGTRANG.rdlc" />
-    <EmbeddedResource Include="RDLC\LUONGIN.rdlc" />
-    <EmbeddedResource Include="RDLC\BCTHPHECATONG.rdlc" />
-    <EmbeddedResource Include="RDLC\BCTONMANHTRENMAY.rdlc" />
-    <EmbeddedResource Include="RDLC\BCLUONGDETRG.rdlc" />
-    <EmbeddedResource Include="RDLC\BCCTLUONGDET.rdlc" />
-    <EmbeddedResource Include="RDLC\BCTHLUONGSOI.rdlc" />
-    <EmbeddedResource Include="RDLC\BCNCMANHPVIN.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NCTOTAL.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NCPEPVIN.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NCPE.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\THKHIN.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\CTKHIN.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\THKHTRANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\CTKHTRANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\CTKHSXSOI.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KHBHANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\CTKHSXMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KHSXSOI.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQDETDASX.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQINCT.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQINTH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQTRANGCT.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQTRANGTH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQDETTHEOMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQDETTHEODH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQSDNVL.rdlc" />
-    <EmbeddedResource Include="RDLC\LENHIN.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\LENHTRANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\LENHSXDET.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NCIN.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NCTRANGTHANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NCNVLTHANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\TONPE.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\TONNGUYENLIEU.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\TONMANHTRANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\TONMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NHAPKHOHT.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\XUATMANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\XUATPE.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\XUATNGUYENLIEU.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\XUATMANHTRANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\XUATSOI.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\TONSOI.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\XUATMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\SSKHKQSXSOICTSOI.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\SSKHKQSXSOI.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\SSKHKQDETCTMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\SSKHKQDET.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KHSXTHEOMAYDET.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KHSXTHEOLOAIMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\LENHSXCHAYMAYKEOSOI.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQDETMAYCHITIET.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQDETRG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQSXSOI.rdlc" />
-    <EmbeddedResource Include="RDLC\THKHSXMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NCSOITHEOKHDET.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NCSOITHANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\NCMANHTHANG.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\KQDETCN.rdlc" />
-    <EmbeddedResource Include="RDLC\KQDETMAY.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\BCTHLUONGDET.rdlc" />
+    <EmbeddedResource Include="RDLC\KQINCHITIET.rdlc" />
     <EmbeddedResource Include="THOI\FRM_KQTHOI.resx">
       <DependentUpon>FRM_KQTHOI.cs</DependentUpon>
     </EmbeddedResource>
@@ -993,24 +720,17 @@
       <DependentUpon>FRM_TKKQTUA.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="RDLC\DataSXBB.xsc">
-      <DependentUpon>DataSXBB.xsd</DependentUpon>
+    <None Include="RDLC\DataBBPH.xsc">
+      <DependentUpon>DataBBPH.xsd</DependentUpon>
     </None>
-    <None Include="RDLC\DataSXBB.xsd">
+    <None Include="RDLC\DataBBPH.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSXBB.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataBBPH.Designer.cs</LastGenOutput>
     </None>
-    <None Include="RDLC\DataSXBB.xss">
-      <DependentUpon>DataSXBB.xsd</DependentUpon>
+    <None Include="RDLC\DataBBPH.xss">
+      <DependentUpon>DataBBPH.xsd</DependentUpon>
     </None>
-    <EmbeddedResource Include="RDLC\KQDETTB.rdlc" />
-    <EmbeddedResource Include="RDLC\NHAPMANH.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RDLC\TONMANH_CT.rdlc">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <None Include="Resources\Resources.resx" />
     <None Include="app.config">
       <SubType>Designer</SubType>
