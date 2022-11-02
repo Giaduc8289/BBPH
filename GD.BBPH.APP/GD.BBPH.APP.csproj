@@ -153,6 +153,12 @@
     <Compile Include="BANHANG\FRM_PHIEUGIAOHANG.designer.cs">
       <DependentUpon>FRM_PHIEUGIAOHANG.cs</DependentUpon>
     </Compile>
+    <Compile Include="BAOCAO\FRM_BCKQGHEPCHITIET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BCKQGHEPCHITIET.Designer.cs">
+      <DependentUpon>FRM_BCKQGHEPCHITIET.cs</DependentUpon>
+    </Compile>
     <Compile Include="BAOCAO\FRM_BCKQINCHITIET.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -554,6 +560,9 @@
     <EmbeddedResource Include="BANHANG\FRM_PHIEUGIAOHANG.resx">
       <DependentUpon>FRM_PHIEUGIAOHANG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BCKQGHEPCHITIET.resx">
+      <DependentUpon>FRM_BCKQGHEPCHITIET.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCKQINCHITIET.resx">
       <DependentUpon>FRM_BCKQINCHITIET.cs</DependentUpon>
     </EmbeddedResource>
@@ -731,6 +740,7 @@
     <None Include="RDLC\DataBBPH.xss">
       <DependentUpon>DataBBPH.xsd</DependentUpon>
     </None>
+    <EmbeddedResource Include="RDLC\KQGHEPCHITIET.rdlc" />
     <None Include="Resources\Resources.resx" />
     <None Include="app.config">
       <SubType>Designer</SubType>

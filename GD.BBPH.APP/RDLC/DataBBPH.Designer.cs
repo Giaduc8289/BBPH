@@ -737,6 +737,18 @@ namespace GD.BBPH.APP.RDLC {
             
             private global::System.Data.DataColumn columnSoluongLSX;
             
+            private global::System.Data.DataColumn columnDauratua;
+            
+            private global::System.Data.DataColumn columnManginmet;
+            
+            private global::System.Data.DataColumn columnManginkg;
+            
+            private global::System.Data.DataColumn columnMangcapmet;
+            
+            private global::System.Data.DataColumn columnMangcapkg;
+            
+            private global::System.Data.DataColumn columnSolopghep;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public KetquasanxuatDataTable() {
@@ -1084,6 +1096,54 @@ namespace GD.BBPH.APP.RDLC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DauratuaColumn {
+                get {
+                    return this.columnDauratua;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ManginmetColumn {
+                get {
+                    return this.columnManginmet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ManginkgColumn {
+                get {
+                    return this.columnManginkg;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MangcapmetColumn {
+                get {
+                    return this.columnMangcapmet;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MangcapkgColumn {
+                get {
+                    return this.columnMangcapkg;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SolopghepColumn {
+                get {
+                    return this.columnSolopghep;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1158,7 +1218,13 @@ namespace GD.BBPH.APP.RDLC {
                         string Makhach, 
                         string Tenkhach, 
                         string Lenhsanxuat, 
-                        string SoluongLSX) {
+                        string SoluongLSX, 
+                        string Dauratua, 
+                        string Manginmet, 
+                        string Manginkg, 
+                        string Mangcapmet, 
+                        string Mangcapkg, 
+                        string Solopghep) {
                 KetquasanxuatRow rowKetquasanxuatRow = ((KetquasanxuatRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Mamay,
@@ -1199,7 +1265,13 @@ namespace GD.BBPH.APP.RDLC {
                         Makhach,
                         Tenkhach,
                         Lenhsanxuat,
-                        SoluongLSX};
+                        SoluongLSX,
+                        Dauratua,
+                        Manginmet,
+                        Manginkg,
+                        Mangcapmet,
+                        Mangcapkg,
+                        Solopghep};
                 rowKetquasanxuatRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKetquasanxuatRow);
                 return rowKetquasanxuatRow;
@@ -1261,6 +1333,12 @@ namespace GD.BBPH.APP.RDLC {
                 this.columnTenkhach = base.Columns["Tenkhach"];
                 this.columnLenhsanxuat = base.Columns["Lenhsanxuat"];
                 this.columnSoluongLSX = base.Columns["SoluongLSX"];
+                this.columnDauratua = base.Columns["Dauratua"];
+                this.columnManginmet = base.Columns["Manginmet"];
+                this.columnManginkg = base.Columns["Manginkg"];
+                this.columnMangcapmet = base.Columns["Mangcapmet"];
+                this.columnMangcapkg = base.Columns["Mangcapkg"];
+                this.columnSolopghep = base.Columns["Solopghep"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1344,6 +1422,18 @@ namespace GD.BBPH.APP.RDLC {
                 base.Columns.Add(this.columnLenhsanxuat);
                 this.columnSoluongLSX = new global::System.Data.DataColumn("SoluongLSX", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSoluongLSX);
+                this.columnDauratua = new global::System.Data.DataColumn("Dauratua", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDauratua);
+                this.columnManginmet = new global::System.Data.DataColumn("Manginmet", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnManginmet);
+                this.columnManginkg = new global::System.Data.DataColumn("Manginkg", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnManginkg);
+                this.columnMangcapmet = new global::System.Data.DataColumn("Mangcapmet", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMangcapmet);
+                this.columnMangcapkg = new global::System.Data.DataColumn("Mangcapkg", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMangcapkg);
+                this.columnSolopghep = new global::System.Data.DataColumn("Solopghep", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSolopghep);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2349,6 +2439,102 @@ namespace GD.BBPH.APP.RDLC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Dauratua {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.DauratuaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Dauratua\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.DauratuaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Manginmet {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.ManginmetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Manginmet\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.ManginmetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Manginkg {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.ManginkgColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Manginkg\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.ManginkgColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Mangcapmet {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.MangcapmetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Mangcapmet\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.MangcapmetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Mangcapkg {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.MangcapkgColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Mangcapkg\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.MangcapkgColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Solopghep {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.SolopghepColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Solopghep\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.SolopghepColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMamayNull() {
                 return this.IsNull(this.tableKetquasanxuat.MamayColumn);
             }
@@ -2813,6 +2999,78 @@ namespace GD.BBPH.APP.RDLC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSoluongLSXNull() {
                 this[this.tableKetquasanxuat.SoluongLSXColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDauratuaNull() {
+                return this.IsNull(this.tableKetquasanxuat.DauratuaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDauratuaNull() {
+                this[this.tableKetquasanxuat.DauratuaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsManginmetNull() {
+                return this.IsNull(this.tableKetquasanxuat.ManginmetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetManginmetNull() {
+                this[this.tableKetquasanxuat.ManginmetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsManginkgNull() {
+                return this.IsNull(this.tableKetquasanxuat.ManginkgColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetManginkgNull() {
+                this[this.tableKetquasanxuat.ManginkgColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMangcapmetNull() {
+                return this.IsNull(this.tableKetquasanxuat.MangcapmetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMangcapmetNull() {
+                this[this.tableKetquasanxuat.MangcapmetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMangcapkgNull() {
+                return this.IsNull(this.tableKetquasanxuat.MangcapkgColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMangcapkgNull() {
+                this[this.tableKetquasanxuat.MangcapkgColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSolopghepNull() {
+                return this.IsNull(this.tableKetquasanxuat.SolopghepColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSolopghepNull() {
+                this[this.tableKetquasanxuat.SolopghepColumn] = global::System.Convert.DBNull;
             }
         }
         

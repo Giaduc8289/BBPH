@@ -12,7 +12,7 @@
   <xs:element name="DataBBPH" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataBBPH" msprop:Generator_UserDSName="DataBBPH">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Thamso" msprop:Generator_TableClassName="ThamsoDataTable" msprop:Generator_TableVarName="tableThamso" msprop:Generator_RowChangedName="ThamsoRowChanged" msprop:Generator_TablePropName="Thamso" msprop:Generator_RowDeletingName="ThamsoRowDeleting" msprop:Generator_RowChangingName="ThamsoRowChanging" msprop:Generator_RowEvHandlerName="ThamsoRowChangeEventHandler" msprop:Generator_RowDeletedName="ThamsoRowDeleted" msprop:Generator_RowClassName="ThamsoRow" msprop:Generator_UserTableName="Thamso" msprop:Generator_RowEvArgName="ThamsoRowChangeEvent">
+        <xs:element name="Thamso" msprop:Generator_TableClassName="ThamsoDataTable" msprop:Generator_TableVarName="tableThamso" msprop:Generator_TablePropName="Thamso" msprop:Generator_RowDeletingName="ThamsoRowDeleting" msprop:Generator_RowChangingName="ThamsoRowChanging" msprop:Generator_RowEvHandlerName="ThamsoRowChangeEventHandler" msprop:Generator_RowDeletedName="ThamsoRowDeleted" msprop:Generator_UserTableName="Thamso" msprop:Generator_RowChangedName="ThamsoRowChanged" msprop:Generator_RowEvArgName="ThamsoRowChangeEvent" msprop:Generator_RowClassName="ThamsoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Thoigian" msprop:Generator_ColumnVarNameInTable="columnThoigian" msprop:Generator_ColumnPropNameInRow="Thoigian" msprop:Generator_ColumnPropNameInTable="ThoigianColumn" msprop:Generator_UserColumnName="Thoigian" type="xs:string" minOccurs="0" />
@@ -26,7 +26,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Ketquasanxuat" msprop:Generator_TableClassName="KetquasanxuatDataTable" msprop:Generator_TableVarName="tableKetquasanxuat" msprop:Generator_RowChangedName="KetquasanxuatRowChanged" msprop:Generator_TablePropName="Ketquasanxuat" msprop:Generator_RowDeletingName="KetquasanxuatRowDeleting" msprop:Generator_RowChangingName="KetquasanxuatRowChanging" msprop:Generator_RowEvHandlerName="KetquasanxuatRowChangeEventHandler" msprop:Generator_RowDeletedName="KetquasanxuatRowDeleted" msprop:Generator_RowClassName="KetquasanxuatRow" msprop:Generator_UserTableName="Ketquasanxuat" msprop:Generator_RowEvArgName="KetquasanxuatRowChangeEvent">
+        <xs:element name="Ketquasanxuat" msprop:Generator_TableClassName="KetquasanxuatDataTable" msprop:Generator_TableVarName="tableKetquasanxuat" msprop:Generator_TablePropName="Ketquasanxuat" msprop:Generator_RowDeletingName="KetquasanxuatRowDeleting" msprop:Generator_RowChangingName="KetquasanxuatRowChanging" msprop:Generator_RowEvHandlerName="KetquasanxuatRowChangeEventHandler" msprop:Generator_RowDeletedName="KetquasanxuatRowDeleted" msprop:Generator_UserTableName="Ketquasanxuat" msprop:Generator_RowChangedName="KetquasanxuatRowChanged" msprop:Generator_RowEvArgName="KetquasanxuatRowChangeEvent" msprop:Generator_RowClassName="KetquasanxuatRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Mamay" msprop:Generator_ColumnVarNameInTable="columnMamay" msprop:Generator_ColumnPropNameInRow="Mamay" msprop:Generator_ColumnPropNameInTable="MamayColumn" msprop:Generator_UserColumnName="Mamay" type="xs:string" minOccurs="0" />
@@ -68,6 +68,12 @@
               <xs:element name="Tenkhach" msprop:Generator_ColumnVarNameInTable="columnTenkhach" msprop:Generator_ColumnPropNameInRow="Tenkhach" msprop:Generator_ColumnPropNameInTable="TenkhachColumn" msprop:Generator_UserColumnName="Tenkhach" type="xs:string" minOccurs="0" />
               <xs:element name="Lenhsanxuat" msprop:Generator_ColumnVarNameInTable="columnLenhsanxuat" msprop:Generator_ColumnPropNameInRow="Lenhsanxuat" msprop:Generator_ColumnPropNameInTable="LenhsanxuatColumn" msprop:Generator_UserColumnName="Lenhsanxuat" type="xs:string" minOccurs="0" />
               <xs:element name="SoluongLSX" msprop:Generator_ColumnVarNameInTable="columnSoluongLSX" msprop:Generator_ColumnPropNameInRow="SoluongLSX" msprop:Generator_ColumnPropNameInTable="SoluongLSXColumn" msprop:Generator_UserColumnName="SoluongLSX" type="xs:string" minOccurs="0" />
+              <xs:element name="Dauratua" msprop:Generator_ColumnVarNameInTable="columnDauratua" msprop:Generator_ColumnPropNameInRow="Dauratua" msprop:Generator_ColumnPropNameInTable="DauratuaColumn" msprop:Generator_UserColumnName="Dauratua" type="xs:string" minOccurs="0" />
+              <xs:element name="Manginmet" msprop:Generator_ColumnVarNameInTable="columnManginmet" msprop:Generator_ColumnPropNameInRow="Manginmet" msprop:Generator_ColumnPropNameInTable="ManginmetColumn" msprop:Generator_UserColumnName="Manginmet" type="xs:string" minOccurs="0" />
+              <xs:element name="Manginkg" msprop:Generator_ColumnVarNameInTable="columnManginkg" msprop:Generator_ColumnPropNameInRow="Manginkg" msprop:Generator_ColumnPropNameInTable="ManginkgColumn" msprop:Generator_UserColumnName="Manginkg" type="xs:string" minOccurs="0" />
+              <xs:element name="Mangcapmet" msprop:Generator_ColumnVarNameInTable="columnMangcapmet" msprop:Generator_ColumnPropNameInRow="Mangcapmet" msprop:Generator_ColumnPropNameInTable="MangcapmetColumn" msprop:Generator_UserColumnName="Mangcapmet" type="xs:string" minOccurs="0" />
+              <xs:element name="Mangcapkg" msprop:Generator_ColumnVarNameInTable="columnMangcapkg" msprop:Generator_ColumnPropNameInRow="Mangcapkg" msprop:Generator_ColumnPropNameInTable="MangcapkgColumn" msprop:Generator_UserColumnName="Mangcapkg" type="xs:string" minOccurs="0" />
+              <xs:element name="Solopghep" msprop:Generator_ColumnVarNameInTable="columnSolopghep" msprop:Generator_ColumnPropNameInRow="Solopghep" msprop:Generator_ColumnPropNameInTable="SolopghepColumn" msprop:Generator_UserColumnName="Solopghep" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
