@@ -718,6 +718,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RDLC\KQTHOICHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQINTONGHOP.rdlc" />
     <EmbeddedResource Include="RDLC\KQINCHITIET.rdlc" />
     <EmbeddedResource Include="THOI\FRM_KQTHOI.resx">
