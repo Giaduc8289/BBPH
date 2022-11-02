@@ -49,6 +49,7 @@ BEGIN
 			AND (CHARINDEX(@v_Maqcthanhpham+',',Maqcthanhpham)>0 OR ISNULL(Maqcthanhpham,'') = '')			
 			AND	(CHARINDEX(@v_Macautrucin+',',Macautrucins)>0 OR ISNULL(Macautrucins,'') = '')
 			AND (CHARINDEX(@v_Makhach+',',Makhachs)>0 OR ISNULL(Makhachs,'') = '')			
+			AND (CHARINDEX(@Masanpham+',',Mahangs)>0 OR ISNULL(Mahangs,'') = '')			
 	End
 
 	RETURN ISNULL(@v_Tocdo,0);

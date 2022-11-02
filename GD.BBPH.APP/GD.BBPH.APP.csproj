@@ -728,6 +728,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RDLC\KQTUACHITIET.rdlc" />
+    <EmbeddedResource Include="RDLC\KQTHOICHITIET.rdlc" />
+    <EmbeddedResource Include="RDLC\KQINTONGHOP.rdlc" />
     <EmbeddedResource Include="RDLC\KQINCHITIET.rdlc" />
     <EmbeddedResource Include="THOI\FRM_KQTHOI.resx">
       <DependentUpon>FRM_KQTHOI.cs</DependentUpon>
