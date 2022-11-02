@@ -114,11 +114,18 @@ namespace GD.BBPH.APP.BAOCAO
                 #region Tham so
                 DataTable dtThamso = new DataTable("Thamso");
                 dtThamso.Columns.Add("Thoigian");
+                dtThamso.Columns.Add("Maymoc");
+                dtThamso.Columns.Add("Khachhang");
+                dtThamso.Columns.Add("Sanpham");
                 DataRow dr = dtThamso.NewRow();
                 if (_Tungay == _Denngay)
                     dr["Thoigian"] = "Ngày " + _Tungay.ToString("dd/MM/yyyy");
                 else
                     dr["Thoigian"] = "Từ ngày " + _Tungay.ToString("dd/MM/yyyy") + " Đến ngày " + _Denngay.ToString("dd/MM/yyyy");
+                if (!string.IsNullOrEmpty(_Mamay))
+                    dr["Maymoc"] = txt_TENMAY.Text;
+                if (!string.IsNullOrEmpty(_Makhach))
+                    dr["Khachhang"] = txt_TENKHACH.Text;
                 dtThamso.Rows.Add(dr);
                 dsKetqua.Tables.Add(dtThamso);
                 #endregion
@@ -144,7 +151,7 @@ namespace GD.BBPH.APP.BAOCAO
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMAYIN.xml",
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMAY.xml",
                         DT_DMMAY, DmmayFields.Mamay.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;

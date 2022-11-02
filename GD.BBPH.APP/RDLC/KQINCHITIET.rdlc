@@ -24,7 +24,7 @@
         <Top>2.0217cm</Top>
         <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>26.83979cm</Width>
+        <Width>28.88472cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -57,7 +57,7 @@
         <Top>2.69325cm</Top>
         <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>26.83979cm</Width>
+        <Width>28.88472cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -73,10 +73,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.49054cm</Width>
+              <Width>1.17304cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.09772cm</Width>
+              <Width>0.91251cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.72631cm</Width>
@@ -91,7 +91,7 @@
               <Width>1.52104cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.55771cm</Width>
+              <Width>6.10533cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.89146cm</Width>
@@ -2316,21 +2316,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox69">
+                    <Textbox Name="Masanpham">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!Masanpham.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox69</rd:DefaultName>
+                      <rd:DefaultName>Masanpham</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -2346,21 +2346,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox72">
+                    <Textbox Name="Tensanpham">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!Tensanpham.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox72</rd:DefaultName>
+                      <rd:DefaultName>Tensanpham</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -2676,10 +2676,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Ketqua</DataSetName>
-        <Top>3.71434cm</Top>
+        <Top>4.98434cm</Top>
         <Left>0.00002cm</Left>
         <Height>3cm</Height>
-        <Width>26.83978cm</Width>
+        <Width>28.8847cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -2773,16 +2773,84 @@
           </Border>
         </Style>
       </Image>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Khachhang.Value, "Thamso")</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>3.37467cm</Top>
+        <Left>0cm</Left>
+        <Height>0.6cm</Height>
+        <Width>28.88472cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Maymoc.Value, "Thamso")</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>4.07317cm</Top>
+        <Left>0cm</Left>
+        <Height>0.6cm</Height>
+        <Width>28.88472cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>6.82017cm</Height>
+    <Height>7.98434cm</Height>
     <Style />
   </Body>
-  <Width>26.8398cm</Width>
+  <Width>28.88472cm</Width>
   <Page>
     <PageHeight>21cm</PageHeight>
     <PageWidth>29.7cm</PageWidth>
-    <LeftMargin>1cm</LeftMargin>
-    <RightMargin>1cm</RightMargin>
+    <LeftMargin>0.3cm</LeftMargin>
+    <RightMargin>0.3cm</RightMargin>
     <TopMargin>1cm</TopMargin>
     <BottomMargin>1cm</BottomMargin>
     <ColumnSpacing>1.27cm</ColumnSpacing>
@@ -2831,6 +2899,10 @@
         </Field>
         <Field Name="Maymoc">
           <DataField>Maymoc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Khachhang">
+          <DataField>Khachhang</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

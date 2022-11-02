@@ -328,6 +328,8 @@ namespace GD.BBPH.APP.RDLC {
             
             private global::System.Data.DataColumn columnMaymoc;
             
+            private global::System.Data.DataColumn columnKhachhang;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ThamsoDataTable() {
@@ -419,6 +421,14 @@ namespace GD.BBPH.APP.RDLC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KhachhangColumn {
+                get {
+                    return this.columnKhachhang;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -454,7 +464,7 @@ namespace GD.BBPH.APP.RDLC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ThamsoRow AddThamsoRow(string Thoigian, string Congdoan, string Congnhan, string Quycach, string Phongban, string Sanpham, string Maymoc) {
+            public ThamsoRow AddThamsoRow(string Thoigian, string Congdoan, string Congnhan, string Quycach, string Phongban, string Sanpham, string Maymoc, string Khachhang) {
                 ThamsoRow rowThamsoRow = ((ThamsoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Thoigian,
@@ -463,7 +473,8 @@ namespace GD.BBPH.APP.RDLC {
                         Quycach,
                         Phongban,
                         Sanpham,
-                        Maymoc};
+                        Maymoc,
+                        Khachhang};
                 rowThamsoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowThamsoRow);
                 return rowThamsoRow;
@@ -493,6 +504,7 @@ namespace GD.BBPH.APP.RDLC {
                 this.columnPhongban = base.Columns["Phongban"];
                 this.columnSanpham = base.Columns["Sanpham"];
                 this.columnMaymoc = base.Columns["Maymoc"];
+                this.columnKhachhang = base.Columns["Khachhang"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -512,6 +524,8 @@ namespace GD.BBPH.APP.RDLC {
                 base.Columns.Add(this.columnSanpham);
                 this.columnMaymoc = new global::System.Data.DataColumn("Maymoc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaymoc);
+                this.columnKhachhang = new global::System.Data.DataColumn("Khachhang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKhachhang);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1584,6 +1598,22 @@ namespace GD.BBPH.APP.RDLC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Khachhang {
+                get {
+                    try {
+                        return ((string)(this[this.tableThamso.KhachhangColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Khachhang\' in table \'Thamso\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableThamso.KhachhangColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsThoigianNull() {
                 return this.IsNull(this.tableThamso.ThoigianColumn);
             }
@@ -1664,6 +1694,18 @@ namespace GD.BBPH.APP.RDLC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMaymocNull() {
                 this[this.tableThamso.MaymocColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKhachhangNull() {
+                return this.IsNull(this.tableThamso.KhachhangColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKhachhangNull() {
+                this[this.tableThamso.KhachhangColumn] = global::System.Convert.DBNull;
             }
         }
         
