@@ -164,6 +164,11 @@
     </Compile>
     <Compile Include="BAOCAO\FRM_BCKQTUACHITIET.Designer.cs">
       <DependentUpon>FRM_BCKQTUACHITIET.cs</DependentUpon>
+    <Compile Include="BAOCAO\FRM_BAOCAODONHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAODONHANG.Designer.cs">
+      <DependentUpon>FRM_BAOCAODONHANG.cs</DependentUpon>
     </Compile>
     <Compile Include="BAOCAO\FRM_BCKQCHIACHITIET.cs">
       <SubType>Form</SubType>
@@ -583,6 +588,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCKQTUACHITIET.resx">
       <DependentUpon>FRM_BCKQTUACHITIET.cs</DependentUpon>
+    <EmbeddedResource Include="BAOCAO\FRM_BAOCAODONHANG.resx">
+      <DependentUpon>FRM_BAOCAODONHANG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCKQCHIACHITIET.resx">
       <DependentUpon>FRM_BCKQCHIACHITIET.cs</DependentUpon>
@@ -748,6 +755,7 @@
     <EmbeddedResource Include="RDLC\KQTUACHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQTHOICHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQINTONGHOP.rdlc" />
+    <EmbeddedResource Include="RDLC\BAOCAODONHANG.rdlc" />
     <EmbeddedResource Include="RDLC\KQCHIACHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQINCHITIET.rdlc" />
     <EmbeddedResource Include="THOI\FRM_KQTHOI.resx">
@@ -766,7 +774,7 @@
     <None Include="RDLC\DataBBPH.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataBBPH.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataBBPH1.Designer.cs</LastGenOutput>
     </None>
     <None Include="RDLC\DataBBPH.xss">
       <DependentUpon>DataBBPH.xsd</DependentUpon>

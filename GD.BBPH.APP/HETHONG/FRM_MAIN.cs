@@ -1059,6 +1059,13 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCKQCHIACHITIET()), mmru.Text);
                     break;
+                case "FRM_BAOCAODONHANG":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BAOCAODONHANG") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAODONHANG()), mmru.Text);
+                    break;
                 #endregion
 
                 #region Cửa sổ
