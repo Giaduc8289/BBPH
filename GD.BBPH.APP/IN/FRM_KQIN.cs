@@ -650,7 +650,7 @@ namespace GD.BBPH.APP.IN
                 _saihongthucte = LIB.ConvertString.NumbertoDB(txt_SAIHONGTHUCTE.Text.Trim());
                 DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(txt_MASP.Text);
 
-                _doday = Convert.ToDecimal(_DmhangEntity.Doday);
+                //_doday = Convert.ToDecimal(_DmhangEntity.Doday);
                 _rong = Convert.ToDecimal(_DmhangEntity.Rong);
                 _saihongphamuc = LIB.Procedures.fTinhdinhmucsaihong(txt_MAMAY.Text, txt_MASP.Text, "DM03");
                 _sangcuon = LIB.Procedures.fTinhdinhmucsaihong(txt_MAMAY.Text, txt_MASP.Text, "DM01");

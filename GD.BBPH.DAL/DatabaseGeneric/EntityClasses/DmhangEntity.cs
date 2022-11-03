@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, November 1, 2022 8:33:09 AM
+// Code is generated on: Thursday, November 3, 2022 3:00:22 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -26,7 +26,6 @@ namespace GD.BBPH.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 
 	/// <summary>
 	/// Entity class which represents the entity 'Dmhang'.<br/><br/>
@@ -35,8 +34,7 @@ namespace GD.BBPH.DAL.EntityClasses
 	[Serializable]
 	public partial class DmhangEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END
-			
+		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
 
@@ -46,7 +44,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Statics
@@ -127,7 +124,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 		}
 
 		
@@ -296,7 +292,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			base.GetObjectData(info, context);
 		}
 
@@ -425,7 +420,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			OnInitClassMembersComplete();
 		}
 
@@ -460,9 +454,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Tenkhach", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Kichthuoc", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Trongluong", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -476,36 +467,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Khoiluongmuc", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Cautrucin", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Mamang1", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tenmang1", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tlmanglop1", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tlkeolop1", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Mamang2", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tenmang2", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tlmanglop2", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tlkeolop2", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Dinhluongkeo", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Kichthuoctruc", fieldHashtable);
@@ -559,16 +520,28 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Maloaimuc", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Doday", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Macautrucin", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Solopghepma", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Solopghep", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Khomang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Rongcuon", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Daicuon", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Hong", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Bangdinhdan", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Cautruc", fieldHashtable);
 		}
 		#endregion
 
@@ -588,7 +561,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 
 			OnInitialized();
 		}
@@ -712,17 +684,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmhangFieldIndex.Tenkhach, value); }
 		}
 
-		/// <summary> The Kichthuoc property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Kichthuoc"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Kichthuoc
-		{
-			get { return (System.String)GetValue((int)DmhangFieldIndex.Kichthuoc, true); }
-			set	{ SetValue((int)DmhangFieldIndex.Kichthuoc, value); }
-		}
-
 		/// <summary> The Trongluong property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Trongluong"<br/>
@@ -776,116 +737,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Khoiluongmuc, false); }
 			set	{ SetValue((int)DmhangFieldIndex.Khoiluongmuc, value); }
-		}
-
-		/// <summary> The Cautrucin property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Cautrucin"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Cautrucin
-		{
-			get { return (System.String)GetValue((int)DmhangFieldIndex.Cautrucin, true); }
-			set	{ SetValue((int)DmhangFieldIndex.Cautrucin, value); }
-		}
-
-		/// <summary> The Mamang1 property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Mamang1"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Mamang1
-		{
-			get { return (System.String)GetValue((int)DmhangFieldIndex.Mamang1, true); }
-			set	{ SetValue((int)DmhangFieldIndex.Mamang1, value); }
-		}
-
-		/// <summary> The Tenmang1 property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Tenmang1"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tenmang1
-		{
-			get { return (System.String)GetValue((int)DmhangFieldIndex.Tenmang1, true); }
-			set	{ SetValue((int)DmhangFieldIndex.Tenmang1, value); }
-		}
-
-		/// <summary> The Tlmanglop1 property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Tlmanglop1"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Tlmanglop1
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Tlmanglop1, false); }
-			set	{ SetValue((int)DmhangFieldIndex.Tlmanglop1, value); }
-		}
-
-		/// <summary> The Tlkeolop1 property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Tlkeolop1"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Tlkeolop1
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Tlkeolop1, false); }
-			set	{ SetValue((int)DmhangFieldIndex.Tlkeolop1, value); }
-		}
-
-		/// <summary> The Mamang2 property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Mamang2"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Mamang2
-		{
-			get { return (System.String)GetValue((int)DmhangFieldIndex.Mamang2, true); }
-			set	{ SetValue((int)DmhangFieldIndex.Mamang2, value); }
-		}
-
-		/// <summary> The Tenmang2 property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Tenmang2"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tenmang2
-		{
-			get { return (System.String)GetValue((int)DmhangFieldIndex.Tenmang2, true); }
-			set	{ SetValue((int)DmhangFieldIndex.Tenmang2, value); }
-		}
-
-		/// <summary> The Tlmanglop2 property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Tlmanglop2"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Tlmanglop2
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Tlmanglop2, false); }
-			set	{ SetValue((int)DmhangFieldIndex.Tlmanglop2, value); }
-		}
-
-		/// <summary> The Tlkeolop2 property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Tlkeolop2"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Tlkeolop2
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Tlkeolop2, false); }
-			set	{ SetValue((int)DmhangFieldIndex.Tlkeolop2, value); }
-		}
-
-		/// <summary> The Dinhluongkeo property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Dinhluongkeo"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Dinhluongkeo
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Dinhluongkeo, false); }
-			set	{ SetValue((int)DmhangFieldIndex.Dinhluongkeo, value); }
 		}
 
 		/// <summary> The Kichthuoctruc property of the Entity Dmhang<br/><br/>
@@ -1075,28 +926,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmhangFieldIndex.Maloaimuc, value); }
 		}
 
-		/// <summary> The Doday property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Doday"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Doday
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Doday, false); }
-			set	{ SetValue((int)DmhangFieldIndex.Doday, value); }
-		}
-
-		/// <summary> The Macautrucin property of the Entity Dmhang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmhang"."Macautrucin"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Macautrucin
-		{
-			get { return (System.String)GetValue((int)DmhangFieldIndex.Macautrucin, true); }
-			set	{ SetValue((int)DmhangFieldIndex.Macautrucin, value); }
-		}
-
 		/// <summary> The Solopghepma property of the Entity Dmhang<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "dmhang"."Solopghepma"<br/>
@@ -1117,6 +946,72 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Int32>)GetValue((int)DmhangFieldIndex.Solopghep, false); }
 			set	{ SetValue((int)DmhangFieldIndex.Solopghep, value); }
+		}
+
+		/// <summary> The Khomang property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Khomang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Khomang
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Khomang, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Khomang, value); }
+		}
+
+		/// <summary> The Rongcuon property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Rongcuon"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Rongcuon
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Rongcuon, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Rongcuon, value); }
+		}
+
+		/// <summary> The Daicuon property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Daicuon"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Daicuon
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Daicuon, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Daicuon, value); }
+		}
+
+		/// <summary> The Hong property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Hong"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Hong
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Hong, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Hong, value); }
+		}
+
+		/// <summary> The Bangdinhdan property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Bangdinhdan"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Bangdinhdan
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Bangdinhdan, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Bangdinhdan, value); }
+		}
+
+		/// <summary> The Cautruc property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Cautruc"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Cautruc
+		{
+			get { return (System.String)GetValue((int)DmhangFieldIndex.Cautruc, true); }
+			set	{ SetValue((int)DmhangFieldIndex.Cautruc, value); }
 		}
 
 
@@ -1149,7 +1044,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Included code

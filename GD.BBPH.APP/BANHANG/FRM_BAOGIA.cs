@@ -279,7 +279,7 @@ namespace GD.BBPH.APP.BANHANG
                 r_Detail[BaogiaDFields.Masp.Name] = drv.Row[DmhangFields.Masp.Name].ToString();
                 r_Detail[BaogiaDFields.Tensp.Name] = drv.Row[DmhangFields.Tensp.Name].ToString();
                 r_Detail[BaogiaDFields.Maspcuakhach.Name] = drv.Row[DmhangFields.Maspcuakhach.Name].ToString();
-                try { r_Detail[BaogiaDFields.Doday.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Doday.Name].ToString()); }
+                try { r_Detail[BaogiaDFields.Doday.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Hong.Name].ToString()); }
                 catch { }
                 try { r_Detail[BaogiaDFields.Rong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Rong.Name].ToString()); }
                 catch { }
@@ -288,7 +288,7 @@ namespace GD.BBPH.APP.BANHANG
                 try { r_Detail[BaogiaDFields.Trongluong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Trongluong.Name].ToString()); }
                 catch { }
                 r_Detail[BaogiaDFields.Loaimuc.Name] = drv.Row[DmhangFields.Loaimuc.Name].ToString();
-                r_Detail[BaogiaDFields.Cautrucin.Name] = drv.Row[DmhangFields.Cautrucin.Name].ToString();
+                r_Detail[BaogiaDFields.Cautrucin.Name] = drv.Row[DmhangFields.Cautruc.Name].ToString();
                 r_Detail[BaogiaDFields.Tenqcthanhpham.Name] = drv.Row[DmhangFields.Tenqcthanhpham.Name].ToString();
                 r_Detail[BaogiaDFields.Tenqcloaithung.Name] = drv.Row[DmhangFields.Tenqcloaithung.Name].ToString();
                 r_Detail[BaogiaDFields.Tenqcdonggoi.Name] = drv.Row[DmhangFields.Tenqcdonggoi.Name].ToString();

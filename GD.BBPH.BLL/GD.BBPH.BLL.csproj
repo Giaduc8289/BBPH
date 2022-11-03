@@ -109,6 +109,7 @@
     <Compile Include="DataAccessAdapterFactory.cs" />
     <Compile Include="ManagerBase\BaogiaDManagerBase.cs" />
     <Compile Include="ManagerBase\BaogiaHManagerBase.cs" />
+    <Compile Include="ManagerBase\CautruccuahangManagerBase.cs" />
     <Compile Include="ManagerBase\CongsuatmayManagerBase.cs" />
     <Compile Include="ManagerBase\CtptmangDManagerBase.cs" />
     <Compile Include="ManagerBase\CtptmangHManagerBase.cs" />

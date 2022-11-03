@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, November 1, 2022 8:33:09 AM
+// Code is generated on: Thursday, November 3, 2022 3:00:22 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -40,6 +40,14 @@ namespace GD.BBPH.DAL.FactoryClasses
 		public static IEntityField2 Create(BaogiaHFieldIndex fieldIndex)
 		{
 			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("BaogiaHEntity", (int)fieldIndex));
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the CautruccuahangEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(CautruccuahangFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("CautruccuahangEntity", (int)fieldIndex));
 		}
 
 		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the CongsuatmayEntity. Which EntityField is created is specified by fieldIndex</summary>

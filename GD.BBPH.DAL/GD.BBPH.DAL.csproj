@@ -121,6 +121,7 @@
   <ItemGroup>
     <Compile Include="DatabaseGeneric\EntityClasses\BaogiaDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\BaogiaHEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\CautruccuahangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CongsuatmayEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CtptmangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CtptmangHEntity.cs" />
@@ -229,6 +230,7 @@
     <AppDesigner Include="Properties\" />
     <Compile Include="DatabaseGeneric\RelationClasses\BaogiaDRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\BaogiaHRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\CautruccuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CongsuatmayRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CtptmangDRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CtptmangHRelations.cs" />

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, November 3, 2022 3:00:22 PM
+// Code is generated on: Monday, October 31, 2022 5:07:45 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -10,22 +10,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using GD.BBPH.DAL;
-using GD.BBPH.DAL.FactoryClasses;
-using GD.BBPH.DAL.HelperClasses;
+using GD.BBPH;
+using GD.BBPH.FactoryClasses;
+using GD.BBPH.HelperClasses;
 using SD.LLBLGen.Pro.ORMSupportClasses;
 
-namespace GD.BBPH.DAL.RelationClasses
+namespace GD.BBPH.RelationClasses
 {
-	/// <summary>Implements the static Relations variant for the entity: Ketquathoi. </summary>
-	public partial class KetquathoiRelations
+	/// <summary>Implements the static Relations variant for the entity: Ketquathanhpham. </summary>
+	public partial class KetquathanhphamRelations
 	{
 		/// <summary>CTor</summary>
-		public KetquathoiRelations()
+		public KetquathanhphamRelations()
 		{
 		}
 
-		/// <summary>Gets all relations of the KetquathoiEntity as a list of IEntityRelation objects.</summary>
+		/// <summary>Gets all relations of the KetquathanhphamEntity as a list of IEntityRelation objects.</summary>
 		/// <returns>a list of IEntityRelation objects</returns>
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
@@ -40,17 +40,17 @@ namespace GD.BBPH.DAL.RelationClasses
 
 
 
-		/// <summary>Returns a new IEntityRelation object, between KetquathoiEntity and DmmayEntity over the m:1 relation they have, using the relation between the fields:
-		/// Ketquathoi.Mamay - Dmmay.Mamay
+		/// <summary>Returns a new IEntityRelation object, between KetquathanhphamEntity and DmmayEntity over the m:1 relation they have, using the relation between the fields:
+		/// Ketquathanhpham.Mamay - Dmmay.Mamay
 		/// </summary>
 		public virtual IEntityRelation DmmayEntityUsingMamay
 		{
 			get
 			{
 				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmmay", false);
-				relation.AddEntityFieldPair(DmmayFields.Mamay, KetquathoiFields.Mamay);
+				relation.AddEntityFieldPair(DmmayFields.Mamay, KetquathanhphamFields.Mamay);
 				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", false);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KetquathoiEntity", true);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KetquathanhphamEntity", true);
 				return relation;
 			}
 		}
