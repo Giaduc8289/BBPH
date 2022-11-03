@@ -153,6 +153,12 @@
     <Compile Include="BANHANG\FRM_PHIEUGIAOHANG.designer.cs">
       <DependentUpon>FRM_PHIEUGIAOHANG.cs</DependentUpon>
     </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAOXUATHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAOXUATHANG.Designer.cs">
+      <DependentUpon>FRM_BAOCAOXUATHANG.cs</DependentUpon>
+    </Compile>
     <Compile Include="BAOCAO\FRM_BAOCAODONHANG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -572,6 +578,9 @@
     <EmbeddedResource Include="BANHANG\FRM_PHIEUGIAOHANG.resx">
       <DependentUpon>FRM_PHIEUGIAOHANG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BAOCAOXUATHANG.resx">
+      <DependentUpon>FRM_BAOCAOXUATHANG.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BAOCAODONHANG.resx">
       <DependentUpon>FRM_BAOCAODONHANG.cs</DependentUpon>
     </EmbeddedResource>
@@ -736,6 +745,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RDLC\BAOCAOXUATHANG.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAODONHANG.rdlc" />
     <EmbeddedResource Include="RDLC\KQCHIACHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQINCHITIET.rdlc" />
