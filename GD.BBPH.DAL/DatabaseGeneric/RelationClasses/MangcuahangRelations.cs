@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, November 3, 2022 3:00:22 PM
+// Code is generated on: Friday, November 4, 2022 3:41:00 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -17,15 +17,15 @@ using SD.LLBLGen.Pro.ORMSupportClasses;
 
 namespace GD.BBPH.DAL.RelationClasses
 {
-	/// <summary>Implements the static Relations variant for the entity: Cautruccuahang. </summary>
-	public partial class CautruccuahangRelations
+	/// <summary>Implements the static Relations variant for the entity: Mangcuahang. </summary>
+	public partial class MangcuahangRelations
 	{
 		/// <summary>CTor</summary>
-		public CautruccuahangRelations()
+		public MangcuahangRelations()
 		{
 		}
 
-		/// <summary>Gets all relations of the CautruccuahangEntity as a list of IEntityRelation objects.</summary>
+		/// <summary>Gets all relations of the MangcuahangEntity as a list of IEntityRelation objects.</summary>
 		/// <returns>a list of IEntityRelation objects</returns>
 		public virtual List<IEntityRelation> GetAllRelations()
 		{

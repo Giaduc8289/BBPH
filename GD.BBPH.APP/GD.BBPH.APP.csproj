@@ -500,7 +500,6 @@
     <Compile Include="LIB\USERS.cs" />
     <Compile Include="Manager\BaogiaDManager.cs" />
     <Compile Include="Manager\BaogiaHManager.cs" />
-    <Compile Include="Manager\CautruccuahangManager.cs" />
     <Compile Include="Manager\CongsuatmayManager.cs" />
     <Compile Include="Manager\CtptmangDManager.cs" />
     <Compile Include="Manager\CtptmangHManager.cs" />
@@ -537,6 +536,7 @@
     <Compile Include="Manager\LogbackupManager.cs" />
     <Compile Include="Manager\DmkhachManager.cs" />
     <Compile Include="Manager\DmbophanManager.cs" />
+    <Compile Include="Manager\MangcuahangManager.cs" />
     <Compile Include="Manager\MaucuahangManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
     <Compile Include="Manager\MenuroleManager.cs" />

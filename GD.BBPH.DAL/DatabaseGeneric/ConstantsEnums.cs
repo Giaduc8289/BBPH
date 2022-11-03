@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, November 3, 2022 3:00:22 PM
+// Code is generated on: Friday, November 4, 2022 3:41:00 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -85,62 +85,6 @@ namespace GD.BBPH.DAL
 		Phuongthuctt,
 		///<summary>Diadiemgiao. </summary>
 		Diadiemgiao,
-		///<summary>Ngaytao. </summary>
-		Ngaytao,
-		///<summary>Nguoitao. </summary>
-		Nguoitao,
-		///<summary>Ngaysua. </summary>
-		Ngaysua,
-		///<summary>Nguoisua. </summary>
-		Nguoisua,
-		/// <summary></summary>
-		AmountOfFields
-	}
-
-
-	/// <summary>
-	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Cautruccuahang.
-	/// </summary>
-	public enum CautruccuahangFieldIndex:int
-	{
-		///<summary>Id. </summary>
-		Id,
-		///<summary>Masp. </summary>
-		Masp,
-		///<summary>Tensp. </summary>
-		Tensp,
-		///<summary>Mangin. </summary>
-		Mangin,
-		///<summary>Mamang. </summary>
-		Mamang,
-		///<summary>Tenmang. </summary>
-		Tenmang,
-		///<summary>Maloaikeo. </summary>
-		Maloaikeo,
-		///<summary>Tenloaikeo. </summary>
-		Tenloaikeo,
-		///<summary>Maloaidongran. </summary>
-		Maloaidongran,
-		///<summary>Tenloaidongran. </summary>
-		Tenloaidongran,
-		///<summary>Dinhmuckeokho. </summary>
-		Dinhmuckeokho,
-		///<summary>Dinhmucdongrankho. </summary>
-		Dinhmucdongrankho,
-		///<summary>Tylekeokho. </summary>
-		Tylekeokho,
-		///<summary>Tyledongrankho. </summary>
-		Tyledongrankho,
-		///<summary>Tylekeo. </summary>
-		Tylekeo,
-		///<summary>Tyledongran. </summary>
-		Tyledongran,
-		///<summary>Dinhmuckeouot. </summary>
-		Dinhmuckeouot,
-		///<summary>Dinhmucdongranuot. </summary>
-		Dinhmucdongranuot,
-		///<summary>Dinhmucdungmoi. </summary>
-		Dinhmucdungmoi,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -1639,6 +1583,62 @@ namespace GD.BBPH.DAL
 
 
 	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Mangcuahang.
+	/// </summary>
+	public enum MangcuahangFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tensp. </summary>
+		Tensp,
+		///<summary>Mangin. </summary>
+		Mangin,
+		///<summary>Mamang. </summary>
+		Mamang,
+		///<summary>Tenmang. </summary>
+		Tenmang,
+		///<summary>Maloaikeo. </summary>
+		Maloaikeo,
+		///<summary>Tenloaikeo. </summary>
+		Tenloaikeo,
+		///<summary>Maloaidongran. </summary>
+		Maloaidongran,
+		///<summary>Tenloaidongran. </summary>
+		Tenloaidongran,
+		///<summary>Dinhmuckeokho. </summary>
+		Dinhmuckeokho,
+		///<summary>Dinhmucdongrankho. </summary>
+		Dinhmucdongrankho,
+		///<summary>Tylekeokho. </summary>
+		Tylekeokho,
+		///<summary>Tyledongrankho. </summary>
+		Tyledongrankho,
+		///<summary>Tylekeo. </summary>
+		Tylekeo,
+		///<summary>Tyledongran. </summary>
+		Tyledongran,
+		///<summary>Dinhmuckeouot. </summary>
+		Dinhmuckeouot,
+		///<summary>Dinhmucdongranuot. </summary>
+		Dinhmucdongranuot,
+		///<summary>Dinhmucdungmoi. </summary>
+		Dinhmucdungmoi,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
 	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Maucuahang.
 	/// </summary>
 	public enum MaucuahangFieldIndex:int
@@ -2324,8 +2324,6 @@ namespace GD.BBPH.DAL
 		BaogiaDEntity,
 		///<summary>BaogiaH</summary>
 		BaogiaHEntity,
-		///<summary>Cautruccuahang</summary>
-		CautruccuahangEntity,
 		///<summary>Congsuatmay</summary>
 		CongsuatmayEntity,
 		///<summary>CtptmangD</summary>
@@ -2398,6 +2396,8 @@ namespace GD.BBPH.DAL
 		KetquatuaEntity,
 		///<summary>Logbackup</summary>
 		LogbackupEntity,
+		///<summary>Mangcuahang</summary>
+		MangcuahangEntity,
 		///<summary>Maucuahang</summary>
 		MaucuahangEntity,
 		///<summary>Menu</summary>
@@ -2447,6 +2447,7 @@ namespace GD.BBPH.DAL
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START CustomUserConstants
 	// __LLBLGENPRO_USER_CODE_REGION_END
+	
 	#endregion
 
 	#region Included code

@@ -1,7 +1,7 @@
 ﻿
 /*
 '===============================================================================
-'  GD.BBPH.BL.CautruccuahangManager
+'  GD.BBPH.BL.MangcuahangManager
 '===============================================================================
 */
 
@@ -18,12 +18,12 @@ using SD.LLBLGen.Pro.ORMSupportClasses;
 
 namespace GD.BBPH.BLL
 {
-	public class CautruccuahangManager : CautruccuahangManagerBase
+	public class MangcuahangManager : MangcuahangManagerBase
 	{
 		/// <summary>
 		/// Purpose: Class constructor.
 		/// </summary>
-		public CautruccuahangManager()
+		public MangcuahangManager()
 		{
 			// Nothing for now.
 		}
