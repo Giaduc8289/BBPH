@@ -753,6 +753,14 @@ namespace GD.BBPH.APP.RDLC {
             
             private global::System.Data.DataColumn columnSocuon;
             
+            private global::System.Data.DataColumn columnKiemtra;
+            
+            private global::System.Data.DataColumn columnKetquatui;
+            
+            private global::System.Data.DataColumn columnChatluongtui;
+            
+            private global::System.Data.DataColumn columnLenhhoanthien;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public KetquasanxuatDataTable() {
@@ -1164,6 +1172,38 @@ namespace GD.BBPH.APP.RDLC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KiemtraColumn {
+                get {
+                    return this.columnKiemtra;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn KetquatuiColumn {
+                get {
+                    return this.columnKetquatui;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ChatluongtuiColumn {
+                get {
+                    return this.columnChatluongtui;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LenhhoanthienColumn {
+                get {
+                    return this.columnLenhhoanthien;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1246,7 +1286,11 @@ namespace GD.BBPH.APP.RDLC {
                         string Mangcapkg, 
                         string Solopghep, 
                         string Dauraghep, 
-                        string Socuon) {
+                        string Socuon, 
+                        string Kiemtra, 
+                        string Ketquatui, 
+                        string Chatluongtui, 
+                        string Lenhhoanthien) {
                 KetquasanxuatRow rowKetquasanxuatRow = ((KetquasanxuatRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Mamay,
@@ -1295,7 +1339,11 @@ namespace GD.BBPH.APP.RDLC {
                         Mangcapkg,
                         Solopghep,
                         Dauraghep,
-                        Socuon};
+                        Socuon,
+                        Kiemtra,
+                        Ketquatui,
+                        Chatluongtui,
+                        Lenhhoanthien};
                 rowKetquasanxuatRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKetquasanxuatRow);
                 return rowKetquasanxuatRow;
@@ -1365,6 +1413,10 @@ namespace GD.BBPH.APP.RDLC {
                 this.columnSolopghep = base.Columns["Solopghep"];
                 this.columnDauraghep = base.Columns["Dauraghep"];
                 this.columnSocuon = base.Columns["Socuon"];
+                this.columnKiemtra = base.Columns["Kiemtra"];
+                this.columnKetquatui = base.Columns["Ketquatui"];
+                this.columnChatluongtui = base.Columns["Chatluongtui"];
+                this.columnLenhhoanthien = base.Columns["Lenhhoanthien"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1464,6 +1516,14 @@ namespace GD.BBPH.APP.RDLC {
                 base.Columns.Add(this.columnDauraghep);
                 this.columnSocuon = new global::System.Data.DataColumn("Socuon", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSocuon);
+                this.columnKiemtra = new global::System.Data.DataColumn("Kiemtra", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKiemtra);
+                this.columnKetquatui = new global::System.Data.DataColumn("Ketquatui", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKetquatui);
+                this.columnChatluongtui = new global::System.Data.DataColumn("Chatluongtui", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnChatluongtui);
+                this.columnLenhhoanthien = new global::System.Data.DataColumn("Lenhhoanthien", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLenhhoanthien);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2597,6 +2657,70 @@ namespace GD.BBPH.APP.RDLC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Kiemtra {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.KiemtraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Kiemtra\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.KiemtraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Ketquatui {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.KetquatuiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Ketquatui\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.KetquatuiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Chatluongtui {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.ChatluongtuiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Chatluongtui\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.ChatluongtuiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Lenhhoanthien {
+                get {
+                    try {
+                        return ((string)(this[this.tableKetquasanxuat.LenhhoanthienColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Lenhhoanthien\' in table \'Ketquasanxuat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableKetquasanxuat.LenhhoanthienColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMamayNull() {
                 return this.IsNull(this.tableKetquasanxuat.MamayColumn);
             }
@@ -3157,6 +3281,54 @@ namespace GD.BBPH.APP.RDLC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSocuonNull() {
                 this[this.tableKetquasanxuat.SocuonColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKiemtraNull() {
+                return this.IsNull(this.tableKetquasanxuat.KiemtraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKiemtraNull() {
+                this[this.tableKetquasanxuat.KiemtraColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsKetquatuiNull() {
+                return this.IsNull(this.tableKetquasanxuat.KetquatuiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetKetquatuiNull() {
+                this[this.tableKetquasanxuat.KetquatuiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsChatluongtuiNull() {
+                return this.IsNull(this.tableKetquasanxuat.ChatluongtuiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetChatluongtuiNull() {
+                this[this.tableKetquasanxuat.ChatluongtuiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLenhhoanthienNull() {
+                return this.IsNull(this.tableKetquasanxuat.LenhhoanthienColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLenhhoanthienNull() {
+                this[this.tableKetquasanxuat.LenhhoanthienColumn] = global::System.Convert.DBNull;
             }
         }
         
