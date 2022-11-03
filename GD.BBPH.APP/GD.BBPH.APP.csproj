@@ -164,6 +164,7 @@
     </Compile>
     <Compile Include="BAOCAO\FRM_BCKQTUACHITIET.Designer.cs">
       <DependentUpon>FRM_BCKQTUACHITIET.cs</DependentUpon>
+    </Compile>
     <Compile Include="BAOCAO\FRM_BAOCAODONHANG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -588,6 +589,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCKQTUACHITIET.resx">
       <DependentUpon>FRM_BCKQTUACHITIET.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BAOCAODONHANG.resx">
       <DependentUpon>FRM_BAOCAODONHANG.cs</DependentUpon>
     </EmbeddedResource>
