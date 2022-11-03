@@ -1350,8 +1350,7 @@ namespace GD.BBPH.APP.RDLC {
                         string Kiemtra, 
                         string Ketquatui, 
                         string Chatluongtui, 
-                        string Lenhhoanthien) {
-                        string Socuon, 
+                        string Lenhhoanthien,
                         string Madon, 
                         string Sobaogia, 
                         string Ghichuchung, 
@@ -1410,8 +1409,7 @@ namespace GD.BBPH.APP.RDLC {
                         Kiemtra,
                         Ketquatui,
                         Chatluongtui,
-                        Lenhhoanthien};
-                        Socuon,
+                        Lenhhoanthien,
                         Madon,
                         Sobaogia,
                         Ghichuchung,
@@ -2777,7 +2775,6 @@ namespace GD.BBPH.APP.RDLC {
                 set {
                     this[this.tableKetquasanxuat.KetquatuiColumn] = value;
                 }
-            }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
