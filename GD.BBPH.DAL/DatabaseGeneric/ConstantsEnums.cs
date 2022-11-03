@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, November 1, 2022 8:33:09 AM
+// Code is generated on: Thursday, November 3, 2022 3:00:22 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -85,6 +85,62 @@ namespace GD.BBPH.DAL
 		Phuongthuctt,
 		///<summary>Diadiemgiao. </summary>
 		Diadiemgiao,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Cautruccuahang.
+	/// </summary>
+	public enum CautruccuahangFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tensp. </summary>
+		Tensp,
+		///<summary>Mangin. </summary>
+		Mangin,
+		///<summary>Mamang. </summary>
+		Mamang,
+		///<summary>Tenmang. </summary>
+		Tenmang,
+		///<summary>Maloaikeo. </summary>
+		Maloaikeo,
+		///<summary>Tenloaikeo. </summary>
+		Tenloaikeo,
+		///<summary>Maloaidongran. </summary>
+		Maloaidongran,
+		///<summary>Tenloaidongran. </summary>
+		Tenloaidongran,
+		///<summary>Dinhmuckeokho. </summary>
+		Dinhmuckeokho,
+		///<summary>Dinhmucdongrankho. </summary>
+		Dinhmucdongrankho,
+		///<summary>Tylekeokho. </summary>
+		Tylekeokho,
+		///<summary>Tyledongrankho. </summary>
+		Tyledongrankho,
+		///<summary>Tylekeo. </summary>
+		Tylekeo,
+		///<summary>Tyledongran. </summary>
+		Tyledongran,
+		///<summary>Dinhmuckeouot. </summary>
+		Dinhmuckeouot,
+		///<summary>Dinhmucdongranuot. </summary>
+		Dinhmucdongranuot,
+		///<summary>Dinhmucdungmoi. </summary>
+		Dinhmucdungmoi,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -541,8 +597,6 @@ namespace GD.BBPH.DAL
 		Makhach,
 		///<summary>Tenkhach. </summary>
 		Tenkhach,
-		///<summary>Kichthuoc. </summary>
-		Kichthuoc,
 		///<summary>Trongluong. </summary>
 		Trongluong,
 		///<summary>Sohinh. </summary>
@@ -553,26 +607,6 @@ namespace GD.BBPH.DAL
 		Loaimuc,
 		///<summary>Khoiluongmuc. </summary>
 		Khoiluongmuc,
-		///<summary>Cautrucin. </summary>
-		Cautrucin,
-		///<summary>Mamang1. </summary>
-		Mamang1,
-		///<summary>Tenmang1. </summary>
-		Tenmang1,
-		///<summary>Tlmanglop1. </summary>
-		Tlmanglop1,
-		///<summary>Tlkeolop1. </summary>
-		Tlkeolop1,
-		///<summary>Mamang2. </summary>
-		Mamang2,
-		///<summary>Tenmang2. </summary>
-		Tenmang2,
-		///<summary>Tlmanglop2. </summary>
-		Tlmanglop2,
-		///<summary>Tlkeolop2. </summary>
-		Tlkeolop2,
-		///<summary>Dinhluongkeo. </summary>
-		Dinhluongkeo,
 		///<summary>Kichthuoctruc. </summary>
 		Kichthuoctruc,
 		///<summary>Vitri. </summary>
@@ -607,14 +641,22 @@ namespace GD.BBPH.DAL
 		Sohinhma,
 		///<summary>Maloaimuc. </summary>
 		Maloaimuc,
-		///<summary>Doday. </summary>
-		Doday,
-		///<summary>Macautrucin. </summary>
-		Macautrucin,
 		///<summary>Solopghepma. </summary>
 		Solopghepma,
 		///<summary>Solopghep. </summary>
 		Solopghep,
+		///<summary>Khomang. </summary>
+		Khomang,
+		///<summary>Rongcuon. </summary>
+		Rongcuon,
+		///<summary>Daicuon. </summary>
+		Daicuon,
+		///<summary>Hong. </summary>
+		Hong,
+		///<summary>Bangdinhdan. </summary>
+		Bangdinhdan,
+		///<summary>Cautruc. </summary>
+		Cautruc,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -2282,6 +2324,8 @@ namespace GD.BBPH.DAL
 		BaogiaDEntity,
 		///<summary>BaogiaH</summary>
 		BaogiaHEntity,
+		///<summary>Cautruccuahang</summary>
+		CautruccuahangEntity,
 		///<summary>Congsuatmay</summary>
 		CongsuatmayEntity,
 		///<summary>CtptmangD</summary>
@@ -2403,7 +2447,6 @@ namespace GD.BBPH.DAL
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START CustomUserConstants
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 	#endregion
 
 	#region Included code

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, November 1, 2022 8:33:09 AM
+// Code is generated on: Thursday, November 3, 2022 3:00:22 PM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -66,6 +66,9 @@ namespace GD.BBPH.DAL.Linq
 					break;
 				case GD.BBPH.DAL.EntityType.BaogiaHEntity:
 					toReturn = this.BaogiaH;
+					break;
+				case GD.BBPH.DAL.EntityType.CautruccuahangEntity:
+					toReturn = this.Cautruccuahang;
 					break;
 				case GD.BBPH.DAL.EntityType.CongsuatmayEntity:
 					toReturn = this.Congsuatmay;
@@ -252,6 +255,12 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<BaogiaHEntity> BaogiaH
 		{
 			get { return new DataSource2<BaogiaHEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting CautruccuahangEntity instances in the database.</summary>
+		public DataSource2<CautruccuahangEntity> Cautruccuahang
+		{
+			get { return new DataSource2<CautruccuahangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting CongsuatmayEntity instances in the database.</summary>

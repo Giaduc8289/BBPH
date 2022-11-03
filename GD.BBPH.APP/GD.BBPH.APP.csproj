@@ -482,6 +482,7 @@
     <Compile Include="LIB\USERS.cs" />
     <Compile Include="Manager\BaogiaDManager.cs" />
     <Compile Include="Manager\BaogiaHManager.cs" />
+    <Compile Include="Manager\CautruccuahangManager.cs" />
     <Compile Include="Manager\CongsuatmayManager.cs" />
     <Compile Include="Manager\CtptmangDManager.cs" />
     <Compile Include="Manager\CtptmangHManager.cs" />

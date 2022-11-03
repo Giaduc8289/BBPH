@@ -25,6 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{8E88BC
 	ProjectSection(SolutionItems) = preProject
 		GenSupportCode\Entity\BaogiaDEnt.cs = GenSupportCode\Entity\BaogiaDEnt.cs
 		GenSupportCode\Entity\BaogiaHEnt.cs = GenSupportCode\Entity\BaogiaHEnt.cs
+		GenSupportCode\Entity\CautruccuahangEnt.cs = GenSupportCode\Entity\CautruccuahangEnt.cs
 		GenSupportCode\Entity\CongsuatmayEnt.cs = GenSupportCode\Entity\CongsuatmayEnt.cs
 		GenSupportCode\Entity\CtptmangDEnt.cs = GenSupportCode\Entity\CtptmangDEnt.cs
 		GenSupportCode\Entity\CtptmangHEnt.cs = GenSupportCode\Entity\CtptmangHEnt.cs

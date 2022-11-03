@@ -28,11 +28,11 @@ namespace GD.BBPH.DAL.EntityClasses
 	// __LLBLGENPRO_USER_CODE_REGION_END
 
 	/// <summary>
-	/// Entity class which represents the entity 'Ketquainmau'.<br/><br/>
+	/// Entity class which represents the entity 'Cautruccuahang'.<br/><br/>
 	/// 
 	/// </summary>
 	[Serializable]
-	public partial class KetquainmauEntity : CommonEntityBase, ISerializable
+	public partial class CautruccuahangEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
@@ -61,13 +61,13 @@ namespace GD.BBPH.DAL.EntityClasses
 		#endregion
 		
 		/// <summary> Static CTor for setting up custom property hashtables. Is executed before the first instance of this entity class or derived classes is constructed. </summary>
-		static KetquainmauEntity()
+		static CautruccuahangEntity()
 		{
 			SetupCustomPropertyHashtables();
 		}
 
 		/// <summary> CTor</summary>
-		public KetquainmauEntity():base("KetquainmauEntity")
+		public CautruccuahangEntity():base("CautruccuahangEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 		}
@@ -75,33 +75,33 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> CTor</summary>
 		/// <remarks>For framework usage.</remarks>
 		/// <param name="fields">Fields object to set as the fields for this entity.</param>
-		public KetquainmauEntity(IEntityFields2 fields):base("KetquainmauEntity")
+		public CautruccuahangEntity(IEntityFields2 fields):base("CautruccuahangEntity")
 		{
 			InitClassEmpty(null, fields);
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="validator">The custom validator object for this KetquainmauEntity</param>
-		public KetquainmauEntity(IValidator validator):base("KetquainmauEntity")
+		/// <param name="validator">The custom validator object for this CautruccuahangEntity</param>
+		public CautruccuahangEntity(IValidator validator):base("CautruccuahangEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 		}
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="id">PK value for Ketquainmau which data should be fetched into this Ketquainmau object</param>
+		/// <param name="id">PK value for Cautruccuahang which data should be fetched into this Cautruccuahang object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public KetquainmauEntity(System.Int64 id):base("KetquainmauEntity")
+		public CautruccuahangEntity(System.Int64 id):base("CautruccuahangEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 			this.Id = id;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="id">PK value for Ketquainmau which data should be fetched into this Ketquainmau object</param>
-		/// <param name="validator">The custom validator object for this KetquainmauEntity</param>
+		/// <param name="id">PK value for Cautruccuahang which data should be fetched into this Cautruccuahang object</param>
+		/// <param name="validator">The custom validator object for this CautruccuahangEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public KetquainmauEntity(System.Int64 id, IValidator validator):base("KetquainmauEntity")
+		public CautruccuahangEntity(System.Int64 id, IValidator validator):base("CautruccuahangEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 			this.Id = id;
@@ -111,7 +111,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="info"></param>
 		/// <param name="context"></param>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		protected KetquainmauEntity(SerializationInfo info, StreamingContext context) : base(info, context)
+		protected CautruccuahangEntity(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
@@ -131,7 +131,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="fieldIndex">The fieldindex.</param>
 		protected override void PerformDesyncSetupFKFieldChange(int fieldIndex)
 		{
-			switch((KetquainmauFieldIndex)fieldIndex)
+			switch((CautruccuahangFieldIndex)fieldIndex)
 			{
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
@@ -169,7 +169,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>RelationCollection with relation object(s) which represent the relation the field is maped on</returns>
 		public override RelationCollection GetRelationsForFieldOfType(string fieldName)
 		{
-			return KetquainmauEntity.GetRelationsForField(fieldName);
+			return CautruccuahangEntity.GetRelationsForField(fieldName);
 		}
 
 		/// <summary>Gets the relation objects which represent the relation the fieldName specified is mapped on. </summary>
@@ -299,7 +299,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the current value is NULL, use <see cref="TestCurrentFieldValueForNull"/> for that.</summary>
 		/// <param name="fieldIndex">Index of the field to test if that field was NULL in the persistent storage</param>
 		/// <returns>true if the field with the passed in index was NULL in the persistent storage, false otherwise</returns>
-		public bool TestOriginalFieldValueForNull(KetquainmauFieldIndex fieldIndex)
+		public bool TestOriginalFieldValueForNull(CautruccuahangFieldIndex fieldIndex)
 		{
 			return base.Fields[(int)fieldIndex].IsNull;
 		}
@@ -308,7 +308,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the original value (read from the db) is NULL</summary>
 		/// <param name="fieldIndex">Index of the field to test if its currentvalue is null/undefined</param>
 		/// <returns>true if the field's value isn't defined yet, false otherwise</returns>
-		public bool TestCurrentFieldValueForNull(KetquainmauFieldIndex fieldIndex)
+		public bool TestCurrentFieldValueForNull(CautruccuahangFieldIndex fieldIndex)
 		{
 			return base.CheckIfCurrentFieldValueIsNull((int)fieldIndex);
 		}
@@ -318,7 +318,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>A list of all the EntityRelation objects the type of this instance has. Hierarchy relations are excluded.</returns>
 		public override List<IEntityRelation> GetAllRelations()
 		{
-			return new KetquainmauRelations().GetAllRelations();
+			return new CautruccuahangRelations().GetAllRelations();
 		}
 		
 
@@ -330,7 +330,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates entity fields object for this entity. Used in constructor to setup this entity in a polymorphic scenario.</summary>
 		protected virtual IEntityFields2 CreateFields()
 		{
-			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.KetquainmauEntity);
+			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.CautruccuahangEntity);
 		}
 
 		/// <summary>
@@ -345,7 +345,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates a new instance of the factory related to this entity</summary>
 		protected override IEntityFactory2 CreateEntityFactory()
 		{
-			return EntityFactoryCache2.GetEntityFactory(typeof(KetquainmauEntityFactory));
+			return EntityFactoryCache2.GetEntityFactory(typeof(CautruccuahangEntityFactory));
 		}
 #if !CF
 		/// <summary>Adds the member collections to the collections queue (base first)</summary>
@@ -436,31 +436,58 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Id", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("KetquainId", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Masp", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tensp", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Mamau", fieldHashtable);
+			_fieldsCustomProperties.Add("Mangin", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tenmau", fieldHashtable);
+			_fieldsCustomProperties.Add("Mamang", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Xuatdodang", fieldHashtable);
+			_fieldsCustomProperties.Add("Tenmang", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Xuatnguyen", fieldHashtable);
+			_fieldsCustomProperties.Add("Maloaikeo", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Nhapdodang", fieldHashtable);
+			_fieldsCustomProperties.Add("Tenloaikeo", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Nhapnguyen", fieldHashtable);
+			_fieldsCustomProperties.Add("Maloaidongran", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenloaidongran", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dinhmuckeokho", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dinhmucdongrankho", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tylekeokho", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tyledongrankho", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tylekeo", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tyledongran", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dinhmuckeouot", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dinhmucdongranuot", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Dinhmucdungmoi", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
@@ -479,7 +506,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
-		/// <param name="validator">The validator object for this KetquainmauEntity</param>
+		/// <param name="validator">The validator object for this CautruccuahangEntity</param>
 		/// <param name="fields">Fields of this entity</param>
 		protected virtual void InitClassEmpty(IValidator validator, IEntityFields2 fields)
 		{
@@ -498,9 +525,9 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		#region Class Property Declarations
 		/// <summary> The relations object holding all relations of this entity with other entity classes.</summary>
-		public  static KetquainmauRelations Relations
+		public  static CautruccuahangRelations Relations
 		{
-			get	{ return new KetquainmauRelations(); }
+			get	{ return new CautruccuahangRelations(); }
 		}
 		
 		/// <summary> The custom properties for this entity type.</summary>
@@ -519,7 +546,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, string> CustomPropertiesOfType
 		{
-			get { return KetquainmauEntity.CustomProperties;}
+			get { return CautruccuahangEntity.CustomProperties;}
 		}
 
 		/// <summary> The custom properties for the fields of this entity type. The returned Hashtable contains per fieldname a hashtable of name-value
@@ -535,161 +562,260 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, Dictionary<string, string>> FieldsCustomPropertiesOfType
 		{
-			get { return KetquainmauEntity.FieldsCustomProperties;}
+			get { return CautruccuahangEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The Id property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Id property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Id"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Id"<br/>
 		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, true</remarks>
 		public virtual System.Int64 Id
 		{
-			get { return (System.Int64)GetValue((int)KetquainmauFieldIndex.Id, true); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Id, value); }
+			get { return (System.Int64)GetValue((int)CautruccuahangFieldIndex.Id, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Id, value); }
 		}
 
-		/// <summary> The KetquainId property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Masp property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."KetquainId"<br/>
-		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Int64> KetquainId
-		{
-			get { return (Nullable<System.Int64>)GetValue((int)KetquainmauFieldIndex.KetquainId, false); }
-			set	{ SetValue((int)KetquainmauFieldIndex.KetquainId, value); }
-		}
-
-		/// <summary> The Masp property of the Entity Ketquainmau<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Masp"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Masp"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
 		public virtual System.String Masp
 		{
-			get { return (System.String)GetValue((int)KetquainmauFieldIndex.Masp, true); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Masp, value); }
+			get { return (System.String)GetValue((int)CautruccuahangFieldIndex.Masp, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Masp, value); }
 		}
 
-		/// <summary> The Tensp property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Tensp property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Tensp"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Tensp"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tensp
 		{
-			get { return (System.String)GetValue((int)KetquainmauFieldIndex.Tensp, true); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Tensp, value); }
+			get { return (System.String)GetValue((int)CautruccuahangFieldIndex.Tensp, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Tensp, value); }
 		}
 
-		/// <summary> The Mamau property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Mangin property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Mamau"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Mangin"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Bit, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Boolean> Mangin
+		{
+			get { return (Nullable<System.Boolean>)GetValue((int)CautruccuahangFieldIndex.Mangin, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Mangin, value); }
+		}
+
+		/// <summary> The Mamang property of the Entity Cautruccuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Mamang"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Mamau
+		public virtual System.String Mamang
 		{
-			get { return (System.String)GetValue((int)KetquainmauFieldIndex.Mamau, true); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Mamau, value); }
+			get { return (System.String)GetValue((int)CautruccuahangFieldIndex.Mamang, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Mamang, value); }
 		}
 
-		/// <summary> The Tenmau property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Tenmang property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Tenmau"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Tenmang"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tenmau
+		public virtual System.String Tenmang
 		{
-			get { return (System.String)GetValue((int)KetquainmauFieldIndex.Tenmau, true); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Tenmau, value); }
+			get { return (System.String)GetValue((int)CautruccuahangFieldIndex.Tenmang, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Tenmang, value); }
 		}
 
-		/// <summary> The Xuatdodang property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Maloaikeo property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Xuatdodang"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Maloaikeo"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maloaikeo
+		{
+			get { return (System.String)GetValue((int)CautruccuahangFieldIndex.Maloaikeo, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Maloaikeo, value); }
+		}
+
+		/// <summary> The Tenloaikeo property of the Entity Cautruccuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Tenloaikeo"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenloaikeo
+		{
+			get { return (System.String)GetValue((int)CautruccuahangFieldIndex.Tenloaikeo, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Tenloaikeo, value); }
+		}
+
+		/// <summary> The Maloaidongran property of the Entity Cautruccuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Maloaidongran"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maloaidongran
+		{
+			get { return (System.String)GetValue((int)CautruccuahangFieldIndex.Maloaidongran, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Maloaidongran, value); }
+		}
+
+		/// <summary> The Tenloaidongran property of the Entity Cautruccuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Tenloaidongran"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenloaidongran
+		{
+			get { return (System.String)GetValue((int)CautruccuahangFieldIndex.Tenloaidongran, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Tenloaidongran, value); }
+		}
+
+		/// <summary> The Dinhmuckeokho property of the Entity Cautruccuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Dinhmuckeokho"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Xuatdodang
+		public virtual Nullable<System.Decimal> Dinhmuckeokho
 		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquainmauFieldIndex.Xuatdodang, false); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Xuatdodang, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)CautruccuahangFieldIndex.Dinhmuckeokho, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Dinhmuckeokho, value); }
 		}
 
-		/// <summary> The Xuatnguyen property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Dinhmucdongrankho property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Xuatnguyen"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Dinhmucdongrankho"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Xuatnguyen
+		public virtual Nullable<System.Decimal> Dinhmucdongrankho
 		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquainmauFieldIndex.Xuatnguyen, false); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Xuatnguyen, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)CautruccuahangFieldIndex.Dinhmucdongrankho, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Dinhmucdongrankho, value); }
 		}
 
-		/// <summary> The Nhapdodang property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Tylekeokho property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Nhapdodang"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Tylekeokho"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Nhapdodang
+		public virtual Nullable<System.Decimal> Tylekeokho
 		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquainmauFieldIndex.Nhapdodang, false); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Nhapdodang, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)CautruccuahangFieldIndex.Tylekeokho, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Tylekeokho, value); }
 		}
 
-		/// <summary> The Nhapnguyen property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Tyledongrankho property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Nhapnguyen"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Tyledongrankho"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Nhapnguyen
+		public virtual Nullable<System.Decimal> Tyledongrankho
 		{
-			get { return (Nullable<System.Decimal>)GetValue((int)KetquainmauFieldIndex.Nhapnguyen, false); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Nhapnguyen, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)CautruccuahangFieldIndex.Tyledongrankho, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Tyledongrankho, value); }
 		}
 
-		/// <summary> The Ngaytao property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Tylekeo property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Ngaytao"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Tylekeo"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tylekeo
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CautruccuahangFieldIndex.Tylekeo, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Tylekeo, value); }
+		}
+
+		/// <summary> The Tyledongran property of the Entity Cautruccuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Tyledongran"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tyledongran
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CautruccuahangFieldIndex.Tyledongran, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Tyledongran, value); }
+		}
+
+		/// <summary> The Dinhmuckeouot property of the Entity Cautruccuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Dinhmuckeouot"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dinhmuckeouot
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CautruccuahangFieldIndex.Dinhmuckeouot, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Dinhmuckeouot, value); }
+		}
+
+		/// <summary> The Dinhmucdongranuot property of the Entity Cautruccuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Dinhmucdongranuot"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dinhmucdongranuot
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CautruccuahangFieldIndex.Dinhmucdongranuot, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Dinhmucdongranuot, value); }
+		}
+
+		/// <summary> The Dinhmucdungmoi property of the Entity Cautruccuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Dinhmucdungmoi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Dinhmucdungmoi
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)CautruccuahangFieldIndex.Dinhmucdungmoi, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Dinhmucdungmoi, value); }
+		}
+
+		/// <summary> The Ngaytao property of the Entity Cautruccuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Ngaytao"<br/>
 		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngaytao
 		{
-			get { return (Nullable<System.DateTime>)GetValue((int)KetquainmauFieldIndex.Ngaytao, false); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Ngaytao, value); }
+			get { return (Nullable<System.DateTime>)GetValue((int)CautruccuahangFieldIndex.Ngaytao, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Ngaytao, value); }
 		}
 
-		/// <summary> The Nguoitao property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Nguoitao property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Nguoitao"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Nguoitao"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguoitao
 		{
-			get { return (System.String)GetValue((int)KetquainmauFieldIndex.Nguoitao, true); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Nguoitao, value); }
+			get { return (System.String)GetValue((int)CautruccuahangFieldIndex.Nguoitao, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Nguoitao, value); }
 		}
 
-		/// <summary> The Ngaysua property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Ngaysua property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Ngaysua"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Ngaysua"<br/>
 		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngaysua
 		{
-			get { return (Nullable<System.DateTime>)GetValue((int)KetquainmauFieldIndex.Ngaysua, false); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Ngaysua, value); }
+			get { return (Nullable<System.DateTime>)GetValue((int)CautruccuahangFieldIndex.Ngaysua, false); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Ngaysua, value); }
 		}
 
-		/// <summary> The Nguoisua property of the Entity Ketquainmau<br/><br/>
+		/// <summary> The Nguoisua property of the Entity Cautruccuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquainmau"."Nguoisua"<br/>
+		/// <remarks>Mapped on  table field: "cautruccuahang"."Nguoisua"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguoisua
 		{
-			get { return (System.String)GetValue((int)KetquainmauFieldIndex.Nguoisua, true); }
-			set	{ SetValue((int)KetquainmauFieldIndex.Nguoisua, value); }
+			get { return (System.String)GetValue((int)CautruccuahangFieldIndex.Nguoisua, true); }
+			set	{ SetValue((int)CautruccuahangFieldIndex.Nguoisua, value); }
 		}
 
 
@@ -713,7 +839,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override int LLBLGenProEntityTypeValue 
 		{ 
-			get { return (int)GD.BBPH.DAL.EntityType.KetquainmauEntity; }
+			get { return (int)GD.BBPH.DAL.EntityType.CautruccuahangEntity; }
 		}
 		#endregion
 
