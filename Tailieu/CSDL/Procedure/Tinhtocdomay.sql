@@ -32,9 +32,10 @@ BEGIN
 	End
 	Else
 	Begin
-		Select @v_Doday=Doday, @v_Rong=Rong, @v_Dai=Dai
+		Select @v_Rong=Rong, @v_Dai=Dai
 			, @v_Somauma=Somauma, @v_Sohinhma=Sohinhma, @v_Maqcthanhpham=Maqcthanhpham
-			, @v_Macautrucin=Cautrucin, @v_Makhach=Makhach
+			--, @v_Doday=Doday, @v_Macautrucin=Cautrucin
+			, @v_Makhach=Makhach
 		From dmhang Where Masp=@Masanpham
 		
 		Select @v_Tocdo=Tocdo
