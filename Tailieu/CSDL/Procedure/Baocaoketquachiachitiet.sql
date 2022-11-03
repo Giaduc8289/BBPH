@@ -1,4 +1,4 @@
-------------------------K?t qu? chia chi ti?t-------------
+﻿------------------------Kết quả chia chi tiết-------------
 If Object_ID('dbo.Baocaoketquachiachitiet','P') is not null
 	Drop Procedure dbo.Baocaoketquachiachitiet;
 Go
