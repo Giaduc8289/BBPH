@@ -947,6 +947,7 @@
     <Content Include="XMLCONFIG\FRM_KQTHOICHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_LYDONHAPXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDOXUATKHO.xml" />
+    <Content Include="XMLCONFIG\FRM_MANGCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_MAUCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANGCHITIET.xml">

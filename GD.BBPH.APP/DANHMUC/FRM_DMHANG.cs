@@ -121,7 +121,7 @@ namespace GD.BBPH.APP.DANHMUC
         public FRM_DMHANG()
         {
             InitializeComponent();
-            DataTable dt111 = new DmhangManager().Clone();
+            //DataTable dt111 = new DmhangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml");
             //dt111 = new MaucuahangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MAUCUAHANG.xml");
@@ -288,29 +288,25 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MAKHACH.Text = _Rowview.Row[DmhangFields.Makhach.Name].ToString();
                     txt_TENKHACH.Text = _Rowview.Row[DmhangFields.Tenkhach.Name].ToString();
                     txt_MASPCUAKHACH.Text = _Rowview.Row[DmhangFields.Maspcuakhach.Name].ToString();
-                    //txt_MACHUNGLOAI.Text = _Rowview.Row[DmhangFields.Machungloai.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmhangFields.Trongluong.Name].ToString();
-                    //txt_DODAY.Text = _Rowview.Row[DmhangFields.Doday.Name].ToString();
                     txt_RONG.Text = _Rowview.Row[DmhangFields.Rong.Name].ToString();
                     txt_DAI.Text = _Rowview.Row[DmhangFields.Dai.Name].ToString();
                     txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
                     txt_SOMAUMA.Text = _Rowview.Row[DmhangFields.Somauma.Name].ToString();
                     txt_SOHINHMA.Text = _Rowview.Row[DmhangFields.Sohinhma.Name].ToString();
                     txt_SOLOPGHEPMA.Text = _Rowview.Row[DmhangFields.Solopghepma.Name].ToString();
-                    //txt_MACAUTRUCIN.Text = _Rowview.Row[DmhangFields.Macautrucin.Name].ToString();
                     txt_KHOILUONGMUC.Text = _Rowview.Row[DmhangFields.Khoiluongmuc.Name].ToString();
-                    //txt_MAMANG1.Text = _Rowview.Row[DmhangFields.Mamang1.Name].ToString();
-                    //txt_TLMANG1.Text = _Rowview.Row[DmhangFields.Tlmanglop1.Name].ToString();
-                    //txt_TLKEO1.Text = _Rowview.Row[DmhangFields.Tlkeolop1.Name].ToString();
-                    //txt_MAMANG2.Text = _Rowview.Row[DmhangFields.Mamang2.Name].ToString();
-                    //txt_TLMANG2.Text = _Rowview.Row[DmhangFields.Tlmanglop2.Name].ToString();
-                    //txt_TLKEO2.Text = _Rowview.Row[DmhangFields.Tlkeolop2.Name].ToString();
-                    //txt_DINHLUONGKEO.Text = _Rowview.Row[DmhangFields.Dinhluongkeo.Name].ToString();
                     txt_KICHTHUOCTRUC.Text = _Rowview.Row[DmhangFields.Kichthuoctruc.Name].ToString();
                     txt_VITRI.Text = _Rowview.Row[DmhangFields.Vitri.Name].ToString();
                     txt_MAQCTHANHPHAM.Text = _Rowview.Row[DmhangFields.Maqcthanhpham.Name].ToString();
                     txt_MAQCDONGGOI.Text = _Rowview.Row[DmhangFields.Maqcdonggoi.Name].ToString();
                     txt_MAQCLOAITHUNG.Text = _Rowview.Row[DmhangFields.Maqcloaithung.Name].ToString();
+                    txt_KHOMANG.Text = _Rowview.Row[DmhangFields.Khomang.Name].ToString();
+                    txt_RONGCUON.Text = _Rowview.Row[DmhangFields.Rongcuon.Name].ToString();
+                    txt_DAICUON.Text = _Rowview.Row[DmhangFields.Daicuon.Name].ToString();
+                    txt_HONG.Text = _Rowview.Row[DmhangFields.Hong.Name].ToString();
+                    txt_BANGDINHDAN.Text = _Rowview.Row[DmhangFields.Bangdinhdan.Name].ToString();
+                    txt_CAUTRUC.Text = _Rowview.Row[DmhangFields.Cautruc.Name].ToString();
 
                     txt_MAKHACH_Validating(new object(), new CancelEventArgs());
                     //txt_MACHUNGLOAI_Validating(new object(), new CancelEventArgs());
@@ -438,7 +434,7 @@ namespace GD.BBPH.APP.DANHMUC
             //_DmhangEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
             //_DmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
             _DmhangEntity.Trongluong = LIB.ConvertString.NumbertoDB(txt_TRONGLUONG.Text.Trim());
-            _DmhangEntity.Hong = LIB.ConvertString.NumbertoDB(txt_HONG.Text.Trim());
+            _DmhangEntity.Khoiluongmuc = LIB.ConvertString.NumbertoDB(txt_KHOILUONGMUC.Text.Trim());
             _DmhangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
             _DmhangEntity.Dai = LIB.ConvertString.NumbertoDB(txt_DAI.Text.Trim());
             _DmhangEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
@@ -452,18 +448,8 @@ namespace GD.BBPH.APP.DANHMUC
             _DmhangEntity.Solopghepma = txt_SOLOPGHEPMA.Text.Trim();
             try { _DmhangEntity.Solopghep = Int32.Parse(txt_SOLOPGHEP.Text.Trim()); }
             catch { }
-            //_DmhangEntity.Macautrucin = txt_MACAUTRUCIN.Text.Trim();
-            //_DmhangEntity.Cautrucin = txt_CAUTRUCIN.Text.Trim();
+            _DmhangEntity.Cautruc = txt_CAUTRUC.Text.Trim();
             _DmhangEntity.Khoiluongmuc = LIB.ConvertString.NumbertoDB(txt_KHOILUONGMUC.Text.Trim());
-            //_DmhangEntity.Mamang1 = txt_MAMANG1.Text.Trim();
-            //_DmhangEntity.Tenmang1 = txt_TENMANG1.Text.Trim();
-            //_DmhangEntity.Tlmanglop1 = LIB.ConvertString.NumbertoDB(txt_TLMANG1.Text.Trim());
-            //_DmhangEntity.Tlkeolop1 = LIB.ConvertString.NumbertoDB(txt_TLKEO1.Text.Trim());
-            //_DmhangEntity.Mamang2 = txt_MAMANG2.Text.Trim();
-            //_DmhangEntity.Tenmang2 = txt_TENMANG2.Text.Trim();
-            //_DmhangEntity.Tlmanglop2 = LIB.ConvertString.NumbertoDB(txt_TLMANG2.Text.Trim());
-            //_DmhangEntity.Tlkeolop2 = LIB.ConvertString.NumbertoDB(txt_TLKEO2.Text.Trim());
-            //_DmhangEntity.Dinhluongkeo = LIB.ConvertString.NumbertoDB(txt_DINHLUONGKEO.Text.Trim());
             _DmhangEntity.Kichthuoctruc = txt_KICHTHUOCTRUC.Text.Trim();
             _DmhangEntity.Vitri = txt_VITRI.Text.Trim();
             _DmhangEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
@@ -472,6 +458,12 @@ namespace GD.BBPH.APP.DANHMUC
             _DmhangEntity.Tenqcdonggoi = txt_TENQCDONGGOI.Text.Trim();
             _DmhangEntity.Maqcloaithung = txt_MAQCLOAITHUNG.Text.Trim();
             _DmhangEntity.Tenqcloaithung = txt_TENQCLOAITHUNG.Text.Trim();
+            _DmhangEntity.Khomang = LIB.ConvertString.NumbertoDB(txt_KHOMANG.Text.Trim());
+            _DmhangEntity.Rongcuon = LIB.ConvertString.NumbertoDB(txt_RONGCUON.Text.Trim());
+            _DmhangEntity.Daicuon = LIB.ConvertString.NumbertoDB(txt_DAICUON.Text.Trim());
+            _DmhangEntity.Hong = LIB.ConvertString.NumbertoDB(txt_HONG.Text.Trim());
+            _DmhangEntity.Bangdinhdan = LIB.ConvertString.NumbertoDB(txt_BANGDINHDAN.Text.Trim());
+            _DmhangEntity.Cautruc = txt_CAUTRUC.Text.Trim();
 
             #region Lấy dữ liệu lưới chi tiết
             EntityCollection _MaucuahangEntityCol = new EntityCollection();
@@ -546,6 +538,52 @@ namespace GD.BBPH.APP.DANHMUC
 
                 _TruccuahangEntityCol.Add(_TruccuahangEntity);
             }
+            EntityCollection _MangcuahangEntityCol = new EntityCollection();
+            GridEXRow[] listGridMang = GRID_MANGCUAHANG.GetDataRows();
+            foreach (GridEXRow _grid in listGridMang)
+            {
+                DataRowView _view = (DataRowView)_grid.DataRow;
+                if (_view == null) continue;
+                MangcuahangEntity _MangcuahangEntity = new MangcuahangEntity();
+
+                _MangcuahangEntity.Masp = txt_MASP.Text.Trim();
+                _MangcuahangEntity.Tensp = txt_TENSP.Text.Trim();
+                _MangcuahangEntity.Mangin = Convert.ToBoolean(_view[MangcuahangFields.Mangin.Name].ToString());
+                _MangcuahangEntity.Mamang = _view[MangcuahangFields.Mamang.Name].ToString();
+                _MangcuahangEntity.Tenmang = _view[MangcuahangFields.Tenmang.Name].ToString();
+                _MangcuahangEntity.Maloaikeo = _view[MangcuahangFields.Maloaikeo.Name].ToString();
+                _MangcuahangEntity.Tenloaikeo = _view[MangcuahangFields.Tenloaikeo.Name].ToString();
+                _MangcuahangEntity.Maloaidongran = _view[MangcuahangFields.Maloaidongran.Name].ToString();
+                _MangcuahangEntity.Tenloaidongran = _view[MangcuahangFields.Tenloaidongran.Name].ToString();
+                _MangcuahangEntity.Dinhmuckeokho = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Dinhmuckeokho.Name].ToString());
+                _MangcuahangEntity.Dinhmucdongrankho = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Dinhmucdongrankho.Name].ToString());
+                _MangcuahangEntity.Tylekeokho = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Tylekeokho.Name].ToString());
+                _MangcuahangEntity.Tyledongrankho = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Tyledongrankho.Name].ToString());
+                _MangcuahangEntity.Tylekeo = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Tylekeo.Name].ToString());
+                _MangcuahangEntity.Tyledongran = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Tyledongran.Name].ToString());
+                _MangcuahangEntity.Dinhmuckeouot = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Dinhmuckeouot.Name].ToString());
+                _MangcuahangEntity.Dinhmucdongranuot = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Dinhmucdongranuot.Name].ToString());
+                _MangcuahangEntity.Dinhmucdungmoi = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Dinhmucdungmoi.Name].ToString());
+
+                _MangcuahangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_MangcuahangEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new MangcuahangManager()).SelectById(_MangcuahangEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _MangcuahangEntity.Ngaysua = DateTime.Now;
+                        _MangcuahangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _MangcuahangEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _MangcuahangEntity.Ngaytao = DateTime.Now;
+                        _MangcuahangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+
+                _MangcuahangEntityCol.Add(_MangcuahangEntity);
+            }
             #endregion
 
             if (string.IsNullOrEmpty(_str_MAHIEU_PK))
@@ -555,6 +593,7 @@ namespace GD.BBPH.APP.DANHMUC
                 _str_MAHIEU_PK = _DmhangManager.InsertV2(_DmhangEntity, r_Insert, DT_DMHANGHOA, BS_DMHANGHOA);
                 new MaucuahangManager().InsertCollection(_MaucuahangEntityCol);
                 new TruccuahangManager().InsertCollection(_TruccuahangEntityCol);
+                new MangcuahangManager().InsertCollection(_MangcuahangEntityCol);
                 GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -590,6 +629,16 @@ namespace GD.BBPH.APP.DANHMUC
                     }
                     else new TruccuahangManager().Update(_TruccuahangEntity);
                 }
+                foreach (MangcuahangEntity _MangcuahangEntity in _MangcuahangEntityCol)
+                {
+                    if (_MangcuahangEntity.IsNew)
+                    {
+                        DataRow _r_Insert = DT_MANGCUAHANG.NewRow();
+                        DT_MANGCUAHANG.Rows.Add(_r_Insert);
+                        new MangcuahangManager().InsertV2(_MangcuahangEntity, _r_Insert, DT_MANGCUAHANG, BS_MANGCUAHANG);
+                    }
+                    else new MangcuahangManager().Update(_MangcuahangEntity);
+                }
                 #region Update lưới chính
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Masp.Name].Value = _DmhangEntity.Masp;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tensp.Name].Value = _DmhangEntity.Tensp;
@@ -598,23 +647,11 @@ namespace GD.BBPH.APP.DANHMUC
                 //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenchungloai.Name].Value = _DmhangEntity.Tenchungloai;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Makhach.Name].Value = _DmhangEntity.Makhach;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenkhach.Name].Value = _DmhangEntity.Tenkhach;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Doday.Name].Value = _DmhangEntity.Doday;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Trongluong.Name].Value = _DmhangEntity.Trongluong;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Sohinh.Name].Value = _DmhangEntity.Sohinh;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somau.Name].Value = _DmhangEntity.Somau;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Loaimuc.Name].Value = _DmhangEntity.Loaimuc;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Khoiluongmuc.Name].Value = _DmhangEntity.Khoiluongmuc;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Macautrucin.Name].Value = _DmhangEntity.Macautrucin;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Cautrucin.Name].Value = _DmhangEntity.Cautrucin;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Mamang1.Name].Value = _DmhangEntity.Mamang1;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenmang1.Name].Value = _DmhangEntity.Tenmang1;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlmanglop1.Name].Value = _DmhangEntity.Tlmanglop1;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlkeolop1.Name].Value = _DmhangEntity.Tlkeolop1;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Mamang2.Name].Value = _DmhangEntity.Mamang2;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tenmang2.Name].Value = _DmhangEntity.Tenmang2;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlmanglop2.Name].Value = _DmhangEntity.Tlmanglop2;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Tlkeolop2.Name].Value = _DmhangEntity.Tlkeolop2;
-                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Dinhluongkeo.Name].Value = _DmhangEntity.Dinhluongkeo;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Kichthuoctruc.Name].Value = _DmhangEntity.Kichthuoctruc;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Vitri.Name].Value = _DmhangEntity.Vitri;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maqcdonggoi.Name].Value = _DmhangEntity.Maqcdonggoi;
@@ -630,6 +667,12 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maloaimuc.Name].Value = _DmhangEntity.Maloaimuc;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Solopghepma.Name].Value = _DmhangEntity.Solopghepma;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Solopghep.Name].Value = _DmhangEntity.Solopghep;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Khomang.Name].Value = _DmhangEntity.Khomang;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Rongcuon.Name].Value = _DmhangEntity.Rongcuon;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Daicuon.Name].Value = _DmhangEntity.Daicuon;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Hong.Name].Value = _DmhangEntity.Hong;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Bangdinhdan.Name].Value = _DmhangEntity.Bangdinhdan;
+                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Cautruc.Name].Value = _DmhangEntity.Cautruc;
                 #endregion
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmhangManager.Convert(_DmhangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
