@@ -706,7 +706,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Ngay.Value</Value>
+                              <Value>=Format(Fields!Ngay.Value, "dd/MM")</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>

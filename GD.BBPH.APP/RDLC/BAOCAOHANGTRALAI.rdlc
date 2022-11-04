@@ -924,7 +924,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Ngay.Value</Value>
+                              <Value>=Format(Fields!Ngay.Value, "dd/MM")</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -1399,7 +1399,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Ngaydat.Value</Value>
+                              <Value>=Format(Fields!Ngaydat.Value, "dd/MM")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -1429,7 +1429,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Ngaytra.Value</Value>
+                              <Value>=Format(Fields!Ngaytra.Value, "dd/MM")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -1448,6 +1448,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1594,7 +1595,7 @@
         <Top>5.30184cm</Top>
         <Left>0.00002cm</Left>
         <Height>2.4cm</Height>
-        <Width>27.64116cm</Width>
+        <Width>27.64119cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
