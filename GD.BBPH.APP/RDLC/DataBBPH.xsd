@@ -23,6 +23,7 @@
               <xs:element name="Sanpham" msprop:Generator_ColumnVarNameInTable="columnSanpham" msprop:Generator_ColumnPropNameInRow="Sanpham" msprop:Generator_ColumnPropNameInTable="SanphamColumn" msprop:Generator_UserColumnName="Sanpham" type="xs:string" minOccurs="0" />
               <xs:element name="Maymoc" msprop:Generator_ColumnVarNameInTable="columnMaymoc" msprop:Generator_ColumnPropNameInRow="Maymoc" msprop:Generator_ColumnPropNameInTable="MaymocColumn" msprop:Generator_UserColumnName="Maymoc" type="xs:string" minOccurs="0" />
               <xs:element name="Khachhang" msprop:Generator_ColumnVarNameInTable="columnKhachhang" msprop:Generator_ColumnPropNameInRow="Khachhang" msprop:Generator_ColumnPropNameInTable="KhachhangColumn" msprop:Generator_UserColumnName="Khachhang" type="xs:string" minOccurs="0" />
+              <xs:element name="Lydo" msprop:Generator_ColumnVarNameInTable="columnLydo" msprop:Generator_ColumnPropNameInRow="Lydo" msprop:Generator_ColumnPropNameInTable="LydoColumn" msprop:Generator_UserColumnName="Lydo" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
