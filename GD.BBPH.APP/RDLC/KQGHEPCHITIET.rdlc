@@ -26,7 +26,7 @@
         <Top>2.0217cm</Top>
         <Left>0cm</Left>
         <Height>0.88322cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>27.53535cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -47,6 +47,8 @@
                 <Value>=First(Fields!Thoigian.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -59,7 +61,7 @@
         <Top>3.01075cm</Top>
         <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>27.53535cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -75,52 +77,52 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.17304cm</Width>
+              <Width>1.07217cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.91251cm</Width>
+              <Width>0.81164cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.72631cm</Width>
+              <Width>1.62544cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.16146cm</Width>
+              <Width>3.06059cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.97083cm</Width>
+              <Width>1.86996cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.52104cm</Width>
+              <Width>1.42017cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.5395cm</Width>
+              <Width>3.43863cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.46813cm</Width>
+              <Width>1.36726cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.60043cm</Width>
+              <Width>1.49956cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.865cm</Width>
+              <Width>1.76413cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.65333cm</Width>
+              <Width>1.55246cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.865cm</Width>
+              <Width>1.76413cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.73271cm</Width>
+              <Width>1.63184cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.62688cm</Width>
+              <Width>1.52601cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.36229cm</Width>
+              <Width>1.26142cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.70625cm</Width>
+              <Width>1.86996cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -607,9 +609,21 @@
                       <rd:DefaultName>Textbox29</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <TopBorder>
+                          <Style>Solid</Style>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Style>None</Style>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Style>Solid</Style>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Style>Solid</Style>
+                        </RightBorder>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1292,7 +1306,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>(%)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -1310,6 +1324,9 @@
                           <Style>None</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <TopBorder>
+                          <Style>None</Style>
+                        </TopBorder>
                         <BottomBorder>
                           <Style>Solid</Style>
                         </BottomBorder>
@@ -1358,6 +1375,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1390,6 +1408,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1422,6 +1441,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1454,6 +1474,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1486,6 +1507,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1518,6 +1540,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1550,6 +1573,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1584,6 +1608,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1617,6 +1642,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1653,6 +1679,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1689,6 +1716,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1725,6 +1753,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1761,6 +1790,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1797,6 +1827,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1833,6 +1864,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1867,6 +1899,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>IndianRed</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1905,6 +1938,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1940,6 +1974,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1973,6 +2008,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2006,6 +2042,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2039,6 +2076,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2072,6 +2110,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2105,6 +2144,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2140,6 +2180,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2174,6 +2215,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2210,6 +2252,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2246,6 +2289,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2282,6 +2326,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2318,6 +2363,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2354,6 +2400,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2390,6 +2437,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2425,6 +2473,7 @@
                           <Style>Solid</Style>
                           <Width>0.5pt</Width>
                         </Border>
+                        <BackgroundColor>Khaki</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3022,7 +3071,7 @@
         <Top>5.93684cm</Top>
         <Left>0.00002cm</Left>
         <Height>3cm</Height>
-        <Width>28.88471cm</Width>
+        <Width>27.53533cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -3126,6 +3175,8 @@
                 <Value>=First(Fields!Khachhang.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -3138,7 +3189,7 @@
         <Top>3.69217cm</Top>
         <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>27.53535cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -3160,6 +3211,8 @@
                 <Value>=First(Fields!Maymoc.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -3172,7 +3225,7 @@
         <Top>4.39067cm</Top>
         <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>27.53535cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -3194,6 +3247,8 @@
                 <Value>=First(Fields!Sanpham.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -3206,7 +3261,7 @@
         <Top>5.13178cm</Top>
         <Left>0.00002cm</Left>
         <Height>0.6cm</Height>
-        <Width>28.8847cm</Width>
+        <Width>27.53532cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -3219,15 +3274,15 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>10.5508cm</Height>
+    <Height>8.93684cm</Height>
     <Style />
   </Body>
-  <Width>32.2443cm</Width>
+  <Width>27.53535cm</Width>
   <Page>
     <PageHeight>21cm</PageHeight>
     <PageWidth>29.7cm</PageWidth>
-    <LeftMargin>0.3cm</LeftMargin>
-    <RightMargin>0.3cm</RightMargin>
+    <LeftMargin>1cm</LeftMargin>
+    <RightMargin>1cm</RightMargin>
     <TopMargin>1cm</TopMargin>
     <BottomMargin>1cm</BottomMargin>
     <ColumnSpacing>1.27cm</ColumnSpacing>

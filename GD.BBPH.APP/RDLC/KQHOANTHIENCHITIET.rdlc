@@ -1071,7 +1071,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>(%)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -1472,6 +1472,7 @@
                               <Value>=Sum(Fields!Ketquatui.Value)</Value>
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
+                                <FontWeight>Bold</FontWeight>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1494,6 +1495,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1930,6 +1932,7 @@
                               <Value>=Sum(Fields!Ketquatui.Value)</Value>
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
+                                <FontWeight>Bold</FontWeight>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1952,6 +1955,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -2551,7 +2555,7 @@
         <Top>5.85746cm</Top>
         <Left>0.00003cm</Left>
         <Height>3cm</Height>
-        <Width>27.5618cm</Width>
+        <Width>27.56182cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>

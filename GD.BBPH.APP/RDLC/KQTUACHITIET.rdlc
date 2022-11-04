@@ -1038,7 +1038,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>(%)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -2515,7 +2515,7 @@
         <Top>5.80455cm</Top>
         <Left>0.00002cm</Left>
         <Height>3cm</Height>
-        <Width>28.8847cm</Width>
+        <Width>28.88474cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -2682,7 +2682,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>9.57184cm</Height>
+    <Height>8.80455cm</Height>
     <Style />
   </Body>
   <Width>28.88476cm</Width>
