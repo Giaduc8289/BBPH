@@ -131,10 +131,10 @@
   <viewgrid>
     <value>1</value>
     <name>MaArgb</name>
-    <headerText>Mã màu</headerText>
-    <BackColor>txt_MAARGB.BackColor = Color.FromArgb(Convert.ToInt32(_Rowview.Row[DmmauFields.MaArgb.Name].ToString()));</BackColor>
+    <headerText>Màu</headerText>
+    <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>50</Width>
+    <Width>35</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>

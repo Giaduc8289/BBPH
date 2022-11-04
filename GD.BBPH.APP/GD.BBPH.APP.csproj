@@ -933,7 +933,6 @@
     <Content Include="XMLCONFIG\FRM_DMMANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAUIN.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAY.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1002,37 +1001,11 @@
     <Content Include="XMLCONFIG\FRM_TKNLTHOI_CHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_TPMAU.xml" />
     <Content Include="XMLCONFIG\FRM_TRUCCUAHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOA.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOACHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOMANG.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOMANHTRANG.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOMANGCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_XUATKHOMANHTRANGCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_XUATKHOPHE.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHONGUYENLIEU.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHONGUYENLIEUCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_XUATKHOPE.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOPE.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOPECHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_NHAPKHOPECHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="XMLCONFIG\FRM_XUATKHOVATTU.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOVATTU.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOPHECHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_XUATKHOVATTUCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_NHAPKHOVATTUCHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1084,17 +1057,11 @@
     <Content Include="XMLCONFIG\FRM_NCTRANGTHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMNVLTRANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMNVLTRANGCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_THANHPHANPE.xml" />
-    <Content Include="XMLCONFIG\FRM_THANHPHANPECHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANHCHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_KIEMKESOI.xml" />
-    <Content Include="XMLCONFIG\FRM_TKTHONGTINCUONMANH.xml" />
-    <Content Include="XMLCONFIG\FRM_TKKLCUONMANH.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOHT.xml" />
-    <Content Include="XMLCONFIG\FRM_TKTHONGTINCUONMANHCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_TKPHECATONG.xml" />
     <Content Include="XMLCONFIG\FRM_CONGTHAYKHO.xml" />
     <Content Include="XMLCONFIG\FRM_CONGTHAYKHOCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGIALUONG.xml" />
@@ -1111,23 +1078,16 @@
     <Content Include="XMLCONFIG\FRM_DMKHACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHO.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAUSAC.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHAMAY.xml" />
     <Content Include="XMLCONFIG\FRM_DMPHONGBAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMTRONGLUONG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANGCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KHSXSOITHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_THANHPHANSOI.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_NCMANHTHANG.xml" />
     <Content Include="XMLCONFIG\FRM_NCSOITHANG.xml" />
     <Content Include="XMLCONFIG\FRM_ROLES.xml" />
-    <Content Include="XMLCONFIG\FRM_THANHPHANSOICHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_TKKLCUONMANHCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOHTCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_TKPHECATONGCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_USERS.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPMANH_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANG.xml" />

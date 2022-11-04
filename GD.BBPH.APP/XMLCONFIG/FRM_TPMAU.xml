@@ -40,7 +40,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Mamau</name>
     <headerText>Mã màu</headerText>
     <BackColor>0</BackColor>
@@ -49,7 +49,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tenmau</name>
     <headerText>Tên màu</headerText>
     <BackColor>0</BackColor>
