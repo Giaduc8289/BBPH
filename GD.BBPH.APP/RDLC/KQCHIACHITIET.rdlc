@@ -1170,7 +1170,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Thôi/NCC</Value>
+                              <Value>Thổi/NCC</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -1634,6 +1634,7 @@
                                 <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1669,6 +1670,7 @@
                                 <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1704,6 +1706,7 @@
                                 <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1739,6 +1742,7 @@
                                 <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1774,6 +1778,7 @@
                                 <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2189,6 +2194,7 @@
                                 <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2224,6 +2230,7 @@
                                 <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2259,6 +2266,7 @@
                                 <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2294,6 +2302,7 @@
                                 <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2329,6 +2338,7 @@
                                 <FontStyle>Italic</FontStyle>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2679,6 +2689,7 @@
                               <Value>=Fields!Socuon.Value</Value>
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2712,6 +2723,7 @@
                               <Value>=Fields!Phein.Value</Value>
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2745,6 +2757,7 @@
                               <Value>=Fields!Phechia.Value</Value>
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2778,6 +2791,7 @@
                               <Value>=Fields!Pheghep.Value</Value>
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2811,6 +2825,7 @@
                               <Value>=Fields!Phenhacungcap.Value</Value>
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2844,6 +2859,7 @@
                               <Value>=Fields!Phesanxuat.Value</Value>
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
+                                <Format>#,###</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
