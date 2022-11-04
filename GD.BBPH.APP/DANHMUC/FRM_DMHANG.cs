@@ -600,6 +600,9 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MANGCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MANGCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MANGCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmhangManager.Convert(_DmhangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 BS_DMHANGHOA.ResetCurrentItem();
                 BS_DMHANGHOA_CurrentChanged(new object(), new EventArgs());
@@ -681,6 +684,9 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MANGCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MANGCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MANGCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
                 BS_DMHANGHOA.ResetCurrentItem();
                 BS_DMHANGHOA_CurrentChanged(new object(), new EventArgs());
             }
@@ -705,6 +711,11 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
             GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
             GRID_TRUCCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
+            GRID_MANGCUAHANG.Enabled = true;
+            GRID_MANGCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MANGCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MANGCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MANGCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             MAHIEU_PK = "";
             txt_MASP.Focus();
             TEXTBOX_Only_Control(false, null);
@@ -735,6 +746,11 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
             GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
             GRID_TRUCCUAHANG.Enabled = true;
+            GRID_MANGCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
+            GRID_MANGCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MANGCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MANGCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+            GRID_MANGCUAHANG.Enabled = true;
         }
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
@@ -752,6 +768,9 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_MANGCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_MANGCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_MANGCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
         }
         private void btn_XOA_Click(object sender, EventArgs e)
         {
@@ -784,6 +803,9 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_MANGCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_MANGCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_MANGCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
         }
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
@@ -824,6 +846,9 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TRUCCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MANGCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MANGCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+                GRID_MANGCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
             }
         }
         private void btn_SAOCHEP_Click(object sender, EventArgs e)
@@ -847,6 +872,11 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_TRUCCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
                 GRID_TRUCCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
                 GRID_TRUCCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
+                GRID_MANGCUAHANG.Enabled = true;
+                GRID_MANGCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.True;
+                GRID_MANGCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
+                GRID_MANGCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
+                GRID_MANGCUAHANG.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
 
                 txt_MASP.Text = drCopy[0][DmhangFields.Masp.Name].ToString();
                 txt_TENSP.Text = drCopy[0][DmhangFields.Tensp.Name].ToString();
