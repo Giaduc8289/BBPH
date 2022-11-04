@@ -105,7 +105,7 @@ namespace GD.BBPH.APP.BAOCAO
                 parameters[0] = new SqlParameter("@Tungay", _Tungay);
                 parameters[1] = new SqlParameter("@Denngay", _Denngay);
                 parameters[2] = new SqlParameter("@Makho", _Makho);
-                parameters[3] = new SqlParameter("@Malydo	", _Malydo);
+                parameters[3] = new SqlParameter("@Malydo", _Malydo);
                 parameters[4] = new SqlParameter("@Masanpham", _Masanpham);
                 _DataAccessAdapter.CallRetrievalStoredProcedure("Baocaoxuathang", parameters, dsKetqua, 0);
                 _DataAccessAdapter.CloseConnection();
