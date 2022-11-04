@@ -165,6 +165,12 @@
     <Compile Include="BAOCAO\FRM_BAOCAONHAPKHOSP.Designer.cs">
       <DependentUpon>FRM_BAOCAONHAPKHOSP.cs</DependentUpon>
     </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAOTONSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAOTONSP.Designer.cs">
+      <DependentUpon>FRM_BAOCAOTONSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="BAOCAO\FRM_BCKQHOANTHIENCHITIET.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -627,6 +633,9 @@
     <EmbeddedResource Include="BAOCAO\FRM_BAOCAONHAPKHOSP.resx">
       <DependentUpon>FRM_BAOCAONHAPKHOSP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BAOCAOTONSP.resx">
+      <DependentUpon>FRM_BAOCAOTONSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCKQHOANTHIENCHITIET.resx">
       <DependentUpon>FRM_BCKQHOANTHIENCHITIET.cs</DependentUpon>
     </EmbeddedResource>
@@ -810,6 +819,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RDLC\BAOCAOHANGTRALAI.rdlc" />
+    <EmbeddedResource Include="RDLC\BAOCAOTONKHOSP.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAONHAPKHOSP.rdlc" />
     <EmbeddedResource Include="RDLC\KQTHOITONGHOP.rdlc" />
     <EmbeddedResource Include="RDLC\KQTUACHITIET.rdlc" />
@@ -915,6 +925,7 @@
     <Content Include="IMG\TeamViewer.exe" />
     <Content Include="IMG\waiting.xml" />
     <Content Include="Logo-App-Ico.ico" />
+    <Content Include="XMLCONFIG\FRM_BAOGIA_D_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_BAOGIA_D.xml" />
     <Content Include="XMLCONFIG\FRM_BAOGIA_H.xml" />
     <Content Include="XMLCONFIG\FRM_CONGSUATMAY.xml" />
