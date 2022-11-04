@@ -925,6 +925,7 @@
     <Content Include="IMG\TeamViewer.exe" />
     <Content Include="IMG\waiting.xml" />
     <Content Include="Logo-App-Ico.ico" />
+    <Content Include="XMLCONFIG\FRM_BAOGIA_D_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_BAOGIA_D.xml" />
     <Content Include="XMLCONFIG\FRM_BAOGIA_H.xml" />
     <Content Include="XMLCONFIG\FRM_CONGSUATMAY.xml" />
