@@ -412,8 +412,8 @@ namespace GD.BBPH.APP.GHEP
 
             //GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Id.Name].Value = _KetquaghepEntity.Id;
             GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Ngay.Name].Value = _ngay;
-            GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Ca.Name].Value = _KetquaghepEntity.Ca;
-            GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Mamay.Name].Value = _KetquaghepEntity.Mamay;
+            GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Ca.Name].Value = txt_CA.Text.Trim();
+            GRID_KQGHEP.CurrentRow.Cells[KetquaghepFields.Mamay.Name].Value = txt_MAMAY.Text.Trim();
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquaghepManager.Convert(_KetquaghepEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
 

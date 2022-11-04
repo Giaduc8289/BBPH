@@ -24,13 +24,14 @@ namespace GD.BBPH.APP.DANHMUC
         private DmhangManager _DmhangManager = new DmhangManager();
         private DmhangEntity _DmhangEntity = new DmhangEntity();
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-        private DataTable DT_DMHANGHOA = new DataTable(), DT_MAUCUAHANG = new DataTable(), DT_TRUCCUAHANG = new DataTable();
-        private BindingSource BS_DMHANGHOA = new BindingSource(), BS_MAUCUAHANG = new BindingSource(), BS_TRUCCUAHANG = new BindingSource();
+        private DataTable DT_DMHANGHOA = new DataTable(), DT_MAUCUAHANG = new DataTable(), DT_TRUCCUAHANG = new DataTable(), DT_MANGCUAHANG = new DataTable();
+        private BindingSource BS_DMHANGHOA = new BindingSource(), BS_MAUCUAHANG = new BindingSource(), BS_TRUCCUAHANG = new BindingSource(), BS_MANGCUAHANG = new BindingSource();
         private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_DMHANGHOA = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_MAUCUAHANG = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_TRUCCUAHANG = new GD.BBPH.CONTROL.JGridEX();
-        private string FUNCTION = "LOAD", MAHIEU_PK = "", MAMAUCHITIET = "", MATRUCCHITIET = "";
+        private GD.BBPH.CONTROL.JGridEX GRID_MANGCUAHANG = new GD.BBPH.CONTROL.JGridEX();
+        private string FUNCTION = "LOAD", MAHIEU_PK = "", MAMAUCHITIET = "", MATRUCCHITIET = "", MAMANGCHITIET = "";
 
         private DataTable DT_DMKHACH = new DataTable(), DT_DMCHUNGLOAI = new DataTable(), DT_DMMANG = new DataTable(), DT_DMMAU = new DataTable()
             , DT_LOAIMUC = new DataTable(), DT_SOMAU = new DataTable(), DT_SOHINH = new DataTable(), DT_SOLOP = new DataTable()
@@ -120,12 +121,14 @@ namespace GD.BBPH.APP.DANHMUC
         public FRM_DMHANG()
         {
             InitializeComponent();
-            //DataTable dt111 = new DmhangManager().Clone();
+            DataTable dt111 = new DmhangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml");
             //dt111 = new MaucuahangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MAUCUAHANG.xml");
             //dt111 = new TruccuahangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_TRUCCUAHANG.xml");
+            //dt111 = new MangcuahangManager().Clone();
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MANGCUAHANG.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -138,7 +141,14 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml", GRID_DMHANGHOA, uiPanel0Container);
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MAUCUAHANG.xml", GRID_MAUCUAHANG, pne_DSMAU);
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_TRUCCUAHANG.xml", GRID_TRUCCUAHANG, pne_DSTRUC);
+            GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MANGCUAHANG.xml", GRID_MANGCUAHANG, pne_DSMANG);
             FORM_PROCESS();
+            GRID_MAUCUAHANG.FilterMode = FilterMode.None;
+            GRID_MAUCUAHANG.GroupByBoxVisible = false;
+            GRID_TRUCCUAHANG.FilterMode = FilterMode.None;
+            GRID_TRUCCUAHANG.GroupByBoxVisible = false;
+            GRID_MANGCUAHANG.FilterMode = FilterMode.None;
+            GRID_MANGCUAHANG.GroupByBoxVisible = false;
             GRID_MAUCUAHANG.COMBO_MULTICOLUMN(GRID_MAUCUAHANG, MaucuahangFields.Mamau.Name, DmmauFields.Tenmau.Name, DmmauFields.Mamau.Name, DmmauFields.Mamau.Name, DT_DMMAU);
             GRID_MAUCUAHANG.CellEdited += GRID_MAUCUAHANG_CellEdited;
             GRID_MAUCUAHANG.DeletingRecord += GRID_MAUCUAHANG_DeletingRecord;
@@ -308,9 +318,6 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_SOMAUMA_Validating(new object(), new CancelEventArgs());
                     txt_SOHINHMA_Validating(new object(), new CancelEventArgs());
                     txt_SOLOPGHEPMA_Validating(new object(), new CancelEventArgs());
-                    txt_MACAUTRUCIN_Validating(new object(), new CancelEventArgs());
-                    txt_MAMANG1_Validating(new object(), new CancelEventArgs());
-                    txt_MAMANG2_Validating(new object(), new CancelEventArgs());
                     txt_MAQCTHANHPHAM_Validating(new object(), new CancelEventArgs());
                     txt_MAQCDONGGOI_Validating(new object(), new CancelEventArgs());
                     txt_MAQCLOAITHUNG_Validating(new object(), new CancelEventArgs());
@@ -357,6 +364,22 @@ namespace GD.BBPH.APP.DANHMUC
                 MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        void BS_MANGCUAHANG_CurrentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (BS_MANGCUAHANG.Current != null)
+                {
+                    DataRowView _Rowview = (DataRowView)this.BS_MANGCUAHANG.Current;
+                    if (_Rowview != null)
+                        MAMANGCHITIET = _Rowview.Row[MangcuahangFields.Id.Name].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
         private void SHOWGRID(string MAHIEU_PK)
         {
@@ -369,6 +392,10 @@ namespace GD.BBPH.APP.DANHMUC
                 DT_TRUCCUAHANG = new TruccuahangManager().Clone();
                 BS_TRUCCUAHANG = new BindingSource(DT_TRUCCUAHANG, null);
                 GRID_TRUCCUAHANG.DataSource = BS_TRUCCUAHANG;
+
+                DT_MANGCUAHANG = new MangcuahangManager().Clone();
+                BS_MANGCUAHANG = new BindingSource(DT_MANGCUAHANG, null);
+                GRID_MANGCUAHANG.DataSource = BS_MANGCUAHANG;
             }
             else
             {
@@ -383,11 +410,19 @@ namespace GD.BBPH.APP.DANHMUC
                 BS_TRUCCUAHANG = new BindingSource();
                 BS_TRUCCUAHANG.DataSource = Source_View_Truc;
                 GRID_TRUCCUAHANG.DataSource = BS_TRUCCUAHANG;
+
+                DT_MANGCUAHANG = new MangcuahangManager().SelectByMaspRDT(MAHIEU_PK);
+                DataView Source_View_Mang = new DataView(DT_MANGCUAHANG);
+                BS_MANGCUAHANG = new BindingSource();
+                BS_MANGCUAHANG.DataSource = Source_View_Truc;
+                GRID_MANGCUAHANG.DataSource = BS_MANGCUAHANG;
             }
             BS_MAUCUAHANG.CurrentChanged += new EventHandler(BS_MAUCUAHANG_CurrentChanged);
             BS_MAUCUAHANG_CurrentChanged((new object()), (new EventArgs()));
             BS_TRUCCUAHANG.CurrentChanged += new EventHandler(BS_TRUCCUAHANG_CurrentChanged);
             BS_TRUCCUAHANG_CurrentChanged((new object()), (new EventArgs()));
+            BS_MANGCUAHANG.CurrentChanged += new EventHandler(BS_MANGCUAHANG_CurrentChanged);
+            BS_MANGCUAHANG_CurrentChanged((new object()), (new EventArgs()));
         }
         #endregion
 
@@ -403,7 +438,7 @@ namespace GD.BBPH.APP.DANHMUC
             //_DmhangEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
             //_DmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
             _DmhangEntity.Trongluong = LIB.ConvertString.NumbertoDB(txt_TRONGLUONG.Text.Trim());
-            _DmhangEntity.Hong = LIB.ConvertString.NumbertoDB(txt_DODAY.Text.Trim());
+            _DmhangEntity.Hong = LIB.ConvertString.NumbertoDB(txt_HONG.Text.Trim());
             _DmhangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
             _DmhangEntity.Dai = LIB.ConvertString.NumbertoDB(txt_DAI.Text.Trim());
             _DmhangEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
@@ -630,7 +665,7 @@ namespace GD.BBPH.APP.DANHMUC
             MAHIEU_PK = "";
             txt_MASP.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH, txt_LOAIMUC, txt_SOMAU, txt_SOHINH, txt_SOLOPGHEP, txt_CAUTRUCIN, txt_TENMANG1, txt_TENMANG2, txt_TENQCTHANHPHAM, txt_TENQCDONGGOI, txt_TENQCLOAITHUNG }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH, txt_LOAIMUC, txt_SOMAU, txt_SOHINH, txt_SOLOPGHEP, txt_TENQCTHANHPHAM, txt_TENQCDONGGOI, txt_TENQCLOAITHUNG }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_DMHANGHOA.Enabled = false;
         }
@@ -641,7 +676,7 @@ namespace GD.BBPH.APP.DANHMUC
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MASP, txt_TENKHACH, txt_LOAIMUC, txt_SOMAU, txt_SOHINH, txt_SOLOPGHEP, txt_CAUTRUCIN, txt_TENMANG1, txt_TENMANG2, txt_TENQCTHANHPHAM, txt_TENQCDONGGOI, txt_TENQCLOAITHUNG }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MASP, txt_TENKHACH, txt_LOAIMUC, txt_SOMAU, txt_SOHINH, txt_SOLOPGHEP, txt_TENQCTHANHPHAM, txt_TENQCDONGGOI, txt_TENQCLOAITHUNG }));
                 txt_TENSP.Focus();
                 //txt_MAKHO.Focus();
 
@@ -776,7 +811,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_MASPCUAKHACH.Text = drCopy[0][DmhangFields.Maspcuakhach.Name].ToString();
                 //txt_MACHUNGLOAI.Text = drCopy[0][DmhangFields.Machungloai.Name].ToString();
                 txt_TRONGLUONG.Text = drCopy[0][DmhangFields.Trongluong.Name].ToString();
-                txt_DODAY.Text = drCopy[0][DmhangFields.Hong.Name].ToString();
+                txt_HONG.Text = drCopy[0][DmhangFields.Hong.Name].ToString();
                 txt_RONG.Text = drCopy[0][DmhangFields.Rong.Name].ToString();
                 txt_DAI.Text = drCopy[0][DmhangFields.Dai.Name].ToString();
                 txt_MALOAIMUC.Text = drCopy[0][DmhangFields.Maloaimuc.Name].ToString();
@@ -802,9 +837,6 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_MALOAIMUC_Validating(new object(), new CancelEventArgs());
                 txt_SOMAUMA_Validating(new object(), new CancelEventArgs());
                 txt_SOHINHMA_Validating(new object(), new CancelEventArgs());
-                txt_MACAUTRUCIN_Validating(new object(), new CancelEventArgs());
-                txt_MAMANG1_Validating(new object(), new CancelEventArgs());
-                txt_MAMANG2_Validating(new object(), new CancelEventArgs());
                 txt_MAQCTHANHPHAM_Validating(new object(), new CancelEventArgs());
                 txt_MAQCDONGGOI_Validating(new object(), new CancelEventArgs());
                 txt_MAQCLOAITHUNG_Validating(new object(), new CancelEventArgs());
@@ -978,76 +1010,6 @@ namespace GD.BBPH.APP.DANHMUC
             else
                 txt_SOLOPGHEP.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
         }
-        private void txt_MACAUTRUCIN_Validating(object sender, CancelEventArgs e)
-        {
-            _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_MACAUTRUCIN.Text.Trim()) || DT_CAUTRUCIN == null || DT_CAUTRUCIN.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MACAUTRUCIN.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaQuycach(Str_MASIEUTHI, DT_CAUTRUCIN);
-            if (_RowViewSelect == null)
-            {
-                ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH.xml",
-                        DT_CAUTRUCIN, DmquycachFields.Maquycach.Name, Str_MASIEUTHI);
-                _frm_SingerRows_Select.ShowDialog();
-                if (_frm_SingerRows_Select._RowViewSelect == null) return;
-                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MACAUTRUCIN.Text = _RowViewSelect[DmquycachFields.Maquycach.Name].ToString();
-                txt_CAUTRUCIN.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
-            }
-            else
-                txt_CAUTRUCIN.Text = _RowViewSelect[DmquycachFields.Tenquycach.Name].ToString();
-        }
-
-        private void txt_MAMANG1_Validating(object sender, CancelEventArgs e)
-        {
-            _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_MAMANG1.Text.Trim()) || DT_DMMANG == null || DT_DMMANG.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MAMANG1.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaMang(Str_MASIEUTHI, DT_DMMANG);
-            if (_RowViewSelect == null)
-            {
-                ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANG.xml",
-                        DT_DMMANG, DmmangFields.Mamang.Name, Str_MASIEUTHI);
-                _frm_SingerRows_Select.ShowDialog();
-                if (_frm_SingerRows_Select._RowViewSelect == null) return;
-                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MAMANG1.Text = _RowViewSelect[DmmangFields.Mamang.Name].ToString();
-                txt_TENMANG1.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
-            }
-            else
-                txt_TENMANG1.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
-        }
-        private DataRow checkmaMang(string masieuthi, DataTable dt)
-        {
-            try
-            {
-                return dt.Select(DmmangFields.Mamang.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
-            }
-            catch { return null; }
-        }
-
-        private void txt_MAMANG2_Validating(object sender, CancelEventArgs e)
-        {
-            _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_MAMANG2.Text.Trim()) || DT_DMMANG == null || DT_DMMANG.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MAMANG2.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaMang(Str_MASIEUTHI, DT_DMMANG);
-            if (_RowViewSelect == null)
-            {
-                ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANG.xml",
-                        DT_DMMANG, DmmangFields.Mamang.Name, Str_MASIEUTHI);
-                _frm_SingerRows_Select.ShowDialog();
-                if (_frm_SingerRows_Select._RowViewSelect == null) return;
-                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MAMANG2.Text = _RowViewSelect[DmmangFields.Mamang.Name].ToString();
-                txt_TENMANG2.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
-            }
-            else
-                txt_TENMANG2.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
-        }
 
         private void txt_MAQCTHANHPHAM_Validating(object sender, CancelEventArgs e)
         {
@@ -1119,12 +1081,12 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
-                if (txt_DODAY.Text.Length > 0)
+                if (txt_HONG.Text.Length > 0)
                 {
-                    int vtriX = txt_DODAY.Text.ToUpper().IndexOf('X');
+                    int vtriX = txt_HONG.Text.ToUpper().IndexOf('X');
                     if (vtriX <= 0) return;
-                    txt_RONG.Text = txt_DODAY.Text.Substring(0, vtriX);
-                    txt_DAI.Text = txt_DODAY.Text.Substring(vtriX+1);
+                    txt_RONG.Text = txt_HONG.Text.Substring(0, vtriX);
+                    txt_DAI.Text = txt_HONG.Text.Substring(vtriX+1);
                 }
             }
             catch { }

@@ -100,9 +100,8 @@
       <HintPath>..\DLL\SD.LLBLGen.Pro.LinqSupportClasses.NET35.dll</HintPath>
     </Reference>
     <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses.NET20, Version=2.6.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
-      <SpecificVersion>True</SpecificVersion>
-      <HintPath>
-      </HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -121,7 +120,6 @@
   <ItemGroup>
     <Compile Include="DatabaseGeneric\EntityClasses\BaogiaDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\BaogiaHEntity.cs" />
-    <Compile Include="DatabaseGeneric\EntityClasses\CautruccuahangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CongsuatmayEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CtptmangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CtptmangHEntity.cs" />
@@ -157,6 +155,7 @@
     <Compile Include="DatabaseGeneric\EntityClasses\KetquainmauEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\KetquathoiEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\KetquatuaEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\MangcuahangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\MaucuahangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\NhapkhomangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\NhapkhonguyenlieuEntity.cs" />
@@ -230,7 +229,6 @@
     <AppDesigner Include="Properties\" />
     <Compile Include="DatabaseGeneric\RelationClasses\BaogiaDRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\BaogiaHRelations.cs" />
-    <Compile Include="DatabaseGeneric\RelationClasses\CautruccuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CongsuatmayRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CtptmangDRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CtptmangHRelations.cs" />
@@ -268,6 +266,7 @@
     <Compile Include="DatabaseGeneric\RelationClasses\KetquathoiRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\KetquatuaRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\LogbackupRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\MangcuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MaucuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuroleRelations.cs" />
