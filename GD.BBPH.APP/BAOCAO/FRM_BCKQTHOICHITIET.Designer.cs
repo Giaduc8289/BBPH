@@ -1,6 +1,6 @@
 ﻿namespace GD.BBPH.APP.BAOCAO
 {
-    partial class FRM_BCKQINTONGHOP
+    partial class FRM_BCKQTHOICHITIET
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_BCKQINTONGHOP));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_BCKQTHOICHITIET));
             this.btn_IN = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THOAT = new GD.BBPH.CONTROL.BUTTON();
             this.txt_DENNGAY = new System.Windows.Forms.MaskedTextBox();
@@ -38,10 +38,9 @@
             this.txt_TENMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_MAHANG = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_MAMANG = new GD.BBPH.CONTROL.TEXTBOX();
             this.label25 = new GD.BBPH.CONTROL.LABEL();
-            this.label5 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_MASPKHACH = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_TENMANG = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_TENKHACH = new GD.BBPH.CONTROL.TEXTBOX();
             this.label15 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAKHACH = new GD.BBPH.CONTROL.TEXTBOX();
@@ -152,54 +151,45 @@
             this.label22.TabIndex = 179;
             this.label22.Text = "Máy";
             // 
-            // txt_MAHANG
+            // txt_MAMANG
             // 
-            this.txt_MAHANG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MAHANG.BannerText = null;
-            this.txt_MAHANG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_MAHANG.FormNametoShow = "";
-            this.txt_MAHANG.Is_DateTime = false;
-            this.txt_MAHANG.IsShowForm = false;
-            this.txt_MAHANG.Location = new System.Drawing.Point(89, 117);
-            this.txt_MAHANG.Name = "txt_MAHANG";
-            this.txt_MAHANG.Regular_Expression = null;
-            this.txt_MAHANG.Size = new System.Drawing.Size(86, 20);
-            this.txt_MAHANG.TabIndex = 6;
-            this.txt_MAHANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MATHANG_Validating);
+            this.txt_MAMANG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MAMANG.BannerText = null;
+            this.txt_MAMANG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_MAMANG.FormNametoShow = "";
+            this.txt_MAMANG.Is_DateTime = false;
+            this.txt_MAMANG.IsShowForm = false;
+            this.txt_MAMANG.Location = new System.Drawing.Point(89, 117);
+            this.txt_MAMANG.Name = "txt_MAMANG";
+            this.txt_MAMANG.Regular_Expression = null;
+            this.txt_MAMANG.Size = new System.Drawing.Size(86, 20);
+            this.txt_MAMANG.TabIndex = 6;
+            this.txt_MAMANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMANG_Validating);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(24, 119);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(49, 13);
+            this.label25.Size = new System.Drawing.Size(51, 13);
             this.label25.TabIndex = 238;
-            this.label25.Text = "Mã hàng";
+            this.label25.Text = "Mã màng";
             // 
-            // label5
+            // txt_TENMANG
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(181, 119);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
-            this.label5.TabIndex = 237;
-            this.label5.Text = "Mã của khách";
-            // 
-            // txt_MASPKHACH
-            // 
-            this.txt_MASPKHACH.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MASPKHACH.BannerText = null;
-            this.txt_MASPKHACH.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_MASPKHACH.FormNametoShow = "";
-            this.txt_MASPKHACH.Is_DateTime = false;
-            this.txt_MASPKHACH.IsShowForm = false;
-            this.txt_MASPKHACH.Location = new System.Drawing.Point(260, 117);
-            this.txt_MASPKHACH.Name = "txt_MASPKHACH";
-            this.txt_MASPKHACH.ReadOnly = true;
-            this.txt_MASPKHACH.Regular_Expression = null;
-            this.txt_MASPKHACH.Size = new System.Drawing.Size(86, 20);
-            this.txt_MASPKHACH.TabIndex = 7;
-            this.txt_MASPKHACH.TabStop = false;
+            this.txt_TENMANG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TENMANG.BannerText = null;
+            this.txt_TENMANG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TENMANG.FormNametoShow = "";
+            this.txt_TENMANG.Is_DateTime = false;
+            this.txt_TENMANG.IsShowForm = false;
+            this.txt_TENMANG.Location = new System.Drawing.Point(181, 117);
+            this.txt_TENMANG.Name = "txt_TENMANG";
+            this.txt_TENMANG.ReadOnly = true;
+            this.txt_TENMANG.Regular_Expression = null;
+            this.txt_TENMANG.Size = new System.Drawing.Size(165, 20);
+            this.txt_TENMANG.TabIndex = 7;
+            this.txt_TENMANG.TabStop = false;
             // 
             // txt_TENKHACH
             // 
@@ -241,17 +231,16 @@
             this.txt_MAKHACH.TabIndex = 4;
             this.txt_MAKHACH.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKHACH_Validating);
             // 
-            // FRM_BCKQINTONGHOP
+            // FRM_BCKQTHOICHITIET
             // 
             this.AcceptButton = this.btn_IN;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_THOAT;
             this.ClientSize = new System.Drawing.Size(391, 219);
-            this.Controls.Add(this.txt_MAHANG);
+            this.Controls.Add(this.txt_MAMANG);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_MASPKHACH);
+            this.Controls.Add(this.txt_TENMANG);
             this.Controls.Add(this.txt_TENKHACH);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txt_MAKHACH);
@@ -267,8 +256,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FRM_BCKQINTONGHOP";
-            this.Text = "FRM_BCKQINTONGHOP";
+            this.Name = "FRM_BCKQTHOICHITIET";
+            this.Text = "FRM_BCKQTHOICHITIET";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,10 +273,9 @@
         private CONTROL.TEXTBOX txt_TENMAY;
         private CONTROL.TEXTBOX txt_MAMAY;
         private CONTROL.LABEL label22;
-        private CONTROL.TEXTBOX txt_MAHANG;
+        private CONTROL.TEXTBOX txt_MAMANG;
         private CONTROL.LABEL label25;
-        private CONTROL.LABEL label5;
-        private CONTROL.TEXTBOX txt_MASPKHACH;
+        private CONTROL.TEXTBOX txt_TENMANG;
         private CONTROL.TEXTBOX txt_TENKHACH;
         private CONTROL.LABEL label15;
         private CONTROL.TEXTBOX txt_MAKHACH;
