@@ -954,15 +954,16 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox90">
+                    <Textbox Name="Nangsuat3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Avg(Fields!Nangsuat.Value)</Value>
                               <Style>
+                                <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,###</Format>
                                 <Language>vi</Language>
@@ -972,7 +973,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox90</rd:DefaultName>
+                      <rd:DefaultName>Nangsuat</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -988,15 +989,16 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox91">
+                    <Textbox Name="Tylesaihong3">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Avg(Fields!Tylesaihong.Value)</Value>
                               <Style>
+                                <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,###</Format>
                                 <Language>vi</Language>
@@ -1006,7 +1008,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox91</rd:DefaultName>
+                      <rd:DefaultName>Tylesaihong</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1231,16 +1233,17 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox164">
+                    <Textbox Name="Nangsuat2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Avg(Fields!Nangsuat.Value)</Value>
                               <Style>
                                 <FontStyle>Italic</FontStyle>
+                                <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,###</Format>
                                 <Language>vi</Language>
@@ -1250,7 +1253,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox164</rd:DefaultName>
+                      <rd:DefaultName>Nangsuat</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1266,16 +1269,17 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox165">
+                    <Textbox Name="Tylesaihong2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Avg(Fields!Tylesaihong.Value)</Value>
                               <Style>
                                 <FontStyle>Italic</FontStyle>
+                                <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,###</Format>
                                 <Language>vi</Language>
@@ -1285,7 +1289,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox165</rd:DefaultName>
+                      <rd:DefaultName>Tylesaihong</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1621,7 +1625,7 @@
         <Top>4.98434cm</Top>
         <Left>0.00002cm</Left>
         <Height>3cm</Height>
-        <Width>19.96824cm</Width>
+        <Width>19.96826cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -1787,7 +1791,7 @@
     <Height>7.98434cm</Height>
     <Style />
   </Body>
-  <Width>19.96826cm</Width>
+  <Width>19.96828cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
