@@ -353,6 +353,9 @@ namespace GD.BBPH.APP.DANHMUC
                 _CtptmangHEntity.Ngaysua = DateTime.Now;
                 _CtptmangHEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _CtptmangHManager.Update(_CtptmangHEntity);
+
+                _str_MAHIEU_PK = _CtptmangHEntity.Id.ToString();
+
                 foreach (CtptmangDEntity _TpsEntity in _CtptmangDEntityCol)
                     _TpsEntity.IdH = _CtptmangHEntity.Id;
                 foreach (CtptmangDEntity _CtptmangDEntity in _CtptmangDEntityCol)

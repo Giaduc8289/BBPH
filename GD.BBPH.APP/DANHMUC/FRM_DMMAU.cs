@@ -117,6 +117,7 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TPMAU.FilterMode = FilterMode.None;
             GRID_TPMAU.GroupByBoxVisible = false;
             FORM_PROCESS();
+            GRID_DMMAU.FormattingRow += GRID_DMMAU_FormattingRow;
             //GRID_TPMAU.COMBO_MULTICOLUMN(GRID_TPMAU,ThanhphanmauFields.Tennguyenlieu.Name, DmnguyenlieuFields.Manl.Name, DmnguyenlieuFields.Tenrutgon.Name, DmnguyenlieuFields.Tenrutgon.Name, DT_DMNGUYENLIEU);
             GRID_TPMAU.CellEdited += GRID_TPMAU_CellEdited;
             GRID_TPMAU.DeletingRecord += GRID_TPMAU_DeletingRecord;
@@ -134,14 +135,31 @@ namespace GD.BBPH.APP.DANHMUC
         }
 
         #region Xử lý Grid Detail
+        private void GRID_DMMAU_FormattingRow(object sender, RowLoadEventArgs e)
+        {
+            try
+            {
+                int argb = Convert.ToInt32(e.Row.Cells[DmmauFields.MaArgb.Name].Value.ToString());
+                Color mau = Color.FromArgb(argb);
+                Janus.Windows.GridEX.GridEXFormatStyle style = new GridEXFormatStyle();
+                style.ForeColor = mau;
+                style.BackColor = mau;
+                e.Row.Cells[DmmauFields.MaArgb.Name].FormatStyle = style;
+            }
+            catch { }
+        }
         private void GRID_TPMAU_CellEdited(object sender, ColumnActionEventArgs e)
         {
-            if (e.Column.DataMember == ThanhphanmauFields.Mausudung.Name)
+            try
             {
-                string tenmau = GRID_TPMAU.CurrentRow.Cells[ThanhphanmauFields.Tenmausudung.Name].Value.ToString();
-                DataTable dt = new DmmauManager().SelectByTenmauRDT(tenmau);
-                GRID_TPMAU.CurrentRow.Cells[ThanhphanmauFields.Mausudung.Name].Value = dt.Rows[0][DmmauFields.Mamau.Name].ToString();
+                if (e.Column.DataMember == ThanhphanmauFields.Mausudung.Name)
+                {
+                    string tenmau = GRID_TPMAU.CurrentRow.Cells[ThanhphanmauFields.Tenmausudung.Name].Value.ToString();
+                    DataTable dt = new DmmauManager().SelectByTenmauRDT(tenmau);
+                    GRID_TPMAU.CurrentRow.Cells[ThanhphanmauFields.Mausudung.Name].Value = dt.Rows[0][DmmauFields.Mamau.Name].ToString();
+                }
             }
+            catch { }
         }
         private void GRID_TPMAU_DeletingRecord(object sender, RowActionCancelEventArgs e)
         {           
@@ -206,6 +224,7 @@ namespace GD.BBPH.APP.DANHMUC
         }
         #endregion
 
+        #region Load dữ liệu
         void BS_DMMAU_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -222,7 +241,6 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_MAARGB.BackColor = Color.FromArgb(Convert.ToInt32(_Rowview.Row[DmmauFields.MaArgb.Name].ToString()));
                     try { chk_LAMAUGOC.Checked = Convert.ToBoolean(_Rowview.Row[DmmauFields.Lamaugoc.Name].ToString()); }
                     catch { }
-
 
                     SHOWGRID(MAHIEU_PK);
                 }
@@ -273,6 +291,7 @@ namespace GD.BBPH.APP.DANHMUC
             BS_TPMAU.CurrentChanged += new EventHandler(BS_TPMAU_CurrentChanged);
             BS_TPMAU_CurrentChanged((new object()), (new EventArgs()));
         }
+        #endregion
 
         private string Save_Data(string _str_MAHIEU_PK)
         {
@@ -357,8 +376,8 @@ namespace GD.BBPH.APP.DANHMUC
                 _DmmauEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DmmauManager.Update(_DmmauEntity);
 
-                //foreach (ThanhphanmauEntity _ThanhphanmauEntity in _ThanhphanmauEntityCol)
-                //    _ThanhphanmauEntity.Mamau = _DmmauEntity.Mamau;
+                _str_MAHIEU_PK = _DmmauEntity.Mamau;
+
                 foreach (ThanhphanmauEntity _ThanhphanmauEntity in _ThanhphanmauEntityCol)
                 {
                     if (_ThanhphanmauEntity.IsNew)
@@ -372,6 +391,7 @@ namespace GD.BBPH.APP.DANHMUC
 
                 GRID_DMMAU.CurrentRow.Cells[DmmauFields.Mamau.Name].Value = _DmmauEntity.Mamau;
                 GRID_DMMAU.CurrentRow.Cells[DmmauFields.Tenmau.Name].Value = _DmmauEntity.Tenmau;
+                GRID_DMMAU.CurrentRow.Cells[DmmauFields.MaArgb.Name].Value = _DmmauEntity.MaArgb;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmauManager.Convert(_DmmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_TPMAU.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TPMAU.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
