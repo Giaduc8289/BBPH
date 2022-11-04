@@ -153,6 +153,18 @@
     <Compile Include="BANHANG\FRM_PHIEUGIAOHANG.designer.cs">
       <DependentUpon>FRM_PHIEUGIAOHANG.cs</DependentUpon>
     </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAOHANGTRALAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAOHANGTRALAI.Designer.cs">
+      <DependentUpon>FRM_BAOCAOHANGTRALAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAONHAPKHOSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAONHAPKHOSP.Designer.cs">
+      <DependentUpon>FRM_BAOCAONHAPKHOSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="BAOCAO\FRM_BCKQHOANTHIENCHITIET.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -609,6 +621,12 @@
     <EmbeddedResource Include="BANHANG\FRM_PHIEUGIAOHANG.resx">
       <DependentUpon>FRM_PHIEUGIAOHANG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BAOCAOHANGTRALAI.resx">
+      <DependentUpon>FRM_BAOCAOHANGTRALAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BAOCAONHAPKHOSP.resx">
+      <DependentUpon>FRM_BAOCAONHAPKHOSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCKQHOANTHIENCHITIET.resx">
       <DependentUpon>FRM_BCKQHOANTHIENCHITIET.cs</DependentUpon>
     </EmbeddedResource>
@@ -791,6 +809,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RDLC\BAOCAOHANGTRALAI.rdlc" />
+    <EmbeddedResource Include="RDLC\BAOCAONHAPKHOSP.rdlc" />
     <EmbeddedResource Include="RDLC\KQTHOITONGHOP.rdlc" />
     <EmbeddedResource Include="RDLC\KQTUACHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQTHOICHITIET.rdlc" />
@@ -960,7 +980,6 @@
     <Content Include="XMLCONFIG\FRM_KQTHOICHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_LYDONHAPXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDOXUATKHO.xml" />
-    <Content Include="XMLCONFIG\FRM_MANGCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_MAUCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANGCHITIET.xml">

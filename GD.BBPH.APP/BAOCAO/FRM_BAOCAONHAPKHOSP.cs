@@ -21,13 +21,13 @@ using GD.BBPH.LIB;
 
 namespace GD.BBPH.APP.BAOCAO
 {
-    public partial class FRM_BCKQGHEPCHITIET : FRM_DMPARENT
+    public partial class FRM_BAOCAONHAPKHOSP : FRM_DMPARENT
     {
-        private DataTable DT_DMMAY = new DataTable(), DT_DMKHACH = new DataTable(), DT_DMHANG = new DataTable();
+        private DataTable DT_DMKHO = new DataTable(), DT_DMHANG = new DataTable(), DT_DMLYDONHAPXUAT = new DataTable();
         private DataRow _RowViewSelect = null;
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
         private string FUNCTION = "LOAD";
-        public FRM_BCKQGHEPCHITIET()
+        public FRM_BAOCAONHAPKHOSP()
         {
             InitializeComponent();
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_IN, btn_IN.Name + ".xml");
@@ -50,13 +50,14 @@ namespace GD.BBPH.APP.BAOCAO
                 {
                     if (FUNCTION == "LOAD")
                     {
-                        _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQGHEP");
+                        _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_NHAPSANPHAM");
                         DateTime Ngaydauthang = LIB.SESSION_START.TS_NGAYDAUTHANG;
                         DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
                         
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("GHEP");
-                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+                        DT_DMKHO = LIB.SESSION_START.DT_DMKHO;
                         DT_DMHANG = LIB.SESSION_START.DM_HANG;
+                        DT_DMLYDONHAPXUAT = LIB.SESSION_START.DT_DMLYDONHAPXUAT;
+
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -84,7 +85,7 @@ namespace GD.BBPH.APP.BAOCAO
         }
         private void btn_IN_Click(object sender, EventArgs e)
         {
-            string _Mamay = "", _Makhach = "", _Masanpham = "";
+            string _Makho = "", _Masanpham = "", _Malydo = "";
             DateTime _Tungay = new DateTime(), _Denngay = new DateTime();
             DataSet dsKetqua = new DataSet();
 
@@ -93,9 +94,9 @@ namespace GD.BBPH.APP.BAOCAO
                 #region Lay thong tin cac tham so
                 _Tungay = Convert.ToDateTime(txt_TUNGAY.Text);
                 _Denngay = Convert.ToDateTime(txt_DENNGAY.Text);
-                _Mamay = txt_MAMAY.Text.Trim();
-                _Makhach = txt_MAKHACH.Text.Trim();
+                _Makho = txt_MAKHO.Text.Trim();
                 _Masanpham = txt_MAHANG.Text.Trim();
+                _Malydo = txt_MALYDO.Text.Trim();
                 #endregion
 
                 #region Chay procedure
@@ -103,10 +104,10 @@ namespace GD.BBPH.APP.BAOCAO
                 SqlParameter[] parameters = new SqlParameter[5];
                 parameters[0] = new SqlParameter("@Tungay", _Tungay);
                 parameters[1] = new SqlParameter("@Denngay", _Denngay);
-                parameters[2] = new SqlParameter("@Mamay", _Mamay);
-                parameters[3] = new SqlParameter("@Makhach", _Makhach);
+                parameters[2] = new SqlParameter("@Makho", _Makho);
+                parameters[3] = new SqlParameter("@Malydo", _Malydo);
                 parameters[4] = new SqlParameter("@Masanpham", _Masanpham);
-                _DataAccessAdapter.CallRetrievalStoredProcedure("Baocaoketquaghepchitiet", parameters, dsKetqua, 0);
+                _DataAccessAdapter.CallRetrievalStoredProcedure("Baocaonhapkhosp", parameters, dsKetqua, 0);
                 _DataAccessAdapter.CloseConnection();
                 dsKetqua.Tables[0].TableName = "Ketqua";
                 #endregion
@@ -114,26 +115,26 @@ namespace GD.BBPH.APP.BAOCAO
                 #region Tham so
                 DataTable dtThamso = new DataTable("Thamso");
                 dtThamso.Columns.Add("Thoigian");
-                dtThamso.Columns.Add("Maymoc");
-                dtThamso.Columns.Add("Khachhang");
+                dtThamso.Columns.Add("Kho");
+                dtThamso.Columns.Add("Lydo");
                 dtThamso.Columns.Add("Sanpham");
                 DataRow dr = dtThamso.NewRow();
                 if (_Tungay == _Denngay)
                     dr["Thoigian"] = "Ngày " + _Tungay.ToString("dd/MM/yyyy");
                 else
                     dr["Thoigian"] = "Từ ngày " + _Tungay.ToString("dd/MM/yyyy") + " Đến ngày " + _Denngay.ToString("dd/MM/yyyy");
-                if (!string.IsNullOrEmpty(_Mamay))
-                    dr["Maymoc"] = txt_TENMAY.Text;
-                if (!string.IsNullOrEmpty(_Makhach))
-                    dr["Khachhang"] = txt_TENKHACH.Text;
-                if (!string.IsNullOrEmpty(_Makhach))
+                if (!string.IsNullOrEmpty(_Makho))
+                    dr["Kho"] = txt_TENKHO.Text;
+                if (!string.IsNullOrEmpty(_Malydo))
+                    dr["Lydo"] = txt_LYDO.Text;
+                if (!string.IsNullOrEmpty(_Malydo))
                     dr["Sanpham"] = txt_MAHANG.Text;
                 dtThamso.Rows.Add(dr);
                 dsKetqua.Tables.Add(dtThamso);
                 #endregion
 
                 #region Hien bao cao
-                new FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\KQGHEPCHITIET.rdlc", "Ketqua", this.Text, true).Show();
+                new FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\BAOCAOXUATHANG.rdlc", "Ketqua", this.Text, true).Show();
                 #endregion
             }
             catch (Exception ex)
@@ -143,69 +144,67 @@ namespace GD.BBPH.APP.BAOCAO
         }
 
         #region Validate
-        private void txt_MAYIN_Validating(object sender, CancelEventArgs e)
+        private void txt_MAYKHO_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
-            txt_TENMAY.Text = string.Empty;
-            if (string.IsNullOrEmpty(txt_MAMAY.Text.Trim()) || DT_DMMAY == null || DT_DMMAY.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MAMAY.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaMay(Str_MASIEUTHI, DT_DMMAY);
+            txt_TENKHO.Text = string.Empty;
+            if (string.IsNullOrEmpty(txt_MAKHO.Text.Trim()) || DT_DMKHO == null || DT_DMKHO.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MAKHO.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaMay(Str_MASIEUTHI, DT_DMKHO);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMAY.xml",
-                        DT_DMMAY, DmmayFields.Mamay.Name, Str_MASIEUTHI);
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMKHO.xml",
+                        DT_DMKHO, DmkhoFields.Makho.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MAMAY.Text = _RowViewSelect[DmmayFields.Mamay.Name].ToString();
-                txt_TENMAY.Text = _RowViewSelect[DmmayFields.Tenmay.Name].ToString();
+                txt_MAKHO.Text = _RowViewSelect[DmkhoFields.Makho.Name].ToString();
+                txt_TENKHO.Text = _RowViewSelect[DmkhoFields.Tenkho.Name].ToString();
             }
             else
             {
-                txt_TENMAY.Text = _RowViewSelect[DmmayFields.Tenmay.Name].ToString();
+                txt_TENKHO.Text = _RowViewSelect[DmkhoFields.Tenkho.Name].ToString();
             }
         }
         private DataRow checkmaMay(string masieuthi, DataTable dt)
         {
             try
             {
-                return dt.Select(DmmayFields.Mamay.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+                return dt.Select(DmkhoFields.Makho.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
         }
 
-        private void txt_MAKHACH_Validating(object sender, CancelEventArgs e)
+        private void txt_MALYDO_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
-            txt_TENKHACH.Text = string.Empty;
-            if (string.IsNullOrEmpty(txt_MAKHACH.Text.Trim()) || DT_DMKHACH == null || DT_DMKHACH.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MAKHACH.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaKhach(Str_MASIEUTHI, DT_DMKHACH);
+            txt_LYDO.Text = string.Empty;
+            if (string.IsNullOrEmpty(txt_MALYDO.Text.Trim()) || DT_DMLYDONHAPXUAT == null || DT_DMLYDONHAPXUAT.Rows.Count == 0) return;
+            string Str_MASIEUTHI = txt_MALYDO.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaKhach(Str_MASIEUTHI, DT_DMKHO);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMKHACH.xml",
-                        DT_DMKHACH, DmkhachFields.Makhach.Name, Str_MASIEUTHI);
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LYDONHAPXUAT.xml",
+                        DT_DMKHO, DmlydonhapxuatFields.Malydo.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MAKHACH.Text = _RowViewSelect[DmkhachFields.Makhach.Name].ToString();
-                txt_TENKHACH.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
+                txt_MALYDO.Text = _RowViewSelect[DmlydonhapxuatFields.Malydo.Name].ToString();
+                txt_LYDO.Text = _RowViewSelect[DmlydonhapxuatFields.Tenlydo.Name].ToString();
 
-                DT_DMHANG = new DmhangManager().SelectByMakhachRDT(txt_MAKHACH.Text.Trim());
             }
             else
             {
-                txt_TENKHACH.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
-                DT_DMHANG = new DmhangManager().SelectByMakhachRDT(txt_MAKHACH.Text.Trim());
+                txt_LYDO.Text = _RowViewSelect[DmlydonhapxuatFields.Tenlydo.Name].ToString();
             }
         }
         private DataRow checkmaKhach(string masieuthi, DataTable dt)
         {
             try
             {
-                return dt.Select(DmkhachFields.Makhach.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+                return dt.Select(DmlydonhapxuatFields.Malydo.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
         }

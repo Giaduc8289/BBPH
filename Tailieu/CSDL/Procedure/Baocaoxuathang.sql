@@ -1,4 +1,4 @@
-------------------------B·o c·o xu?t kho h‡ng-------------
+Ôªø------------------------B√°o c√°o xu·∫•t kho h√†ng-------------
 If Object_ID('dbo.Baocaoxuathang','P') is not null
 	Drop Procedure dbo.Baocaoxuathang;
 Go

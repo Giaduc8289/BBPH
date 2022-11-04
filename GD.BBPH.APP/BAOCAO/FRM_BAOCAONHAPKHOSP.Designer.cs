@@ -1,6 +1,6 @@
 ﻿namespace GD.BBPH.APP.BAOCAO
 {
-    partial class FRM_BAOCAOXUATHANG
+    partial class FRM_BAOCAONHAPKHOSP
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_BAOCAOXUATHANG));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_BAOCAONHAPKHOSP));
             this.btn_IN = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THOAT = new GD.BBPH.CONTROL.BUTTON();
             this.txt_DENNGAY = new System.Windows.Forms.MaskedTextBox();
@@ -242,7 +242,7 @@
             this.txt_LYDO.TabIndex = 5;
             this.txt_LYDO.TabStop = false;
             // 
-            // FRM_BAOCAOXUATHANG
+            // FRM_BAOCAONHAPKHOSP
             // 
             this.AcceptButton = this.btn_IN;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,8 +268,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FRM_BAOCAOXUATHANG";
-            this.Text = "FRM_BAOCAOXUATHANG";
+            this.Name = "FRM_BAOCAONHAPKHOSP";
+            this.Text = "FRM_BAOCAONHAPKHOSP";
             this.ResumeLayout(false);
             this.PerformLayout();
 
