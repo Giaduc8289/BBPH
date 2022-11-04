@@ -1,4 +1,4 @@
-------------------------B�o c�o h�ng tr? l?i-------------
+﻿------------------------Báo cáo hàng trả lại-------------
 If Object_ID('dbo.Baocaohangtralai','P') is not null
 	Drop Procedure dbo.Baocaohangtralai;
 Go
