@@ -127,6 +127,8 @@ namespace GD.BBPH.APP.BAOCAO
                     dr["Kho"] = txt_TENKHO.Text;
                 if (!string.IsNullOrEmpty(_Malydo))
                     dr["Lydo"] = txt_LYDO.Text;
+                if (!string.IsNullOrEmpty(_Malydo))
+                    dr["Sanpham"] = txt_MAHANG.Text;
                 dtThamso.Rows.Add(dr);
                 dsKetqua.Tables.Add(dtThamso);
                 #endregion

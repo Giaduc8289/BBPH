@@ -164,7 +164,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Khachhang.Value, "Thamso")</Value>
+                <Value>=First(Fields!Sanpham.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                 </Style>
