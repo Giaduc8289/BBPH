@@ -198,7 +198,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Congnhan.Value, "Thamso")</Value>
+                <Value>=First(Fields!Kho.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                 </Style>
@@ -232,15 +232,14 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant">Đơn vị tính: VND</Value>
+                <Value>=First(Fields!Lydo.Value, "Thamso")</Value>
                 <Style>
-                  <FontStyle>Italic</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Right</TextAlign>
+              <TextAlign>Center</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>

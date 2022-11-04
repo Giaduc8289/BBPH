@@ -126,6 +126,8 @@ namespace GD.BBPH.APP.BAOCAO
                     dr["Maymoc"] = txt_TENMAY.Text;
                 if (!string.IsNullOrEmpty(_Makhach))
                     dr["Khachhang"] = txt_TENKHACH.Text;
+                if (!string.IsNullOrEmpty(_Makhach))
+                    dr["Sanpham"] = txt_MAHANG.Text;
                 dtThamso.Rows.Add(dr);
                 dsKetqua.Tables.Add(dtThamso);
                 #endregion
