@@ -71,8 +71,8 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(529, 689), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(1300, 689), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(529, 559), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(841, 559), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -83,18 +83,16 @@
             this.uiPanel0.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
-            this.uiPanel0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(529, 689);
+            this.uiPanel0.Size = new System.Drawing.Size(529, 559);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Danh sách";
             // 
             // uiPanel0Container
             // 
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
-            this.uiPanel0Container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(523, 665);
+            this.uiPanel0Container.Size = new System.Drawing.Size(523, 535);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // uiPanel1
@@ -103,9 +101,8 @@
             this.uiPanel1.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(532, 3);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(1300, 689);
+            this.uiPanel1.Size = new System.Drawing.Size(841, 559);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
@@ -130,27 +127,24 @@
             this.uiPanel1Container.Controls.Add(this.txt_MAMAU);
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
-            this.uiPanel1Container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(1298, 665);
+            this.uiPanel1Container.Size = new System.Drawing.Size(839, 535);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(441, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(331, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 125;
             this.label2.Text = "Mẫu màu";
             // 
             // btn_CHONMAU
             // 
-            this.btn_CHONMAU.Location = new System.Drawing.Point(569, 9);
-            this.btn_CHONMAU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CHONMAU.Location = new System.Drawing.Point(427, 7);
             this.btn_CHONMAU.Name = "btn_CHONMAU";
-            this.btn_CHONMAU.Size = new System.Drawing.Size(100, 28);
+            this.btn_CHONMAU.Size = new System.Drawing.Size(75, 23);
             this.btn_CHONMAU.TabIndex = 124;
             this.btn_CHONMAU.Text = "Chọn màu";
             this.btn_CHONMAU.UseVisualStyleBackColor = true;
@@ -158,20 +152,21 @@
             // 
             // txt_MAARGB
             // 
-            this.txt_MAARGB.Location = new System.Drawing.Point(515, 11);
-            this.txt_MAARGB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MAARGB.Location = new System.Drawing.Point(386, 9);
             this.txt_MAARGB.Name = "txt_MAARGB";
-            this.txt_MAARGB.Size = new System.Drawing.Size(31, 22);
+            this.txt_MAARGB.ReadOnly = true;
+            this.txt_MAARGB.Size = new System.Drawing.Size(24, 20);
             this.txt_MAARGB.TabIndex = 123;
+            this.txt_MAARGB.TabStop = false;
             // 
             // chk_LAMAUGOC
             // 
             this.chk_LAMAUGOC.AutoSize = true;
-            this.chk_LAMAUGOC.Location = new System.Drawing.Point(16, 86);
-            this.chk_LAMAUGOC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chk_LAMAUGOC.Location = new System.Drawing.Point(12, 70);
+            this.chk_LAMAUGOC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chk_LAMAUGOC.Name = "chk_LAMAUGOC";
             this.chk_LAMAUGOC.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk_LAMAUGOC.Size = new System.Drawing.Size(116, 21);
+            this.chk_LAMAUGOC.Size = new System.Drawing.Size(91, 17);
             this.chk_LAMAUGOC.TabIndex = 2;
             this.chk_LAMAUGOC.Text = "   Là màu gốc";
             this.chk_LAMAUGOC.UseVisualStyleBackColor = true;
@@ -181,10 +176,9 @@
             this.btn_THEMDONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_THEMDONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMDONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMDONG.Location = new System.Drawing.Point(20, 143);
-            this.btn_THEMDONG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_THEMDONG.Location = new System.Drawing.Point(15, 116);
             this.btn_THEMDONG.Name = "btn_THEMDONG";
-            this.btn_THEMDONG.Size = new System.Drawing.Size(104, 28);
+            this.btn_THEMDONG.Size = new System.Drawing.Size(78, 23);
             this.btn_THEMDONG.TabIndex = 3;
             this.btn_THEMDONG.Text = "Thêm dòng";
             this.btn_THEMDONG.UseVisualStyleBackColor = true;
@@ -196,10 +190,9 @@
             this.btn_SAOCHEP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_SAOCHEP.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SAOCHEP.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SAOCHEP.Location = new System.Drawing.Point(561, 621);
-            this.btn_SAOCHEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_SAOCHEP.Location = new System.Drawing.Point(421, 499);
             this.btn_SAOCHEP.Name = "btn_SAOCHEP";
-            this.btn_SAOCHEP.Size = new System.Drawing.Size(100, 28);
+            this.btn_SAOCHEP.Size = new System.Drawing.Size(75, 23);
             this.btn_SAOCHEP.TabIndex = 11;
             this.btn_SAOCHEP.Text = "Sao chép";
             this.btn_SAOCHEP.UseVisualStyleBackColor = true;
@@ -210,10 +203,9 @@
             this.btn_XOADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_XOADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOADONG.Location = new System.Drawing.Point(132, 143);
-            this.btn_XOADONG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_XOADONG.Location = new System.Drawing.Point(99, 116);
             this.btn_XOADONG.Name = "btn_XOADONG";
-            this.btn_XOADONG.Size = new System.Drawing.Size(104, 28);
+            this.btn_XOADONG.Size = new System.Drawing.Size(78, 23);
             this.btn_XOADONG.TabIndex = 4;
             this.btn_XOADONG.Text = "Xóa dòng";
             this.btn_XOADONG.UseVisualStyleBackColor = true;
@@ -222,10 +214,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 122;
             this.label1.Text = "Tên màu";
             // 
@@ -237,11 +228,10 @@
             this.txt_TENMAU.FormNametoShow = "";
             this.txt_TENMAU.Is_DateTime = false;
             this.txt_TENMAU.IsShowForm = false;
-            this.txt_TENMAU.Location = new System.Drawing.Point(117, 47);
-            this.txt_TENMAU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TENMAU.Location = new System.Drawing.Point(88, 38);
             this.txt_TENMAU.Name = "txt_TENMAU";
             this.txt_TENMAU.Regular_Expression = null;
-            this.txt_TENMAU.Size = new System.Drawing.Size(551, 22);
+            this.txt_TENMAU.Size = new System.Drawing.Size(414, 20);
             this.txt_TENMAU.TabIndex = 1;
             // 
             // pne_CHITIET
@@ -249,10 +239,10 @@
             this.pne_CHITIET.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_CHITIET.Location = new System.Drawing.Point(19, 187);
-            this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pne_CHITIET.Location = new System.Drawing.Point(14, 152);
+            this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(1258, 402);
+            this.pne_CHITIET.Size = new System.Drawing.Size(809, 321);
             this.pne_CHITIET.TabIndex = 5;
             // 
             // btn_Thoat
@@ -261,10 +251,9 @@
             this.btn_Thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Thoat.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(669, 621);
-            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Thoat.Location = new System.Drawing.Point(502, 499);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(100, 28);
+            this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
             this.btn_Thoat.TabIndex = 12;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
@@ -276,10 +265,9 @@
             this.btn_KHOIPHUC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_KHOIPHUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(232, 621);
-            this.btn_KHOIPHUC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 499);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
-            this.btn_KHOIPHUC.Size = new System.Drawing.Size(100, 28);
+            this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
             this.btn_KHOIPHUC.TabIndex = 8;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
@@ -291,10 +279,9 @@
             this.btn_LUULAI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_LUULAI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(19, 621);
-            this.btn_LUULAI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_LUULAI.Location = new System.Drawing.Point(14, 499);
             this.btn_LUULAI.Name = "btn_LUULAI";
-            this.btn_LUULAI.Size = new System.Drawing.Size(100, 28);
+            this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
             this.btn_LUULAI.TabIndex = 6;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
@@ -306,10 +293,9 @@
             this.btn_XOA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_XOA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(124, 621);
-            this.btn_XOA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_XOA.Location = new System.Drawing.Point(93, 499);
             this.btn_XOA.Name = "btn_XOA";
-            this.btn_XOA.Size = new System.Drawing.Size(100, 28);
+            this.btn_XOA.Size = new System.Drawing.Size(75, 23);
             this.btn_XOA.TabIndex = 7;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
@@ -321,10 +307,9 @@
             this.btn_THEMMOI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_THEMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(452, 621);
-            this.btn_THEMMOI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(339, 499);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
-            this.btn_THEMMOI.Size = new System.Drawing.Size(100, 28);
+            this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
             this.btn_THEMMOI.TabIndex = 10;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
@@ -336,10 +321,9 @@
             this.btn_SUA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_SUA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(344, 621);
-            this.btn_SUA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_SUA.Location = new System.Drawing.Point(258, 499);
             this.btn_SUA.Name = "btn_SUA";
-            this.btn_SUA.Size = new System.Drawing.Size(100, 28);
+            this.btn_SUA.Size = new System.Drawing.Size(75, 23);
             this.btn_SUA.TabIndex = 9;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
@@ -353,31 +337,29 @@
             this.txt_MAMAU.FormNametoShow = "";
             this.txt_MAMAU.Is_DateTime = false;
             this.txt_MAMAU.IsShowForm = false;
-            this.txt_MAMAU.Location = new System.Drawing.Point(117, 11);
-            this.txt_MAMAU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MAMAU.Location = new System.Drawing.Point(88, 9);
             this.txt_MAMAU.Name = "txt_MAMAU";
             this.txt_MAMAU.Regular_Expression = null;
-            this.txt_MAMAU.Size = new System.Drawing.Size(183, 22);
+            this.txt_MAMAU.Size = new System.Drawing.Size(138, 20);
             this.txt_MAMAU.TabIndex = 0;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(16, 14);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(12, 11);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(58, 17);
+            this.label22.Size = new System.Drawing.Size(45, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã màu";
             // 
             // FRM_DMMAU
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1835, 695);
+            this.ClientSize = new System.Drawing.Size(1376, 565);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FRM_DMMAU";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DMMAU_FormClosing);

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 5, 2022 10:08:16 AM
+// Code is generated on: Saturday, November 5, 2022 2:55:18 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -15,7 +15,6 @@ namespace GD.BBPH.DAL.HelperClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 	
 	/// <summary>
 	/// Singleton implementation of the FieldInfoProvider. This class is the singleton wrapper through which the actual instance is retrieved.
@@ -1125,6 +1124,10 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("TknguyenlieuthoiEntity", "Tennguyenlieu", typeof(System.String), false, false, false, true,  (int)TknguyenlieuthoiFieldIndex.Tennguyenlieu, 250, 0, 0);
 			base.AddElementFieldInfo("TknguyenlieuthoiEntity", "Klnhap", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)TknguyenlieuthoiFieldIndex.Klnhap, 0, 3, 20);
 			base.AddElementFieldInfo("TknguyenlieuthoiEntity", "Klxuat", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)TknguyenlieuthoiFieldIndex.Klxuat, 0, 3, 20);
+			base.AddElementFieldInfo("TknguyenlieuthoiEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)TknguyenlieuthoiFieldIndex.Ngaytao, 0, 0, 0);
+			base.AddElementFieldInfo("TknguyenlieuthoiEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)TknguyenlieuthoiFieldIndex.Nguoitao, 50, 0, 0);
+			base.AddElementFieldInfo("TknguyenlieuthoiEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)TknguyenlieuthoiFieldIndex.Ngaysua, 0, 0, 0);
+			base.AddElementFieldInfo("TknguyenlieuthoiEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)TknguyenlieuthoiFieldIndex.Nguoisua, 50, 0, 0);
 		}
 		/// <summary>Inits TruccuahangEntity's FieldInfo objects</summary>
 		private void InitTruccuahangEntityInfos()

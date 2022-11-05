@@ -16,7 +16,6 @@ using GD.BBPH.LIB;
 using Janus.Data;
 using Janus.Windows.GridEX;
 using Janus.Windows.Common;
-using System.Text.RegularExpressions;
 
 namespace GD.BBPH.APP.DANHMUC
 {
@@ -170,15 +169,15 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
+            txt_TENMAY.Text = txt_TENDONGMAY.Text = txt_TENCONGDOAN.Text = string.Empty;
             r_Insert = DT_CONGSUATMAY.NewRow();
             DT_CONGSUATMAY.Rows.Add(r_Insert);
             BS_CONGSUATMAY.Position = DT_CONGSUATMAY.Rows.Count;
             MAHIEU_PK = "";
-            txt_MACONGSUAT.Text = GetMacongsuat("CS");
+            txt_MACONGSUAT.Text = LIB.Procedures.GetMadanhmuc(new CongsuatmayManager().SelectAllRDT(), CongsuatmayFields.Macongsuat.Name, "CS", 3);
             txt_MACONGSUAT.Focus();
-            txt_MAMAY.Text = txt_TENMAY.Text = txt_MADONGMAY.Text = txt_TENDONGMAY.Text = txt_MACONGDOAN.Text = txt_TENCONGDOAN.Text = string.Empty;
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENMAY, txt_TENDONGMAY, txt_TENCONGDOAN }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_CONGSUATMAY.Enabled = false;
             btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONCAUTRUC.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = true;
@@ -189,7 +188,7 @@ namespace GD.BBPH.APP.DANHMUC
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MACONGSUAT }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MACONGSUAT, txt_TENMAY, txt_TENDONGMAY, txt_TENCONGDOAN }));
                 txt_TENCONGSUAT.Focus();
             }
             GRID_CONGSUATMAY.Enabled = false;
@@ -231,7 +230,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_MACONGDOAN_Validating(new object(), new CancelEventArgs());
 
                 MAHIEU_PK = "";
-                txt_MACONGSUAT.Text = GetMacongsuat("CS");
+                txt_MACONGSUAT.Text = LIB.Procedures.GetMadanhmuc(new CongsuatmayManager().SelectAllRDT(), CongsuatmayFields.Macongsuat.Name, "CS", 3);
                 txt_MACONGSUAT.Focus();
                 //TEXTBOX_Only_Control(false, null);
                 // txt_MAHIEU.Text = DmcapmaManager.GET_MA_INT(DmcapmaManager.LOAI_MA_HIEU, false, KTXPT.DATA);
@@ -619,41 +618,6 @@ namespace GD.BBPH.APP.DANHMUC
             }
         }
         #endregion
-
-        private string GetMacongsuat(string m_Tiento)
-        {
-            long m_sohieu = 0, m_newsohieu = 0;
-
-            DataTable _table = new CongsuatmayManager().SelectAllRDT();
-            if (_table.Rows.Count == 0) return m_Tiento + "001";
-            DataRow[] _row = _table.Select();
-
-            int max_sohieu = 0;
-            string alphaPart = "";
-            for (int i = 0; i < _row.Length; i++)
-            {
-                int _sohieu = 0;
-                // alphaPart = "";
-                // kiem tra chuoi co ca so va chu 
-                string m_sohieu_chucai_so = _row[i][CongsuatmayFields.Macongsuat.Name].ToString();
-                Regex re = new Regex(@"([a-zA-Z]+)(\d+)");
-                Match result = re.Match(m_sohieu_chucai_so);
-                if (result.Length == 0) int.TryParse(_row[i][CongsuatmayFields.Macongsuat.Name].ToString(), out _sohieu);
-                else
-                {
-                    alphaPart = result.Groups[1].Value;
-                    string numberPart = result.Groups[2].Value;
-                    int.TryParse(numberPart, out _sohieu);
-                }
-                max_sohieu = (max_sohieu < _sohieu) ? _sohieu : max_sohieu;
-            }
-            max_sohieu++;
-            if (max_sohieu == 1) alphaPart = m_Tiento;
-            m_sohieu = (m_newsohieu > max_sohieu) ? m_newsohieu : max_sohieu;
-            m_newsohieu = m_sohieu;
-
-            return (alphaPart + m_newsohieu.ToString().PadLeft(3, '0'));
-        }
 
         private void uiPanel0_Resize(object sender, EventArgs e)
         {

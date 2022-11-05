@@ -16,7 +16,6 @@ using GD.BBPH.LIB;
 using Janus.Data;
 using Janus.Windows.GridEX;
 using Janus.Windows.Common;
-using System.Text.RegularExpressions;
 
 namespace GD.BBPH.APP.DANHMUC
 {
@@ -168,7 +167,7 @@ namespace GD.BBPH.APP.DANHMUC
             DT_DMVATTUSAIHONG.Rows.Add(r_Insert);
             BS_DMVATTUSAIHONG.Position = DT_DMVATTUSAIHONG.Rows.Count;
             MAHIEU_PK = "";
-            txt_MADINHMUC.Text = GetMadinhmuc("DM");
+            txt_MADINHMUC.Text = LIB.Procedures.GetMadanhmuc(new DinhmucvattuManager().SelectAllRDT(), DinhmucvattuFields.Madinhmuc.Name, "DM", 3);
             txt_MADINHMUC.Focus();
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENNHOM, txt_TENMAY, txt_TENDONGMAY, txt_TENCONGDOAN }));
@@ -220,7 +219,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_DINHMUC.Text = drCopy[0][DinhmucvattuFields.Dinhmuc.Name].ToString();
 
                 MAHIEU_PK = "";
-                txt_MADINHMUC.Text = GetMadinhmuc("DM");
+                txt_MADINHMUC.Text = LIB.Procedures.GetMadanhmuc(new DinhmucvattuManager().SelectAllRDT(), DinhmucvattuFields.Madinhmuc.Name, "DM", 3);
                 txt_MADINHMUC.Focus();
                 //TEXTBOX_Only_Control(false, null);
                 // txt_MAHIEU.Text = DmcapmaManager.GET_MA_INT(DmcapmaManager.LOAI_MA_HIEU, false, KTXPT.DATA);
@@ -640,41 +639,6 @@ namespace GD.BBPH.APP.DANHMUC
             }
         }
         #endregion
-
-        private string GetMadinhmuc(string m_Tiento)
-        {
-            long m_sohieu = 0, m_newsohieu = 0;
-
-            DataTable _table = new DinhmucvattuManager().SelectAllRDT();
-            if (_table.Rows.Count == 0) return m_Tiento + "001";
-            DataRow[] _row = _table.Select();
-
-            int max_sohieu = 0;
-            string alphaPart = "";
-            for (int i = 0; i < _row.Length; i++)
-            {
-                int _sohieu = 0;
-                // alphaPart = "";
-                // kiem tra chuoi co ca so va chu 
-                string m_sohieu_chucai_so = _row[i][DinhmucvattuFields.Madinhmuc.Name].ToString();
-                Regex re = new Regex(@"([a-zA-Z]+)(\d+)");
-                Match result = re.Match(m_sohieu_chucai_so);
-                if (result.Length == 0) int.TryParse(_row[i][DinhmucvattuFields.Madinhmuc.Name].ToString(), out _sohieu);
-                else
-                {
-                    alphaPart = result.Groups[1].Value;
-                    string numberPart = result.Groups[2].Value;
-                    int.TryParse(numberPart, out _sohieu);
-                }
-                max_sohieu = (max_sohieu < _sohieu) ? _sohieu : max_sohieu;
-            }
-            max_sohieu++;
-            if (max_sohieu == 1) alphaPart = m_Tiento;
-            m_sohieu = (m_newsohieu > max_sohieu) ? m_newsohieu : max_sohieu;
-            m_newsohieu = m_sohieu;
-
-            return (alphaPart + m_newsohieu.ToString().PadLeft(3, '0'));
-        }
 
         private void uiPanel0_Resize(object sender, EventArgs e)
         {

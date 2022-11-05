@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 5, 2022 10:08:17 AM
+// Code is generated on: Saturday, November 5, 2022 2:55:19 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -4226,6 +4226,26 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Klxuat
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(TknguyenlieuthoiFieldIndex.Klxuat);}
+		}
+		/// <summary>Creates a new TknguyenlieuthoiEntity.Ngaytao field instance</summary>
+		public static EntityField2 Ngaytao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TknguyenlieuthoiFieldIndex.Ngaytao);}
+		}
+		/// <summary>Creates a new TknguyenlieuthoiEntity.Nguoitao field instance</summary>
+		public static EntityField2 Nguoitao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TknguyenlieuthoiFieldIndex.Nguoitao);}
+		}
+		/// <summary>Creates a new TknguyenlieuthoiEntity.Ngaysua field instance</summary>
+		public static EntityField2 Ngaysua
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TknguyenlieuthoiFieldIndex.Ngaysua);}
+		}
+		/// <summary>Creates a new TknguyenlieuthoiEntity.Nguoisua field instance</summary>
+		public static EntityField2 Nguoisua
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(TknguyenlieuthoiFieldIndex.Nguoisua);}
 		}
 	}
 

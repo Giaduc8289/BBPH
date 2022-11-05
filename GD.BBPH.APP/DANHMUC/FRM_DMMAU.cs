@@ -27,7 +27,7 @@ namespace GD.BBPH.APP.DANHMUC
         private ThanhphanmauManager _ThanhphanmauManager = new ThanhphanmauManager();
         private ThanhphanmauEntity _ThanhphanmauEntity = new ThanhphanmauEntity();
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-        private DataTable DT_DMMAU = new DataTable(), DT_TPMAU = new DataTable(), DT_TPMAU_FILL = new DataTable();
+        private DataTable DT_DMMAU = new DataTable(), DT_TPMAU = new DataTable();
         private BindingSource BS_DMMAU = new BindingSource(), BS_TPMAU = new BindingSource();
         private DataRow r_Insert = null, _RowViewSelect = null, _RowDanhmuchanghoa = null;
         private GD.BBPH.CONTROL.JGridEX GRID_DMMAU = new GD.BBPH.CONTROL.JGridEX();
@@ -58,7 +58,6 @@ namespace GD.BBPH.APP.DANHMUC
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMMAU");
                         DT_DMMAU = LIB.SESSION_START.DT_DMMAU;
                         DT_TPMAU = LIB.SESSION_START.DT_TPMAU;
-                        DT_TPMAU_FILL = DT_TPMAU.Clone();
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -177,18 +176,18 @@ namespace GD.BBPH.APP.DANHMUC
 
             foreach (DataRowView drv in _frm_MultiRows_Select._RowsViewSelect)
             {
-                DataRow r_Detail = DT_TPMAU_FILL.NewRow();
+                DataRow r_Detail = DT_TPMAU.NewRow();
                 r_Detail[ThanhphanmauFields.Mausudung.Name] = drv.Row[DmmauFields.Mamau.Name].ToString();
                 r_Detail[ThanhphanmauFields.Tenmausudung.Name] = drv.Row[DmmauFields.Tenmau.Name].ToString();
 
-                DT_TPMAU_FILL.Rows.Add(r_Detail);
+                DT_TPMAU.Rows.Add(r_Detail);
             }
 
-            DataView Source_View = new DataView(DT_TPMAU_FILL);
+            DataView Source_View = new DataView(DT_TPMAU);
             BS_TPMAU = new BindingSource();
             BS_TPMAU.DataSource = Source_View;
             GRID_TPMAU.DataSource = BS_TPMAU;
-            BS_TPMAU.Position = DT_TPMAU_FILL.Rows.Count;
+            BS_TPMAU.Position = DT_TPMAU.Rows.Count;
         }
 
         private void btn_XOADONG_Click(object sender, EventArgs e)
@@ -238,7 +237,8 @@ namespace GD.BBPH.APP.DANHMUC
 
                     txt_MAMAU.Text = _Rowview.Row[DmmauFields.Mamau.Name].ToString();
                     txt_TENMAU.Text = _Rowview.Row[DmmauFields.Tenmau.Name].ToString();
-                    txt_MAARGB.BackColor = Color.FromArgb(Convert.ToInt32(_Rowview.Row[DmmauFields.MaArgb.Name].ToString()));
+                    try { txt_MAARGB.BackColor = Color.FromArgb(Convert.ToInt32(_Rowview.Row[DmmauFields.MaArgb.Name].ToString())); }
+                    catch { }
                     try { chk_LAMAUGOC.Checked = Convert.ToBoolean(_Rowview.Row[DmmauFields.Lamaugoc.Name].ToString()); }
                     catch { }
 
@@ -375,9 +375,6 @@ namespace GD.BBPH.APP.DANHMUC
                 _DmmauEntity.Ngaysua = DateTime.Now;
                 _DmmauEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                 _DmmauManager.Update(_DmmauEntity);
-
-                _str_MAHIEU_PK = _DmmauEntity.Mamau;
-
                 foreach (ThanhphanmauEntity _ThanhphanmauEntity in _ThanhphanmauEntityCol)
                 {
                     if (_ThanhphanmauEntity.IsNew)
@@ -407,9 +404,9 @@ namespace GD.BBPH.APP.DANHMUC
         #region Button
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
-            string _Maydet = txt_MAMAU.Text.Trim();
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_TENMAU.Text = string.Empty;
+            txt_MAARGB.BackColor = Color.FromArgb(-986896);//----- Màu trắng: -1; Màu đen: -16777216; Màu ReadOnly: -986896
             r_Insert = DT_DMMAU.NewRow();
             DT_DMMAU.Rows.Add(r_Insert);
             BS_DMMAU.Position = DT_DMMAU.Rows.Count;
@@ -419,9 +416,10 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TPMAU.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
             GRID_TPMAU.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             MAHIEU_PK = "";
+            txt_MAMAU.Text = LIB.Procedures.GetMadanhmuc(new DmmauManager().SelectAllRDT(), DmmauFields.Mamau.Name, "M", 3);
             txt_MAMAU.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MAARGB }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_DMMAU.Enabled = false;
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_CHONMAU.Enabled = true;
@@ -434,7 +432,7 @@ namespace GD.BBPH.APP.DANHMUC
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {  }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MAMAU, txt_MAARGB }));
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             }
             GRID_TPMAU.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;

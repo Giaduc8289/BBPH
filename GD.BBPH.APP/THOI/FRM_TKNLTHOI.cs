@@ -146,7 +146,7 @@ namespace GD.BBPH.APP.THOI
                         MAHIEU_PK = _Rowview.Row[TknguyenlieuthoiFields.Ngay.Name].ToString();
 
                     //txt_MAHIEU.Text = _Rowview.Row[TknguyenlieuthoiFields.Id.Name].ToString();
-                    txt_Ngaythongke.Text = _Rowview.Row[TknguyenlieuthoiFields.Ngay.Name].ToString();
+                    txt_NGAY.Text = _Rowview.Row[TknguyenlieuthoiFields.Ngay.Name].ToString();
                     txt_Ca.Text = _Rowview.Row[TknguyenlieuthoiFields.Ca.Name].ToString();
 
                     SHOWGRID(MAHIEU_PK);
@@ -184,7 +184,7 @@ namespace GD.BBPH.APP.THOI
             }
             else
             {
-                DT_TKNLTHOI_CHITIET_FILL = new TknguyenlieuthoiManager().SelectByNgayCaRDT(Convert.ToDateTime(txt_Ngaythongke.Text.Trim()), Convert.ToInt32(txt_Ca.Text.Trim()));
+                DT_TKNLTHOI_CHITIET_FILL = new TknguyenlieuthoiManager().SelectByNgayCaRDT(Convert.ToDateTime(txt_NGAY.Text.Trim()), Convert.ToInt32(txt_Ca.Text.Trim()));
 
                 DataView Source_View = new DataView(DT_TKNLTHOI_CHITIET_FILL);
                 BS_TKNLTHOI_CHITIET = new BindingSource();
@@ -271,9 +271,9 @@ namespace GD.BBPH.APP.THOI
         #endregion
         private string Save_Data(string _str_MAHIEU_PK)
         {
-            DateTime _ngay = Convert.ToDateTime(txt_Ngaythongke.Text.Trim());
+            DateTime _ngay = Convert.ToDateTime(txt_NGAY.Text.Trim());
             int _ca = Convert.ToInt32(txt_Ca.Text.Trim());
-          
+
             EntityCollection _TknguyenlieuthoiEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_TKNLTHOI_CHITIET.GetDataRows();
             foreach (GridEXRow _grid in listGrid)
@@ -289,6 +289,7 @@ namespace GD.BBPH.APP.THOI
                 catch { }
                 try { _TknguyenlieuthoiEntity.Klxuat = Convert.ToDecimal(_view.Row[TknguyenlieuthoiFields.Klxuat.Name].ToString()); }
                 catch { }
+
                 #region xét isnew
                 try { _TknguyenlieuthoiEntity.Id = Convert.ToInt64(_view[TknguyenlieuthoiFields.Id.Name].ToString()); }
                 catch { }
@@ -299,49 +300,40 @@ namespace GD.BBPH.APP.THOI
                     EntityCollection drDHCT = (new TknguyenlieuthoiManager()).SelectById(_TknguyenlieuthoiEntity.Id);
                     if (drDHCT.Count > 0)
                     {
-                        //_TknguyenlieuthoiEntity.Ngaysua = DateTime.Now;
-                        //_TknguyenlieuthoiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _TknguyenlieuthoiEntity.Ngaysua = DateTime.Now;
+                        _TknguyenlieuthoiEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
                         _TknguyenlieuthoiEntity.IsNew = false;
                     }
-                    //else
-                    //{
-                    //    _TknguyenlieuthoiEntity.Ngaytao = DateTime.Now;
-                    //    _TknguyenlieuthoiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-                    //}
+                    else
+                    {
+                        _TknguyenlieuthoiEntity.Ngaytao = DateTime.Now;
+                        _TknguyenlieuthoiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
                 }
                 #endregion
+
                 if (!string.IsNullOrEmpty(_TknguyenlieuthoiEntity.Manguyenlieu))
                     _TknguyenlieuthoiEntityCol.Add(_TknguyenlieuthoiEntity);
             }
-            //if (string.IsNullOrEmpty(_str_MAHIEU_PK))
-            //{
-            //    //_TknguyenlieuthoiEntity.Ngaytao = DateTime.Now;
-            //    //_TknguyenlieuthoiEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
-            //    _str_MAHIEU_PK = _TknguyenlieuthoiManager.InsertV2(_TknguyenlieuthoiEntity, r_Insert, DT_TKNLTHOI, BS_TKNLTHOI);
-            //    _TknguyenlieuthoiManager.InsertCollection(_TknguyenlieuthoiEntityCol);
-            //    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_TknguyenlieuthoiManager.Convert(_TknguyenlieuthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            //    btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
-            //    BS_TKNLTHOI.ResetCurrentItem();
-            //}
-            //else
-            //{
-                //_TknguyenlieuthoiManager.Update(_TknguyenlieuthoiEntity);
-                foreach (TknguyenlieuthoiEntity _TknguyenlieuthoiEntity in _TknguyenlieuthoiEntityCol)
+
+            _str_MAHIEU_PK = txt_NGAY.Text.Trim();
+
+            foreach (TknguyenlieuthoiEntity _TknguyenlieuthoiEntity in _TknguyenlieuthoiEntityCol)
+            {
+                if (_TknguyenlieuthoiEntity.IsNew)
                 {
-                    if (_TknguyenlieuthoiEntity.IsNew)
-                    {
-                        DataRow _r_Insert = DT_TKNLTHOI_CHITIET.NewRow();
-                        DT_TKNLTHOI_CHITIET.Rows.Add(_r_Insert);
-                        _TknguyenlieuthoiManager.InsertV2(_TknguyenlieuthoiEntity, _r_Insert, DT_TKNLTHOI_CHITIET, BS_TKNLTHOI_CHITIET);
-                    }
-                    else _TknguyenlieuthoiManager.Update(_TknguyenlieuthoiEntity);
+                    DataRow _r_Insert = DT_TKNLTHOI_CHITIET.NewRow();
+                    DT_TKNLTHOI_CHITIET.Rows.Add(_r_Insert);
+                    _TknguyenlieuthoiManager.InsertV2(_TknguyenlieuthoiEntity, _r_Insert, DT_TKNLTHOI_CHITIET, BS_TKNLTHOI_CHITIET);
                 }
-            //GRID_TKNLTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Id.Name].Value = _TknguyenlieuthoiEntity.Id;
-                GRID_TKNLTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Ngay.Name].Value = _ngay;
-                GRID_TKNLTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Ca.Name].Value = _ca;
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_TknguyenlieuthoiManager.Convert(_TknguyenlieuthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
-            //}
+                else _TknguyenlieuthoiManager.Update(_TknguyenlieuthoiEntity);
+            }
+
+            GRID_TKNLTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Ngay.Name].Value = _ngay;
+            GRID_TKNLTHOI.CurrentRow.Cells[TknguyenlieuthoiFields.Ca.Name].Value = _ca;
+            GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_TknguyenlieuthoiManager.Convert(_TknguyenlieuthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+
             return _str_MAHIEU_PK;
         }
 
@@ -372,7 +364,7 @@ namespace GD.BBPH.APP.THOI
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_Ngaythongke }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAY }));
                 //txt_TENHIEU.Focus();
             }
             GRID_TKNLTHOI_CHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
@@ -451,14 +443,14 @@ namespace GD.BBPH.APP.THOI
             ////}
             //else
             //{
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
-                MAHIEU_PK = Save_Data(MAHIEU_PK);
-                GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
-                GRID_TKNLTHOI.Enabled = true;
-                btn_THEMMOI.Focus();
-                GRID_TKNLTHOI_CHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
-                GRID_TKNLTHOI_CHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
-                GRID_TKNLTHOI_CHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
+            MAHIEU_PK = Save_Data(MAHIEU_PK);
+            GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
+            GRID_TKNLTHOI.Enabled = true;
+            btn_THEMMOI.Focus();
+            GRID_TKNLTHOI_CHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_TKNLTHOI_CHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
+            GRID_TKNLTHOI_CHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
 
             //}
         }

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 5, 2022 10:08:18 AM
+// Code is generated on: Saturday, November 5, 2022 2:55:20 PM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1169,7 +1169,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Inits TknguyenlieuthoiEntity's mappings</summary>
 		private void InitTknguyenlieuthoiEntityMappings()
 		{
-			base.AddElementMapping( "TknguyenlieuthoiEntity", "BBPH", @"dbo", "Tknguyenlieuthoi", 7 );
+			base.AddElementMapping( "TknguyenlieuthoiEntity", "BBPH", @"dbo", "Tknguyenlieuthoi", 11 );
 			base.AddElementFieldMapping( "TknguyenlieuthoiEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "TknguyenlieuthoiEntity", "Ngay", "Ngay", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 1 );
 			base.AddElementFieldMapping( "TknguyenlieuthoiEntity", "Ca", "Ca", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 2 );
@@ -1177,6 +1177,10 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "TknguyenlieuthoiEntity", "Tennguyenlieu", "Tennguyenlieu", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 4 );
 			base.AddElementFieldMapping( "TknguyenlieuthoiEntity", "Klnhap", "Klnhap", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 5 );
 			base.AddElementFieldMapping( "TknguyenlieuthoiEntity", "Klxuat", "Klxuat", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 6 );
+			base.AddElementFieldMapping( "TknguyenlieuthoiEntity", "Ngaytao", "Ngaytao", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 7 );
+			base.AddElementFieldMapping( "TknguyenlieuthoiEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 8 );
+			base.AddElementFieldMapping( "TknguyenlieuthoiEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 9 );
+			base.AddElementFieldMapping( "TknguyenlieuthoiEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 10 );
 		}
 		/// <summary>Inits TruccuahangEntity's mappings</summary>
 		private void InitTruccuahangEntityMappings()
