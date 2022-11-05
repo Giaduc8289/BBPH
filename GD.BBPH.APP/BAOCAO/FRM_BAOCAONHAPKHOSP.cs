@@ -182,12 +182,12 @@ namespace GD.BBPH.APP.BAOCAO
             txt_LYDO.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MALYDO.Text.Trim()) || DT_DMLYDONHAPXUAT == null || DT_DMLYDONHAPXUAT.Rows.Count == 0) return;
             string Str_MASIEUTHI = txt_MALYDO.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaKhach(Str_MASIEUTHI, DT_DMKHO);
+            _RowViewSelect = checkmaKhach(Str_MASIEUTHI, DT_DMLYDONHAPXUAT);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
                     new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LYDONHAPXUAT.xml",
-                        DT_DMKHO, DmlydonhapxuatFields.Malydo.Name, Str_MASIEUTHI);
+                        DT_DMLYDONHAPXUAT, DmlydonhapxuatFields.Malydo.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
