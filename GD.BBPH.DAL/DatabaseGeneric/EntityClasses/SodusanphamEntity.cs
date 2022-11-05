@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 4, 2022 3:41:00 AM
+// Code is generated on: Saturday, November 5, 2022 10:08:17 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -473,6 +473,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sokg", fieldHashtable);
 		}
 		#endregion
 
@@ -669,6 +672,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)SodusanphamFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)SodusanphamFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Sokg property of the Entity Sodusanpham<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Sodusanpham"."Sokg"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sokg
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)SodusanphamFieldIndex.Sokg, false); }
+			set	{ SetValue((int)SodusanphamFieldIndex.Sokg, value); }
 		}
 
 

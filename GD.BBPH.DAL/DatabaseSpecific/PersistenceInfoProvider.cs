@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 4, 2022 3:41:01 AM
+// Code is generated on: Saturday, November 5, 2022 10:08:18 AM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1122,7 +1122,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Inits SodusanphamEntity's mappings</summary>
 		private void InitSodusanphamEntityMappings()
 		{
-			base.AddElementMapping( "SodusanphamEntity", "BBPH", @"dbo", "Sodusanpham", 12 );
+			base.AddElementMapping( "SodusanphamEntity", "BBPH", @"dbo", "Sodusanpham", 13 );
 			base.AddElementFieldMapping( "SodusanphamEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "SodusanphamEntity", "Ngaykiemke", "Ngaykiemke", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 1 );
 			base.AddElementFieldMapping( "SodusanphamEntity", "Makho", "Makho", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 2 );
@@ -1135,6 +1135,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "SodusanphamEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 9 );
 			base.AddElementFieldMapping( "SodusanphamEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 10 );
 			base.AddElementFieldMapping( "SodusanphamEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 11 );
+			base.AddElementFieldMapping( "SodusanphamEntity", "Sokg", "Sokg", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 12 );
 		}
 		/// <summary>Inits ThamsoEntity's mappings</summary>
 		private void InitThamsoEntityMappings()

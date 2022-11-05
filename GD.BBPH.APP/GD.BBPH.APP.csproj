@@ -951,6 +951,7 @@
     <Content Include="XMLCONFIG\FRM_DMHANG_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHACH_CHON.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMANG_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMMANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU.xml" />
@@ -1000,6 +1001,7 @@
     <Content Include="XMLCONFIG\FRM_KQTHOICHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_LYDONHAPXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDOXUATKHO.xml" />
+    <Content Include="XMLCONFIG\FRM_MANGCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_MAUCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOMANGCHITIET.xml">
