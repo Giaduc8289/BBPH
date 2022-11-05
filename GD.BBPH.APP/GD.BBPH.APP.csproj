@@ -171,6 +171,12 @@
     <Compile Include="BAOCAO\FRM_BAOCAONHAPKHOSP.Designer.cs">
       <DependentUpon>FRM_BAOCAONHAPKHOSP.cs</DependentUpon>
     </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAOTONSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BAOCAOTONSP.Designer.cs">
+      <DependentUpon>FRM_BAOCAOTONSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="BAOCAO\FRM_BCKQHOANTHIENCHITIET.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,12 @@
     </Compile>
     <Compile Include="BAOCAO\FRM_BCKQINCHITIET.Designer.cs">
       <DependentUpon>FRM_BCKQINCHITIET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BCXUATKHOMANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BCXUATKHOMANG.designer.cs">
+      <DependentUpon>FRM_BCXUATKHOMANG.cs</DependentUpon>
     </Compile>
     <Compile Include="BAOCAO\FRM_REPORTVIEWER.cs">
       <SubType>Form</SubType>
@@ -636,6 +648,9 @@
     <EmbeddedResource Include="BAOCAO\FRM_BAOCAONHAPKHOSP.resx">
       <DependentUpon>FRM_BAOCAONHAPKHOSP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BAOCAOTONSP.resx">
+      <DependentUpon>FRM_BAOCAOTONSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCKQHOANTHIENCHITIET.resx">
       <DependentUpon>FRM_BCKQHOANTHIENCHITIET.cs</DependentUpon>
     </EmbeddedResource>
@@ -665,6 +680,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCKQINCHITIET.resx">
       <DependentUpon>FRM_BCKQINCHITIET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BCXUATKHOMANG.resx">
+      <DependentUpon>FRM_BCXUATKHOMANG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
@@ -820,6 +838,7 @@
     </Compile>
     <EmbeddedResource Include="RDLC\BAOCAOHANGTRALAI.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAONHAPKHOMANG.rdlc" />
+    <EmbeddedResource Include="RDLC\BAOCAOTONKHOSP.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAONHAPKHOSP.rdlc" />
     <EmbeddedResource Include="RDLC\KQHOANTHIENCHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQTHOITONGHOP.rdlc" />
@@ -830,6 +849,7 @@
     <EmbeddedResource Include="RDLC\BAOCAODONHANG.rdlc" />
     <EmbeddedResource Include="RDLC\KQCHIACHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQINCHITIET.rdlc" />
+    <EmbeddedResource Include="RDLC\BAOCAOXUATKHOMANG.rdlc" />
     <EmbeddedResource Include="THOI\FRM_KQTHOI.resx">
       <DependentUpon>FRM_KQTHOI.cs</DependentUpon>
     </EmbeddedResource>
@@ -926,6 +946,7 @@
     <Content Include="IMG\TeamViewer.exe" />
     <Content Include="IMG\waiting.xml" />
     <Content Include="Logo-App-Ico.ico" />
+    <Content Include="XMLCONFIG\FRM_BAOGIA_D_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_BAOGIA_D.xml" />
     <Content Include="XMLCONFIG\FRM_BAOGIA_H.xml" />
     <Content Include="XMLCONFIG\FRM_CONGSUATMAY.xml" />
@@ -944,7 +965,6 @@
     <Content Include="XMLCONFIG\FRM_DMMANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAUIN.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAY.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1013,37 +1033,11 @@
     <Content Include="XMLCONFIG\FRM_TKNLTHOI_CHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_TPMAU.xml" />
     <Content Include="XMLCONFIG\FRM_TRUCCUAHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOA.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOHANGHOACHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOMANG.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOMANHTRANG.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOMANGCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_XUATKHOMANHTRANGCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_XUATKHOPHE.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHONGUYENLIEU.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHONGUYENLIEUCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_XUATKHOPE.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOPE.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOPECHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_NHAPKHOPECHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="XMLCONFIG\FRM_XUATKHOVATTU.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOVATTU.xml" />
-    <Content Include="XMLCONFIG\FRM_XUATKHOPHECHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_XUATKHOVATTUCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_NHAPKHOVATTUCHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1095,17 +1089,11 @@
     <Content Include="XMLCONFIG\FRM_NCTRANGTHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMNVLTRANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMNVLTRANGCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_THANHPHANPE.xml" />
-    <Content Include="XMLCONFIG\FRM_THANHPHANPECHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANHCHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_KIEMKESOI.xml" />
-    <Content Include="XMLCONFIG\FRM_TKTHONGTINCUONMANH.xml" />
-    <Content Include="XMLCONFIG\FRM_TKKLCUONMANH.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOHT.xml" />
-    <Content Include="XMLCONFIG\FRM_TKTHONGTINCUONMANHCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_TKPHECATONG.xml" />
     <Content Include="XMLCONFIG\FRM_CONGTHAYKHO.xml" />
     <Content Include="XMLCONFIG\FRM_CONGTHAYKHOCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGIALUONG.xml" />
@@ -1122,23 +1110,16 @@
     <Content Include="XMLCONFIG\FRM_DMKHACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHO.xml" />
     <Content Include="XMLCONFIG\FRM_DMLOAI.xml" />
-    <Content Include="XMLCONFIG\FRM_DMMAUSAC.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHAMAY.xml" />
     <Content Include="XMLCONFIG\FRM_DMPHONGBAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMTRONGLUONG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANGCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KHSXSOITHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_THANHPHANSOI.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_NCMANHTHANG.xml" />
     <Content Include="XMLCONFIG\FRM_NCSOITHANG.xml" />
     <Content Include="XMLCONFIG\FRM_ROLES.xml" />
-    <Content Include="XMLCONFIG\FRM_THANHPHANSOICHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_TKKLCUONMANHCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPKHOHTCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_TKPHECATONGCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_USERS.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPMANH_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANG.xml" />

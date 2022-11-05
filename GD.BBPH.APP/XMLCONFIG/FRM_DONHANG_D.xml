@@ -30,7 +30,7 @@
     </xs:element>
   </xs:schema>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Id</name>
     <headerText>Id</headerText>
     <BackColor>0</BackColor>
@@ -39,7 +39,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Madon</name>
     <headerText>Mã đơn</headerText>
     <BackColor>0</BackColor>
@@ -48,7 +48,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaydat</name>
     <headerText>Ngày đặt</headerText>
     <BackColor>0</BackColor>
@@ -57,7 +57,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Makhach</name>
     <headerText>Mã khách</headerText>
     <BackColor>0</BackColor>
@@ -66,7 +66,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Sobaogia</name>
     <headerText>Số báo giá</headerText>
     <BackColor>0</BackColor>
@@ -75,7 +75,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Loaihang</name>
     <headerText>Loại hàng</headerText>
     <BackColor>0</BackColor>
@@ -120,7 +120,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaygiao</name>
     <headerText>Ngày tạo</headerText>
     <BackColor>0</BackColor>

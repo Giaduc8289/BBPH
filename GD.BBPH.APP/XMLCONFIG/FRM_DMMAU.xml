@@ -50,6 +50,15 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>MaArgb</name>
+    <headerText>Màu</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>35</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Lamaugoc</name>
     <headerText>Là màu gốc</headerText>
     <BackColor>0</BackColor>
