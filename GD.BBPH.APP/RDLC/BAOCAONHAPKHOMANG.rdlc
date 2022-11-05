@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>BÁO CÁO NHẬP KHO SẢN PHẨM</Value>
+                <Value>BÁO CÁO NHẬP KHO MÀNG</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>20pt</FontSize>
@@ -24,9 +24,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>2.0217cm</Top>
-        <Left>0cm</Left>
+        <Left>0.02646cm</Left>
         <Height>0.88322cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>27.48243cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -47,6 +47,8 @@
                 <Value>=First(Fields!Thoigian.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -56,10 +58,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.01075cm</Top>
-        <Left>0cm</Left>
-        <Height>0.6cm</Height>
-        <Width>28.88472cm</Width>
+        <Top>3.08131cm</Top>
+        <Left>0.02646cm</Left>
+        <Height>0.7867cm</Height>
+        <Width>27.48243cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -93,7 +95,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.3175cm</Top>
-        <Left>1.49056cm</Left>
+        <Left>1.51702cm</Left>
         <Height>0.473cm</Height>
         <Width>7.199cm</Width>
         <ZIndex>2</ZIndex>
@@ -128,7 +130,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.81167cm</Top>
-        <Left>1.49056cm</Left>
+        <Left>1.51702cm</Left>
         <Height>0.473cm</Height>
         <Width>7.199cm</Width>
         <ZIndex>3</ZIndex>
@@ -147,7 +149,7 @@
         <Value>logo_daihuu1</Value>
         <Sizing>FitProportional</Sizing>
         <Top>0cm</Top>
-        <Left>0cm</Left>
+        <Left>0.02646cm</Left>
         <Height>1.77883cm</Height>
         <Width>1.49056cm</Width>
         <ZIndex>4</ZIndex>
@@ -164,9 +166,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Sanpham.Value, "Thamso")</Value>
+                <Value>=First(Fields!Mang.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -176,10 +180,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.69217cm</Top>
-        <Left>0cm</Left>
-        <Height>0.6cm</Height>
-        <Width>28.88472cm</Width>
+        <Top>4.0444cm</Top>
+        <Left>0.02646cm</Left>
+        <Height>0.81167cm</Height>
+        <Width>27.48243cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -201,6 +205,8 @@
                 <Value>=First(Fields!Kho.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -210,10 +216,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.39067cm</Top>
-        <Left>0cm</Left>
-        <Height>0.6cm</Height>
-        <Width>28.88472cm</Width>
+        <Top>5.03245cm</Top>
+        <Left>0.02646cm</Left>
+        <Height>0.75875cm</Height>
+        <Width>27.48243cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -235,6 +241,8 @@
                 <Value>=First(Fields!Lydo.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>13pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -244,10 +252,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.22676cm</Top>
+        <Top>5.96759cm</Top>
         <Left>0cm</Left>
-        <Height>0.56825cm</Height>
-        <Width>28.88472cm</Width>
+        <Height>0.70054cm</Height>
+        <Width>27.48243cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -263,31 +271,31 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.68521cm</Width>
+              <Width>2.5294cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.95413cm</Width>
+              <Width>3.79832cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.04945cm</Width>
+              <Width>5.89364cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.39945cm</Width>
+              <Width>2.24364cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.10313cm</Width>
+              <Width>1.94732cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.99729cm</Width>
+              <Width>1.84148cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.97626cm</Width>
+              <Width>2.82045cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.8175cm</Width>
+              <Width>2.66169cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.55833cm</Width>
+              <Width>3.40252cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -391,7 +399,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Sản phẩm</Value>
+                              <Value>Màng</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -668,7 +676,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Ngay.Value</Value>
+                              <Value>=Format(Fields!Ngay.Value, "dd/mm")</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -690,6 +698,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1302,14 +1311,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox220">
+                    <Textbox Name="Tenmang">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Tensanpham.Value</Value>
+                              <Value>=Fields!Tenmang.Value</Value>
                               <Style>
                                 <FontStyle>Italic</FontStyle>
                               </Style>
@@ -1318,7 +1327,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox220</rd:DefaultName>
+                      <rd:DefaultName>Tenmang</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1882,10 +1891,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Ketqua</DataSetName>
-        <Top>6.20957cm</Top>
-        <Left>0.34397cm</Left>
+        <Top>7.00332cm</Top>
+        <Left>0.31751cm</Left>
         <Height>3cm</Height>
-        <Width>28.54075cm</Width>
+        <Width>27.13846cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -1894,15 +1903,15 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>9.70414cm</Height>
+    <Height>11.71497cm</Height>
     <Style />
   </Body>
-  <Width>31.01914cm</Width>
+  <Width>31.0456cm</Width>
   <Page>
     <PageHeight>21cm</PageHeight>
     <PageWidth>29.7cm</PageWidth>
-    <LeftMargin>0.3cm</LeftMargin>
-    <RightMargin>0.3cm</RightMargin>
+    <LeftMargin>1cm</LeftMargin>
+    <RightMargin>1cm</RightMargin>
     <TopMargin>1cm</TopMargin>
     <BottomMargin>1cm</BottomMargin>
     <ColumnSpacing>1.27cm</ColumnSpacing>
@@ -1963,6 +1972,10 @@
         </Field>
         <Field Name="Kho">
           <DataField>Kho</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mang">
+          <DataField>Mang</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
