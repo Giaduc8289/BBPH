@@ -239,7 +239,6 @@
             this.txt_MAKHACH.Regular_Expression = null;
             this.txt_MAKHACH.Size = new System.Drawing.Size(86, 20);
             this.txt_MAKHACH.TabIndex = 4;
-            this.txt_MAKHACH.TabStop = false;
             this.txt_MAKHACH.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKHACH_Validating);
             // 
             // FRM_BCKQINCHITIET

@@ -105,7 +105,7 @@ namespace GD.BBPH.APP.BAOCAO
                 parameters[0] = new SqlParameter("@Tungay", _Tungay);
                 parameters[1] = new SqlParameter("@Denngay", _Denngay);
                 parameters[2] = new SqlParameter("@Makho", _Makho);
-                parameters[3] = new SqlParameter("@Malydo	", _Malydo);
+                parameters[3] = new SqlParameter("@Malydo", _Malydo);
                 parameters[4] = new SqlParameter("@Masanpham", _Masanpham);
                 _DataAccessAdapter.CallRetrievalStoredProcedure("Baocaoxuathang", parameters, dsKetqua, 0);
                 _DataAccessAdapter.CloseConnection();
@@ -127,6 +127,8 @@ namespace GD.BBPH.APP.BAOCAO
                     dr["Kho"] = txt_TENKHO.Text;
                 if (!string.IsNullOrEmpty(_Malydo))
                     dr["Lydo"] = txt_LYDO.Text;
+                if (!string.IsNullOrEmpty(_Malydo))
+                    dr["Sanpham"] = txt_MAHANG.Text;
                 dtThamso.Rows.Add(dr);
                 dsKetqua.Tables.Add(dtThamso);
                 #endregion
@@ -142,7 +144,7 @@ namespace GD.BBPH.APP.BAOCAO
         }
 
         #region Validate
-        private void txt_MAYIN_Validating(object sender, CancelEventArgs e)
+        private void txt_MAYKHO_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
             txt_TENKHO.Text = string.Empty;
@@ -153,7 +155,7 @@ namespace GD.BBPH.APP.BAOCAO
             {
                 ListviewJanus _frm_SingerRows_Select =
                     new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMKHO.xml",
-                        DT_DMKHO, DmcongnhanFields.Macn.Name, Str_MASIEUTHI);
+                        DT_DMKHO, DmkhoFields.Makho.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
@@ -174,7 +176,7 @@ namespace GD.BBPH.APP.BAOCAO
             catch { return null; }
         }
 
-        private void txt_MAKHACH_Validating(object sender, CancelEventArgs e)
+        private void txt_MALYDO_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
             txt_LYDO.Text = string.Empty;

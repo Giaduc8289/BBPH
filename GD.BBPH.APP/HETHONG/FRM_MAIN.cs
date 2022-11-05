@@ -1022,6 +1022,20 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Báo cáo 
+                case "FRM_BCKQTHOICHITIET":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCKQTHOICHITIET") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCKQTHOICHITIET()), mmru.Text);
+                    break;
+                case "FRM_BCKQTHOITONGHOP":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCKQTHOITONGHOP") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCKQTHOITONGHOP()), mmru.Text);
+                    break;
                 case "FRM_BCKQINCHITIET":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -1080,6 +1094,34 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAOXUATHANG()), mmru.Text);
                     break;
+                case "FRM_BAOCAOHANGTRALAI":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BAOCAOHANGTRALAI") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAOHANGTRALAI()), mmru.Text);
+                    break;
+                case "FRM_BAOCAONHAPKHOSP":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BAOCAONHAPKHOSP") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAONHAPKHOSP()), mmru.Text);
+                    break;
+                case "FRM_BAOCAONHAPKHOMANG":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BAOCAONHAPKHOMANG") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAONHAPKHOMANG()), mmru.Text);
+                    break;
+                case "FRM_BAOCAOTONSP":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BAOCAOTONSP") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAOTONSP()), mmru.Text);
+                    break;
                 case "FRM_BCXUATKHOMANG":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -1095,6 +1137,7 @@ namespace GD.BBPH.APP.HETHONG
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCTONKHOMANG()), mmru.Text);
                     break;
                 #endregion
+
                 #region Cửa sổ
                 case "WI_LOP":
                     this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);

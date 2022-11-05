@@ -141,7 +141,7 @@
             this.txt_MAKHO.Regular_Expression = null;
             this.txt_MAKHO.Size = new System.Drawing.Size(86, 20);
             this.txt_MAKHO.TabIndex = 2;
-            this.txt_MAKHO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAYIN_Validating);
+            this.txt_MAKHO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAYKHO_Validating);
             // 
             // label22
             // 
@@ -215,7 +215,7 @@
             this.txt_MALYDO.Size = new System.Drawing.Size(86, 20);
             this.txt_MALYDO.TabIndex = 4;
             this.txt_MALYDO.TabStop = false;
-            this.txt_MALYDO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKHACH_Validating);
+            this.txt_MALYDO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MALYDO_Validating);
             // 
             // label15
             // 

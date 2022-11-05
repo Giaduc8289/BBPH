@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 4, 2022 3:41:00 AM
+// Code is generated on: Saturday, November 5, 2022 10:08:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1086,6 +1086,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("SodusanphamEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)SodusanphamFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("SodusanphamEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)SodusanphamFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("SodusanphamEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)SodusanphamFieldIndex.Nguoisua, 50, 0, 0);
+			base.AddElementFieldInfo("SodusanphamEntity", "Sokg", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)SodusanphamFieldIndex.Sokg, 0, 3, 20);
 		}
 		/// <summary>Inits ThamsoEntity's FieldInfo objects</summary>
 		private void InitThamsoEntityInfos()

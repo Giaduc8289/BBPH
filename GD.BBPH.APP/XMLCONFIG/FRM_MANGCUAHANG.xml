@@ -30,7 +30,7 @@
     </xs:element>
   </xs:schema>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Id</name>
     <headerText>Id</headerText>
     <BackColor>0</BackColor>
@@ -39,7 +39,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Masp</name>
     <headerText>Masp</headerText>
     <BackColor>0</BackColor>
@@ -48,7 +48,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tensp</name>
     <headerText>Tensp</headerText>
     <BackColor>0</BackColor>
@@ -59,16 +59,16 @@
   <viewgrid>
     <value>1</value>
     <name>Mangin</name>
-    <headerText>Mangin</headerText>
+    <headerText>Màng in</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>50</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Mamang</name>
-    <headerText>Mamang</headerText>
+    <headerText>Mã màng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -77,7 +77,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tenmang</name>
-    <headerText>Tenmang</headerText>
+    <headerText>Tên màng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -86,7 +86,7 @@
   <viewgrid>
     <value>1</value>
     <name>Maloaikeo</name>
-    <headerText>Maloaikeo</headerText>
+    <headerText>Mã keo</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -95,7 +95,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tenloaikeo</name>
-    <headerText>Tenloaikeo</headerText>
+    <headerText>Tên keo</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -104,7 +104,7 @@
   <viewgrid>
     <value>1</value>
     <name>Maloaidongran</name>
-    <headerText>Maloaidongran</headerText>
+    <headerText>Mã đóng rắn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -113,7 +113,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tenloaidongran</name>
-    <headerText>Tenloaidongran</headerText>
+    <headerText>Tên đóng rắn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -122,7 +122,7 @@
   <viewgrid>
     <value>1</value>
     <name>Dinhmuckeokho</name>
-    <headerText>Dinhmuckeokho</headerText>
+    <headerText>ĐM keo khô</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -131,7 +131,7 @@
   <viewgrid>
     <value>1</value>
     <name>Dinhmucdongrankho</name>
-    <headerText>Dinhmucdongrankho</headerText>
+    <headerText>ĐM đóng rắn khô</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -140,7 +140,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tylekeokho</name>
-    <headerText>Tylekeokho</headerText>
+    <headerText>Tỷ lệ keo khô</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -149,7 +149,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tyledongrankho</name>
-    <headerText>Tyledongrankho</headerText>
+    <headerText>Tỷ lệ đóng rắn khô</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -158,7 +158,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tylekeo</name>
-    <headerText>Tylekeo</headerText>
+    <headerText>Tỷ lệ keo</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -167,7 +167,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tyledongran</name>
-    <headerText>Tyledongran</headerText>
+    <headerText>Tỷ lệ đóng rắn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -176,7 +176,7 @@
   <viewgrid>
     <value>1</value>
     <name>Dinhmuckeouot</name>
-    <headerText>Dinhmuckeouot</headerText>
+    <headerText>ĐM keo ướt</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -185,7 +185,7 @@
   <viewgrid>
     <value>1</value>
     <name>Dinhmucdongranuot</name>
-    <headerText>Dinhmucdongranuot</headerText>
+    <headerText>ĐM đóng rắn ướt</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -194,14 +194,14 @@
   <viewgrid>
     <value>1</value>
     <name>Dinhmucdungmoi</name>
-    <headerText>Dinhmucdungmoi</headerText>
+    <headerText>ĐM dung môi</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaytao</name>
     <headerText>Ngaytao</headerText>
     <BackColor>0</BackColor>
@@ -210,7 +210,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoitao</name>
     <headerText>Nguoitao</headerText>
     <BackColor>0</BackColor>
@@ -219,7 +219,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Ngaysua</name>
     <headerText>Ngaysua</headerText>
     <BackColor>0</BackColor>
@@ -228,7 +228,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Nguoisua</name>
     <headerText>Nguoisua</headerText>
     <BackColor>0</BackColor>
@@ -237,7 +237,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>
-    <name>tablename</name>
-    <headerText>Danh sách tendanhsach</headerText>
+    <name>Mangcuahang</name>
+    <headerText>Danh sách màng của hàng</headerText>
   </tablename>
 </NewDataSet>

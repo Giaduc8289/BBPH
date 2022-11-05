@@ -329,8 +329,8 @@ namespace GD.BBPH.APP.BANHANG
                 DataRow r_Detail = DT_DONDATHANG_D_FILL.NewRow();
                 //r_Detail[DonhangDFields.Loaihang.Name] = dr[BaogiaDFields.Loaihang.Name].ToString();
                 r_Detail[DonhangDFields.Masp.Name] = dr[BaogiaDFields.Masp.Name].ToString();
-                //r_Detail[DonhangDFields.Tenhang.Name] = dr[BaogiaDFields.Tenhang.Name].ToString();
-                //r_Detail[DonhangDFields.Chungloai.Name] = dr[BaogiaDFields.Chungloai.Name].ToString();
+                r_Detail[DonhangDFields.Tenhang.Name] = dr[BaogiaDFields.Tensp.Name].ToString();
+                //r_Detail[DonhangDFields.Soluong.Name] = dr[BaogiaDFields..Name].ToString();
                 //r_Detail[DonhangDFields.Mauin.Name] = dr[DmhangFields.Mauin.Name].ToString();
                 //r_Detail[DonhangDFields.Loai.Name] = dr[DmhangFields.Loai.Name].ToString();
                 //try
@@ -339,8 +339,8 @@ namespace GD.BBPH.APP.BANHANG
                 //        r_Detail[DonhangDFields.Ghichu.Name] = "Mk " + Convert.ToDateTime(dr[DmhangFields.Ngaymarket.Name].ToString()).ToString("dd/MM/yy");
                 //}
                 //catch { }
-                //try { r_Detail[DonhangDFields.Dongia.Name] = LIB.ConvertString.NumbertoDB(dr[BaogiaDFields.Dongiatongcovat.Name].ToString()); }
-                //catch { }
+                try { r_Detail[DonhangDFields.Dongia.Name] = LIB.ConvertString.NumbertoDB(dr[BaogiaDFields.DongiaVat.Name].ToString()); }
+                catch { }
                 r_Detail[DonhangDFields.Sobaogia.Name] = dr[BaogiaDFields.Sobaogia.Name].ToString();
 
                 DT_DONDATHANG_D_FILL.Rows.Add(r_Detail);

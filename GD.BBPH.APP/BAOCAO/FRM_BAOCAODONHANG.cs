@@ -124,9 +124,11 @@ namespace GD.BBPH.APP.BAOCAO
                 else
                     dr["Thoigian"] = "Từ ngày " + _Tungay.ToString("dd/MM/yyyy") + " Đến ngày " + _Denngay.ToString("dd/MM/yyyy");
                 if (!string.IsNullOrEmpty(_Manv))
-                    dr["Congnhan"] = txt_TENNV.Text;
+                    dr["Sanpham"] = txt_TENNV.Text;
                 if (!string.IsNullOrEmpty(_Makhach))
                     dr["Khachhang"] = txt_TENKHACH.Text;
+                if (!string.IsNullOrEmpty(_Makhach))
+                    dr["Congnhan"] = txt_TENKHACH.Text;
                 dtThamso.Rows.Add(dr);
                 dsKetqua.Tables.Add(dtThamso);
                 #endregion
