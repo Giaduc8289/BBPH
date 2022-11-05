@@ -404,15 +404,6 @@ namespace GD.BBPH.APP.DANHMUC
             return _str_MAHIEU_PK;      
         }
 
-        private void btn_CHONMAU_Click(object sender, EventArgs e)
-        {
-            ColorDialog colorDlg = new ColorDialog();
-            if (colorDlg.ShowDialog() == DialogResult.OK)
-            {
-                txt_MAARGB.BackColor = colorDlg.Color; // lấy color ở dòng này   
-            }
-        }
-
         #region Button
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
@@ -547,6 +538,15 @@ namespace GD.BBPH.APP.DANHMUC
                 btn_SAOCHEP.Enabled = true;
             }
         }
+        private void btn_CHONMAU_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDlg = new ColorDialog();
+            if (colorDlg.ShowDialog() == DialogResult.OK)
+            {
+                txt_MAARGB.BackColor = colorDlg.Color; // lấy color ở dòng này   
+            }
+        }
+
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             Close();
