@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 5, 2022 2:55:19 PM
+// Code is generated on: Sunday, November 6, 2022 4:00:16 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1407,11 +1407,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Kichthuoc);}
 		}
-		/// <summary>Creates a new DmmangEntity.Trongluong field instance</summary>
-		public static EntityField2 Trongluong
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Trongluong);}
-		}
 		/// <summary>Creates a new DmmangEntity.Mactpt field instance</summary>
 		public static EntityField2 Mactpt
 		{
@@ -1466,6 +1461,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Tenqcmang
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Tenqcmang);}
+		}
+		/// <summary>Creates a new DmmangEntity.Trongluong field instance</summary>
+		public static EntityField2 Trongluong
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Trongluong);}
 		}
 	}
 

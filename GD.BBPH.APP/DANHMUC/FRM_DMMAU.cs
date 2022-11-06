@@ -417,7 +417,7 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TPMAU.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             MAHIEU_PK = "";
             txt_MAMAU.Text = LIB.Procedures.GetMadanhmuc(new DmmauManager().SelectAllRDT(), DmmauFields.Mamau.Name, "M", 3);
-            txt_MAMAU.Focus();
+            txt_TENMAU.Focus();
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_MAARGB }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);

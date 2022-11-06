@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 5, 2022 2:55:18 PM
+// Code is generated on: Sunday, November 6, 2022 4:00:14 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -455,7 +455,6 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmmangEntity", "Makhach", typeof(System.String), false, false, false, false,  (int)DmmangFieldIndex.Makhach, 50, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Tenkhach", typeof(System.String), false, false, false, false,  (int)DmmangFieldIndex.Tenkhach, 250, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Kichthuoc", typeof(System.String), false, false, false, true,  (int)DmmangFieldIndex.Kichthuoc, 250, 0, 0);
-			base.AddElementFieldInfo("DmmangEntity", "Trongluong", typeof(System.String), false, false, false, true,  (int)DmmangFieldIndex.Trongluong, 250, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Mactpt", typeof(System.String), false, false, false, true,  (int)DmmangFieldIndex.Mactpt, 50, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)DmmangFieldIndex.Ngaytao, 0, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)DmmangFieldIndex.Nguoitao, 50, 0, 0);
@@ -467,6 +466,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmmangEntity", "Tenloaimang", typeof(System.String), false, false, false, true,  (int)DmmangFieldIndex.Tenloaimang, 250, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Maqcmang", typeof(System.String), false, false, false, true,  (int)DmmangFieldIndex.Maqcmang, 50, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Tenqcmang", typeof(System.String), false, false, false, true,  (int)DmmangFieldIndex.Tenqcmang, 250, 0, 0);
+			base.AddElementFieldInfo("DmmangEntity", "Trongluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmmangFieldIndex.Trongluong, 0, 3, 20);
 		}
 		/// <summary>Inits DmmauEntity's FieldInfo objects</summary>
 		private void InitDmmauEntityInfos()

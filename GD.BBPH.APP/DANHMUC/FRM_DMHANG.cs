@@ -181,15 +181,19 @@ namespace GD.BBPH.APP.DANHMUC
         #region Xử lý Grid chi tiết
         private void GRID_MAUCUAHANG_CellEdited(object sender, ColumnActionEventArgs e)
         {
-            if (e.Column.DataMember == MaucuahangFields.Mamau.Name)
+            try
             {
-                DmmauEntity _DmmauEntity = new DmmauManager().SelectOne(GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.Mamau.Name].Value.ToString());
-                if (_DmmauEntity!=null)
+                if (e.Column.DataMember == MaucuahangFields.Mamau.Name)
                 {
-                    GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.Tenmau.Name].Value = _DmmauEntity.Tenmau;
-                    GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.MaArgb.Name].Value = _DmmauEntity.MaArgb;
+                    DmmauEntity _DmmauEntity = new DmmauManager().SelectOne(GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.Mamau.Name].Value.ToString());
+                    if (_DmmauEntity != null)
+                    {
+                        GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.Tenmau.Name].Value = _DmmauEntity.Tenmau;
+                        GRID_MAUCUAHANG.CurrentRow.Cells[MaucuahangFields.MaArgb.Name].Value = _DmmauEntity.MaArgb;
+                    }
                 }
             }
+            catch { }
         }
         private void GRID_MAUCUAHANG_DeletingRecord(object sender, RowActionCancelEventArgs e)
         {
@@ -308,6 +312,29 @@ namespace GD.BBPH.APP.DANHMUC
                 frm_Dm.ShowDialog();
                 DT_DMMAU = new DmmauManager().SelectAllRDT();
             }
+            else if(e.KeyData == Keys.Add)
+            {
+                //DT_DMMAU = new DmmauManager().SelectAllRDT();
+                ListviewJanusC _frm_MultiRows_Select =
+                    new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMAU_CHON.xml", DT_DMMAU, DmmauFields.Mamau.Name, string.Empty);
+                _frm_MultiRows_Select.ShowDialog();
+                if (_frm_MultiRows_Select._RowsViewSelect == null) return;
+
+                foreach (DataRowView drv in _frm_MultiRows_Select._RowsViewSelect)
+                {
+                    DataRow r_Detail = DT_MAUCUAHANG.NewRow();
+                    r_Detail[MaucuahangFields.Mamau.Name] = drv.Row[DmmauFields.Mamau.Name].ToString();
+                    r_Detail[MaucuahangFields.Tenmau.Name] = drv.Row[DmmauFields.Tenmau.Name].ToString();
+                    r_Detail[MaucuahangFields.MaArgb.Name] = drv.Row[DmmauFields.MaArgb.Name].ToString();
+                    DT_MAUCUAHANG.Rows.Add(r_Detail);
+                }
+
+                DataView Source_View = new DataView(DT_MAUCUAHANG);
+                BS_MAUCUAHANG = new BindingSource();
+                BS_MAUCUAHANG.DataSource = Source_View;
+                GRID_MAUCUAHANG.DataSource = BS_MAUCUAHANG;
+                BS_MAUCUAHANG.Position = DT_MAUCUAHANG.Rows.Count;
+            }
         }
         //-----F4: Hiện form danh mục màng để cập nhật; +: Chọn màng
         private void GRID_MANGCUAHANG_KeyDown(object sender, KeyEventArgs e)
@@ -321,17 +348,26 @@ namespace GD.BBPH.APP.DANHMUC
             }
             else if(e.KeyData == Keys.Add)
             {
-                //DT_DMMANG = new DmmangManager().SelectAllRDT();
+                DataTable DT_DMMANG = new DmmangManager().SelectAllRDT();
+                DT_DMMANG.Columns.Add("Time");
                 ListviewJanusC _frm_MultiRows_Select =
                     new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANG_CHON.xml", DT_DMMANG, DmmangFields.Mamang.Name, string.Empty);
                 _frm_MultiRows_Select.ShowDialog();
                 if (_frm_MultiRows_Select._RowsViewSelect == null) return;
 
+                DataTable dt = new DataTable(); dt = DT_DMMANG.Clone();
                 foreach (DataRowView drv in _frm_MultiRows_Select._RowsViewSelect)
                 {
+                    DataRow dr = dt.NewRow();
+                    dr.ItemArray = drv.Row.ItemArray;
+                    dt.Rows.Add(dr);
+                }
+                DataRow[] arrDr = dt.Select("", "Time");
+                foreach (DataRow dr in arrDr)
+                {
                     DataRow r_Detail = DT_MANGCUAHANG.NewRow();
-                    r_Detail[MangcuahangFields.Mamang.Name] = drv.Row[DmmangFields.Mamang.Name].ToString();
-                    r_Detail[MangcuahangFields.Tenmang.Name] = drv.Row[DmmangFields.Tenmang.Name].ToString();
+                    r_Detail[MangcuahangFields.Mamang.Name] = dr[DmmangFields.Mamang.Name].ToString();
+                    r_Detail[MangcuahangFields.Tenmang.Name] = dr[DmmangFields.Tenmang.Name].ToString();
                     r_Detail[MangcuahangFields.Mangin.Name] = false;
                     DT_MANGCUAHANG.Rows.Add(r_Detail);
                 }
@@ -345,28 +381,42 @@ namespace GD.BBPH.APP.DANHMUC
         }
         private void GRID_MANGCUAHANG_CellEdited(object sender, ColumnActionEventArgs e)
         {
-            if (e.Column.DataMember == MangcuahangFields.Mamang.Name)
+            try
             {
-                DmmangEntity _DmmangEntity = new DmmangManager().SelectOne(GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Mamang.Name].Value.ToString());
-                if (_DmmangEntity != null)
+                if (e.Column.DataMember == MangcuahangFields.Mamang.Name)
                 {
-                    GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tenmang.Name].Value = _DmmangEntity.Tenmang;
+                    DmmangEntity _DmmangEntity = new DmmangManager().SelectOne(GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Mamang.Name].Value.ToString());
+                    if (_DmmangEntity != null)
+                    {
+                        GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tenmang.Name].Value = _DmmangEntity.Tenmang;
+                    }
                 }
+
                 //-----Cập nhật trường cấu trúc
                 string _strCautruc = "";
                 bool first = true;
+                int _solop = 0;
                 GridEXRow[] listGridMang = GRID_MANGCUAHANG.GetDataRows();
                 foreach (GridEXRow _grid in listGridMang)
                 {
                     DataRowView _view = (DataRowView)_grid.DataRow;
                     if (_view == null) continue;
                     DmmangEntity _dmmangEntity = new DmmangManager().SelectOne(_view[MangcuahangFields.Mamang.Name].ToString());
-                    _strCautruc += (first ? string.Empty : "/") + _dmmangEntity.Maloaimang.ToString() + Decimal.Round(LIB.ConvertString.NumbertoDB(_dmmangEntity.Doday.ToString())).ToString();
+                    _strCautruc += (first ? string.Empty : "/") + _dmmangEntity.Tenloaimang.ToString() + Decimal.Round(LIB.ConvertString.NumbertoDB(_dmmangEntity.Doday.ToString())).ToString();
                     first = false;
+                    _solop++;
                 }
                 txt_CAUTRUC.Text = _strCautruc;
 
+                //-----Cập nhật trường số lớp ghép
+                DataRow[] arrDr = DT_SOLOP.Select(DmquycachFields.Tenquycach.Name + "='" + _solop.ToString().Trim() + "'");
+                if (arrDr.Length > 0)
+                {
+                    txt_SOLOPGHEPMA.Text = arrDr[0][DmquycachFields.Maquycach.Name].ToString();
+                    txt_SOLOPGHEPMA_Validating(new object(), new CancelEventArgs());
+                }
             }
+            catch { }
         }
         #endregion
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 5, 2022 2:55:19 PM
+// Code is generated on: Sunday, November 6, 2022 4:00:15 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -448,9 +448,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Kichthuoc", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Trongluong", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Mactpt", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -482,6 +479,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tenqcmang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Trongluong", fieldHashtable);
 		}
 		#endregion
 
@@ -600,17 +600,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmmangFieldIndex.Kichthuoc, true); }
 			set	{ SetValue((int)DmmangFieldIndex.Kichthuoc, value); }
-		}
-
-		/// <summary> The Trongluong property of the Entity Dmmang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmmang"."Trongluong"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Trongluong
-		{
-			get { return (System.String)GetValue((int)DmmangFieldIndex.Trongluong, true); }
-			set	{ SetValue((int)DmmangFieldIndex.Trongluong, value); }
 		}
 
 		/// <summary> The Mactpt property of the Entity Dmmang<br/><br/>
@@ -732,6 +721,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmmangFieldIndex.Tenqcmang, true); }
 			set	{ SetValue((int)DmmangFieldIndex.Tenqcmang, value); }
+		}
+
+		/// <summary> The Trongluong property of the Entity Dmmang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmang"."Trongluong"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Trongluong
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmmangFieldIndex.Trongluong, false); }
+			set	{ SetValue((int)DmmangFieldIndex.Trongluong, value); }
 		}
 
 
