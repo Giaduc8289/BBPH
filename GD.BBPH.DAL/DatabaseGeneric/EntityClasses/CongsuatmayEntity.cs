@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, November 6, 2022 4:00:15 PM
+// Code is generated on: Monday, November 7, 2022 12:40:33 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -439,13 +439,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Tencongsuat", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Mamay", fieldHashtable);
+			_fieldsCustomProperties.Add("Dodaytu", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Madongmay", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Macongdoan", fieldHashtable);
+			_fieldsCustomProperties.Add("Dodayden", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Khotu", fieldHashtable);
@@ -460,10 +457,28 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Chieudaiden", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Dodaytu", fieldHashtable);
+			_fieldsCustomProperties.Add("Mamays", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Dodayden", fieldHashtable);
+			_fieldsCustomProperties.Add("Macongdoans", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Somaumas", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sohinhmas", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maloaimangs", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maqcthanhphams", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Makhachs", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Mahangs", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tocdo", fieldHashtable);
@@ -479,27 +494,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Somauma", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Sohinhma", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Maloaimang", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Maqcthanhpham", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Macautrucins", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Makhachs", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Mahangs", fieldHashtable);
 		}
 		#endregion
 
@@ -587,37 +581,26 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)CongsuatmayFieldIndex.Tencongsuat, value); }
 		}
 
-		/// <summary> The Mamay property of the Entity Congsuatmay<br/><br/>
+		/// <summary> The Dodaytu property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Mamay"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Dodaytu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Mamay
+		public virtual Nullable<System.Decimal> Dodaytu
 		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Mamay, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Mamay, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Dodaytu, false); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Dodaytu, value); }
 		}
 
-		/// <summary> The Madongmay property of the Entity Congsuatmay<br/><br/>
+		/// <summary> The Dodayden property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Madongmay"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Dodayden"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Madongmay
+		public virtual Nullable<System.Decimal> Dodayden
 		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Madongmay, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Madongmay, value); }
-		}
-
-		/// <summary> The Macongdoan property of the Entity Congsuatmay<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Macongdoan"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Macongdoan
-		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Macongdoan, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Macongdoan, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Dodayden, false); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Dodayden, value); }
 		}
 
 		/// <summary> The Khotu property of the Entity Congsuatmay<br/><br/>
@@ -664,26 +647,92 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)CongsuatmayFieldIndex.Chieudaiden, value); }
 		}
 
-		/// <summary> The Dodaytu property of the Entity Congsuatmay<br/><br/>
+		/// <summary> The Mamays property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Dodaytu"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Mamays"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Dodaytu
+		public virtual System.String Mamays
 		{
-			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Dodaytu, false); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Dodaytu, value); }
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Mamays, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Mamays, value); }
 		}
 
-		/// <summary> The Dodayden property of the Entity Congsuatmay<br/><br/>
+		/// <summary> The Macongdoans property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Dodayden"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Macongdoans"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Dodayden
+		public virtual System.String Macongdoans
 		{
-			get { return (Nullable<System.Decimal>)GetValue((int)CongsuatmayFieldIndex.Dodayden, false); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Dodayden, value); }
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Macongdoans, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Macongdoans, value); }
+		}
+
+		/// <summary> The Somaumas property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Somaumas"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Somaumas
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Somaumas, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Somaumas, value); }
+		}
+
+		/// <summary> The Sohinhmas property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Sohinhmas"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Sohinhmas
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Sohinhmas, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Sohinhmas, value); }
+		}
+
+		/// <summary> The Maloaimangs property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Maloaimangs"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maloaimangs
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maloaimangs, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Maloaimangs, value); }
+		}
+
+		/// <summary> The Maqcthanhphams property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Maqcthanhphams"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maqcthanhphams
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maqcthanhphams, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Maqcthanhphams, value); }
+		}
+
+		/// <summary> The Makhachs property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Makhachs"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Makhachs
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Makhachs, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Makhachs, value); }
+		}
+
+		/// <summary> The Mahangs property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Mahangs"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Mahangs
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Mahangs, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Mahangs, value); }
 		}
 
 		/// <summary> The Tocdo property of the Entity Congsuatmay<br/><br/>
@@ -739,83 +788,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)CongsuatmayFieldIndex.Nguoisua, value); }
-		}
-
-		/// <summary> The Somauma property of the Entity Congsuatmay<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Somauma"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Somauma
-		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Somauma, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Somauma, value); }
-		}
-
-		/// <summary> The Sohinhma property of the Entity Congsuatmay<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Sohinhma"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Sohinhma
-		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Sohinhma, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Sohinhma, value); }
-		}
-
-		/// <summary> The Maloaimang property of the Entity Congsuatmay<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Maloaimang"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Maloaimang
-		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maloaimang, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Maloaimang, value); }
-		}
-
-		/// <summary> The Maqcthanhpham property of the Entity Congsuatmay<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Maqcthanhpham"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Maqcthanhpham
-		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maqcthanhpham, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Maqcthanhpham, value); }
-		}
-
-		/// <summary> The Macautrucins property of the Entity Congsuatmay<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Macautrucins"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Macautrucins
-		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Macautrucins, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Macautrucins, value); }
-		}
-
-		/// <summary> The Makhachs property of the Entity Congsuatmay<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Makhachs"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Makhachs
-		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Makhachs, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Makhachs, value); }
-		}
-
-		/// <summary> The Mahangs property of the Entity Congsuatmay<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Mahangs"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Mahangs
-		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Mahangs, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Mahangs, value); }
 		}
 
 

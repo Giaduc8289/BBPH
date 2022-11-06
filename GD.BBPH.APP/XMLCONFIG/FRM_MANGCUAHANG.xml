@@ -84,6 +84,33 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
+    <value>2</value>
+    <name>Doday</name>
+    <headerText>Doday</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Maloaimang</name>
+    <headerText>Maloaimang</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Tenloaimang</name>
+    <headerText>Tenloaimang</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
     <value>1</value>
     <name>Maloaikeo</name>
     <headerText>Mã keo</headerText>

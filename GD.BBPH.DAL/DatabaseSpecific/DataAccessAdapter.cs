@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, November 1, 2022 8:33:10 AM
+// Code is generated on: Monday, November 7, 2022 12:40:34 AM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -31,7 +31,6 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 
 	/// <summary>
 	/// Data access adapter class, which controls the complete database interaction with the database for all objects.
@@ -273,43 +272,18 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			command.Dispose();
 			return true;
 		}
-
-        public virtual bool CallRetrievalStoredProcedure(string storedProcedureToCall, SqlParameter[] parameters, DataSet dataSetToFill, int timeout)
-        {
-            SqlCommand command = new SqlCommand(CreateCorrectStoredProcedureName(storedProcedureToCall));
-            command.Connection = (SqlConnection)base.GetActiveConnection();
-            if (base.IsTransactionInProgress)
-            {
-                command.Transaction = (SqlTransaction)base.PhysicalTransaction;
-            }
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandTimeout = timeout;
-
-            using (SqlDataAdapter adapter = (SqlDataAdapter)CreateNewPhysicalDataAdapter())
-            {
-                adapter.SelectCommand = command;
-
-                for (int i = 0; i < parameters.Length; i++)
-                {
-                    command.Parameters.Add(parameters[i]);
-                }
-                adapter.Fill(dataSetToFill);
-            }
-            command.Dispose();
-            return true;
-        }
-        #endregion
+		#endregion
 
 
-        /// <summary>
-        /// Executes the passed in retrievalquery and returns an open, ready to use IDataReader. The datareader's command behavior is set to the
-        /// readerBehavior passed in. If a transaction is in progress, the command is wired to the transaction.
-        /// </summary>
-        /// <param name="queryToExecute">The query to execute.</param>
-        /// <param name="readerBehavior">The reader behavior to set.</param>
-        /// <returns>Open, ready to use IDataReader</returns>
-        /// <remarks>Advanced functionality: be aware that the datareader returned is open, and the dataaccessadapter's connection is also open</remarks>
-        public override IDataReader FetchDataReader(IRetrievalQuery queryToExecute, CommandBehavior readerBehavior)
+		/// <summary>
+		/// Executes the passed in retrievalquery and returns an open, ready to use IDataReader. The datareader's command behavior is set to the
+		/// readerBehavior passed in. If a transaction is in progress, the command is wired to the transaction.
+		/// </summary>
+		/// <param name="queryToExecute">The query to execute.</param>
+		/// <param name="readerBehavior">The reader behavior to set.</param>
+		/// <returns>Open, ready to use IDataReader</returns>
+		/// <remarks>Advanced functionality: be aware that the datareader returned is open, and the dataaccessadapter's connection is also open</remarks>
+		public override IDataReader FetchDataReader(IRetrievalQuery queryToExecute, CommandBehavior readerBehavior)
 		{
 			if(queryToExecute.Command.CommandType == CommandType.StoredProcedure)
 			{
@@ -469,7 +443,6 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 						
 						// __LLBLGENPRO_USER_CODE_REGION_START InsertPersistenceInfoObjectsPredicate
 						// __LLBLGENPRO_USER_CODE_REGION_END
-						
 						OnInsertPersistenceObjects(currentPredicate);
 						break;
 				}
@@ -679,7 +652,6 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomDataAccessAdapterCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 		
 		#region Included Code

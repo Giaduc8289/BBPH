@@ -368,6 +368,9 @@ namespace GD.BBPH.APP.DANHMUC
                     DataRow r_Detail = DT_MANGCUAHANG.NewRow();
                     r_Detail[MangcuahangFields.Mamang.Name] = dr[DmmangFields.Mamang.Name].ToString();
                     r_Detail[MangcuahangFields.Tenmang.Name] = dr[DmmangFields.Tenmang.Name].ToString();
+                    r_Detail[MangcuahangFields.Doday.Name] = dr[DmmangFields.Doday.Name].ToString();
+                    r_Detail[MangcuahangFields.Maloaimang.Name] = dr[DmmangFields.Maloaimang.Name].ToString();
+                    r_Detail[MangcuahangFields.Tenloaimang.Name] = dr[DmmangFields.Tenloaimang.Name].ToString();
                     r_Detail[MangcuahangFields.Mangin.Name] = false;
                     DT_MANGCUAHANG.Rows.Add(r_Detail);
                 }
@@ -389,6 +392,10 @@ namespace GD.BBPH.APP.DANHMUC
                     if (_DmmangEntity != null)
                     {
                         GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tenmang.Name].Value = _DmmangEntity.Tenmang;
+                        GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Doday.Name].Value = _DmmangEntity.Doday;
+                        GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Maloaimang.Name].Value = _DmmangEntity.Maloaimang;
+                        GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tenloaimang.Name].Value = _DmmangEntity.Tenloaimang;
+                        GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Mangin.Name].Value = false;
                     }
                 }
 
@@ -701,6 +708,9 @@ namespace GD.BBPH.APP.DANHMUC
                 _MangcuahangEntity.Mangin = Convert.ToBoolean(_view[MangcuahangFields.Mangin.Name].ToString());
                 _MangcuahangEntity.Mamang = _view[MangcuahangFields.Mamang.Name].ToString();
                 _MangcuahangEntity.Tenmang = _view[MangcuahangFields.Tenmang.Name].ToString();
+                _MangcuahangEntity.Doday = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Doday.Name].ToString());
+                _MangcuahangEntity.Maloaimang = _view[MangcuahangFields.Maloaimang.Name].ToString();
+                _MangcuahangEntity.Tenloaimang = _view[MangcuahangFields.Tenloaimang.Name].ToString();
                 _MangcuahangEntity.Maloaikeo = _view[MangcuahangFields.Maloaikeo.Name].ToString();
                 _MangcuahangEntity.Tenloaikeo = _view[MangcuahangFields.Tenloaikeo.Name].ToString();
                 _MangcuahangEntity.Maloaidongran = _view[MangcuahangFields.Maloaidongran.Name].ToString();

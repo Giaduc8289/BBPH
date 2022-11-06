@@ -964,6 +964,7 @@
     <Content Include="XMLCONFIG\FRM_CTPTMANGCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_DINHMUCTHOIGIAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMCHUNGLOAI.xml" />
+    <Content Include="XMLCONFIG\FRM_DMCONGDOAN_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGNHAN_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMDONGMAY.xml">
       <SubType>Designer</SubType>
@@ -976,6 +977,9 @@
     <Content Include="XMLCONFIG\FRM_DMMANG.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMMAU.xml" />
+    <Content Include="XMLCONFIG\FRM_DMMAY_CHON.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="XMLCONFIG\FRM_DMMAY.xml">
       <SubType>Designer</SubType>
     </Content>

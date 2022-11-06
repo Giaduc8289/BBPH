@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, November 6, 2022 4:00:15 PM
+// Code is generated on: Monday, November 7, 2022 12:40:33 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -500,6 +500,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Doday", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maloaimang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenloaimang", fieldHashtable);
 		}
 		#endregion
 
@@ -816,6 +825,39 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)MangcuahangFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)MangcuahangFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Doday property of the Entity Mangcuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "mangcuahang"."Doday"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Doday
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)MangcuahangFieldIndex.Doday, false); }
+			set	{ SetValue((int)MangcuahangFieldIndex.Doday, value); }
+		}
+
+		/// <summary> The Maloaimang property of the Entity Mangcuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "mangcuahang"."Maloaimang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maloaimang
+		{
+			get { return (System.String)GetValue((int)MangcuahangFieldIndex.Maloaimang, true); }
+			set	{ SetValue((int)MangcuahangFieldIndex.Maloaimang, value); }
+		}
+
+		/// <summary> The Tenloaimang property of the Entity Mangcuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "mangcuahang"."Tenloaimang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenloaimang
+		{
+			get { return (System.String)GetValue((int)MangcuahangFieldIndex.Tenloaimang, true); }
+			set	{ SetValue((int)MangcuahangFieldIndex.Tenloaimang, value); }
 		}
 
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, November 6, 2022 4:00:14 PM
+// Code is generated on: Monday, November 7, 2022 12:40:32 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -107,12 +107,10 @@ namespace GD.BBPH.DAL
 		Macongsuat,
 		///<summary>Tencongsuat. </summary>
 		Tencongsuat,
-		///<summary>Mamay. </summary>
-		Mamay,
-		///<summary>Madongmay. </summary>
-		Madongmay,
-		///<summary>Macongdoan. </summary>
-		Macongdoan,
+		///<summary>Dodaytu. </summary>
+		Dodaytu,
+		///<summary>Dodayden. </summary>
+		Dodayden,
 		///<summary>Khotu. </summary>
 		Khotu,
 		///<summary>Khoden. </summary>
@@ -121,10 +119,22 @@ namespace GD.BBPH.DAL
 		Chieudaitu,
 		///<summary>Chieudaiden. </summary>
 		Chieudaiden,
-		///<summary>Dodaytu. </summary>
-		Dodaytu,
-		///<summary>Dodayden. </summary>
-		Dodayden,
+		///<summary>Mamays. </summary>
+		Mamays,
+		///<summary>Macongdoans. </summary>
+		Macongdoans,
+		///<summary>Somaumas. </summary>
+		Somaumas,
+		///<summary>Sohinhmas. </summary>
+		Sohinhmas,
+		///<summary>Maloaimangs. </summary>
+		Maloaimangs,
+		///<summary>Maqcthanhphams. </summary>
+		Maqcthanhphams,
+		///<summary>Makhachs. </summary>
+		Makhachs,
+		///<summary>Mahangs. </summary>
+		Mahangs,
 		///<summary>Tocdo. </summary>
 		Tocdo,
 		///<summary>Ngaytao. </summary>
@@ -135,20 +145,6 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
-		///<summary>Somauma. </summary>
-		Somauma,
-		///<summary>Sohinhma. </summary>
-		Sohinhma,
-		///<summary>Maloaimang. </summary>
-		Maloaimang,
-		///<summary>Maqcthanhpham. </summary>
-		Maqcthanhpham,
-		///<summary>Macautrucins. </summary>
-		Macautrucins,
-		///<summary>Makhachs. </summary>
-		Makhachs,
-		///<summary>Mahangs. </summary>
-		Mahangs,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1633,6 +1629,12 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Doday. </summary>
+		Doday,
+		///<summary>Maloaimang. </summary>
+		Maloaimang,
+		///<summary>Tenloaimang. </summary>
+		Tenloaimang,
 		/// <summary></summary>
 		AmountOfFields
 	}
