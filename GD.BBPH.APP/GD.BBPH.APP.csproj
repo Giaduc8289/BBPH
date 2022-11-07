@@ -405,6 +405,12 @@
     <Compile Include="DANHMUC\FRM_DMPARENT.designer.cs">
       <DependentUpon>FRM_DMPARENT.cs</DependentUpon>
     </Compile>
+    <Compile Include="DANHMUC\FRM_DINHMUCKEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DINHMUCKEO.designer.cs">
+      <DependentUpon>FRM_DINHMUCKEO.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMQUYCACH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -569,6 +575,7 @@
     <Compile Include="Manager\CongsuatmayManager.cs" />
     <Compile Include="Manager\CtptmangDManager.cs" />
     <Compile Include="Manager\CtptmangHManager.cs" />
+    <Compile Include="Manager\DinhmuckeoManager.cs" />
     <Compile Include="Manager\DinhmucthoigianManager.cs" />
     <Compile Include="Manager\DinhmucvattuManager.cs" />
     <Compile Include="Manager\DmcapmaManager.cs" />
@@ -789,6 +796,9 @@
     <EmbeddedResource Include="DANHMUC\FRM_DMPARENT.resx">
       <DependentUpon>FRM_DMPARENT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DINHMUCKEO.resx">
+      <DependentUpon>FRM_DINHMUCKEO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMQUYCACH.resx">
       <DependentUpon>FRM_DMQUYCACH.cs</DependentUpon>
     </EmbeddedResource>
@@ -988,6 +998,7 @@
     <Content Include="XMLCONFIG\FRM_CONGSUATMAY.xml" />
     <Content Include="XMLCONFIG\FRM_CTPTMANG.xml" />
     <Content Include="XMLCONFIG\FRM_CTPTMANGCHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_DINHMUCKEO.xml" />
     <Content Include="XMLCONFIG\FRM_DINHMUCTHOIGIAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMCHUNGLOAI.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGNHAN_CHON.xml" />

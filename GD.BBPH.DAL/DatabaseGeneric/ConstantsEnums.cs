@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 8:32:40 AM
+// Code is generated on: Monday, November 7, 2022 11:28:42 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -197,6 +197,48 @@ namespace GD.BBPH.DAL
 		Tenctpt,
 		///<summary>Ngayapdung. </summary>
 		Ngayapdung,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Dinhmuckeo.
+	/// </summary>
+	public enum DinhmuckeoFieldIndex:int
+	{
+		///<summary>Madinhmuc. </summary>
+		Madinhmuc,
+		///<summary>Tendinhmuc. </summary>
+		Tendinhmuc,
+		///<summary>Tenrutgon. </summary>
+		Tenrutgon,
+		///<summary>Makeo. </summary>
+		Makeo,
+		///<summary>Tenkeo. </summary>
+		Tenkeo,
+		///<summary>Madongran. </summary>
+		Madongran,
+		///<summary>Tendongran. </summary>
+		Tendongran,
+		///<summary>Hamluongkeo. </summary>
+		Hamluongkeo,
+		///<summary>Hamluongdongran. </summary>
+		Hamluongdongran,
+		///<summary>Tylephakeo. </summary>
+		Tylephakeo,
+		///<summary>Tylephadongran. </summary>
+		Tylephadongran,
+		///<summary>Dungmoi. </summary>
+		Dungmoi,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -2344,6 +2386,8 @@ namespace GD.BBPH.DAL
 		CtptmangDEntity,
 		///<summary>CtptmangH</summary>
 		CtptmangHEntity,
+		///<summary>Dinhmuckeo</summary>
+		DinhmuckeoEntity,
 		///<summary>Dinhmucthoigian</summary>
 		DinhmucthoigianEntity,
 		///<summary>Dinhmucvattu</summary>

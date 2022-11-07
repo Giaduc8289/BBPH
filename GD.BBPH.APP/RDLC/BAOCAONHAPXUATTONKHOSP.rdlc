@@ -26,7 +26,7 @@
         <Top>1.91994cm</Top>
         <Left>0cm</Left>
         <Height>1.02025cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>28.50076cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -61,7 +61,7 @@
         <Top>3.01075cm</Top>
         <Left>0cm</Left>
         <Height>0.79607cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>28.50076cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -183,7 +183,7 @@
         <Top>3.98321cm</Top>
         <Left>0cm</Left>
         <Height>0.81315cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>28.50076cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -219,7 +219,7 @@
         <Top>4.97275cm</Top>
         <Left>0cm</Left>
         <Height>0.78521cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>28.50076cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -235,49 +235,46 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.4935cm</Width>
+              <Width>1.14659cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.27674cm</Width>
+              <Width>4.35082cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.52104cm</Width>
+              <Width>1.83853cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.34112cm</Width>
+              <Width>2.05255cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.65334cm</Width>
+              <Width>1.91262cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.83854cm</Width>
+              <Width>1.75388cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.3623cm</Width>
+              <Width>1.75387cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.67979cm</Width>
+              <Width>1.992cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.91791cm</Width>
+              <Width>1.992cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.46813cm</Width>
+              <Width>1.80679cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.52104cm</Width>
+              <Width>1.96554cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.89146cm</Width>
+              <Width>1.96554cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.44167cm</Width>
+              <Width>1.71341cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.66812cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>1.83854cm</Width>
+              <Width>1.91262cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -350,50 +347,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox385</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                          <Width>0.5pt</Width>
-                        </Border>
-                        <TopBorder>
-                          <Style>Solid</Style>
-                        </TopBorder>
-                        <LeftBorder>
-                          <Style>Solid</Style>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Style>Solid</Style>
-                        </RightBorder>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox705">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Kho</Value>
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox705</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -648,50 +601,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox10</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                          <Width>0.5pt</Width>
-                        </Border>
-                        <TopBorder>
-                          <Style>Solid</Style>
-                        </TopBorder>
-                        <LeftBorder>
-                          <Style>Solid</Style>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Style>Solid</Style>
-                        </RightBorder>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox706">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style>
-                                <FontFamily>Times New Roman</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox706</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -1275,37 +1184,6 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox707">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox707</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                          <Width>0.5pt</Width>
-                        </Border>
-                        <BackgroundColor>IndianRed</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
                     <Textbox Name="Textbox192">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -1738,40 +1616,6 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox220</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                          <Width>0.5pt</Width>
-                        </Border>
-                        <BackgroundColor>Khaki</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Tenkho1">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!Tenkho.Value</Value>
-                              <Style>
-                                <FontStyle>Italic</FontStyle>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Tenkho1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -2259,36 +2103,6 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox709">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox709</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                          <Width>0.5pt</Width>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
                     <Textbox Name="Somettondau">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -2682,7 +2496,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -2730,10 +2543,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Ketqua</DataSetName>
-        <Top>6.20957cm</Top>
-        <Left>0.34397cm</Left>
+        <Top>6.6329cm</Top>
+        <Left>0.2646cm</Left>
         <Height>3cm</Height>
-        <Width>26.91325cm</Width>
+        <Width>28.15679cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -2742,15 +2555,15 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>9.80957cm</Height>
+    <Height>10.00332cm</Height>
     <Style />
   </Body>
-  <Width>28.88472cm</Width>
+  <Width>28.50076cm</Width>
   <Page>
     <PageHeight>21cm</PageHeight>
     <PageWidth>29.7cm</PageWidth>
-    <LeftMargin>0.3cm</LeftMargin>
-    <RightMargin>0.3cm</RightMargin>
+    <LeftMargin>0.5cm</LeftMargin>
+    <RightMargin>0.5cm</RightMargin>
     <TopMargin>1cm</TopMargin>
     <BottomMargin>1cm</BottomMargin>
     <ColumnSpacing>1.27cm</ColumnSpacing>
