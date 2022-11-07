@@ -498,7 +498,7 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_CHONLOAIMUC_Click(object sender, EventArgs e)
         {
             ListviewJanusC _frm =
-                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_LOAIMUC, DmquycachFields.Maquycach.Name, txt_MALOAIMUC.Text);
+                new ListviewJanusC("Danh sách loại mực", LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_LOAIMUC, DmquycachFields.Maquycach.Name, txt_MALOAIMUC.Text);
             _frm.ShowDialog();
             if (_frm._RowsViewSelect == null) return;
 
@@ -512,7 +512,7 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_CHONSOMAU_Click(object sender, EventArgs e)
         {
             ListviewJanusC _frm =
-                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_SOMAU, DmquycachFields.Maquycach.Name, txt_SOMAUMA.Text);
+                new ListviewJanusC("Danh sách số màu", LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_SOMAU, DmquycachFields.Maquycach.Name, txt_SOMAUMA.Text);
             _frm.ShowDialog();
             if (_frm._RowsViewSelect == null) return;
 
@@ -540,7 +540,7 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_CHONLOAIMANG_Click(object sender, EventArgs e)
         {
             ListviewJanusC _frm =
-                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_LOAIMANG, DmquycachFields.Maquycach.Name, txt_MALOAIMANG.Text);
+                new ListviewJanusC("Danh sách loại màng", LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_LOAIMANG, DmquycachFields.Maquycach.Name, txt_MALOAIMANG.Text);
             _frm.ShowDialog();
             if (_frm._RowsViewSelect == null) return;
 
@@ -554,7 +554,7 @@ namespace GD.BBPH.APP.DANHMUC
         private void btn_CHONQCTHANHPHAM_Click(object sender, EventArgs e)
         {
             ListviewJanusC _frm =
-                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_QCTHANHPHAM, DmquycachFields.Maquycach.Name, txt_MAQCTHANHPHAM.Text);
+                new ListviewJanusC("Danh sách quy cách thành phẩm", LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_QCTHANHPHAM, DmquycachFields.Maquycach.Name, txt_MAQCTHANHPHAM.Text);
             _frm.ShowDialog();
             if (_frm._RowsViewSelect == null) return;
 
