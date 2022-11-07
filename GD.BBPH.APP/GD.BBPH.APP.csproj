@@ -603,6 +603,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataBBPH.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RDLC\DataBBPH1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBBPH.xsd</DependentUpon>
+    </Compile>
     <Compile Include="THOI\FRM_KQTHOI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -830,6 +835,7 @@
     <EmbeddedResource Include="RDLC\BAOCAOHANGTRALAI.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOTONKHOSP.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAONHAPKHOSP.rdlc" />
+    <EmbeddedResource Include="RDLC\BAOCAOXUATNGUYENLIEU.rdlc" />
     <EmbeddedResource Include="RDLC\KQTHOITONGHOP.rdlc" />
     <EmbeddedResource Include="RDLC\KQTUACHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQTHOICHITIET.rdlc" />
