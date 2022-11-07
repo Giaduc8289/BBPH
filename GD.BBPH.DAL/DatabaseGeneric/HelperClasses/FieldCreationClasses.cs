@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 11:28:44 AM
+// Code is generated on: Monday, November 7, 2022 3:16:22 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1642,10 +1642,20 @@ namespace GD.BBPH.DAL.HelperClasses
 	/// <summary>Field Creation Class for entity DmnguyenlieuEntity</summary>
 	public partial class DmnguyenlieuFields
 	{
+		/// <summary>Creates a new DmnguyenlieuEntity.Id field instance</summary>
+		public static EntityField2 Id
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Id);}
+		}
 		/// <summary>Creates a new DmnguyenlieuEntity.Manl field instance</summary>
 		public static EntityField2 Manl
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Manl);}
+		}
+		/// <summary>Creates a new DmnguyenlieuEntity.Tennl field instance</summary>
+		public static EntityField2 Tennl
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Tennl);}
 		}
 		/// <summary>Creates a new DmnguyenlieuEntity.Tenrutgon field instance</summary>
 		public static EntityField2 Tenrutgon
@@ -1661,11 +1671,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Tennhom
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Tennhom);}
-		}
-		/// <summary>Creates a new DmnguyenlieuEntity.Tennl field instance</summary>
-		public static EntityField2 Tennl
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(DmnguyenlieuFieldIndex.Tennl);}
 		}
 		/// <summary>Creates a new DmnguyenlieuEntity.Gia field instance</summary>
 		public static EntityField2 Gia

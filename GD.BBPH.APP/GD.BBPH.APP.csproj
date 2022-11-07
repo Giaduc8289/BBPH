@@ -297,6 +297,12 @@
     <Compile Include="DANHMUC\FRM_CONGSUATMAY.designer.cs">
       <DependentUpon>FRM_CONGSUATMAY.cs</DependentUpon>
     </Compile>
+    <Compile Include="DANHMUC\FRM_DMNGUYENLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_DMNGUYENLIEU.designer.cs">
+      <DependentUpon>FRM_DMNGUYENLIEU.cs</DependentUpon>
+    </Compile>
     <Compile Include="DANHMUC\FRM_DMNHOMDINHMUC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,12 +350,6 @@
     </Compile>
     <Compile Include="DANHMUC\FRM_DMCONGNHAN.designer.cs">
       <DependentUpon>FRM_DMCONGNHAN.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DANHMUC\FRM_DMNGUYENLIEU.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DANHMUC\FRM_DMNGUYENLIEU.designer.cs">
-      <DependentUpon>FRM_DMNGUYENLIEU.cs</DependentUpon>
     </Compile>
     <Compile Include="DANHMUC\FRM_DMNHOMNGUYENLIEU.cs">
       <SubType>Form</SubType>
@@ -742,6 +742,9 @@
     <EmbeddedResource Include="DANHMUC\FRM_CONGSUATMAY.resx">
       <DependentUpon>FRM_CONGSUATMAY.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_DMNGUYENLIEU.resx">
+      <DependentUpon>FRM_DMNGUYENLIEU.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMNHOMDINHMUC.resx">
       <DependentUpon>FRM_DMNHOMDINHMUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -765,9 +768,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMCONGNHAN.resx">
       <DependentUpon>FRM_DMCONGNHAN.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DANHMUC\FRM_DMNGUYENLIEU.resx">
-      <DependentUpon>FRM_DMNGUYENLIEU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DANHMUC\FRM_DMNHOMNGUYENLIEU.resx">
       <DependentUpon>FRM_DMNHOMNGUYENLIEU.cs</DependentUpon>
@@ -1016,6 +1016,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU_D.xml" />
+    <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU_H.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHOMDINHMUC.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml">
       <SubType>Designer</SubType>

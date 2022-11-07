@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 11:28:43 AM
+// Code is generated on: Monday, November 7, 2022 3:16:22 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -37,8 +37,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
-		private EntityCollection<CtptmangDEntity> _ctptmangD;
-		private EntityCollection<CtptmangHEntity> _ctptmangHcollectionViaCtptmangD;
+
+
 		private DmnhomnguyenlieuEntity _dmnhomnguyenlieu;
 
 		
@@ -55,10 +55,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			/// <summary>Member name Dmnhomnguyenlieu</summary>
 			public static readonly string Dmnhomnguyenlieu = "Dmnhomnguyenlieu";
-			/// <summary>Member name CtptmangD</summary>
-			public static readonly string CtptmangD = "CtptmangD";
-			/// <summary>Member name CtptmangHcollectionViaCtptmangD</summary>
-			public static readonly string CtptmangHcollectionViaCtptmangD = "CtptmangHcollectionViaCtptmangD";
+
+
 
 		}
 		#endregion
@@ -92,22 +90,22 @@ namespace GD.BBPH.DAL.EntityClasses
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="manl">PK value for Dmnguyenlieu which data should be fetched into this Dmnguyenlieu object</param>
+		/// <param name="id">PK value for Dmnguyenlieu which data should be fetched into this Dmnguyenlieu object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DmnguyenlieuEntity(System.String manl):base("DmnguyenlieuEntity")
+		public DmnguyenlieuEntity(System.Int64 id):base("DmnguyenlieuEntity")
 		{
 			InitClassEmpty(null, CreateFields());
-			this.Manl = manl;
+			this.Id = id;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="manl">PK value for Dmnguyenlieu which data should be fetched into this Dmnguyenlieu object</param>
+		/// <param name="id">PK value for Dmnguyenlieu which data should be fetched into this Dmnguyenlieu object</param>
 		/// <param name="validator">The custom validator object for this DmnguyenlieuEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DmnguyenlieuEntity(System.String manl, IValidator validator):base("DmnguyenlieuEntity")
+		public DmnguyenlieuEntity(System.Int64 id, IValidator validator):base("DmnguyenlieuEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
-			this.Manl = manl;
+			this.Id = id;
 		}
 
 		/// <summary> Protected CTor for deserialization</summary>
@@ -118,8 +116,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-				_ctptmangD = (EntityCollection<CtptmangDEntity>)info.GetValue("_ctptmangD", typeof(EntityCollection<CtptmangDEntity>));
-				_ctptmangHcollectionViaCtptmangD = (EntityCollection<CtptmangHEntity>)info.GetValue("_ctptmangHcollectionViaCtptmangD", typeof(EntityCollection<CtptmangHEntity>));
+
+
 				_dmnhomnguyenlieu = (DmnhomnguyenlieuEntity)info.GetValue("_dmnhomnguyenlieu", typeof(DmnhomnguyenlieuEntity));
 				if(_dmnhomnguyenlieu!=null)
 				{
@@ -168,14 +166,8 @@ namespace GD.BBPH.DAL.EntityClasses
 				case "Dmnhomnguyenlieu":
 					this.Dmnhomnguyenlieu = (DmnhomnguyenlieuEntity)entity;
 					break;
-				case "CtptmangD":
-					this.CtptmangD.Add((CtptmangDEntity)entity);
-					break;
-				case "CtptmangHcollectionViaCtptmangD":
-					this.CtptmangHcollectionViaCtptmangD.IsReadOnly = false;
-					this.CtptmangHcollectionViaCtptmangD.Add((CtptmangHEntity)entity);
-					this.CtptmangHcollectionViaCtptmangD.IsReadOnly = true;
-					break;
+
+
 
 				default:
 					break;
@@ -201,13 +193,8 @@ namespace GD.BBPH.DAL.EntityClasses
 				case "Dmnhomnguyenlieu":
 					toReturn.Add(DmnguyenlieuEntity.Relations.DmnhomnguyenlieuEntityUsingManhom);
 					break;
-				case "CtptmangD":
-					toReturn.Add(DmnguyenlieuEntity.Relations.CtptmangDEntityUsingManl);
-					break;
-				case "CtptmangHcollectionViaCtptmangD":
-					toReturn.Add(DmnguyenlieuEntity.Relations.CtptmangDEntityUsingManl, "DmnguyenlieuEntity__", "CtptmangD_", JoinHint.None);
-					toReturn.Add(CtptmangDEntity.Relations.CtptmangHEntityUsingIdH, "CtptmangD_", string.Empty, JoinHint.None);
-					break;
+
+
 
 				default:
 
@@ -247,9 +234,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				case "Dmnhomnguyenlieu":
 					SetupSyncDmnhomnguyenlieu(relatedEntity);
 					break;
-				case "CtptmangD":
-					this.CtptmangD.Add((CtptmangDEntity)relatedEntity);
-					break;
+
 
 				default:
 					break;
@@ -268,9 +253,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				case "Dmnhomnguyenlieu":
 					DesetupSyncDmnhomnguyenlieu(false, true);
 					break;
-				case "CtptmangD":
-					base.PerformRelatedEntityRemoval(this.CtptmangD, relatedEntity, signalRelatedEntityManyToOne);
-					break;
+
 
 				default:
 					break;
@@ -305,7 +288,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntityCollection2> GetMemberEntityCollections()
 		{
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
-			toReturn.Add(this.CtptmangD);
+
 
 			return toReturn;
 		}
@@ -320,8 +303,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-				info.AddValue("_ctptmangD", ((_ctptmangD!=null) && (_ctptmangD.Count>0) && !this.MarkedForDeletion)?_ctptmangD:null);
-				info.AddValue("_ctptmangHcollectionViaCtptmangD", ((_ctptmangHcollectionViaCtptmangD!=null) && (_ctptmangHcollectionViaCtptmangD.Count>0) && !this.MarkedForDeletion)?_ctptmangHcollectionViaCtptmangD:null);
+
+
 				info.AddValue("_dmnhomnguyenlieu", (!this.MarkedForDeletion?_dmnhomnguyenlieu:null));
 
 			}
@@ -358,26 +341,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		}
 		
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entities of type 'CtptmangD' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoCtptmangD()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(CtptmangDFields.Manl, null, ComparisonOperator.Equal, this.Manl));
-			return bucket;
-		}
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entities of type 'CtptmangH' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoCtptmangHcollectionViaCtptmangD()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.Relations.AddRange(GetRelationsForFieldOfType("CtptmangHcollectionViaCtptmangD"));
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(DmnguyenlieuFields.Manl, null, ComparisonOperator.Equal, this.Manl, "DmnguyenlieuEntity__"));
-			return bucket;
-		}
 
 		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
 		/// the related entity of type 'Dmnhomnguyenlieu' to this entity. Use DataAccessAdapter.FetchNewEntity() to fetch this related entity.</summary>
@@ -417,8 +381,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void AddToMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue) 
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
-			collectionsQueue.Enqueue(this._ctptmangD);
-			collectionsQueue.Enqueue(this._ctptmangHcollectionViaCtptmangD);
+
+
 		}
 		
 		/// <summary>Gets the member collections queue from the queue (base first)</summary>
@@ -426,22 +390,16 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void GetFromMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue)
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
-			this._ctptmangD = (EntityCollection<CtptmangDEntity>) collectionsQueue.Dequeue();
-			this._ctptmangHcollectionViaCtptmangD = (EntityCollection<CtptmangHEntity>) collectionsQueue.Dequeue();
+
+
 		}
 		
 		/// <summary>Determines whether the entity has populated member collections</summary>
 		/// <returns>true if the entity has populated member collections.</returns>
 		protected override bool HasPopulatedMemberEntityCollections()
 		{
-			if (this._ctptmangD != null)
-			{
-				return true;
-			}
-			if (this._ctptmangHcollectionViaCtptmangD != null)
-			{
-				return true;
-			}
+
+
 			return base.HasPopulatedMemberEntityCollections();
 		}
 		
@@ -451,8 +409,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void CreateMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue, Queue<bool> requiredQueue) 
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
-			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<CtptmangDEntity>(EntityFactoryCache2.GetEntityFactory(typeof(CtptmangDEntityFactory))) : null);
-			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<CtptmangHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(CtptmangHEntityFactory))) : null);
+
+
 		}
 #endif
 		/// <summary>
@@ -463,8 +421,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
 			toReturn.Add("Dmnhomnguyenlieu", _dmnhomnguyenlieu);
-			toReturn.Add("CtptmangD", _ctptmangD);
-			toReturn.Add("CtptmangHcollectionViaCtptmangD", _ctptmangHcollectionViaCtptmangD);
+
+
 
 			return toReturn;
 		}
@@ -472,14 +430,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> Adds the internals to the active context. </summary>
 		protected override void AddInternalsToContext()
 		{
-			if(_ctptmangD!=null)
-			{
-				_ctptmangD.ActiveContext = base.ActiveContext;
-			}
-			if(_ctptmangHcollectionViaCtptmangD!=null)
-			{
-				_ctptmangHcollectionViaCtptmangD.ActiveContext = base.ActiveContext;
-			}
+
+
 			if(_dmnhomnguyenlieu!=null)
 			{
 				_dmnhomnguyenlieu.ActiveContext = base.ActiveContext;
@@ -491,8 +443,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected virtual void InitClassMembers()
 		{
 
-			_ctptmangD = null;
-			_ctptmangHcollectionViaCtptmangD = null;
+
+
 			_dmnhomnguyenlieu = null;
 
 			PerformDependencyInjection();
@@ -512,7 +464,13 @@ namespace GD.BBPH.DAL.EntityClasses
 			Dictionary<string, string> fieldHashtable = null;
 			fieldHashtable = new Dictionary<string, string>();
 
+			_fieldsCustomProperties.Add("Id", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
 			_fieldsCustomProperties.Add("Manl", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tennl", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tenrutgon", fieldHashtable);
@@ -522,9 +480,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tennhom", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tennl", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Gia", fieldHashtable);
@@ -621,31 +576,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return _customProperties;}
 		}
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'CtptmangD' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathCtptmangD
-		{
-			get
-			{
-				return new PrefetchPathElement2( new EntityCollection<CtptmangDEntity>(EntityFactoryCache2.GetEntityFactory(typeof(CtptmangDEntityFactory))),
-					(IEntityRelation)GetRelationsForField("CtptmangD")[0], (int)GD.BBPH.DAL.EntityType.DmnguyenlieuEntity, (int)GD.BBPH.DAL.EntityType.CtptmangDEntity, 0, null, null, null, null, "CtptmangD", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
-			}
-		}
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'CtptmangH' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathCtptmangHcollectionViaCtptmangD
-		{
-			get
-			{
-				IEntityRelation intermediateRelation = DmnguyenlieuEntity.Relations.CtptmangDEntityUsingManl;
-				intermediateRelation.SetAliases(string.Empty, "CtptmangD_");
-				return new PrefetchPathElement2(new EntityCollection<CtptmangHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(CtptmangHEntityFactory))), intermediateRelation,
-					(int)GD.BBPH.DAL.EntityType.DmnguyenlieuEntity, (int)GD.BBPH.DAL.EntityType.CtptmangHEntity, 0, null, null, GetRelationsForField("CtptmangHcollectionViaCtptmangD"), null, "CtptmangHcollectionViaCtptmangD", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToMany);
-			}
-		}
 
 		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Dmnhomnguyenlieu' 
 		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
@@ -684,22 +615,44 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return DmnguyenlieuEntity.FieldsCustomProperties;}
 		}
 
+		/// <summary> The Id property of the Entity Dmnguyenlieu<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Id"<br/>
+		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, true</remarks>
+		public virtual System.Int64 Id
+		{
+			get { return (System.Int64)GetValue((int)DmnguyenlieuFieldIndex.Id, true); }
+			set	{ SetValue((int)DmnguyenlieuFieldIndex.Id, value); }
+		}
+
 		/// <summary> The Manl property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Manl"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Manl"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
 		public virtual System.String Manl
 		{
 			get { return (System.String)GetValue((int)DmnguyenlieuFieldIndex.Manl, true); }
 			set	{ SetValue((int)DmnguyenlieuFieldIndex.Manl, value); }
 		}
 
+		/// <summary> The Tennl property of the Entity Dmnguyenlieu<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Tennl"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tennl
+		{
+			get { return (System.String)GetValue((int)DmnguyenlieuFieldIndex.Tennl, true); }
+			set	{ SetValue((int)DmnguyenlieuFieldIndex.Tennl, value); }
+		}
+
 		/// <summary> The Tenrutgon property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Tenrutgon"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Tenrutgon"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tenrutgon
 		{
 			get { return (System.String)GetValue((int)DmnguyenlieuFieldIndex.Tenrutgon, true); }
@@ -708,7 +661,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Manhom property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Manhom"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Manhom"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Manhom
@@ -719,7 +672,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Tennhom property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Tennhom"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Tennhom"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tennhom
@@ -728,20 +681,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmnguyenlieuFieldIndex.Tennhom, value); }
 		}
 
-		/// <summary> The Tennl property of the Entity Dmnguyenlieu<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Tennl"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tennl
-		{
-			get { return (System.String)GetValue((int)DmnguyenlieuFieldIndex.Tennl, true); }
-			set	{ SetValue((int)DmnguyenlieuFieldIndex.Tennl, value); }
-		}
-
 		/// <summary> The Gia property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Gia"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Gia"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Gia
@@ -752,7 +694,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Ngay property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Ngay"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Ngay"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngay
@@ -763,7 +705,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Giahientai property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Giahientai"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Giahientai"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Giahientai
@@ -774,7 +716,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Tang property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Tang"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Tang"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Tang
@@ -785,7 +727,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Giam property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Giam"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Giam"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.Decimal> Giam
@@ -796,7 +738,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Ngaytao property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Ngaytao"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Ngaytao"<br/>
 		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngaytao
@@ -807,7 +749,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Nguoitao property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Nguoitao"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Nguoitao"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguoitao
@@ -818,7 +760,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Ngaysua property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Ngaysua"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Ngaysua"<br/>
 		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngaysua
@@ -829,7 +771,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Nguoisua property of the Entity Dmnguyenlieu<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnguyenlieu"."Nguoisua"<br/>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Nguoisua"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguoisua
@@ -838,37 +780,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmnguyenlieuFieldIndex.Nguoisua, value); }
 		}
 
-		/// <summary> Gets the EntityCollection with the related entities of type 'CtptmangDEntity' which are related to this entity via a relation of type '1:n'.
-		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
-		[TypeContainedAttribute(typeof(CtptmangDEntity))]
-		public virtual EntityCollection<CtptmangDEntity> CtptmangD
-		{
-			get
-			{
-				if(_ctptmangD==null)
-				{
-					_ctptmangD = new EntityCollection<CtptmangDEntity>(EntityFactoryCache2.GetEntityFactory(typeof(CtptmangDEntityFactory)));
-					_ctptmangD.SetContainingEntityInfo(this, "Dmnguyenlieu");
-				}
-				return _ctptmangD;
-			}
-		}
 
-		/// <summary> Gets the EntityCollection with the related entities of type 'CtptmangHEntity' which are related to this entity via a relation of type 'm:n'.
-		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
-		[TypeContainedAttribute(typeof(CtptmangHEntity))]
-		public virtual EntityCollection<CtptmangHEntity> CtptmangHcollectionViaCtptmangD
-		{
-			get
-			{
-				if(_ctptmangHcollectionViaCtptmangD==null)
-				{
-					_ctptmangHcollectionViaCtptmangD = new EntityCollection<CtptmangHEntity>(EntityFactoryCache2.GetEntityFactory(typeof(CtptmangHEntityFactory)));
-					_ctptmangHcollectionViaCtptmangD.IsReadOnly=true;
-				}
-				return _ctptmangHcollectionViaCtptmangD;
-			}
-		}
 
 		/// <summary> Gets / sets related entity of type 'DmnhomnguyenlieuEntity' which has to be set using a fetch action earlier. If no related entity
 		/// is set for this property, null is returned. This property is not visible in databound grids.</summary>

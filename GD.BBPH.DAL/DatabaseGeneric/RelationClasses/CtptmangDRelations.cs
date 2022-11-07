@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 11:28:43 AM
+// Code is generated on: Monday, November 7, 2022 3:16:22 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -33,7 +33,6 @@ namespace GD.BBPH.DAL.RelationClasses
 
 
 			toReturn.Add(this.CtptmangHEntityUsingIdH);
-			toReturn.Add(this.DmnguyenlieuEntityUsingManl);
 			return toReturn;
 		}
 
@@ -51,20 +50,6 @@ namespace GD.BBPH.DAL.RelationClasses
 				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "CtptmangH", false);
 				relation.AddEntityFieldPair(CtptmangHFields.Id, CtptmangDFields.IdH);
 				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangHEntity", false);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangDEntity", true);
-				return relation;
-			}
-		}
-		/// <summary>Returns a new IEntityRelation object, between CtptmangDEntity and DmnguyenlieuEntity over the m:1 relation they have, using the relation between the fields:
-		/// CtptmangD.Manl - Dmnguyenlieu.Manl
-		/// </summary>
-		public virtual IEntityRelation DmnguyenlieuEntityUsingManl
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToOne, "Dmnguyenlieu", false);
-				relation.AddEntityFieldPair(DmnguyenlieuFields.Manl, CtptmangDFields.Manl);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmnguyenlieuEntity", false);
 				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangDEntity", true);
 				return relation;
 			}
