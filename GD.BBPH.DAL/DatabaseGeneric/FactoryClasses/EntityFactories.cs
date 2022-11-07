@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 8:32:42 AM
+// Code is generated on: Monday, November 7, 2022 3:16:22 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -277,6 +277,45 @@ namespace GD.BBPH.DAL.FactoryClasses
 		public override IEntityCollection2 CreateEntityCollection()
 		{
 			return new EntityCollection<CtptmangHEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty DinhmuckeoEntity objects.</summary>
+	[Serializable]
+	public partial class DinhmuckeoEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public DinhmuckeoEntityFactory() : base("DinhmuckeoEntity", GD.BBPH.DAL.EntityType.DinhmuckeoEntity) { }
+
+		/// <summary>Creates a new, empty DinhmuckeoEntity object.</summary>
+		/// <returns>A new, empty DinhmuckeoEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new DinhmuckeoEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDinhmuckeo
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new DinhmuckeoEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new DinhmuckeoEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewDinhmuckeoUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<DinhmuckeoEntity>(this);
 		}
 		
 
@@ -2417,6 +2456,9 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.CtptmangHEntity:
 					factoryToUse = new CtptmangHEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.DinhmuckeoEntity:
+					factoryToUse = new DinhmuckeoEntityFactory();
 					break;
 				case GD.BBPH.DAL.EntityType.DinhmucthoigianEntity:
 					factoryToUse = new DinhmucthoigianEntityFactory();

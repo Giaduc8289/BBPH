@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 8:32:41 AM
+// Code is generated on: Monday, November 7, 2022 3:16:22 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -30,7 +30,7 @@ namespace GD.BBPH.DAL.RelationClasses
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
-			toReturn.Add(this.CtptmangDEntityUsingManl);
+
 
 			toReturn.Add(this.DmnhomnguyenlieuEntityUsingManhom);
 			return toReturn;
@@ -38,20 +38,6 @@ namespace GD.BBPH.DAL.RelationClasses
 
 		#region Class Property Declarations
 
-		/// <summary>Returns a new IEntityRelation object, between DmnguyenlieuEntity and CtptmangDEntity over the 1:n relation they have, using the relation between the fields:
-		/// Dmnguyenlieu.Manl - CtptmangD.Manl
-		/// </summary>
-		public virtual IEntityRelation CtptmangDEntityUsingManl
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "CtptmangD" , true);
-				relation.AddEntityFieldPair(DmnguyenlieuFields.Manl, CtptmangDFields.Manl);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmnguyenlieuEntity", true);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("CtptmangDEntity", false);
-				return relation;
-			}
-		}
 
 
 		/// <summary>Returns a new IEntityRelation object, between DmnguyenlieuEntity and DmnhomnguyenlieuEntity over the m:1 relation they have, using the relation between the fields:

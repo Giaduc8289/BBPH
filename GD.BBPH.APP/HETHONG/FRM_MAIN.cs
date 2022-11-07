@@ -759,6 +759,13 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DINHMUCTHOIGIAN()), mmru.Text);
                     break;
+                case "FRM_DINHMUCKEO":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_DINHMUCKEO") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.DANHMUC.FRM_DINHMUCKEO()), mmru.Text);
+                    break;
 
                 #region Danh mục công đoạn
                 case "FRM_DMCONGDOAN":
@@ -1143,14 +1150,38 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAONHAPXUATTONKHOSP()), mmru.Text);
                     break;
+
                 case "FRM_BAOCAONHAPXUATTONKHONGUYENLIEU":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
                         if (frm.Name == "FRM_BAOCAONHAPXUATTONKHONGUYENLIEU") { frm.Activate(); return; }
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAONHAPXUATTONKHONGUYENLIEU()), mmru.Text);
+
+                    break;
+                case "FRM_BAOCAOXUATNGUYENLIEU":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BAOCAOXUATNGUYENLIEU") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAOXUATNGUYENLIEU()), mmru.Text);
+                    break;
+                case "FRM_BAOCAONHAPNGUYENLIEU":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BAOCAONHAPNGUYENLIEU") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAONHAPNGUYENLIEU()), mmru.Text);
+                    break;
+                case "FRM_BAOCAOTONNGUYENLIEU":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BAOCAOTONNGUYENLIEU") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAOTONNGUYENLIEU()), mmru.Text);
                     break;
                 #endregion
+
 
                 #region Cửa sổ
                 case "WI_LOP":

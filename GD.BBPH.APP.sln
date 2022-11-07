@@ -28,6 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entity", "Entity", "{8E88BC
 		GenSupportCode\Entity\CongsuatmayEnt.cs = GenSupportCode\Entity\CongsuatmayEnt.cs
 		GenSupportCode\Entity\CtptmangDEnt.cs = GenSupportCode\Entity\CtptmangDEnt.cs
 		GenSupportCode\Entity\CtptmangHEnt.cs = GenSupportCode\Entity\CtptmangHEnt.cs
+		GenSupportCode\Entity\DinhmuckeoEnt.cs = GenSupportCode\Entity\DinhmuckeoEnt.cs
 		GenSupportCode\Entity\DinhmucthoigianEnt.cs = GenSupportCode\Entity\DinhmucthoigianEnt.cs
 		GenSupportCode\Entity\DinhmucvattuEnt.cs = GenSupportCode\Entity\DinhmucvattuEnt.cs
 		GenSupportCode\Entity\DmbophanEnt.cs = GenSupportCode\Entity\DmbophanEnt.cs

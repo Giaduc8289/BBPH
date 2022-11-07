@@ -93,7 +93,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>
-    <name>tablename</name>
-    <headerText>Danh sách tendanhsach</headerText>
+    <name>Dmkho</name>
+    <headerText>Danh sách kho</headerText>
   </tablename>
 </NewDataSet>
