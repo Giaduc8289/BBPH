@@ -116,6 +116,8 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TPMAU.FilterMode = FilterMode.None;
             GRID_TPMAU.GroupByBoxVisible = false;
             FORM_PROCESS();
+            //GRID_DMMAU.RootTable.Columns[DmmauFields.Lamaugoc.Name].EditType = EditType.CheckBox;
+            GRID_DMMAU.RootTable.Columns[DmmauFields.Lamaugoc.Name].ColumnType = ColumnType.CheckBox;
             GRID_DMMAU.FormattingRow += GRID_DMMAU_FormattingRow;
             //GRID_TPMAU.COMBO_MULTICOLUMN(GRID_TPMAU,ThanhphanmauFields.Tennguyenlieu.Name, DmnguyenlieuFields.Manl.Name, DmnguyenlieuFields.Tenrutgon.Name, DmnguyenlieuFields.Tenrutgon.Name, DT_DMNGUYENLIEU);
             GRID_TPMAU.CellEdited += GRID_TPMAU_CellEdited;
