@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 12:40:34 AM
+// Code is generated on: Monday, November 7, 2022 8:32:43 AM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -487,7 +487,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Inits DmmauEntity's mappings</summary>
 		private void InitDmmauEntityMappings()
 		{
-			base.AddElementMapping( "DmmauEntity", "BBPH", @"dbo", "dmmau", 8 );
+			base.AddElementMapping( "DmmauEntity", "BBPH", @"dbo", "dmmau", 9 );
 			base.AddElementFieldMapping( "DmmauEntity", "Mamau", "Mamau", false, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 0 );
 			base.AddElementFieldMapping( "DmmauEntity", "Tenmau", "Tenmau", false, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "DmmauEntity", "Lamaugoc", "Lamaugoc", true, (int)SqlDbType.Bit, 0, 0, 0, false, "", null, typeof(System.Boolean), 2 );
@@ -496,6 +496,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "DmmauEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 5 );
 			base.AddElementFieldMapping( "DmmauEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 6 );
 			base.AddElementFieldMapping( "DmmauEntity", "MaArgb", "MaARGB", true, (int)SqlDbType.BigInt, 0, 0, 19, false, "", null, typeof(System.Int64), 7 );
+			base.AddElementFieldMapping( "DmmauEntity", "Ghichu", "Ghichu", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 8 );
 		}
 		/// <summary>Inits DmmayEntity's mappings</summary>
 		private void InitDmmayEntityMappings()

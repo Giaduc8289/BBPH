@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 12:40:33 AM
+// Code is generated on: Monday, November 7, 2022 8:32:42 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1501,6 +1501,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 MaArgb
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmmauFieldIndex.MaArgb);}
+		}
+		/// <summary>Creates a new DmmauEntity.Ghichu field instance</summary>
+		public static EntityField2 Ghichu
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmmauFieldIndex.Ghichu);}
 		}
 	}
 

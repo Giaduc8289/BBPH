@@ -237,6 +237,7 @@ namespace GD.BBPH.APP.DANHMUC
 
                     txt_MAMAU.Text = _Rowview.Row[DmmauFields.Mamau.Name].ToString();
                     txt_TENMAU.Text = _Rowview.Row[DmmauFields.Tenmau.Name].ToString();
+                    txt_GHICHU.Text = _Rowview.Row[DmmauFields.Ghichu.Name].ToString();
                     try { txt_MAARGB.BackColor = Color.FromArgb(Convert.ToInt32(_Rowview.Row[DmmauFields.MaArgb.Name].ToString())); }
                     catch { }
                     try { chk_LAMAUGOC.Checked = Convert.ToBoolean(_Rowview.Row[DmmauFields.Lamaugoc.Name].ToString()); }
@@ -300,6 +301,7 @@ namespace GD.BBPH.APP.DANHMUC
             _DmmauEntity.Mamau = txt_MAMAU.Text.Trim();
             _DmmauEntity.Tenmau = txt_TENMAU.Text.Trim();
             _DmmauEntity.MaArgb = txt_MAARGB.BackColor.ToArgb();
+            _DmmauEntity.Ghichu = txt_GHICHU.Text.Trim();
             if (chk_LAMAUGOC.Checked)
                 _DmmauEntity.Lamaugoc = true;
             else
@@ -389,6 +391,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMMAU.CurrentRow.Cells[DmmauFields.Mamau.Name].Value = _DmmauEntity.Mamau;
                 GRID_DMMAU.CurrentRow.Cells[DmmauFields.Tenmau.Name].Value = _DmmauEntity.Tenmau;
                 GRID_DMMAU.CurrentRow.Cells[DmmauFields.MaArgb.Name].Value = _DmmauEntity.MaArgb;
+                GRID_DMMAU.CurrentRow.Cells[DmmauFields.Ghichu.Name].Value = _DmmauEntity.Ghichu;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmauManager.Convert(_DmmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_TPMAU.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TPMAU.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;

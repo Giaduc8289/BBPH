@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 12:40:33 AM
+// Code is generated on: Monday, November 7, 2022 8:32:42 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -479,6 +479,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("MaArgb", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ghichu", fieldHashtable);
 		}
 		#endregion
 
@@ -641,6 +644,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Int64>)GetValue((int)DmmauFieldIndex.MaArgb, false); }
 			set	{ SetValue((int)DmmauFieldIndex.MaArgb, value); }
+		}
+
+		/// <summary> The Ghichu property of the Entity Dmmau<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmau"."Ghichu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Ghichu
+		{
+			get { return (System.String)GetValue((int)DmmauFieldIndex.Ghichu, true); }
+			set	{ SetValue((int)DmmauFieldIndex.Ghichu, value); }
 		}
 
 		/// <summary> Gets the EntityCollection with the related entities of type 'ThanhphanmauEntity' which are related to this entity via a relation of type '1:n'.

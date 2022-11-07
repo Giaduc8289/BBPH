@@ -953,7 +953,7 @@ namespace GD.BBPH.BLL
 			return _MangcuahangEntity;
 		}
 
-		public MangcuahangEntity Insert(System.String Masp, System.String Tensp, System.Boolean Mangin, System.String Mamang, System.String Tenmang, System.String Maloaikeo, System.String Tenloaikeo, System.String Maloaidongran, System.String Tenloaidongran, System.Decimal Dinhmuckeokho, System.Decimal Dinhmucdongrankho, System.Decimal Tylekeokho, System.Decimal Tyledongrankho, System.Decimal Tylekeo, System.Decimal Tyledongran, System.Decimal Dinhmuckeouot, System.Decimal Dinhmucdongranuot, System.Decimal Dinhmucdungmoi, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Doday, System.String Maloaimang, System.String Tenloaimang, )//ko co mahieu
+		public MangcuahangEntity Insert(System.String Masp, System.String Tensp, System.Boolean Mangin, System.String Mamang, System.String Tenmang, System.String Maloaikeo, System.String Tenloaikeo, System.String Maloaidongran, System.String Tenloaidongran, System.Decimal Dinhmuckeokho, System.Decimal Dinhmucdongrankho, System.Decimal Tylekeokho, System.Decimal Tyledongrankho, System.Decimal Tylekeo, System.Decimal Tyledongran, System.Decimal Dinhmuckeouot, System.Decimal Dinhmucdongranuot, System.Decimal Dinhmucdungmoi, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Doday, System.String Maloaimang, System.String Tenloaimang)//ko co mahieu
 		{
 			MangcuahangEntity _MangcuahangEntity = new MangcuahangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
