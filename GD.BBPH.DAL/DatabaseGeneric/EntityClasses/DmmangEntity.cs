@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 4, 2022 3:41:00 AM
+// Code is generated on: Monday, November 7, 2022 8:32:42 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -26,7 +26,6 @@ namespace GD.BBPH.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 
 	/// <summary>
 	/// Entity class which represents the entity 'Dmmang'.<br/><br/>
@@ -35,8 +34,7 @@ namespace GD.BBPH.DAL.EntityClasses
 	[Serializable]
 	public partial class DmmangEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END
-			
+		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
 
@@ -46,7 +44,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Statics
@@ -127,7 +124,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 		}
 
 		
@@ -296,7 +292,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			base.GetObjectData(info, context);
 		}
 
@@ -425,7 +420,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			OnInitClassMembersComplete();
 		}
 
@@ -452,9 +446,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Kichthuoc", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Trongluong", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Mactpt", fieldHashtable);
@@ -488,6 +479,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tenqcmang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Trongluong", fieldHashtable);
 		}
 		#endregion
 
@@ -507,7 +501,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 
 			OnInitialized();
 		}
@@ -607,17 +600,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmmangFieldIndex.Kichthuoc, true); }
 			set	{ SetValue((int)DmmangFieldIndex.Kichthuoc, value); }
-		}
-
-		/// <summary> The Trongluong property of the Entity Dmmang<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "dmmang"."Trongluong"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Trongluong
-		{
-			get { return (System.String)GetValue((int)DmmangFieldIndex.Trongluong, true); }
-			set	{ SetValue((int)DmmangFieldIndex.Trongluong, value); }
 		}
 
 		/// <summary> The Mactpt property of the Entity Dmmang<br/><br/>
@@ -741,6 +723,17 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)DmmangFieldIndex.Tenqcmang, value); }
 		}
 
+		/// <summary> The Trongluong property of the Entity Dmmang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmang"."Trongluong"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Trongluong
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmmangFieldIndex.Trongluong, false); }
+			set	{ SetValue((int)DmmangFieldIndex.Trongluong, value); }
+		}
+
 
 
 
@@ -771,7 +764,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Included code

@@ -45,7 +45,7 @@
     <headerText>Mã màu</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -58,12 +58,12 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
-    <name>MaArgb</name>
-    <headerText>Màu</headerText>
+    <value>1</value>
+    <name>Ghichu</name>
+    <headerText>Ghi chú</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>35</Width>
+    <Width>150</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -72,7 +72,16 @@
     <headerText>Là màu gốc</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>75</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>MaArgb</name>
+    <headerText>Màu</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>35</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>

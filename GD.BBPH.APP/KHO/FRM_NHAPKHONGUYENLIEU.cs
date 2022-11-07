@@ -320,6 +320,8 @@ namespace GD.BBPH.APP.KHO
                     _NhapkhonguyenlieuEntityCol.Add(_NhapkhonguyenlieuEntity);
             }
 
+            _str_MAHIEU_PK = txt_NGAY.Text.Trim();
+
             foreach (NhapkhonguyenlieuEntity _NhapkhonguyenlieuEntity in _NhapkhonguyenlieuEntityCol)
             {
                 if (_NhapkhonguyenlieuEntity.IsNew)

@@ -62,12 +62,12 @@ namespace GD.BBPH.APP.BAOCAO
 
                 #region Tham so
                 DataTable dtThamso = new DataTable("Thamso");
-                dtThamso.Columns.Add("Thoigianbaocao");
+                dtThamso.Columns.Add("Thoigian");
                 DataRow dr = dtThamso.NewRow();
                 if (_Tungay == _Denngay)
-                    dr["Thoigianbaocao"] = "Ngày " + _Tungay.ToString("dd/MM/yyyy");
+                    dr["Thoigian"] = "Ngày " + _Tungay.ToString("dd/MM/yyyy");
                 else
-                    dr["Thoigianbaocao"] = "Từ ngày " + _Tungay.ToString("dd/MM/yyyy") + " Đến ngày " + _Denngay.ToString("dd/MM/yyyy");
+                    dr["Thoigian"] = "Từ ngày " + _Tungay.ToString("dd/MM/yyyy") + " Đến ngày " + _Denngay.ToString("dd/MM/yyyy");
                 dtThamso.Rows.Add(dr);
                 dsKetqua.Tables.Add(dtThamso);
                 #endregion

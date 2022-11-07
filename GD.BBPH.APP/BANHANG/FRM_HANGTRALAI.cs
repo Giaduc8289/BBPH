@@ -149,7 +149,7 @@ namespace GD.BBPH.APP.BANHANG
         {
             HangtralaiEntity _HangtralaiEntity = new HangtralaiEntity();
 
-            //_HangtralaiEntity.Id = Convert.ToInt64(txt_MAHIEU.Text.Trim());
+            _HangtralaiEntity.Id = Convert.ToInt64(_str_MAHIEU_PK);
             _HangtralaiEntity.Sophieugiao = txt_Sophieugiao.Text.Trim();
             _HangtralaiEntity.Ngaygiao = Convert.ToDateTime(txt_Ngaygiao.Text.Trim());
             _HangtralaiEntity.Madon = txt_Madon.Text.Trim();

@@ -76,11 +76,29 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Tylebaophu</name>
+    <headerText>Tỷ lệ bao phủ</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Klmau</name>
     <headerText>K.lượng màu</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>MaArgb</name>
+    <headerText>Màu</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>35</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -117,24 +135,6 @@
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tylebaophu</name>
-    <headerText>Tỷ lệ bao phủ</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>MaArgb</name>
-    <headerText>Màu</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>35</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>

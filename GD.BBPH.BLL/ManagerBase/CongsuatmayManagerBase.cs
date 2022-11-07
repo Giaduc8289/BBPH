@@ -30,11 +30,9 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Tencongsuat="Tencongsuat";				
 		
-		public const String Field_Mamay="Mamay";				
+		public const String Field_Dodaytu="Dodaytu";				
 		
-		public const String Field_Madongmay="Madongmay";				
-		
-		public const String Field_Macongdoan="Macongdoan";				
+		public const String Field_Dodayden="Dodayden";				
 		
 		public const String Field_Khotu="Khotu";				
 		
@@ -44,9 +42,21 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Chieudaiden="Chieudaiden";				
 		
-		public const String Field_Dodaytu="Dodaytu";				
+		public const String Field_Mamays="Mamays";				
 		
-		public const String Field_Dodayden="Dodayden";				
+		public const String Field_Macongdoans="Macongdoans";				
+		
+		public const String Field_Somaumas="Somaumas";				
+		
+		public const String Field_Sohinhmas="Sohinhmas";				
+		
+		public const String Field_Maloaimangs="Maloaimangs";				
+		
+		public const String Field_Maqcthanhphams="Maqcthanhphams";				
+		
+		public const String Field_Makhachs="Makhachs";				
+		
+		public const String Field_Mahangs="Mahangs";				
 		
 		public const String Field_Tocdo="Tocdo";				
 		
@@ -57,20 +67,6 @@ namespace GD.BBPH.BLL
 		public const String Field_Ngaysua="Ngaysua";				
 		
 		public const String Field_Nguoisua="Nguoisua";				
-		
-		public const String Field_Somauma="Somauma";				
-		
-		public const String Field_Sohinhma="Sohinhma";				
-		
-		public const String Field_Maloaimang="Maloaimang";				
-		
-		public const String Field_Maqcthanhpham="Maqcthanhpham";				
-		
-		public const String Field_Macautrucins="Macautrucins";				
-		
-		public const String Field_Makhachs="Makhachs";				
-		
-		public const String Field_Mahangs="Mahangs";				
 		
 				
 		#endregion	
@@ -91,11 +87,9 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Tencongsuat,typeof(System.String));
 			
-			dt.Columns.Add(Field_Mamay,typeof(System.String));
+			dt.Columns.Add(Field_Dodaytu,typeof(System.Decimal));
 			
-			dt.Columns.Add(Field_Madongmay,typeof(System.String));
-			
-			dt.Columns.Add(Field_Macongdoan,typeof(System.String));
+			dt.Columns.Add(Field_Dodayden,typeof(System.Decimal));
 			
 			dt.Columns.Add(Field_Khotu,typeof(System.Decimal));
 			
@@ -105,9 +99,21 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Chieudaiden,typeof(System.Decimal));
 			
-			dt.Columns.Add(Field_Dodaytu,typeof(System.Decimal));
+			dt.Columns.Add(Field_Mamays,typeof(System.String));
 			
-			dt.Columns.Add(Field_Dodayden,typeof(System.Decimal));
+			dt.Columns.Add(Field_Macongdoans,typeof(System.String));
+			
+			dt.Columns.Add(Field_Somaumas,typeof(System.String));
+			
+			dt.Columns.Add(Field_Sohinhmas,typeof(System.String));
+			
+			dt.Columns.Add(Field_Maloaimangs,typeof(System.String));
+			
+			dt.Columns.Add(Field_Maqcthanhphams,typeof(System.String));
+			
+			dt.Columns.Add(Field_Makhachs,typeof(System.String));
+			
+			dt.Columns.Add(Field_Mahangs,typeof(System.String));
 			
 			dt.Columns.Add(Field_Tocdo,typeof(System.Decimal));
 			
@@ -118,20 +124,6 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Ngaysua,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
-			
-			dt.Columns.Add(Field_Somauma,typeof(System.String));
-			
-			dt.Columns.Add(Field_Sohinhma,typeof(System.String));
-			
-			dt.Columns.Add(Field_Maloaimang,typeof(System.String));
-			
-			dt.Columns.Add(Field_Maqcthanhpham,typeof(System.String));
-			
-			dt.Columns.Add(Field_Macautrucins,typeof(System.String));
-			
-			dt.Columns.Add(Field_Makhachs,typeof(System.String));
-			
-			dt.Columns.Add(Field_Mahangs,typeof(System.String));
 									
 		            
 			return dt;			
@@ -157,19 +149,13 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_Mamay]=_CongsuatmayEntity.Mamay;
+				r[Field_Dodaytu]=_CongsuatmayEntity.Dodaytu;
 			}
 			catch { }
 			
 			try
 			{
-				r[Field_Madongmay]=_CongsuatmayEntity.Madongmay;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Macongdoan]=_CongsuatmayEntity.Macongdoan;
+				r[Field_Dodayden]=_CongsuatmayEntity.Dodayden;
 			}
 			catch { }
 			
@@ -199,13 +185,49 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_Dodaytu]=_CongsuatmayEntity.Dodaytu;
+				r[Field_Mamays]=_CongsuatmayEntity.Mamays;
 			}
 			catch { }
 			
 			try
 			{
-				r[Field_Dodayden]=_CongsuatmayEntity.Dodayden;
+				r[Field_Macongdoans]=_CongsuatmayEntity.Macongdoans;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Somaumas]=_CongsuatmayEntity.Somaumas;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Sohinhmas]=_CongsuatmayEntity.Sohinhmas;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Maloaimangs]=_CongsuatmayEntity.Maloaimangs;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Maqcthanhphams]=_CongsuatmayEntity.Maqcthanhphams;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Makhachs]=_CongsuatmayEntity.Makhachs;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Mahangs]=_CongsuatmayEntity.Mahangs;
 			}
 			catch { }
 			
@@ -238,48 +260,6 @@ namespace GD.BBPH.BLL
 				r[Field_Nguoisua]=_CongsuatmayEntity.Nguoisua;
 			}
 			catch { }
-			
-			try
-			{
-				r[Field_Somauma]=_CongsuatmayEntity.Somauma;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Sohinhma]=_CongsuatmayEntity.Sohinhma;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Maloaimang]=_CongsuatmayEntity.Maloaimang;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Maqcthanhpham]=_CongsuatmayEntity.Maqcthanhpham;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Macautrucins]=_CongsuatmayEntity.Macautrucins;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Makhachs]=_CongsuatmayEntity.Makhachs;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Mahangs]=_CongsuatmayEntity.Mahangs;
-			}
-			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -301,19 +281,13 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_CongsuatmayEntity.Mamay= r[Field_Mamay].ToString();						
+				_CongsuatmayEntity.Dodaytu= System.Decimal.Parse(r[Field_Dodaytu].ToString());						
 			}
 			catch { }
 			
 			try
 			{
-				_CongsuatmayEntity.Madongmay= r[Field_Madongmay].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_CongsuatmayEntity.Macongdoan= r[Field_Macongdoan].ToString();						
+				_CongsuatmayEntity.Dodayden= System.Decimal.Parse(r[Field_Dodayden].ToString());						
 			}
 			catch { }
 			
@@ -343,13 +317,49 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_CongsuatmayEntity.Dodaytu= System.Decimal.Parse(r[Field_Dodaytu].ToString());						
+				_CongsuatmayEntity.Mamays= r[Field_Mamays].ToString();						
 			}
 			catch { }
 			
 			try
 			{
-				_CongsuatmayEntity.Dodayden= System.Decimal.Parse(r[Field_Dodayden].ToString());						
+				_CongsuatmayEntity.Macongdoans= r[Field_Macongdoans].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_CongsuatmayEntity.Somaumas= r[Field_Somaumas].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_CongsuatmayEntity.Sohinhmas= r[Field_Sohinhmas].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_CongsuatmayEntity.Maloaimangs= r[Field_Maloaimangs].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_CongsuatmayEntity.Maqcthanhphams= r[Field_Maqcthanhphams].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_CongsuatmayEntity.Makhachs= r[Field_Makhachs].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_CongsuatmayEntity.Mahangs= r[Field_Mahangs].ToString();						
 			}
 			catch { }
 			
@@ -382,48 +392,6 @@ namespace GD.BBPH.BLL
 				_CongsuatmayEntity.Nguoisua= r[Field_Nguoisua].ToString();						
 			}
 			catch { }
-			
-			try
-			{
-				_CongsuatmayEntity.Somauma= r[Field_Somauma].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_CongsuatmayEntity.Sohinhma= r[Field_Sohinhma].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_CongsuatmayEntity.Maloaimang= r[Field_Maloaimang].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_CongsuatmayEntity.Maqcthanhpham= r[Field_Maqcthanhpham].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_CongsuatmayEntity.Macautrucins= r[Field_Macautrucins].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_CongsuatmayEntity.Makhachs= r[Field_Makhachs].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_CongsuatmayEntity.Mahangs= r[Field_Mahangs].ToString();						
-			}
-			catch { }
 									
 									
 			return _CongsuatmayEntity;
@@ -437,11 +405,9 @@ namespace GD.BBPH.BLL
 			
 			_CongsuatmayEntity.Tencongsuat= _CongsuatmayEntity_XML.Tencongsuat;
 			
-			_CongsuatmayEntity.Mamay= _CongsuatmayEntity_XML.Mamay;
+			_CongsuatmayEntity.Dodaytu= _CongsuatmayEntity_XML.Dodaytu;
 			
-			_CongsuatmayEntity.Madongmay= _CongsuatmayEntity_XML.Madongmay;
-			
-			_CongsuatmayEntity.Macongdoan= _CongsuatmayEntity_XML.Macongdoan;
+			_CongsuatmayEntity.Dodayden= _CongsuatmayEntity_XML.Dodayden;
 			
 			_CongsuatmayEntity.Khotu= _CongsuatmayEntity_XML.Khotu;
 			
@@ -451,9 +417,21 @@ namespace GD.BBPH.BLL
 			
 			_CongsuatmayEntity.Chieudaiden= _CongsuatmayEntity_XML.Chieudaiden;
 			
-			_CongsuatmayEntity.Dodaytu= _CongsuatmayEntity_XML.Dodaytu;
+			_CongsuatmayEntity.Mamays= _CongsuatmayEntity_XML.Mamays;
 			
-			_CongsuatmayEntity.Dodayden= _CongsuatmayEntity_XML.Dodayden;
+			_CongsuatmayEntity.Macongdoans= _CongsuatmayEntity_XML.Macongdoans;
+			
+			_CongsuatmayEntity.Somaumas= _CongsuatmayEntity_XML.Somaumas;
+			
+			_CongsuatmayEntity.Sohinhmas= _CongsuatmayEntity_XML.Sohinhmas;
+			
+			_CongsuatmayEntity.Maloaimangs= _CongsuatmayEntity_XML.Maloaimangs;
+			
+			_CongsuatmayEntity.Maqcthanhphams= _CongsuatmayEntity_XML.Maqcthanhphams;
+			
+			_CongsuatmayEntity.Makhachs= _CongsuatmayEntity_XML.Makhachs;
+			
+			_CongsuatmayEntity.Mahangs= _CongsuatmayEntity_XML.Mahangs;
 			
 			_CongsuatmayEntity.Tocdo= _CongsuatmayEntity_XML.Tocdo;
 			
@@ -464,20 +442,6 @@ namespace GD.BBPH.BLL
 			_CongsuatmayEntity.Ngaysua= _CongsuatmayEntity_XML.Ngaysua;
 			
 			_CongsuatmayEntity.Nguoisua= _CongsuatmayEntity_XML.Nguoisua;
-			
-			_CongsuatmayEntity.Somauma= _CongsuatmayEntity_XML.Somauma;
-			
-			_CongsuatmayEntity.Sohinhma= _CongsuatmayEntity_XML.Sohinhma;
-			
-			_CongsuatmayEntity.Maloaimang= _CongsuatmayEntity_XML.Maloaimang;
-			
-			_CongsuatmayEntity.Maqcthanhpham= _CongsuatmayEntity_XML.Maqcthanhpham;
-			
-			_CongsuatmayEntity.Macautrucins= _CongsuatmayEntity_XML.Macautrucins;
-			
-			_CongsuatmayEntity.Makhachs= _CongsuatmayEntity_XML.Makhachs;
-			
-			_CongsuatmayEntity.Mahangs= _CongsuatmayEntity_XML.Mahangs;
 									
 				
 			return _CongsuatmayEntity;
@@ -507,19 +471,13 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Mamay,_CongsuatmayEntity.Mamay);
+				r.SetField(Field_Dodaytu,_CongsuatmayEntity.Dodaytu);
 			}
 			catch { }
 			
 			try
 			{
-				r.SetField(Field_Madongmay,_CongsuatmayEntity.Madongmay);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Macongdoan,_CongsuatmayEntity.Macongdoan);
+				r.SetField(Field_Dodayden,_CongsuatmayEntity.Dodayden);
 			}
 			catch { }
 			
@@ -549,13 +507,49 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Dodaytu,_CongsuatmayEntity.Dodaytu);
+				r.SetField(Field_Mamays,_CongsuatmayEntity.Mamays);
 			}
 			catch { }
 			
 			try
 			{
-				r.SetField(Field_Dodayden,_CongsuatmayEntity.Dodayden);
+				r.SetField(Field_Macongdoans,_CongsuatmayEntity.Macongdoans);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Somaumas,_CongsuatmayEntity.Somaumas);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Sohinhmas,_CongsuatmayEntity.Sohinhmas);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Maloaimangs,_CongsuatmayEntity.Maloaimangs);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Maqcthanhphams,_CongsuatmayEntity.Maqcthanhphams);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Makhachs,_CongsuatmayEntity.Makhachs);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Mahangs,_CongsuatmayEntity.Mahangs);
 			}
 			catch { }
 			
@@ -586,48 +580,6 @@ namespace GD.BBPH.BLL
 			try
 			{
 				r.SetField(Field_Nguoisua,_CongsuatmayEntity.Nguoisua);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Somauma,_CongsuatmayEntity.Somauma);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Sohinhma,_CongsuatmayEntity.Sohinhma);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Maloaimang,_CongsuatmayEntity.Maloaimang);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Maqcthanhpham,_CongsuatmayEntity.Maqcthanhpham);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Macautrucins,_CongsuatmayEntity.Macautrucins);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Makhachs,_CongsuatmayEntity.Makhachs);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Mahangs,_CongsuatmayEntity.Mahangs);
 			}
 			catch { }
 									
@@ -654,19 +606,13 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Mamay,_CongsuatmayEntity.Mamay);
+				r.SetField(Field_Dodaytu,_CongsuatmayEntity.Dodaytu);
 			}
 			catch { }
 			
 			try
 			{
-				r.SetField(Field_Madongmay,_CongsuatmayEntity.Madongmay);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Macongdoan,_CongsuatmayEntity.Macongdoan);
+				r.SetField(Field_Dodayden,_CongsuatmayEntity.Dodayden);
 			}
 			catch { }
 			
@@ -696,13 +642,49 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Dodaytu,_CongsuatmayEntity.Dodaytu);
+				r.SetField(Field_Mamays,_CongsuatmayEntity.Mamays);
 			}
 			catch { }
 			
 			try
 			{
-				r.SetField(Field_Dodayden,_CongsuatmayEntity.Dodayden);
+				r.SetField(Field_Macongdoans,_CongsuatmayEntity.Macongdoans);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Somaumas,_CongsuatmayEntity.Somaumas);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Sohinhmas,_CongsuatmayEntity.Sohinhmas);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Maloaimangs,_CongsuatmayEntity.Maloaimangs);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Maqcthanhphams,_CongsuatmayEntity.Maqcthanhphams);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Makhachs,_CongsuatmayEntity.Makhachs);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Mahangs,_CongsuatmayEntity.Mahangs);
 			}
 			catch { }
 			
@@ -735,48 +717,6 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_CongsuatmayEntity.Nguoisua);
 			}
 			catch { }
-			
-			try
-			{
-				r.SetField(Field_Somauma,_CongsuatmayEntity.Somauma);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Sohinhma,_CongsuatmayEntity.Sohinhma);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Maloaimang,_CongsuatmayEntity.Maloaimang);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Maqcthanhpham,_CongsuatmayEntity.Maqcthanhpham);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Macautrucins,_CongsuatmayEntity.Macautrucins);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Makhachs,_CongsuatmayEntity.Makhachs);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Mahangs,_CongsuatmayEntity.Mahangs);
-			}
-			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -799,7 +739,7 @@ namespace GD.BBPH.BLL
 			return CongsuatmayEntity;
 		}
 
-		public CongsuatmayEntity Insert(System.String  Macongsuat, System.String  Tencongsuat, System.String  Mamay, System.String  Madongmay, System.String  Macongdoan, System.Decimal  Khotu, System.Decimal  Khoden, System.Decimal  Chieudaitu, System.Decimal  Chieudaiden, System.Decimal  Dodaytu, System.Decimal  Dodayden, System.Decimal  Tocdo, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.String  Somauma, System.String  Sohinhma, System.String  Maloaimang, System.String  Maqcthanhpham, System.String  Macautrucins, System.String  Makhachs, System.String  Mahangs)
+		public CongsuatmayEntity Insert(System.String  Macongsuat, System.String  Tencongsuat, System.Decimal  Dodaytu, System.Decimal  Dodayden, System.Decimal  Khotu, System.Decimal  Khoden, System.Decimal  Chieudaitu, System.Decimal  Chieudaiden, System.String  Mamays, System.String  Macongdoans, System.String  Somaumas, System.String  Sohinhmas, System.String  Maloaimangs, System.String  Maqcthanhphams, System.String  Makhachs, System.String  Mahangs, System.Decimal  Tocdo, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
 		{
 			CongsuatmayEntity _CongsuatmayEntity = new CongsuatmayEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -809,11 +749,9 @@ namespace GD.BBPH.BLL
 				
 				_CongsuatmayEntity.Tencongsuat = Tencongsuat;
 				
-				_CongsuatmayEntity.Mamay = Mamay;
+				_CongsuatmayEntity.Dodaytu = Dodaytu;
 				
-				_CongsuatmayEntity.Madongmay = Madongmay;
-				
-				_CongsuatmayEntity.Macongdoan = Macongdoan;
+				_CongsuatmayEntity.Dodayden = Dodayden;
 				
 				_CongsuatmayEntity.Khotu = Khotu;
 				
@@ -823,9 +761,21 @@ namespace GD.BBPH.BLL
 				
 				_CongsuatmayEntity.Chieudaiden = Chieudaiden;
 				
-				_CongsuatmayEntity.Dodaytu = Dodaytu;
+				_CongsuatmayEntity.Mamays = Mamays;
 				
-				_CongsuatmayEntity.Dodayden = Dodayden;
+				_CongsuatmayEntity.Macongdoans = Macongdoans;
+				
+				_CongsuatmayEntity.Somaumas = Somaumas;
+				
+				_CongsuatmayEntity.Sohinhmas = Sohinhmas;
+				
+				_CongsuatmayEntity.Maloaimangs = Maloaimangs;
+				
+				_CongsuatmayEntity.Maqcthanhphams = Maqcthanhphams;
+				
+				_CongsuatmayEntity.Makhachs = Makhachs;
+				
+				_CongsuatmayEntity.Mahangs = Mahangs;
 				
 				_CongsuatmayEntity.Tocdo = Tocdo;
 				
@@ -836,20 +786,6 @@ namespace GD.BBPH.BLL
 				_CongsuatmayEntity.Ngaysua = Ngaysua;
 				
 				_CongsuatmayEntity.Nguoisua = Nguoisua;
-				
-				_CongsuatmayEntity.Somauma = Somauma;
-				
-				_CongsuatmayEntity.Sohinhma = Sohinhma;
-				
-				_CongsuatmayEntity.Maloaimang = Maloaimang;
-				
-				_CongsuatmayEntity.Maqcthanhpham = Maqcthanhpham;
-				
-				_CongsuatmayEntity.Macautrucins = Macautrucins;
-				
-				_CongsuatmayEntity.Makhachs = Makhachs;
-				
-				_CongsuatmayEntity.Mahangs = Mahangs;
 					
 					
 				adapter.SaveEntity(_CongsuatmayEntity, true);
@@ -857,7 +793,7 @@ namespace GD.BBPH.BLL
 			return _CongsuatmayEntity;
 		}
 
-		public CongsuatmayEntity Insert(System.String Tencongsuat, System.String Mamay, System.String Madongmay, System.String Macongdoan, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Tocdo, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Somauma, System.String Sohinhma, System.String Maloaimang, System.String Maqcthanhpham, System.String Macautrucins, System.String Makhachs, System.String Mahangs)//ko co mahieu
+		public CongsuatmayEntity Insert(System.String Tencongsuat, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.String Mamays, System.String Macongdoans, System.String Somaumas, System.String Sohinhmas, System.String Maloaimangs, System.String Maqcthanhphams, System.String Makhachs, System.String Mahangs, System.Decimal Tocdo, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			CongsuatmayEntity _CongsuatmayEntity = new CongsuatmayEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -866,11 +802,9 @@ namespace GD.BBPH.BLL
 				
 				_CongsuatmayEntity.Tencongsuat = Tencongsuat;
 				
-				_CongsuatmayEntity.Mamay = Mamay;
+				_CongsuatmayEntity.Dodaytu = Dodaytu;
 				
-				_CongsuatmayEntity.Madongmay = Madongmay;
-				
-				_CongsuatmayEntity.Macongdoan = Macongdoan;
+				_CongsuatmayEntity.Dodayden = Dodayden;
 				
 				_CongsuatmayEntity.Khotu = Khotu;
 				
@@ -880,9 +814,21 @@ namespace GD.BBPH.BLL
 				
 				_CongsuatmayEntity.Chieudaiden = Chieudaiden;
 				
-				_CongsuatmayEntity.Dodaytu = Dodaytu;
+				_CongsuatmayEntity.Mamays = Mamays;
 				
-				_CongsuatmayEntity.Dodayden = Dodayden;
+				_CongsuatmayEntity.Macongdoans = Macongdoans;
+				
+				_CongsuatmayEntity.Somaumas = Somaumas;
+				
+				_CongsuatmayEntity.Sohinhmas = Sohinhmas;
+				
+				_CongsuatmayEntity.Maloaimangs = Maloaimangs;
+				
+				_CongsuatmayEntity.Maqcthanhphams = Maqcthanhphams;
+				
+				_CongsuatmayEntity.Makhachs = Makhachs;
+				
+				_CongsuatmayEntity.Mahangs = Mahangs;
 				
 				_CongsuatmayEntity.Tocdo = Tocdo;
 				
@@ -893,20 +839,6 @@ namespace GD.BBPH.BLL
 				_CongsuatmayEntity.Ngaysua = Ngaysua;
 				
 				_CongsuatmayEntity.Nguoisua = Nguoisua;
-				
-				_CongsuatmayEntity.Somauma = Somauma;
-				
-				_CongsuatmayEntity.Sohinhma = Sohinhma;
-				
-				_CongsuatmayEntity.Maloaimang = Maloaimang;
-				
-				_CongsuatmayEntity.Maqcthanhpham = Maqcthanhpham;
-				
-				_CongsuatmayEntity.Macautrucins = Macautrucins;
-				
-				_CongsuatmayEntity.Makhachs = Makhachs;
-				
-				_CongsuatmayEntity.Mahangs = Mahangs;
 					
 
 				adapter.SaveEntity(_CongsuatmayEntity, true);
@@ -944,7 +876,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Macongsuat, System.String Tencongsuat, System.String Mamay, System.String Madongmay, System.String Macongdoan, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Tocdo, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Somauma, System.String Sohinhma, System.String Maloaimang, System.String Maqcthanhpham, System.String Macautrucins, System.String Makhachs, System.String Mahangs)
+		public bool Update(System.String Macongsuat, System.String Tencongsuat, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.String Mamays, System.String Macongdoans, System.String Somaumas, System.String Sohinhmas, System.String Maloaimangs, System.String Maqcthanhphams, System.String Makhachs, System.String Mahangs, System.Decimal Tocdo, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -957,11 +889,9 @@ namespace GD.BBPH.BLL
 					
 					_CongsuatmayEntity.Tencongsuat = Tencongsuat;
 					
-					_CongsuatmayEntity.Mamay = Mamay;
+					_CongsuatmayEntity.Dodaytu = Dodaytu;
 					
-					_CongsuatmayEntity.Madongmay = Madongmay;
-					
-					_CongsuatmayEntity.Macongdoan = Macongdoan;
+					_CongsuatmayEntity.Dodayden = Dodayden;
 					
 					_CongsuatmayEntity.Khotu = Khotu;
 					
@@ -971,9 +901,21 @@ namespace GD.BBPH.BLL
 					
 					_CongsuatmayEntity.Chieudaiden = Chieudaiden;
 					
-					_CongsuatmayEntity.Dodaytu = Dodaytu;
+					_CongsuatmayEntity.Mamays = Mamays;
 					
-					_CongsuatmayEntity.Dodayden = Dodayden;
+					_CongsuatmayEntity.Macongdoans = Macongdoans;
+					
+					_CongsuatmayEntity.Somaumas = Somaumas;
+					
+					_CongsuatmayEntity.Sohinhmas = Sohinhmas;
+					
+					_CongsuatmayEntity.Maloaimangs = Maloaimangs;
+					
+					_CongsuatmayEntity.Maqcthanhphams = Maqcthanhphams;
+					
+					_CongsuatmayEntity.Makhachs = Makhachs;
+					
+					_CongsuatmayEntity.Mahangs = Mahangs;
 					
 					_CongsuatmayEntity.Tocdo = Tocdo;
 					
@@ -984,20 +926,6 @@ namespace GD.BBPH.BLL
 					_CongsuatmayEntity.Ngaysua = Ngaysua;
 					
 					_CongsuatmayEntity.Nguoisua = Nguoisua;
-					
-					_CongsuatmayEntity.Somauma = Somauma;
-					
-					_CongsuatmayEntity.Sohinhma = Sohinhma;
-					
-					_CongsuatmayEntity.Maloaimang = Maloaimang;
-					
-					_CongsuatmayEntity.Maqcthanhpham = Maqcthanhpham;
-					
-					_CongsuatmayEntity.Macautrucins = Macautrucins;
-					
-					_CongsuatmayEntity.Makhachs = Makhachs;
-					
-					_CongsuatmayEntity.Mahangs = Mahangs;
 						
 
 					adapter.SaveEntity(_CongsuatmayEntity, true);
@@ -1064,13 +992,13 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByMamay(System.String Mamay)
+		public int DeleteByDodaytu(System.Decimal Dodaytu)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Mamay == Mamay);
+			_PredicateExpression.Add(CongsuatmayFields.Dodaytu == Dodaytu);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1080,29 +1008,13 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByMadongmay(System.String Madongmay)
+		public int DeleteByDodayden(System.Decimal Dodayden)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Madongmay == Madongmay);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByMacongdoan(System.String Macongdoan)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Macongdoan == Macongdoan);
+			_PredicateExpression.Add(CongsuatmayFields.Dodayden == Dodayden);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1176,13 +1088,13 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByDodaytu(System.Decimal Dodaytu)
+		public int DeleteByMamays(System.String Mamays)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Dodaytu == Dodaytu);
+			_PredicateExpression.Add(CongsuatmayFields.Mamays == Mamays);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1192,13 +1104,109 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByDodayden(System.Decimal Dodayden)
+		public int DeleteByMacongdoans(System.String Macongdoans)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Dodayden == Dodayden);
+			_PredicateExpression.Add(CongsuatmayFields.Macongdoans == Macongdoans);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteBySomaumas(System.String Somaumas)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Somaumas == Somaumas);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteBySohinhmas(System.String Sohinhmas)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Sohinhmas == Sohinhmas);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByMaloaimangs(System.String Maloaimangs)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs == Maloaimangs);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByMaqcthanhphams(System.String Maqcthanhphams)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maqcthanhphams == Maqcthanhphams);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByMakhachs(System.String Makhachs)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Makhachs == Makhachs);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByMahangs(System.String Mahangs)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Mahangs == Mahangs);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1279,118 +1287,6 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(CongsuatmayFields.Nguoisua == Nguoisua);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteBySomauma(System.String Somauma)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Somauma == Somauma);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteBySohinhma(System.String Sohinhma)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Sohinhma == Sohinhma);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByMaloaimang(System.String Maloaimang)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maloaimang == Maloaimang);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByMaqcthanhpham(System.String Maqcthanhpham)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maqcthanhpham == Maqcthanhpham);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByMacautrucins(System.String Macautrucins)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Macautrucins == Macautrucins);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByMakhachs(System.String Makhachs)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Makhachs == Makhachs);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByMahangs(System.String Mahangs)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Mahangs == Mahangs);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1509,13 +1405,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByMamay(System.String Mamay)
+		public EntityCollection SelectByDodaytu(System.Decimal Dodaytu)
 		{
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Mamay == Mamay);
+			_PredicateExpression.Add(CongsuatmayFields.Dodaytu == Dodaytu);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1525,14 +1421,14 @@ namespace GD.BBPH.BLL
 			return _CongsuatmayCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByMamayRDT(System.String Mamay)
+		public DataTable SelectByDodaytuRDT(System.Decimal Dodaytu)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Mamay == Mamay);
+			_PredicateExpression.Add(CongsuatmayFields.Dodaytu == Dodaytu);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1543,13 +1439,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByMadongmay(System.String Madongmay)
+		public EntityCollection SelectByDodayden(System.Decimal Dodayden)
 		{
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Madongmay == Madongmay);
+			_PredicateExpression.Add(CongsuatmayFields.Dodayden == Dodayden);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1559,48 +1455,14 @@ namespace GD.BBPH.BLL
 			return _CongsuatmayCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByMadongmayRDT(System.String Madongmay)
+		public DataTable SelectByDodaydenRDT(System.Decimal Dodayden)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Madongmay == Madongmay);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByMacongdoan(System.String Macongdoan)
-		{
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Macongdoan == Macongdoan);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
-			}
-			return _CongsuatmayCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByMacongdoanRDT(System.String Macongdoan)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Macongdoan == Macongdoan);
+			_PredicateExpression.Add(CongsuatmayFields.Dodayden == Dodayden);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1747,13 +1609,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByDodaytu(System.Decimal Dodaytu)
+		public EntityCollection SelectByMamays(System.String Mamays)
 		{
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Dodaytu == Dodaytu);
+			_PredicateExpression.Add(CongsuatmayFields.Mamays == Mamays);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1763,14 +1625,14 @@ namespace GD.BBPH.BLL
 			return _CongsuatmayCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByDodaytuRDT(System.Decimal Dodaytu)
+		public DataTable SelectByMamaysRDT(System.String Mamays)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Dodaytu == Dodaytu);
+			_PredicateExpression.Add(CongsuatmayFields.Mamays == Mamays);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1781,13 +1643,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByDodayden(System.Decimal Dodayden)
+		public EntityCollection SelectByMacongdoans(System.String Macongdoans)
 		{
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Dodayden == Dodayden);
+			_PredicateExpression.Add(CongsuatmayFields.Macongdoans == Macongdoans);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1797,14 +1659,218 @@ namespace GD.BBPH.BLL
 			return _CongsuatmayCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByDodaydenRDT(System.Decimal Dodayden)
+		public DataTable SelectByMacongdoansRDT(System.String Macongdoans)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Dodayden == Dodayden);
+			_PredicateExpression.Add(CongsuatmayFields.Macongdoans == Macongdoans);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectBySomaumas(System.String Somaumas)
+		{
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Somaumas == Somaumas);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
+			}
+			return _CongsuatmayCollection;
+		}
+		// Return DataTable
+		public DataTable SelectBySomaumasRDT(System.String Somaumas)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Somaumas == Somaumas);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectBySohinhmas(System.String Sohinhmas)
+		{
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Sohinhmas == Sohinhmas);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
+			}
+			return _CongsuatmayCollection;
+		}
+		// Return DataTable
+		public DataTable SelectBySohinhmasRDT(System.String Sohinhmas)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Sohinhmas == Sohinhmas);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByMaloaimangs(System.String Maloaimangs)
+		{
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs == Maloaimangs);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
+			}
+			return _CongsuatmayCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByMaloaimangsRDT(System.String Maloaimangs)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs == Maloaimangs);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByMaqcthanhphams(System.String Maqcthanhphams)
+		{
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maqcthanhphams == Maqcthanhphams);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
+			}
+			return _CongsuatmayCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByMaqcthanhphamsRDT(System.String Maqcthanhphams)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maqcthanhphams == Maqcthanhphams);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByMakhachs(System.String Makhachs)
+		{
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Makhachs == Makhachs);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
+			}
+			return _CongsuatmayCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByMakhachsRDT(System.String Makhachs)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Makhachs == Makhachs);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByMahangs(System.String Mahangs)
+		{
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Mahangs == Mahangs);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
+			}
+			return _CongsuatmayCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByMahangsRDT(System.String Mahangs)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Mahangs == Mahangs);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1975,244 +2041,6 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(CongsuatmayFields.Nguoisua == Nguoisua);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectBySomauma(System.String Somauma)
-		{
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Somauma == Somauma);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
-			}
-			return _CongsuatmayCollection;
-		}
-		// Return DataTable
-		public DataTable SelectBySomaumaRDT(System.String Somauma)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Somauma == Somauma);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectBySohinhma(System.String Sohinhma)
-		{
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Sohinhma == Sohinhma);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
-			}
-			return _CongsuatmayCollection;
-		}
-		// Return DataTable
-		public DataTable SelectBySohinhmaRDT(System.String Sohinhma)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Sohinhma == Sohinhma);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByMaloaimang(System.String Maloaimang)
-		{
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maloaimang == Maloaimang);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
-			}
-			return _CongsuatmayCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByMaloaimangRDT(System.String Maloaimang)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maloaimang == Maloaimang);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByMaqcthanhpham(System.String Maqcthanhpham)
-		{
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maqcthanhpham == Maqcthanhpham);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
-			}
-			return _CongsuatmayCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByMaqcthanhphamRDT(System.String Maqcthanhpham)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maqcthanhpham == Maqcthanhpham);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByMacautrucins(System.String Macautrucins)
-		{
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Macautrucins == Macautrucins);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
-			}
-			return _CongsuatmayCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByMacautrucinsRDT(System.String Macautrucins)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Macautrucins == Macautrucins);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByMakhachs(System.String Makhachs)
-		{
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Makhachs == Makhachs);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
-			}
-			return _CongsuatmayCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByMakhachsRDT(System.String Makhachs)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Makhachs == Makhachs);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByMahangs(System.String Mahangs)
-		{
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Mahangs == Mahangs);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
-			}
-			return _CongsuatmayCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByMahangsRDT(System.String Mahangs)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Mahangs == Mahangs);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
