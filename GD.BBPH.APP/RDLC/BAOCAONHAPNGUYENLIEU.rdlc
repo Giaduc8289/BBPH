@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>BÁO CÁO XUẤT KHO NGUYÊN LIỆU</Value>
+                <Value>BÁO CÁO NHẬP KHO NGUYÊN LIỆU</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>20pt</FontSize>
@@ -26,7 +26,7 @@
         <Top>2.0217cm</Top>
         <Left>0cm</Left>
         <Height>0.88322cm</Height>
-        <Width>18.83055cm</Width>
+        <Width>18.72472cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -59,7 +59,7 @@
         <Top>3.01075cm</Top>
         <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>18.83055cm</Width>
+        <Width>18.72472cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -179,7 +179,7 @@
         <Top>3.69217cm</Top>
         <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>18.83055cm</Width>
+        <Width>18.72472cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -213,7 +213,7 @@
         <Top>4.39067cm</Top>
         <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>18.83055cm</Width>
+        <Width>18.72472cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -247,7 +247,7 @@
         <Top>5.22676cm</Top>
         <Left>0cm</Left>
         <Height>0.56825cm</Height>
-        <Width>18.83055cm</Width>
+        <Width>18.72472cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -263,25 +263,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.01619cm</Width>
+              <Width>2.00107cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.49136cm</Width>
+              <Width>2.47624cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.26515cm</Width>
+              <Width>4.22357cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.91564cm</Width>
+              <Width>1.90052cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.6987cm</Width>
+              <Width>1.94816cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.53243cm</Width>
+              <Width>2.43795cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.56711cm</Width>
+              <Width>3.39323cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -297,7 +297,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Ngày xuất</Value>
+                              <Value>Ngày nhập</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -517,7 +517,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Lệnh xuất</Value>
+                              <Value>Hợp đồng mua</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -1223,14 +1223,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Lenhxuat">
+                    <Textbox Name="Sohopdongmua">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Lenhxuat.Value</Value>
+                              <Value>=Fields!Sohopdongmua.Value</Value>
                               <Style>
                                 <Language>vi</Language>
                               </Style>
@@ -1239,7 +1239,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Lenhxuat</rd:DefaultName>
+                      <rd:DefaultName>Sohopdongmua</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1348,7 +1348,7 @@
         <Top>6.20957cm</Top>
         <Left>0.34397cm</Left>
         <Height>2.4cm</Height>
-        <Width>18.48658cm</Width>
+        <Width>18.38075cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -1360,7 +1360,7 @@
     <Height>9.70414cm</Height>
     <Style />
   </Body>
-  <Width>18.94931cm</Width>
+  <Width>18.73765cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
