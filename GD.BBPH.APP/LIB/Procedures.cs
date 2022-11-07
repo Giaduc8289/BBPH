@@ -1678,6 +1678,16 @@ namespace GD.BBPH.APP.LIB
         #region BBPH
 
         #region Hàm trả về bảng dữ liệu
+        public static DataTable Danhsachnguyenlieu(string Manguyenlieu, DateTime Ngay)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Manguyenlieu", SqlDbType.NVarChar, 0), Manguyenlieu);
+            parameters.Add(new SqlParameter("@Ngay", SqlDbType.Date, 0), Ngay);
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader("Danhsachnguyenlieu", "Danhsachnguyenlieu", myArr).Tables[0];
+        }
         public static DataTable Danhsachctpt()
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);

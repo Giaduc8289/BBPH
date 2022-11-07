@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 11:28:42 AM
+// Code is generated on: Monday, November 7, 2022 3:16:21 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -843,16 +843,18 @@ namespace GD.BBPH.DAL
 	/// </summary>
 	public enum DmnguyenlieuFieldIndex:int
 	{
+		///<summary>Id. </summary>
+		Id,
 		///<summary>Manl. </summary>
 		Manl,
+		///<summary>Tennl. </summary>
+		Tennl,
 		///<summary>Tenrutgon. </summary>
 		Tenrutgon,
 		///<summary>Manhom. </summary>
 		Manhom,
 		///<summary>Tennhom. </summary>
 		Tennhom,
-		///<summary>Tennl. </summary>
-		Tennl,
 		///<summary>Gia. </summary>
 		Gia,
 		///<summary>Ngay. </summary>

@@ -37,13 +37,14 @@ namespace GD.BBPH.DAL.EntityClasses
 				{
 					DataRowView _Rowview = (DataRowView)this.BS_DMNGUYENLIEU.Current;
 					if (_Rowview != null)
-						MAHIEU_PK = _Rowview.Row[DmnguyenlieuFields.Manl.Name].ToString();
+						MAHIEU_PK = _Rowview.Row[DmnguyenlieuFields.Id.Name].ToString();
 					
+					txt_ID.Text = _Rowview.Row[DmnguyenlieuFields.Id.Name].ToString();
 					txt_MANL.Text = _Rowview.Row[DmnguyenlieuFields.Manl.Name].ToString();
+					txt_TENNL.Text = _Rowview.Row[DmnguyenlieuFields.Tennl.Name].ToString();
 					txt_TENRUTGON.Text = _Rowview.Row[DmnguyenlieuFields.Tenrutgon.Name].ToString();
 					txt_MANHOM.Text = _Rowview.Row[DmnguyenlieuFields.Manhom.Name].ToString();
 					txt_TENNHOM.Text = _Rowview.Row[DmnguyenlieuFields.Tennhom.Name].ToString();
-					txt_TENNL.Text = _Rowview.Row[DmnguyenlieuFields.Tennl.Name].ToString();
 					txt_GIA.Text = _Rowview.Row[DmnguyenlieuFields.Gia.Name].ToString();
 					txt_NGAY.Text = _Rowview.Row[DmnguyenlieuFields.Ngay.Name].ToString();
 					txt_GIAHIENTAI.Text = _Rowview.Row[DmnguyenlieuFields.Giahientai.Name].ToString();
@@ -62,11 +63,12 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			DmnguyenlieuEntity _DmnguyenlieuEntity = new DmnguyenlieuEntity();
 			
+			_DmnguyenlieuEntity.Id = txt_ID.Text.Trim();
 			_DmnguyenlieuEntity.Manl = txt_MANL.Text.Trim();
+			_DmnguyenlieuEntity.Tennl = txt_TENNL.Text.Trim();
 			_DmnguyenlieuEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
 			_DmnguyenlieuEntity.Manhom = txt_MANHOM.Text.Trim();
 			_DmnguyenlieuEntity.Tennhom = txt_TENNHOM.Text.Trim();
-			_DmnguyenlieuEntity.Tennl = txt_TENNL.Text.Trim();
 			_DmnguyenlieuEntity.Gia = txt_GIA.Text.Trim();
 			_DmnguyenlieuEntity.Ngay = txt_NGAY.Text.Trim();
 			_DmnguyenlieuEntity.Giahientai = txt_GIAHIENTAI.Text.Trim();
@@ -87,11 +89,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			{
 				_DmnguyenlieuManager.Update(_DmnguyenlieuEntity);
 				
+				GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Id.Name].Value = _DmnguyenlieuEntity.Id;
 				GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Manl.Name].Value = _DmnguyenlieuEntity.Manl;
+				GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tennl.Name].Value = _DmnguyenlieuEntity.Tennl;
 				GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tenrutgon.Name].Value = _DmnguyenlieuEntity.Tenrutgon;
 				GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Manhom.Name].Value = _DmnguyenlieuEntity.Manhom;
 				GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tennhom.Name].Value = _DmnguyenlieuEntity.Tennhom;
-				GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Tennl.Name].Value = _DmnguyenlieuEntity.Tennl;
 				GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Gia.Name].Value = _DmnguyenlieuEntity.Gia;
 				GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Ngay.Name].Value = _DmnguyenlieuEntity.Ngay;
 				GRID_DMNGUYENLIEU.CurrentRow.Cells[DmnguyenlieuFields.Giahientai.Name].Value = _DmnguyenlieuEntity.Giahientai;
