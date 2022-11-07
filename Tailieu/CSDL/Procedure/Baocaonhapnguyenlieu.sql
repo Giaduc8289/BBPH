@@ -13,7 +13,7 @@ With Encryption As
 	SET XACT_ABORT ON;
 	
 	SELECT Ngaynhap As Ngay, Makho, Tenkho, Manguyenlieu, Tennguyenlieu,
-		   Soluong, Donvitinh, Malydo, Tenlydo, Sohopdongmua
+		   Soluong, Donvitinh, Malydo, Tenlydo, Sohopdongmua, nl.Manhom, nl.Tennhom
 	FROM dbo.Nhapkhonguyenlieu xk Left Join dbo.dmnguyenlieu nl on xk.Manguyenlieu = nl.Manl
 	WHERE Ngaynhap BETWEEN @Tungay AND @Denngay 
 		AND (Makho = @Makho OR @Makho='')

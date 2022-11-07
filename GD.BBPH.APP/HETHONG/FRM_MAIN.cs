@@ -1164,7 +1164,15 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAONHAPNGUYENLIEU()), mmru.Text);
                     break;
+                case "FRM_BAOCAOTONNGUYENLIEU":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BAOCAOTONNGUYENLIEU") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAOTONNGUYENLIEU()), mmru.Text);
+                    break;
                 #endregion
+
 
                 #region Cửa sổ
                 case "WI_LOP":
