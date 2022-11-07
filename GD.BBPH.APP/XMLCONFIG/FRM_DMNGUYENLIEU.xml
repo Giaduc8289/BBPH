@@ -156,7 +156,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>
-    <name>tablename</name>
-    <headerText>Danh sách tendanhsach</headerText>
+    <name>Dmnguyenlieu</name>
+    <headerText>Danh sách nguyên liệu</headerText>
   </tablename>
 </NewDataSet>
