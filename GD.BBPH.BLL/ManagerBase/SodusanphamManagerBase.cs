@@ -50,6 +50,8 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Nguoisua="Nguoisua";				
 		
+		public const String Field_Sokg="Sokg";				
+		
 				
 		#endregion	
 
@@ -88,6 +90,8 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Ngaysua,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
+			
+			dt.Columns.Add(Field_Sokg,typeof(System.Decimal));
 									
 		            
 			return dt;			
@@ -170,6 +174,12 @@ namespace GD.BBPH.BLL
 				r[Field_Nguoisua]=_SodusanphamEntity.Nguoisua;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_Sokg]=_SodusanphamEntity.Sokg;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -248,6 +258,12 @@ namespace GD.BBPH.BLL
 				_SodusanphamEntity.Nguoisua= r[Field_Nguoisua].ToString();						
 			}
 			catch { }
+			
+			try
+			{
+				_SodusanphamEntity.Sokg= System.Decimal.Parse(r[Field_Sokg].ToString());						
+			}
+			catch { }
 									
 									
 			return _SodusanphamEntity;
@@ -280,6 +296,8 @@ namespace GD.BBPH.BLL
 			_SodusanphamEntity.Ngaysua= _SodusanphamEntity_XML.Ngaysua;
 			
 			_SodusanphamEntity.Nguoisua= _SodusanphamEntity_XML.Nguoisua;
+			
+			_SodusanphamEntity.Sokg= _SodusanphamEntity_XML.Sokg;
 									
 				
 			return _SodusanphamEntity;
@@ -366,6 +384,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_SodusanphamEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Sokg,_SodusanphamEntity.Sokg);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -447,6 +471,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_SodusanphamEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Sokg,_SodusanphamEntity.Sokg);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -469,7 +499,7 @@ namespace GD.BBPH.BLL
 			return SodusanphamEntity;
 		}
 
-		public SodusanphamEntity Insert(System.Int64  Id, System.DateTime  Ngaykiemke, System.String  Makho, System.String  Tenkho, System.String  Masanpham, System.String  Tensanpham, System.Decimal  Somet, System.Decimal  Soluong, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public SodusanphamEntity Insert(System.Int64  Id, System.DateTime  Ngaykiemke, System.String  Makho, System.String  Tenkho, System.String  Masanpham, System.String  Tensanpham, System.Decimal  Somet, System.Decimal  Soluong, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Decimal  Sokg)
 		{
 			SodusanphamEntity _SodusanphamEntity = new SodusanphamEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -498,6 +528,8 @@ namespace GD.BBPH.BLL
 				_SodusanphamEntity.Ngaysua = Ngaysua;
 				
 				_SodusanphamEntity.Nguoisua = Nguoisua;
+				
+				_SodusanphamEntity.Sokg = Sokg;
 					
 					
 				adapter.SaveEntity(_SodusanphamEntity, true);
@@ -505,7 +537,7 @@ namespace GD.BBPH.BLL
 			return _SodusanphamEntity;
 		}
 
-		public SodusanphamEntity Insert(System.DateTime Ngaykiemke, System.String Makho, System.String Tenkho, System.String Masanpham, System.String Tensanpham, System.Decimal Somet, System.Decimal Soluong, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public SodusanphamEntity Insert(System.DateTime Ngaykiemke, System.String Makho, System.String Tenkho, System.String Masanpham, System.String Tensanpham, System.Decimal Somet, System.Decimal Soluong, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Sokg)//ko co mahieu
 		{
 			SodusanphamEntity _SodusanphamEntity = new SodusanphamEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -533,6 +565,8 @@ namespace GD.BBPH.BLL
 				_SodusanphamEntity.Ngaysua = Ngaysua;
 				
 				_SodusanphamEntity.Nguoisua = Nguoisua;
+				
+				_SodusanphamEntity.Sokg = Sokg;
 					
 
 				adapter.SaveEntity(_SodusanphamEntity, true);
@@ -570,7 +604,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.DateTime Ngaykiemke, System.String Makho, System.String Tenkho, System.String Masanpham, System.String Tensanpham, System.Decimal Somet, System.Decimal Soluong, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.Int64 Id, System.DateTime Ngaykiemke, System.String Makho, System.String Tenkho, System.String Masanpham, System.String Tensanpham, System.Decimal Somet, System.Decimal Soluong, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Sokg)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -602,6 +636,8 @@ namespace GD.BBPH.BLL
 					_SodusanphamEntity.Ngaysua = Ngaysua;
 					
 					_SodusanphamEntity.Nguoisua = Nguoisua;
+					
+					_SodusanphamEntity.Sokg = Sokg;
 						
 
 					adapter.SaveEntity(_SodusanphamEntity, true);
@@ -819,6 +855,22 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(SodusanphamFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("SodusanphamEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteBySokg(System.Decimal Sokg)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(SodusanphamFields.Sokg == Sokg);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1267,6 +1319,40 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(SodusanphamFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_SodusanphamCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectBySokg(System.Decimal Sokg)
+		{
+			EntityCollection _SodusanphamCollection = new EntityCollection(new SodusanphamEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(SodusanphamFields.Sokg == Sokg);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_SodusanphamCollection, filter, 0, null);
+			}
+			return _SodusanphamCollection;
+		}
+		// Return DataTable
+		public DataTable SelectBySokgRDT(System.Decimal Sokg)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _SodusanphamCollection = new EntityCollection(new SodusanphamEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(SodusanphamFields.Sokg == Sokg);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

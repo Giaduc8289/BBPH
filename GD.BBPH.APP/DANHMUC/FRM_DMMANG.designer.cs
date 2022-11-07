@@ -189,7 +189,7 @@
             this.txt_MAQUYCACHMANG.Size = new System.Drawing.Size(138, 20);
             this.txt_MAQUYCACHMANG.TabIndex = 10;
             this.txt_MAQUYCACHMANG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAQCMANG_KeyDown);
-            this.txt_MAQUYCACHMANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAQUYCACHLOAIMANG_Validating);
+            this.txt_MAQUYCACHMANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAQUYCACHMANG_Validating);
             // 
             // label9
             // 

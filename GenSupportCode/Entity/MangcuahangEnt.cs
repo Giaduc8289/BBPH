@@ -62,6 +62,9 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NGUOITAO.Text = _Rowview.Row[MangcuahangFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[MangcuahangFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[MangcuahangFields.Nguoisua.Name].ToString();
+					txt_DODAY.Text = _Rowview.Row[MangcuahangFields.Doday.Name].ToString();
+					txt_MALOAIMANG.Text = _Rowview.Row[MangcuahangFields.Maloaimang.Name].ToString();
+					txt_TENLOAIMANG.Text = _Rowview.Row[MangcuahangFields.Tenloaimang.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_MANGCUAHANG_CurrentChanged"); }
@@ -94,6 +97,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			_MangcuahangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
 			_MangcuahangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
 			_MangcuahangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_MangcuahangEntity.Doday = txt_DODAY.Text.Trim();
+			_MangcuahangEntity.Maloaimang = txt_MALOAIMANG.Text.Trim();
+			_MangcuahangEntity.Tenloaimang = txt_TENLOAIMANG.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_MANGCUAHANG_PK))
 			{
@@ -128,6 +134,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Nguoitao.Name].Value = _MangcuahangEntity.Nguoitao;
 				GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Ngaysua.Name].Value = _MangcuahangEntity.Ngaysua;
 				GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Nguoisua.Name].Value = _MangcuahangEntity.Nguoisua;
+				GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Doday.Name].Value = _MangcuahangEntity.Doday;
+				GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Maloaimang.Name].Value = _MangcuahangEntity.Maloaimang;
+				GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tenloaimang.Name].Value = _MangcuahangEntity.Tenloaimang;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_MangcuahangManager.Convert(_MangcuahangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_MANGCUAHANG_PK;

@@ -49,7 +49,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Mamay</name>
+    <name>Mamays</name>
     <headerText>Máy</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -58,16 +58,7 @@
   </viewgrid>
   <viewgrid>
     <value>2</value>
-    <name>Madongmay</name>
-    <headerText>Mã dòng máy</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
-    <name>Macongdoan</name>
+    <name>Macongdoans</name>
     <headerText>Mã công đoạn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -130,7 +121,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Somauma</name>
+    <name>Somaumas</name>
     <headerText>Số màu</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -139,7 +130,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Sohinhma</name>
+    <name>Sohinhmas</name>
     <headerText>Số hình</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -148,16 +139,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Macautrucins</name>
-    <headerText>Cấu trúc</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Maloaimang</name>
+    <name>Maloaimangs</name>
     <headerText>Loại màng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -166,7 +148,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Maqcthanhpham</name>
+    <name>Maqcthanhphams</name>
     <headerText>Quy cách TP</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>

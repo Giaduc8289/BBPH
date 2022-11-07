@@ -57,7 +57,6 @@ namespace GD.BBPH.APP.DANHMUC
                         DT_CTPT = LIB.Procedures.Danhsachctpt();
                         DT_QCMANG = new DmquycachManager().SelectByManhomRDT("N10");
                         DT_LOAIMANG = new DmquycachManager().SelectByManhomRDT("N09");
-                        //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(DT_CTPT, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_CTPT_H.xml");
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -84,14 +83,13 @@ namespace GD.BBPH.APP.DANHMUC
             };
         }
 
-        //private void LoadDanhMuc()
-        //{
-        //    DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
-        //    DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-        //    DT_CTPT = LIB.Procedures.Danhsachctpt();
-        //    DT_QCMANG = new DmquycachManager().SelectByManhomRDT("N10");
-        //    DT_LOAIMANG = new DmquycachManager().SelectByManhomRDT("N09");
-        //}
+        private void LoadDanhMuc()
+        {
+            DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+            DT_CTPT = LIB.Procedures.Danhsachctpt();
+            DT_QCMANG = new DmquycachManager().SelectByManhomRDT("N10");
+            DT_LOAIMANG = new DmquycachManager().SelectByManhomRDT("N09");
+        }
 
         private static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
         {
@@ -137,12 +135,19 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[DmmangFields.Mamang.Name].ToString();
                     txt_MAHIEU.Text = _Rowview.Row[DmmangFields.Mamang.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmmangFields.Tenmang.Name].ToString();
-                    txt_MAKHACH_Validating(new object(), new CancelEventArgs());
+                    txt_MAKHACH.Text = _Rowview.Row[DmmangFields.Makhach.Name].ToString();
                     txt_KICHTHUOC.Text = _Rowview.Row[DmmangFields.Kichthuoc.Name].ToString();
                     txt_TRONGLUONG.Text = _Rowview.Row[DmmangFields.Trongluong.Name].ToString();
+                    txt_MACTPT.Text = _Rowview.Row[DmmangFields.Mactpt.Name].ToString();
+                    txt_DODAY.Text = _Rowview.Row[DmmangFields.Doday.Name].ToString();
+                    txt_RONG.Text = _Rowview.Row[DmmangFields.Rong.Name].ToString();
+                    txt_MALOAIMANG.Text = _Rowview.Row[DmmangFields.Maloaimang.Name].ToString();
+                    txt_MAQUYCACHMANG.Text = _Rowview.Row[DmmangFields.Maqcmang.Name].ToString();
+
+                    txt_MAKHACH_Validating(new object(), new CancelEventArgs());
                     txt_MACTPT_Validating(new object(), new CancelEventArgs());
                     txt_MALOAIMANG_Validating(new object(), new CancelEventArgs());
-                    txt_MAQUYCACHLOAIMANG_Validating(new object(), new CancelEventArgs());
+                    txt_MAQUYCACHMANG_Validating(new object(), new CancelEventArgs());
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMMANG_CurrentChanged"); }
@@ -156,14 +161,14 @@ namespace GD.BBPH.APP.DANHMUC
             _DmmangEntity.Makhach = txt_MAKHACH.Text.Trim();
             _DmmangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
             _DmmangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
-            _DmmangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
+            _DmmangEntity.Trongluong = LIB.ConvertString.NumbertoDB(txt_TRONGLUONG.Text.Trim());
+            _DmmangEntity.Mactpt = txt_MACTPT.Text.Trim();
             _DmmangEntity.Doday = LIB.ConvertString.NumbertoDB(txt_DODAY.Text.Trim());
             _DmmangEntity.Rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
             _DmmangEntity.Maloaimang = txt_MALOAIMANG.Text.Trim();
             _DmmangEntity.Tenloaimang = txt_TENLOAIMANG.Text.Trim();
             _DmmangEntity.Maqcmang = txt_MAQUYCACHMANG.Text.Trim();
             _DmmangEntity.Tenqcmang = txt_TENQUYCACHMANG.Text.Trim();
-           
 
             if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
@@ -185,6 +190,12 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMMANG.CurrentRow.Cells[DmmangFields.Kichthuoc.Name].Value = _DmmangEntity.Kichthuoc;
                 GRID_DMMANG.CurrentRow.Cells[DmmangFields.Trongluong.Name].Value = _DmmangEntity.Trongluong;
                 GRID_DMMANG.CurrentRow.Cells[DmmangFields.Mactpt.Name].Value = _DmmangEntity.Mactpt;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Doday.Name].Value = _DmmangEntity.Doday;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Rong.Name].Value = _DmmangEntity.Rong;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Maloaimang.Name].Value = _DmmangEntity.Maloaimang;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenloaimang.Name].Value = _DmmangEntity.Tenloaimang;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Maqcmang.Name].Value = _DmmangEntity.Maqcmang;
+                GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenqcmang.Name].Value = _DmmangEntity.Tenqcmang;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_DmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_MAHIEU_PK;
@@ -375,7 +386,7 @@ namespace GD.BBPH.APP.DANHMUC
             catch { return null; }
         }
 
-        private void txt_MAQUYCACHLOAIMANG_Validating(object sender, CancelEventArgs e)
+        private void txt_MAQUYCACHMANG_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MAQUYCACHMANG.Text.Trim()) || DT_QCMANG == null || DT_QCMANG.Rows.Count == 0) return;

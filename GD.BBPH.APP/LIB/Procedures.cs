@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Collections.Specialized;
 using GD.BBPH.LIB;
+using System.Text.RegularExpressions;
 
 namespace GD.BBPH.APP.LIB
 {
@@ -17,6 +18,40 @@ namespace GD.BBPH.APP.LIB
     {
         private static Int32 timeout = 0;//1200;
         private static string ConnectionStringKeyName = LIB.SESSION_START.ConnectionStringKeyName;
+
+        public static string GetMadanhmuc(DataTable _table, string _fieldName, string _tiento, int _soluongso)
+        {
+            long m_sohieu = 0, m_newsohieu = 0;
+
+            if (_table.Rows.Count == 0) return _tiento + 1.ToString().PadLeft(_soluongso,'0');
+            DataRow[] _row = _table.Select();
+
+            int max_sohieu = 0;
+            string alphaPart = "";
+            for (int i = 0; i < _row.Length; i++)
+            {
+                int _sohieu = 0;
+                // alphaPart = "";
+                // kiem tra chuoi co ca so va chu 
+                string m_sohieu_chucai_so = _row[i][_fieldName].ToString();
+                Regex re = new Regex(@"([a-zA-Z]+)(\d+)");
+                Match result = re.Match(m_sohieu_chucai_so);
+                if (result.Length == 0) int.TryParse(_row[i][_fieldName].ToString(), out _sohieu);
+                else
+                {
+                    alphaPart = result.Groups[1].Value;
+                    string numberPart = result.Groups[2].Value;
+                    int.TryParse(numberPart, out _sohieu);
+                }
+                max_sohieu = (max_sohieu < _sohieu) ? _sohieu : max_sohieu;
+            }
+            max_sohieu++;
+            if (max_sohieu == 1) alphaPart = _tiento;
+            m_sohieu = (m_newsohieu > max_sohieu) ? m_newsohieu : max_sohieu;
+            m_newsohieu = m_sohieu;
+
+            return (alphaPart + m_newsohieu.ToString().PadLeft(_soluongso, '0'));
+        }
 
         public static DataTable SELECT_TOP_MATHANGKHOHANG_BY_DMKHO_SYNC(string str_madmkho, int Trangthai, int Number_top)
         {

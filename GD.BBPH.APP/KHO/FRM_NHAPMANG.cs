@@ -329,6 +329,8 @@ namespace GD.BBPH.APP.KHO
                     _NhapkhomangEntityCol.Add(_NhapkhomangEntity);
             }
 
+            _str_MAHIEU_PK = txt_NGAY.Text.Trim();
+
             foreach (NhapkhomangEntity _NhapkhomangEntity in _NhapkhomangEntityCol)
             {
                 if (_NhapkhomangEntity.IsNew)

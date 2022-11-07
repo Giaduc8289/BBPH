@@ -44,7 +44,6 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_MAKHACH.Text = _Rowview.Row[DmmangFields.Makhach.Name].ToString();
 					txt_TENKHACH.Text = _Rowview.Row[DmmangFields.Tenkhach.Name].ToString();
 					txt_KICHTHUOC.Text = _Rowview.Row[DmmangFields.Kichthuoc.Name].ToString();
-					txt_TRONGLUONG.Text = _Rowview.Row[DmmangFields.Trongluong.Name].ToString();
 					txt_MACTPT.Text = _Rowview.Row[DmmangFields.Mactpt.Name].ToString();
 					txt_NGAYTAO.Text = _Rowview.Row[DmmangFields.Ngaytao.Name].ToString();
 					txt_NGUOITAO.Text = _Rowview.Row[DmmangFields.Nguoitao.Name].ToString();
@@ -56,6 +55,7 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_TENLOAIMANG.Text = _Rowview.Row[DmmangFields.Tenloaimang.Name].ToString();
 					txt_MAQCMANG.Text = _Rowview.Row[DmmangFields.Maqcmang.Name].ToString();
 					txt_TENQCMANG.Text = _Rowview.Row[DmmangFields.Tenqcmang.Name].ToString();
+					txt_TRONGLUONG.Text = _Rowview.Row[DmmangFields.Trongluong.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMMANG_CurrentChanged"); }
@@ -70,7 +70,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_DmmangEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_DmmangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
 			_DmmangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
-			_DmmangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
 			_DmmangEntity.Mactpt = txt_MACTPT.Text.Trim();
 			_DmmangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
 			_DmmangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
@@ -82,6 +81,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_DmmangEntity.Tenloaimang = txt_TENLOAIMANG.Text.Trim();
 			_DmmangEntity.Maqcmang = txt_MAQCMANG.Text.Trim();
 			_DmmangEntity.Tenqcmang = txt_TENQCMANG.Text.Trim();
+			_DmmangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_DMMANG_PK))
 			{
@@ -98,7 +98,6 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Makhach.Name].Value = _DmmangEntity.Makhach;
 				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenkhach.Name].Value = _DmmangEntity.Tenkhach;
 				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Kichthuoc.Name].Value = _DmmangEntity.Kichthuoc;
-				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Trongluong.Name].Value = _DmmangEntity.Trongluong;
 				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Mactpt.Name].Value = _DmmangEntity.Mactpt;
 				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Ngaytao.Name].Value = _DmmangEntity.Ngaytao;
 				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Nguoitao.Name].Value = _DmmangEntity.Nguoitao;
@@ -110,6 +109,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenloaimang.Name].Value = _DmmangEntity.Tenloaimang;
 				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Maqcmang.Name].Value = _DmmangEntity.Maqcmang;
 				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Tenqcmang.Name].Value = _DmmangEntity.Tenqcmang;
+				GRID_DMMANG.CurrentRow.Cells[DmmangFields.Trongluong.Name].Value = _DmmangEntity.Trongluong;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmangManager.Convert(_DmmangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_DMMANG_PK;
