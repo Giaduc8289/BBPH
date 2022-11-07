@@ -850,7 +850,7 @@ namespace GD.BBPH.APP.BANHANG
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DONDATHANG_D.xml",
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DONHANG_D.xml",
                         DT_DONHANG_D, DonhangDFields.Madon.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;

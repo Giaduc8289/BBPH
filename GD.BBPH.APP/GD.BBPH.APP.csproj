@@ -1011,31 +1011,17 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_DMNHOMQUYCACH.xml" />
-    <Content Include="XMLCONFIG\FRM_DMPE.xml" />
-    <Content Include="XMLCONFIG\FRM_DMPE_TIM.xml" />
-    <Content Include="XMLCONFIG\FRM_DMPHE.xml" />
     <Content Include="XMLCONFIG\FRM_DMQUYCACH_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMQUYCACH.xml" />
-    <Content Include="XMLCONFIG\FRM_DMVATTUPHU.xml" />
     <Content Include="XMLCONFIG\FRM_DMVATTUSAIHONG.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANG_D.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANG_H.xml" />
     <Content Include="XMLCONFIG\FRM_HANGTRALAI.xml" />
-    <Content Include="XMLCONFIG\FRM_KHTRANG_EDIT_FIND.xml" />
-    <Content Include="XMLCONFIG\FRM_KHTRANG_EDIT.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKEHTCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_KIEMKEHT.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANG.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANGCHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="XMLCONFIG\FRM_KIEMKENGUYENLIEU_CHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKEPHE.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKEPHECHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_KIEMKESANPHAM.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKESANPHAMCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KQCHIA.xml" />
@@ -1049,15 +1035,7 @@
     <Content Include="XMLCONFIG\FRM_LYDONHAPXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDOXUATKHO.xml" />
     <Content Include="XMLCONFIG\FRM_MAUCUAHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOMANG.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOMANGCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_NHAPKHONGUYENLIEU_CHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOPHE.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOPHECHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_NHAPMANG.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPMANGCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_NHAPSANPHAM.xml" />
@@ -1070,99 +1048,24 @@
     <Content Include="XMLCONFIG\FRM_TKNLTHOI_CHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_TPMAU.xml" />
     <Content Include="XMLCONFIG\FRM_TRUCCUAHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOPE.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOPECHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_NHAPKHOVATTU.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOVATTUCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_NHAPKHONGUYENLIEU.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOMANHTRANG.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOMANHTRANGCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_KIEMKEVATTU.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKEPE.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKEVATTUCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_KIEMKEPECHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_KIEMKEMANHTRANG.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKEMANH.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKEMANHTRANGCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="XMLCONFIG\FRM_KIEMKENGUYENLIEU.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKESOICHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_KHO.xml" />
     <Content Include="XMLCONFIG\FRM_MENU.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKEHANGHOA.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKEHANGHOACHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_QCVIENMIENG.xml" />
-    <Content Include="XMLCONFIG\FRM_QCDONGKIEN.xml" />
-    <Content Include="XMLCONFIG\FRM_QCMAYDAY.xml" />
-    <Content Include="XMLCONFIG\FRM_QCGAP.xml" />
-    <Content Include="XMLCONFIG\FRM_DONGIACONGDOAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGDOAN.xml" />
-    <Content Include="XMLCONFIG\FRM_DONDATHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_DONDATHANGCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_DSCUONMANH.xml" />
-    <Content Include="XMLCONFIG\FRM_KHIN_EDIT.xml" />
-    <Content Include="XMLCONFIG\FRM_KHHT_EDIT.xml" />
-    <Content Include="XMLCONFIG\FRM_KHHT.xml" />
-    <Content Include="XMLCONFIG\FRM_KHIN.xml" />
-    <Content Include="XMLCONFIG\FRM_KHDETDIEUCHINH.xml" />
-    <Content Include="XMLCONFIG\FRM_KHTRANG.xml" />
     <Content Include="XMLCONFIG\FRM_KQIN.xml" />
     <Content Include="XMLCONFIG\FRM_KQINCHITIET.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="XMLCONFIG\FRM_NCTRANGTHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_DMNVLTRANG.xml" />
-    <Content Include="XMLCONFIG\FRM_DMNVLTRANGCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_KIEMKEMANHCHITIET.xml">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="XMLCONFIG\FRM_KIEMKESOI.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOHT.xml" />
-    <Content Include="XMLCONFIG\FRM_CONGTHAYKHO.xml" />
-    <Content Include="XMLCONFIG\FRM_CONGTHAYKHOCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_DMDONGIALUONG.xml" />
-    <Content Include="XMLCONFIG\FRM_KHBHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_KHBHANGCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_KHSXDET.xml" />
-    <Content Include="XMLCONFIG\FRM_KHSXMANHTHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_KHSXMANHTHEODH.xml" />
-    <Content Include="XMLCONFIG\FRM_KHSXSOIDIEUCHINH.xml" />
-    <Content Include="XMLCONFIG\FRM_KHSXSOITHEODH.xml" />
-    <Content Include="XMLCONFIG\FRM_KHSXSOI.xml" />
     <Content Include="XMLCONFIG\FRM_DMCHUCVU.xml" />
     <Content Include="XMLCONFIG\FRM_DMCONGNHAN.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMKHO.xml" />
-    <Content Include="XMLCONFIG\FRM_DMLOAI.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHAMAY.xml" />
     <Content Include="XMLCONFIG\FRM_DMPHONGBAN.xml" />
-    <Content Include="XMLCONFIG\FRM_DMTRONGLUONG.xml" />
-    <Content Include="XMLCONFIG\FRM_DONHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_DONHANGCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_KHSXSOITHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_NCMANHTHANG.xml" />
-    <Content Include="XMLCONFIG\FRM_NCSOITHANG.xml" />
     <Content Include="XMLCONFIG\FRM_ROLES.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPKHOHTCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_USERS.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPMANH_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANG.xml" />
     <Content Include="XMLCONFIG\FRM_XUATMANGCHITIET.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPMANH_D.xml" />
-    <Content Include="XMLCONFIG\FRM_NHAPMANH_H.xml" />
     <Content Include="XMLCONFIG\FRM_XUATNGUYENLIEU.xml" />
     <Content Include="XMLCONFIG\FRM_XUATNGUYENLIEUCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_XUATSANPHAM.xml" />
