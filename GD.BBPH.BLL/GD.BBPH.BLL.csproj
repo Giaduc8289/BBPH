@@ -112,6 +112,7 @@
     <Compile Include="ManagerBase\CongsuatmayManagerBase.cs" />
     <Compile Include="ManagerBase\CtptmangDManagerBase.cs" />
     <Compile Include="ManagerBase\CtptmangHManagerBase.cs" />
+    <Compile Include="ManagerBase\DinhmuckeoManagerBase.cs" />
     <Compile Include="ManagerBase\DinhmucthoigianManagerBase.cs" />
     <Compile Include="ManagerBase\DinhmucvattuManagerBase.cs" />
     <Compile Include="ManagerBase\DmbophanManagerBase.cs" />

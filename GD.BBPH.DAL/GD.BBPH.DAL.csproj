@@ -123,6 +123,7 @@
     <Compile Include="DatabaseGeneric\EntityClasses\CongsuatmayEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CtptmangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\CtptmangHEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\DinhmuckeoEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DinhmucthoigianEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DinhmucvattuEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DmbophanEntity.cs" />
@@ -232,6 +233,7 @@
     <Compile Include="DatabaseGeneric\RelationClasses\CongsuatmayRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CtptmangDRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\CtptmangHRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\DinhmuckeoRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DinhmucthoigianRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DinhmucvattuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DmbophanRelations.cs" />
