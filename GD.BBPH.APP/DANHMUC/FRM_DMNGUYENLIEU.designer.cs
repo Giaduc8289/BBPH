@@ -34,6 +34,9 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_TENRUTGON = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label6 = new GD.BBPH.CONTROL.LABEL();
             this.txt_TENNHOM = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MANHOM = new GD.BBPH.CONTROL.TEXTBOX();
             this.label5 = new GD.BBPH.CONTROL.LABEL();
@@ -54,9 +57,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MANL = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_TENRUTGON = new GD.BBPH.CONTROL.TEXTBOX();
-            this.label6 = new GD.BBPH.CONTROL.LABEL();
-            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -142,6 +142,40 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(515, 488);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.BackColor = System.Drawing.Color.Gray;
+            this.label16.Location = new System.Drawing.Point(3, 118);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(509, 2);
+            this.label16.TabIndex = 250;
+            // 
+            // txt_TENRUTGON
+            // 
+            this.txt_TENRUTGON.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TENRUTGON.BannerText = null;
+            this.txt_TENRUTGON.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TENRUTGON.FormNametoShow = "";
+            this.txt_TENRUTGON.Is_DateTime = false;
+            this.txt_TENRUTGON.IsShowForm = false;
+            this.txt_TENRUTGON.Location = new System.Drawing.Point(96, 57);
+            this.txt_TENRUTGON.Name = "txt_TENRUTGON";
+            this.txt_TENRUTGON.Regular_Expression = null;
+            this.txt_TENRUTGON.Size = new System.Drawing.Size(276, 20);
+            this.txt_TENRUTGON.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 60);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.TabIndex = 169;
+            this.label6.Text = "Tên rút gọn";
+            // 
             // txt_TENNHOM
             // 
             this.txt_TENNHOM.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -155,7 +189,7 @@
             this.txt_TENNHOM.ReadOnly = true;
             this.txt_TENNHOM.Regular_Expression = null;
             this.txt_TENNHOM.Size = new System.Drawing.Size(194, 20);
-            this.txt_TENNHOM.TabIndex = 3;
+            this.txt_TENNHOM.TabIndex = 4;
             this.txt_TENNHOM.TabStop = false;
             // 
             // txt_MANHOM
@@ -170,7 +204,7 @@
             this.txt_MANHOM.Name = "txt_MANHOM";
             this.txt_MANHOM.Regular_Expression = null;
             this.txt_MANHOM.Size = new System.Drawing.Size(77, 20);
-            this.txt_MANHOM.TabIndex = 2;
+            this.txt_MANHOM.TabIndex = 3;
             this.txt_MANHOM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANHOM_Validating);
             // 
             // label5
@@ -198,7 +232,7 @@
             this.txt_NGAYAPDUNG.Name = "txt_NGAYAPDUNG";
             this.txt_NGAYAPDUNG.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txt_NGAYAPDUNG.Size = new System.Drawing.Size(77, 20);
-            this.txt_NGAYAPDUNG.TabIndex = 5;
+            this.txt_NGAYAPDUNG.TabIndex = 6;
             this.txt_NGAYAPDUNG.ValidatingType = typeof(System.DateTime);
             // 
             // pne_CHITIET
@@ -210,7 +244,7 @@
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
             this.pne_CHITIET.Size = new System.Drawing.Size(486, 218);
-            this.pne_CHITIET.TabIndex = 10;
+            this.pne_CHITIET.TabIndex = 9;
             // 
             // btn_XOADONG
             // 
@@ -220,7 +254,7 @@
             this.btn_XOADONG.Location = new System.Drawing.Point(96, 176);
             this.btn_XOADONG.Name = "btn_XOADONG";
             this.btn_XOADONG.Size = new System.Drawing.Size(78, 23);
-            this.btn_XOADONG.TabIndex = 9;
+            this.btn_XOADONG.TabIndex = 8;
             this.btn_XOADONG.Text = "Xóa giá";
             this.btn_XOADONG.UseVisualStyleBackColor = true;
             this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
@@ -233,7 +267,7 @@
             this.btn_THEMDONG.Location = new System.Drawing.Point(10, 176);
             this.btn_THEMDONG.Name = "btn_THEMDONG";
             this.btn_THEMDONG.Size = new System.Drawing.Size(78, 23);
-            this.btn_THEMDONG.TabIndex = 8;
+            this.btn_THEMDONG.TabIndex = 7;
             this.btn_THEMDONG.Text = "Thêm giá";
             this.btn_THEMDONG.UseVisualStyleBackColor = true;
             this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
@@ -246,11 +280,11 @@
             this.txt_GIA.Giatrithapphan = 0;
             this.txt_GIA.IsSoNguyen = false;
             this.txt_GIA.Location = new System.Drawing.Point(96, 136);
-            this.txt_GIA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_GIA.Margin = new System.Windows.Forms.Padding(2);
             this.txt_GIA.Name = "txt_GIA";
             this.txt_GIA.Regular_Expression = "";
             this.txt_GIA.Size = new System.Drawing.Size(77, 20);
-            this.txt_GIA.TabIndex = 4;
+            this.txt_GIA.TabIndex = 5;
             this.txt_GIA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
@@ -392,40 +426,6 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã nguyên liệu";
             // 
-            // txt_TENRUTGON
-            // 
-            this.txt_TENRUTGON.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TENRUTGON.BannerText = null;
-            this.txt_TENRUTGON.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TENRUTGON.FormNametoShow = "";
-            this.txt_TENRUTGON.Is_DateTime = false;
-            this.txt_TENRUTGON.IsShowForm = false;
-            this.txt_TENRUTGON.Location = new System.Drawing.Point(96, 57);
-            this.txt_TENRUTGON.Name = "txt_TENRUTGON";
-            this.txt_TENRUTGON.Regular_Expression = null;
-            this.txt_TENRUTGON.Size = new System.Drawing.Size(276, 20);
-            this.txt_TENRUTGON.TabIndex = 168;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 60);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 169;
-            this.label6.Text = "Tên rút gọn";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.BackColor = System.Drawing.Color.Gray;
-            this.label16.Location = new System.Drawing.Point(3, 118);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(509, 2);
-            this.label16.TabIndex = 250;
-            // 
             // FRM_DMNGUYENLIEU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,7 +433,7 @@
             this.ClientSize = new System.Drawing.Size(1127, 518);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_DMNGUYENLIEU";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DMNGUYENLIEU_FormClosing);

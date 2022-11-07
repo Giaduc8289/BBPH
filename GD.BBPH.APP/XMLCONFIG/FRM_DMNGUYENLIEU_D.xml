@@ -67,7 +67,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Manhom</name>
     <headerText>Mã nhóm</headerText>
     <BackColor>0</BackColor>
@@ -76,7 +76,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tennhom</name>
     <headerText>Tên nhóm</headerText>
     <BackColor>0</BackColor>

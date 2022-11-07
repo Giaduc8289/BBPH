@@ -258,11 +258,11 @@ namespace GD.BBPH.APP.DANHMUC
         {
             DmnguyenlieuEntity _DmnguyenlieuHEntity = new DmnguyenlieuEntity();
 
-            _DmnguyenlieuEntity.Manl = txt_MANL.Text.Trim();
-            _DmnguyenlieuEntity.Tennl = txt_TENNL.Text.Trim();
-            _DmnguyenlieuEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
-            _DmnguyenlieuEntity.Manhom = txt_MANHOM.Text.Trim();
-            _DmnguyenlieuEntity.Tennhom = txt_TENNHOM.Text.Trim();
+            _DmnguyenlieuHEntity.Manl = txt_MANL.Text.Trim();
+            _DmnguyenlieuHEntity.Tennl = txt_TENNL.Text.Trim();
+            _DmnguyenlieuHEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
+            _DmnguyenlieuHEntity.Manhom = txt_MANHOM.Text.Trim();
+            _DmnguyenlieuHEntity.Tennhom = txt_TENNHOM.Text.Trim();
 
             EntityCollection _DmnguyenlieuEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_DMNGUYENLIEU_D.GetDataRows();
@@ -273,7 +273,7 @@ namespace GD.BBPH.APP.DANHMUC
                 DmnguyenlieuEntity _DmnguyenlieuEntity = new DmnguyenlieuEntity();
                 _DmnguyenlieuEntity.Manl = txt_MANL.Text.Trim();
                 _DmnguyenlieuEntity.Tennl = txt_TENNL.Text.Trim();
-                _DmnguyenlieuEntity.Tenrutgon = txt_TENNL.Text.Trim();
+                _DmnguyenlieuEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
                 _DmnguyenlieuEntity.Manhom = txt_MANHOM.Text.Trim();
                 _DmnguyenlieuEntity.Tennhom = txt_TENNHOM.Text.Trim();
                 try { _DmnguyenlieuEntity.Gia = _DmnguyenlieuEntity.Giahientai = LIB.ConvertString.NumbertoDB(_view[DmnguyenlieuFields.Gia.Name].ToString()); }
@@ -478,7 +478,7 @@ namespace GD.BBPH.APP.DANHMUC
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_NHOMNGUYENLIEU.xml",
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml",
                         DT_DMNHOMNGUYENLIEU, DmnhomnguyenlieuFields.Manhom.Name, Str_MASIEUTHI);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
