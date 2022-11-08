@@ -1037,7 +1037,6 @@
     <Content Include="XMLCONFIG\FRM_DMMAY.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU.xml" />
     <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU_D.xml" />
     <Content Include="XMLCONFIG\FRM_DMNGUYENLIEU_H.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHOMDINHMUC.xml" />
