@@ -164,7 +164,7 @@
             this.txt_MANHOMNL.Name = "txt_MANHOMNL";
             this.txt_MANHOMNL.Regular_Expression = null;
             this.txt_MANHOMNL.Size = new System.Drawing.Size(86, 20);
-            this.txt_MANHOMNL.TabIndex = 6;
+            this.txt_MANHOMNL.TabIndex = 4;
             this.txt_MANHOMNL.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANHOMNGUYENLIEU_Validating);
             // 
             // label25
@@ -197,7 +197,7 @@
             this.txt_TENNHOMNL.ReadOnly = true;
             this.txt_TENNHOMNL.Regular_Expression = null;
             this.txt_TENNHOMNL.Size = new System.Drawing.Size(165, 20);
-            this.txt_TENNHOMNL.TabIndex = 7;
+            this.txt_TENNHOMNL.TabIndex = 5;
             this.txt_TENNHOMNL.TabStop = false;
             // 
             // txt_MANGUYENLIEU
@@ -212,7 +212,7 @@
             this.txt_MANGUYENLIEU.Name = "txt_MANGUYENLIEU";
             this.txt_MANGUYENLIEU.Regular_Expression = null;
             this.txt_MANGUYENLIEU.Size = new System.Drawing.Size(86, 20);
-            this.txt_MANGUYENLIEU.TabIndex = 4;
+            this.txt_MANGUYENLIEU.TabIndex = 6;
             this.txt_MANGUYENLIEU.TabStop = false;
             this.txt_MANGUYENLIEU.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANGUYENLIEU_Validating);
             // 
@@ -238,7 +238,7 @@
             this.txt_TENNGUYENLIEU.ReadOnly = true;
             this.txt_TENNGUYENLIEU.Regular_Expression = null;
             this.txt_TENNGUYENLIEU.Size = new System.Drawing.Size(165, 20);
-            this.txt_TENNGUYENLIEU.TabIndex = 5;
+            this.txt_TENNGUYENLIEU.TabIndex = 7;
             this.txt_TENNGUYENLIEU.TabStop = false;
             // 
             // FRM_BAOCAOXUATNGUYENLIEU
