@@ -39,10 +39,8 @@
             this.label15 = new GD.BBPH.CONTROL.LABEL();
             this.label12 = new GD.BBPH.CONTROL.LABEL();
             this.label9 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_SOKG = new GD.BBPH.CONTROL.TEXTBOX();
             this.label10 = new GD.BBPH.CONTROL.LABEL();
             this.label6 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_SOM = new GD.BBPH.CONTROL.TEXTBOX();
             this.label7 = new GD.BBPH.CONTROL.LABEL();
             this.label3 = new GD.BBPH.CONTROL.LABEL();
             this.txt_TENMANG = new GD.BBPH.CONTROL.TEXTBOX();
@@ -63,6 +61,8 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_MAKHO = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_SOM = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_SOKG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -120,15 +120,15 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_SOKG);
+            this.uiPanel1Container.Controls.Add(this.txt_SOM);
             this.uiPanel1Container.Controls.Add(this.btn_XOADONG);
             this.uiPanel1Container.Controls.Add(this.btn_THEMDONG);
             this.uiPanel1Container.Controls.Add(this.label15);
             this.uiPanel1Container.Controls.Add(this.label12);
             this.uiPanel1Container.Controls.Add(this.label9);
-            this.uiPanel1Container.Controls.Add(this.txt_SOKG);
             this.uiPanel1Container.Controls.Add(this.label10);
             this.uiPanel1Container.Controls.Add(this.label6);
-            this.uiPanel1Container.Controls.Add(this.txt_SOM);
             this.uiPanel1Container.Controls.Add(this.label7);
             this.uiPanel1Container.Controls.Add(this.label3);
             this.uiPanel1Container.Controls.Add(this.txt_TENMANG);
@@ -163,7 +163,7 @@
             this.btn_XOADONG.Location = new System.Drawing.Point(153, 154);
             this.btn_XOADONG.Name = "btn_XOADONG";
             this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
-            this.btn_XOADONG.TabIndex = 10;
+            this.btn_XOADONG.TabIndex = 8;
             this.btn_XOADONG.Text = "Xóa dòng";
             this.btn_XOADONG.UseVisualStyleBackColor = true;
             this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
@@ -177,7 +177,7 @@
             this.btn_THEMDONG.Location = new System.Drawing.Point(19, 154);
             this.btn_THEMDONG.Name = "btn_THEMDONG";
             this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
-            this.btn_THEMDONG.TabIndex = 9;
+            this.btn_THEMDONG.TabIndex = 7;
             this.btn_THEMDONG.Text = "Thêm dòng";
             this.btn_THEMDONG.UseVisualStyleBackColor = true;
             this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
@@ -207,20 +207,6 @@
             this.label9.TabIndex = 206;
             this.label9.Text = "Số Kg";
             // 
-            // txt_SOKG
-            // 
-            this.txt_SOKG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOKG.BannerText = null;
-            this.txt_SOKG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOKG.FormNametoShow = "";
-            this.txt_SOKG.Is_DateTime = false;
-            this.txt_SOKG.IsShowForm = false;
-            this.txt_SOKG.Location = new System.Drawing.Point(361, 113);
-            this.txt_SOKG.Name = "txt_SOKG";
-            this.txt_SOKG.Regular_Expression = null;
-            this.txt_SOKG.Size = new System.Drawing.Size(174, 20);
-            this.txt_SOKG.TabIndex = 4;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -237,20 +223,6 @@
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 203;
             this.label6.Text = "Số mét";
-            // 
-            // txt_SOM
-            // 
-            this.txt_SOM.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOM.BannerText = null;
-            this.txt_SOM.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOM.FormNametoShow = "";
-            this.txt_SOM.Is_DateTime = false;
-            this.txt_SOM.IsShowForm = false;
-            this.txt_SOM.Location = new System.Drawing.Point(104, 113);
-            this.txt_SOM.Name = "txt_SOM";
-            this.txt_SOM.Regular_Expression = null;
-            this.txt_SOM.Size = new System.Drawing.Size(144, 20);
-            this.txt_SOM.TabIndex = 3;
             // 
             // label7
             // 
@@ -303,7 +275,7 @@
             this.txt_MAMANG.Name = "txt_MAMANG";
             this.txt_MAMANG.Regular_Expression = null;
             this.txt_MAMANG.Size = new System.Drawing.Size(143, 20);
-            this.txt_MAMANG.TabIndex = 2;
+            this.txt_MAMANG.TabIndex = 3;
             this.txt_MAMANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMANG_Validating);
             // 
             // label5
@@ -484,6 +456,36 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã kho";
             // 
+            // txt_SOM
+            // 
+            this.txt_SOM.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOM.BannerText = null;
+            this.txt_SOM.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOM.Giatrithapphan = 0;
+            this.txt_SOM.IsSoNguyen = false;
+            this.txt_SOM.Location = new System.Drawing.Point(104, 113);
+            this.txt_SOM.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_SOM.Name = "txt_SOM";
+            this.txt_SOM.Regular_Expression = "";
+            this.txt_SOM.Size = new System.Drawing.Size(144, 20);
+            this.txt_SOM.TabIndex = 5;
+            this.txt_SOM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_SOKG
+            // 
+            this.txt_SOKG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOKG.BannerText = null;
+            this.txt_SOKG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOKG.Giatrithapphan = 0;
+            this.txt_SOKG.IsSoNguyen = false;
+            this.txt_SOKG.Location = new System.Drawing.Point(361, 113);
+            this.txt_SOKG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_SOKG.Name = "txt_SOKG";
+            this.txt_SOKG.Regular_Expression = "";
+            this.txt_SOKG.Size = new System.Drawing.Size(174, 20);
+            this.txt_SOKG.TabIndex = 6;
+            this.txt_SOKG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FRM_KIEMKEMANG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,7 +530,6 @@
         private CONTROL.LABEL label17;
         private CONTROL.LABEL label2;
         private CONTROL.LABEL label6;
-        private CONTROL.TEXTBOX txt_SOM;
         private CONTROL.LABEL label7;
         private CONTROL.LABEL label3;
         private CONTROL.TEXTBOX txt_TENMANG;
@@ -536,11 +537,12 @@
         private CONTROL.TEXTBOX txt_MAMANG;
         private CONTROL.LABEL label5;
         private CONTROL.LABEL label9;
-        private CONTROL.TEXTBOX txt_SOKG;
         private CONTROL.LABEL label10;
         private CONTROL.LABEL label15;
         private CONTROL.LABEL label12;
         private CONTROL.BUTTON btn_XOADONG;
         private CONTROL.BUTTON btn_THEMDONG;
+        private CONTROL.TEXTBOXNUMBER txt_SOKG;
+        private CONTROL.TEXTBOXNUMBER txt_SOM;
     }
 }
