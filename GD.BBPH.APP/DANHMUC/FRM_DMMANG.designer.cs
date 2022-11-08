@@ -40,14 +40,11 @@
             this.txt_TENLOAIMANG = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MALOAIMANG = new GD.BBPH.CONTROL.TEXTBOX();
             this.label8 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_RONG = new GD.BBPH.CONTROL.TEXTBOX();
             this.label6 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_DODAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label7 = new GD.BBPH.CONTROL.LABEL();
             this.txt_TENCTPT = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MACTPT = new GD.BBPH.CONTROL.TEXTBOX();
             this.label5 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_TRONGLUONG = new GD.BBPH.CONTROL.TEXTBOX();
             this.label4 = new GD.BBPH.CONTROL.LABEL();
             this.txt_KICHTHUOC = new GD.BBPH.CONTROL.TEXTBOX();
             this.label3 = new GD.BBPH.CONTROL.LABEL();
@@ -65,6 +62,9 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAHIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_RONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_DODAY = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_TRONGLUONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -85,7 +85,7 @@
             // 
             this.uiPanelManager1.BeginPanelInfo();
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(1111, 559), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(226, 559), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(536, 559), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -116,26 +116,26 @@
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(1114, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(226, 559);
+            this.uiPanel1.Size = new System.Drawing.Size(536, 559);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_TRONGLUONG);
+            this.uiPanel1Container.Controls.Add(this.txt_DODAY);
+            this.uiPanel1Container.Controls.Add(this.txt_RONG);
             this.uiPanel1Container.Controls.Add(this.txt_TENQUYCACHMANG);
             this.uiPanel1Container.Controls.Add(this.txt_MAQUYCACHMANG);
             this.uiPanel1Container.Controls.Add(this.label9);
             this.uiPanel1Container.Controls.Add(this.txt_TENLOAIMANG);
             this.uiPanel1Container.Controls.Add(this.txt_MALOAIMANG);
             this.uiPanel1Container.Controls.Add(this.label8);
-            this.uiPanel1Container.Controls.Add(this.txt_RONG);
             this.uiPanel1Container.Controls.Add(this.label6);
-            this.uiPanel1Container.Controls.Add(this.txt_DODAY);
             this.uiPanel1Container.Controls.Add(this.label7);
             this.uiPanel1Container.Controls.Add(this.txt_TENCTPT);
             this.uiPanel1Container.Controls.Add(this.txt_MACTPT);
             this.uiPanel1Container.Controls.Add(this.label5);
-            this.uiPanel1Container.Controls.Add(this.txt_TRONGLUONG);
             this.uiPanel1Container.Controls.Add(this.label4);
             this.uiPanel1Container.Controls.Add(this.txt_KICHTHUOC);
             this.uiPanel1Container.Controls.Add(this.label3);
@@ -155,7 +155,7 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(224, 535);
+            this.uiPanel1Container.Size = new System.Drawing.Size(534, 535);
             this.uiPanel1Container.TabIndex = 0;
             this.uiPanel1Container.Click += new System.EventHandler(this.uiPanel1Container_Click);
             // 
@@ -241,21 +241,6 @@
             this.label8.TabIndex = 137;
             this.label8.Text = "Loại màng";
             // 
-            // txt_RONG
-            // 
-            this.txt_RONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_RONG.BannerText = null;
-            this.txt_RONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_RONG.FormNametoShow = "";
-            this.txt_RONG.Is_DateTime = false;
-            this.txt_RONG.IsShowForm = false;
-            this.txt_RONG.Location = new System.Drawing.Point(325, 113);
-            this.txt_RONG.Name = "txt_RONG";
-            this.txt_RONG.Regular_Expression = null;
-            this.txt_RONG.Size = new System.Drawing.Size(138, 20);
-            this.txt_RONG.TabIndex = 7;
-            this.txt_RONG.TextChanged += new System.EventHandler(this.textbox1_TextChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -265,21 +250,6 @@
             this.label6.TabIndex = 135;
             this.label6.Text = "Rộng";
             this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // txt_DODAY
-            // 
-            this.txt_DODAY.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DODAY.BannerText = null;
-            this.txt_DODAY.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_DODAY.FormNametoShow = "";
-            this.txt_DODAY.Is_DateTime = false;
-            this.txt_DODAY.IsShowForm = false;
-            this.txt_DODAY.Location = new System.Drawing.Point(78, 110);
-            this.txt_DODAY.Name = "txt_DODAY";
-            this.txt_DODAY.Regular_Expression = null;
-            this.txt_DODAY.Size = new System.Drawing.Size(138, 20);
-            this.txt_DODAY.TabIndex = 6;
-            this.txt_DODAY.TextChanged += new System.EventHandler(this.textbox2_TextChanged);
             // 
             // label7
             // 
@@ -332,20 +302,6 @@
             this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 130;
             this.label5.Text = "Mã CTPT";
-            // 
-            // txt_TRONGLUONG
-            // 
-            this.txt_TRONGLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TRONGLUONG.BannerText = null;
-            this.txt_TRONGLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TRONGLUONG.FormNametoShow = "";
-            this.txt_TRONGLUONG.Is_DateTime = false;
-            this.txt_TRONGLUONG.IsShowForm = false;
-            this.txt_TRONGLUONG.Location = new System.Drawing.Point(325, 87);
-            this.txt_TRONGLUONG.Name = "txt_TRONGLUONG";
-            this.txt_TRONGLUONG.Regular_Expression = null;
-            this.txt_TRONGLUONG.Size = new System.Drawing.Size(138, 20);
-            this.txt_TRONGLUONG.TabIndex = 5;
             // 
             // label4
             // 
@@ -401,7 +357,7 @@
             this.label2.Location = new System.Drawing.Point(259, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 124;
+            this.label2.TabIndex = 3;
             // 
             // txt_MAKHACH
             // 
@@ -554,11 +510,56 @@
             this.label22.Text = "Mã màng";
             this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
+            // txt_RONG
+            // 
+            this.txt_RONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_RONG.BannerText = null;
+            this.txt_RONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_RONG.Giatrithapphan = 0;
+            this.txt_RONG.IsSoNguyen = false;
+            this.txt_RONG.Location = new System.Drawing.Point(325, 110);
+            this.txt_RONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_RONG.Name = "txt_RONG";
+            this.txt_RONG.Regular_Expression = "";
+            this.txt_RONG.Size = new System.Drawing.Size(138, 20);
+            this.txt_RONG.TabIndex = 7;
+            this.txt_RONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_DODAY
+            // 
+            this.txt_DODAY.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DODAY.BannerText = null;
+            this.txt_DODAY.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_DODAY.Giatrithapphan = 0;
+            this.txt_DODAY.IsSoNguyen = false;
+            this.txt_DODAY.Location = new System.Drawing.Point(78, 110);
+            this.txt_DODAY.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_DODAY.Name = "txt_DODAY";
+            this.txt_DODAY.Regular_Expression = "";
+            this.txt_DODAY.Size = new System.Drawing.Size(138, 20);
+            this.txt_DODAY.TabIndex = 6;
+            this.txt_DODAY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_TRONGLUONG
+            // 
+            this.txt_TRONGLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TRONGLUONG.BannerText = null;
+            this.txt_TRONGLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TRONGLUONG.Giatrithapphan = 0;
+            this.txt_TRONGLUONG.IsSoNguyen = false;
+            this.txt_TRONGLUONG.Location = new System.Drawing.Point(325, 84);
+            this.txt_TRONGLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_TRONGLUONG.Name = "txt_TRONGLUONG";
+            this.txt_TRONGLUONG.Regular_Expression = "";
+            this.txt_TRONGLUONG.Size = new System.Drawing.Size(138, 20);
+            this.txt_TRONGLUONG.TabIndex = 5;
+            this.txt_TRONGLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FRM_DMMANG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1343, 565);
+            this.ClientSize = new System.Drawing.Size(1653, 565);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -595,7 +596,6 @@
         private GD.BBPH.CONTROL.BUTTON btn_Thoat;
         private CONTROL.TEXTBOX txt_MACTPT;
         private CONTROL.LABEL label5;
-        private CONTROL.TEXTBOX txt_TRONGLUONG;
         private CONTROL.LABEL label4;
         private CONTROL.TEXTBOX txt_KICHTHUOC;
         private CONTROL.LABEL label3;
@@ -604,9 +604,7 @@
         private CONTROL.TEXTBOX txt_MAKHACH;
         private CONTROL.LABEL label1;
         private CONTROL.TEXTBOX txt_TENCTPT;
-        private CONTROL.TEXTBOX txt_RONG;
         private CONTROL.LABEL label6;
-        private CONTROL.TEXTBOX txt_DODAY;
         private CONTROL.LABEL label7;
         private CONTROL.TEXTBOX txt_TENQUYCACHMANG;
         private CONTROL.TEXTBOX txt_MAQUYCACHMANG;
@@ -614,5 +612,8 @@
         private CONTROL.TEXTBOX txt_TENLOAIMANG;
         private CONTROL.TEXTBOX txt_MALOAIMANG;
         private CONTROL.LABEL label8;
+        private CONTROL.TEXTBOXNUMBER txt_TRONGLUONG;
+        private CONTROL.TEXTBOXNUMBER txt_DODAY;
+        private CONTROL.TEXTBOXNUMBER txt_RONG;
     }
 }
