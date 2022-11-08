@@ -1029,6 +1029,18 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Báo cáo 
+
+                #region Báo cáo nhu cầu
+                case "FRM_BCNCMANG":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCNCMANG") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCNCMANG()), mmru.Text);
+                    break;
+                #endregion
+
+                #region Báo cáo kết quả sản xuất
                 case "FRM_BCKQTHOICHITIET":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -1087,6 +1099,9 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCKQHOANTHIENCHITIET()), mmru.Text);
                     break;
+                #endregion
+
+                #region Báo cáo bán hàng
                 case "FRM_BAOCAODONHANG":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -1108,6 +1123,9 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAOHANGTRALAI()), mmru.Text);
                     break;
+                #endregion
+
+                #region Báo cáo kho
                 case "FRM_BAOCAONHAPKHOSP":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
@@ -1180,6 +1198,8 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BAOCAOTONNGUYENLIEU()), mmru.Text);
                     break;
+                #endregion
+
                 #endregion
 
 
