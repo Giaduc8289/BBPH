@@ -308,6 +308,7 @@
             this.txt_TENDONGRAN.Regular_Expression = null;
             this.txt_TENDONGRAN.Size = new System.Drawing.Size(278, 20);
             this.txt_TENDONGRAN.TabIndex = 6;
+            this.txt_TENDONGRAN.TabStop = false;
             // 
             // txt_TENKEO
             // 
@@ -322,6 +323,7 @@
             this.txt_TENKEO.Regular_Expression = null;
             this.txt_TENKEO.Size = new System.Drawing.Size(278, 20);
             this.txt_TENKEO.TabIndex = 4;
+            this.txt_TENKEO.TabStop = false;
             // 
             // txt_MADONGRAN
             // 
@@ -336,6 +338,7 @@
             this.txt_MADONGRAN.Regular_Expression = null;
             this.txt_MADONGRAN.Size = new System.Drawing.Size(114, 20);
             this.txt_MADONGRAN.TabIndex = 5;
+            this.txt_MADONGRAN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MANGUYENLIEU_KeyDown);
             this.txt_MADONGRAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MADONGRAN_Validating);
             // 
             // label2
@@ -360,6 +363,7 @@
             this.txt_MAKEO.Regular_Expression = null;
             this.txt_MAKEO.Size = new System.Drawing.Size(114, 20);
             this.txt_MAKEO.TabIndex = 3;
+            this.txt_MAKEO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MANGUYENLIEU_KeyDown);
             this.txt_MAKEO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAKEO_Validating);
             // 
             // label1

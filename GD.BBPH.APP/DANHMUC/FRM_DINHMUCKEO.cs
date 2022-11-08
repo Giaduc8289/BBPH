@@ -54,8 +54,8 @@ namespace GD.BBPH.APP.DANHMUC
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DINHMUCKEO");
                         DT_DINHMUCKEO = new DinhmuckeoManager().SelectAllRDT();
 
-                        DT_DMKEO = new DmnguyenlieuManager().SelectByManhomRDT("KEO");
-                        DT_DMDONGRAN = new DmnguyenlieuManager().SelectByManhomRDT("DONGRAN");
+                        DT_DMKEO = LIB.Procedures.Danhsachnguyenlieu(string.Empty, "KEO", LIB.SESSION_START.TS_NGAYCUOITHANG);
+                        DT_DMDONGRAN = LIB.Procedures.Danhsachnguyenlieu(string.Empty, "DR", LIB.SESSION_START.TS_NGAYCUOITHANG);
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -340,6 +340,21 @@ namespace GD.BBPH.APP.DANHMUC
             }
             return _str_MAHIEU_PK;
         }
+
+        #region KeyDown
+        private void txt_MANGUYENLIEU_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMNGUYENLIEU frm_Dm = new FRM_DMNGUYENLIEU();
+                frm_Dm.Text = "Danh mục nguyên liệu";
+                frm_Dm.ShowDialog();
+
+                DT_DMKEO = LIB.Procedures.Danhsachnguyenlieu(string.Empty, "KEO", LIB.SESSION_START.TS_NGAYCUOITHANG);
+                DT_DMDONGRAN = LIB.Procedures.Danhsachnguyenlieu(string.Empty, "DR", LIB.SESSION_START.TS_NGAYCUOITHANG);
+            }
+        }
+        #endregion
 
         private void uiPanel0_Resize(object sender, EventArgs e)
         {

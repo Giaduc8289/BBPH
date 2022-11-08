@@ -53,7 +53,7 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMNGUYENLIEU");
-                        DT_DMNGUYENLIEU_H = LIB.Procedures.Danhsachnguyenlieu(string.Empty, LIB.SESSION_START.TS_NGAYCUOITHANG);// LIB.SESSION_START.DT_DMNGUYENLIEU;
+                        DT_DMNGUYENLIEU_H = LIB.Procedures.Danhsachnguyenlieu(string.Empty, string.Empty, LIB.SESSION_START.TS_NGAYCUOITHANG);// LIB.SESSION_START.DT_DMNGUYENLIEU;
 
                         DT_DMNHOMNGUYENLIEU = LIB.SESSION_START.DT_DMNHOMNGUYENLIEU;
                     }

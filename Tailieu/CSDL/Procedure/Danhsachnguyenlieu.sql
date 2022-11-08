@@ -5,6 +5,7 @@ Go
 
 Create Procedure dbo.Danhsachnguyenlieu
 	@Manguyenlieu		NVARCHAR(50),
+	@Manhom				NVARCHAR(50),
 	@Ngay				DATE
 As
 	SET NOCOUNT ON;
@@ -17,6 +18,7 @@ As
 	INTO #Ketqua0
 	From dbo.Dmnguyenlieu dm
 	WHERE (dm.Manl=@Manguyenlieu OR @Manguyenlieu='')
+		AND (dm.Manhom=@Manhom OR @Manhom='')
 		AND dm.Ngay<=@Ngay
 
 	SELECT Manl, Tennl, Tenrutgon, Gia, Ngay
@@ -33,6 +35,6 @@ As
 	
 Go
 
-Exec Danhsachnguyenlieu '', '11/30/2022'
+Exec Danhsachnguyenlieu '', '', '11/30/2022'
 
 --SELECT * FROM dbo.Dmnguyenlieu Where Manl='NL.00068'

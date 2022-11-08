@@ -515,7 +515,7 @@ namespace GD.BBPH.APP.LIB
         {
             get
             {
-                _DT_DMNGUYENLIEU = LIB.Procedures.Danhsachnguyenlieu(string.Empty, LIB.SESSION_START.TS_NGAYCUOITHANG); //new DmnguyenlieuManager().SelectAllRDT();
+                _DT_DMNGUYENLIEU = LIB.Procedures.Danhsachnguyenlieu(string.Empty, string.Empty, LIB.SESSION_START.TS_NGAYCUOITHANG); //new DmnguyenlieuManager().SelectAllRDT();
                 return _DT_DMNGUYENLIEU;
             }
             set { _DT_DMNGUYENLIEU = value; }
