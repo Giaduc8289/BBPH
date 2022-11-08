@@ -164,7 +164,7 @@
             this.txt_MAHANG.Name = "txt_MAHANG";
             this.txt_MAHANG.Regular_Expression = null;
             this.txt_MAHANG.Size = new System.Drawing.Size(86, 20);
-            this.txt_MAHANG.TabIndex = 6;
+            this.txt_MAHANG.TabIndex = 4;
             this.txt_MAHANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MATHANG_Validating);
             // 
             // label25
@@ -198,7 +198,7 @@
             this.txt_MASPKHACH.ReadOnly = true;
             this.txt_MASPKHACH.Regular_Expression = null;
             this.txt_MASPKHACH.Size = new System.Drawing.Size(86, 20);
-            this.txt_MASPKHACH.TabIndex = 7;
+            this.txt_MASPKHACH.TabIndex = 5;
             this.txt_MASPKHACH.TabStop = false;
             // 
             // txt_MALYDO
@@ -213,7 +213,7 @@
             this.txt_MALYDO.Name = "txt_MALYDO";
             this.txt_MALYDO.Regular_Expression = null;
             this.txt_MALYDO.Size = new System.Drawing.Size(86, 20);
-            this.txt_MALYDO.TabIndex = 4;
+            this.txt_MALYDO.TabIndex = 6;
             this.txt_MALYDO.TabStop = false;
             this.txt_MALYDO.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MALYDO_Validating);
             // 
@@ -239,7 +239,7 @@
             this.txt_LYDO.ReadOnly = true;
             this.txt_LYDO.Regular_Expression = null;
             this.txt_LYDO.Size = new System.Drawing.Size(165, 20);
-            this.txt_LYDO.TabIndex = 5;
+            this.txt_LYDO.TabIndex = 7;
             this.txt_LYDO.TabStop = false;
             // 
             // FRM_BAOCAONHAPKHOSP
