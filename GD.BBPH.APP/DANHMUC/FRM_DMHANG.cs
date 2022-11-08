@@ -35,7 +35,8 @@ namespace GD.BBPH.APP.DANHMUC
 
         private DataTable DT_DMKHACH = new DataTable(), DT_DMCHUNGLOAI = new DataTable(), DT_DMMANG = new DataTable(), DT_DMMAU = new DataTable()
             , DT_LOAIMUC = new DataTable(), DT_SOMAU = new DataTable(), DT_SOHINH = new DataTable(), DT_SOLOP = new DataTable()
-            , DT_CAUTRUCIN = new DataTable(), DT_QCTHANHPHAM = new DataTable(), DT_QCDONGGOI = new DataTable(), DT_QCLOAITHUNG = new DataTable();
+            , DT_CAUTRUCIN = new DataTable(), DT_QCTHANHPHAM = new DataTable(), DT_QCDONGGOI = new DataTable(), DT_QCLOAITHUNG = new DataTable()
+            , DT_DMKEO = new DataTable(), DT_DMDONGRAN = new DataTable(), DT_DINHMUCKEO = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
@@ -71,6 +72,9 @@ namespace GD.BBPH.APP.DANHMUC
                         DT_QCTHANHPHAM = new DmquycachManager().SelectByManhomRDT("N06");
                         DT_QCDONGGOI = new DmquycachManager().SelectByManhomRDT("N07");
                         DT_QCLOAITHUNG = new DmquycachManager().SelectByManhomRDT("N08");
+                        DT_DMKEO = LIB.Procedures.Danhsachnguyenlieu(string.Empty, "KEO", LIB.SESSION_START.TS_NGAYCUOITHANG);
+                        DT_DMDONGRAN = LIB.Procedures.Danhsachnguyenlieu(string.Empty, "DR", LIB.SESSION_START.TS_NGAYCUOITHANG);
+                        DT_DINHMUCKEO = new DinhmuckeoManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -111,6 +115,8 @@ namespace GD.BBPH.APP.DANHMUC
             DT_QCTHANHPHAM = new DmquycachManager().SelectByManhomRDT("N06");
             DT_QCDONGGOI = new DmquycachManager().SelectByManhomRDT("N07");
             DT_QCLOAITHUNG = new DmquycachManager().SelectByManhomRDT("N08");
+            DT_DMKEO = LIB.Procedures.Danhsachnguyenlieu(string.Empty, "KEO", LIB.SESSION_START.TS_NGAYCUOITHANG);
+            DT_DMDONGRAN = LIB.Procedures.Danhsachnguyenlieu(string.Empty, "DR", LIB.SESSION_START.TS_NGAYCUOITHANG);
         }
 
         private static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
@@ -386,6 +392,7 @@ namespace GD.BBPH.APP.DANHMUC
         {
             try
             {
+                //-----Chọn mã màng
                 if (e.Column.DataMember == MangcuahangFields.Mamang.Name)
                 {
                     DmmangEntity _DmmangEntity = new DmmangManager().SelectOne(GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Mamang.Name].Value.ToString());
@@ -398,6 +405,98 @@ namespace GD.BBPH.APP.DANHMUC
                         GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Mangin.Name].Value = false;
                     }
                 }
+
+                #region Xử lý định mức keo với màng ghép
+                try
+                {
+                    bool _mangin = Convert.ToBoolean(GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Mangin.Name].Value.ToString());
+                    if(!_mangin)
+                    {
+                        #region Chọn loại keo
+                        if (e.Column.DataMember == MangcuahangFields.Maloaikeo.Name)
+                        {
+                            string str_MACANTIM = GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Maloaikeo.Name].Value.ToString().Trim().ToUpper();
+                            _RowViewSelect = null;
+                            if (string.IsNullOrEmpty(str_MACANTIM) || DT_DMKEO == null || DT_DMKEO.Rows.Count == 0) return;
+                            _RowViewSelect = checkmaNguyelieu(str_MACANTIM, DT_DMKEO);
+                            if (_RowViewSelect == null)
+                            {
+                                ListviewJanus _frm_SingerRows_Select =
+                                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMNGUYENLIEU_H.xml",
+                                        DT_DMKEO, DmnguyenlieuFields.Manl.Name, str_MACANTIM);
+                                _frm_SingerRows_Select.ShowDialog();
+                                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                                GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Maloaikeo.Name].Value = _RowViewSelect[DmnguyenlieuFields.Manl.Name].ToString();
+                                GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tenloaikeo.Name].Value = _RowViewSelect[DmnguyenlieuFields.Tennl.Name].ToString();
+                            }
+                            else
+                                GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tenloaikeo.Name].Value = _RowViewSelect[DmnguyenlieuFields.Tennl.Name].ToString();
+                        }
+                        #endregion
+                        #region Chọn loại đóng rắn
+                        if (e.Column.DataMember == MangcuahangFields.Maloaidongran.Name)
+                        {
+                            string str_MACANTIM = GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Maloaidongran.Name].Value.ToString().Trim().ToUpper();
+                            _RowViewSelect = null;
+                            if (string.IsNullOrEmpty(str_MACANTIM) || DT_DMDONGRAN == null || DT_DMDONGRAN.Rows.Count == 0) return;
+                            _RowViewSelect = checkmaNguyelieu(str_MACANTIM, DT_DMDONGRAN);
+                            if (_RowViewSelect == null)
+                            {
+                                ListviewJanus _frm_SingerRows_Select =
+                                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMNGUYENLIEU_H.xml",
+                                        DT_DMDONGRAN, DmnguyenlieuFields.Manl.Name, str_MACANTIM);
+                                _frm_SingerRows_Select.ShowDialog();
+                                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                                GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Maloaidongran.Name].Value = _RowViewSelect[DmnguyenlieuFields.Manl.Name].ToString();
+                                GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tenloaidongran.Name].Value = _RowViewSelect[DmnguyenlieuFields.Tennl.Name].ToString();
+                            }
+                            else
+                                GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tenloaidongran.Name].Value = _RowViewSelect[DmnguyenlieuFields.Tennl.Name].ToString();
+
+                            //-----Điền định mức keo
+                            string _strMakeo = "", _strMadongran = "", _filter = "";
+                            _strMakeo = GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Maloaikeo.Name].Value.ToString().Trim();
+                            _strMadongran = GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Maloaidongran.Name].Value.ToString().Trim();
+                            _filter = DinhmuckeoFields.Makeo.Name + "='" + _strMakeo + "' And " + DinhmuckeoFields.Madongran.Name + "='" + _strMadongran + "'";
+                            DataRow[] _drs = DT_DINHMUCKEO.Select(_filter);
+                            if (_drs.Length > 0)
+                            {
+                                GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tylekeokho.Name].Value = _drs[0][DinhmuckeoFields.Hamluongkeo.Name];
+                                GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tyledongrankho.Name].Value = _drs[0][DinhmuckeoFields.Hamluongdongran.Name];
+                                GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tylekeo.Name].Value = _drs[0][DinhmuckeoFields.Tylephakeo.Name];
+                                GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tyledongran.Name].Value = _drs[0][DinhmuckeoFields.Tylephadongran.Name];
+                            }
+                        }
+                        #endregion
+                        #region Tính định mức keo ướt
+                        if (e.Column.DataMember == MangcuahangFields.Dinhmucdongrankho.Name)
+                        {
+                            decimal dmkeokho, dmdrkho, tlkeokho, tldrkho, tlkeo, tldr, dmkeouot, dmdruot;
+                            dmkeokho = dmdrkho = tlkeokho = tldrkho = tlkeo = tldr = dmkeouot = dmdruot = 0;
+
+                            dmkeokho = Convert.ToDecimal(GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Dinhmuckeokho.Name].Value);
+                            dmdrkho = Convert.ToDecimal(GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Dinhmuckeokho.Name].Value);
+
+                            tlkeokho = Convert.ToDecimal(GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tylekeokho.Name].Value);
+                            tldrkho = Convert.ToDecimal(GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tyledongrankho.Name].Value);
+
+                            tlkeo = Convert.ToDecimal(GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tylekeo.Name].Value);
+                            tldr = Convert.ToDecimal(GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Tyledongran.Name].Value);
+
+                            dmkeouot = dmkeokho * tlkeo / (tlkeokho * tlkeo + tldrkho * tldr);
+                            dmdruot = dmdrkho * tldr / (tlkeokho * tlkeo + tldrkho * tldr);
+
+                            GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Dinhmuckeouot.Name].Value = dmkeouot;
+                            GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Dinhmucdongranuot.Name].Value = dmdruot;
+                            GRID_MANGCUAHANG.CurrentRow.Cells[MangcuahangFields.Dinhmucdungmoi.Name].Value = dmkeouot + dmdruot;
+                        }
+                        #endregion
+                    }
+                }
+                catch { }
+                #endregion
 
                 //-----Cập nhật trường cấu trúc
                 string _strCautruc = "";
@@ -424,6 +523,14 @@ namespace GD.BBPH.APP.DANHMUC
                 }
             }
             catch { }
+        }
+        private DataRow checkmaNguyelieu(string masieuthi, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(DmnguyenlieuFields.Manl.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
         }
         #endregion
 
