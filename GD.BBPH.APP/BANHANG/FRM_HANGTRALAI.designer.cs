@@ -40,9 +40,7 @@
             this.txt_Ngaytra = new System.Windows.Forms.MaskedTextBox();
             this.txt_Nguyennhan = new GD.BBPH.CONTROL.TEXTBOX();
             this.label7 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_Soluonggiao = new GD.BBPH.CONTROL.TEXTBOX();
             this.label5 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_Soluongtralai = new GD.BBPH.CONTROL.TEXTBOX();
             this.label6 = new GD.BBPH.CONTROL.LABEL();
             this.txt_Masp = new GD.BBPH.CONTROL.TEXTBOX();
             this.label4 = new GD.BBPH.CONTROL.LABEL();
@@ -62,6 +60,8 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_Sophieugiao = new GD.BBPH.CONTROL.TEXTBOX();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_Soluongtralai = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_Soluonggiao = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -119,15 +119,15 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_Soluonggiao);
+            this.uiPanel1Container.Controls.Add(this.txt_Soluongtralai);
             this.uiPanel1Container.Controls.Add(this.label9);
             this.uiPanel1Container.Controls.Add(this.txt_Ngaydat);
             this.uiPanel1Container.Controls.Add(this.label8);
             this.uiPanel1Container.Controls.Add(this.txt_Ngaytra);
             this.uiPanel1Container.Controls.Add(this.txt_Nguyennhan);
             this.uiPanel1Container.Controls.Add(this.label7);
-            this.uiPanel1Container.Controls.Add(this.txt_Soluonggiao);
             this.uiPanel1Container.Controls.Add(this.label5);
-            this.uiPanel1Container.Controls.Add(this.txt_Soluongtralai);
             this.uiPanel1Container.Controls.Add(this.label6);
             this.uiPanel1Container.Controls.Add(this.txt_Masp);
             this.uiPanel1Container.Controls.Add(this.label4);
@@ -168,8 +168,8 @@
             this.txt_Ngaydat.Mask = "  00  / 00 / 0000";
             this.txt_Ngaydat.Name = "txt_Ngaydat";
             this.txt_Ngaydat.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_Ngaydat.Size = new System.Drawing.Size(100, 20);
-            this.txt_Ngaydat.TabIndex = 8;
+            this.txt_Ngaydat.Size = new System.Drawing.Size(137, 20);
+            this.txt_Ngaydat.TabIndex = 7;
             this.txt_Ngaydat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Ngaydat.ValidatingType = typeof(System.DateTime);
             // 
@@ -179,7 +179,7 @@
             this.label8.Location = new System.Drawing.Point(320, 127);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 13);
-            this.label8.TabIndex = 194;
+            this.label8.TabIndex = 8;
             this.label8.Text = "Ngày trả";
             // 
             // txt_Ngaytra
@@ -188,8 +188,8 @@
             this.txt_Ngaytra.Mask = "  00  / 00 / 0000";
             this.txt_Ngaytra.Name = "txt_Ngaytra";
             this.txt_Ngaytra.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_Ngaytra.Size = new System.Drawing.Size(100, 20);
-            this.txt_Ngaytra.TabIndex = 9;
+            this.txt_Ngaytra.Size = new System.Drawing.Size(138, 20);
+            this.txt_Ngaytra.TabIndex = 8;
             this.txt_Ngaytra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Ngaytra.ValidatingType = typeof(System.DateTime);
             // 
@@ -207,7 +207,7 @@
             this.txt_Nguyennhan.Regular_Expression = null;
             this.txt_Nguyennhan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_Nguyennhan.Size = new System.Drawing.Size(181, 95);
-            this.txt_Nguyennhan.TabIndex = 12;
+            this.txt_Nguyennhan.TabIndex = 11;
             // 
             // label7
             // 
@@ -219,20 +219,6 @@
             this.label7.Text = "Lý do trả lại";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // txt_Soluonggiao
-            // 
-            this.txt_Soluonggiao.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Soluonggiao.BannerText = null;
-            this.txt_Soluonggiao.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_Soluonggiao.FormNametoShow = "";
-            this.txt_Soluonggiao.Is_DateTime = false;
-            this.txt_Soluonggiao.IsShowForm = false;
-            this.txt_Soluonggiao.Location = new System.Drawing.Point(120, 153);
-            this.txt_Soluonggiao.Name = "txt_Soluonggiao";
-            this.txt_Soluonggiao.Regular_Expression = null;
-            this.txt_Soluonggiao.Size = new System.Drawing.Size(138, 20);
-            this.txt_Soluonggiao.TabIndex = 10;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -241,20 +227,6 @@
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 173;
             this.label5.Text = "Số lượng giao";
-            // 
-            // txt_Soluongtralai
-            // 
-            this.txt_Soluongtralai.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Soluongtralai.BannerText = null;
-            this.txt_Soluongtralai.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_Soluongtralai.FormNametoShow = "";
-            this.txt_Soluongtralai.Is_DateTime = false;
-            this.txt_Soluongtralai.IsShowForm = false;
-            this.txt_Soluongtralai.Location = new System.Drawing.Point(432, 153);
-            this.txt_Soluongtralai.Name = "txt_Soluongtralai";
-            this.txt_Soluongtralai.Regular_Expression = null;
-            this.txt_Soluongtralai.Size = new System.Drawing.Size(138, 20);
-            this.txt_Soluongtralai.TabIndex = 11;
             // 
             // label6
             // 
@@ -277,7 +249,7 @@
             this.txt_Masp.Name = "txt_Masp";
             this.txt_Masp.Regular_Expression = null;
             this.txt_Masp.Size = new System.Drawing.Size(138, 20);
-            this.txt_Masp.TabIndex = 6;
+            this.txt_Masp.TabIndex = 5;
             this.txt_Masp.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Masp_Validating);
             // 
             // label4
@@ -301,7 +273,7 @@
             this.txt_Tenhang.Name = "txt_Tenhang";
             this.txt_Tenhang.Regular_Expression = null;
             this.txt_Tenhang.Size = new System.Drawing.Size(248, 20);
-            this.txt_Tenhang.TabIndex = 7;
+            this.txt_Tenhang.TabIndex = 6;
             this.txt_Tenhang.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Masp_Validating);
             // 
             // txt_Tenkhach
@@ -317,7 +289,7 @@
             this.txt_Tenkhach.ReadOnly = true;
             this.txt_Tenkhach.Regular_Expression = null;
             this.txt_Tenkhach.Size = new System.Drawing.Size(247, 20);
-            this.txt_Tenkhach.TabIndex = 5;
+            this.txt_Tenkhach.TabIndex = 4;
             this.txt_Tenkhach.TabStop = false;
             this.txt_Tenkhach.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Makhach_Validating);
             // 
@@ -333,7 +305,7 @@
             this.txt_Makhach.Name = "txt_Makhach";
             this.txt_Makhach.Regular_Expression = null;
             this.txt_Makhach.Size = new System.Drawing.Size(138, 20);
-            this.txt_Makhach.TabIndex = 4;
+            this.txt_Makhach.TabIndex = 3;
             this.txt_Makhach.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Makhach_Validating);
             // 
             // label3
@@ -385,7 +357,7 @@
             this.txt_Ngaygiao.Name = "txt_Ngaygiao";
             this.txt_Ngaygiao.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txt_Ngaygiao.Size = new System.Drawing.Size(100, 20);
-            this.txt_Ngaygiao.TabIndex = 1;
+            this.txt_Ngaygiao.TabIndex = 0;
             this.txt_Ngaygiao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Ngaygiao.ValidatingType = typeof(System.DateTime);
             // 
@@ -479,16 +451,46 @@
             this.txt_Sophieugiao.Name = "txt_Sophieugiao";
             this.txt_Sophieugiao.Regular_Expression = null;
             this.txt_Sophieugiao.Size = new System.Drawing.Size(138, 20);
-            this.txt_Sophieugiao.TabIndex = 3;
+            this.txt_Sophieugiao.TabIndex = 1;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(310, 17);
+            this.label21.Location = new System.Drawing.Point(319, 17);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(72, 13);
             this.label21.TabIndex = 120;
             this.label21.Text = "Số phiếu giao";
+            // 
+            // txt_Soluongtralai
+            // 
+            this.txt_Soluongtralai.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Soluongtralai.BannerText = null;
+            this.txt_Soluongtralai.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_Soluongtralai.Giatrithapphan = 0;
+            this.txt_Soluongtralai.IsSoNguyen = false;
+            this.txt_Soluongtralai.Location = new System.Drawing.Point(432, 153);
+            this.txt_Soluongtralai.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_Soluongtralai.Name = "txt_Soluongtralai";
+            this.txt_Soluongtralai.Regular_Expression = "";
+            this.txt_Soluongtralai.Size = new System.Drawing.Size(138, 20);
+            this.txt_Soluongtralai.TabIndex = 10;
+            this.txt_Soluongtralai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_Soluonggiao
+            // 
+            this.txt_Soluonggiao.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Soluonggiao.BannerText = null;
+            this.txt_Soluonggiao.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_Soluonggiao.Giatrithapphan = 0;
+            this.txt_Soluonggiao.IsSoNguyen = false;
+            this.txt_Soluonggiao.Location = new System.Drawing.Point(120, 153);
+            this.txt_Soluonggiao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_Soluonggiao.Name = "txt_Soluonggiao";
+            this.txt_Soluonggiao.Regular_Expression = "";
+            this.txt_Soluonggiao.Size = new System.Drawing.Size(137, 20);
+            this.txt_Soluonggiao.TabIndex = 9;
+            this.txt_Soluonggiao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FRM_HANGTRALAI
             // 
@@ -537,9 +539,7 @@
         private CONTROL.TEXTBOX txt_Masp;
         private CONTROL.LABEL label4;
         private CONTROL.TEXTBOX txt_Tenhang;
-        private CONTROL.TEXTBOX txt_Soluonggiao;
         private CONTROL.LABEL label5;
-        private CONTROL.TEXTBOX txt_Soluongtralai;
         private CONTROL.LABEL label6;
         private CONTROL.LABEL label7;
         private CONTROL.TEXTBOX txt_Nguyennhan;
@@ -547,5 +547,7 @@
         private System.Windows.Forms.MaskedTextBox txt_Ngaytra;
         private CONTROL.LABEL label9;
         private System.Windows.Forms.MaskedTextBox txt_Ngaydat;
+        private CONTROL.TEXTBOXNUMBER txt_Soluonggiao;
+        private CONTROL.TEXTBOXNUMBER txt_Soluongtralai;
     }
 }

@@ -34,7 +34,6 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
-            this.txt_sothutucongdoan = new GD.BBPH.CONTROL.TEXTBOX();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
             this.btn_KHOIPHUC = new GD.BBPH.CONTROL.BUTTON();
@@ -46,6 +45,7 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAHIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_sothutucongdoan = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -119,20 +119,6 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(506, 518);
             this.uiPanel1Container.TabIndex = 0;
-            // 
-            // txt_sothutucongdoan
-            // 
-            this.txt_sothutucongdoan.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_sothutucongdoan.BannerText = null;
-            this.txt_sothutucongdoan.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_sothutucongdoan.FormNametoShow = "";
-            this.txt_sothutucongdoan.Is_DateTime = false;
-            this.txt_sothutucongdoan.IsShowForm = false;
-            this.txt_sothutucongdoan.Location = new System.Drawing.Point(136, 79);
-            this.txt_sothutucongdoan.Name = "txt_sothutucongdoan";
-            this.txt_sothutucongdoan.Regular_Expression = null;
-            this.txt_sothutucongdoan.Size = new System.Drawing.Size(138, 20);
-            this.txt_sothutucongdoan.TabIndex = 2;
             // 
             // label1
             // 
@@ -267,6 +253,21 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã công đoạn";
             // 
+            // txt_sothutucongdoan
+            // 
+            this.txt_sothutucongdoan.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_sothutucongdoan.BannerText = null;
+            this.txt_sothutucongdoan.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_sothutucongdoan.Giatrithapphan = 0;
+            this.txt_sothutucongdoan.IsSoNguyen = false;
+            this.txt_sothutucongdoan.Location = new System.Drawing.Point(136, 79);
+            this.txt_sothutucongdoan.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_sothutucongdoan.Name = "txt_sothutucongdoan";
+            this.txt_sothutucongdoan.Regular_Expression = "";
+            this.txt_sothutucongdoan.Size = new System.Drawing.Size(138, 20);
+            this.txt_sothutucongdoan.TabIndex = 2;
+            this.txt_sothutucongdoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FRM_DMCONGDOAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,7 +307,7 @@
         private GD.BBPH.CONTROL.BUTTON btn_THEMMOI;
         private GD.BBPH.CONTROL.BUTTON btn_SUA;
         private GD.BBPH.CONTROL.BUTTON btn_Thoat;
-        protected internal CONTROL.TEXTBOX txt_sothutucongdoan;
         protected internal CONTROL.LABEL label1;
+        private CONTROL.TEXTBOXNUMBER txt_sothutucongdoan;
     }
 }

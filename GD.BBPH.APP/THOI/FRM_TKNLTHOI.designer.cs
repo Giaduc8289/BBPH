@@ -42,11 +42,9 @@
             this.label4 = new GD.BBPH.CONTROL.LABEL();
             this.txt_NGAY = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_Klxuat = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_Manguyenlieu = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_Tennguyenlieu = new GD.BBPH.CONTROL.TEXTBOX();
             this.label2 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_Klnhap = new GD.BBPH.CONTROL.TEXTBOX();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
             this.btn_KHOIPHUC = new GD.BBPH.CONTROL.BUTTON();
@@ -55,6 +53,8 @@
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_Klxuat = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_Klnhap = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -112,6 +112,8 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_Klxuat);
+            this.uiPanel1Container.Controls.Add(this.txt_Klnhap);
             this.uiPanel1Container.Controls.Add(this.btn_XOADONG);
             this.uiPanel1Container.Controls.Add(this.btn_THEMDONG);
             this.uiPanel1Container.Controls.Add(this.pne_CHITIET);
@@ -120,11 +122,9 @@
             this.uiPanel1Container.Controls.Add(this.label4);
             this.uiPanel1Container.Controls.Add(this.txt_NGAY);
             this.uiPanel1Container.Controls.Add(this.label3);
-            this.uiPanel1Container.Controls.Add(this.txt_Klxuat);
             this.uiPanel1Container.Controls.Add(this.txt_Manguyenlieu);
             this.uiPanel1Container.Controls.Add(this.txt_Tennguyenlieu);
             this.uiPanel1Container.Controls.Add(this.label2);
-            this.uiPanel1Container.Controls.Add(this.txt_Klnhap);
             this.uiPanel1Container.Controls.Add(this.label1);
             this.uiPanel1Container.Controls.Add(this.btn_Thoat);
             this.uiPanel1Container.Controls.Add(this.btn_KHOIPHUC);
@@ -230,20 +230,6 @@
             this.label3.TabIndex = 126;
             this.label3.Text = "Khối lượng xuất";
             // 
-            // txt_Klxuat
-            // 
-            this.txt_Klxuat.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Klxuat.BannerText = null;
-            this.txt_Klxuat.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_Klxuat.FormNametoShow = "";
-            this.txt_Klxuat.Is_DateTime = false;
-            this.txt_Klxuat.IsShowForm = false;
-            this.txt_Klxuat.Location = new System.Drawing.Point(319, 93);
-            this.txt_Klxuat.Name = "txt_Klxuat";
-            this.txt_Klxuat.Regular_Expression = null;
-            this.txt_Klxuat.Size = new System.Drawing.Size(128, 20);
-            this.txt_Klxuat.TabIndex = 5;
-            // 
             // txt_Manguyenlieu
             // 
             this.txt_Manguyenlieu.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -285,20 +271,6 @@
             this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 124;
             this.label2.Text = "Khối lượng nhập";
-            // 
-            // txt_Klnhap
-            // 
-            this.txt_Klnhap.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Klnhap.BannerText = null;
-            this.txt_Klnhap.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_Klnhap.FormNametoShow = "";
-            this.txt_Klnhap.Is_DateTime = false;
-            this.txt_Klnhap.IsShowForm = false;
-            this.txt_Klnhap.Location = new System.Drawing.Point(99, 93);
-            this.txt_Klnhap.Name = "txt_Klnhap";
-            this.txt_Klnhap.Regular_Expression = null;
-            this.txt_Klnhap.Size = new System.Drawing.Size(128, 20);
-            this.txt_Klnhap.TabIndex = 4;
             // 
             // label1
             // 
@@ -402,6 +374,36 @@
             this.label21.TabIndex = 120;
             this.label21.Text = "Ngày thống kê";
             // 
+            // txt_Klxuat
+            // 
+            this.txt_Klxuat.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Klxuat.BannerText = null;
+            this.txt_Klxuat.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_Klxuat.Giatrithapphan = 0;
+            this.txt_Klxuat.IsSoNguyen = false;
+            this.txt_Klxuat.Location = new System.Drawing.Point(335, 93);
+            this.txt_Klxuat.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_Klxuat.Name = "txt_Klxuat";
+            this.txt_Klxuat.Regular_Expression = "";
+            this.txt_Klxuat.Size = new System.Drawing.Size(112, 20);
+            this.txt_Klxuat.TabIndex = 5;
+            this.txt_Klxuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_Klnhap
+            // 
+            this.txt_Klnhap.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Klnhap.BannerText = null;
+            this.txt_Klnhap.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_Klnhap.Giatrithapphan = 0;
+            this.txt_Klnhap.IsSoNguyen = false;
+            this.txt_Klnhap.Location = new System.Drawing.Point(99, 93);
+            this.txt_Klnhap.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_Klnhap.Name = "txt_Klnhap";
+            this.txt_Klnhap.Regular_Expression = "";
+            this.txt_Klnhap.Size = new System.Drawing.Size(128, 20);
+            this.txt_Klnhap.TabIndex = 4;
+            this.txt_Klnhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FRM_TKNLTHOI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,13 +440,11 @@
         private GD.BBPH.CONTROL.BUTTON btn_THEMMOI;
         private GD.BBPH.CONTROL.BUTTON btn_SUA;
         private GD.BBPH.CONTROL.BUTTON btn_Thoat;
-        private CONTROL.TEXTBOX txt_Klnhap;
         private CONTROL.LABEL label2;
         private CONTROL.LABEL label1;
         private CONTROL.TEXTBOX txt_Tennguyenlieu;
         private CONTROL.TEXTBOX txt_Manguyenlieu;
         private CONTROL.LABEL label3;
-        private CONTROL.TEXTBOX txt_Klxuat;
         private CONTROL.LABEL label4;
         private System.Windows.Forms.MaskedTextBox txt_NGAY;
         private CONTROL.TEXTBOX txt_Ca;
@@ -452,5 +452,7 @@
         private CONTROL.BUTTON btn_XOADONG;
         private CONTROL.BUTTON btn_THEMDONG;
         private System.Windows.Forms.Panel pne_CHITIET;
+        private CONTROL.TEXTBOXNUMBER txt_Klxuat;
+        private CONTROL.TEXTBOXNUMBER txt_Klnhap;
     }
 }

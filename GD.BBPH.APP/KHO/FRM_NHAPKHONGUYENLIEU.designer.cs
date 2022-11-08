@@ -52,7 +52,6 @@
             this.txt_MANGUYENLIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_TENNGUYENLIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label2 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_SOLUONG = new GD.BBPH.CONTROL.TEXTBOX();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
             this.btn_KHOIPHUC = new GD.BBPH.CONTROL.BUTTON();
@@ -61,6 +60,7 @@
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_SOLUONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -118,6 +118,7 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_SOLUONG);
             this.uiPanel1Container.Controls.Add(this.label7);
             this.uiPanel1Container.Controls.Add(this.txt_TENLYDO);
             this.uiPanel1Container.Controls.Add(this.label6);
@@ -136,7 +137,6 @@
             this.uiPanel1Container.Controls.Add(this.txt_MANGUYENLIEU);
             this.uiPanel1Container.Controls.Add(this.txt_TENNGUYENLIEU);
             this.uiPanel1Container.Controls.Add(this.label2);
-            this.uiPanel1Container.Controls.Add(this.txt_SOLUONG);
             this.uiPanel1Container.Controls.Add(this.label1);
             this.uiPanel1Container.Controls.Add(this.btn_Thoat);
             this.uiPanel1Container.Controls.Add(this.btn_KHOIPHUC);
@@ -375,20 +375,6 @@
             this.label2.TabIndex = 124;
             this.label2.Text = "Số lượng nhập";
             // 
-            // txt_SOLUONG
-            // 
-            this.txt_SOLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOLUONG.BannerText = null;
-            this.txt_SOLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOLUONG.FormNametoShow = "";
-            this.txt_SOLUONG.Is_DateTime = false;
-            this.txt_SOLUONG.IsShowForm = false;
-            this.txt_SOLUONG.Location = new System.Drawing.Point(100, 128);
-            this.txt_SOLUONG.Name = "txt_SOLUONG";
-            this.txt_SOLUONG.Regular_Expression = null;
-            this.txt_SOLUONG.Size = new System.Drawing.Size(139, 20);
-            this.txt_SOLUONG.TabIndex = 5;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -491,6 +477,21 @@
             this.label21.TabIndex = 120;
             this.label21.Text = "Ngày nhập";
             // 
+            // txt_SOLUONG
+            // 
+            this.txt_SOLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOLUONG.BannerText = null;
+            this.txt_SOLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOLUONG.Giatrithapphan = 0;
+            this.txt_SOLUONG.IsSoNguyen = false;
+            this.txt_SOLUONG.Location = new System.Drawing.Point(100, 128);
+            this.txt_SOLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_SOLUONG.Name = "txt_SOLUONG";
+            this.txt_SOLUONG.Regular_Expression = "";
+            this.txt_SOLUONG.Size = new System.Drawing.Size(138, 20);
+            this.txt_SOLUONG.TabIndex = 5;
+            this.txt_SOLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FRM_NHAPKHONGUYENLIEU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,7 +528,6 @@
         private GD.BBPH.CONTROL.BUTTON btn_THEMMOI;
         private GD.BBPH.CONTROL.BUTTON btn_SUA;
         private GD.BBPH.CONTROL.BUTTON btn_Thoat;
-        private CONTROL.TEXTBOX txt_SOLUONG;
         private CONTROL.LABEL label2;
         private CONTROL.LABEL label1;
         private CONTROL.TEXTBOX txt_TENNGUYENLIEU;
@@ -547,5 +547,6 @@
         private CONTROL.LABEL label5;
         private CONTROL.LABEL label7;
         private CONTROL.TEXTBOX txt_TENLYDO;
+        private CONTROL.TEXTBOXNUMBER txt_SOLUONG;
     }
 }
