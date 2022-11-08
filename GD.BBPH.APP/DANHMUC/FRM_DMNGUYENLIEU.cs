@@ -331,7 +331,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMNGUYENLIEU_H.CurrentRow.Cells[DmnguyenlieuFields.Tenrutgon.Name].Value = _DmnguyenlieuHEntity.Tenrutgon;
                 GRID_DMNGUYENLIEU_H.CurrentRow.Cells[DmnguyenlieuFields.Manhom.Name].Value = _DmnguyenlieuHEntity.Manhom;
                 GRID_DMNGUYENLIEU_H.CurrentRow.Cells[DmnguyenlieuFields.Tennhom.Name].Value = _DmnguyenlieuHEntity.Tennhom;
-                DataTable dt = LIB.Procedures.Danhsachnguyenlieu(_DmnguyenlieuHEntity.Manl, LIB.SESSION_START.TS_NGAYCUOITHANG);
+                DataTable dt = LIB.Procedures.Danhsachnguyenlieu(_DmnguyenlieuHEntity.Manl, string.Empty, LIB.SESSION_START.TS_NGAYCUOITHANG);
                 if(dt.Rows.Count>0)
                 {
                     GRID_DMNGUYENLIEU_H.CurrentRow.Cells[DmnguyenlieuFields.Gia.Name].Value = dt.Rows[0][DmnguyenlieuFields.Gia.Name];
