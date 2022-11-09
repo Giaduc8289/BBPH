@@ -34,11 +34,12 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_Klxuat = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_Klnhap = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
             this.pne_CHITIET = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.txt_Ca = new GD.BBPH.CONTROL.TEXTBOX();
             this.label4 = new GD.BBPH.CONTROL.LABEL();
             this.txt_NGAY = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new GD.BBPH.CONTROL.LABEL();
@@ -53,8 +54,7 @@
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_Klxuat = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.txt_Klnhap = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_Ca = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -112,13 +112,13 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_Ca);
             this.uiPanel1Container.Controls.Add(this.txt_Klxuat);
             this.uiPanel1Container.Controls.Add(this.txt_Klnhap);
             this.uiPanel1Container.Controls.Add(this.btn_XOADONG);
             this.uiPanel1Container.Controls.Add(this.btn_THEMDONG);
             this.uiPanel1Container.Controls.Add(this.pne_CHITIET);
             this.uiPanel1Container.Controls.Add(this.label16);
-            this.uiPanel1Container.Controls.Add(this.txt_Ca);
             this.uiPanel1Container.Controls.Add(this.label4);
             this.uiPanel1Container.Controls.Add(this.txt_NGAY);
             this.uiPanel1Container.Controls.Add(this.label3);
@@ -137,6 +137,36 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(617, 518);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_Klxuat
+            // 
+            this.txt_Klxuat.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Klxuat.BannerText = null;
+            this.txt_Klxuat.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_Klxuat.Giatrithapphan = 2;
+            this.txt_Klxuat.IsSoNguyen = false;
+            this.txt_Klxuat.Location = new System.Drawing.Point(335, 93);
+            this.txt_Klxuat.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_Klxuat.Name = "txt_Klxuat";
+            this.txt_Klxuat.Regular_Expression = "";
+            this.txt_Klxuat.Size = new System.Drawing.Size(112, 20);
+            this.txt_Klxuat.TabIndex = 5;
+            this.txt_Klxuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_Klnhap
+            // 
+            this.txt_Klnhap.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Klnhap.BannerText = null;
+            this.txt_Klnhap.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_Klnhap.Giatrithapphan = 2;
+            this.txt_Klnhap.IsSoNguyen = false;
+            this.txt_Klnhap.Location = new System.Drawing.Point(99, 93);
+            this.txt_Klnhap.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_Klnhap.Name = "txt_Klnhap";
+            this.txt_Klnhap.Regular_Expression = "";
+            this.txt_Klnhap.Size = new System.Drawing.Size(128, 20);
+            this.txt_Klnhap.TabIndex = 4;
+            this.txt_Klnhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn_XOADONG
             // 
@@ -187,20 +217,6 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(618, 2);
             this.label16.TabIndex = 247;
-            // 
-            // txt_Ca
-            // 
-            this.txt_Ca.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Ca.BannerText = null;
-            this.txt_Ca.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_Ca.FormNametoShow = "";
-            this.txt_Ca.Is_DateTime = false;
-            this.txt_Ca.IsShowForm = false;
-            this.txt_Ca.Location = new System.Drawing.Point(379, 16);
-            this.txt_Ca.Name = "txt_Ca";
-            this.txt_Ca.Regular_Expression = null;
-            this.txt_Ca.Size = new System.Drawing.Size(68, 20);
-            this.txt_Ca.TabIndex = 1;
             // 
             // label4
             // 
@@ -374,35 +390,20 @@
             this.label21.TabIndex = 120;
             this.label21.Text = "Ngày thống kê";
             // 
-            // txt_Klxuat
+            // txt_Ca
             // 
-            this.txt_Klxuat.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Klxuat.BannerText = null;
-            this.txt_Klxuat.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_Klxuat.Giatrithapphan = 0;
-            this.txt_Klxuat.IsSoNguyen = false;
-            this.txt_Klxuat.Location = new System.Drawing.Point(335, 93);
-            this.txt_Klxuat.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_Klxuat.Name = "txt_Klxuat";
-            this.txt_Klxuat.Regular_Expression = "";
-            this.txt_Klxuat.Size = new System.Drawing.Size(112, 20);
-            this.txt_Klxuat.TabIndex = 5;
-            this.txt_Klxuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_Klnhap
-            // 
-            this.txt_Klnhap.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Klnhap.BannerText = null;
-            this.txt_Klnhap.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_Klnhap.Giatrithapphan = 0;
-            this.txt_Klnhap.IsSoNguyen = false;
-            this.txt_Klnhap.Location = new System.Drawing.Point(99, 93);
-            this.txt_Klnhap.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_Klnhap.Name = "txt_Klnhap";
-            this.txt_Klnhap.Regular_Expression = "";
-            this.txt_Klnhap.Size = new System.Drawing.Size(128, 20);
-            this.txt_Klnhap.TabIndex = 4;
-            this.txt_Klnhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_Ca.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Ca.BannerText = null;
+            this.txt_Ca.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_Ca.Giatrithapphan = 0;
+            this.txt_Ca.IsSoNguyen = true;
+            this.txt_Ca.Location = new System.Drawing.Point(378, 13);
+            this.txt_Ca.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_Ca.Name = "txt_Ca";
+            this.txt_Ca.Regular_Expression = "";
+            this.txt_Ca.Size = new System.Drawing.Size(69, 20);
+            this.txt_Ca.TabIndex = 6;
+            this.txt_Ca.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FRM_TKNLTHOI
             // 
@@ -447,12 +448,12 @@
         private CONTROL.LABEL label3;
         private CONTROL.LABEL label4;
         private System.Windows.Forms.MaskedTextBox txt_NGAY;
-        private CONTROL.TEXTBOX txt_Ca;
         private System.Windows.Forms.Label label16;
         private CONTROL.BUTTON btn_XOADONG;
         private CONTROL.BUTTON btn_THEMDONG;
         private System.Windows.Forms.Panel pne_CHITIET;
         private CONTROL.TEXTBOXNUMBER txt_Klxuat;
         private CONTROL.TEXTBOXNUMBER txt_Klnhap;
+        private CONTROL.TEXTBOXNUMBER txt_Ca;
     }
 }

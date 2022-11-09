@@ -190,7 +190,7 @@
             this.txt_VAT.BannerText = null;
             this.txt_VAT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_VAT.Giatrithapphan = 0;
-            this.txt_VAT.IsSoNguyen = false;
+            this.txt_VAT.IsSoNguyen = true;
             this.txt_VAT.Location = new System.Drawing.Point(425, 19);
             this.txt_VAT.Margin = new System.Windows.Forms.Padding(2);
             this.txt_VAT.Name = "txt_VAT";
@@ -250,7 +250,7 @@
             this.txt_SOLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_SOLUONG.BannerText = null;
             this.txt_SOLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOLUONG.Giatrithapphan = 0;
+            this.txt_SOLUONG.Giatrithapphan = 2;
             this.txt_SOLUONG.IsSoNguyen = false;
             this.txt_SOLUONG.Location = new System.Drawing.Point(88, 170);
             this.txt_SOLUONG.Margin = new System.Windows.Forms.Padding(2);
@@ -394,7 +394,7 @@
             this.txt_TONGTIEN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TONGTIEN.BannerText = null;
             this.txt_TONGTIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TONGTIEN.Giatrithapphan = 0;
+            this.txt_TONGTIEN.Giatrithapphan = 2;
             this.txt_TONGTIEN.IsSoNguyen = false;
             this.txt_TONGTIEN.Location = new System.Drawing.Point(473, 174);
             this.txt_TONGTIEN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);

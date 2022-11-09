@@ -34,6 +34,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_Soluonggiao = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_Soluongtralai = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.label9 = new GD.BBPH.CONTROL.LABEL();
             this.txt_Ngaydat = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new GD.BBPH.CONTROL.LABEL();
@@ -60,8 +62,6 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_Sophieugiao = new GD.BBPH.CONTROL.TEXTBOX();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_Soluongtralai = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.txt_Soluonggiao = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -152,6 +152,36 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(588, 535);
             this.uiPanel1Container.TabIndex = 0;
             this.uiPanel1Container.Click += new System.EventHandler(this.uiPanel1Container_Click);
+            // 
+            // txt_Soluonggiao
+            // 
+            this.txt_Soluonggiao.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Soluonggiao.BannerText = null;
+            this.txt_Soluonggiao.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_Soluonggiao.Giatrithapphan = 2;
+            this.txt_Soluonggiao.IsSoNguyen = false;
+            this.txt_Soluonggiao.Location = new System.Drawing.Point(120, 153);
+            this.txt_Soluonggiao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_Soluonggiao.Name = "txt_Soluonggiao";
+            this.txt_Soluonggiao.Regular_Expression = "";
+            this.txt_Soluonggiao.Size = new System.Drawing.Size(137, 20);
+            this.txt_Soluonggiao.TabIndex = 9;
+            this.txt_Soluonggiao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_Soluongtralai
+            // 
+            this.txt_Soluongtralai.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Soluongtralai.BannerText = null;
+            this.txt_Soluongtralai.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_Soluongtralai.Giatrithapphan = 2;
+            this.txt_Soluongtralai.IsSoNguyen = false;
+            this.txt_Soluongtralai.Location = new System.Drawing.Point(432, 153);
+            this.txt_Soluongtralai.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_Soluongtralai.Name = "txt_Soluongtralai";
+            this.txt_Soluongtralai.Regular_Expression = "";
+            this.txt_Soluongtralai.Size = new System.Drawing.Size(138, 20);
+            this.txt_Soluongtralai.TabIndex = 10;
+            this.txt_Soluongtralai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label9
             // 
@@ -461,36 +491,6 @@
             this.label21.Size = new System.Drawing.Size(72, 13);
             this.label21.TabIndex = 120;
             this.label21.Text = "Số phiếu giao";
-            // 
-            // txt_Soluongtralai
-            // 
-            this.txt_Soluongtralai.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Soluongtralai.BannerText = null;
-            this.txt_Soluongtralai.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_Soluongtralai.Giatrithapphan = 0;
-            this.txt_Soluongtralai.IsSoNguyen = false;
-            this.txt_Soluongtralai.Location = new System.Drawing.Point(432, 153);
-            this.txt_Soluongtralai.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_Soluongtralai.Name = "txt_Soluongtralai";
-            this.txt_Soluongtralai.Regular_Expression = "";
-            this.txt_Soluongtralai.Size = new System.Drawing.Size(138, 20);
-            this.txt_Soluongtralai.TabIndex = 10;
-            this.txt_Soluongtralai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_Soluonggiao
-            // 
-            this.txt_Soluonggiao.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Soluonggiao.BannerText = null;
-            this.txt_Soluonggiao.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_Soluonggiao.Giatrithapphan = 0;
-            this.txt_Soluonggiao.IsSoNguyen = false;
-            this.txt_Soluonggiao.Location = new System.Drawing.Point(120, 153);
-            this.txt_Soluonggiao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_Soluonggiao.Name = "txt_Soluonggiao";
-            this.txt_Soluonggiao.Regular_Expression = "";
-            this.txt_Soluonggiao.Size = new System.Drawing.Size(137, 20);
-            this.txt_Soluonggiao.TabIndex = 9;
-            this.txt_Soluonggiao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FRM_HANGTRALAI
             // 

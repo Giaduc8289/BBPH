@@ -199,7 +199,7 @@
             this.txt_DODAYTU.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DODAYTU.BannerText = null;
             this.txt_DODAYTU.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_DODAYTU.Giatrithapphan = 0;
+            this.txt_DODAYTU.Giatrithapphan = 2;
             this.txt_DODAYTU.IsSoNguyen = false;
             this.txt_DODAYTU.Location = new System.Drawing.Point(92, 124);
             this.txt_DODAYTU.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -214,7 +214,7 @@
             this.txt_DODAYDEN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DODAYDEN.BannerText = null;
             this.txt_DODAYDEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_DODAYDEN.Giatrithapphan = 0;
+            this.txt_DODAYDEN.Giatrithapphan = 2;
             this.txt_DODAYDEN.IsSoNguyen = false;
             this.txt_DODAYDEN.Location = new System.Drawing.Point(392, 124);
             this.txt_DODAYDEN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -229,7 +229,7 @@
             this.txt_KHOTU.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_KHOTU.BannerText = null;
             this.txt_KHOTU.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_KHOTU.Giatrithapphan = 0;
+            this.txt_KHOTU.Giatrithapphan = 2;
             this.txt_KHOTU.IsSoNguyen = false;
             this.txt_KHOTU.Location = new System.Drawing.Point(92, 150);
             this.txt_KHOTU.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -244,7 +244,7 @@
             this.txt_KHODEN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_KHODEN.BannerText = null;
             this.txt_KHODEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_KHODEN.Giatrithapphan = 0;
+            this.txt_KHODEN.Giatrithapphan = 2;
             this.txt_KHODEN.IsSoNguyen = false;
             this.txt_KHODEN.Location = new System.Drawing.Point(392, 150);
             this.txt_KHODEN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -259,7 +259,7 @@
             this.txt_CHIEUDAITU.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CHIEUDAITU.BannerText = null;
             this.txt_CHIEUDAITU.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_CHIEUDAITU.Giatrithapphan = 0;
+            this.txt_CHIEUDAITU.Giatrithapphan = 2;
             this.txt_CHIEUDAITU.IsSoNguyen = false;
             this.txt_CHIEUDAITU.Location = new System.Drawing.Point(92, 176);
             this.txt_CHIEUDAITU.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -274,7 +274,7 @@
             this.txt_CHIEUDAIDEN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CHIEUDAIDEN.BannerText = null;
             this.txt_CHIEUDAIDEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_CHIEUDAIDEN.Giatrithapphan = 0;
+            this.txt_CHIEUDAIDEN.Giatrithapphan = 2;
             this.txt_CHIEUDAIDEN.IsSoNguyen = false;
             this.txt_CHIEUDAIDEN.Location = new System.Drawing.Point(392, 176);
             this.txt_CHIEUDAIDEN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -404,7 +404,7 @@
             this.txt_TOCDO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TOCDO.BannerText = null;
             this.txt_TOCDO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TOCDO.Giatrithapphan = 0;
+            this.txt_TOCDO.Giatrithapphan = 2;
             this.txt_TOCDO.IsSoNguyen = false;
             this.txt_TOCDO.Location = new System.Drawing.Point(92, 598);
             this.txt_TOCDO.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
