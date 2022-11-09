@@ -159,6 +159,12 @@
     <Compile Include="BAOCAO\FRM_BCNCMUC.Designer.cs">
       <DependentUpon>FRM_BCNCMUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="BAOCAO\FRM_BCNCKEO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BCNCKEO.Designer.cs">
+      <DependentUpon>FRM_BCNCKEO.cs</DependentUpon>
+    </Compile>
     <Compile Include="BAOCAO\FRM_BCNCMANG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -697,6 +703,9 @@
     <EmbeddedResource Include="BAOCAO\FRM_BCNCMUC.resx">
       <DependentUpon>FRM_BCNCMUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BCNCKEO.resx">
+      <DependentUpon>FRM_BCNCKEO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCNCMANG.resx">
       <DependentUpon>FRM_BCNCMANG.cs</DependentUpon>
     </EmbeddedResource>
@@ -919,6 +928,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RDLC\NHUCAUMUC.rdlc" />
+    <EmbeddedResource Include="RDLC\NHUCAUKEO.rdlc" />
     <EmbeddedResource Include="RDLC\NHUCAUMANG.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOHANGTRALAI.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAONHAPKHOMANG.rdlc" />
