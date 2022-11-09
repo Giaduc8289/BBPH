@@ -1031,6 +1031,13 @@ namespace GD.BBPH.APP.HETHONG
                 #region Báo cáo 
 
                 #region Báo cáo nhu cầu
+                case "FRM_BCNCMUC":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCNCMUC") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCNCMUC()), mmru.Text);
+                    break;
                 case "FRM_BCNCMANG":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
