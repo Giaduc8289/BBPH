@@ -1038,6 +1038,13 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCNCMANG()), mmru.Text);
                     break;
+                case "FRM_BCNCKEO":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCNCKEO") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCNCKEO()), mmru.Text);
+                    break;
                 #endregion
 
                 #region Báo cáo kết quả sản xuất
