@@ -1,0 +1,72 @@
+<project outputDir="D:\Dev\BBPH\GD.BBPH.APP\bin\Debug\Confused" baseDir="D:\Dev\BBPH\GD.BBPH.APP\bin\Debug" xmlns="http://confuser.codeplex.com">
+  <module path="GD.BBPH.APP.exe">
+    <rule pattern="true" inherit="false">
+      <protection id="anti ildasm" />
+      <protection id="anti tamper" />
+      <protection id="constants" />
+      <protection id="ctrl flow" />
+      <protection id="anti dump" />
+      <protection id="anti debug" />
+      <protection id="invalid metadata" />
+      <protection id="ref proxy" />
+      <protection id="resources" />
+      <protection id="rename" />
+    </rule>
+  </module>
+  <module path="GD.BBPH.BLL.dll">
+    <rule pattern="true" inherit="false">
+      <protection id="anti ildasm" />
+      <protection id="anti tamper" />
+      <protection id="constants" />
+      <protection id="ctrl flow" />
+      <protection id="anti dump" />
+      <protection id="anti debug" />
+      <protection id="invalid metadata" />
+      <protection id="ref proxy" />
+      <protection id="resources" />
+      <protection id="rename" />
+    </rule>
+  </module>
+  <module path="GD.BBPH.CONTROL.dll">
+    <rule pattern="true" inherit="false">
+      <protection id="anti ildasm" />
+      <protection id="anti tamper" />
+      <protection id="constants" />
+      <protection id="ctrl flow" />
+      <protection id="anti dump" />
+      <protection id="anti debug" />
+      <protection id="invalid metadata" />
+      <protection id="ref proxy" />
+      <protection id="resources" />
+      <protection id="rename" />
+    </rule>
+  </module>
+  <module path="GD.BBPH.DAL.dll">
+    <rule pattern="true" inherit="false">
+      <protection id="anti ildasm" />
+      <protection id="anti tamper" />
+      <protection id="constants" />
+      <protection id="ctrl flow" />
+      <protection id="anti dump" />
+      <protection id="anti debug" />
+      <protection id="invalid metadata" />
+      <protection id="ref proxy" />
+      <protection id="resources" />
+      <protection id="rename" />
+    </rule>
+  </module>
+  <module path="GD.BBPH.LIB.dll">
+    <rule pattern="true" inherit="false">
+      <protection id="anti ildasm" />
+      <protection id="anti tamper" />
+      <protection id="constants" />
+      <protection id="ctrl flow" />
+      <protection id="anti dump" />
+      <protection id="anti debug" />
+      <protection id="invalid metadata" />
+      <protection id="ref proxy" />
+      <protection id="resources" />
+      <protection id="rename" />
+    </rule>
+  </module>
+</project>
