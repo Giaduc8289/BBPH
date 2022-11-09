@@ -261,9 +261,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.pne_DSMANG);
             this.groupBox3.Location = new System.Drawing.Point(24, 220);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(800, 199);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
@@ -275,7 +275,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pne_DSMANG.Location = new System.Drawing.Point(4, 21);
-            this.pne_DSMANG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pne_DSMANG.Margin = new System.Windows.Forms.Padding(2);
             this.pne_DSMANG.Name = "pne_DSMANG";
             this.pne_DSMANG.Size = new System.Drawing.Size(786, 173);
             this.pne_DSMANG.TabIndex = 14;
@@ -285,7 +285,7 @@
             this.txt_KHOMANG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_KHOMANG.BannerText = null;
             this.txt_KHOMANG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_KHOMANG.Giatrithapphan = 0;
+            this.txt_KHOMANG.Giatrithapphan = 2;
             this.txt_KHOMANG.IsSoNguyen = false;
             this.txt_KHOMANG.Location = new System.Drawing.Point(414, 71);
             this.txt_KHOMANG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -309,7 +309,7 @@
             this.txt_DAICUON.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DAICUON.BannerText = null;
             this.txt_DAICUON.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_DAICUON.Giatrithapphan = 0;
+            this.txt_DAICUON.Giatrithapphan = 2;
             this.txt_DAICUON.IsSoNguyen = false;
             this.txt_DAICUON.Location = new System.Drawing.Point(246, 99);
             this.txt_DAICUON.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -333,7 +333,7 @@
             this.txt_RONGCUON.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_RONGCUON.BannerText = null;
             this.txt_RONGCUON.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_RONGCUON.Giatrithapphan = 0;
+            this.txt_RONGCUON.Giatrithapphan = 2;
             this.txt_RONGCUON.IsSoNguyen = false;
             this.txt_RONGCUON.Location = new System.Drawing.Point(95, 99);
             this.txt_RONGCUON.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -376,7 +376,7 @@
             this.txt_SOLOPGHEP.BannerText = null;
             this.txt_SOLOPGHEP.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SOLOPGHEP.Giatrithapphan = 0;
-            this.txt_SOLOPGHEP.IsSoNguyen = false;
+            this.txt_SOLOPGHEP.IsSoNguyen = true;
             this.txt_SOLOPGHEP.Location = new System.Drawing.Point(799, 15);
             this.txt_SOLOPGHEP.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_SOLOPGHEP.Name = "txt_SOLOPGHEP";
@@ -419,7 +419,7 @@
             this.txt_HONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_HONG.BannerText = null;
             this.txt_HONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_HONG.Giatrithapphan = 0;
+            this.txt_HONG.Giatrithapphan = 2;
             this.txt_HONG.IsSoNguyen = false;
             this.txt_HONG.Location = new System.Drawing.Point(741, 99);
             this.txt_HONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -450,7 +450,7 @@
             this.txt_TRONGLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TRONGLUONG.BannerText = null;
             this.txt_TRONGLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TRONGLUONG.Giatrithapphan = 0;
+            this.txt_TRONGLUONG.Giatrithapphan = 2;
             this.txt_TRONGLUONG.IsSoNguyen = false;
             this.txt_TRONGLUONG.Location = new System.Drawing.Point(246, 127);
             this.txt_TRONGLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -475,9 +475,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.pne_DSTRUC);
             this.groupBox2.Location = new System.Drawing.Point(501, 422);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(322, 103);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
@@ -489,7 +489,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pne_DSTRUC.Location = new System.Drawing.Point(6, 21);
-            this.pne_DSTRUC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pne_DSTRUC.Margin = new System.Windows.Forms.Padding(2);
             this.pne_DSTRUC.Name = "pne_DSTRUC";
             this.pne_DSTRUC.Size = new System.Drawing.Size(307, 77);
             this.pne_DSTRUC.TabIndex = 15;
@@ -500,9 +500,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.pne_DSMAU);
             this.groupBox1.Location = new System.Drawing.Point(24, 422);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(472, 103);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
@@ -514,7 +514,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pne_DSMAU.Location = new System.Drawing.Point(4, 21);
-            this.pne_DSMAU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pne_DSMAU.Margin = new System.Windows.Forms.Padding(2);
             this.pne_DSMAU.Name = "pne_DSMAU";
             this.pne_DSMAU.Size = new System.Drawing.Size(458, 77);
             this.pne_DSMAU.TabIndex = 14;
@@ -628,7 +628,7 @@
             this.txt_DAI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DAI.BannerText = null;
             this.txt_DAI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_DAI.Giatrithapphan = 0;
+            this.txt_DAI.Giatrithapphan = 2;
             this.txt_DAI.IsSoNguyen = false;
             this.txt_DAI.Location = new System.Drawing.Point(578, 99);
             this.txt_DAI.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -652,7 +652,7 @@
             this.txt_RONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_RONG.BannerText = null;
             this.txt_RONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_RONG.Giatrithapphan = 0;
+            this.txt_RONG.Giatrithapphan = 2;
             this.txt_RONG.IsSoNguyen = false;
             this.txt_RONG.Location = new System.Drawing.Point(414, 99);
             this.txt_RONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -747,7 +747,7 @@
             this.txt_KHOILUONGMUC.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_KHOILUONGMUC.BannerText = null;
             this.txt_KHOILUONGMUC.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_KHOILUONGMUC.Giatrithapphan = 0;
+            this.txt_KHOILUONGMUC.Giatrithapphan = 2;
             this.txt_KHOILUONGMUC.IsSoNguyen = false;
             this.txt_KHOILUONGMUC.Location = new System.Drawing.Point(741, 127);
             this.txt_KHOILUONGMUC.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -772,7 +772,7 @@
             this.txt_SOMAU.BannerText = null;
             this.txt_SOMAU.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SOMAU.Giatrithapphan = 0;
-            this.txt_SOMAU.IsSoNguyen = false;
+            this.txt_SOMAU.IsSoNguyen = true;
             this.txt_SOMAU.Location = new System.Drawing.Point(472, 127);
             this.txt_SOMAU.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_SOMAU.Name = "txt_SOMAU";
@@ -835,7 +835,7 @@
             this.txt_SOHINH.BannerText = null;
             this.txt_SOHINH.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SOHINH.Giatrithapphan = 0;
-            this.txt_SOHINH.IsSoNguyen = false;
+            this.txt_SOHINH.IsSoNguyen = true;
             this.txt_SOHINH.Location = new System.Drawing.Point(153, 127);
             this.txt_SOHINH.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_SOHINH.Name = "txt_SOHINH";
@@ -1115,7 +1115,7 @@
             this.ClientSize = new System.Drawing.Size(1481, 618);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_DMHANG";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DMHANG_FormClosing);

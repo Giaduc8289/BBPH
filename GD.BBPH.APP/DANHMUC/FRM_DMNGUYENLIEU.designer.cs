@@ -277,7 +277,7 @@
             this.txt_GIA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_GIA.BannerText = null;
             this.txt_GIA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_GIA.Giatrithapphan = 0;
+            this.txt_GIA.Giatrithapphan = 2;
             this.txt_GIA.IsSoNguyen = false;
             this.txt_GIA.Location = new System.Drawing.Point(96, 136);
             this.txt_GIA.Margin = new System.Windows.Forms.Padding(2);

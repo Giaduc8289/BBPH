@@ -175,7 +175,7 @@
             this.txt_DONGIA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DONGIA.BannerText = null;
             this.txt_DONGIA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_DONGIA.Giatrithapphan = 0;
+            this.txt_DONGIA.Giatrithapphan = 2;
             this.txt_DONGIA.IsSoNguyen = false;
             this.txt_DONGIA.Location = new System.Drawing.Point(421, 91);
             this.txt_DONGIA.Margin = new System.Windows.Forms.Padding(2);
@@ -201,7 +201,7 @@
             this.txt_TONGTIEN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TONGTIEN.BannerText = null;
             this.txt_TONGTIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TONGTIEN.Giatrithapphan = 0;
+            this.txt_TONGTIEN.Giatrithapphan = 2;
             this.txt_TONGTIEN.IsSoNguyen = false;
             this.txt_TONGTIEN.Location = new System.Drawing.Point(240, 90);
             this.txt_TONGTIEN.Margin = new System.Windows.Forms.Padding(2);
@@ -227,7 +227,7 @@
             this.txt_TONGKL.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TONGKL.BannerText = null;
             this.txt_TONGKL.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TONGKL.Giatrithapphan = 0;
+            this.txt_TONGKL.Giatrithapphan = 2;
             this.txt_TONGKL.IsSoNguyen = false;
             this.txt_TONGKL.Location = new System.Drawing.Point(95, 91);
             this.txt_TONGKL.Margin = new System.Windows.Forms.Padding(2);

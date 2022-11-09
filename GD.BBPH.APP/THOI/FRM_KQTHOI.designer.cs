@@ -63,7 +63,6 @@
             this.label3 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMANG = new GD.BBPH.CONTROL.TEXTBOX();
             this.label4 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_CA = new GD.BBPH.CONTROL.TEXTBOX();
             this.label2 = new GD.BBPH.CONTROL.LABEL();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
             this.txt_NGAY = new System.Windows.Forms.MaskedTextBox();
@@ -77,6 +76,7 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_CA = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -134,6 +134,7 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_CA);
             this.uiPanel1Container.Controls.Add(this.txt_THOIGIANSUCO);
             this.uiPanel1Container.Controls.Add(this.txt_CHATLUONG);
             this.uiPanel1Container.Controls.Add(this.txt_NANGSUAT);
@@ -163,7 +164,6 @@
             this.uiPanel1Container.Controls.Add(this.label3);
             this.uiPanel1Container.Controls.Add(this.txt_MAMANG);
             this.uiPanel1Container.Controls.Add(this.label4);
-            this.uiPanel1Container.Controls.Add(this.txt_CA);
             this.uiPanel1Container.Controls.Add(this.label2);
             this.uiPanel1Container.Controls.Add(this.label1);
             this.uiPanel1Container.Controls.Add(this.txt_NGAY);
@@ -187,7 +187,7 @@
             this.txt_THOIGIANSUCO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_THOIGIANSUCO.BannerText = null;
             this.txt_THOIGIANSUCO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_THOIGIANSUCO.Giatrithapphan = 0;
+            this.txt_THOIGIANSUCO.Giatrithapphan = 2;
             this.txt_THOIGIANSUCO.IsSoNguyen = false;
             this.txt_THOIGIANSUCO.Location = new System.Drawing.Point(656, 189);
             this.txt_THOIGIANSUCO.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -237,7 +237,7 @@
             this.txt_THOIGIANCHUANBI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_THOIGIANCHUANBI.BannerText = null;
             this.txt_THOIGIANCHUANBI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_THOIGIANCHUANBI.Giatrithapphan = 0;
+            this.txt_THOIGIANCHUANBI.Giatrithapphan = 2;
             this.txt_THOIGIANCHUANBI.IsSoNguyen = false;
             this.txt_THOIGIANCHUANBI.Location = new System.Drawing.Point(476, 189);
             this.txt_THOIGIANCHUANBI.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -253,7 +253,7 @@
             this.txt_PHELIEUTHUCTE.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PHELIEUTHUCTE.BannerText = null;
             this.txt_PHELIEUTHUCTE.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_PHELIEUTHUCTE.Giatrithapphan = 0;
+            this.txt_PHELIEUTHUCTE.Giatrithapphan = 2;
             this.txt_PHELIEUTHUCTE.IsSoNguyen = false;
             this.txt_PHELIEUTHUCTE.Location = new System.Drawing.Point(476, 161);
             this.txt_PHELIEUTHUCTE.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -268,7 +268,7 @@
             this.txt_SOKG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_SOKG.BannerText = null;
             this.txt_SOKG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOKG.Giatrithapphan = 0;
+            this.txt_SOKG.Giatrithapphan = 2;
             this.txt_SOKG.IsSoNguyen = false;
             this.txt_SOKG.Location = new System.Drawing.Point(281, 161);
             this.txt_SOKG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -284,7 +284,7 @@
             this.txt_SOM.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_SOM.BannerText = null;
             this.txt_SOM.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOM.Giatrithapphan = 0;
+            this.txt_SOM.Giatrithapphan = 2;
             this.txt_SOM.IsSoNguyen = false;
             this.txt_SOM.Location = new System.Drawing.Point(94, 161);
             this.txt_SOM.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -551,20 +551,6 @@
             this.label4.TabIndex = 165;
             this.label4.Text = "Mã màng";
             // 
-            // txt_CA
-            // 
-            this.txt_CA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CA.BannerText = null;
-            this.txt_CA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_CA.FormNametoShow = "";
-            this.txt_CA.Is_DateTime = false;
-            this.txt_CA.IsShowForm = false;
-            this.txt_CA.Location = new System.Drawing.Point(281, 13);
-            this.txt_CA.Name = "txt_CA";
-            this.txt_CA.Regular_Expression = null;
-            this.txt_CA.Size = new System.Drawing.Size(53, 20);
-            this.txt_CA.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -725,6 +711,21 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã máy";
             // 
+            // txt_CA
+            // 
+            this.txt_CA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CA.BannerText = null;
+            this.txt_CA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_CA.Giatrithapphan = 0;
+            this.txt_CA.IsSoNguyen = true;
+            this.txt_CA.Location = new System.Drawing.Point(281, 13);
+            this.txt_CA.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_CA.Name = "txt_CA";
+            this.txt_CA.Regular_Expression = "";
+            this.txt_CA.Size = new System.Drawing.Size(93, 20);
+            this.txt_CA.TabIndex = 12;
+            this.txt_CA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FRM_KQTHOI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,7 +765,6 @@
         private CONTROL.LABEL label21;
         private CONTROL.TEXTBOX txt_MAMAY;
         private CONTROL.LABEL label22;
-        private CONTROL.TEXTBOX txt_CA;
         private CONTROL.LABEL label2;
         private CONTROL.LABEL label1;
         private System.Windows.Forms.MaskedTextBox txt_NGAY;
@@ -797,5 +797,6 @@
         private CONTROL.TEXTBOXNUMBER txt_SOKG;
         private CONTROL.TEXTBOXNUMBER txt_SOM;
         private CONTROL.TEXTBOX txt_THOIGIANBATDAU;
+        private CONTROL.TEXTBOXNUMBER txt_CA;
     }
 }

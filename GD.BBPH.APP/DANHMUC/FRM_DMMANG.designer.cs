@@ -34,6 +34,9 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_TRONGLUONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_DODAY = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_RONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_TENQUYCACHMANG = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MAQUYCACHMANG = new GD.BBPH.CONTROL.TEXTBOX();
             this.label9 = new GD.BBPH.CONTROL.LABEL();
@@ -62,9 +65,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAHIEU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_RONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.txt_DODAY = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.txt_TRONGLUONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -158,6 +158,51 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(534, 535);
             this.uiPanel1Container.TabIndex = 0;
             this.uiPanel1Container.Click += new System.EventHandler(this.uiPanel1Container_Click);
+            // 
+            // txt_TRONGLUONG
+            // 
+            this.txt_TRONGLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TRONGLUONG.BannerText = null;
+            this.txt_TRONGLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TRONGLUONG.Giatrithapphan = 2;
+            this.txt_TRONGLUONG.IsSoNguyen = false;
+            this.txt_TRONGLUONG.Location = new System.Drawing.Point(325, 84);
+            this.txt_TRONGLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_TRONGLUONG.Name = "txt_TRONGLUONG";
+            this.txt_TRONGLUONG.Regular_Expression = "";
+            this.txt_TRONGLUONG.Size = new System.Drawing.Size(138, 20);
+            this.txt_TRONGLUONG.TabIndex = 5;
+            this.txt_TRONGLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_DODAY
+            // 
+            this.txt_DODAY.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_DODAY.BannerText = null;
+            this.txt_DODAY.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_DODAY.Giatrithapphan = 2;
+            this.txt_DODAY.IsSoNguyen = false;
+            this.txt_DODAY.Location = new System.Drawing.Point(78, 110);
+            this.txt_DODAY.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_DODAY.Name = "txt_DODAY";
+            this.txt_DODAY.Regular_Expression = "";
+            this.txt_DODAY.Size = new System.Drawing.Size(138, 20);
+            this.txt_DODAY.TabIndex = 6;
+            this.txt_DODAY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txt_RONG
+            // 
+            this.txt_RONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_RONG.BannerText = null;
+            this.txt_RONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_RONG.Giatrithapphan = 2;
+            this.txt_RONG.IsSoNguyen = false;
+            this.txt_RONG.Location = new System.Drawing.Point(325, 110);
+            this.txt_RONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_RONG.Name = "txt_RONG";
+            this.txt_RONG.Regular_Expression = "";
+            this.txt_RONG.Size = new System.Drawing.Size(138, 20);
+            this.txt_RONG.TabIndex = 7;
+            this.txt_RONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_TENQUYCACHMANG
             // 
@@ -509,51 +554,6 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã màng";
             this.label22.Click += new System.EventHandler(this.label22_Click);
-            // 
-            // txt_RONG
-            // 
-            this.txt_RONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_RONG.BannerText = null;
-            this.txt_RONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_RONG.Giatrithapphan = 0;
-            this.txt_RONG.IsSoNguyen = false;
-            this.txt_RONG.Location = new System.Drawing.Point(325, 110);
-            this.txt_RONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_RONG.Name = "txt_RONG";
-            this.txt_RONG.Regular_Expression = "";
-            this.txt_RONG.Size = new System.Drawing.Size(138, 20);
-            this.txt_RONG.TabIndex = 7;
-            this.txt_RONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_DODAY
-            // 
-            this.txt_DODAY.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DODAY.BannerText = null;
-            this.txt_DODAY.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_DODAY.Giatrithapphan = 0;
-            this.txt_DODAY.IsSoNguyen = false;
-            this.txt_DODAY.Location = new System.Drawing.Point(78, 110);
-            this.txt_DODAY.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_DODAY.Name = "txt_DODAY";
-            this.txt_DODAY.Regular_Expression = "";
-            this.txt_DODAY.Size = new System.Drawing.Size(138, 20);
-            this.txt_DODAY.TabIndex = 6;
-            this.txt_DODAY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_TRONGLUONG
-            // 
-            this.txt_TRONGLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TRONGLUONG.BannerText = null;
-            this.txt_TRONGLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TRONGLUONG.Giatrithapphan = 0;
-            this.txt_TRONGLUONG.IsSoNguyen = false;
-            this.txt_TRONGLUONG.Location = new System.Drawing.Point(325, 84);
-            this.txt_TRONGLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_TRONGLUONG.Name = "txt_TRONGLUONG";
-            this.txt_TRONGLUONG.Regular_Expression = "";
-            this.txt_TRONGLUONG.Size = new System.Drawing.Size(138, 20);
-            this.txt_TRONGLUONG.TabIndex = 5;
-            this.txt_TRONGLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FRM_DMMANG
             // 

@@ -166,7 +166,7 @@
             this.txt_DUNGMOI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DUNGMOI.BannerText = null;
             this.txt_DUNGMOI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_DUNGMOI.Giatrithapphan = 0;
+            this.txt_DUNGMOI.Giatrithapphan = 2;
             this.txt_DUNGMOI.IsSoNguyen = false;
             this.txt_DUNGMOI.Location = new System.Drawing.Point(99, 264);
             this.txt_DUNGMOI.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -199,7 +199,7 @@
             this.txt_TYLEPHADONGRAN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TYLEPHADONGRAN.BannerText = null;
             this.txt_TYLEPHADONGRAN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TYLEPHADONGRAN.Giatrithapphan = 0;
+            this.txt_TYLEPHADONGRAN.Giatrithapphan = 2;
             this.txt_TYLEPHADONGRAN.IsSoNguyen = false;
             this.txt_TYLEPHADONGRAN.Location = new System.Drawing.Point(382, 226);
             this.txt_TYLEPHADONGRAN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -214,7 +214,7 @@
             this.txt_TYLEPHAKEO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TYLEPHAKEO.BannerText = null;
             this.txt_TYLEPHAKEO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_TYLEPHAKEO.Giatrithapphan = 0;
+            this.txt_TYLEPHAKEO.Giatrithapphan = 2;
             this.txt_TYLEPHAKEO.IsSoNguyen = false;
             this.txt_TYLEPHAKEO.Location = new System.Drawing.Point(99, 226);
             this.txt_TYLEPHAKEO.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -247,7 +247,7 @@
             this.txt_HAMLUONGDONGRAN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_HAMLUONGDONGRAN.BannerText = null;
             this.txt_HAMLUONGDONGRAN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_HAMLUONGDONGRAN.Giatrithapphan = 0;
+            this.txt_HAMLUONGDONGRAN.Giatrithapphan = 2;
             this.txt_HAMLUONGDONGRAN.IsSoNguyen = false;
             this.txt_HAMLUONGDONGRAN.Location = new System.Drawing.Point(382, 189);
             this.txt_HAMLUONGDONGRAN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -262,7 +262,7 @@
             this.txt_HAMLUONGKEO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_HAMLUONGKEO.BannerText = null;
             this.txt_HAMLUONGKEO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_HAMLUONGKEO.Giatrithapphan = 0;
+            this.txt_HAMLUONGKEO.Giatrithapphan = 2;
             this.txt_HAMLUONGKEO.IsSoNguyen = false;
             this.txt_HAMLUONGKEO.Location = new System.Drawing.Point(99, 189);
             this.txt_HAMLUONGKEO.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);

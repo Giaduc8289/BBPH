@@ -34,6 +34,7 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_SOLUONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.label6 = new GD.BBPH.CONTROL.LABEL();
             this.txt_DONVITINH = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_TENKHO = new GD.BBPH.CONTROL.TEXTBOX();
@@ -55,7 +56,6 @@
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_SOLUONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -139,6 +139,21 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(617, 535);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_SOLUONG
+            // 
+            this.txt_SOLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOLUONG.BannerText = null;
+            this.txt_SOLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOLUONG.Giatrithapphan = 2;
+            this.txt_SOLUONG.IsSoNguyen = false;
+            this.txt_SOLUONG.Location = new System.Drawing.Point(109, 94);
+            this.txt_SOLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_SOLUONG.Name = "txt_SOLUONG";
+            this.txt_SOLUONG.Regular_Expression = "";
+            this.txt_SOLUONG.Size = new System.Drawing.Size(137, 20);
+            this.txt_SOLUONG.TabIndex = 5;
+            this.txt_SOLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
@@ -402,21 +417,6 @@
             this.label21.Size = new System.Drawing.Size(59, 13);
             this.label21.TabIndex = 120;
             this.label21.Text = "Ngày nhập";
-            // 
-            // txt_SOLUONG
-            // 
-            this.txt_SOLUONG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOLUONG.BannerText = null;
-            this.txt_SOLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOLUONG.Giatrithapphan = 0;
-            this.txt_SOLUONG.IsSoNguyen = false;
-            this.txt_SOLUONG.Location = new System.Drawing.Point(109, 94);
-            this.txt_SOLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txt_SOLUONG.Name = "txt_SOLUONG";
-            this.txt_SOLUONG.Regular_Expression = "";
-            this.txt_SOLUONG.Size = new System.Drawing.Size(137, 20);
-            this.txt_SOLUONG.TabIndex = 5;
-            this.txt_SOLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FRM_KIEMKENGUYENLIEU
             // 
