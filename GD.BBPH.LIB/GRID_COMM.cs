@@ -26,12 +26,40 @@ namespace GD.BBPH.LIB
                 , "Klmanhhoanthanh", "Kldukien", "Tongnhucausoi", "Catrong", "Congsuattrong", "Chieudaixuat", "Khoiluongxuat", "Cong", "Congthaykho"
                 , "Dongia", "Thanhtien", "Soluongconlai", "Khoiluongconlai", "Tongsonhapkho", "Tongsohieuchinh", "Soluonghieuchinh", "Soluongtinhluong"
                 , "Soluongchuatinhluong", "Sometchuain", "Sosanpham1", "Sosanpham2", "Somet1", "Somet2", "Tientamung"
-                , "Dodaytu", "Dodayden", "Khotu", "Khoden", "Chieudaitu", "Chieudaiden", "Tocdo"
+                , "Dodaytu", "Dodayden", "Khotu", "Khoden", "Chieudaitu", "Chieudaiden", "Tocdo", "Tylebaophu"
+                // DM màng của hàng
+                ,"Khomang", "Rongcuon", "Daicuon", "Rong","Dai", "Hong"
+                , "Bangdinhdan", "Dinhmuckeokho", "Dinhmucdongrankho" , "Dinhmuckeouot"
+                ,"Dinhmucdongranuot", "Dinhmucdungmoi"
+                 // DM màng
+                , "Doday", "Rong"
+                 // DONHANG
+                ,"Soluong"
+                 // HANGTRALAI
+                ,"Soluonggiao", "Soluongtralai"
+                //KQinchitiet
+                ,"Thoigianchuanbi", "Thoigiansuco"
+                //KQghepchitiet
+                ,"Thuctekeo", "Thuctedongran", "Thuctedungmoi"
         };
 
         //-----Danh sách các cột số thập phân
         private static string[] _colDecimal = {
-            "Tylehaomon", "Khoiluong", "Sokg", "Sokgdukien", "Doben", "Dodandai", "Khoiluongphe", "Tylephantram"
+            "Tylehaomon", "Khoiluong", "Sokg", "Sokgdukien", "Doben", "Dodandai", "Khoiluongphe", "Tylephantram", "Tylekeokho", "Tyledongran", "Tyledongrankho", "Tylekeo"
+                 // DM nguyên liệu
+                ,"Tang", "Giam"
+                // DM màu
+                ,"Tyle"
+                // DM vật tư sai hỏng
+                ,"Dinhmuc"
+                // DM keo
+                , "Hamluongkeo", "Hamluongdongran", "Tylephakeo", "Tylephadongran", "Dungmoi"
+                //KQinchitiet
+                ,"Nangsuat", "SometLSX", "Sometcap", "Sokgcap", "Thuctein", "Sokgin", "Saihongthucte"
+                ,"PheNCC", "PheSX"
+                 //KQghepchitiet
+                ,"Dauratua", "ManginMet", "ManginKg", "MangcapMet", "MangcapKg", "ThucteMet", "ThucteKg"
+                ,"Phethoi", "Pheghep"
         };
 
         //-----Danh sách các cột ngày

@@ -937,8 +937,8 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Somauma.Name].Value = _DmhangEntity.Somauma;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Sohinhma.Name].Value = _DmhangEntity.Sohinhma;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Maloaimuc.Name].Value = _DmhangEntity.Maloaimuc;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Solopghepma.Name].Value = _DmhangEntity.Solopghepma;
-                GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Solopghep.Name].Value = _DmhangEntity.Solopghep;
+                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Solopghepma.Name].Value = _DmhangEntity.Solopghepma;
+                //GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Solopghep.Name].Value = _DmhangEntity.Solopghep;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Khomang.Name].Value = _DmhangEntity.Khomang;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Rongcuon.Name].Value = _DmhangEntity.Rongcuon;
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Daicuon.Name].Value = _DmhangEntity.Daicuon;
