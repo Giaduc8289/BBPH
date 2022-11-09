@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 3:16:21 PM
+// Code is generated on: Wednesday, November 9, 2022 10:14:02 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -134,7 +134,6 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("BaogiaDEntity", "Dai", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)BaogiaDFieldIndex.Dai, 0, 3, 20);
 			base.AddElementFieldInfo("BaogiaDEntity", "Trongluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)BaogiaDFieldIndex.Trongluong, 0, 3, 20);
 			base.AddElementFieldInfo("BaogiaDEntity", "Loaimuc", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Loaimuc, 250, 0, 0);
-			base.AddElementFieldInfo("BaogiaDEntity", "Cautrucin", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Cautrucin, 250, 0, 0);
 			base.AddElementFieldInfo("BaogiaDEntity", "Tenqcdonggoi", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Tenqcdonggoi, 250, 0, 0);
 			base.AddElementFieldInfo("BaogiaDEntity", "Tenqcloaithung", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Tenqcloaithung, 250, 0, 0);
 			base.AddElementFieldInfo("BaogiaDEntity", "Tenqcthanhpham", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Tenqcthanhpham, 250, 0, 0);
@@ -145,6 +144,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("BaogiaDEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("BaogiaDEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)BaogiaDFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("BaogiaDEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Nguoisua, 50, 0, 0);
+			base.AddElementFieldInfo("BaogiaDEntity", "Cautruc", typeof(System.String), false, false, false, true,  (int)BaogiaDFieldIndex.Cautruc, 250, 0, 0);
 		}
 		/// <summary>Inits BaogiaHEntity's FieldInfo objects</summary>
 		private void InitBaogiaHEntityInfos()

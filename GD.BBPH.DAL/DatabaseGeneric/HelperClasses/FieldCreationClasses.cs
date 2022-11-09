@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 3:16:22 PM
+// Code is generated on: Wednesday, November 9, 2022 10:14:03 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -67,11 +67,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Loaimuc);}
 		}
-		/// <summary>Creates a new BaogiaDEntity.Cautrucin field instance</summary>
-		public static EntityField2 Cautrucin
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Cautrucin);}
-		}
 		/// <summary>Creates a new BaogiaDEntity.Tenqcdonggoi field instance</summary>
 		public static EntityField2 Tenqcdonggoi
 		{
@@ -121,6 +116,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Nguoisua);}
+		}
+		/// <summary>Creates a new BaogiaDEntity.Cautruc field instance</summary>
+		public static EntityField2 Cautruc
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaDFieldIndex.Cautruc);}
 		}
 	}
 

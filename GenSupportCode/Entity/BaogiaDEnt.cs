@@ -49,7 +49,6 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_DAI.Text = _Rowview.Row[BaogiaDFields.Dai.Name].ToString();
 					txt_TRONGLUONG.Text = _Rowview.Row[BaogiaDFields.Trongluong.Name].ToString();
 					txt_LOAIMUC.Text = _Rowview.Row[BaogiaDFields.Loaimuc.Name].ToString();
-					txt_CAUTRUCIN.Text = _Rowview.Row[BaogiaDFields.Cautrucin.Name].ToString();
 					txt_TENQCDONGGOI.Text = _Rowview.Row[BaogiaDFields.Tenqcdonggoi.Name].ToString();
 					txt_TENQCLOAITHUNG.Text = _Rowview.Row[BaogiaDFields.Tenqcloaithung.Name].ToString();
 					txt_TENQCTHANHPHAM.Text = _Rowview.Row[BaogiaDFields.Tenqcthanhpham.Name].ToString();
@@ -60,6 +59,7 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NGUOITAO.Text = _Rowview.Row[BaogiaDFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[BaogiaDFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[BaogiaDFields.Nguoisua.Name].ToString();
+					txt_CAUTRUC.Text = _Rowview.Row[BaogiaDFields.Cautruc.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_BAOGIAD_CurrentChanged"); }
@@ -79,7 +79,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_BaogiaDEntity.Dai = txt_DAI.Text.Trim();
 			_BaogiaDEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
 			_BaogiaDEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
-			_BaogiaDEntity.Cautrucin = txt_CAUTRUCIN.Text.Trim();
 			_BaogiaDEntity.Tenqcdonggoi = txt_TENQCDONGGOI.Text.Trim();
 			_BaogiaDEntity.Tenqcloaithung = txt_TENQCLOAITHUNG.Text.Trim();
 			_BaogiaDEntity.Tenqcthanhpham = txt_TENQCTHANHPHAM.Text.Trim();
@@ -90,6 +89,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_BaogiaDEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
 			_BaogiaDEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
 			_BaogiaDEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_BaogiaDEntity.Cautruc = txt_CAUTRUC.Text.Trim();
 			
 			if (string.IsNullOrEmpty(_str_BAOGIAD_PK))
 			{
@@ -111,7 +111,6 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Dai.Name].Value = _BaogiaDEntity.Dai;
 				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Trongluong.Name].Value = _BaogiaDEntity.Trongluong;
 				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Loaimuc.Name].Value = _BaogiaDEntity.Loaimuc;
-				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Cautrucin.Name].Value = _BaogiaDEntity.Cautrucin;
 				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Tenqcdonggoi.Name].Value = _BaogiaDEntity.Tenqcdonggoi;
 				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Tenqcloaithung.Name].Value = _BaogiaDEntity.Tenqcloaithung;
 				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Tenqcthanhpham.Name].Value = _BaogiaDEntity.Tenqcthanhpham;
@@ -122,6 +121,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Nguoitao.Name].Value = _BaogiaDEntity.Nguoitao;
 				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Ngaysua.Name].Value = _BaogiaDEntity.Ngaysua;
 				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Nguoisua.Name].Value = _BaogiaDEntity.Nguoisua;
+				GRID_BAOGIAD.CurrentRow.Cells[BaogiaDFields.Cautruc.Name].Value = _BaogiaDEntity.Cautruc;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_BaogiaDManager.Convert(_BaogiaDEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_BAOGIAD_PK;

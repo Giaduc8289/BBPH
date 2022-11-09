@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 7, 2022 3:16:22 PM
+// Code is generated on: Wednesday, November 9, 2022 10:14:03 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -494,9 +494,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Loaimuc", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Cautrucin", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Tenqcdonggoi", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -525,6 +522,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Cautruc", fieldHashtable);
 		}
 		#endregion
 
@@ -743,17 +743,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)BaogiaDFieldIndex.Loaimuc, value); }
 		}
 
-		/// <summary> The Cautrucin property of the Entity BaogiaD<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "baogia_d"."Cautrucin"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Cautrucin
-		{
-			get { return (System.String)GetValue((int)BaogiaDFieldIndex.Cautrucin, true); }
-			set	{ SetValue((int)BaogiaDFieldIndex.Cautrucin, value); }
-		}
-
 		/// <summary> The Tenqcdonggoi property of the Entity BaogiaD<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "baogia_d"."Tenqcdonggoi"<br/>
@@ -862,6 +851,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)BaogiaDFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)BaogiaDFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Cautruc property of the Entity BaogiaD<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "baogia_d"."Cautruc"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Cautruc
+		{
+			get { return (System.String)GetValue((int)BaogiaDFieldIndex.Cautruc, true); }
+			set	{ SetValue((int)BaogiaDFieldIndex.Cautruc, value); }
 		}
 
 

@@ -288,7 +288,7 @@ namespace GD.BBPH.APP.BANHANG
                 try { r_Detail[BaogiaDFields.Trongluong.Name] = LIB.ConvertString.NumbertoDB(drv.Row[DmhangFields.Trongluong.Name].ToString()); }
                 catch { }
                 r_Detail[BaogiaDFields.Loaimuc.Name] = drv.Row[DmhangFields.Loaimuc.Name].ToString();
-                r_Detail[BaogiaDFields.Cautrucin.Name] = drv.Row[DmhangFields.Cautruc.Name].ToString();
+                r_Detail[BaogiaDFields.Cautruc.Name] = drv.Row[DmhangFields.Cautruc.Name].ToString();
                 r_Detail[BaogiaDFields.Tenqcthanhpham.Name] = drv.Row[DmhangFields.Tenqcthanhpham.Name].ToString();
                 r_Detail[BaogiaDFields.Tenqcloaithung.Name] = drv.Row[DmhangFields.Tenqcloaithung.Name].ToString();
                 r_Detail[BaogiaDFields.Tenqcdonggoi.Name] = drv.Row[DmhangFields.Tenqcdonggoi.Name].ToString();
@@ -383,7 +383,7 @@ namespace GD.BBPH.APP.BANHANG
                 _BaogiaDEntity.Tensp = _view[BaogiaDFields.Tensp.Name].ToString();
                 _BaogiaDEntity.Maspcuakhach = _view[BaogiaDFields.Maspcuakhach.Name].ToString();
                 _BaogiaDEntity.Loaimuc = _view[BaogiaDFields.Loaimuc.Name].ToString();
-                _BaogiaDEntity.Cautrucin = _view[BaogiaDFields.Cautrucin.Name].ToString();
+                _BaogiaDEntity.Cautruc = _view[BaogiaDFields.Cautruc.Name].ToString();
                 _BaogiaDEntity.Tenqcthanhpham = _view[BaogiaDFields.Tenqcthanhpham.Name].ToString();
                 _BaogiaDEntity.Tenqcloaithung = _view[BaogiaDFields.Tenqcloaithung.Name].ToString();
                 _BaogiaDEntity.Tenqcdonggoi = _view[BaogiaDFields.Tenqcdonggoi.Name].ToString();
@@ -577,7 +577,7 @@ namespace GD.BBPH.APP.BANHANG
                     r_Detail[BaogiaDFields.Rong.Name] = dr[BaogiaDFields.Rong.Name];
                     r_Detail[BaogiaDFields.Dai.Name] = dr[BaogiaDFields.Dai.Name];
                     r_Detail[BaogiaDFields.Loaimuc.Name] = dr[BaogiaDFields.Loaimuc.Name];
-                    r_Detail[BaogiaDFields.Cautrucin.Name] = dr[BaogiaDFields.Cautrucin.Name];
+                    r_Detail[BaogiaDFields.Cautruc.Name] = dr[BaogiaDFields.Cautruc.Name];
                     r_Detail[BaogiaDFields.Tenqcthanhpham.Name] = dr[BaogiaDFields.Tenqcthanhpham.Name];
                     r_Detail[BaogiaDFields.Tenqcloaithung.Name] = dr[BaogiaDFields.Tenqcloaithung.Name];
                     r_Detail[BaogiaDFields.Tenqcdonggoi.Name] = dr[BaogiaDFields.Tenqcdonggoi.Name];

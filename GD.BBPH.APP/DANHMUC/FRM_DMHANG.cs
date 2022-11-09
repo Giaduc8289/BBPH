@@ -35,7 +35,7 @@ namespace GD.BBPH.APP.DANHMUC
 
         private DataTable DT_DMKHACH = new DataTable(), DT_DMCHUNGLOAI = new DataTable(), DT_DMMANG = new DataTable(), DT_DMMAU = new DataTable()
             , DT_LOAIMUC = new DataTable(), DT_SOMAU = new DataTable(), DT_SOHINH = new DataTable(), DT_SOLOP = new DataTable()
-            , DT_CAUTRUCIN = new DataTable(), DT_QCTHANHPHAM = new DataTable(), DT_QCDONGGOI = new DataTable(), DT_QCLOAITHUNG = new DataTable()
+            /*, DT_CAUTRUCIN = new DataTable()*/, DT_QCTHANHPHAM = new DataTable(), DT_QCDONGGOI = new DataTable(), DT_QCLOAITHUNG = new DataTable()
             , DT_DMKEO = new DataTable(), DT_DMDONGRAN = new DataTable(), DT_DINHMUCKEO = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
@@ -68,7 +68,7 @@ namespace GD.BBPH.APP.DANHMUC
                         DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
                         DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
                         DT_SOLOP = new DmquycachManager().SelectByManhomRDT("N05");
-                        DT_CAUTRUCIN = new DmquycachManager().SelectByManhomRDT("N02");
+                        //DT_CAUTRUCIN = new DmquycachManager().SelectByManhomRDT("N02");
                         DT_QCTHANHPHAM = new DmquycachManager().SelectByManhomRDT("N06");
                         DT_QCDONGGOI = new DmquycachManager().SelectByManhomRDT("N07");
                         DT_QCLOAITHUNG = new DmquycachManager().SelectByManhomRDT("N08");
@@ -111,7 +111,7 @@ namespace GD.BBPH.APP.DANHMUC
             DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
             DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
             DT_SOLOP = new DmquycachManager().SelectByManhomRDT("N05");
-            DT_CAUTRUCIN = new DmquycachManager().SelectByManhomRDT("N02");
+            //DT_CAUTRUCIN = new DmquycachManager().SelectByManhomRDT("N02");
             DT_QCTHANHPHAM = new DmquycachManager().SelectByManhomRDT("N06");
             DT_QCDONGGOI = new DmquycachManager().SelectByManhomRDT("N07");
             DT_QCLOAITHUNG = new DmquycachManager().SelectByManhomRDT("N08");
