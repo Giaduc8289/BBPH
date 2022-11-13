@@ -1449,5 +1449,17 @@ namespace GD.BBPH.BLL
 		}
 			
 
+		// Return DataRow
+		public DataRow CheckMa(string macantim, DataTable dt)
+		{
+			try
+			{
+				
+				return dt.Select(KetquainmauFields.Id.Name + "='" + macantim + "'").CopyToDataTable().Rows[0];
+				
+			}
+			catch { return null; }
+		}
+
 	}
 }
