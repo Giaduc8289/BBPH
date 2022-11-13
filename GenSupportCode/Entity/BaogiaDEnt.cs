@@ -68,28 +68,37 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_BAOGIAD_PK)
 		{
 			BaogiaDEntity _BaogiaDEntity = new BaogiaDEntity();
-			
-			_BaogiaDEntity.Id = txt_ID.Text.Trim();
+			try { _BaogiaDEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
 			_BaogiaDEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
 			_BaogiaDEntity.Masp = txt_MASP.Text.Trim();
 			_BaogiaDEntity.Tensp = txt_TENSP.Text.Trim();
 			_BaogiaDEntity.Maspcuakhach = txt_MASPCUAKHACH.Text.Trim();
-			_BaogiaDEntity.Doday = txt_DODAY.Text.Trim();
-			_BaogiaDEntity.Rong = txt_RONG.Text.Trim();
-			_BaogiaDEntity.Dai = txt_DAI.Text.Trim();
-			_BaogiaDEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
+			try { _BaogiaDEntity.Doday = System.Decimal.Parse(txt_DODAY.Text.Trim()); } 
+			catch { }
+			try { _BaogiaDEntity.Rong = System.Decimal.Parse(txt_RONG.Text.Trim()); } 
+			catch { }
+			try { _BaogiaDEntity.Dai = System.Decimal.Parse(txt_DAI.Text.Trim()); } 
+			catch { }
+			try { _BaogiaDEntity.Trongluong = System.Decimal.Parse(txt_TRONGLUONG.Text.Trim()); } 
+			catch { }
 			_BaogiaDEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
 			_BaogiaDEntity.Tenqcdonggoi = txt_TENQCDONGGOI.Text.Trim();
 			_BaogiaDEntity.Tenqcloaithung = txt_TENQCLOAITHUNG.Text.Trim();
 			_BaogiaDEntity.Tenqcthanhpham = txt_TENQCTHANHPHAM.Text.Trim();
 			_BaogiaDEntity.Mota = txt_MOTA.Text.Trim();
-			_BaogiaDEntity.DongiakhongVat = txt_DONGIAKHONGVAT.Text.Trim();
-			_BaogiaDEntity.DongiaVat = txt_DONGIAVAT.Text.Trim();
-			_BaogiaDEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _BaogiaDEntity.DongiakhongVat = System.Int32.Parse(txt_DONGIAKHONGVAT.Text.Trim()); } 
+			catch { }
+			try { _BaogiaDEntity.DongiaVat = System.Int32.Parse(txt_DONGIAVAT.Text.Trim()); } 
+			catch { }
+			try { _BaogiaDEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_BaogiaDEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_BaogiaDEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _BaogiaDEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_BaogiaDEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			_BaogiaDEntity.Cautruc = txt_CAUTRUC.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_BAOGIAD_PK))
 			{

@@ -64,24 +64,32 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_HANGTRALAI_PK)
 		{
 			HangtralaiEntity _HangtralaiEntity = new HangtralaiEntity();
-			
-			_HangtralaiEntity.Id = txt_ID.Text.Trim();
+			try { _HangtralaiEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
 			_HangtralaiEntity.Sophieugiao = txt_SOPHIEUGIAO.Text.Trim();
-			_HangtralaiEntity.Ngaygiao = txt_NGAYGIAO.Text.Trim();
+			try { _HangtralaiEntity.Ngaygiao = System.DateTime.Parse(txt_NGAYGIAO.Text.Trim()); } 
+			catch { }
 			_HangtralaiEntity.Madon = txt_MADON.Text.Trim();
 			_HangtralaiEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_HangtralaiEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-			_HangtralaiEntity.Ngaydat = txt_NGAYDAT.Text.Trim();
+			try { _HangtralaiEntity.Ngaydat = System.DateTime.Parse(txt_NGAYDAT.Text.Trim()); } 
+			catch { }
 			_HangtralaiEntity.Masp = txt_MASP.Text.Trim();
 			_HangtralaiEntity.Tenhang = txt_TENHANG.Text.Trim();
-			_HangtralaiEntity.Soluonggiao = txt_SOLUONGGIAO.Text.Trim();
-			_HangtralaiEntity.Soluongtralai = txt_SOLUONGTRALAI.Text.Trim();
-			_HangtralaiEntity.Ngaytra = txt_NGAYTRA.Text.Trim();
+			try { _HangtralaiEntity.Soluonggiao = System.Decimal.Parse(txt_SOLUONGGIAO.Text.Trim()); } 
+			catch { }
+			try { _HangtralaiEntity.Soluongtralai = System.Decimal.Parse(txt_SOLUONGTRALAI.Text.Trim()); } 
+			catch { }
+			try { _HangtralaiEntity.Ngaytra = System.DateTime.Parse(txt_NGAYTRA.Text.Trim()); } 
+			catch { }
 			_HangtralaiEntity.Nguyennhan = txt_NGUYENNHAN.Text.Trim();
-			_HangtralaiEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _HangtralaiEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_HangtralaiEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_HangtralaiEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _HangtralaiEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_HangtralaiEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_HANGTRALAI_PK))
 			{

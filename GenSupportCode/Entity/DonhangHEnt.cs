@@ -60,20 +60,24 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DONHANGH_PK)
 		{
 			DonhangHEntity _DonhangHEntity = new DonhangHEntity();
-			
 			_DonhangHEntity.Madon = txt_MADON.Text.Trim();
-			_DonhangHEntity.Ngaydat = txt_NGAYDAT.Text.Trim();
+			try { _DonhangHEntity.Ngaydat = System.DateTime.Parse(txt_NGAYDAT.Text.Trim()); } 
+			catch { }
 			_DonhangHEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_DonhangHEntity.Tenkhach = txt_TENKHACH.Text.Trim();
 			_DonhangHEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
-			_DonhangHEntity.Ngaybaogia = txt_NGAYBAOGIA.Text.Trim();
+			try { _DonhangHEntity.Ngaybaogia = System.DateTime.Parse(txt_NGAYBAOGIA.Text.Trim()); } 
+			catch { }
 			_DonhangHEntity.Userid = txt_USERID.Text.Trim();
 			_DonhangHEntity.Tennv = txt_TENNV.Text.Trim();
 			_DonhangHEntity.Ghichu = txt_GHICHU.Text.Trim();
-			_DonhangHEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DonhangHEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DonhangHEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DonhangHEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DonhangHEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DonhangHEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DONHANGH_PK))
 			{

@@ -56,16 +56,21 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_THAMSO_PK)
 		{
 			ThamsoEntity _ThamsoEntity = new ThamsoEntity();
-			
 			_ThamsoEntity.Mahieu = txt_MAHIEU.Text.Trim();
-			_ThamsoEntity.Stt = txt_STT.Text.Trim();
+			try { _ThamsoEntity.Stt = System.Int32.Parse(txt_STT.Text.Trim()); } 
+			catch { }
 			_ThamsoEntity.Tenthamso = txt_TENTHAMSO.Text.Trim();
 			_ThamsoEntity.Giatri = txt_GIATRI.Text.Trim();
-			_ThamsoEntity.Thaydoi = txt_THAYDOI.Text.Trim();
-			_ThamsoEntity.Kieudulieu = txt_KIEUDULIEU.Text.Trim();
+			try { _ThamsoEntity.Thaydoi = System.Boolean.Parse(txt_THAYDOI.Text.Trim()); } 
+			catch { }
+			try { _ThamsoEntity.Kieudulieu = System.Int32.Parse(txt_KIEUDULIEU.Text.Trim()); } 
+			catch { }
 			_ThamsoEntity.Ghichu = txt_GHICHU.Text.Trim();
-			_ThamsoEntity.Loaithamso = txt_LOAITHAMSO.Text.Trim();
-			_ThamsoEntity.An = txt_AN.Text.Trim();
+			try { _ThamsoEntity.Loaithamso = System.Int32.Parse(txt_LOAITHAMSO.Text.Trim()); } 
+			catch { }
+			try { _ThamsoEntity.An = System.Boolean.Parse(txt_AN.Text.Trim()); } 
+			catch { }
+			
 			
 			if (string.IsNullOrEmpty(_str_THAMSO_PK))
 			{

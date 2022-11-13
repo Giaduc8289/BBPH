@@ -384,13 +384,13 @@ namespace GD.BBPH.APP.HETHONG
         {
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MENUPARENT.Text.Trim()) || DT_MENU == null || DT_MENU.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MENUPARENT.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaMenu(Str_MASIEUTHI, DT_MENU);
+            string _str_MACANTIM = txt_MENUPARENT.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaMenu(_str_MACANTIM, DT_MENU);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
                     new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MENU.xml",
-                        DT_MENU, MenuFields.MenuId.Name, Str_MASIEUTHI);
+                        DT_MENU, MenuFields.MenuId.Name, _str_MACANTIM);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
@@ -400,11 +400,11 @@ namespace GD.BBPH.APP.HETHONG
             else
                 txt_MENUPARENTNAME.Text = _RowViewSelect[MenuFields.MenuName.Name].ToString();
         }
-        private DataRow checkmaMenu(string masieuthi, DataTable dt)
+        private DataRow checkmaMenu(string macantim, DataTable dt)
         {
             try
             {
-                return dt.Select(MenuFields.MenuId.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+                return dt.Select(MenuFields.MenuId.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
         }

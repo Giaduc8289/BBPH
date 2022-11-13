@@ -59,19 +59,25 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_MAUCUAHANG_PK)
 		{
 			MaucuahangEntity _MaucuahangEntity = new MaucuahangEntity();
-			
-			_MaucuahangEntity.Id = txt_ID.Text.Trim();
+			try { _MaucuahangEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
 			_MaucuahangEntity.Masp = txt_MASP.Text.Trim();
 			_MaucuahangEntity.Tensp = txt_TENSP.Text.Trim();
 			_MaucuahangEntity.Mamau = txt_MAMAU.Text.Trim();
 			_MaucuahangEntity.Tenmau = txt_TENMAU.Text.Trim();
-			_MaucuahangEntity.Klmau = txt_KLMAU.Text.Trim();
-			_MaucuahangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _MaucuahangEntity.Klmau = System.Decimal.Parse(txt_KLMAU.Text.Trim()); } 
+			catch { }
+			try { _MaucuahangEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_MaucuahangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_MaucuahangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _MaucuahangEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_MaucuahangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
-			_MaucuahangEntity.Tylebaophu = txt_TYLEBAOPHU.Text.Trim();
-			_MaucuahangEntity.MaArgb = txt_MAARGB.Text.Trim();
+			try { _MaucuahangEntity.Tylebaophu = System.Decimal.Parse(txt_TYLEBAOPHU.Text.Trim()); } 
+			catch { }
+			try { _MaucuahangEntity.MaArgb = System.Int64.Parse(txt_MAARGB.Text.Trim()); } 
+			catch { }
+			
 			
 			if (string.IsNullOrEmpty(_str_MAUCUAHANG_PK))
 			{

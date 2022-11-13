@@ -65,25 +65,29 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMKHACH_PK)
 		{
 			DmkhachEntity _DmkhachEntity = new DmkhachEntity();
-			
 			_DmkhachEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_DmkhachEntity.Tenkhach = txt_TENKHACH.Text.Trim();
 			_DmkhachEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
-			_DmkhachEntity.Truyenthong = txt_TRUYENTHONG.Text.Trim();
+			try { _DmkhachEntity.Truyenthong = System.Boolean.Parse(txt_TRUYENTHONG.Text.Trim()); } 
+			catch { }
 			_DmkhachEntity.Diachi = txt_DIACHI.Text.Trim();
 			_DmkhachEntity.Sodienthoai = txt_SODIENTHOAI.Text.Trim();
 			_DmkhachEntity.Email = txt_EMAIL.Text.Trim();
 			_DmkhachEntity.Tknganhang = txt_TKNGANHANG.Text.Trim();
 			_DmkhachEntity.Tennganhang = txt_TENNGANHANG.Text.Trim();
-			_DmkhachEntity.Noidia = txt_NOIDIA.Text.Trim();
+			try { _DmkhachEntity.Noidia = System.Boolean.Parse(txt_NOIDIA.Text.Trim()); } 
+			catch { }
 			_DmkhachEntity.Tennguoilh = txt_TENNGUOILH.Text.Trim();
 			_DmkhachEntity.Chucvu = txt_CHUCVU.Text.Trim();
 			_DmkhachEntity.Sodienthoailh = txt_SODIENTHOAILH.Text.Trim();
 			_DmkhachEntity.Thongtinbosung = txt_THONGTINBOSUNG.Text.Trim();
-			_DmkhachEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmkhachEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmkhachEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmkhachEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmkhachEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmkhachEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMKHACH_PK))
 			{

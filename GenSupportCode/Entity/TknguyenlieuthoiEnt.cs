@@ -58,18 +58,25 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_TKNGUYENLIEUTHOI_PK)
 		{
 			TknguyenlieuthoiEntity _TknguyenlieuthoiEntity = new TknguyenlieuthoiEntity();
-			
-			_TknguyenlieuthoiEntity.Id = txt_ID.Text.Trim();
-			_TknguyenlieuthoiEntity.Ngay = txt_NGAY.Text.Trim();
-			_TknguyenlieuthoiEntity.Ca = txt_CA.Text.Trim();
+			try { _TknguyenlieuthoiEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _TknguyenlieuthoiEntity.Ngay = System.DateTime.Parse(txt_NGAY.Text.Trim()); } 
+			catch { }
+			try { _TknguyenlieuthoiEntity.Ca = System.Int32.Parse(txt_CA.Text.Trim()); } 
+			catch { }
 			_TknguyenlieuthoiEntity.Manguyenlieu = txt_MANGUYENLIEU.Text.Trim();
 			_TknguyenlieuthoiEntity.Tennguyenlieu = txt_TENNGUYENLIEU.Text.Trim();
-			_TknguyenlieuthoiEntity.Klnhap = txt_KLNHAP.Text.Trim();
-			_TknguyenlieuthoiEntity.Klxuat = txt_KLXUAT.Text.Trim();
-			_TknguyenlieuthoiEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _TknguyenlieuthoiEntity.Klnhap = System.Decimal.Parse(txt_KLNHAP.Text.Trim()); } 
+			catch { }
+			try { _TknguyenlieuthoiEntity.Klxuat = System.Decimal.Parse(txt_KLXUAT.Text.Trim()); } 
+			catch { }
+			try { _TknguyenlieuthoiEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_TknguyenlieuthoiEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_TknguyenlieuthoiEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _TknguyenlieuthoiEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_TknguyenlieuthoiEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_TKNGUYENLIEUTHOI_PK))
 			{

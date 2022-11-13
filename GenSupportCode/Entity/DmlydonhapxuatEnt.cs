@@ -55,15 +55,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMLYDONHAPXUAT_PK)
 		{
 			DmlydonhapxuatEntity _DmlydonhapxuatEntity = new DmlydonhapxuatEntity();
-			
 			_DmlydonhapxuatEntity.Malydo = txt_MALYDO.Text.Trim();
 			_DmlydonhapxuatEntity.Tenlydo = txt_TENLYDO.Text.Trim();
 			_DmlydonhapxuatEntity.Manhom = txt_MANHOM.Text.Trim();
 			_DmlydonhapxuatEntity.Tennhom = txt_TENNHOM.Text.Trim();
-			_DmlydonhapxuatEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmlydonhapxuatEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmlydonhapxuatEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmlydonhapxuatEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmlydonhapxuatEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmlydonhapxuatEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMLYDONHAPXUAT_PK))
 			{

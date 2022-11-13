@@ -84,7 +84,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMHANG_PK)
 		{
 			DmhangEntity _DmhangEntity = new DmhangEntity();
-			
 			_DmhangEntity.Masp = txt_MASP.Text.Trim();
 			_DmhangEntity.Tensp = txt_TENSP.Text.Trim();
 			_DmhangEntity.Maspcuakhach = txt_MASPCUAKHACH.Text.Trim();
@@ -92,11 +91,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			_DmhangEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
 			_DmhangEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_DmhangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-			_DmhangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
-			_DmhangEntity.Sohinh = txt_SOHINH.Text.Trim();
-			_DmhangEntity.Somau = txt_SOMAU.Text.Trim();
+			try { _DmhangEntity.Trongluong = System.Decimal.Parse(txt_TRONGLUONG.Text.Trim()); } 
+			catch { }
+			try { _DmhangEntity.Sohinh = System.Int32.Parse(txt_SOHINH.Text.Trim()); } 
+			catch { }
+			try { _DmhangEntity.Somau = System.Int32.Parse(txt_SOMAU.Text.Trim()); } 
+			catch { }
 			_DmhangEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
-			_DmhangEntity.Khoiluongmuc = txt_KHOILUONGMUC.Text.Trim();
+			try { _DmhangEntity.Khoiluongmuc = System.Decimal.Parse(txt_KHOILUONGMUC.Text.Trim()); } 
+			catch { }
 			_DmhangEntity.Kichthuoctruc = txt_KICHTHUOCTRUC.Text.Trim();
 			_DmhangEntity.Vitri = txt_VITRI.Text.Trim();
 			_DmhangEntity.Maqcdonggoi = txt_MAQCDONGGOI.Text.Trim();
@@ -105,23 +108,34 @@ namespace GD.BBPH.DAL.EntityClasses
 			_DmhangEntity.Tenqcloaithung = txt_TENQCLOAITHUNG.Text.Trim();
 			_DmhangEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
 			_DmhangEntity.Tenqcthanhpham = txt_TENQCTHANHPHAM.Text.Trim();
-			_DmhangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmhangEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmhangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmhangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmhangEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmhangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
-			_DmhangEntity.Rong = txt_RONG.Text.Trim();
-			_DmhangEntity.Dai = txt_DAI.Text.Trim();
+			try { _DmhangEntity.Rong = System.Decimal.Parse(txt_RONG.Text.Trim()); } 
+			catch { }
+			try { _DmhangEntity.Dai = System.Decimal.Parse(txt_DAI.Text.Trim()); } 
+			catch { }
 			_DmhangEntity.Somauma = txt_SOMAUMA.Text.Trim();
 			_DmhangEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
 			_DmhangEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
 			_DmhangEntity.Solopghepma = txt_SOLOPGHEPMA.Text.Trim();
-			_DmhangEntity.Solopghep = txt_SOLOPGHEP.Text.Trim();
-			_DmhangEntity.Khomang = txt_KHOMANG.Text.Trim();
-			_DmhangEntity.Rongcuon = txt_RONGCUON.Text.Trim();
-			_DmhangEntity.Daicuon = txt_DAICUON.Text.Trim();
-			_DmhangEntity.Hong = txt_HONG.Text.Trim();
-			_DmhangEntity.Bangdinhdan = txt_BANGDINHDAN.Text.Trim();
+			try { _DmhangEntity.Solopghep = System.Int32.Parse(txt_SOLOPGHEP.Text.Trim()); } 
+			catch { }
+			try { _DmhangEntity.Khomang = System.Decimal.Parse(txt_KHOMANG.Text.Trim()); } 
+			catch { }
+			try { _DmhangEntity.Rongcuon = System.Decimal.Parse(txt_RONGCUON.Text.Trim()); } 
+			catch { }
+			try { _DmhangEntity.Daicuon = System.Decimal.Parse(txt_DAICUON.Text.Trim()); } 
+			catch { }
+			try { _DmhangEntity.Hong = System.Decimal.Parse(txt_HONG.Text.Trim()); } 
+			catch { }
+			try { _DmhangEntity.Bangdinhdan = System.Decimal.Parse(txt_BANGDINHDAN.Text.Trim()); } 
+			catch { }
 			_DmhangEntity.Cautruc = txt_CAUTRUC.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMHANG_PK))
 			{

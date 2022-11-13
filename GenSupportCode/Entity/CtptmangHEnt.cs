@@ -55,15 +55,19 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_CTPTMANGH_PK)
 		{
 			CtptmangHEntity _CtptmangHEntity = new CtptmangHEntity();
-			
-			_CtptmangHEntity.Id = txt_ID.Text.Trim();
+			try { _CtptmangHEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
 			_CtptmangHEntity.Mactpt = txt_MACTPT.Text.Trim();
 			_CtptmangHEntity.Tenctpt = txt_TENCTPT.Text.Trim();
-			_CtptmangHEntity.Ngayapdung = txt_NGAYAPDUNG.Text.Trim();
-			_CtptmangHEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _CtptmangHEntity.Ngayapdung = System.DateTime.Parse(txt_NGAYAPDUNG.Text.Trim()); } 
+			catch { }
+			try { _CtptmangHEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_CtptmangHEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_CtptmangHEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _CtptmangHEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_CtptmangHEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_CTPTMANGH_PK))
 			{

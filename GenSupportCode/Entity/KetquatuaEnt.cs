@@ -79,39 +79,62 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_KETQUATUA_PK)
 		{
 			KetquatuaEntity _KetquatuaEntity = new KetquatuaEntity();
-			
-			_KetquatuaEntity.Id = txt_ID.Text.Trim();
-			_KetquatuaEntity.Ngay = txt_NGAY.Text.Trim();
-			_KetquatuaEntity.Ca = txt_CA.Text.Trim();
+			try { _KetquatuaEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Ngay = System.DateTime.Parse(txt_NGAY.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Ca = System.Int32.Parse(txt_CA.Text.Trim()); } 
+			catch { }
 			_KetquatuaEntity.Mamay = txt_MAMAY.Text.Trim();
 			_KetquatuaEntity.Lenhtua = txt_LENHTUA.Text.Trim();
 			_KetquatuaEntity.Masanpham = txt_MASANPHAM.Text.Trim();
 			_KetquatuaEntity.Macongnhan = txt_MACONGNHAN.Text.Trim();
-			_KetquatuaEntity.Daurain = txt_DAURAIN.Text.Trim();
-			_KetquatuaEntity.SoMetvao = txt_SOMETVAO.Text.Trim();
-			_KetquatuaEntity.SoKgvao = txt_SOKGVAO.Text.Trim();
-			_KetquatuaEntity.SoMetra = txt_SOMETRA.Text.Trim();
-			_KetquatuaEntity.SoKgra = txt_SOKGRA.Text.Trim();
-			_KetquatuaEntity.Thoigianbatdau = txt_THOIGIANBATDAU.Text.Trim();
-			_KetquatuaEntity.Thoigianketthuc = txt_THOIGIANKETTHUC.Text.Trim();
-			_KetquatuaEntity.Thoigianhacuon = txt_THOIGIANHACUON.Text.Trim();
-			_KetquatuaEntity.Thoigiancatdau = txt_THOIGIANCATDAU.Text.Trim();
-			_KetquatuaEntity.Thoigiandoilenh = txt_THOIGIANDOILENH.Text.Trim();
-			_KetquatuaEntity.Thoigiansuco = txt_THOIGIANSUCO.Text.Trim();
-			_KetquatuaEntity.Phein = txt_PHEIN.Text.Trim();
-			_KetquatuaEntity.Pheghep = txt_PHEGHEP.Text.Trim();
-			_KetquatuaEntity.Phethoi = txt_PHETHOI.Text.Trim();
-			_KetquatuaEntity.Phesx = txt_PHESX.Text.Trim();
-			_KetquatuaEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _KetquatuaEntity.Daurain = System.Decimal.Parse(txt_DAURAIN.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.SoMetvao = System.Decimal.Parse(txt_SOMETVAO.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.SoKgvao = System.Decimal.Parse(txt_SOKGVAO.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.SoMetra = System.Decimal.Parse(txt_SOMETRA.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.SoKgra = System.Decimal.Parse(txt_SOKGRA.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Thoigianbatdau = System.DateTime.Parse(txt_THOIGIANBATDAU.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Thoigianketthuc = System.DateTime.Parse(txt_THOIGIANKETTHUC.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Thoigianhacuon = System.Decimal.Parse(txt_THOIGIANHACUON.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Thoigiancatdau = System.Decimal.Parse(txt_THOIGIANCATDAU.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Thoigiandoilenh = System.Decimal.Parse(txt_THOIGIANDOILENH.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Thoigiansuco = System.Decimal.Parse(txt_THOIGIANSUCO.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Phein = System.Decimal.Parse(txt_PHEIN.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Pheghep = System.Decimal.Parse(txt_PHEGHEP.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Phethoi = System.Decimal.Parse(txt_PHETHOI.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Phesx = System.Decimal.Parse(txt_PHESX.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_KetquatuaEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_KetquatuaEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _KetquatuaEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_KetquatuaEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			_KetquatuaEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
 			_KetquatuaEntity.Tenmay = txt_TENMAY.Text.Trim();
 			_KetquatuaEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
-			_KetquatuaEntity.Nangsuat = txt_NANGSUAT.Text.Trim();
-			_KetquatuaEntity.Thoigiandauca = txt_THOIGIANDAUCA.Text.Trim();
-			_KetquatuaEntity.Chenhlechkg = txt_CHENHLECHKG.Text.Trim();
+			try { _KetquatuaEntity.Nangsuat = System.Decimal.Parse(txt_NANGSUAT.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Thoigiandauca = System.Decimal.Parse(txt_THOIGIANDAUCA.Text.Trim()); } 
+			catch { }
+			try { _KetquatuaEntity.Chenhlechkg = System.Decimal.Parse(txt_CHENHLECHKG.Text.Trim()); } 
+			catch { }
+			
 			
 			if (string.IsNullOrEmpty(_str_KETQUATUA_PK))
 			{

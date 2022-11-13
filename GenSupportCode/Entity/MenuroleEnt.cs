@@ -49,9 +49,9 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_MENUROLE_PK)
 		{
 			MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-			
 			_MenuroleEntity.Menuid = txt_MENUID.Text.Trim();
 			_MenuroleEntity.Rolesid = txt_ROLESID.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_MENUROLE_PK))
 			{

@@ -63,23 +63,29 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_NHAPKHOMANG_PK)
 		{
 			NhapkhomangEntity _NhapkhomangEntity = new NhapkhomangEntity();
-			
-			_NhapkhomangEntity.Id = txt_ID.Text.Trim();
-			_NhapkhomangEntity.Ngaynhap = txt_NGAYNHAP.Text.Trim();
+			try { _NhapkhomangEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _NhapkhomangEntity.Ngaynhap = System.DateTime.Parse(txt_NGAYNHAP.Text.Trim()); } 
+			catch { }
 			_NhapkhomangEntity.Makho = txt_MAKHO.Text.Trim();
 			_NhapkhomangEntity.Tenkho = txt_TENKHO.Text.Trim();
 			_NhapkhomangEntity.Mamang = txt_MAMANG.Text.Trim();
 			_NhapkhomangEntity.Tenmang = txt_TENMANG.Text.Trim();
-			_NhapkhomangEntity.Somet = txt_SOMET.Text.Trim();
-			_NhapkhomangEntity.Sokg = txt_SOKG.Text.Trim();
+			try { _NhapkhomangEntity.Somet = System.Decimal.Parse(txt_SOMET.Text.Trim()); } 
+			catch { }
+			try { _NhapkhomangEntity.Sokg = System.Decimal.Parse(txt_SOKG.Text.Trim()); } 
+			catch { }
 			_NhapkhomangEntity.Malydo = txt_MALYDO.Text.Trim();
 			_NhapkhomangEntity.Tenlydo = txt_TENLYDO.Text.Trim();
 			_NhapkhomangEntity.Lenhsx = txt_LENHSX.Text.Trim();
 			_NhapkhomangEntity.Sohopdongmua = txt_SOHOPDONGMUA.Text.Trim();
-			_NhapkhomangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _NhapkhomangEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_NhapkhomangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_NhapkhomangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _NhapkhomangEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_NhapkhomangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_NHAPKHOMANG_PK))
 			{

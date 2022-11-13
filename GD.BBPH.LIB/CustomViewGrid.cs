@@ -1299,12 +1299,12 @@ namespace GD.BBPH.LIB
             //if we make it this far then we just do a standard comparison
             return obj1 == obj2;
         }
-        public static DataRow Check_Masieuthi(string masieuthi, DataTable dtMatHang)
+        public static DataRow Check_Masieuthi(string macantim, DataTable dtMatHang)
         {
             DataRow _RowViewSelect = null;
             try
             {
-                dtMatHang = dtMatHang.Select("Barcode =" + "'" + masieuthi + "' OR Barcodethung ='" + masieuthi + "' OR Masieuthi ='" + masieuthi + "' OR Mathung='" + masieuthi + "' OR Mahangcuancc ='" + masieuthi + "' OR Masieuthiphu like '%;" + masieuthi + ";%'").CopyToDataTable();
+                dtMatHang = dtMatHang.Select("Barcode =" + "'" + macantim + "' OR Barcodethung ='" + macantim + "' OR Masieuthi ='" + macantim + "' OR Mathung='" + macantim + "' OR Mahangcuancc ='" + macantim + "' OR Masieuthiphu like '%;" + macantim + ";%'").CopyToDataTable();
             }
             catch { dtMatHang.Clear(); }
             if (dtMatHang.Rows.Count > 0)
@@ -1314,13 +1314,13 @@ namespace GD.BBPH.LIB
             }
             return null;
         }
-        //public static DataRow Check_masieuthi_REMOVE(string masieuthi, DataTable dt)
+        //public static DataRow Check_macantim_REMOVE(string macantim, DataTable dt)
         //{
         //    try
         //    {
         //        for (int i = 0; i < dt.Rows.Count; i++)
         //        {
-        //            if (dt.Rows[i][MathangFields.Masieuthi.Name].ToString() == masieuthi) return dt.Rows[i];
+        //            if (dt.Rows[i][MathangFields.Masieuthi.Name].ToString() == macantim) return dt.Rows[i];
         //        }
         //    }
         //    catch { }

@@ -53,13 +53,15 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMCHUCVU_PK)
 		{
 			DmchucvuEntity _DmchucvuEntity = new DmchucvuEntity();
-			
 			_DmchucvuEntity.Macv = txt_MACV.Text.Trim();
 			_DmchucvuEntity.Tenchucvu = txt_TENCHUCVU.Text.Trim();
-			_DmchucvuEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmchucvuEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmchucvuEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmchucvuEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmchucvuEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmchucvuEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMCHUCVU_PK))
 			{

@@ -54,14 +54,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMCONGDOAN_PK)
 		{
 			DmcongdoanEntity _DmcongdoanEntity = new DmcongdoanEntity();
-			
 			_DmcongdoanEntity.Macd = txt_MACD.Text.Trim();
 			_DmcongdoanEntity.Tencongdoan = txt_TENCONGDOAN.Text.Trim();
-			_DmcongdoanEntity.Sothutucongdoan = txt_SOTHUTUCONGDOAN.Text.Trim();
-			_DmcongdoanEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmcongdoanEntity.Sothutucongdoan = System.Int32.Parse(txt_SOTHUTUCONGDOAN.Text.Trim()); } 
+			catch { }
+			try { _DmcongdoanEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmcongdoanEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmcongdoanEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmcongdoanEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmcongdoanEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMCONGDOAN_PK))
 			{

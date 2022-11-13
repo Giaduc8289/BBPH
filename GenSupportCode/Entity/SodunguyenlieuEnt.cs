@@ -59,19 +59,24 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_SODUNGUYENLIEU_PK)
 		{
 			SodunguyenlieuEntity _SodunguyenlieuEntity = new SodunguyenlieuEntity();
-			
-			_SodunguyenlieuEntity.Id = txt_ID.Text.Trim();
-			_SodunguyenlieuEntity.Ngaykiemke = txt_NGAYKIEMKE.Text.Trim();
+			try { _SodunguyenlieuEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _SodunguyenlieuEntity.Ngaykiemke = System.DateTime.Parse(txt_NGAYKIEMKE.Text.Trim()); } 
+			catch { }
 			_SodunguyenlieuEntity.Makho = txt_MAKHO.Text.Trim();
 			_SodunguyenlieuEntity.Tenkho = txt_TENKHO.Text.Trim();
 			_SodunguyenlieuEntity.Manguyenlieu = txt_MANGUYENLIEU.Text.Trim();
 			_SodunguyenlieuEntity.Tennguyenlieu = txt_TENNGUYENLIEU.Text.Trim();
 			_SodunguyenlieuEntity.Donvitinh = txt_DONVITINH.Text.Trim();
-			_SodunguyenlieuEntity.Soluong = txt_SOLUONG.Text.Trim();
-			_SodunguyenlieuEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _SodunguyenlieuEntity.Soluong = System.Decimal.Parse(txt_SOLUONG.Text.Trim()); } 
+			catch { }
+			try { _SodunguyenlieuEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_SodunguyenlieuEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_SodunguyenlieuEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _SodunguyenlieuEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_SodunguyenlieuEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_SODUNGUYENLIEU_PK))
 			{

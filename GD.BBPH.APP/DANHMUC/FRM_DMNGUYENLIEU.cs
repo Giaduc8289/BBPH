@@ -472,13 +472,13 @@ namespace GD.BBPH.APP.DANHMUC
             DataRow _RowViewSelect = null;
             txt_TENNHOM.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MANHOM.Text.Trim()) || DT_DMNHOMNGUYENLIEU == null || DT_DMNHOMNGUYENLIEU.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MANHOM.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaNhom(Str_MASIEUTHI, DT_DMNHOMNGUYENLIEU);
+            string _str_MACANTIM = txt_MANHOM.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaNhom(_str_MACANTIM, DT_DMNHOMNGUYENLIEU);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
                     new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml",
-                        DT_DMNHOMNGUYENLIEU, DmnhomnguyenlieuFields.Manhom.Name, Str_MASIEUTHI);
+                        DT_DMNHOMNGUYENLIEU, DmnhomnguyenlieuFields.Manhom.Name, _str_MACANTIM);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
@@ -488,11 +488,11 @@ namespace GD.BBPH.APP.DANHMUC
             else
                 txt_TENNHOM.Text = _RowViewSelect[DmnhomnguyenlieuFields.Tennhomnguyenlieu.Name].ToString();
         }
-        private DataRow checkmaNhom(string masieuthi, DataTable dt)
+        private DataRow checkmaNhom(string macantim, DataTable dt)
         {
             try
             {
-                return dt.Select(DmnhomnguyenlieuFields.Manhom.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+                return dt.Select(DmnhomnguyenlieuFields.Manhom.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
         }

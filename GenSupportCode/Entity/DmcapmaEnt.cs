@@ -50,10 +50,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMCAPMA_PK)
 		{
 			DmcapmaEntity _DmcapmaEntity = new DmcapmaEntity();
-			
 			_DmcapmaEntity.Macappk = txt_MACAPPK.Text.Trim();
 			_DmcapmaEntity.Loaima = txt_LOAIMA.Text.Trim();
 			_DmcapmaEntity.Mastart = txt_MASTART.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMCAPMA_PK))
 			{

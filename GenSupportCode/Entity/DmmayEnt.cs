@@ -55,15 +55,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMMAY_PK)
 		{
 			DmmayEntity _DmmayEntity = new DmmayEntity();
-			
 			_DmmayEntity.Mamay = txt_MAMAY.Text.Trim();
 			_DmmayEntity.Tenmay = txt_TENMAY.Text.Trim();
 			_DmmayEntity.Madm = txt_MADM.Text.Trim();
 			_DmmayEntity.Vitri = txt_VITRI.Text.Trim();
-			_DmmayEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmmayEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmmayEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmmayEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmmayEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmmayEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMMAY_PK))
 			{

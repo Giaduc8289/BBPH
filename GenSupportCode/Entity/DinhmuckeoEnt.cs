@@ -63,7 +63,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DINHMUCKEO_PK)
 		{
 			DinhmuckeoEntity _DinhmuckeoEntity = new DinhmuckeoEntity();
-			
 			_DinhmuckeoEntity.Madinhmuc = txt_MADINHMUC.Text.Trim();
 			_DinhmuckeoEntity.Tendinhmuc = txt_TENDINHMUC.Text.Trim();
 			_DinhmuckeoEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
@@ -71,15 +70,23 @@ namespace GD.BBPH.DAL.EntityClasses
 			_DinhmuckeoEntity.Tenkeo = txt_TENKEO.Text.Trim();
 			_DinhmuckeoEntity.Madongran = txt_MADONGRAN.Text.Trim();
 			_DinhmuckeoEntity.Tendongran = txt_TENDONGRAN.Text.Trim();
-			_DinhmuckeoEntity.Hamluongkeo = txt_HAMLUONGKEO.Text.Trim();
-			_DinhmuckeoEntity.Hamluongdongran = txt_HAMLUONGDONGRAN.Text.Trim();
-			_DinhmuckeoEntity.Tylephakeo = txt_TYLEPHAKEO.Text.Trim();
-			_DinhmuckeoEntity.Tylephadongran = txt_TYLEPHADONGRAN.Text.Trim();
-			_DinhmuckeoEntity.Dungmoi = txt_DUNGMOI.Text.Trim();
-			_DinhmuckeoEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DinhmuckeoEntity.Hamluongkeo = System.Decimal.Parse(txt_HAMLUONGKEO.Text.Trim()); } 
+			catch { }
+			try { _DinhmuckeoEntity.Hamluongdongran = System.Decimal.Parse(txt_HAMLUONGDONGRAN.Text.Trim()); } 
+			catch { }
+			try { _DinhmuckeoEntity.Tylephakeo = System.Decimal.Parse(txt_TYLEPHAKEO.Text.Trim()); } 
+			catch { }
+			try { _DinhmuckeoEntity.Tylephadongran = System.Decimal.Parse(txt_TYLEPHADONGRAN.Text.Trim()); } 
+			catch { }
+			try { _DinhmuckeoEntity.Dungmoi = System.Decimal.Parse(txt_DUNGMOI.Text.Trim()); } 
+			catch { }
+			try { _DinhmuckeoEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DinhmuckeoEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DinhmuckeoEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DinhmuckeoEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DinhmuckeoEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DINHMUCKEO_PK))
 			{

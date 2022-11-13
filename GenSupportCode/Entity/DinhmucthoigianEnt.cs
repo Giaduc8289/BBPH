@@ -73,33 +73,48 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DINHMUCTHOIGIAN_PK)
 		{
 			DinhmucthoigianEntity _DinhmucthoigianEntity = new DinhmucthoigianEntity();
-			
 			_DinhmucthoigianEntity.Madmtg = txt_MADMTG.Text.Trim();
 			_DinhmucthoigianEntity.Tendinhmuc = txt_TENDINHMUC.Text.Trim();
 			_DinhmucthoigianEntity.Mamay = txt_MAMAY.Text.Trim();
 			_DinhmucthoigianEntity.Madongmay = txt_MADONGMAY.Text.Trim();
 			_DinhmucthoigianEntity.Macongdoan = txt_MACONGDOAN.Text.Trim();
-			_DinhmucthoigianEntity.Dodaytu = txt_DODAYTU.Text.Trim();
-			_DinhmucthoigianEntity.Dodayden = txt_DODAYDEN.Text.Trim();
-			_DinhmucthoigianEntity.Khotu = txt_KHOTU.Text.Trim();
-			_DinhmucthoigianEntity.Khoden = txt_KHODEN.Text.Trim();
-			_DinhmucthoigianEntity.Chieudaitu = txt_CHIEUDAITU.Text.Trim();
-			_DinhmucthoigianEntity.Chieudaiden = txt_CHIEUDAIDEN.Text.Trim();
+			try { _DinhmucthoigianEntity.Dodaytu = System.Decimal.Parse(txt_DODAYTU.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Dodayden = System.Decimal.Parse(txt_DODAYDEN.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Khotu = System.Decimal.Parse(txt_KHOTU.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Khoden = System.Decimal.Parse(txt_KHODEN.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Chieudaitu = System.Decimal.Parse(txt_CHIEUDAITU.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Chieudaiden = System.Decimal.Parse(txt_CHIEUDAIDEN.Text.Trim()); } 
+			catch { }
 			_DinhmucthoigianEntity.Somauma = txt_SOMAUMA.Text.Trim();
 			_DinhmucthoigianEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
 			_DinhmucthoigianEntity.Maloaimang = txt_MALOAIMANG.Text.Trim();
 			_DinhmucthoigianEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
-			_DinhmucthoigianEntity.Dauca = txt_DAUCA.Text.Trim();
-			_DinhmucthoigianEntity.Daucuon = txt_DAUCUON.Text.Trim();
-			_DinhmucthoigianEntity.Doilenh = txt_DOILENH.Text.Trim();
-			_DinhmucthoigianEntity.Lencuon = txt_LENCUON.Text.Trim();
-			_DinhmucthoigianEntity.Xuongcuon = txt_XUONGCUON.Text.Trim();
-			_DinhmucthoigianEntity.Thaythietbi = txt_THAYTHIETBI.Text.Trim();
-			_DinhmucthoigianEntity.Dungmay = txt_DUNGMAY.Text.Trim();
-			_DinhmucthoigianEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DinhmucthoigianEntity.Dauca = System.Decimal.Parse(txt_DAUCA.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Daucuon = System.Decimal.Parse(txt_DAUCUON.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Doilenh = System.Decimal.Parse(txt_DOILENH.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Lencuon = System.Decimal.Parse(txt_LENCUON.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Xuongcuon = System.Decimal.Parse(txt_XUONGCUON.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Thaythietbi = System.Decimal.Parse(txt_THAYTHIETBI.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Dungmay = System.Decimal.Parse(txt_DUNGMAY.Text.Trim()); } 
+			catch { }
+			try { _DinhmucthoigianEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DinhmucthoigianEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DinhmucthoigianEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DinhmucthoigianEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DinhmucthoigianEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DINHMUCTHOIGIAN_PK))
 			{

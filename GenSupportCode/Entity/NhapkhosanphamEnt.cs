@@ -64,24 +64,31 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_NHAPKHOSANPHAM_PK)
 		{
 			NhapkhosanphamEntity _NhapkhosanphamEntity = new NhapkhosanphamEntity();
-			
-			_NhapkhosanphamEntity.Id = txt_ID.Text.Trim();
-			_NhapkhosanphamEntity.Ngaynhap = txt_NGAYNHAP.Text.Trim();
+			try { _NhapkhosanphamEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _NhapkhosanphamEntity.Ngaynhap = System.DateTime.Parse(txt_NGAYNHAP.Text.Trim()); } 
+			catch { }
 			_NhapkhosanphamEntity.Makho = txt_MAKHO.Text.Trim();
 			_NhapkhosanphamEntity.Tenkho = txt_TENKHO.Text.Trim();
 			_NhapkhosanphamEntity.Masanpham = txt_MASANPHAM.Text.Trim();
 			_NhapkhosanphamEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
-			_NhapkhosanphamEntity.Soluong = txt_SOLUONG.Text.Trim();
-			_NhapkhosanphamEntity.Somet = txt_SOMET.Text.Trim();
-			_NhapkhosanphamEntity.Sokg = txt_SOKG.Text.Trim();
+			try { _NhapkhosanphamEntity.Soluong = System.Decimal.Parse(txt_SOLUONG.Text.Trim()); } 
+			catch { }
+			try { _NhapkhosanphamEntity.Somet = System.Decimal.Parse(txt_SOMET.Text.Trim()); } 
+			catch { }
+			try { _NhapkhosanphamEntity.Sokg = System.Decimal.Parse(txt_SOKG.Text.Trim()); } 
+			catch { }
 			_NhapkhosanphamEntity.Malydo = txt_MALYDO.Text.Trim();
 			_NhapkhosanphamEntity.Tenlydo = txt_TENLYDO.Text.Trim();
 			_NhapkhosanphamEntity.Lenhsx = txt_LENHSX.Text.Trim();
 			_NhapkhosanphamEntity.Sohopdongmua = txt_SOHOPDONGMUA.Text.Trim();
-			_NhapkhosanphamEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _NhapkhosanphamEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_NhapkhosanphamEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_NhapkhosanphamEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _NhapkhosanphamEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_NhapkhosanphamEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_NHAPKHOSANPHAM_PK))
 			{

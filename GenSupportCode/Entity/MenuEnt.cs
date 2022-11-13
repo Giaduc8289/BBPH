@@ -58,18 +58,22 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_MENU_PK)
 		{
 			MenuEntity _MenuEntity = new MenuEntity();
-			
 			_MenuEntity.MenuId = txt_MENUID.Text.Trim();
 			_MenuEntity.MenuName = txt_MENUNAME.Text.Trim();
 			_MenuEntity.Icon = txt_ICON.Text.Trim();
-			_MenuEntity.Issudung = txt_ISSUDUNG.Text.Trim();
-			_MenuEntity.Istrangthai = txt_ISTRANGTHAI.Text.Trim();
+			try { _MenuEntity.Issudung = System.Int32.Parse(txt_ISSUDUNG.Text.Trim()); } 
+			catch { }
+			try { _MenuEntity.Istrangthai = System.Int32.Parse(txt_ISTRANGTHAI.Text.Trim()); } 
+			catch { }
 			_MenuEntity.Menuparent = txt_MENUPARENT.Text.Trim();
-			_MenuEntity.Thutu = txt_THUTU.Text.Trim();
+			try { _MenuEntity.Thutu = System.Int32.Parse(txt_THUTU.Text.Trim()); } 
+			catch { }
 			_MenuEntity.FormName = txt_FORMNAME.Text.Trim();
-			_MenuEntity.LoaiMenu = txt_LOAIMENU.Text.Trim();
+			try { _MenuEntity.LoaiMenu = System.Int32.Parse(txt_LOAIMENU.Text.Trim()); } 
+			catch { }
 			_MenuEntity.Param = txt_PARAM.Text.Trim();
 			_MenuEntity.Maphanhe = txt_MAPHANHE.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_MENU_PK))
 			{

@@ -61,7 +61,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMCONGNHAN_PK)
 		{
 			DmcongnhanEntity _DmcongnhanEntity = new DmcongnhanEntity();
-			
 			_DmcongnhanEntity.Macn = txt_MACN.Text.Trim();
 			_DmcongnhanEntity.Hovatencongnhan = txt_HOVATENCONGNHAN.Text.Trim();
 			_DmcongnhanEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
@@ -71,11 +70,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			_DmcongnhanEntity.Tinhtrang = txt_TINHTRANG.Text.Trim();
 			_DmcongnhanEntity.Phongban = txt_PHONGBAN.Text.Trim();
 			_DmcongnhanEntity.Chucvu = txt_CHUCVU.Text.Trim();
-			_DmcongnhanEntity.Danghi = txt_DANGHI.Text.Trim();
-			_DmcongnhanEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmcongnhanEntity.Danghi = System.Boolean.Parse(txt_DANGHI.Text.Trim()); } 
+			catch { }
+			try { _DmcongnhanEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmcongnhanEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmcongnhanEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmcongnhanEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmcongnhanEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMCONGNHAN_PK))
 			{

@@ -70,21 +70,27 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMCHUNGLOAI_PK)
 		{
 			DmchungloaiEntity _DmchungloaiEntity = new DmchungloaiEntity();
-			
 			_DmchungloaiEntity.Machungloai = txt_MACHUNGLOAI.Text.Trim();
 			_DmchungloaiEntity.Tenchungloai = txt_TENCHUNGLOAI.Text.Trim();
 			_DmchungloaiEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
-			_DmchungloaiEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
-			_DmchungloaiEntity.Somau = txt_SOMAU.Text.Trim();
-			_DmchungloaiEntity.Sohinh = txt_SOHINH.Text.Trim();
+			try { _DmchungloaiEntity.Trongluong = System.Decimal.Parse(txt_TRONGLUONG.Text.Trim()); } 
+			catch { }
+			try { _DmchungloaiEntity.Somau = System.Int32.Parse(txt_SOMAU.Text.Trim()); } 
+			catch { }
+			try { _DmchungloaiEntity.Sohinh = System.Int32.Parse(txt_SOHINH.Text.Trim()); } 
+			catch { }
 			_DmchungloaiEntity.Loaimuc = txt_LOAIMUC.Text.Trim();
 			_DmchungloaiEntity.Ghichu = txt_GHICHU.Text.Trim();
-			_DmchungloaiEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmchungloaiEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmchungloaiEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmchungloaiEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmchungloaiEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmchungloaiEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
-			_DmchungloaiEntity.Rong = txt_RONG.Text.Trim();
-			_DmchungloaiEntity.Dai = txt_DAI.Text.Trim();
+			try { _DmchungloaiEntity.Rong = System.Decimal.Parse(txt_RONG.Text.Trim()); } 
+			catch { }
+			try { _DmchungloaiEntity.Dai = System.Decimal.Parse(txt_DAI.Text.Trim()); } 
+			catch { }
 			_DmchungloaiEntity.Somauma = txt_SOMAUMA.Text.Trim();
 			_DmchungloaiEntity.Sohinhma = txt_SOHINHMA.Text.Trim();
 			_DmchungloaiEntity.Maqcdonggoi = txt_MAQCDONGGOI.Text.Trim();
@@ -94,6 +100,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_DmchungloaiEntity.Maqcthanhpham = txt_MAQCTHANHPHAM.Text.Trim();
 			_DmchungloaiEntity.Tenqcthanhpham = txt_TENQCTHANHPHAM.Text.Trim();
 			_DmchungloaiEntity.Maloaimuc = txt_MALOAIMUC.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMCHUNGLOAI_PK))
 			{

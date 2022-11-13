@@ -59,19 +59,22 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMTAIKHOAN_PK)
 		{
 			DmtaikhoanEntity _DmtaikhoanEntity = new DmtaikhoanEntity();
-			
 			_DmtaikhoanEntity.Matk = txt_MATK.Text.Trim();
 			_DmtaikhoanEntity.Tentk = txt_TENTK.Text.Trim();
 			_DmtaikhoanEntity.Bactk = txt_BACTK.Text.Trim();
 			_DmtaikhoanEntity.Tinhchattk = txt_TINHCHATTK.Text.Trim();
 			_DmtaikhoanEntity.Matkcha = txt_MATKCHA.Text.Trim();
-			_DmtaikhoanEntity.Trongbang = txt_TRONGBANG.Text.Trim();
+			try { _DmtaikhoanEntity.Trongbang = System.Boolean.Parse(txt_TRONGBANG.Text.Trim()); } 
+			catch { }
 			_DmtaikhoanEntity.Doituongtd = txt_DOITUONGTD.Text.Trim();
 			_DmtaikhoanEntity.Khoanmuctd = txt_KHOANMUCTD.Text.Trim();
-			_DmtaikhoanEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmtaikhoanEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmtaikhoanEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmtaikhoanEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmtaikhoanEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmtaikhoanEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMTAIKHOAN_PK))
 			{

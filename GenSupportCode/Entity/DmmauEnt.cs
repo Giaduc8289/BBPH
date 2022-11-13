@@ -56,16 +56,20 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMMAU_PK)
 		{
 			DmmauEntity _DmmauEntity = new DmmauEntity();
-			
 			_DmmauEntity.Mamau = txt_MAMAU.Text.Trim();
 			_DmmauEntity.Tenmau = txt_TENMAU.Text.Trim();
-			_DmmauEntity.Lamaugoc = txt_LAMAUGOC.Text.Trim();
-			_DmmauEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmmauEntity.Lamaugoc = System.Boolean.Parse(txt_LAMAUGOC.Text.Trim()); } 
+			catch { }
+			try { _DmmauEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmmauEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmmauEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmmauEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmmauEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
-			_DmmauEntity.MaArgb = txt_MAARGB.Text.Trim();
+			try { _DmmauEntity.MaArgb = System.Int64.Parse(txt_MAARGB.Text.Trim()); } 
+			catch { }
 			_DmmauEntity.Ghichu = txt_GHICHU.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMMAU_PK))
 			{

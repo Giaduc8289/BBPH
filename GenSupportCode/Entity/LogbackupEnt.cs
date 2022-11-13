@@ -51,11 +51,14 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_LOGBACKUP_PK)
 		{
 			LogbackupEntity _LogbackupEntity = new LogbackupEntity();
-			
-			_LogbackupEntity.Mahieu = txt_MAHIEU.Text.Trim();
-			_LogbackupEntity.Nam = txt_NAM.Text.Trim();
+			try { _LogbackupEntity.Mahieu = System.Int64.Parse(txt_MAHIEU.Text.Trim()); } 
+			catch { }
+			try { _LogbackupEntity.Nam = System.Int32.Parse(txt_NAM.Text.Trim()); } 
+			catch { }
 			_LogbackupEntity.Duongdan = txt_DUONGDAN.Text.Trim();
-			_LogbackupEntity.Ngay = txt_NGAY.Text.Trim();
+			try { _LogbackupEntity.Ngay = System.DateTime.Parse(txt_NGAY.Text.Trim()); } 
+			catch { }
+			
 			
 			if (string.IsNullOrEmpty(_str_LOGBACKUP_PK))
 			{

@@ -66,26 +66,35 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_PHIEUGIAOHANGD_PK)
 		{
 			PhieugiaohangDEntity _PhieugiaohangDEntity = new PhieugiaohangDEntity();
-			
-			_PhieugiaohangDEntity.Id = txt_ID.Text.Trim();
+			try { _PhieugiaohangDEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangDEntity.Sophieu = txt_SOPHIEU.Text.Trim();
-			_PhieugiaohangDEntity.Ngaygiao = txt_NGAYGIAO.Text.Trim();
+			try { _PhieugiaohangDEntity.Ngaygiao = System.DateTime.Parse(txt_NGAYGIAO.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangDEntity.Madon = txt_MADON.Text.Trim();
-			_PhieugiaohangDEntity.DonchitietId = txt_DONCHITIETID.Text.Trim();
-			_PhieugiaohangDEntity.Ngaydat = txt_NGAYDAT.Text.Trim();
+			try { _PhieugiaohangDEntity.DonchitietId = System.Int64.Parse(txt_DONCHITIETID.Text.Trim()); } 
+			catch { }
+			try { _PhieugiaohangDEntity.Ngaydat = System.DateTime.Parse(txt_NGAYDAT.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangDEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_PhieugiaohangDEntity.Tenkhach = txt_TENKHACH.Text.Trim();
 			_PhieugiaohangDEntity.Loaihang = txt_LOAIHANG.Text.Trim();
 			_PhieugiaohangDEntity.Masp = txt_MASP.Text.Trim();
 			_PhieugiaohangDEntity.Tenhang = txt_TENHANG.Text.Trim();
-			_PhieugiaohangDEntity.Soluong = txt_SOLUONG.Text.Trim();
-			_PhieugiaohangDEntity.Dongia = txt_DONGIA.Text.Trim();
-			_PhieugiaohangDEntity.Thanhtien = txt_THANHTIEN.Text.Trim();
+			try { _PhieugiaohangDEntity.Soluong = System.Decimal.Parse(txt_SOLUONG.Text.Trim()); } 
+			catch { }
+			try { _PhieugiaohangDEntity.Dongia = System.Decimal.Parse(txt_DONGIA.Text.Trim()); } 
+			catch { }
+			try { _PhieugiaohangDEntity.Thanhtien = System.Decimal.Parse(txt_THANHTIEN.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangDEntity.Ghichu = txt_GHICHU.Text.Trim();
-			_PhieugiaohangDEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _PhieugiaohangDEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangDEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_PhieugiaohangDEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _PhieugiaohangDEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangDEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_PHIEUGIAOHANGD_PK))
 			{

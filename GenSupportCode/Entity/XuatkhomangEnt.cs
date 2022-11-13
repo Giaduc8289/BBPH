@@ -64,24 +64,30 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_XUATKHOMANG_PK)
 		{
 			XuatkhomangEntity _XuatkhomangEntity = new XuatkhomangEntity();
-			
-			_XuatkhomangEntity.Id = txt_ID.Text.Trim();
-			_XuatkhomangEntity.Ngayxuat = txt_NGAYXUAT.Text.Trim();
+			try { _XuatkhomangEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _XuatkhomangEntity.Ngayxuat = System.DateTime.Parse(txt_NGAYXUAT.Text.Trim()); } 
+			catch { }
 			_XuatkhomangEntity.Makho = txt_MAKHO.Text.Trim();
 			_XuatkhomangEntity.Tenkho = txt_TENKHO.Text.Trim();
 			_XuatkhomangEntity.Mamang = txt_MAMANG.Text.Trim();
 			_XuatkhomangEntity.Tenmang = txt_TENMANG.Text.Trim();
-			_XuatkhomangEntity.Somet = txt_SOMET.Text.Trim();
-			_XuatkhomangEntity.Sokg = txt_SOKG.Text.Trim();
+			try { _XuatkhomangEntity.Somet = System.Decimal.Parse(txt_SOMET.Text.Trim()); } 
+			catch { }
+			try { _XuatkhomangEntity.Sokg = System.Decimal.Parse(txt_SOKG.Text.Trim()); } 
+			catch { }
 			_XuatkhomangEntity.Malydo = txt_MALYDO.Text.Trim();
 			_XuatkhomangEntity.Tenlydo = txt_TENLYDO.Text.Trim();
 			_XuatkhomangEntity.Lenhsx = txt_LENHSX.Text.Trim();
 			_XuatkhomangEntity.Sophieugiao = txt_SOPHIEUGIAO.Text.Trim();
 			_XuatkhomangEntity.Madonhang = txt_MADONHANG.Text.Trim();
-			_XuatkhomangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _XuatkhomangEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_XuatkhomangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_XuatkhomangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _XuatkhomangEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_XuatkhomangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_XUATKHOMANG_PK))
 			{

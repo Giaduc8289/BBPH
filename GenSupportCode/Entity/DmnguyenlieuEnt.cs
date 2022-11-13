@@ -62,22 +62,30 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMNGUYENLIEU_PK)
 		{
 			DmnguyenlieuEntity _DmnguyenlieuEntity = new DmnguyenlieuEntity();
-			
-			_DmnguyenlieuEntity.Id = txt_ID.Text.Trim();
+			try { _DmnguyenlieuEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
 			_DmnguyenlieuEntity.Manl = txt_MANL.Text.Trim();
 			_DmnguyenlieuEntity.Tennl = txt_TENNL.Text.Trim();
 			_DmnguyenlieuEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
 			_DmnguyenlieuEntity.Manhom = txt_MANHOM.Text.Trim();
 			_DmnguyenlieuEntity.Tennhom = txt_TENNHOM.Text.Trim();
-			_DmnguyenlieuEntity.Gia = txt_GIA.Text.Trim();
-			_DmnguyenlieuEntity.Ngay = txt_NGAY.Text.Trim();
-			_DmnguyenlieuEntity.Giahientai = txt_GIAHIENTAI.Text.Trim();
-			_DmnguyenlieuEntity.Tang = txt_TANG.Text.Trim();
-			_DmnguyenlieuEntity.Giam = txt_GIAM.Text.Trim();
-			_DmnguyenlieuEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmnguyenlieuEntity.Gia = System.Decimal.Parse(txt_GIA.Text.Trim()); } 
+			catch { }
+			try { _DmnguyenlieuEntity.Ngay = System.DateTime.Parse(txt_NGAY.Text.Trim()); } 
+			catch { }
+			try { _DmnguyenlieuEntity.Giahientai = System.Decimal.Parse(txt_GIAHIENTAI.Text.Trim()); } 
+			catch { }
+			try { _DmnguyenlieuEntity.Tang = System.Decimal.Parse(txt_TANG.Text.Trim()); } 
+			catch { }
+			try { _DmnguyenlieuEntity.Giam = System.Decimal.Parse(txt_GIAM.Text.Trim()); } 
+			catch { }
+			try { _DmnguyenlieuEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmnguyenlieuEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmnguyenlieuEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmnguyenlieuEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmnguyenlieuEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMNGUYENLIEU_PK))
 			{

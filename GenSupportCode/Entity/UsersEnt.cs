@@ -55,7 +55,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_USERS_PK)
 		{
 			UsersEntity _UsersEntity = new UsersEntity();
-			
 			_UsersEntity.Userid = txt_USERID.Text.Trim();
 			_UsersEntity.Rolesid = txt_ROLESID.Text.Trim();
 			_UsersEntity.Username = txt_USERNAME.Text.Trim();
@@ -63,7 +62,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			_UsersEntity.Phone = txt_PHONE.Text.Trim();
 			_UsersEntity.Address = txt_ADDRESS.Text.Trim();
 			_UsersEntity.Password = txt_PASSWORD.Text.Trim();
-			_UsersEntity.Active = txt_ACTIVE.Text.Trim();
+			try { _UsersEntity.Active = System.Boolean.Parse(txt_ACTIVE.Text.Trim()); } 
+			catch { }
+			
 			
 			if (string.IsNullOrEmpty(_str_USERS_PK))
 			{

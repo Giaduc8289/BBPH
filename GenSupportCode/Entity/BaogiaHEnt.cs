@@ -59,19 +59,23 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_BAOGIAH_PK)
 		{
 			BaogiaHEntity _BaogiaHEntity = new BaogiaHEntity();
-			
 			_BaogiaHEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
-			_BaogiaHEntity.Ngaybaogia = txt_NGAYBAOGIA.Text.Trim();
-			_BaogiaHEntity.Ngayhieuluc = txt_NGAYHIEULUC.Text.Trim();
+			try { _BaogiaHEntity.Ngaybaogia = System.DateTime.Parse(txt_NGAYBAOGIA.Text.Trim()); } 
+			catch { }
+			try { _BaogiaHEntity.Ngayhieuluc = System.DateTime.Parse(txt_NGAYHIEULUC.Text.Trim()); } 
+			catch { }
 			_BaogiaHEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_BaogiaHEntity.Tenkhach = txt_TENKHACH.Text.Trim();
 			_BaogiaHEntity.Noidung = txt_NOIDUNG.Text.Trim();
 			_BaogiaHEntity.Phuongthuctt = txt_PHUONGTHUCTT.Text.Trim();
 			_BaogiaHEntity.Diadiemgiao = txt_DIADIEMGIAO.Text.Trim();
-			_BaogiaHEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _BaogiaHEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_BaogiaHEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_BaogiaHEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _BaogiaHEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_BaogiaHEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_BAOGIAH_PK))
 			{

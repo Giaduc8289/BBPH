@@ -50,10 +50,10 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_ROLES_PK)
 		{
 			RolesEntity _RolesEntity = new RolesEntity();
-			
 			_RolesEntity.Rolesid = txt_ROLESID.Text.Trim();
 			_RolesEntity.Rolesname = txt_ROLESNAME.Text.Trim();
 			_RolesEntity.Description = txt_DESCRIPTION.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_ROLES_PK))
 			{

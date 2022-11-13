@@ -59,19 +59,25 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_CTPTMANGD_PK)
 		{
 			CtptmangDEntity _CtptmangDEntity = new CtptmangDEntity();
-			
-			_CtptmangDEntity.Id = txt_ID.Text.Trim();
-			_CtptmangDEntity.IdH = txt_IDH.Text.Trim();
+			try { _CtptmangDEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _CtptmangDEntity.IdH = System.Int64.Parse(txt_IDH.Text.Trim()); } 
+			catch { }
 			_CtptmangDEntity.Mact = txt_MACT.Text.Trim();
 			_CtptmangDEntity.Tenct = txt_TENCT.Text.Trim();
 			_CtptmangDEntity.Manl = txt_MANL.Text.Trim();
 			_CtptmangDEntity.Tennguyenlieu = txt_TENNGUYENLIEU.Text.Trim();
-			_CtptmangDEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
-			_CtptmangDEntity.Tyle = txt_TYLE.Text.Trim();
-			_CtptmangDEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _CtptmangDEntity.Trongluong = System.Decimal.Parse(txt_TRONGLUONG.Text.Trim()); } 
+			catch { }
+			try { _CtptmangDEntity.Tyle = System.Decimal.Parse(txt_TYLE.Text.Trim()); } 
+			catch { }
+			try { _CtptmangDEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_CtptmangDEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_CtptmangDEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _CtptmangDEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_CtptmangDEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_CTPTMANGD_PK))
 			{

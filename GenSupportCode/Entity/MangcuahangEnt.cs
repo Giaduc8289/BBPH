@@ -73,33 +73,47 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_MANGCUAHANG_PK)
 		{
 			MangcuahangEntity _MangcuahangEntity = new MangcuahangEntity();
-			
-			_MangcuahangEntity.Id = txt_ID.Text.Trim();
+			try { _MangcuahangEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
 			_MangcuahangEntity.Masp = txt_MASP.Text.Trim();
 			_MangcuahangEntity.Tensp = txt_TENSP.Text.Trim();
-			_MangcuahangEntity.Mangin = txt_MANGIN.Text.Trim();
+			try { _MangcuahangEntity.Mangin = System.Boolean.Parse(txt_MANGIN.Text.Trim()); } 
+			catch { }
 			_MangcuahangEntity.Mamang = txt_MAMANG.Text.Trim();
 			_MangcuahangEntity.Tenmang = txt_TENMANG.Text.Trim();
 			_MangcuahangEntity.Maloaikeo = txt_MALOAIKEO.Text.Trim();
 			_MangcuahangEntity.Tenloaikeo = txt_TENLOAIKEO.Text.Trim();
 			_MangcuahangEntity.Maloaidongran = txt_MALOAIDONGRAN.Text.Trim();
 			_MangcuahangEntity.Tenloaidongran = txt_TENLOAIDONGRAN.Text.Trim();
-			_MangcuahangEntity.Dinhmuckeokho = txt_DINHMUCKEOKHO.Text.Trim();
-			_MangcuahangEntity.Dinhmucdongrankho = txt_DINHMUCDONGRANKHO.Text.Trim();
-			_MangcuahangEntity.Tylekeokho = txt_TYLEKEOKHO.Text.Trim();
-			_MangcuahangEntity.Tyledongrankho = txt_TYLEDONGRANKHO.Text.Trim();
-			_MangcuahangEntity.Tylekeo = txt_TYLEKEO.Text.Trim();
-			_MangcuahangEntity.Tyledongran = txt_TYLEDONGRAN.Text.Trim();
-			_MangcuahangEntity.Dinhmuckeouot = txt_DINHMUCKEOUOT.Text.Trim();
-			_MangcuahangEntity.Dinhmucdongranuot = txt_DINHMUCDONGRANUOT.Text.Trim();
-			_MangcuahangEntity.Dinhmucdungmoi = txt_DINHMUCDUNGMOI.Text.Trim();
-			_MangcuahangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _MangcuahangEntity.Dinhmuckeokho = System.Decimal.Parse(txt_DINHMUCKEOKHO.Text.Trim()); } 
+			catch { }
+			try { _MangcuahangEntity.Dinhmucdongrankho = System.Decimal.Parse(txt_DINHMUCDONGRANKHO.Text.Trim()); } 
+			catch { }
+			try { _MangcuahangEntity.Tylekeokho = System.Decimal.Parse(txt_TYLEKEOKHO.Text.Trim()); } 
+			catch { }
+			try { _MangcuahangEntity.Tyledongrankho = System.Decimal.Parse(txt_TYLEDONGRANKHO.Text.Trim()); } 
+			catch { }
+			try { _MangcuahangEntity.Tylekeo = System.Decimal.Parse(txt_TYLEKEO.Text.Trim()); } 
+			catch { }
+			try { _MangcuahangEntity.Tyledongran = System.Decimal.Parse(txt_TYLEDONGRAN.Text.Trim()); } 
+			catch { }
+			try { _MangcuahangEntity.Dinhmuckeouot = System.Decimal.Parse(txt_DINHMUCKEOUOT.Text.Trim()); } 
+			catch { }
+			try { _MangcuahangEntity.Dinhmucdongranuot = System.Decimal.Parse(txt_DINHMUCDONGRANUOT.Text.Trim()); } 
+			catch { }
+			try { _MangcuahangEntity.Dinhmucdungmoi = System.Decimal.Parse(txt_DINHMUCDUNGMOI.Text.Trim()); } 
+			catch { }
+			try { _MangcuahangEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_MangcuahangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_MangcuahangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _MangcuahangEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_MangcuahangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
-			_MangcuahangEntity.Doday = txt_DODAY.Text.Trim();
+			try { _MangcuahangEntity.Doday = System.Decimal.Parse(txt_DODAY.Text.Trim()); } 
+			catch { }
 			_MangcuahangEntity.Maloaimang = txt_MALOAIMANG.Text.Trim();
 			_MangcuahangEntity.Tenloaimang = txt_TENLOAIMANG.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_MANGCUAHANG_PK))
 			{

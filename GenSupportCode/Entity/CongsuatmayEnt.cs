@@ -68,15 +68,20 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_CONGSUATMAY_PK)
 		{
 			CongsuatmayEntity _CongsuatmayEntity = new CongsuatmayEntity();
-			
 			_CongsuatmayEntity.Macongsuat = txt_MACONGSUAT.Text.Trim();
 			_CongsuatmayEntity.Tencongsuat = txt_TENCONGSUAT.Text.Trim();
-			_CongsuatmayEntity.Dodaytu = txt_DODAYTU.Text.Trim();
-			_CongsuatmayEntity.Dodayden = txt_DODAYDEN.Text.Trim();
-			_CongsuatmayEntity.Khotu = txt_KHOTU.Text.Trim();
-			_CongsuatmayEntity.Khoden = txt_KHODEN.Text.Trim();
-			_CongsuatmayEntity.Chieudaitu = txt_CHIEUDAITU.Text.Trim();
-			_CongsuatmayEntity.Chieudaiden = txt_CHIEUDAIDEN.Text.Trim();
+			try { _CongsuatmayEntity.Dodaytu = System.Decimal.Parse(txt_DODAYTU.Text.Trim()); } 
+			catch { }
+			try { _CongsuatmayEntity.Dodayden = System.Decimal.Parse(txt_DODAYDEN.Text.Trim()); } 
+			catch { }
+			try { _CongsuatmayEntity.Khotu = System.Decimal.Parse(txt_KHOTU.Text.Trim()); } 
+			catch { }
+			try { _CongsuatmayEntity.Khoden = System.Decimal.Parse(txt_KHODEN.Text.Trim()); } 
+			catch { }
+			try { _CongsuatmayEntity.Chieudaitu = System.Decimal.Parse(txt_CHIEUDAITU.Text.Trim()); } 
+			catch { }
+			try { _CongsuatmayEntity.Chieudaiden = System.Decimal.Parse(txt_CHIEUDAIDEN.Text.Trim()); } 
+			catch { }
 			_CongsuatmayEntity.Mamays = txt_MAMAYS.Text.Trim();
 			_CongsuatmayEntity.Macongdoans = txt_MACONGDOANS.Text.Trim();
 			_CongsuatmayEntity.Somaumas = txt_SOMAUMAS.Text.Trim();
@@ -85,11 +90,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			_CongsuatmayEntity.Maqcthanhphams = txt_MAQCTHANHPHAMS.Text.Trim();
 			_CongsuatmayEntity.Makhachs = txt_MAKHACHS.Text.Trim();
 			_CongsuatmayEntity.Mahangs = txt_MAHANGS.Text.Trim();
-			_CongsuatmayEntity.Tocdo = txt_TOCDO.Text.Trim();
-			_CongsuatmayEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _CongsuatmayEntity.Tocdo = System.Decimal.Parse(txt_TOCDO.Text.Trim()); } 
+			catch { }
+			try { _CongsuatmayEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_CongsuatmayEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_CongsuatmayEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _CongsuatmayEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_CongsuatmayEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_CONGSUATMAY_PK))
 			{

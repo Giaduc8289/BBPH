@@ -59,19 +59,25 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_SODUMANG_PK)
 		{
 			SodumangEntity _SodumangEntity = new SodumangEntity();
-			
-			_SodumangEntity.Id = txt_ID.Text.Trim();
-			_SodumangEntity.Ngaykiemke = txt_NGAYKIEMKE.Text.Trim();
+			try { _SodumangEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _SodumangEntity.Ngaykiemke = System.DateTime.Parse(txt_NGAYKIEMKE.Text.Trim()); } 
+			catch { }
 			_SodumangEntity.Makho = txt_MAKHO.Text.Trim();
 			_SodumangEntity.Tenkho = txt_TENKHO.Text.Trim();
 			_SodumangEntity.Mamang = txt_MAMANG.Text.Trim();
 			_SodumangEntity.Tenmang = txt_TENMANG.Text.Trim();
-			_SodumangEntity.Somet = txt_SOMET.Text.Trim();
-			_SodumangEntity.Sokg = txt_SOKG.Text.Trim();
-			_SodumangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _SodumangEntity.Somet = System.Decimal.Parse(txt_SOMET.Text.Trim()); } 
+			catch { }
+			try { _SodumangEntity.Sokg = System.Decimal.Parse(txt_SOKG.Text.Trim()); } 
+			catch { }
+			try { _SodumangEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_SodumangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_SodumangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _SodumangEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_SodumangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_SODUMANG_PK))
 			{

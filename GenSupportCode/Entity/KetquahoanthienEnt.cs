@@ -81,10 +81,12 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_KETQUAHOANTHIEN_PK)
 		{
 			KetquahoanthienEntity _KetquahoanthienEntity = new KetquahoanthienEntity();
-			
-			_KetquahoanthienEntity.Id = txt_ID.Text.Trim();
-			_KetquahoanthienEntity.Ngay = txt_NGAY.Text.Trim();
-			_KetquahoanthienEntity.Ca = txt_CA.Text.Trim();
+			try { _KetquahoanthienEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Ngay = System.DateTime.Parse(txt_NGAY.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Ca = System.Int32.Parse(txt_CA.Text.Trim()); } 
+			catch { }
 			_KetquahoanthienEntity.Mamay = txt_MAMAY.Text.Trim();
 			_KetquahoanthienEntity.Tenmay = txt_TENMAY.Text.Trim();
 			_KetquahoanthienEntity.Lenhhoanthien = txt_LENHHOANTHIEN.Text.Trim();
@@ -92,30 +94,53 @@ namespace GD.BBPH.DAL.EntityClasses
 			_KetquahoanthienEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
 			_KetquahoanthienEntity.Macongnhan = txt_MACONGNHAN.Text.Trim();
 			_KetquahoanthienEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
-			_KetquahoanthienEntity.Daurachiaghep = txt_DAURACHIAGHEP.Text.Trim();
-			_KetquahoanthienEntity.Dauvaomet = txt_DAUVAOMET.Text.Trim();
-			_KetquahoanthienEntity.Dauvaokg = txt_DAUVAOKG.Text.Trim();
-			_KetquahoanthienEntity.Thoigianbatdau = txt_THOIGIANBATDAU.Text.Trim();
-			_KetquahoanthienEntity.Thoigianketthuc = txt_THOIGIANKETTHUC.Text.Trim();
-			_KetquahoanthienEntity.Thoigianchuanbi = txt_THOIGIANCHUANBI.Text.Trim();
-			_KetquahoanthienEntity.Thoigianlenhacuon = txt_THOIGIANLENHACUON.Text.Trim();
-			_KetquahoanthienEntity.Thoigiancatdau = txt_THOIGIANCATDAU.Text.Trim();
-			_KetquahoanthienEntity.Thoigiansuco = txt_THOIGIANSUCO.Text.Trim();
-			_KetquahoanthienEntity.Ketquatui = txt_KETQUATUI.Text.Trim();
-			_KetquahoanthienEntity.Phein = txt_PHEIN.Text.Trim();
-			_KetquahoanthienEntity.Pheghep = txt_PHEGHEP.Text.Trim();
-			_KetquahoanthienEntity.Phechia = txt_PHECHIA.Text.Trim();
-			_KetquahoanthienEntity.Phebien = txt_PHEBIEN.Text.Trim();
-			_KetquahoanthienEntity.Phethoi = txt_PHETHOI.Text.Trim();
-			_KetquahoanthienEntity.Phechinhmay = txt_PHECHINHMAY.Text.Trim();
-			_KetquahoanthienEntity.Phekhac = txt_PHEKHAC.Text.Trim();
-			_KetquahoanthienEntity.Kiemtra = txt_KIEMTRA.Text.Trim();
-			_KetquahoanthienEntity.Chatluongtui = txt_CHATLUONGTUI.Text.Trim();
-			_KetquahoanthienEntity.Nangsuat = txt_NANGSUAT.Text.Trim();
-			_KetquahoanthienEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _KetquahoanthienEntity.Daurachiaghep = System.Decimal.Parse(txt_DAURACHIAGHEP.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Dauvaomet = System.Decimal.Parse(txt_DAUVAOMET.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Dauvaokg = System.Decimal.Parse(txt_DAUVAOKG.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Thoigianbatdau = System.DateTime.Parse(txt_THOIGIANBATDAU.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Thoigianketthuc = System.DateTime.Parse(txt_THOIGIANKETTHUC.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Thoigianchuanbi = System.Decimal.Parse(txt_THOIGIANCHUANBI.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Thoigianlenhacuon = System.Decimal.Parse(txt_THOIGIANLENHACUON.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Thoigiancatdau = System.Decimal.Parse(txt_THOIGIANCATDAU.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Thoigiansuco = System.Decimal.Parse(txt_THOIGIANSUCO.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Ketquatui = System.Decimal.Parse(txt_KETQUATUI.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Phein = System.Decimal.Parse(txt_PHEIN.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Pheghep = System.Decimal.Parse(txt_PHEGHEP.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Phechia = System.Decimal.Parse(txt_PHECHIA.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Phebien = System.Decimal.Parse(txt_PHEBIEN.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Phethoi = System.Decimal.Parse(txt_PHETHOI.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Phechinhmay = System.Decimal.Parse(txt_PHECHINHMAY.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Phekhac = System.Decimal.Parse(txt_PHEKHAC.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Kiemtra = System.Decimal.Parse(txt_KIEMTRA.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Chatluongtui = System.Decimal.Parse(txt_CHATLUONGTUI.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Nangsuat = System.Decimal.Parse(txt_NANGSUAT.Text.Trim()); } 
+			catch { }
+			try { _KetquahoanthienEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_KetquahoanthienEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_KetquahoanthienEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _KetquahoanthienEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_KetquahoanthienEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_KETQUAHOANTHIEN_PK))
 			{

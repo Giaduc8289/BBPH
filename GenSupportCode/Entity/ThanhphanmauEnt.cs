@@ -57,17 +57,21 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_THANHPHANMAU_PK)
 		{
 			ThanhphanmauEntity _ThanhphanmauEntity = new ThanhphanmauEntity();
-			
-			_ThanhphanmauEntity.Id = txt_ID.Text.Trim();
+			try { _ThanhphanmauEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
 			_ThanhphanmauEntity.Mamau = txt_MAMAU.Text.Trim();
 			_ThanhphanmauEntity.Tenmau = txt_TENMAU.Text.Trim();
 			_ThanhphanmauEntity.Mausudung = txt_MAUSUDUNG.Text.Trim();
 			_ThanhphanmauEntity.Tenmausudung = txt_TENMAUSUDUNG.Text.Trim();
-			_ThanhphanmauEntity.Tyle = txt_TYLE.Text.Trim();
-			_ThanhphanmauEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _ThanhphanmauEntity.Tyle = System.Decimal.Parse(txt_TYLE.Text.Trim()); } 
+			catch { }
+			try { _ThanhphanmauEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_ThanhphanmauEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_ThanhphanmauEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _ThanhphanmauEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_ThanhphanmauEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_THANHPHANMAU_PK))
 			{

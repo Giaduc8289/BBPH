@@ -248,13 +248,13 @@ namespace GD.BBPH.APP.DANHMUC
         {
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MAKEO.Text.Trim()) || DT_DMKEO == null || DT_DMKEO.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MAKEO.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaNguyelieu(Str_MASIEUTHI, DT_DMKEO);
+            string _str_MACANTIM = txt_MAKEO.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaNguyelieu(_str_MACANTIM, DT_DMKEO);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
                     new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMNGUYENLIEU_H.xml",
-                        DT_DMKEO, DmnguyenlieuFields.Manl.Name, Str_MASIEUTHI);
+                        DT_DMKEO, DmnguyenlieuFields.Manl.Name, _str_MACANTIM);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
@@ -264,11 +264,11 @@ namespace GD.BBPH.APP.DANHMUC
             else
                 txt_TENKEO.Text = _RowViewSelect[DmnguyenlieuFields.Tennl.Name].ToString();
         }
-        private DataRow checkmaNguyelieu(string masieuthi, DataTable dt)
+        private DataRow checkmaNguyelieu(string macantim, DataTable dt)
         {
             try
             {
-                return dt.Select(DmnguyenlieuFields.Manl.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+                return dt.Select(DmnguyenlieuFields.Manl.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
         }
@@ -277,13 +277,13 @@ namespace GD.BBPH.APP.DANHMUC
         {
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MADONGRAN.Text.Trim()) || DT_DMDONGRAN == null || DT_DMDONGRAN.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MADONGRAN.Text.Trim().ToUpper();
-            _RowViewSelect = checkmaNguyelieu(Str_MASIEUTHI, DT_DMDONGRAN);
+            string _str_MACANTIM = txt_MADONGRAN.Text.Trim().ToUpper();
+            _RowViewSelect = checkmaNguyelieu(_str_MACANTIM, DT_DMDONGRAN);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
                     new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMNGUYENLIEU_H.xml",
-                        DT_DMDONGRAN, DmnguyenlieuFields.Manl.Name, Str_MASIEUTHI);
+                        DT_DMDONGRAN, DmnguyenlieuFields.Manl.Name, _str_MACANTIM);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;

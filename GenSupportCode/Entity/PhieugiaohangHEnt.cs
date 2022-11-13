@@ -60,20 +60,26 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_PHIEUGIAOHANGH_PK)
 		{
 			PhieugiaohangHEntity _PhieugiaohangHEntity = new PhieugiaohangHEntity();
-			
 			_PhieugiaohangHEntity.Sophieu = txt_SOPHIEU.Text.Trim();
-			_PhieugiaohangHEntity.Ngaygiao = txt_NGAYGIAO.Text.Trim();
+			try { _PhieugiaohangHEntity.Ngaygiao = System.DateTime.Parse(txt_NGAYGIAO.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangHEntity.Madon = txt_MADON.Text.Trim();
-			_PhieugiaohangHEntity.Ngaydat = txt_NGAYDAT.Text.Trim();
+			try { _PhieugiaohangHEntity.Ngaydat = System.DateTime.Parse(txt_NGAYDAT.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangHEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_PhieugiaohangHEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-			_PhieugiaohangHEntity.Tongtien = txt_TONGTIEN.Text.Trim();
-			_PhieugiaohangHEntity.Vat = txt_VAT.Text.Trim();
+			try { _PhieugiaohangHEntity.Tongtien = System.Int32.Parse(txt_TONGTIEN.Text.Trim()); } 
+			catch { }
+			try { _PhieugiaohangHEntity.Vat = System.Int32.Parse(txt_VAT.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangHEntity.Ghichu = txt_GHICHU.Text.Trim();
-			_PhieugiaohangHEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _PhieugiaohangHEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangHEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_PhieugiaohangHEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _PhieugiaohangHEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_PhieugiaohangHEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_PHIEUGIAOHANGH_PK))
 			{

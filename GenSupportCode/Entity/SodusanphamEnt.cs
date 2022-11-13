@@ -60,20 +60,27 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_SODUSANPHAM_PK)
 		{
 			SodusanphamEntity _SodusanphamEntity = new SodusanphamEntity();
-			
-			_SodusanphamEntity.Id = txt_ID.Text.Trim();
-			_SodusanphamEntity.Ngaykiemke = txt_NGAYKIEMKE.Text.Trim();
+			try { _SodusanphamEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _SodusanphamEntity.Ngaykiemke = System.DateTime.Parse(txt_NGAYKIEMKE.Text.Trim()); } 
+			catch { }
 			_SodusanphamEntity.Makho = txt_MAKHO.Text.Trim();
 			_SodusanphamEntity.Tenkho = txt_TENKHO.Text.Trim();
 			_SodusanphamEntity.Masanpham = txt_MASANPHAM.Text.Trim();
 			_SodusanphamEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
-			_SodusanphamEntity.Somet = txt_SOMET.Text.Trim();
-			_SodusanphamEntity.Soluong = txt_SOLUONG.Text.Trim();
-			_SodusanphamEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _SodusanphamEntity.Somet = System.Decimal.Parse(txt_SOMET.Text.Trim()); } 
+			catch { }
+			try { _SodusanphamEntity.Soluong = System.Decimal.Parse(txt_SOLUONG.Text.Trim()); } 
+			catch { }
+			try { _SodusanphamEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_SodusanphamEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_SodusanphamEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _SodusanphamEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_SodusanphamEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
-			_SodusanphamEntity.Sokg = txt_SOKG.Text.Trim();
+			try { _SodusanphamEntity.Sokg = System.Decimal.Parse(txt_SOKG.Text.Trim()); } 
+			catch { }
+			
 			
 			if (string.IsNullOrEmpty(_str_SODUSANPHAM_PK))
 			{

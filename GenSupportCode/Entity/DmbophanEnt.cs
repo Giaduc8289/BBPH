@@ -53,13 +53,15 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMBOPHAN_PK)
 		{
 			DmbophanEntity _DmbophanEntity = new DmbophanEntity();
-			
 			_DmbophanEntity.Mabp = txt_MABP.Text.Trim();
 			_DmbophanEntity.Tenbophan = txt_TENBOPHAN.Text.Trim();
-			_DmbophanEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmbophanEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmbophanEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmbophanEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmbophanEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmbophanEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMBOPHAN_PK))
 			{

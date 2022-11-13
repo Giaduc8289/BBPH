@@ -448,13 +448,13 @@ namespace GD.BBPH.APP.KHO
         {
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MAMANG.Text.Trim()) || DT_DMMANG == null || DT_DMMANG.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MAMANG.Text.Trim().ToUpper();
-            _RowViewSelect = checkmamang(Str_MASIEUTHI, DT_DMMANG);
+            string _str_MACANTIM = txt_MAMANG.Text.Trim().ToUpper();
+            _RowViewSelect = checkmamang(_str_MACANTIM, DT_DMMANG);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
                     new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANG.xml",
-                        DT_DMMANG, DmmangFields.Mamang.Name, Str_MASIEUTHI);
+                        DT_DMMANG, DmmangFields.Mamang.Name, _str_MACANTIM);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
@@ -467,11 +467,11 @@ namespace GD.BBPH.APP.KHO
                 txt_TENMANG.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
             }
         }
-        private DataRow checkmamang(string masieuthi, DataTable dt)
+        private DataRow checkmamang(string macantim, DataTable dt)
         {
             try
             {
-                return dt.Select(DmmangFields.Mamang.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+                return dt.Select(DmmangFields.Mamang.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
         }
@@ -480,13 +480,13 @@ namespace GD.BBPH.APP.KHO
         {
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MAKHO.Text.Trim()) || DT_DMKHO == null || DT_DMKHO.Rows.Count == 0) return;
-            string Str_MASIEUTHI = txt_MAKHO.Text.Trim().ToUpper();
-            _RowViewSelect = checkmacongnnhang(Str_MASIEUTHI, DT_DMKHO);
+            string _str_MACANTIM = txt_MAKHO.Text.Trim().ToUpper();
+            _RowViewSelect = checkmacongnnhang(_str_MACANTIM, DT_DMKHO);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
                     new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMKHO.xml",
-                        DT_DMKHO, DmkhoFields.Makho.Name, Str_MASIEUTHI);
+                        DT_DMKHO, DmkhoFields.Makho.Name, _str_MACANTIM);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
@@ -500,11 +500,11 @@ namespace GD.BBPH.APP.KHO
 
             }
         }
-        private DataRow checkmacongnnhang(string masieuthi, DataTable dt)
+        private DataRow checkmacongnnhang(string macantim, DataTable dt)
         {
             try
             {
-                return dt.Select(DmkhoFields.Makho.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
+                return dt.Select(DmkhoFields.Makho.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
         }

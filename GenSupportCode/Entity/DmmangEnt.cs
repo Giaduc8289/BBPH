@@ -64,24 +64,29 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMMANG_PK)
 		{
 			DmmangEntity _DmmangEntity = new DmmangEntity();
-			
 			_DmmangEntity.Mamang = txt_MAMANG.Text.Trim();
 			_DmmangEntity.Tenmang = txt_TENMANG.Text.Trim();
 			_DmmangEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_DmmangEntity.Tenkhach = txt_TENKHACH.Text.Trim();
 			_DmmangEntity.Kichthuoc = txt_KICHTHUOC.Text.Trim();
 			_DmmangEntity.Mactpt = txt_MACTPT.Text.Trim();
-			_DmmangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmmangEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmmangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmmangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmmangEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmmangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
-			_DmmangEntity.Doday = txt_DODAY.Text.Trim();
-			_DmmangEntity.Rong = txt_RONG.Text.Trim();
+			try { _DmmangEntity.Doday = System.Decimal.Parse(txt_DODAY.Text.Trim()); } 
+			catch { }
+			try { _DmmangEntity.Rong = System.Decimal.Parse(txt_RONG.Text.Trim()); } 
+			catch { }
 			_DmmangEntity.Maloaimang = txt_MALOAIMANG.Text.Trim();
 			_DmmangEntity.Tenloaimang = txt_TENLOAIMANG.Text.Trim();
 			_DmmangEntity.Maqcmang = txt_MAQCMANG.Text.Trim();
 			_DmmangEntity.Tenqcmang = txt_TENQCMANG.Text.Trim();
-			_DmmangEntity.Trongluong = txt_TRONGLUONG.Text.Trim();
+			try { _DmmangEntity.Trongluong = System.Decimal.Parse(txt_TRONGLUONG.Text.Trim()); } 
+			catch { }
+			
 			
 			if (string.IsNullOrEmpty(_str_DMMANG_PK))
 			{

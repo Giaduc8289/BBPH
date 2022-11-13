@@ -61,21 +61,29 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_KETQUAINMAU_PK)
 		{
 			KetquainmauEntity _KetquainmauEntity = new KetquainmauEntity();
-			
-			_KetquainmauEntity.Id = txt_ID.Text.Trim();
-			_KetquainmauEntity.KetquainId = txt_KETQUAINID.Text.Trim();
+			try { _KetquainmauEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _KetquainmauEntity.KetquainId = System.Int64.Parse(txt_KETQUAINID.Text.Trim()); } 
+			catch { }
 			_KetquainmauEntity.Masp = txt_MASP.Text.Trim();
 			_KetquainmauEntity.Tensp = txt_TENSP.Text.Trim();
 			_KetquainmauEntity.Mamau = txt_MAMAU.Text.Trim();
 			_KetquainmauEntity.Tenmau = txt_TENMAU.Text.Trim();
-			_KetquainmauEntity.Xuatdodang = txt_XUATDODANG.Text.Trim();
-			_KetquainmauEntity.Xuatnguyen = txt_XUATNGUYEN.Text.Trim();
-			_KetquainmauEntity.Nhapdodang = txt_NHAPDODANG.Text.Trim();
-			_KetquainmauEntity.Nhapnguyen = txt_NHAPNGUYEN.Text.Trim();
-			_KetquainmauEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _KetquainmauEntity.Xuatdodang = System.Decimal.Parse(txt_XUATDODANG.Text.Trim()); } 
+			catch { }
+			try { _KetquainmauEntity.Xuatnguyen = System.Decimal.Parse(txt_XUATNGUYEN.Text.Trim()); } 
+			catch { }
+			try { _KetquainmauEntity.Nhapdodang = System.Decimal.Parse(txt_NHAPDODANG.Text.Trim()); } 
+			catch { }
+			try { _KetquainmauEntity.Nhapnguyen = System.Decimal.Parse(txt_NHAPNGUYEN.Text.Trim()); } 
+			catch { }
+			try { _KetquainmauEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_KetquainmauEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_KetquainmauEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _KetquainmauEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_KetquainmauEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_KETQUAINMAU_PK))
 			{

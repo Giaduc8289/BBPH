@@ -76,36 +76,56 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_KETQUAIN_PK)
 		{
 			KetquainEntity _KetquainEntity = new KetquainEntity();
-			
-			_KetquainEntity.Id = txt_ID.Text.Trim();
-			_KetquainEntity.Ngay = txt_NGAY.Text.Trim();
-			_KetquainEntity.Ca = txt_CA.Text.Trim();
+			try { _KetquainEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Ngay = System.DateTime.Parse(txt_NGAY.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Ca = System.Int32.Parse(txt_CA.Text.Trim()); } 
+			catch { }
 			_KetquainEntity.Mamay = txt_MAMAY.Text.Trim();
 			_KetquainEntity.Lenhin = txt_LENHIN.Text.Trim();
 			_KetquainEntity.Masanpham = txt_MASANPHAM.Text.Trim();
 			_KetquainEntity.Macongnhan = txt_MACONGNHAN.Text.Trim();
-			_KetquainEntity.SometLsx = txt_SOMETLSX.Text.Trim();
-			_KetquainEntity.Sometcap = txt_SOMETCAP.Text.Trim();
-			_KetquainEntity.Sokgcap = txt_SOKGCAP.Text.Trim();
-			_KetquainEntity.Thuctein = txt_THUCTEIN.Text.Trim();
-			_KetquainEntity.Sokgin = txt_SOKGIN.Text.Trim();
-			_KetquainEntity.Saihongthucte = txt_SAIHONGTHUCTE.Text.Trim();
-			_KetquainEntity.Thoigianbatdau = txt_THOIGIANBATDAU.Text.Trim();
-			_KetquainEntity.Thoigianketthuc = txt_THOIGIANKETTHUC.Text.Trim();
-			_KetquainEntity.Thoigianchuanbi = txt_THOIGIANCHUANBI.Text.Trim();
-			_KetquainEntity.Thoigiansuco = txt_THOIGIANSUCO.Text.Trim();
-			_KetquainEntity.PheNcc = txt_PHENCC.Text.Trim();
-			_KetquainEntity.PheSx = txt_PHESX.Text.Trim();
-			_KetquainEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _KetquainEntity.SometLsx = System.Decimal.Parse(txt_SOMETLSX.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Sometcap = System.Decimal.Parse(txt_SOMETCAP.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Sokgcap = System.Decimal.Parse(txt_SOKGCAP.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Thuctein = System.Decimal.Parse(txt_THUCTEIN.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Sokgin = System.Decimal.Parse(txt_SOKGIN.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Saihongthucte = System.Decimal.Parse(txt_SAIHONGTHUCTE.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Thoigianbatdau = System.DateTime.Parse(txt_THOIGIANBATDAU.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Thoigianketthuc = System.DateTime.Parse(txt_THOIGIANKETTHUC.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Thoigianchuanbi = System.Decimal.Parse(txt_THOIGIANCHUANBI.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Thoigiansuco = System.Decimal.Parse(txt_THOIGIANSUCO.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.PheNcc = System.Decimal.Parse(txt_PHENCC.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.PheSx = System.Decimal.Parse(txt_PHESX.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_KetquainEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_KetquainEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _KetquainEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_KetquainEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
 			_KetquainEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
 			_KetquainEntity.Tenmay = txt_TENMAY.Text.Trim();
 			_KetquainEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
-			_KetquainEntity.Nangsuat = txt_NANGSUAT.Text.Trim();
-			_KetquainEntity.Tylesaihong = txt_TYLESAIHONG.Text.Trim();
-			_KetquainEntity.Tongmdm = txt_TONGMDM.Text.Trim();
+			try { _KetquainEntity.Nangsuat = System.Decimal.Parse(txt_NANGSUAT.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Tylesaihong = System.Decimal.Parse(txt_TYLESAIHONG.Text.Trim()); } 
+			catch { }
+			try { _KetquainEntity.Tongmdm = System.Decimal.Parse(txt_TONGMDM.Text.Trim()); } 
+			catch { }
+			
 			
 			if (string.IsNullOrEmpty(_str_KETQUAIN_PK))
 			{

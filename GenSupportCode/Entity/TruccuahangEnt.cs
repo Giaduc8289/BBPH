@@ -56,16 +56,20 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_TRUCCUAHANG_PK)
 		{
 			TruccuahangEntity _TruccuahangEntity = new TruccuahangEntity();
-			
-			_TruccuahangEntity.Id = txt_ID.Text.Trim();
+			try { _TruccuahangEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
 			_TruccuahangEntity.Masp = txt_MASP.Text.Trim();
 			_TruccuahangEntity.Tensp = txt_TENSP.Text.Trim();
-			_TruccuahangEntity.Stttruc = txt_STTTRUC.Text.Trim();
+			try { _TruccuahangEntity.Stttruc = System.Int32.Parse(txt_STTTRUC.Text.Trim()); } 
+			catch { }
 			_TruccuahangEntity.Matruc = txt_MATRUC.Text.Trim();
-			_TruccuahangEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _TruccuahangEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_TruccuahangEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_TruccuahangEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _TruccuahangEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_TruccuahangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_TRUCCUAHANG_PK))
 			{

@@ -70,10 +70,12 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_KETQUATHOI_PK)
 		{
 			KetquathoiEntity _KetquathoiEntity = new KetquathoiEntity();
-			
-			_KetquathoiEntity.Id = txt_ID.Text.Trim();
-			_KetquathoiEntity.Ngay = txt_NGAY.Text.Trim();
-			_KetquathoiEntity.Ca = txt_CA.Text.Trim();
+			try { _KetquathoiEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Ngay = System.DateTime.Parse(txt_NGAY.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Ca = System.Int32.Parse(txt_CA.Text.Trim()); } 
+			catch { }
 			_KetquathoiEntity.Mamay = txt_MAMAY.Text.Trim();
 			_KetquathoiEntity.Lenhthoi = txt_LENHTHOI.Text.Trim();
 			_KetquathoiEntity.Mamang = txt_MAMANG.Text.Trim();
@@ -81,19 +83,31 @@ namespace GD.BBPH.DAL.EntityClasses
 			_KetquathoiEntity.Tenmang = txt_TENMANG.Text.Trim();
 			_KetquathoiEntity.Tenmay = txt_TENMAY.Text.Trim();
 			_KetquathoiEntity.Tencongnhan = txt_TENCONGNHAN.Text.Trim();
-			_KetquathoiEntity.Somet = txt_SOMET.Text.Trim();
-			_KetquathoiEntity.Sokg = txt_SOKG.Text.Trim();
-			_KetquathoiEntity.Phelieuthucte = txt_PHELIEUTHUCTE.Text.Trim();
-			_KetquathoiEntity.Thoigianbatdau = txt_THOIGIANBATDAU.Text.Trim();
-			_KetquathoiEntity.Thoigianketthuc = txt_THOIGIANKETTHUC.Text.Trim();
-			_KetquathoiEntity.Thoigianchuanbi = txt_THOIGIANCHUANBI.Text.Trim();
-			_KetquathoiEntity.Thoigiansuco = txt_THOIGIANSUCO.Text.Trim();
-			_KetquathoiEntity.Chatluong = txt_CHATLUONG.Text.Trim();
-			_KetquathoiEntity.Nangsuat = txt_NANGSUAT.Text.Trim();
-			_KetquathoiEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _KetquathoiEntity.Somet = System.Decimal.Parse(txt_SOMET.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Sokg = System.Decimal.Parse(txt_SOKG.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Phelieuthucte = System.Decimal.Parse(txt_PHELIEUTHUCTE.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Thoigianbatdau = System.DateTime.Parse(txt_THOIGIANBATDAU.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Thoigianketthuc = System.DateTime.Parse(txt_THOIGIANKETTHUC.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Thoigianchuanbi = System.Decimal.Parse(txt_THOIGIANCHUANBI.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Thoigiansuco = System.Decimal.Parse(txt_THOIGIANSUCO.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Chatluong = System.Decimal.Parse(txt_CHATLUONG.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Nangsuat = System.Decimal.Parse(txt_NANGSUAT.Text.Trim()); } 
+			catch { }
+			try { _KetquathoiEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_KetquathoiEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_KetquathoiEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _KetquathoiEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_KetquathoiEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_KETQUATHOI_PK))
 			{

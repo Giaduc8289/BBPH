@@ -88,22 +88,22 @@ namespace GD.BBPH.LIB
       return this.comm.Parameters["RETURN_VALUE"].Value;
     }
 
-    //public static DataTable TOP_mathanggiaodichquay(string strParam_masieuthi, string strParam_manganh)
+    //public static DataTable TOP_mathanggiaodichquay(string strParam_macantim, string strParam_manganh)
     //{
     //  SimpleStoredProcedure simpleStoredProcedure = new SimpleStoredProcedure(ConfigurationManager.AppSettings.Get(DataAccessAdapter.ConnectionStringKeyName));
     //  ListDictionary listDictionary = new ListDictionary();
-    //  listDictionary.Add((object) new SqlParameter("@strParam_masieuthi", SqlDbType.NVarChar, 4000), (object) strParam_masieuthi);
+    //  listDictionary.Add((object) new SqlParameter("@strParam_macantim", SqlDbType.NVarChar, 4000), (object) strParam_macantim);
     //  listDictionary.Add((object) new SqlParameter("@strParam_manganh", SqlDbType.NVarChar, 20), (object) strParam_manganh);
     //  DictionaryEntry[] dictionaryEntryArray = new DictionaryEntry[listDictionary.Count];
     //  listDictionary.CopyTo((Array) dictionaryEntryArray, 0);
     //  return simpleStoredProcedure.ExecuteSPReader("TOP_mathanggiaodichquay", "TOP_mathanggiaodichquay", dictionaryEntryArray).Tables[0];
     //}
 
-    //public static DataTable TOP_mathanggiaodichquay_NGANH(string strParam_masieuthi, string strParam_manganh)
+    //public static DataTable TOP_mathanggiaodichquay_NGANH(string strParam_macantim, string strParam_manganh)
     //{
     //  SimpleStoredProcedure simpleStoredProcedure = new SimpleStoredProcedure(ConfigurationManager.AppSettings.Get(DataAccessAdapter.ConnectionStringKeyName));
     //  ListDictionary listDictionary = new ListDictionary();
-    //  listDictionary.Add((object) new SqlParameter("@strParam_masieuthi", SqlDbType.NVarChar, 4000), (object) strParam_masieuthi);
+    //  listDictionary.Add((object) new SqlParameter("@strParam_macantim", SqlDbType.NVarChar, 4000), (object) strParam_macantim);
     //  listDictionary.Add((object) new SqlParameter("@strParam_manganh", SqlDbType.NVarChar, 20), (object) strParam_manganh);
     //  DictionaryEntry[] dictionaryEntryArray = new DictionaryEntry[listDictionary.Count];
     //  listDictionary.CopyTo((Array) dictionaryEntryArray, 0);

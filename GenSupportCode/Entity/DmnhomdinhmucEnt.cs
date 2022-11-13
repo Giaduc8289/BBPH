@@ -54,14 +54,16 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMNHOMDINHMUC_PK)
 		{
 			DmnhomdinhmucEntity _DmnhomdinhmucEntity = new DmnhomdinhmucEntity();
-			
 			_DmnhomdinhmucEntity.Manhom = txt_MANHOM.Text.Trim();
 			_DmnhomdinhmucEntity.Tennhom = txt_TENNHOM.Text.Trim();
 			_DmnhomdinhmucEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
-			_DmnhomdinhmucEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmnhomdinhmucEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmnhomdinhmucEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmnhomdinhmucEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmnhomdinhmucEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmnhomdinhmucEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMNHOMDINHMUC_PK))
 			{

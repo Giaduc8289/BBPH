@@ -65,25 +65,32 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_XUATKHOSANPHAM_PK)
 		{
 			XuatkhosanphamEntity _XuatkhosanphamEntity = new XuatkhosanphamEntity();
-			
-			_XuatkhosanphamEntity.Id = txt_ID.Text.Trim();
-			_XuatkhosanphamEntity.Ngayxuat = txt_NGAYXUAT.Text.Trim();
+			try { _XuatkhosanphamEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
+			catch { }
+			try { _XuatkhosanphamEntity.Ngayxuat = System.DateTime.Parse(txt_NGAYXUAT.Text.Trim()); } 
+			catch { }
 			_XuatkhosanphamEntity.Makho = txt_MAKHO.Text.Trim();
 			_XuatkhosanphamEntity.Tenkho = txt_TENKHO.Text.Trim();
 			_XuatkhosanphamEntity.Masanpham = txt_MASANPHAM.Text.Trim();
 			_XuatkhosanphamEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
-			_XuatkhosanphamEntity.Soluong = txt_SOLUONG.Text.Trim();
-			_XuatkhosanphamEntity.Somet = txt_SOMET.Text.Trim();
-			_XuatkhosanphamEntity.Sokg = txt_SOKG.Text.Trim();
+			try { _XuatkhosanphamEntity.Soluong = System.Decimal.Parse(txt_SOLUONG.Text.Trim()); } 
+			catch { }
+			try { _XuatkhosanphamEntity.Somet = System.Decimal.Parse(txt_SOMET.Text.Trim()); } 
+			catch { }
+			try { _XuatkhosanphamEntity.Sokg = System.Decimal.Parse(txt_SOKG.Text.Trim()); } 
+			catch { }
 			_XuatkhosanphamEntity.Malydo = txt_MALYDO.Text.Trim();
 			_XuatkhosanphamEntity.Tenlydo = txt_TENLYDO.Text.Trim();
 			_XuatkhosanphamEntity.Lenhsx = txt_LENHSX.Text.Trim();
 			_XuatkhosanphamEntity.Sophieugiao = txt_SOPHIEUGIAO.Text.Trim();
 			_XuatkhosanphamEntity.Madonhang = txt_MADONHANG.Text.Trim();
-			_XuatkhosanphamEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _XuatkhosanphamEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_XuatkhosanphamEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_XuatkhosanphamEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _XuatkhosanphamEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_XuatkhosanphamEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_XUATKHOSANPHAM_PK))
 			{

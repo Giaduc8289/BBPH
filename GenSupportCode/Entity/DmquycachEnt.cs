@@ -57,17 +57,19 @@ namespace GD.BBPH.DAL.EntityClasses
 		private string Save_Data(string _str_DMQUYCACH_PK)
 		{
 			DmquycachEntity _DmquycachEntity = new DmquycachEntity();
-			
 			_DmquycachEntity.Maquycach = txt_MAQUYCACH.Text.Trim();
 			_DmquycachEntity.Tenquycach = txt_TENQUYCACH.Text.Trim();
 			_DmquycachEntity.Macongdoan = txt_MACONGDOAN.Text.Trim();
 			_DmquycachEntity.Tencongdoan = txt_TENCONGDOAN.Text.Trim();
 			_DmquycachEntity.Manhom = txt_MANHOM.Text.Trim();
 			_DmquycachEntity.Tennhom = txt_TENNHOM.Text.Trim();
-			_DmquycachEntity.Ngaytao = txt_NGAYTAO.Text.Trim();
+			try { _DmquycachEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
+			catch { }
 			_DmquycachEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
-			_DmquycachEntity.Ngaysua = txt_NGAYSUA.Text.Trim();
+			try { _DmquycachEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
+			catch { }
 			_DmquycachEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			
 			
 			if (string.IsNullOrEmpty(_str_DMQUYCACH_PK))
 			{
