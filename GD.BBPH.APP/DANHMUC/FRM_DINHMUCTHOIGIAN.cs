@@ -155,6 +155,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_XUONGCUON.Text = _Rowview.Row[DinhmucthoigianFields.Xuongcuon.Name].ToString();
                     txt_THAYTHIETBI.Text = _Rowview.Row[DinhmucthoigianFields.Thaythietbi.Name].ToString();
                     txt_DUNGMAY.Text = _Rowview.Row[DinhmucthoigianFields.Dungmay.Name].ToString();
+                    txt_CHUANBI.Text = _Rowview.Row[DinhmucthoigianFields.Chuanbi.Name].ToString();
 
                     txt_MAMAY_Validating(new object(), new CancelEventArgs());
                     txt_MADONGMAY_Validating(new object(), new CancelEventArgs());
@@ -293,6 +294,8 @@ namespace GD.BBPH.APP.DANHMUC
             _DinhmucthoigianEntity.Xuongcuon = LIB.ConvertString.NumbertoDB(txt_XUONGCUON.Text.Trim());
             _DinhmucthoigianEntity.Thaythietbi = LIB.ConvertString.NumbertoDB(txt_THAYTHIETBI.Text.Trim());
             _DinhmucthoigianEntity.Dungmay = LIB.ConvertString.NumbertoDB(txt_DUNGMAY.Text.Trim());
+            try { _DinhmucthoigianEntity.Chuanbi = System.Decimal.Parse(txt_CHUANBI.Text.Trim()); }
+            catch { }
 
             if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
@@ -330,7 +333,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Xuongcuon.Name].Value = _DinhmucthoigianEntity.Xuongcuon;
                 GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Thaythietbi.Name].Value = _DinhmucthoigianEntity.Thaythietbi;
                 GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Dungmay.Name].Value = _DinhmucthoigianEntity.Dungmay;
-
+                GRID_DINHMUCTHOIGIAN.CurrentRow.Cells[DinhmucthoigianFields.Chuanbi.Name].Value = _DinhmucthoigianEntity.Chuanbi;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DinhmucthoigianManager.Convert(_DinhmucthoigianEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = false;
             }

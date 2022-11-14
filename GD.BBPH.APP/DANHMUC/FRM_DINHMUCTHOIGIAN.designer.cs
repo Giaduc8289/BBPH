@@ -91,6 +91,8 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MADINHMUC = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_CHUANBI = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label23 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -148,6 +150,8 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_CHUANBI);
+            this.uiPanel1Container.Controls.Add(this.label23);
             this.uiPanel1Container.Controls.Add(this.txt_DODAYTU);
             this.uiPanel1Container.Controls.Add(this.txt_DODAYDEN);
             this.uiPanel1Container.Controls.Add(this.txt_KHOTU);
@@ -918,6 +922,30 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã định mức";
             // 
+            // txt_CHUANBI
+            // 
+            this.txt_CHUANBI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CHUANBI.BannerText = null;
+            this.txt_CHUANBI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_CHUANBI.Giatrithapphan = 2;
+            this.txt_CHUANBI.IsSoNguyen = false;
+            this.txt_CHUANBI.Location = new System.Drawing.Point(473, 534);
+            this.txt_CHUANBI.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_CHUANBI.Name = "txt_CHUANBI";
+            this.txt_CHUANBI.Regular_Expression = "";
+            this.txt_CHUANBI.Size = new System.Drawing.Size(109, 20);
+            this.txt_CHUANBI.TabIndex = 168;
+            this.txt_CHUANBI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(419, 537);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(49, 13);
+            this.label23.TabIndex = 169;
+            this.label23.Text = "Chuẩn bị";
+            // 
             // FRM_DINHMUCTHOIGIAN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1004,5 +1032,7 @@
         private CONTROL.TEXTBOXNUMBER txt_XUONGCUON;
         private CONTROL.TEXTBOXNUMBER txt_THAYTHIETBI;
         private CONTROL.TEXTBOXNUMBER txt_DUNGMAY;
+        private CONTROL.TEXTBOXNUMBER txt_CHUANBI;
+        protected internal CONTROL.LABEL label23;
     }
 }

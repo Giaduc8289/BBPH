@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 14, 2022 10:56:49 AM
+// Code is generated on: Monday, November 14, 2022 2:47:53 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -264,6 +264,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DinhmucthoigianEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("DinhmucthoigianEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("DinhmucthoigianEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Nguoisua, 50, 0, 0);
+			base.AddElementFieldInfo("DinhmucthoigianEntity", "Chuanbi", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DinhmucthoigianFieldIndex.Chuanbi, 0, 3, 20);
 		}
 		/// <summary>Inits DinhmucvattuEntity's FieldInfo objects</summary>
 		private void InitDinhmucvattuEntityInfos()

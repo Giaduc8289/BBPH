@@ -30,11 +30,6 @@
     </xs:element>
   </xs:schema>
 
-  <tablename>
-    <name>Danhmuccongnhan</name>
-    <headerText>Danh sách công nhân</headerText>
-  </tablename>
-
   <viewgrid>
     <value>1</value>
     <name>C</name>
@@ -46,8 +41,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Mahieu</name>
-    <headerText>Mã</headerText>
+    <name>Macn</name>
+    <headerText>Mã công nhân</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -55,7 +50,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Hovaten</name>
+    <name>Hovatencongnhan</name>
     <headerText>Họ và tên</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -63,9 +58,18 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
+    <value>1</value>
+    <name>Tencongnhan</name>
+    <headerText>Tên</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>70</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
     <value>2</value>
-    <name>Ten</name>
-    <headerText>Ten</headerText>
+    <name>Mabp</name>
+    <headerText>Mã bộ phận</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -73,8 +77,26 @@
   </viewgrid>
   <viewgrid>
     <value>2</value>
-    <name>Maphongban</name>
-    <headerText>Maphongban</headerText>
+    <name>Macv</name>
+    <headerText>Mã chức vụ</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Sodienthoai</name>
+    <headerText>Số điện thoại</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Tinhtrang</name>
+    <headerText>Tình trạng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -83,16 +105,7 @@
   <viewgrid>
     <value>1</value>
     <name>Phongban</name>
-    <headerText>Bộ phận</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
-    <name>Machucvu</name>
-    <headerText>Machucvu</headerText>
+    <headerText>Phòng ban</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -108,16 +121,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
-    <name>Sodienthoai</name>
-    <headerText>SĐT</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Danghi</name>
     <headerText>Đã nghỉ</headerText>
     <BackColor>0</BackColor>
@@ -125,4 +129,44 @@
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Ngaytao</name>
+    <headerText>Ngaytao</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Nguoitao</name>
+    <headerText>Nguoitao</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Ngaysua</name>
+    <headerText>Ngaysua</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Nguoisua</name>
+    <headerText>Nguoisua</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <tablename>
+    <name>Dmcongnhan</name>
+    <headerText>Danh sách công nhân</headerText>
+  </tablename>
 </NewDataSet>

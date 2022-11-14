@@ -180,6 +180,7 @@ namespace GD.BBPH.APP.THOI
                     txt_THOIGIANCHUANBI.Text = _Rowview.Row[KetquathoiFields.Thoigianchuanbi.Name].ToString();
                     txt_THOIGIANSUCO.Text = _Rowview.Row[KetquathoiFields.Thoigiansuco.Name].ToString();
                     //txt_SOKGDUKIEN.Text = _Rowview.Row[KetquathoiFields.Sokgdukiendat.Name].ToString();
+                    txt_TOCDODINHMUC.Text = _Rowview.Row[KetquathoiFields.Tocdodinhmuc.Name].ToString();
 
                     txt_CHATLUONG.Text = _Rowview.Row[KetquathoiFields.Chatluong.Name].ToString();
                     txt_NANGSUAT.Text = _Rowview.Row[KetquathoiFields.Nangsuat.Name].ToString();
@@ -220,6 +221,8 @@ namespace GD.BBPH.APP.THOI
             r_Detail[KetquathoiFields.Lenhthoi.Name] = txt_LENHTHOI.Text;
             r_Detail[KetquathoiFields.Macongnhan.Name] = txt_MACONGNHAN.Text;
             r_Detail[KetquathoiFields.Tencongnhan.Name] = txt_TENCONGNHAN.Text;
+            r_Detail[KetquathoiFields.Matruongca.Name] = txt_MATRUONGCA.Text;
+            r_Detail[KetquathoiFields.Tentruongca.Name] = txt_TENTRUONGCA.Text;
             r_Detail[KetquathoiFields.Mamang.Name] = txt_MAMANG.Text;
             r_Detail[KetquathoiFields.Tenmang.Name] = txt_TENMANG.Text;
             r_Detail[KetquathoiFields.Somet.Name] = LIB.ConvertString.NumbertoDB(txt_SOM.Text.Trim()); 
@@ -231,7 +234,8 @@ namespace GD.BBPH.APP.THOI
             r_Detail[KetquathoiFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
 
             r_Detail[KetquathoiFields.Chatluong.Name] = LIB.ConvertString.NumbertoDB(txt_CHATLUONG.Text.Trim()); 
-            r_Detail[KetquathoiFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim()); 
+            r_Detail[KetquathoiFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
+            r_Detail[KetquathoiFields.Tocdodinhmuc.Name] = LIB.ConvertString.NumbertoDB(txt_TOCDODINHMUC.Text.Trim());
 
             DT_KQTHOI_CHITIET_FILL.Rows.Add(r_Detail);
 
@@ -321,6 +325,10 @@ namespace GD.BBPH.APP.THOI
                 _KetquathoiEntity.Thoigiansuco = LIB.ConvertString.NumbertoDB(_view.Row[KetquathoiFields.Thoigiansuco.Name].ToString());
                 _KetquathoiEntity.Chatluong = LIB.ConvertString.NumbertoDB(_view.Row[KetquathoiFields.Chatluong.Name].ToString());
                 _KetquathoiEntity.Nangsuat = LIB.ConvertString.NumbertoDB(_view.Row[KetquathoiFields.Nangsuat.Name].ToString());
+                _KetquathoiEntity.Matruongca = _view.Row[KetquathoiFields.Matruongca.Name].ToString();
+                _KetquathoiEntity.Tentruongca = _view.Row[KetquathoiFields.Tentruongca.Name].ToString();
+                try { _KetquathoiEntity.Tocdodinhmuc = System.Decimal.Parse(_view.Row[KetquathoiFields.Tocdodinhmuc.Name].ToString()); }
+                catch { }
 
                 try { _KetquathoiEntity.Id = Convert.ToInt64(_view[KetquathoiFields.Id.Name].ToString()); }
                 catch { }
@@ -373,15 +381,16 @@ namespace GD.BBPH.APP.THOI
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            txt_TENMAY.Text = txt_TENCONGNHAN.Text = txt_TENMANG.Text = string.Empty;
+            txt_TENMAY.Text = txt_TENCONGNHAN.Text = txt_TENMANG.Text = txt_MATRUONGCA.Text = txt_TENTRUONGCA.Text = string.Empty;
             r_Insert = DT_KQTHOI.NewRow();
             DT_KQTHOI.Rows.Add(r_Insert);
             BS_KQTHOI.Position = DT_KQTHOI.Rows.Count;
             MAHIEU_PK = "";
             txt_NGAY.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENMANG, txt_TENMAY, txt_CHATLUONG, txt_NANGSUAT }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENMANG, txt_TENMAY, txt_CHATLUONG, txt_NANGSUAT, txt_MATRUONGCA, txt_TENTRUONGCA, txt_TOCDODINHMUC }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            FUNCTION = GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI;
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
             GRID_KQTHOI.Enabled = false;
 
@@ -394,8 +403,9 @@ namespace GD.BBPH.APP.THOI
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                FUNCTION = GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA;
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENCONGNHAN, txt_TENMANG, txt_TENMAY, txt_CHATLUONG, txt_NANGSUAT }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] {txt_TENCONGNHAN, txt_TENMANG, txt_TENMAY, txt_CHATLUONG, txt_NANGSUAT, txt_MATRUONGCA, txt_TENTRUONGCA, txt_TOCDODINHMUC }));
             }
             GRID_KQTHOICHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
             GRID_KQTHOICHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.True;
@@ -413,6 +423,7 @@ namespace GD.BBPH.APP.THOI
             }
             BS_KQTHOI_CurrentChanged(new object(), new EventArgs());
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            FUNCTION = GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL;
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
             FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
             GRID_KQTHOI.Enabled = true;
@@ -458,8 +469,9 @@ namespace GD.BBPH.APP.THOI
             GRID_KQTHOICHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_KQTHOICHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
             GRID_KQTHOICHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
+            FUNCTION = GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD;
         }
-        
+
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
             if (txt_NGAY.Text == "")
@@ -490,7 +502,7 @@ namespace GD.BBPH.APP.THOI
                 GRID_KQTHOICHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_KQTHOICHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_KQTHOICHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
-
+                FUNCTION = GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD;
             }
         }
         private void btn_Thoat_Click(object sender, EventArgs e)
@@ -500,13 +512,12 @@ namespace GD.BBPH.APP.THOI
         #endregion
 
         #region Validate
-
         private void txt_MAMAY_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MAMAY.Text.Trim()) || DT_DMMAY == null || DT_DMMAY.Rows.Count == 0) return;
             string _str_MACANTIM = txt_MAMAY.Text.Trim().ToUpper();
-            _RowViewSelect = checkmamay(_str_MACANTIM, DT_DMMAY);
+            _RowViewSelect = new DmmayManager().CheckMa(_str_MACANTIM, DT_DMMAY);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
@@ -524,58 +535,12 @@ namespace GD.BBPH.APP.THOI
             }
         }
 
-        private DataRow checkmamay(string macantim, DataTable dt)
-        {
-            try
-            {
-                return dt.Select(DmmayFields.Mamay.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
-            }
-            catch { return null; }
-        }
-
-        //private void txt_LENHTHOI_Validating(object sender, CancelEventArgs e)
-        //{
-        //    _RowViewSelect = null;
-        //    if (string.IsNullOrEmpty(txt_LENHTHOI.Text.Trim()) || DT_LENHTHOI == null || DT_LENHTHOI.Rows.Count == 0) return;
-        //    string _str_MACANTIM = txt_LENHTHOI.Text.Trim().ToUpper();
-        //    _RowViewSelect = checklenhthoi(_str_MACANTIM, DT_LENHTHOI);
-        //    if (_RowViewSelect == null)
-        //    {
-        //        ListviewJanus _frm_SingerRows_Select =
-        //            new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMKHACH.xml",
-        //                DT_LENHTHOI, DmkhachFields.Makhach.Name, _str_MACANTIM);
-        //        _frm_SingerRows_Select.ShowDialog();
-        //        if (_frm_SingerRows_Select._RowViewSelect == null) return;
-        //        _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-        //        txt_LENHTHOI.Text = _RowViewSelect[DmkhachFields.Makhach.Name].ToString();
-        //        txt_LENHTHOI.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
-
-        //        DT_LENHTHOI = new DmhangManager().SelectByMakhachRDT(txt_LENHTHOI.Text);
-
-        //    }
-        //    else
-        //    {
-        //        txt_LENHTHOI.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
-        //        DT_LENHTHOI = new DmhangManager().SelectByMakhachRDT(txt_LENHTHOI.Text);
-
-        //    }
-        //}
-        //private DataRow checklenhthoi(string macantim, DataTable dt)
-        //{
-        //    try
-        //    {
-        //        return dt.Select(.Mamay.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
-        //    }
-        //    catch { return null; }
-        //}
-
-
         private void txt_MAMANG_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
             if (string.IsNullOrEmpty(txt_MAMANG.Text.Trim()) || DT_DMMANG == null || DT_DMMANG.Rows.Count == 0) return;
             string _str_MACANTIM = txt_MAMANG.Text.Trim().ToUpper();
-            _RowViewSelect = checkmamang(_str_MACANTIM, DT_DMMANG);
+            _RowViewSelect = new DmmangManager().CheckMa(_str_MACANTIM, DT_DMMANG);
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
@@ -586,53 +551,38 @@ namespace GD.BBPH.APP.THOI
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_MAMANG.Text = _RowViewSelect[DmmangFields.Mamang.Name].ToString();
                 txt_TENMANG.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
-
+                Tinhtocdodinhmuc();
             }
             else
             {
                 txt_TENMANG.Text = _RowViewSelect[DmmangFields.Tenmang.Name].ToString();
+                Tinhtocdodinhmuc();
             }
-        }
-        private DataRow checkmamang(string macantim, DataTable dt)
-        {
-            try
-            {
-                return dt.Select(DmmangFields.Mamang.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
-            }
-            catch { return null; }
         }
 
         private void txt_MACONGNHAN_Validating(object sender, CancelEventArgs e)
         {
-            _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_MACONGNHAN.Text.Trim()) || DT_NHANVIEN == null || DT_NHANVIEN.Rows.Count == 0) return;
-            string _str_MACANTIM = txt_MACONGNHAN.Text.Trim().ToUpper();
-            _RowViewSelect = checkmacongnnhang(_str_MACANTIM, DT_NHANVIEN);
-            if (_RowViewSelect == null)
-            {
-                ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCONGNHAN.xml",
-                        DT_NHANVIEN, DmcongnhanFields.Macn.Name, _str_MACANTIM);
-                _frm_SingerRows_Select.ShowDialog();
-                if (_frm_SingerRows_Select._RowViewSelect == null) return;
-                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_MACONGNHAN.Text = _RowViewSelect[DmcongnhanFields.Macn.Name].ToString();
-                txt_TENCONGNHAN.Text = _RowViewSelect[DmcongnhanFields.Tencongnhan.Name].ToString();
+            ListviewJanusC _frm =
+                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCONGNHAN_CHON.xml", DT_NHANVIEN, DmcongnhanFields.Macn.Name, txt_MACONGNHAN.Text);
+            _frm.ShowDialog();
+            if (_frm._RowsViewSelect == null) return;
 
-            }
-            else
+            string strMa = "", strTen = "", strMaTC = "", strTenTC = "";
+            foreach (DataRowView drv in _frm._RowsViewSelect)
             {
-                txt_TENCONGNHAN.Text = _RowViewSelect[DmcongnhanFields.Tencongnhan.Name].ToString();
+                strMa += drv.Row[DmcongnhanFields.Macn.Name].ToString() + ",";
+                strTen += drv.Row[DmcongnhanFields.Tencongnhan.Name].ToString() + ",";
+                if(drv.Row[DmcongnhanFields.Macv.Name].ToString()=="TC")
+                {
+                    strMaTC = drv.Row[DmcongnhanFields.Macn.Name].ToString();
+                    strTenTC = drv.Row[DmcongnhanFields.Tencongnhan.Name].ToString();
+                }
+            }
 
-            }
-        }
-        private DataRow checkmacongnnhang(string macantim, DataTable dt)
-        {
-            try
-            {
-                return dt.Select(DmcongnhanFields.Macn.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
-            }
-            catch { return null; }
+            txt_MACONGNHAN.Text = strMa;
+            txt_TENCONGNHAN.Text = strTen;
+            txt_MATRUONGCA.Text = strMaTC;
+            txt_TENTRUONGCA.Text = strTenTC;
         }
         #endregion
 
@@ -671,6 +621,27 @@ namespace GD.BBPH.APP.THOI
         {
             Tinhnangsuat();
             Tinhchatluong();
+        }
+        private void Tinhtocdodinhmuc()
+        {
+            try
+            {
+                decimal _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MAMANG.Text);
+                txt_TOCDODINHMUC.Text = Math.Round(_tocdo).ToString();
+            }
+            catch { }
+        }
+        private void Tinhthoigianchuanbi()
+        {
+            try
+            {
+                if (FUNCTION == GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI)
+                {
+                    decimal _thoigiancb = LIB.Procedures.fTinhdinhmucthoigian(txt_MAMAY.Text, txt_MAMANG.Text, DinhmucthoigianFields.Chuanbi.Name);
+                    txt_THOIGIANCHUANBI.Text = Math.Round(_thoigiancb).ToString();
+                }
+            }
+            catch { }
         }
         #endregion
 

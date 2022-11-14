@@ -76,6 +76,15 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Tocdodinhmuc</name>
+    <headerText>Tốc độ ĐM</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>65</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Nangsuat</name>
     <headerText>Năng suất</headerText>
     <BackColor>0</BackColor>
@@ -141,6 +150,24 @@
     <value>1</value>
     <name>Tencongnhan</name>
     <headerText>Tên công nhân</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Matruongca</name>
+    <headerText>Mã trưởng ca</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>80</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Tentruongca</name>
+    <headerText>Tên trưởng ca</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
