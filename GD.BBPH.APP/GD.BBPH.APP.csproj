@@ -927,6 +927,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RDLC\KQHOANTHIENCHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\NHUCAUMUC.rdlc" />
     <EmbeddedResource Include="RDLC\NHUCAUKEO.rdlc" />
     <EmbeddedResource Include="RDLC\NHUCAUMANG.rdlc" />
