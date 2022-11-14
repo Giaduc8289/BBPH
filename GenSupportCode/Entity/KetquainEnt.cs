@@ -68,6 +68,9 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NANGSUAT.Text = _Rowview.Row[KetquainFields.Nangsuat.Name].ToString();
 					txt_TYLESAIHONG.Text = _Rowview.Row[KetquainFields.Tylesaihong.Name].ToString();
 					txt_TONGMDM.Text = _Rowview.Row[KetquainFields.Tongmdm.Name].ToString();
+					txt_MATRUONGCA.Text = _Rowview.Row[KetquainFields.Matruongca.Name].ToString();
+					txt_TENTRUONGCA.Text = _Rowview.Row[KetquainFields.Tentruongca.Name].ToString();
+					txt_TOCDODINHMUC.Text = _Rowview.Row[KetquainFields.Tocdodinhmuc.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KETQUAIN_CurrentChanged"); }
@@ -125,6 +128,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			catch { }
 			try { _KetquainEntity.Tongmdm = System.Decimal.Parse(txt_TONGMDM.Text.Trim()); } 
 			catch { }
+			_KetquainEntity.Matruongca = txt_MATRUONGCA.Text.Trim();
+			_KetquainEntity.Tentruongca = txt_TENTRUONGCA.Text.Trim();
+			try { _KetquainEntity.Tocdodinhmuc = System.Decimal.Parse(txt_TOCDODINHMUC.Text.Trim()); } 
+			catch { }
 			
 			
 			if (string.IsNullOrEmpty(_str_KETQUAIN_PK))
@@ -166,6 +173,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_KETQUAIN.CurrentRow.Cells[KetquainFields.Nangsuat.Name].Value = _KetquainEntity.Nangsuat;
 				GRID_KETQUAIN.CurrentRow.Cells[KetquainFields.Tylesaihong.Name].Value = _KetquainEntity.Tylesaihong;
 				GRID_KETQUAIN.CurrentRow.Cells[KetquainFields.Tongmdm.Name].Value = _KetquainEntity.Tongmdm;
+				GRID_KETQUAIN.CurrentRow.Cells[KetquainFields.Matruongca.Name].Value = _KetquainEntity.Matruongca;
+				GRID_KETQUAIN.CurrentRow.Cells[KetquainFields.Tentruongca.Name].Value = _KetquainEntity.Tentruongca;
+				GRID_KETQUAIN.CurrentRow.Cells[KetquainFields.Tocdodinhmuc.Name].Value = _KetquainEntity.Tocdodinhmuc;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquainManager.Convert(_KetquainEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_KETQUAIN_PK;

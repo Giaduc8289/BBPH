@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 9, 2022 10:14:03 AM
+// Code is generated on: Monday, November 14, 2022 10:56:50 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -564,6 +564,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Matruongca", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tentruongca", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tocdodinhmuc", fieldHashtable);
 		}
 		#endregion
 
@@ -1044,6 +1053,39 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquahoanthienFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)KetquahoanthienFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Matruongca property of the Entity Ketquahoanthien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquahoanthien"."Matruongca"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Matruongca
+		{
+			get { return (System.String)GetValue((int)KetquahoanthienFieldIndex.Matruongca, true); }
+			set	{ SetValue((int)KetquahoanthienFieldIndex.Matruongca, value); }
+		}
+
+		/// <summary> The Tentruongca property of the Entity Ketquahoanthien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquahoanthien"."Tentruongca"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tentruongca
+		{
+			get { return (System.String)GetValue((int)KetquahoanthienFieldIndex.Tentruongca, true); }
+			set	{ SetValue((int)KetquahoanthienFieldIndex.Tentruongca, value); }
+		}
+
+		/// <summary> The Tocdodinhmuc property of the Entity Ketquahoanthien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquahoanthien"."Tocdodinhmuc"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tocdodinhmuc
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquahoanthienFieldIndex.Tocdodinhmuc, false); }
+			set	{ SetValue((int)KetquahoanthienFieldIndex.Tocdodinhmuc, value); }
 		}
 
 

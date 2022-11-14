@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 9, 2022 10:14:01 AM
+// Code is generated on: Monday, November 14, 2022 10:56:49 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -807,6 +807,12 @@ namespace GD.BBPH.DAL
 		MaArgb,
 		///<summary>Ghichu. </summary>
 		Ghichu,
+		///<summary>Kyhieu. </summary>
+		Kyhieu,
+		///<summary>Masanphams. </summary>
+		Masanphams,
+		///<summary>Tensanphams. </summary>
+		Tensanphams,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1207,6 +1213,12 @@ namespace GD.BBPH.DAL
 		Tylesaihong,
 		///<summary>Socuon. </summary>
 		Socuon,
+		///<summary>Matruongca. </summary>
+		Matruongca,
+		///<summary>Tentruongca. </summary>
+		Tentruongca,
+		///<summary>Tocdodinhmuc. </summary>
+		Tocdodinhmuc,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1287,6 +1299,12 @@ namespace GD.BBPH.DAL
 		Tencongnhan,
 		///<summary>Nangsuat. </summary>
 		Nangsuat,
+		///<summary>Matruongca. </summary>
+		Matruongca,
+		///<summary>Tentruongca. </summary>
+		Tentruongca,
+		///<summary>Tocdodinhmuc. </summary>
+		Tocdodinhmuc,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1365,6 +1383,12 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Matruongca. </summary>
+		Matruongca,
+		///<summary>Tentruongca. </summary>
+		Tentruongca,
+		///<summary>Tocdodinhmuc. </summary>
+		Tocdodinhmuc,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1433,6 +1457,12 @@ namespace GD.BBPH.DAL
 		Tylesaihong,
 		///<summary>Tongmdm. </summary>
 		Tongmdm,
+		///<summary>Matruongca. </summary>
+		Matruongca,
+		///<summary>Tentruongca. </summary>
+		Tentruongca,
+		///<summary>Tocdodinhmuc. </summary>
+		Tocdodinhmuc,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1527,6 +1557,12 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Matruongca. </summary>
+		Matruongca,
+		///<summary>Tentruongca. </summary>
+		Tentruongca,
+		///<summary>Tocdodinhmuc. </summary>
+		Tocdodinhmuc,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1601,6 +1637,12 @@ namespace GD.BBPH.DAL
 		Thoigiandauca,
 		///<summary>Chenhlechkg. </summary>
 		Chenhlechkg,
+		///<summary>Matruongca. </summary>
+		Matruongca,
+		///<summary>Tentruongca. </summary>
+		Tentruongca,
+		///<summary>Tocdodinhmuc. </summary>
+		Tocdodinhmuc,
 		/// <summary></summary>
 		AmountOfFields
 	}

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 9, 2022 10:14:03 AM
+// Code is generated on: Monday, November 14, 2022 10:56:50 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -482,6 +482,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Ghichu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Kyhieu", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Masanphams", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tensanphams", fieldHashtable);
 		}
 		#endregion
 
@@ -655,6 +664,39 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmmauFieldIndex.Ghichu, true); }
 			set	{ SetValue((int)DmmauFieldIndex.Ghichu, value); }
+		}
+
+		/// <summary> The Kyhieu property of the Entity Dmmau<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmau"."Kyhieu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Kyhieu
+		{
+			get { return (System.String)GetValue((int)DmmauFieldIndex.Kyhieu, true); }
+			set	{ SetValue((int)DmmauFieldIndex.Kyhieu, value); }
+		}
+
+		/// <summary> The Masanphams property of the Entity Dmmau<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmau"."Masanphams"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Masanphams
+		{
+			get { return (System.String)GetValue((int)DmmauFieldIndex.Masanphams, true); }
+			set	{ SetValue((int)DmmauFieldIndex.Masanphams, value); }
+		}
+
+		/// <summary> The Tensanphams property of the Entity Dmmau<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmau"."Tensanphams"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tensanphams
+		{
+			get { return (System.String)GetValue((int)DmmauFieldIndex.Tensanphams, true); }
+			set	{ SetValue((int)DmmauFieldIndex.Tensanphams, value); }
 		}
 
 		/// <summary> Gets the EntityCollection with the related entities of type 'ThanhphanmauEntity' which are related to this entity via a relation of type '1:n'.

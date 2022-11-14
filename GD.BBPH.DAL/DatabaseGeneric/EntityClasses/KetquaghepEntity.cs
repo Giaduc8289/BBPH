@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 9, 2022 10:14:03 AM
+// Code is generated on: Monday, November 14, 2022 10:56:50 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -567,6 +567,15 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nangsuat", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Matruongca", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tentruongca", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tocdodinhmuc", fieldHashtable);
 		}
 		#endregion
 
@@ -744,7 +753,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Macongnhan property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Macongnhan"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Macongnhan
 		{
@@ -1041,7 +1050,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Tencongnhan property of the Entity Ketquaghep<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Ketquaghep"."Tencongnhan"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tencongnhan
 		{
@@ -1058,6 +1067,39 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)KetquaghepFieldIndex.Nangsuat, false); }
 			set	{ SetValue((int)KetquaghepFieldIndex.Nangsuat, value); }
+		}
+
+		/// <summary> The Matruongca property of the Entity Ketquaghep<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquaghep"."Matruongca"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Matruongca
+		{
+			get { return (System.String)GetValue((int)KetquaghepFieldIndex.Matruongca, true); }
+			set	{ SetValue((int)KetquaghepFieldIndex.Matruongca, value); }
+		}
+
+		/// <summary> The Tentruongca property of the Entity Ketquaghep<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquaghep"."Tentruongca"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tentruongca
+		{
+			get { return (System.String)GetValue((int)KetquaghepFieldIndex.Tentruongca, true); }
+			set	{ SetValue((int)KetquaghepFieldIndex.Tentruongca, value); }
+		}
+
+		/// <summary> The Tocdodinhmuc property of the Entity Ketquaghep<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquaghep"."Tocdodinhmuc"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tocdodinhmuc
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquaghepFieldIndex.Tocdodinhmuc, false); }
+			set	{ SetValue((int)KetquaghepFieldIndex.Tocdodinhmuc, value); }
 		}
 
 
