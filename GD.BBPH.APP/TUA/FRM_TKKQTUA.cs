@@ -31,8 +31,9 @@ namespace GD.BBPH.APP.TUA
         private GD.BBPH.CONTROL.JGridEX GRID_TKKQTUA = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_TKKQTUA_CHITIET = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET = "";
+        private bool ADDROW = false;
 
-        private DataTable DT_HANG = new DataTable(), DT_DMCONGNHAN = new DataTable(), DT_DMMAY = new DataTable(), DT_NHANVIEN = new DataTable();
+        private DataTable DT_HANG = new DataTable(), DT_DMCONGNHAN = new DataTable(), DT_DMMAY = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
@@ -171,6 +172,7 @@ namespace GD.BBPH.APP.TUA
                     txt_LENHTUA.Text = _Rowview.Row[KetquatuaFields.Lenhtua.Name].ToString();
                     txt_MASANPHAM.Text = _Rowview.Row[KetquatuaFields.Masanpham.Name].ToString();
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquatuaFields.Macongnhan.Name].ToString();
+                    txt_TENCONGNHAN.Text = _Rowview.Row[KetquatuaFields.Tencongnhan.Name].ToString();
                     txt_DAURAIN.Text = _Rowview.Row[KetquatuaFields.Daurain.Name].ToString();
                     txt_SOMETVAO.Text = _Rowview.Row[KetquatuaFields.SoMetvao.Name].ToString();
                     txt_KHOILUONGVAO.Text = _Rowview.Row[KetquatuaFields.SoKgvao.Name].ToString();
@@ -188,11 +190,12 @@ namespace GD.BBPH.APP.TUA
                     txt_PHESANXUAT.Text = _Rowview.Row[KetquatuaFields.Phesx.Name].ToString();
                     txt_TENSANPHAM.Text = _Rowview.Row[KetquatuaFields.Tensanpham.Name].ToString();
                     txt_TENMAY.Text = _Rowview.Row[KetquatuaFields.Tenmay.Name].ToString();
-                    txt_TENCONGNHAN.Text = _Rowview.Row[KetquatuaFields.Tencongnhan.Name].ToString();
-
+                   
                     txt_NANGSUAT.Text = _Rowview.Row[KetquatuaFields.Nangsuat.Name].ToString();
                     txt_THOIGIANDAUCA.Text = _Rowview.Row[KetquatuaFields.Thoigiandauca.Name].ToString();
                     txt_CHENHLECHKG.Text = _Rowview.Row[KetquatuaFields.Chenhlechkg.Name].ToString();
+                    txt_MATRUONGCA.Text = _Rowview.Row[KetquatuaFields.Matruongca.Name].ToString();
+                    txt_TENTRUONGCA.Text = _Rowview.Row[KetquatuaFields.Tentruongca.Name].ToString();
                     txt_TOCDODINHMUC.Text = _Rowview.Row[KetquatuaFields.Tocdodinhmuc.Name].ToString();
                 }
                 else
@@ -227,6 +230,7 @@ namespace GD.BBPH.APP.TUA
         #region Xu ly dong chi tiet
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
+            ADDROW = true;
             DataRow r_Detail = DT_TKKQTUA_CHITIET_FILL.NewRow();
 
             r_Detail[KetquatuaFields.Lenhtua.Name] = txt_LENHTUA.Text;
@@ -266,6 +270,7 @@ namespace GD.BBPH.APP.TUA
             BS_TKKQTUA_CHITIET.Position = DT_TKKQTUA_CHITIET_FILL.Rows.Count;
             //Tinhtong();
             //txt_MAHANG.Focus();
+            ADDROW = false;
         }
         private void btn_XOADONG_Click(object sender, EventArgs e)
         {
@@ -597,8 +602,11 @@ namespace GD.BBPH.APP.TUA
 
         private void txt_MACONGNHAN_Validating(object sender, CancelEventArgs e)
         {
+            if (ADDROW) return;
+            if (string.IsNullOrEmpty(txt_MACONGNHAN.Text) || !btn_LUULAI.Enabled) return;
+            txt_TENCONGNHAN.Text = txt_MATRUONGCA.Text = txt_TENTRUONGCA.Text = string.Empty;
             ListviewJanusC _frm =
-                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCONGNHAN_CHON.xml", DT_NHANVIEN, DmcongnhanFields.Macn.Name, txt_MACONGNHAN.Text);
+                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCONGNHAN_CHON.xml", DT_DMCONGNHAN, DmcongnhanFields.Macn.Name, txt_MACONGNHAN.Text);
             _frm.ShowDialog();
             if (_frm._RowsViewSelect == null) return;
 
