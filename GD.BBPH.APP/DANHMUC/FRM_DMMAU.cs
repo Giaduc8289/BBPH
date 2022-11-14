@@ -244,6 +244,9 @@ namespace GD.BBPH.APP.DANHMUC
                     catch { }
                     try { chk_LAMAUGOC.Checked = Convert.ToBoolean(_Rowview.Row[DmmauFields.Lamaugoc.Name].ToString()); }
                     catch { }
+                    txt_KYHIEU.Text = _Rowview.Row[DmmauFields.Kyhieu.Name].ToString();
+                    txt_MASANPHAMS.Text = _Rowview.Row[DmmauFields.Masanphams.Name].ToString();
+                    txt_TENSANPHAMS.Text = _Rowview.Row[DmmauFields.Tensanphams.Name].ToString();
 
                     SHOWGRID(MAHIEU_PK);
                 }
@@ -308,6 +311,9 @@ namespace GD.BBPH.APP.DANHMUC
                 _DmmauEntity.Lamaugoc = true;
             else
                 _DmmauEntity.Lamaugoc = false;
+            _DmmauEntity.Kyhieu = txt_KYHIEU.Text.Trim();
+            _DmmauEntity.Masanphams = txt_MASANPHAMS.Text.Trim();
+            _DmmauEntity.Tensanphams = txt_TENSANPHAMS.Text.Trim();
 
             EntityCollection _ThanhphanmauEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_TPMAU.GetDataRows();
@@ -394,6 +400,9 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMMAU.CurrentRow.Cells[DmmauFields.Tenmau.Name].Value = _DmmauEntity.Tenmau;
                 GRID_DMMAU.CurrentRow.Cells[DmmauFields.MaArgb.Name].Value = _DmmauEntity.MaArgb;
                 GRID_DMMAU.CurrentRow.Cells[DmmauFields.Ghichu.Name].Value = _DmmauEntity.Ghichu;
+                GRID_DMMAU.CurrentRow.Cells[DmmauFields.Kyhieu.Name].Value = _DmmauEntity.Kyhieu;
+                GRID_DMMAU.CurrentRow.Cells[DmmauFields.Masanphams.Name].Value = _DmmauEntity.Masanphams;
+                GRID_DMMAU.CurrentRow.Cells[DmmauFields.Tensanphams.Name].Value = _DmmauEntity.Tensanphams;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmmauManager.Convert(_DmmauEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_TPMAU.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_TPMAU.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;

@@ -34,6 +34,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.label3 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_GHICHU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label2 = new GD.BBPH.CONTROL.LABEL();
             this.btn_CHONMAU = new System.Windows.Forms.Button();
             this.txt_MAARGB = new System.Windows.Forms.TextBox();
@@ -52,8 +54,12 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_MAMAU = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.label3 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_GHICHU = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label4 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_KYHIEU = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label5 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_TENSANPHAMS = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_MASANPHAMS = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label6 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -74,7 +80,7 @@
             // 
             this.uiPanelManager1.BeginPanelInfo();
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(529, 559), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(841, 559), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(928, 559), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -104,12 +110,18 @@
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(532, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(841, 559);
+            this.uiPanel1.Size = new System.Drawing.Size(928, 559);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.label5);
+            this.uiPanel1Container.Controls.Add(this.txt_TENSANPHAMS);
+            this.uiPanel1Container.Controls.Add(this.txt_MASANPHAMS);
+            this.uiPanel1Container.Controls.Add(this.label6);
+            this.uiPanel1Container.Controls.Add(this.label4);
+            this.uiPanel1Container.Controls.Add(this.txt_KYHIEU);
             this.uiPanel1Container.Controls.Add(this.label3);
             this.uiPanel1Container.Controls.Add(this.txt_GHICHU);
             this.uiPanel1Container.Controls.Add(this.label2);
@@ -132,13 +144,36 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(839, 535);
+            this.uiPanel1Container.Size = new System.Drawing.Size(926, 535);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 127;
+            this.label3.Text = "Ghi chú";
+            // 
+            // txt_GHICHU
+            // 
+            this.txt_GHICHU.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_GHICHU.BannerText = null;
+            this.txt_GHICHU.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_GHICHU.FormNametoShow = "";
+            this.txt_GHICHU.Is_DateTime = false;
+            this.txt_GHICHU.IsShowForm = false;
+            this.txt_GHICHU.Location = new System.Drawing.Point(88, 71);
+            this.txt_GHICHU.Name = "txt_GHICHU";
+            this.txt_GHICHU.Regular_Expression = null;
+            this.txt_GHICHU.Size = new System.Drawing.Size(414, 20);
+            this.txt_GHICHU.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(331, 16);
+            this.label2.Location = new System.Drawing.Point(344, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 125;
@@ -146,7 +181,7 @@
             // 
             // btn_CHONMAU
             // 
-            this.btn_CHONMAU.Location = new System.Drawing.Point(427, 7);
+            this.btn_CHONMAU.Location = new System.Drawing.Point(427, 8);
             this.btn_CHONMAU.Name = "btn_CHONMAU";
             this.btn_CHONMAU.Size = new System.Drawing.Size(75, 23);
             this.btn_CHONMAU.TabIndex = 1;
@@ -156,7 +191,7 @@
             // 
             // txt_MAARGB
             // 
-            this.txt_MAARGB.Location = new System.Drawing.Point(386, 9);
+            this.txt_MAARGB.Location = new System.Drawing.Point(398, 9);
             this.txt_MAARGB.Name = "txt_MAARGB";
             this.txt_MAARGB.ReadOnly = true;
             this.txt_MAARGB.Size = new System.Drawing.Size(24, 20);
@@ -235,7 +270,7 @@
             this.txt_TENMAU.Location = new System.Drawing.Point(88, 40);
             this.txt_TENMAU.Name = "txt_TENMAU";
             this.txt_TENMAU.Regular_Expression = null;
-            this.txt_TENMAU.Size = new System.Drawing.Size(414, 20);
+            this.txt_TENMAU.Size = new System.Drawing.Size(259, 20);
             this.txt_TENMAU.TabIndex = 3;
             // 
             // pne_CHITIET
@@ -246,7 +281,7 @@
             this.pne_CHITIET.Location = new System.Drawing.Point(14, 186);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(809, 287);
+            this.pne_CHITIET.Size = new System.Drawing.Size(896, 287);
             this.pne_CHITIET.TabIndex = 8;
             // 
             // btn_Thoat
@@ -356,34 +391,81 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã màu";
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 127;
-            this.label3.Text = "Ghi chú";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(353, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 129;
+            this.label4.Text = "Ký hiệu";
             // 
-            // txt_GHICHU
+            // txt_KYHIEU
             // 
-            this.txt_GHICHU.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_GHICHU.BannerText = null;
-            this.txt_GHICHU.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_GHICHU.FormNametoShow = "";
-            this.txt_GHICHU.Is_DateTime = false;
-            this.txt_GHICHU.IsShowForm = false;
-            this.txt_GHICHU.Location = new System.Drawing.Point(88, 71);
-            this.txt_GHICHU.Name = "txt_GHICHU";
-            this.txt_GHICHU.Regular_Expression = null;
-            this.txt_GHICHU.Size = new System.Drawing.Size(414, 20);
-            this.txt_GHICHU.TabIndex = 4;
+            this.txt_KYHIEU.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_KYHIEU.BannerText = null;
+            this.txt_KYHIEU.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_KYHIEU.FormNametoShow = "";
+            this.txt_KYHIEU.Is_DateTime = false;
+            this.txt_KYHIEU.IsShowForm = false;
+            this.txt_KYHIEU.Location = new System.Drawing.Point(398, 40);
+            this.txt_KYHIEU.Name = "txt_KYHIEU";
+            this.txt_KYHIEU.Regular_Expression = null;
+            this.txt_KYHIEU.Size = new System.Drawing.Size(104, 20);
+            this.txt_KYHIEU.TabIndex = 128;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(518, 44);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 133;
+            this.label5.Text = "Tên SP";
+            // 
+            // txt_TENSANPHAMS
+            // 
+            this.txt_TENSANPHAMS.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TENSANPHAMS.BannerText = null;
+            this.txt_TENSANPHAMS.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TENSANPHAMS.FormNametoShow = "";
+            this.txt_TENSANPHAMS.Is_DateTime = false;
+            this.txt_TENSANPHAMS.IsShowForm = false;
+            this.txt_TENSANPHAMS.Location = new System.Drawing.Point(564, 41);
+            this.txt_TENSANPHAMS.Multiline = true;
+            this.txt_TENSANPHAMS.Name = "txt_TENSANPHAMS";
+            this.txt_TENSANPHAMS.Regular_Expression = null;
+            this.txt_TENSANPHAMS.Size = new System.Drawing.Size(346, 132);
+            this.txt_TENSANPHAMS.TabIndex = 131;
+            // 
+            // txt_MASANPHAMS
+            // 
+            this.txt_MASANPHAMS.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MASANPHAMS.BannerText = null;
+            this.txt_MASANPHAMS.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_MASANPHAMS.FormNametoShow = "";
+            this.txt_MASANPHAMS.Is_DateTime = false;
+            this.txt_MASANPHAMS.IsShowForm = false;
+            this.txt_MASANPHAMS.Location = new System.Drawing.Point(564, 10);
+            this.txt_MASANPHAMS.Name = "txt_MASANPHAMS";
+            this.txt_MASANPHAMS.Regular_Expression = null;
+            this.txt_MASANPHAMS.Size = new System.Drawing.Size(346, 20);
+            this.txt_MASANPHAMS.TabIndex = 130;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(518, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.TabIndex = 132;
+            this.label6.Text = "Mã SP";
             // 
             // FRM_DMMAU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1376, 565);
+            this.ClientSize = new System.Drawing.Size(1463, 565);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -428,5 +510,11 @@
         private System.Windows.Forms.TextBox txt_MAARGB;
         private CONTROL.LABEL label3;
         private CONTROL.TEXTBOX txt_GHICHU;
+        private CONTROL.LABEL label4;
+        private CONTROL.TEXTBOX txt_KYHIEU;
+        private CONTROL.LABEL label5;
+        private CONTROL.TEXTBOX txt_TENSANPHAMS;
+        private CONTROL.TEXTBOX txt_MASANPHAMS;
+        private CONTROL.LABEL label6;
     }
 }
