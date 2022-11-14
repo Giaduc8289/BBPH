@@ -49,6 +49,15 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
+    <value>2</value>
+    <name>Kyhieu</name>
+    <headerText>Ký hiệu</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>150</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
     <value>1</value>
     <name>Ghichu</name>
     <headerText>Ghi chú</headerText>
@@ -70,6 +79,24 @@
     <value>1</value>
     <name>MaArgb</name>
     <headerText>Màu</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>35</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Masanphams</name>
+    <headerText>Masanphams</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>75</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Tensanphams</name>
+    <headerText>Tensanphams</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>35</Width>

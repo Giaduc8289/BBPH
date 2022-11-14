@@ -159,6 +159,20 @@ namespace GD.BBPH.APP.DANHMUC
                     DataTable dt = new DmmauManager().SelectByTenmauRDT(tenmau);
                     GRID_TPMAU.CurrentRow.Cells[ThanhphanmauFields.Mausudung.Name].Value = dt.Rows[0][DmmauFields.Mamau.Name].ToString();
                 }
+
+                //-----Cập nhật trường ghi chú
+                string _strGhichu = "";
+                bool first = true;
+                GridEXRow[] listTPmau = GRID_TPMAU.GetDataRows();
+                foreach (GridEXRow _grid in listTPmau)
+                {
+                    DataRowView _view = (DataRowView)_grid.DataRow;
+                    if (_view == null) continue;
+                    DmmauEntity _dmmauEntity = new DmmauManager().SelectOne(_view[ThanhphanmauFields.Mausudung.Name].ToString());
+                    _strGhichu += (first ? string.Empty : " : ") + _dmmauEntity.Kyhieu.ToString() + Decimal.Round(LIB.ConvertString.NumbertoDB(_view[ThanhphanmauFields.Tyle.Name].ToString())).ToString();
+                    first = false;
+                }
+                txt_GHICHU.Text = _strGhichu;
             }
             catch { }
         }
