@@ -62,6 +62,9 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NGUOITAO.Text = _Rowview.Row[KetquathoiFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[KetquathoiFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[KetquathoiFields.Nguoisua.Name].ToString();
+					txt_MATRUONGCA.Text = _Rowview.Row[KetquathoiFields.Matruongca.Name].ToString();
+					txt_TENTRUONGCA.Text = _Rowview.Row[KetquathoiFields.Tentruongca.Name].ToString();
+					txt_TOCDODINHMUC.Text = _Rowview.Row[KetquathoiFields.Tocdodinhmuc.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KETQUATHOI_CurrentChanged"); }
@@ -107,6 +110,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			try { _KetquathoiEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
 			catch { }
 			_KetquathoiEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_KetquathoiEntity.Matruongca = txt_MATRUONGCA.Text.Trim();
+			_KetquathoiEntity.Tentruongca = txt_TENTRUONGCA.Text.Trim();
+			try { _KetquathoiEntity.Tocdodinhmuc = System.Decimal.Parse(txt_TOCDODINHMUC.Text.Trim()); } 
+			catch { }
 			
 			
 			if (string.IsNullOrEmpty(_str_KETQUATHOI_PK))
@@ -142,6 +149,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_KETQUATHOI.CurrentRow.Cells[KetquathoiFields.Nguoitao.Name].Value = _KetquathoiEntity.Nguoitao;
 				GRID_KETQUATHOI.CurrentRow.Cells[KetquathoiFields.Ngaysua.Name].Value = _KetquathoiEntity.Ngaysua;
 				GRID_KETQUATHOI.CurrentRow.Cells[KetquathoiFields.Nguoisua.Name].Value = _KetquathoiEntity.Nguoisua;
+				GRID_KETQUATHOI.CurrentRow.Cells[KetquathoiFields.Matruongca.Name].Value = _KetquathoiEntity.Matruongca;
+				GRID_KETQUATHOI.CurrentRow.Cells[KetquathoiFields.Tentruongca.Name].Value = _KetquathoiEntity.Tentruongca;
+				GRID_KETQUATHOI.CurrentRow.Cells[KetquathoiFields.Tocdodinhmuc.Name].Value = _KetquathoiEntity.Tocdodinhmuc;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquathoiManager.Convert(_KetquathoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_KETQUATHOI_PK;

@@ -71,6 +71,9 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NANGSUAT.Text = _Rowview.Row[KetquatuaFields.Nangsuat.Name].ToString();
 					txt_THOIGIANDAUCA.Text = _Rowview.Row[KetquatuaFields.Thoigiandauca.Name].ToString();
 					txt_CHENHLECHKG.Text = _Rowview.Row[KetquatuaFields.Chenhlechkg.Name].ToString();
+					txt_MATRUONGCA.Text = _Rowview.Row[KetquatuaFields.Matruongca.Name].ToString();
+					txt_TENTRUONGCA.Text = _Rowview.Row[KetquatuaFields.Tentruongca.Name].ToString();
+					txt_TOCDODINHMUC.Text = _Rowview.Row[KetquatuaFields.Tocdodinhmuc.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KETQUATUA_CurrentChanged"); }
@@ -134,6 +137,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			catch { }
 			try { _KetquatuaEntity.Chenhlechkg = System.Decimal.Parse(txt_CHENHLECHKG.Text.Trim()); } 
 			catch { }
+			_KetquatuaEntity.Matruongca = txt_MATRUONGCA.Text.Trim();
+			_KetquatuaEntity.Tentruongca = txt_TENTRUONGCA.Text.Trim();
+			try { _KetquatuaEntity.Tocdodinhmuc = System.Decimal.Parse(txt_TOCDODINHMUC.Text.Trim()); } 
+			catch { }
 			
 			
 			if (string.IsNullOrEmpty(_str_KETQUATUA_PK))
@@ -178,6 +185,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_KETQUATUA.CurrentRow.Cells[KetquatuaFields.Nangsuat.Name].Value = _KetquatuaEntity.Nangsuat;
 				GRID_KETQUATUA.CurrentRow.Cells[KetquatuaFields.Thoigiandauca.Name].Value = _KetquatuaEntity.Thoigiandauca;
 				GRID_KETQUATUA.CurrentRow.Cells[KetquatuaFields.Chenhlechkg.Name].Value = _KetquatuaEntity.Chenhlechkg;
+				GRID_KETQUATUA.CurrentRow.Cells[KetquatuaFields.Matruongca.Name].Value = _KetquatuaEntity.Matruongca;
+				GRID_KETQUATUA.CurrentRow.Cells[KetquatuaFields.Tentruongca.Name].Value = _KetquatuaEntity.Tentruongca;
+				GRID_KETQUATUA.CurrentRow.Cells[KetquatuaFields.Tocdodinhmuc.Name].Value = _KetquatuaEntity.Tocdodinhmuc;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquatuaManager.Convert(_KetquatuaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_KETQUATUA_PK;

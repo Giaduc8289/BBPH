@@ -73,6 +73,9 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NGUOITAO.Text = _Rowview.Row[KetquahoanthienFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[KetquahoanthienFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[KetquahoanthienFields.Nguoisua.Name].ToString();
+					txt_MATRUONGCA.Text = _Rowview.Row[KetquahoanthienFields.Matruongca.Name].ToString();
+					txt_TENTRUONGCA.Text = _Rowview.Row[KetquahoanthienFields.Tentruongca.Name].ToString();
+					txt_TOCDODINHMUC.Text = _Rowview.Row[KetquahoanthienFields.Tocdodinhmuc.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KETQUAHOANTHIEN_CurrentChanged"); }
@@ -140,6 +143,10 @@ namespace GD.BBPH.DAL.EntityClasses
 			try { _KetquahoanthienEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
 			catch { }
 			_KetquahoanthienEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_KetquahoanthienEntity.Matruongca = txt_MATRUONGCA.Text.Trim();
+			_KetquahoanthienEntity.Tentruongca = txt_TENTRUONGCA.Text.Trim();
+			try { _KetquahoanthienEntity.Tocdodinhmuc = System.Decimal.Parse(txt_TOCDODINHMUC.Text.Trim()); } 
+			catch { }
 			
 			
 			if (string.IsNullOrEmpty(_str_KETQUAHOANTHIEN_PK))
@@ -186,6 +193,9 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_KETQUAHOANTHIEN.CurrentRow.Cells[KetquahoanthienFields.Nguoitao.Name].Value = _KetquahoanthienEntity.Nguoitao;
 				GRID_KETQUAHOANTHIEN.CurrentRow.Cells[KetquahoanthienFields.Ngaysua.Name].Value = _KetquahoanthienEntity.Ngaysua;
 				GRID_KETQUAHOANTHIEN.CurrentRow.Cells[KetquahoanthienFields.Nguoisua.Name].Value = _KetquahoanthienEntity.Nguoisua;
+				GRID_KETQUAHOANTHIEN.CurrentRow.Cells[KetquahoanthienFields.Matruongca.Name].Value = _KetquahoanthienEntity.Matruongca;
+				GRID_KETQUAHOANTHIEN.CurrentRow.Cells[KetquahoanthienFields.Tentruongca.Name].Value = _KetquahoanthienEntity.Tentruongca;
+				GRID_KETQUAHOANTHIEN.CurrentRow.Cells[KetquahoanthienFields.Tocdodinhmuc.Name].Value = _KetquahoanthienEntity.Tocdodinhmuc;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquahoanthienManager.Convert(_KetquahoanthienEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_KETQUAHOANTHIEN_PK;
