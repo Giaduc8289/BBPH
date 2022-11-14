@@ -33,6 +33,7 @@ namespace GD.BBPH.APP.IN
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET="";
         private string MASP = "", CA="0";
         private DataTable DT_DMMAY = new DataTable(), DT_LENHIN = new DataTable(), DT_DMSP = new DataTable(), DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable();
+        private bool ADDROW = false;
 
 
 
@@ -166,7 +167,7 @@ namespace GD.BBPH.APP.IN
 
                     txt_LENHIN.Text = _Rowview.Row[KetquainFields.Lenhin.Name].ToString();
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquainFields.Macongnhan.Name].ToString();
-                    txt_MACONGNHAN_Validating(new object(), new CancelEventArgs());
+                    txt_TENCONGNHAN.Text = _Rowview.Row[KetquainFields.Tencongnhan.Name].ToString();
                     txt_MASP.Text = _Rowview.Row[KetquainFields.Masanpham.Name].ToString();
                     txt_MASP_Validating(new object(), new CancelEventArgs());
                     txt_SOMLSX.Text = _Rowview.Row[KetquainFields.SometLsx.Name].ToString();
@@ -184,7 +185,8 @@ namespace GD.BBPH.APP.IN
                     txt_THOIGIANCHUANBI.Text = _Rowview.Row[KetquainFields.Thoigianchuanbi.Name].ToString();
                     txt_THOIGIANSUCO.Text = _Rowview.Row[KetquainFields.Thoigiansuco.Name].ToString();
                     txt_TOCDODINHMUC.Text = _Rowview.Row[KetquainFields.Tocdodinhmuc.Name].ToString();
-
+                    txt_MATRUONGCA.Text = _Rowview.Row[KetquainFields.Matruongca.Name].ToString();
+                    txt_TENTRUONGCA.Text = _Rowview.Row[KetquainFields.Tentruongca.Name].ToString();
 
                     txt_NANGSUAT.Text = _Rowview.Row[KetquainFields.Nangsuat.Name].ToString();
                     txt_TILESAIHONG.Text = _Rowview.Row[KetquainFields.Tylesaihong.Name].ToString();
@@ -221,6 +223,7 @@ namespace GD.BBPH.APP.IN
         #region Xu ly dong chi tiet
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
+            ADDROW = true;
             DataRow r_Detail = DT_KQIN_CHITIET_FILL.NewRow();
             r_Detail[KetquainFields.Lenhin.Name] = txt_LENHIN.Text;
             r_Detail[KetquainFields.Macongnhan.Name] = txt_MACONGNHAN.Text;
@@ -262,6 +265,7 @@ namespace GD.BBPH.APP.IN
             BS_KQIN_CHITIET.Position = DT_KQIN_CHITIET_FILL.Rows.Count;
             //Tinhtong();
             //txt_MAHANG.Focus();
+            ADDROW = false;
         }
         private void btn_XOADONG_Click(object sender, EventArgs e)
         {
@@ -600,6 +604,9 @@ namespace GD.BBPH.APP.IN
 
         private void txt_MACONGNHAN_Validating(object sender, CancelEventArgs e)
         {
+            if (ADDROW) return;
+            if (string.IsNullOrEmpty(txt_MACONGNHAN.Text) || !btn_LUULAI.Enabled) return;
+            txt_TENCONGNHAN.Text = txt_MATRUONGCA.Text = txt_TENTRUONGCA.Text = string.Empty;
             ListviewJanusC _frm =
                 new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMCONGNHAN_CHON.xml", DT_NHANVIEN, DmcongnhanFields.Macn.Name, txt_MACONGNHAN.Text);
             _frm.ShowDialog();
