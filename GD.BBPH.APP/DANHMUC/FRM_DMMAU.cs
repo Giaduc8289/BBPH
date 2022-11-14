@@ -34,7 +34,7 @@ namespace GD.BBPH.APP.DANHMUC
         private GD.BBPH.CONTROL.JGridEX GRID_TPMAU = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET = "";
 
-        private DataTable DT_DMSOI = new DataTable(), DT_DMNGUYENLIEU = new DataTable();
+        private DataTable DT_DMHANG = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
@@ -58,6 +58,8 @@ namespace GD.BBPH.APP.DANHMUC
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMMAU");
                         DT_DMMAU = LIB.SESSION_START.DT_DMMAU;
                         DT_TPMAU = LIB.SESSION_START.DT_TPMAU;
+
+                        DT_DMHANG = new DmhangManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -472,6 +474,7 @@ namespace GD.BBPH.APP.DANHMUC
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_CHONMAU.Enabled = true;
             btn_SAOCHEP.Enabled = false;
         }
+
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(MAHIEU_PK) && r_Insert != null)
@@ -616,6 +619,26 @@ namespace GD.BBPH.APP.DANHMUC
             }
             catch { }
             btn_SAOCHEP.Enabled = false;
+        }
+        #endregion
+
+        #region Validate
+        private void txt_MASANPHAMS_Validating(object sender, CancelEventArgs e)
+        {
+            ListviewJanusC _frm =
+                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG_CHON.xml", DT_DMHANG, DmhangFields.Masp.Name, txt_MASANPHAMS.Text);
+            _frm.ShowDialog();
+            if (_frm._RowsViewSelect == null) return;
+
+            string strMa = "", strTen = "";
+            foreach (DataRowView drv in _frm._RowsViewSelect)
+            {
+                strMa += drv.Row[DmhangFields.Masp.Name].ToString() + ",";
+                strTen += drv.Row[DmhangFields.Tensp.Name].ToString() + "\r\n";
+            }
+
+            txt_MASANPHAMS.Text = strMa;
+            txt_TENSANPHAMS.Text = strTen;
         }
         #endregion
 
