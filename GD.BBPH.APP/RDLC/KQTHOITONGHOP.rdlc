@@ -24,7 +24,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>2.3392cm</Top>
-        <Left>0.05141cm</Left>
+        <Left>0.00002cm</Left>
         <Height>0.99688cm</Height>
         <Width>19.96826cm</Width>
         <Style>
@@ -59,7 +59,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>3.44191cm</Top>
-        <Left>0.10284cm</Left>
+        <Left>0.00002cm</Left>
         <Height>0.71769cm</Height>
         <Width>19.96826cm</Width>
         <ZIndex>1</ZIndex>
@@ -1643,7 +1643,7 @@
         </TablixRowHierarchy>
         <DataSetName>Ketqua</DataSetName>
         <Top>5.92553cm</Top>
-        <Left>0.05141cm</Left>
+        <Left>0cm</Left>
         <Height>3cm</Height>
         <Width>19.96826cm</Width>
         <ZIndex>2</ZIndex>
@@ -1675,7 +1675,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>4.19488cm</Top>
-        <Left>0.10284cm</Left>
+        <Left>0.00002cm</Left>
         <Height>0.73378cm</Height>
         <Width>19.96826cm</Width>
         <ZIndex>3</ZIndex>
@@ -1711,7 +1711,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>4.96393cm</Top>
-        <Left>0.21016cm</Left>
+        <Left>0.00002cm</Left>
         <Height>0.78521cm</Height>
         <Width>19.80951cm</Width>
         <ZIndex>4</ZIndex>
@@ -1776,10 +1776,10 @@
         </Style>
       </Image>
     </ReportItems>
-    <Height>11.15934cm</Height>
+    <Height>9.5983cm</Height>
     <Style />
   </Body>
-  <Width>20.0711cm</Width>
+  <Width>19.96828cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
