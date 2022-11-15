@@ -661,12 +661,14 @@ namespace GD.BBPH.APP.CHIA
                 txt_MASANPHAM.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
                 txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
                 Tinhtocdodinhmuc();
+                Tinhthoigianchuanbi();
 
             }
             else
             {
                 txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
                 Tinhtocdodinhmuc();
+                Tinhthoigianchuanbi();
             }
         }
         private DataRow checksanpham(string macantim, DataTable dt)
@@ -759,6 +761,7 @@ namespace GD.BBPH.APP.CHIA
         private void txt_SOCUON_Validated(object sender, EventArgs e)
         {
             Tinhsocuon();
+            Tinhthoigianxuongcuon();
         }
 
         private void Tinhtocdodinhmuc()
@@ -781,13 +784,36 @@ namespace GD.BBPH.APP.CHIA
                     txt_THOIGIANCATDAU.Text = Math.Round(_thoigiancatdau).ToString();
                     decimal _thoigiandoilenh = LIB.Procedures.fTinhdinhmucthoigian(txt_MAMAY.Text, txt_MASANPHAM.Text, DinhmucthoigianFields.Doilenh.Name);
                     txt_THOIGIANDOILENH.Text = Math.Round(_thoigiandoilenh).ToString();
-                    decimal _thoigianlencuon = LIB.Procedures.fTinhdinhmucthoigian(txt_MAMAY.Text, txt_MASANPHAM.Text, DinhmucthoigianFields.Lencuon.Name);
-                    txt_THOIGIANLENCUON.Text = Math.Round(_thoigianlencuon).ToString();
-                    decimal _thoigianhacuon = LIB.Procedures.fTinhdinhmucthoigian(txt_MAMAY.Text, txt_MASANPHAM.Text, DinhmucthoigianFields.Xuongcuon.Name);
-                    txt_THOIGIANHACUON.Text = Math.Round(_thoigianhacuon).ToString();
                 }
             }
             catch { }
+        }
+        private void Tinhthoigianlencuon()
+        {
+            try
+            {
+                decimal _socuon = 0, _thoigianlencuon = 0;
+                decimal _thoigianlencuondm = LIB.Procedures.fTinhdinhmucthoigian(txt_MAMAY.Text, txt_MASANPHAM.Text, DinhmucthoigianFields.Lencuon.Name);
+                _socuon = LIB.ConvertString.NumbertoDB(txt_SOCUON.Text.Trim());
+                _thoigianlencuon = _socuon * _thoigianlencuondm;
+                txt_THOIGIANLENCUON.Text = Math.Round(_thoigianlencuon).ToString();
+            }
+            catch { }
+        }
+        private void Tinhthoigianxuongcuon()
+        {
+            try
+            {
+                decimal _solanhacuon = 0, _thoigianhacuon = 0;
+                decimal _thoigianhacuondm = LIB.Procedures.fTinhdinhmucthoigian(txt_MAMAY.Text, txt_MASANPHAM.Text, DinhmucthoigianFields.Xuongcuon.Name);
+                _thoigianhacuon = _solanhacuon * _thoigianhacuondm;
+                txt_THOIGIANHACUON.Text = Math.Round(_thoigianhacuon).ToString();
+            }
+            catch { }
+        }
+        private void txt_THOIGIANLENCUON_Validated(object sender, EventArgs e)
+        {
+            Tinhthoigianlencuon();
         }
         #endregion
 
