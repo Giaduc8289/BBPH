@@ -658,11 +658,13 @@ namespace GD.BBPH.APP.CHIA
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_MASANPHAM.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
                 txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
+                Tinhtocdodinhmuc();
 
             }
             else
             {
                 txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
+                Tinhtocdodinhmuc();
             }
         }
         private DataRow checksanpham(string macantim, DataTable dt)
