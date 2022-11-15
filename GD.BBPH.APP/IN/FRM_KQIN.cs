@@ -353,6 +353,8 @@ namespace GD.BBPH.APP.IN
                 _KetquainEntity.Tylesaihong = Convert.ToDecimal(_view.Row[KetquainFields.Tylesaihong.Name].ToString());
                 _KetquainEntity.Matruongca = _view.Row[KetquainFields.Matruongca.Name].ToString();
                 _KetquainEntity.Tentruongca = _view.Row[KetquainFields.Tentruongca.Name].ToString();
+                try { _KetquainEntity.Tocdodinhmuc = System.Decimal.Parse(_view.Row[KetquainFields.Tocdodinhmuc.Name].ToString()); }
+                catch { }
 
                 #region xét isnew
                 try { _KetquainEntity.Id = Convert.ToInt64(_view[KetquainFields.Id.Name].ToString()); }
@@ -538,7 +540,6 @@ namespace GD.BBPH.APP.IN
         #endregion
 
         #region Validate
-
         private void txt_MAMAY_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
@@ -586,11 +587,12 @@ namespace GD.BBPH.APP.IN
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_MASP.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
                 txt_TENSP.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
-
+                Tinhtocdodinhmuc();
             }
             else
             {
                 txt_TENSP.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
+                Tinhtocdodinhmuc();
             }
         }
         private DataRow checkmasp(string macantim, DataTable dt)
