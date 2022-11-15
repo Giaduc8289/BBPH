@@ -187,6 +187,7 @@ namespace GD.BBPH.APP.IN
                     txt_TOCDODINHMUC.Text = _Rowview.Row[KetquainFields.Tocdodinhmuc.Name].ToString();
                     txt_MATRUONGCA.Text = _Rowview.Row[KetquainFields.Matruongca.Name].ToString();
                     txt_TENTRUONGCA.Text = _Rowview.Row[KetquainFields.Tentruongca.Name].ToString();
+                    txt_LYDOSUCO.Text = _Rowview.Row[KetquainFields.Lydosuco.Name].ToString();
 
                     txt_NANGSUAT.Text = _Rowview.Row[KetquainFields.Nangsuat.Name].ToString();
                     txt_TILESAIHONG.Text = _Rowview.Row[KetquainFields.Tylesaihong.Name].ToString();
@@ -254,7 +255,7 @@ namespace GD.BBPH.APP.IN
             r_Detail[KetquainFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
             r_Detail[KetquainFields.Tylesaihong.Name] = LIB.ConvertString.NumbertoDB(txt_TILESAIHONG.Text.Trim());
             r_Detail[KetquainFields.Tocdodinhmuc.Name] = LIB.ConvertString.NumbertoDB(txt_TOCDODINHMUC.Text.Trim());
-
+            r_Detail[KetquainFields.Lydosuco.Name] = txt_LYDOSUCO.Text.Trim();
 
             DT_KQIN_CHITIET_FILL.Rows.Add(r_Detail);
 
@@ -314,7 +315,6 @@ namespace GD.BBPH.APP.IN
         }
         #endregion
 
-
         private string Save_Data(string _str_MAHIEU_PK)
         {
             DateTime _ngay = Convert.ToDateTime(txt_NGAY.Text.Trim());
@@ -355,6 +355,7 @@ namespace GD.BBPH.APP.IN
                 _KetquainEntity.Tentruongca = _view.Row[KetquainFields.Tentruongca.Name].ToString();
                 try { _KetquainEntity.Tocdodinhmuc = System.Decimal.Parse(_view.Row[KetquainFields.Tocdodinhmuc.Name].ToString()); }
                 catch { }
+                _KetquainEntity.Lydosuco = _view.Row[KetquainFields.Lydosuco.Name].ToString();
 
                 #region xét isnew
                 try { _KetquainEntity.Id = Convert.ToInt64(_view[KetquainFields.Id.Name].ToString()); }

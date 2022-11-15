@@ -184,6 +184,7 @@ namespace GD.BBPH.APP.THOI
                     txt_MATRUONGCA.Text = _Rowview.Row[KetquathoiFields.Matruongca.Name].ToString();
                     txt_TENTRUONGCA.Text = _Rowview.Row[KetquathoiFields.Tentruongca.Name].ToString();
                     txt_TOCDODINHMUC.Text = _Rowview.Row[KetquathoiFields.Tocdodinhmuc.Name].ToString();
+                    txt_LYDOSUCO.Text = _Rowview.Row[KetquathoiFields.Lydosuco.Name].ToString();
 
                     txt_CHATLUONG.Text = _Rowview.Row[KetquathoiFields.Chatluong.Name].ToString();
                     txt_NANGSUAT.Text = _Rowview.Row[KetquathoiFields.Nangsuat.Name].ToString();
@@ -240,6 +241,7 @@ namespace GD.BBPH.APP.THOI
             r_Detail[KetquathoiFields.Chatluong.Name] = LIB.ConvertString.NumbertoDB(txt_CHATLUONG.Text.Trim()); 
             r_Detail[KetquathoiFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
             r_Detail[KetquathoiFields.Tocdodinhmuc.Name] = LIB.ConvertString.NumbertoDB(txt_TOCDODINHMUC.Text.Trim());
+            r_Detail[KetquathoiFields.Lydosuco.Name] = txt_LYDOSUCO.Text.Trim();
 
             DT_KQTHOI_CHITIET_FILL.Rows.Add(r_Detail);
 
@@ -334,6 +336,7 @@ namespace GD.BBPH.APP.THOI
                 _KetquathoiEntity.Tentruongca = _view.Row[KetquathoiFields.Tentruongca.Name].ToString();
                 try { _KetquathoiEntity.Tocdodinhmuc = System.Decimal.Parse(_view.Row[KetquathoiFields.Tocdodinhmuc.Name].ToString()); }
                 catch { }
+                _KetquathoiEntity.Lydosuco = _view.Row[KetquathoiFields.Lydosuco.Name].ToString();
 
                 try { _KetquathoiEntity.Id = Convert.ToInt64(_view[KetquathoiFields.Id.Name].ToString()); }
                 catch { }

@@ -169,7 +169,7 @@ namespace GD.BBPH.APP.CHIA
                     txt_MAMAY.Text = _Rowview.Row[KetquachiaFields.Mamay.Name].ToString();
                     txt_MAMAY_Validating(new object(), new CancelEventArgs());
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquachiaFields.Macongnhan.Name].ToString();
-                    txt_MACONGNHAN_Validating(new object(), new CancelEventArgs());
+                    txt_TENCONGNHAN.Text = _Rowview.Row[KetquachiaFields.Tencongnhan.Name].ToString();
                     txt_MASANPHAM.Text = _Rowview.Row[KetquachiaFields.Masanpham.Name].ToString();
                     txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
 
@@ -198,7 +198,7 @@ namespace GD.BBPH.APP.CHIA
                     txt_TOCDODINHMUC.Text = _Rowview.Row[KetquachiaFields.Tocdodinhmuc.Name].ToString();
                     txt_MATRUONGCA.Text = _Rowview.Row[KetquachiaFields.Matruongca.Name].ToString();
                     txt_TENTRUONGCA.Text = _Rowview.Row[KetquachiaFields.Tentruongca.Name].ToString();
-
+                    txt_LYDOSUCO.Text = _Rowview.Row[KetquachiaFields.Lydosuco.Name].ToString();
                 }
                 else
                 {
@@ -283,6 +283,7 @@ namespace GD.BBPH.APP.CHIA
             r_Detail[KetquachiaFields.Tocdodinhmuc.Name] = LIB.ConvertString.NumbertoDB(txt_TOCDODINHMUC.Text.Trim());
             r_Detail[KetquachiaFields.Matruongca.Name] = txt_MATRUONGCA.Text;
             r_Detail[KetquachiaFields.Tentruongca.Name] = txt_TENTRUONGCA.Text;
+            r_Detail[KetquachiaFields.Lydosuco.Name] = txt_LYDOSUCO.Text.Trim();
 
             DT_KQCHIA_CHITIET_FILL.Rows.Add(r_Detail);
 
@@ -379,6 +380,7 @@ namespace GD.BBPH.APP.CHIA
                 _KetquachiaEntity.Socuon = Convert.ToInt32(_view.Row[KetquachiaFields.Socuon.Name].ToString());
                 _KetquachiaEntity.Matruongca = _view.Row[KetquachiaFields.Matruongca.Name].ToString();
                 _KetquachiaEntity.Tentruongca = _view.Row[KetquachiaFields.Tentruongca.Name].ToString();
+                _KetquachiaEntity.Lydosuco = _view.Row[KetquachiaFields.Lydosuco.Name].ToString();
 
                 try { _KetquachiaEntity.Tocdodinhmuc = System.Decimal.Parse(_view.Row[KetquachiaFields.Tocdodinhmuc.Name].ToString()); }
                 catch { }
