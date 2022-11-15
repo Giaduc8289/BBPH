@@ -197,6 +197,7 @@ namespace GD.BBPH.APP.TUA
                     txt_MATRUONGCA.Text = _Rowview.Row[KetquatuaFields.Matruongca.Name].ToString();
                     txt_TENTRUONGCA.Text = _Rowview.Row[KetquatuaFields.Tentruongca.Name].ToString();
                     txt_TOCDODINHMUC.Text = _Rowview.Row[KetquatuaFields.Tocdodinhmuc.Name].ToString();
+                    txt_LYDOSUCO.Text = _Rowview.Row[KetquatuaFields.Lydosuco.Name].ToString();
                 }
                 else
                 {
@@ -257,6 +258,7 @@ namespace GD.BBPH.APP.TUA
             r_Detail[KetquatuaFields.Thoigiancatdau.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANCATDAU.Text.Trim());
             r_Detail[KetquatuaFields.Thoigiandoilenh.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANDOILENH.Text.Trim());
             r_Detail[KetquatuaFields.Thoigiansuco.Name] = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
+            r_Detail[KetquatuaFields.Lydosuco.Name] = txt_LYDOSUCO.Text.Trim();
 
             r_Detail[KetquatuaFields.Nangsuat.Name] = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim());
             r_Detail[KetquatuaFields.Tocdodinhmuc.Name] = LIB.ConvertString.NumbertoDB(txt_TOCDODINHMUC.Text.Trim());
@@ -336,6 +338,7 @@ namespace GD.BBPH.APP.TUA
                 _KetquatuaEntity.Mamay = _mamay;
                 _KetquatuaEntity.Tenmay = _view.Row[KetquatuaFields.Tenmay.Name].ToString();
                 _KetquatuaEntity.Lenhtua = _view.Row[KetquatuaFields.Lenhtua.Name].ToString();
+                _KetquatuaEntity.Lydosuco = _view.Row[KetquatuaFields.Lydosuco.Name].ToString();
                 _KetquatuaEntity.Macongnhan = _view.Row[KetquatuaFields.Macongnhan.Name].ToString();
                 _KetquatuaEntity.Tencongnhan = _view.Row[KetquatuaFields.Tencongnhan.Name].ToString();
                 _KetquatuaEntity.Masanpham = _view.Row[KetquatuaFields.Masanpham.Name].ToString();
@@ -643,9 +646,12 @@ namespace GD.BBPH.APP.TUA
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_MASANPHAM.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
                 txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
+                Tinhtocdodinhmuc();
             }
             else
                 txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
+
+                Tinhtocdodinhmuc();
         }
         private DataRow checkmaSanpham(string macantim, DataTable dt)
         {
@@ -686,6 +692,11 @@ namespace GD.BBPH.APP.TUA
                 txt_TOCDODINHMUC.Text = Math.Round(_tocdo).ToString();
             }
             catch { }
+        }
+
+        private void txt_Nguyennhan_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void Tinhthoigianchuanbi()
