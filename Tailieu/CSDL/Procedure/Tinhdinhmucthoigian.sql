@@ -78,7 +78,7 @@ BEGIN
 		Select @v_Thoigian=Giatri
 		From @Dinhmuctg
 		Where Tentruong = @Tentruong
-			And (Mamay=@Mamay Or Mamay='')
+			And (CHARINDEX(@Mamay+',',Mamay)>0 OR ISNULL(Mamay,'') = '')
 			And ((Dodaytu<=@v_Doday And Dodayden>=@v_Doday) Or (Dodaytu=0 And Dodayden=0))	
 	End
 	Else

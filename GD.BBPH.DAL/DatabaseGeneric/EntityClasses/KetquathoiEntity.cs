@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 14, 2022 2:47:54 PM
+// Code is generated on: Tuesday, November 15, 2022 9:35:07 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -540,6 +540,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tocdodinhmuc", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Lydosuco", fieldHashtable);
 		}
 		#endregion
 
@@ -932,6 +935,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)KetquathoiFieldIndex.Tocdodinhmuc, false); }
 			set	{ SetValue((int)KetquathoiFieldIndex.Tocdodinhmuc, value); }
+		}
+
+		/// <summary> The Lydosuco property of the Entity Ketquathoi<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquathoi"."Lydosuco"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Lydosuco
+		{
+			get { return (System.String)GetValue((int)KetquathoiFieldIndex.Lydosuco, true); }
+			set	{ SetValue((int)KetquathoiFieldIndex.Lydosuco, value); }
 		}
 
 

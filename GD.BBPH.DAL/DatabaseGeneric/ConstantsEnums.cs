@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 14, 2022 2:47:53 PM
+// Code is generated on: Tuesday, November 15, 2022 9:35:05 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1221,6 +1221,8 @@ namespace GD.BBPH.DAL
 		Tentruongca,
 		///<summary>Tocdodinhmuc. </summary>
 		Tocdodinhmuc,
+		///<summary>Lydosuco. </summary>
+		Lydosuco,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1307,6 +1309,8 @@ namespace GD.BBPH.DAL
 		Tentruongca,
 		///<summary>Tocdodinhmuc. </summary>
 		Tocdodinhmuc,
+		///<summary>Lydosuco. </summary>
+		Lydosuco,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1391,6 +1395,8 @@ namespace GD.BBPH.DAL
 		Tentruongca,
 		///<summary>Tocdodinhmuc. </summary>
 		Tocdodinhmuc,
+		///<summary>Lydosuco. </summary>
+		Lydosuco,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1465,6 +1471,8 @@ namespace GD.BBPH.DAL
 		Tentruongca,
 		///<summary>Tocdodinhmuc. </summary>
 		Tocdodinhmuc,
+		///<summary>Lydosuco. </summary>
+		Lydosuco,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1565,6 +1573,8 @@ namespace GD.BBPH.DAL
 		Tentruongca,
 		///<summary>Tocdodinhmuc. </summary>
 		Tocdodinhmuc,
+		///<summary>Lydosuco. </summary>
+		Lydosuco,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1645,6 +1655,8 @@ namespace GD.BBPH.DAL
 		Tentruongca,
 		///<summary>Tocdodinhmuc. </summary>
 		Tocdodinhmuc,
+		///<summary>Lydosuco. </summary>
+		Lydosuco,
 		/// <summary></summary>
 		AmountOfFields
 	}

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 14, 2022 2:47:55 PM
+// Code is generated on: Tuesday, November 15, 2022 9:35:07 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -2407,6 +2407,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Tocdodinhmuc);}
 		}
+		/// <summary>Creates a new KetquachiaEntity.Lydosuco field instance</summary>
+		public static EntityField2 Lydosuco
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquachiaFieldIndex.Lydosuco);}
+		}
 	}
 
 	/// <summary>Field Creation Class for entity KetquaghepEntity</summary>
@@ -2602,6 +2607,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.Tocdodinhmuc);}
 		}
+		/// <summary>Creates a new KetquaghepEntity.Lydosuco field instance</summary>
+		public static EntityField2 Lydosuco
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquaghepFieldIndex.Lydosuco);}
+		}
 	}
 
 	/// <summary>Field Creation Class for entity KetquahoanthienEntity</summary>
@@ -2792,6 +2802,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquahoanthienFieldIndex.Tocdodinhmuc);}
 		}
+		/// <summary>Creates a new KetquahoanthienEntity.Lydosuco field instance</summary>
+		public static EntityField2 Lydosuco
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquahoanthienFieldIndex.Lydosuco);}
+		}
 	}
 
 	/// <summary>Field Creation Class for entity KetquainEntity</summary>
@@ -2956,6 +2971,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Tocdodinhmuc
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.Tocdodinhmuc);}
+		}
+		/// <summary>Creates a new KetquainEntity.Lydosuco field instance</summary>
+		public static EntityField2 Lydosuco
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquainFieldIndex.Lydosuco);}
 		}
 	}
 
@@ -3167,6 +3187,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Tocdodinhmuc);}
 		}
+		/// <summary>Creates a new KetquathoiEntity.Lydosuco field instance</summary>
+		public static EntityField2 Lydosuco
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquathoiFieldIndex.Lydosuco);}
+		}
 	}
 
 	/// <summary>Field Creation Class for entity KetquatuaEntity</summary>
@@ -3346,6 +3371,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Tocdodinhmuc
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(KetquatuaFieldIndex.Tocdodinhmuc);}
+		}
+		/// <summary>Creates a new KetquatuaEntity.Lydosuco field instance</summary>
+		public static EntityField2 Lydosuco
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(KetquatuaFieldIndex.Lydosuco);}
 		}
 	}
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Monday, November 14, 2022 2:47:53 PM
+// Code is generated on: Tuesday, November 15, 2022 9:35:05 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -695,6 +695,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquachiaEntity", "Matruongca", typeof(System.String), false, false, false, true,  (int)KetquachiaFieldIndex.Matruongca, 50, 0, 0);
 			base.AddElementFieldInfo("KetquachiaEntity", "Tentruongca", typeof(System.String), false, false, false, true,  (int)KetquachiaFieldIndex.Tentruongca, 250, 0, 0);
 			base.AddElementFieldInfo("KetquachiaEntity", "Tocdodinhmuc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquachiaFieldIndex.Tocdodinhmuc, 0, 3, 20);
+			base.AddElementFieldInfo("KetquachiaEntity", "Lydosuco", typeof(System.String), false, false, false, true,  (int)KetquachiaFieldIndex.Lydosuco, 2147483647, 0, 0);
 		}
 		/// <summary>Inits KetquaghepEntity's FieldInfo objects</summary>
 		private void InitKetquaghepEntityInfos()
@@ -737,6 +738,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquaghepEntity", "Matruongca", typeof(System.String), false, false, false, true,  (int)KetquaghepFieldIndex.Matruongca, 50, 0, 0);
 			base.AddElementFieldInfo("KetquaghepEntity", "Tentruongca", typeof(System.String), false, false, false, true,  (int)KetquaghepFieldIndex.Tentruongca, 250, 0, 0);
 			base.AddElementFieldInfo("KetquaghepEntity", "Tocdodinhmuc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquaghepFieldIndex.Tocdodinhmuc, 0, 3, 20);
+			base.AddElementFieldInfo("KetquaghepEntity", "Lydosuco", typeof(System.String), false, false, false, true,  (int)KetquaghepFieldIndex.Lydosuco, 2147483647, 0, 0);
 		}
 		/// <summary>Inits KetquahoanthienEntity's FieldInfo objects</summary>
 		private void InitKetquahoanthienEntityInfos()
@@ -778,6 +780,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquahoanthienEntity", "Matruongca", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Matruongca, 50, 0, 0);
 			base.AddElementFieldInfo("KetquahoanthienEntity", "Tentruongca", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Tentruongca, 250, 0, 0);
 			base.AddElementFieldInfo("KetquahoanthienEntity", "Tocdodinhmuc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquahoanthienFieldIndex.Tocdodinhmuc, 0, 3, 20);
+			base.AddElementFieldInfo("KetquahoanthienEntity", "Lydosuco", typeof(System.String), false, false, false, true,  (int)KetquahoanthienFieldIndex.Lydosuco, 2147483647, 0, 0);
 		}
 		/// <summary>Inits KetquainEntity's FieldInfo objects</summary>
 		private void InitKetquainEntityInfos()
@@ -814,6 +817,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquainEntity", "Matruongca", typeof(System.String), false, false, false, true,  (int)KetquainFieldIndex.Matruongca, 50, 0, 0);
 			base.AddElementFieldInfo("KetquainEntity", "Tentruongca", typeof(System.String), false, false, false, true,  (int)KetquainFieldIndex.Tentruongca, 250, 0, 0);
 			base.AddElementFieldInfo("KetquainEntity", "Tocdodinhmuc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquainFieldIndex.Tocdodinhmuc, 0, 3, 20);
+			base.AddElementFieldInfo("KetquainEntity", "Lydosuco", typeof(System.String), false, false, false, true,  (int)KetquainFieldIndex.Lydosuco, 2147483647, 0, 0);
 		}
 		/// <summary>Inits KetquainmauEntity's FieldInfo objects</summary>
 		private void InitKetquainmauEntityInfos()
@@ -862,6 +866,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquathoiEntity", "Matruongca", typeof(System.String), false, false, false, true,  (int)KetquathoiFieldIndex.Matruongca, 50, 0, 0);
 			base.AddElementFieldInfo("KetquathoiEntity", "Tentruongca", typeof(System.String), false, false, false, true,  (int)KetquathoiFieldIndex.Tentruongca, 250, 0, 0);
 			base.AddElementFieldInfo("KetquathoiEntity", "Tocdodinhmuc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquathoiFieldIndex.Tocdodinhmuc, 0, 3, 20);
+			base.AddElementFieldInfo("KetquathoiEntity", "Lydosuco", typeof(System.String), false, false, false, true,  (int)KetquathoiFieldIndex.Lydosuco, 2147483647, 0, 0);
 		}
 		/// <summary>Inits KetquatuaEntity's FieldInfo objects</summary>
 		private void InitKetquatuaEntityInfos()
@@ -901,6 +906,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquatuaEntity", "Matruongca", typeof(System.String), false, false, false, true,  (int)KetquatuaFieldIndex.Matruongca, 50, 0, 0);
 			base.AddElementFieldInfo("KetquatuaEntity", "Tentruongca", typeof(System.String), false, false, false, true,  (int)KetquatuaFieldIndex.Tentruongca, 250, 0, 0);
 			base.AddElementFieldInfo("KetquatuaEntity", "Tocdodinhmuc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquatuaFieldIndex.Tocdodinhmuc, 0, 3, 20);
+			base.AddElementFieldInfo("KetquatuaEntity", "Lydosuco", typeof(System.String), false, false, false, true,  (int)KetquatuaFieldIndex.Lydosuco, 2147483647, 0, 0);
 		}
 		/// <summary>Inits LogbackupEntity's FieldInfo objects</summary>
 		private void InitLogbackupEntityInfos()

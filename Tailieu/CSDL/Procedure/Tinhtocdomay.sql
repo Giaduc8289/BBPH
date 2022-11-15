@@ -26,7 +26,7 @@ BEGIN
 
 		Select @v_Tocdo=Tocdo
 		From congsuatmay
-		Where (Mamays=@Mamay Or Mamays='')
+		Where (CHARINDEX(@Mamay+',',Mamays)>0 OR ISNULL(Mamays,'') = '')
 			And ((Dodaytu<=@v_Doday And Dodayden>=@v_Doday) Or (Dodaytu=0 And Dodayden=0))	
 	End
 	Else
