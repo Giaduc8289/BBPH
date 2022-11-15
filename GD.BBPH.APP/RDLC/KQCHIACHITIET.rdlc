@@ -26,7 +26,7 @@
         <Top>2.30678cm</Top>
         <Left>0cm</Left>
         <Height>0.88322cm</Height>
-        <Width>27.69416cm</Width>
+        <Width>27.05916cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -59,9 +59,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>3.29583cm</Top>
-        <Left>0.02646cm</Left>
+        <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>27.69416cm</Width>
+        <Width>27.05916cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -77,52 +77,52 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.10029cm</Width>
+              <Width>1.0606cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.83645cm</Width>
+              <Width>0.79676cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.65356cm</Width>
+              <Width>1.61387cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.0854cm</Width>
+              <Width>3.04571cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.89808cm</Width>
+              <Width>1.85839cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.44498cm</Width>
+              <Width>1.40529cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.46675cm</Width>
+              <Width>3.42706cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.39207cm</Width>
+              <Width>1.35238cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.84517cm</Width>
+              <Width>1.80548cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.44498cm</Width>
+              <Width>1.40529cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.6335cm</Width>
+              <Width>1.59381cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.60373cm</Width>
+              <Width>1.56404cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.60704cm</Width>
+              <Width>1.56735cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.57727cm</Width>
+              <Width>1.53758cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.65996cm</Width>
+              <Width>1.62027cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.44499cm</Width>
+              <Width>1.4053cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2984,7 +2984,7 @@
         <Top>6.22192cm</Top>
         <Left>0.00002cm</Left>
         <Height>3cm</Height>
-        <Width>27.69414cm</Width>
+        <Width>27.05922cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -3014,9 +3014,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>3.97725cm</Top>
-        <Left>0.02646cm</Left>
+        <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>27.69416cm</Width>
+        <Width>27.05916cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -3052,7 +3052,7 @@
         <Top>4.67575cm</Top>
         <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>27.69416cm</Width>
+        <Width>27.05916cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -3088,7 +3088,7 @@
         <Top>5.35309cm</Top>
         <Left>0cm</Left>
         <Height>0.6cm</Height>
-        <Width>27.69416cm</Width>
+        <Width>27.05916cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -3121,7 +3121,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>1.66065cm</Top>
-        <Left>0.05296cm</Left>
+        <Left>0cm</Left>
         <Height>0.64613cm</Height>
         <Width>11.53025cm</Width>
         <ZIndex>6</ZIndex>
@@ -3140,7 +3140,7 @@
         <Value>LOGO_PHUONGBAC1</Value>
         <Sizing>FitProportional</Sizing>
         <Top>0cm</Top>
-        <Left>0.05294cm</Left>
+        <Left>0cm</Left>
         <Height>1.7cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>7</ZIndex>
@@ -3151,10 +3151,10 @@
         </Style>
       </Image>
     </ReportItems>
-    <Height>10.28622cm</Height>
+    <Height>9.22192cm</Height>
     <Style />
   </Body>
-  <Width>27.85293cm</Width>
+  <Width>27.05924cm</Width>
   <Page>
     <PageHeight>21cm</PageHeight>
     <PageWidth>29.7cm</PageWidth>

@@ -26,7 +26,7 @@
         <Top>2.30678cm</Top>
         <Left>0.00002cm</Left>
         <Height>0.88322cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>27.2443cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -59,7 +59,7 @@
         <Top>3.29583cm</Top>
         <Left>0.00002cm</Left>
         <Height>0.6cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>27.2443cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -93,7 +93,7 @@
         <Top>3.97725cm</Top>
         <Left>0.00002cm</Left>
         <Height>0.6cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>27.2443cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -127,7 +127,7 @@
         <Top>4.67575cm</Top>
         <Left>0.00002cm</Left>
         <Height>0.6cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>27.2443cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -161,7 +161,7 @@
         <Top>5.51184cm</Top>
         <Left>0.00002cm</Left>
         <Height>0.56825cm</Height>
-        <Width>28.88472cm</Width>
+        <Width>27.2443cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -177,31 +177,31 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.68521cm</Width>
+              <Width>2.54116cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.95413cm</Width>
+              <Width>3.81008cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.04945cm</Width>
+              <Width>5.9054cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.39945cm</Width>
+              <Width>2.2554cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.10313cm</Width>
+              <Width>1.95908cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.99729cm</Width>
+              <Width>1.85324cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.97626cm</Width>
+              <Width>2.83221cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.8175cm</Width>
+              <Width>2.67345cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.55833cm</Width>
+              <Width>3.41428cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1797,9 +1797,9 @@
         </TablixRowHierarchy>
         <DataSetName>Ketqua</DataSetName>
         <Top>6.49465cm</Top>
-        <Left>0.34399cm</Left>
+        <Left>0cm</Left>
         <Height>3cm</Height>
-        <Width>28.54075cm</Width>
+        <Width>27.24432cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -1861,7 +1861,7 @@
     <Height>9.70414cm</Height>
     <Style />
   </Body>
-  <Width>31.01916cm</Width>
+  <Width>27.24432cm</Width>
   <Page>
     <PageHeight>21cm</PageHeight>
     <PageWidth>29.7cm</PageWidth>

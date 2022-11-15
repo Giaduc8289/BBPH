@@ -24,9 +24,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>2.3392cm</Top>
-        <Left>0.15877cm</Left>
+        <Left>0.03175cm</Left>
         <Height>1.19366cm</Height>
-        <Width>19.91535cm</Width>
+        <Width>19.65077cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -59,9 +59,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>3.70925cm</Top>
-        <Left>0.00002cm</Left>
+        <Left>0.03177cm</Left>
         <Height>0.68142cm</Height>
-        <Width>19.91535cm</Width>
+        <Width>19.65075cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -77,37 +77,37 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.49054cm</Width>
+              <Width>1.46649cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.51464cm</Width>
+              <Width>1.49059cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.08185cm</Width>
+              <Width>6.0578cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.28291cm</Width>
+              <Width>1.25886cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.46813cm</Width>
+              <Width>1.44408cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.38346cm</Width>
+              <Width>1.35941cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.17708cm</Width>
+              <Width>1.15303cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.34579cm</Width>
+              <Width>1.32174cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.09242cm</Width>
+              <Width>1.06837cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.6104cm</Width>
+              <Width>1.58635cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.46813cm</Width>
+              <Width>1.44408cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -2109,10 +2109,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Ketqua</DataSetName>
-        <Top>6.30726cm</Top>
-        <Left>0.15877cm</Left>
+        <Top>6.27198cm</Top>
+        <Left>0.03177cm</Left>
         <Height>3cm</Height>
-        <Width>19.91535cm</Width>
+        <Width>19.65075cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -2142,9 +2142,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>4.39067cm</Top>
-        <Left>0.00002cm</Left>
+        <Left>0.03177cm</Left>
         <Height>0.8668cm</Height>
-        <Width>19.91535cm</Width>
+        <Width>19.65075cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -2178,9 +2178,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>5.29274cm</Top>
-        <Left>0.00002cm</Left>
+        <Left>0.03177cm</Left>
         <Height>0.90868cm</Height>
-        <Width>19.91535cm</Width>
+        <Width>19.65075cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -2213,7 +2213,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>1.66065cm</Top>
-        <Left>0.00002cm</Left>
+        <Left>0.03177cm</Left>
         <Height>0.64613cm</Height>
         <Width>11.53025cm</Width>
         <ZIndex>5</ZIndex>
@@ -2232,7 +2232,7 @@
         <Value>LOGO_PHUONGBAC1</Value>
         <Sizing>FitProportional</Sizing>
         <Top>0cm</Top>
-        <Left>0cm</Left>
+        <Left>0.03175cm</Left>
         <Height>1.7cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>6</ZIndex>
@@ -2243,10 +2243,10 @@
         </Style>
       </Image>
     </ReportItems>
-    <Height>9.466cm</Height>
+    <Height>9.27198cm</Height>
     <Style />
   </Body>
-  <Width>20.08533cm</Width>
+  <Width>19.68252cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

@@ -24,9 +24,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>2.30678cm</Top>
-        <Left>0cm</Left>
+        <Left>0.127cm</Left>
         <Height>0.88322cm</Height>
-        <Width>19.91535cm</Width>
+        <Width>19.28035cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -57,9 +57,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>3.29583cm</Top>
-        <Left>0cm</Left>
+        <Left>0.127cm</Left>
         <Height>0.6cm</Height>
-        <Width>19.91535cm</Width>
+        <Width>19.28035cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -91,9 +91,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>3.97725cm</Top>
-        <Left>0cm</Left>
+        <Left>0.127cm</Left>
         <Height>0.6cm</Height>
-        <Width>19.91535cm</Width>
+        <Width>19.28035cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -125,9 +125,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>4.67575cm</Top>
-        <Left>0cm</Left>
+        <Left>0.127cm</Left>
         <Height>0.6cm</Height>
-        <Width>19.91534cm</Width>
+        <Width>19.28034cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -143,19 +143,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>4.04043cm</Width>
+              <Width>3.91343cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.30935cm</Width>
+              <Width>5.18235cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.75467cm</Width>
+              <Width>3.62767cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.45835cm</Width>
+              <Width>3.33135cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.35251cm</Width>
+              <Width>3.22551cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -748,9 +748,9 @@
         </TablixRowHierarchy>
         <DataSetName>Ketqua</DataSetName>
         <Top>5.54215cm</Top>
-        <Left>0.00002cm</Left>
+        <Left>0.12702cm</Left>
         <Height>1.8cm</Height>
-        <Width>19.91531cm</Width>
+        <Width>19.28031cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -779,7 +779,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>1.66065cm</Top>
-        <Left>0.00002cm</Left>
+        <Left>0.12702cm</Left>
         <Height>0.64613cm</Height>
         <Width>11.53025cm</Width>
         <ZIndex>5</ZIndex>
@@ -798,7 +798,7 @@
         <Value>LOGO_PHUONGBAC1</Value>
         <Sizing>FitProportional</Sizing>
         <Top>0cm</Top>
-        <Left>0cm</Left>
+        <Left>0.127cm</Left>
         <Height>1.7cm</Height>
         <Width>2.2cm</Width>
         <ZIndex>6</ZIndex>
@@ -812,12 +812,12 @@
     <Height>7.66684cm</Height>
     <Style />
   </Body>
-  <Width>19.98604cm</Width>
+  <Width>20.23285cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>1cm</LeftMargin>
-    <RightMargin>1cm</RightMargin>
+    <LeftMargin>0.5cm</LeftMargin>
+    <RightMargin>0.5cm</RightMargin>
     <TopMargin>0.3cm</TopMargin>
     <BottomMargin>0.3cm</BottomMargin>
     <ColumnSpacing>1.27cm</ColumnSpacing>
