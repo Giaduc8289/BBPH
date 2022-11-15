@@ -328,6 +328,15 @@
   </viewgrid>
   <viewgrid>
     <value>2</value>
+    <name>Lydosuco</name>
+    <headerText>Lý do sự cố</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
     <name>Ngaytao</name>
     <headerText>Ngaytao</headerText>
     <BackColor>0</BackColor>
