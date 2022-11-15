@@ -41,6 +41,12 @@ namespace GD.BBPH.LIB
                 ,"Thoigianchuanbi", "Thoigiansuco"
                 //KQghepchitiet
                 ,"Thuctekeo", "Thuctedongran", "Thuctedungmoi"
+                 //KQtuachitiet
+                ,"Thoigianhacuon", "Thoigiancatdau", "Thoigiandoilenh"
+                //KQchiachitiet
+                ,"Thoigianlencuon"
+                 //KQhoanthienchitiet
+                ,"Thoigianlenhacuon", "Ketquatui"
         };
 
         //-----Danh sách các cột số thập phân
@@ -59,7 +65,13 @@ namespace GD.BBPH.LIB
                 ,"PheNCC", "PheSX"
                  //KQghepchitiet
                 ,"Dauratua", "ManginMet", "ManginKg", "MangcapMet", "MangcapKg", "ThucteMet", "ThucteKg"
-                ,"Phethoi", "Pheghep"
+                ,"Phethoi", "Pheghep", "Phein"
+                //KQtuachitiet
+                ,"SoMetvao", "SoKgvao", "SoMetra", "SoKgra", "Phesx"
+                //KQchiachitiet
+                ,"Tylesaihong", "Dauraghep", "Sometvao", "Sokgvao", "Phechia", "PhethoiNCC"
+                //KQhoanthienchitiet
+                ,"Chatluongtui", "Daurachiaghep", "Dauvaomet", "Dauvaokg", "Phebien", "Phechinhmay", "Phekhac"
         };
 
         //-----Danh sách các cột ngày
