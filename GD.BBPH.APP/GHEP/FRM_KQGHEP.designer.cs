@@ -34,6 +34,9 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_THOIGIANSUCO = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_THOIGIANCHUANBI = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_CA = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_DAURATUA = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_MANGINMET = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_MANGINKG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
@@ -96,9 +99,8 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_CA = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.txt_THOIGIANSUCO = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.txt_THOIGIANCHUANBI = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_TOCDODINHMUC = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label8 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -156,6 +158,8 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_TOCDODINHMUC);
+            this.uiPanel1Container.Controls.Add(this.label8);
             this.uiPanel1Container.Controls.Add(this.txt_THOIGIANSUCO);
             this.uiPanel1Container.Controls.Add(this.txt_THOIGIANCHUANBI);
             this.uiPanel1Container.Controls.Add(this.txt_CA);
@@ -225,6 +229,45 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(737, 671);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_THOIGIANSUCO
+            // 
+            this.txt_THOIGIANSUCO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_THOIGIANSUCO.BannerText = null;
+            this.txt_THOIGIANSUCO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_THOIGIANSUCO.Giatrithapphan = 2;
+            this.txt_THOIGIANSUCO.IsSoNguyen = false;
+            this.txt_THOIGIANSUCO.Location = new System.Drawing.Point(645, 217);
+            this.txt_THOIGIANSUCO.Name = "txt_THOIGIANSUCO";
+            this.txt_THOIGIANSUCO.Regular_Expression = "";
+            this.txt_THOIGIANSUCO.Size = new System.Drawing.Size(74, 20);
+            this.txt_THOIGIANSUCO.TabIndex = 20;
+            // 
+            // txt_THOIGIANCHUANBI
+            // 
+            this.txt_THOIGIANCHUANBI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_THOIGIANCHUANBI.BannerText = null;
+            this.txt_THOIGIANCHUANBI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_THOIGIANCHUANBI.Giatrithapphan = 2;
+            this.txt_THOIGIANCHUANBI.IsSoNguyen = false;
+            this.txt_THOIGIANCHUANBI.Location = new System.Drawing.Point(462, 218);
+            this.txt_THOIGIANCHUANBI.Name = "txt_THOIGIANCHUANBI";
+            this.txt_THOIGIANCHUANBI.Regular_Expression = "";
+            this.txt_THOIGIANCHUANBI.Size = new System.Drawing.Size(74, 20);
+            this.txt_THOIGIANCHUANBI.TabIndex = 21;
+            // 
+            // txt_CA
+            // 
+            this.txt_CA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CA.BannerText = null;
+            this.txt_CA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_CA.Giatrithapphan = 0;
+            this.txt_CA.IsSoNguyen = true;
+            this.txt_CA.Location = new System.Drawing.Point(278, 12);
+            this.txt_CA.Name = "txt_CA";
+            this.txt_CA.Regular_Expression = "";
+            this.txt_CA.Size = new System.Drawing.Size(74, 20);
+            this.txt_CA.TabIndex = 13;
             // 
             // txt_DAURATUA
             // 
@@ -415,7 +458,7 @@
             this.txt_NANGSUAT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_NANGSUAT.Giatrithapphan = 2;
             this.txt_NANGSUAT.IsSoNguyen = false;
-            this.txt_NANGSUAT.Location = new System.Drawing.Point(462, 283);
+            this.txt_NANGSUAT.Location = new System.Drawing.Point(645, 283);
             this.txt_NANGSUAT.Name = "txt_NANGSUAT";
             this.txt_NANGSUAT.Regular_Expression = "";
             this.txt_NANGSUAT.Size = new System.Drawing.Size(74, 20);
@@ -424,7 +467,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(404, 285);
+            this.label32.Location = new System.Drawing.Point(587, 285);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(56, 13);
             this.label32.TabIndex = 275;
@@ -944,44 +987,31 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã máy";
             // 
-            // txt_CA
+            // txt_TOCDODINHMUC
             // 
-            this.txt_CA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_CA.BannerText = null;
-            this.txt_CA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_CA.Giatrithapphan = 0;
-            this.txt_CA.IsSoNguyen = true;
-            this.txt_CA.Location = new System.Drawing.Point(278, 12);
-            this.txt_CA.Name = "txt_CA";
-            this.txt_CA.Regular_Expression = "";
-            this.txt_CA.Size = new System.Drawing.Size(74, 20);
-            this.txt_CA.TabIndex = 13;
+            this.txt_TOCDODINHMUC.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TOCDODINHMUC.BannerText = null;
+            this.txt_TOCDODINHMUC.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_TOCDODINHMUC.Giatrithapphan = 2;
+            this.txt_TOCDODINHMUC.IsSoNguyen = false;
+            this.txt_TOCDODINHMUC.Location = new System.Drawing.Point(462, 282);
+            this.txt_TOCDODINHMUC.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txt_TOCDODINHMUC.Name = "txt_TOCDODINHMUC";
+            this.txt_TOCDODINHMUC.ReadOnly = true;
+            this.txt_TOCDODINHMUC.Regular_Expression = "";
+            this.txt_TOCDODINHMUC.Size = new System.Drawing.Size(74, 20);
+            this.txt_TOCDODINHMUC.TabIndex = 276;
+            this.txt_TOCDODINHMUC.TabStop = false;
+            this.txt_TOCDODINHMUC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txt_THOIGIANSUCO
+            // label8
             // 
-            this.txt_THOIGIANSUCO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_THOIGIANSUCO.BannerText = null;
-            this.txt_THOIGIANSUCO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_THOIGIANSUCO.Giatrithapphan = 2;
-            this.txt_THOIGIANSUCO.IsSoNguyen = false;
-            this.txt_THOIGIANSUCO.Location = new System.Drawing.Point(645, 217);
-            this.txt_THOIGIANSUCO.Name = "txt_THOIGIANSUCO";
-            this.txt_THOIGIANSUCO.Regular_Expression = "";
-            this.txt_THOIGIANSUCO.Size = new System.Drawing.Size(74, 20);
-            this.txt_THOIGIANSUCO.TabIndex = 20;
-            // 
-            // txt_THOIGIANCHUANBI
-            // 
-            this.txt_THOIGIANCHUANBI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_THOIGIANCHUANBI.BannerText = null;
-            this.txt_THOIGIANCHUANBI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_THOIGIANCHUANBI.Giatrithapphan = 2;
-            this.txt_THOIGIANCHUANBI.IsSoNguyen = false;
-            this.txt_THOIGIANCHUANBI.Location = new System.Drawing.Point(462, 218);
-            this.txt_THOIGIANCHUANBI.Name = "txt_THOIGIANCHUANBI";
-            this.txt_THOIGIANCHUANBI.Regular_Expression = "";
-            this.txt_THOIGIANCHUANBI.Size = new System.Drawing.Size(74, 20);
-            this.txt_THOIGIANCHUANBI.TabIndex = 21;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(398, 286);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.TabIndex = 277;
+            this.label8.Text = "Tốc độ ĐM";
             // 
             // FRM_KQGHEP
             // 
@@ -990,7 +1020,7 @@
             this.ClientSize = new System.Drawing.Size(1193, 701);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_KQGHEP";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_KQGHEP_FormClosing);
@@ -1078,5 +1108,7 @@
         private CONTROL.TEXTBOXNUMBER txt_THOIGIANSUCO;
         private CONTROL.TEXTBOXNUMBER txt_THOIGIANCHUANBI;
         private CONTROL.TEXTBOXNUMBER txt_CA;
+        private CONTROL.TEXTBOXNUMBER txt_TOCDODINHMUC;
+        private CONTROL.LABEL label8;
     }
 }
