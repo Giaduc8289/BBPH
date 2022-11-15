@@ -717,6 +717,16 @@ namespace GD.BBPH.APP.GHEP
         {
             Tinhnangsuat();
         }
+
+        private void Tinhtocdodinhmuc()
+        {
+            try
+            {
+                decimal _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text);
+                txt_TOCDODINHMUC.Text = Math.Round(_tocdo).ToString();
+            }
+            catch { }
+        }
         #endregion
 
         private void label12_Click(object sender, EventArgs e)
