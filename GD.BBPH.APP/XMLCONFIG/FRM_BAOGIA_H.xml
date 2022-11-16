@@ -94,8 +94,35 @@
   </viewgrid>
   <viewgrid>
     <value>2</value>
-    <name>Diadiemgiao</name>
-    <headerText>Diadiemgiao</headerText>
+    <name>Phuongthucgiao</name>
+    <headerText>Phuongthucgiao</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Thoigiangiao</name>
+    <headerText>Thoigiangiao</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Xacnhanbaogia</name>
+    <headerText>Xacnhanbaogia</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
+    <name>Lydo</name>
+    <headerText>Lydo</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>

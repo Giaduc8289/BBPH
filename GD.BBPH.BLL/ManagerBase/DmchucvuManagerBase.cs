@@ -38,6 +38,8 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Nguoisua="Nguoisua";				
 		
+		public const String Field_Heso="Heso";				
+		
 				
 		#endregion	
 
@@ -64,6 +66,8 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Ngaysua,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
+			
+			dt.Columns.Add(Field_Heso,typeof(System.Decimal));
 									
 		            
 			return dt;			
@@ -110,6 +114,12 @@ namespace GD.BBPH.BLL
 				r[Field_Nguoisua]=_DmchucvuEntity.Nguoisua;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_Heso]=_DmchucvuEntity.Heso;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -152,6 +162,12 @@ namespace GD.BBPH.BLL
 				_DmchucvuEntity.Nguoisua= r[Field_Nguoisua].ToString();						
 			}
 			catch { }
+			
+			try
+			{
+				_DmchucvuEntity.Heso= System.Decimal.Parse(r[Field_Heso].ToString());						
+			}
+			catch { }
 									
 									
 			return _DmchucvuEntity;
@@ -172,6 +188,8 @@ namespace GD.BBPH.BLL
 			_DmchucvuEntity.Ngaysua= _DmchucvuEntity_XML.Ngaysua;
 			
 			_DmchucvuEntity.Nguoisua= _DmchucvuEntity_XML.Nguoisua;
+			
+			_DmchucvuEntity.Heso= _DmchucvuEntity_XML.Heso;
 									
 				
 			return _DmchucvuEntity;
@@ -222,6 +240,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_DmchucvuEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Heso,_DmchucvuEntity.Heso);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -267,6 +291,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_DmchucvuEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Heso,_DmchucvuEntity.Heso);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -289,7 +319,7 @@ namespace GD.BBPH.BLL
 			return DmchucvuEntity;
 		}
 
-		public DmchucvuEntity Insert(System.String  Macv, System.String  Tenchucvu, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public DmchucvuEntity Insert(System.String  Macv, System.String  Tenchucvu, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Decimal  Heso)
 		{
 			DmchucvuEntity _DmchucvuEntity = new DmchucvuEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -306,6 +336,8 @@ namespace GD.BBPH.BLL
 				_DmchucvuEntity.Ngaysua = Ngaysua;
 				
 				_DmchucvuEntity.Nguoisua = Nguoisua;
+				
+				_DmchucvuEntity.Heso = Heso;
 					
 					
 				adapter.SaveEntity(_DmchucvuEntity, true);
@@ -313,7 +345,7 @@ namespace GD.BBPH.BLL
 			return _DmchucvuEntity;
 		}
 
-		public DmchucvuEntity Insert(System.String Tenchucvu, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public DmchucvuEntity Insert(System.String Tenchucvu, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Heso)//ko co mahieu
 		{
 			DmchucvuEntity _DmchucvuEntity = new DmchucvuEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -329,6 +361,8 @@ namespace GD.BBPH.BLL
 				_DmchucvuEntity.Ngaysua = Ngaysua;
 				
 				_DmchucvuEntity.Nguoisua = Nguoisua;
+				
+				_DmchucvuEntity.Heso = Heso;
 					
 
 				adapter.SaveEntity(_DmchucvuEntity, true);
@@ -366,7 +400,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Macv, System.String Tenchucvu, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.String Macv, System.String Tenchucvu, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Heso)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -386,6 +420,8 @@ namespace GD.BBPH.BLL
 					_DmchucvuEntity.Ngaysua = Ngaysua;
 					
 					_DmchucvuEntity.Nguoisua = Nguoisua;
+					
+					_DmchucvuEntity.Heso = Heso;
 						
 
 					adapter.SaveEntity(_DmchucvuEntity, true);
@@ -507,6 +543,22 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DmchucvuFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmchucvuEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByHeso(System.Decimal Heso)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchucvuFields.Heso == Heso);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -751,6 +803,40 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DmchucvuFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmchucvuCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByHeso(System.Decimal Heso)
+		{
+			EntityCollection _DmchucvuCollection = new EntityCollection(new DmchucvuEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchucvuFields.Heso == Heso);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmchucvuCollection, filter, 0, null);
+			}
+			return _DmchucvuCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByHesoRDT(System.Decimal Heso)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmchucvuCollection = new EntityCollection(new DmchucvuEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmchucvuFields.Heso == Heso);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

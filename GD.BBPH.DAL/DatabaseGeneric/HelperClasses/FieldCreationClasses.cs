@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, November 15, 2022 9:35:07 AM
+// Code is generated on: Wednesday, November 16, 2022 10:18:26 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -162,11 +162,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(BaogiaHFieldIndex.Phuongthuctt);}
 		}
-		/// <summary>Creates a new BaogiaHEntity.Diadiemgiao field instance</summary>
-		public static EntityField2 Diadiemgiao
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(BaogiaHFieldIndex.Diadiemgiao);}
-		}
 		/// <summary>Creates a new BaogiaHEntity.Ngaytao field instance</summary>
 		public static EntityField2 Ngaytao
 		{
@@ -186,6 +181,26 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(BaogiaHFieldIndex.Nguoisua);}
+		}
+		/// <summary>Creates a new BaogiaHEntity.Xacnhanbaogia field instance</summary>
+		public static EntityField2 Xacnhanbaogia
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaHFieldIndex.Xacnhanbaogia);}
+		}
+		/// <summary>Creates a new BaogiaHEntity.Lydo field instance</summary>
+		public static EntityField2 Lydo
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaHFieldIndex.Lydo);}
+		}
+		/// <summary>Creates a new BaogiaHEntity.Phuongthucgiao field instance</summary>
+		public static EntityField2 Phuongthucgiao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaHFieldIndex.Phuongthucgiao);}
+		}
+		/// <summary>Creates a new BaogiaHEntity.Thoigiangiao field instance</summary>
+		public static EntityField2 Thoigiangiao
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(BaogiaHFieldIndex.Thoigiangiao);}
 		}
 	}
 
@@ -811,6 +826,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmchucvuFieldIndex.Nguoisua);}
+		}
+		/// <summary>Creates a new DmchucvuEntity.Heso field instance</summary>
+		public static EntityField2 Heso
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmchucvuFieldIndex.Heso);}
 		}
 	}
 

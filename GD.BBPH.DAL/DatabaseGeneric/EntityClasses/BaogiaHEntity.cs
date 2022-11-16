@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, November 15, 2022 9:35:07 AM
+// Code is generated on: Wednesday, November 16, 2022 10:18:26 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -509,9 +509,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Phuongthuctt", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Diadiemgiao", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -522,6 +519,18 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Xacnhanbaogia", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Lydo", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Phuongthucgiao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Thoigiangiao", fieldHashtable);
 		}
 		#endregion
 
@@ -688,8 +697,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Tenkhach property of the Entity BaogiaH<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "baogia_h"."Tenkhach"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 100<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tenkhach
 		{
 			get { return (System.String)GetValue((int)BaogiaHFieldIndex.Tenkhach, true); }
@@ -699,7 +708,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Noidung property of the Entity BaogiaH<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "baogia_h"."Noidung"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Noidung
 		{
@@ -710,23 +719,12 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Phuongthuctt property of the Entity BaogiaH<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "baogia_h"."Phuongthuctt"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Phuongthuctt
 		{
 			get { return (System.String)GetValue((int)BaogiaHFieldIndex.Phuongthuctt, true); }
 			set	{ SetValue((int)BaogiaHFieldIndex.Phuongthuctt, value); }
-		}
-
-		/// <summary> The Diadiemgiao property of the Entity BaogiaH<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "baogia_h"."Diadiemgiao"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Diadiemgiao
-		{
-			get { return (System.String)GetValue((int)BaogiaHFieldIndex.Diadiemgiao, true); }
-			set	{ SetValue((int)BaogiaHFieldIndex.Diadiemgiao, value); }
 		}
 
 		/// <summary> The Ngaytao property of the Entity BaogiaH<br/><br/>
@@ -771,6 +769,50 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)BaogiaHFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)BaogiaHFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Xacnhanbaogia property of the Entity BaogiaH<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "baogia_h"."Xacnhanbaogia"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Bit, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Boolean> Xacnhanbaogia
+		{
+			get { return (Nullable<System.Boolean>)GetValue((int)BaogiaHFieldIndex.Xacnhanbaogia, false); }
+			set	{ SetValue((int)BaogiaHFieldIndex.Xacnhanbaogia, value); }
+		}
+
+		/// <summary> The Lydo property of the Entity BaogiaH<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "baogia_h"."Lydo"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Lydo
+		{
+			get { return (System.String)GetValue((int)BaogiaHFieldIndex.Lydo, true); }
+			set	{ SetValue((int)BaogiaHFieldIndex.Lydo, value); }
+		}
+
+		/// <summary> The Phuongthucgiao property of the Entity BaogiaH<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "baogia_h"."Phuongthucgiao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Phuongthucgiao
+		{
+			get { return (System.String)GetValue((int)BaogiaHFieldIndex.Phuongthucgiao, true); }
+			set	{ SetValue((int)BaogiaHFieldIndex.Phuongthucgiao, value); }
+		}
+
+		/// <summary> The Thoigiangiao property of the Entity BaogiaH<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "baogia_h"."Thoigiangiao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Thoigiangiao
+		{
+			get { return (System.String)GetValue((int)BaogiaHFieldIndex.Thoigiangiao, true); }
+			set	{ SetValue((int)BaogiaHFieldIndex.Thoigiangiao, value); }
 		}
 
 		/// <summary> Gets the EntityCollection with the related entities of type 'BaogiaDEntity' which are related to this entity via a relation of type '1:n'.

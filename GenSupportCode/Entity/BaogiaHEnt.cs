@@ -46,11 +46,14 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_TENKHACH.Text = _Rowview.Row[BaogiaHFields.Tenkhach.Name].ToString();
 					txt_NOIDUNG.Text = _Rowview.Row[BaogiaHFields.Noidung.Name].ToString();
 					txt_PHUONGTHUCTT.Text = _Rowview.Row[BaogiaHFields.Phuongthuctt.Name].ToString();
-					txt_DIADIEMGIAO.Text = _Rowview.Row[BaogiaHFields.Diadiemgiao.Name].ToString();
 					txt_NGAYTAO.Text = _Rowview.Row[BaogiaHFields.Ngaytao.Name].ToString();
 					txt_NGUOITAO.Text = _Rowview.Row[BaogiaHFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[BaogiaHFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[BaogiaHFields.Nguoisua.Name].ToString();
+					txt_XACNHANBAOGIA.Text = _Rowview.Row[BaogiaHFields.Xacnhanbaogia.Name].ToString();
+					txt_LYDO.Text = _Rowview.Row[BaogiaHFields.Lydo.Name].ToString();
+					txt_PHUONGTHUCGIAO.Text = _Rowview.Row[BaogiaHFields.Phuongthucgiao.Name].ToString();
+					txt_THOIGIANGIAO.Text = _Rowview.Row[BaogiaHFields.Thoigiangiao.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_BAOGIAH_CurrentChanged"); }
@@ -68,13 +71,17 @@ namespace GD.BBPH.DAL.EntityClasses
 			_BaogiaHEntity.Tenkhach = txt_TENKHACH.Text.Trim();
 			_BaogiaHEntity.Noidung = txt_NOIDUNG.Text.Trim();
 			_BaogiaHEntity.Phuongthuctt = txt_PHUONGTHUCTT.Text.Trim();
-			_BaogiaHEntity.Diadiemgiao = txt_DIADIEMGIAO.Text.Trim();
 			try { _BaogiaHEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
 			catch { }
 			_BaogiaHEntity.Nguoitao = txt_NGUOITAO.Text.Trim();
 			try { _BaogiaHEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
 			catch { }
 			_BaogiaHEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			try { _BaogiaHEntity.Xacnhanbaogia = System.Boolean.Parse(txt_XACNHANBAOGIA.Text.Trim()); } 
+			catch { }
+			_BaogiaHEntity.Lydo = txt_LYDO.Text.Trim();
+			_BaogiaHEntity.Phuongthucgiao = txt_PHUONGTHUCGIAO.Text.Trim();
+			_BaogiaHEntity.Thoigiangiao = txt_THOIGIANGIAO.Text.Trim();
 			
 			
 			if (string.IsNullOrEmpty(_str_BAOGIAH_PK))
@@ -94,11 +101,14 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Tenkhach.Name].Value = _BaogiaHEntity.Tenkhach;
 				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Noidung.Name].Value = _BaogiaHEntity.Noidung;
 				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Phuongthuctt.Name].Value = _BaogiaHEntity.Phuongthuctt;
-				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Diadiemgiao.Name].Value = _BaogiaHEntity.Diadiemgiao;
 				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Ngaytao.Name].Value = _BaogiaHEntity.Ngaytao;
 				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Nguoitao.Name].Value = _BaogiaHEntity.Nguoitao;
 				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Ngaysua.Name].Value = _BaogiaHEntity.Ngaysua;
 				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Nguoisua.Name].Value = _BaogiaHEntity.Nguoisua;
+				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Xacnhanbaogia.Name].Value = _BaogiaHEntity.Xacnhanbaogia;
+				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Lydo.Name].Value = _BaogiaHEntity.Lydo;
+				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Phuongthucgiao.Name].Value = _BaogiaHEntity.Phuongthucgiao;
+				GRID_BAOGIAH.CurrentRow.Cells[BaogiaHFields.Thoigiangiao.Name].Value = _BaogiaHEntity.Thoigiangiao;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_BaogiaHManager.Convert(_BaogiaHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_BAOGIAH_PK;

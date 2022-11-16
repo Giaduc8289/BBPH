@@ -44,7 +44,7 @@
             this.label8 = new GD.BBPH.CONTROL.LABEL();
             this.btn_LAMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
-            this.txt_DIADIEMGIAO = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_PHUONGTHUCGIAO = new GD.BBPH.CONTROL.TEXTBOX();
             this.label7 = new GD.BBPH.CONTROL.LABEL();
             this.txt_NGAYHIEULUC = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new GD.BBPH.CONTROL.LABEL();
@@ -63,6 +63,11 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_SOBAOGIA = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_THOIGIANGIAO = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label4 = new GD.BBPH.CONTROL.LABEL();
+            this.chk_XACNHANBAOGIA = new System.Windows.Forms.CheckBox();
+            this.txt_LYDO = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label6 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -83,7 +88,7 @@
             // 
             this.uiPanelManager1.BeginPanelInfo();
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(494, 542), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(870, 542), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(895, 542), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -113,13 +118,18 @@
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(497, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(870, 542);
+            this.uiPanel1.Size = new System.Drawing.Size(895, 542);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
             // uiPanel1Container
             // 
             this.uiPanel1Container.AutoScroll = true;
+            this.uiPanel1Container.Controls.Add(this.txt_LYDO);
+            this.uiPanel1Container.Controls.Add(this.label6);
+            this.uiPanel1Container.Controls.Add(this.chk_XACNHANBAOGIA);
+            this.uiPanel1Container.Controls.Add(this.txt_THOIGIANGIAO);
+            this.uiPanel1Container.Controls.Add(this.label4);
             this.uiPanel1Container.Controls.Add(this.btn_THEMSP);
             this.uiPanel1Container.Controls.Add(this.btn_SAOCHEP);
             this.uiPanel1Container.Controls.Add(this.btn_Thoat);
@@ -129,7 +139,7 @@
             this.uiPanel1Container.Controls.Add(this.label8);
             this.uiPanel1Container.Controls.Add(this.btn_LAMMOI);
             this.uiPanel1Container.Controls.Add(this.btn_XOADONG);
-            this.uiPanel1Container.Controls.Add(this.txt_DIADIEMGIAO);
+            this.uiPanel1Container.Controls.Add(this.txt_PHUONGTHUCGIAO);
             this.uiPanel1Container.Controls.Add(this.label7);
             this.uiPanel1Container.Controls.Add(this.txt_NGAYHIEULUC);
             this.uiPanel1Container.Controls.Add(this.label5);
@@ -150,7 +160,7 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(868, 518);
+            this.uiPanel1Container.Size = new System.Drawing.Size(893, 518);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // btn_THEMSP
@@ -158,7 +168,7 @@
             this.btn_THEMSP.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_THEMSP.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMSP.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMSP.Location = new System.Drawing.Point(15, 147);
+            this.btn_THEMSP.Location = new System.Drawing.Point(15, 211);
             this.btn_THEMSP.Name = "btn_THEMSP";
             this.btn_THEMSP.Size = new System.Drawing.Size(104, 23);
             this.btn_THEMSP.TabIndex = 10;
@@ -172,7 +182,7 @@
             this.btn_SAOCHEP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_SAOCHEP.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SAOCHEP.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SAOCHEP.Location = new System.Drawing.Point(501, 427);
+            this.btn_SAOCHEP.Location = new System.Drawing.Point(501, 475);
             this.btn_SAOCHEP.Name = "btn_SAOCHEP";
             this.btn_SAOCHEP.Size = new System.Drawing.Size(75, 23);
             this.btn_SAOCHEP.TabIndex = 19;
@@ -186,7 +196,7 @@
             this.btn_Thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Thoat.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(743, 427);
+            this.btn_Thoat.Location = new System.Drawing.Point(743, 475);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
             this.btn_Thoat.TabIndex = 22;
@@ -200,7 +210,7 @@
             this.btn_IN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_IN.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_IN.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_IN.Location = new System.Drawing.Point(662, 427);
+            this.btn_IN.Location = new System.Drawing.Point(662, 475);
             this.btn_IN.Name = "btn_IN";
             this.btn_IN.Size = new System.Drawing.Size(75, 23);
             this.btn_IN.TabIndex = 21;
@@ -214,7 +224,7 @@
             this.btn_TIMKIEM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_TIMKIEM.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_TIMKIEM.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_TIMKIEM.Location = new System.Drawing.Point(582, 427);
+            this.btn_TIMKIEM.Location = new System.Drawing.Point(582, 475);
             this.btn_TIMKIEM.Name = "btn_TIMKIEM";
             this.btn_TIMKIEM.Size = new System.Drawing.Size(75, 23);
             this.btn_TIMKIEM.TabIndex = 20;
@@ -253,7 +263,7 @@
             this.btn_LAMMOI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_LAMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LAMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LAMMOI.Location = new System.Drawing.Point(420, 427);
+            this.btn_LAMMOI.Location = new System.Drawing.Point(420, 475);
             this.btn_LAMMOI.Name = "btn_LAMMOI";
             this.btn_LAMMOI.Size = new System.Drawing.Size(75, 23);
             this.btn_LAMMOI.TabIndex = 18;
@@ -266,7 +276,7 @@
             this.btn_XOADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_XOADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOADONG.Location = new System.Drawing.Point(125, 147);
+            this.btn_XOADONG.Location = new System.Drawing.Point(125, 211);
             this.btn_XOADONG.Name = "btn_XOADONG";
             this.btn_XOADONG.Size = new System.Drawing.Size(78, 23);
             this.btn_XOADONG.TabIndex = 11;
@@ -274,32 +284,32 @@
             this.btn_XOADONG.UseVisualStyleBackColor = true;
             this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
             // 
-            // txt_DIADIEMGIAO
+            // txt_PHUONGTHUCGIAO
             // 
-            this.txt_DIADIEMGIAO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DIADIEMGIAO.BannerText = null;
-            this.txt_DIADIEMGIAO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_DIADIEMGIAO.FormNametoShow = "";
-            this.txt_DIADIEMGIAO.Is_DateTime = false;
-            this.txt_DIADIEMGIAO.IsShowForm = false;
-            this.txt_DIADIEMGIAO.Location = new System.Drawing.Point(96, 86);
-            this.txt_DIADIEMGIAO.Name = "txt_DIADIEMGIAO";
-            this.txt_DIADIEMGIAO.Regular_Expression = null;
-            this.txt_DIADIEMGIAO.Size = new System.Drawing.Size(390, 20);
-            this.txt_DIADIEMGIAO.TabIndex = 5;
+            this.txt_PHUONGTHUCGIAO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PHUONGTHUCGIAO.BannerText = null;
+            this.txt_PHUONGTHUCGIAO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_PHUONGTHUCGIAO.FormNametoShow = "";
+            this.txt_PHUONGTHUCGIAO.Is_DateTime = false;
+            this.txt_PHUONGTHUCGIAO.IsShowForm = false;
+            this.txt_PHUONGTHUCGIAO.Location = new System.Drawing.Point(100, 86);
+            this.txt_PHUONGTHUCGIAO.Name = "txt_PHUONGTHUCGIAO";
+            this.txt_PHUONGTHUCGIAO.Regular_Expression = null;
+            this.txt_PHUONGTHUCGIAO.Size = new System.Drawing.Size(390, 20);
+            this.txt_PHUONGTHUCGIAO.TabIndex = 5;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 89);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 13);
+            this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 170;
-            this.label7.Text = "Địa điểm giao";
+            this.label7.Text = "PT giao hàng";
             // 
             // txt_NGAYHIEULUC
             // 
-            this.txt_NGAYHIEULUC.Location = new System.Drawing.Point(96, 110);
+            this.txt_NGAYHIEULUC.Location = new System.Drawing.Point(100, 138);
             this.txt_NGAYHIEULUC.Mask = "00/00/0000";
             this.txt_NGAYHIEULUC.Name = "txt_NGAYHIEULUC";
             this.txt_NGAYHIEULUC.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -310,7 +320,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 113);
+            this.label5.Location = new System.Drawing.Point(12, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 165;
@@ -324,7 +334,7 @@
             this.txt_PHUONGTHUCTT.FormNametoShow = "";
             this.txt_PHUONGTHUCTT.Is_DateTime = false;
             this.txt_PHUONGTHUCTT.IsShowForm = false;
-            this.txt_PHUONGTHUCTT.Location = new System.Drawing.Point(96, 62);
+            this.txt_PHUONGTHUCTT.Location = new System.Drawing.Point(100, 62);
             this.txt_PHUONGTHUCTT.Name = "txt_PHUONGTHUCTT";
             this.txt_PHUONGTHUCTT.Regular_Expression = null;
             this.txt_PHUONGTHUCTT.Size = new System.Drawing.Size(390, 20);
@@ -342,7 +352,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(305, 16);
+            this.label1.Location = new System.Drawing.Point(309, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 158;
@@ -350,7 +360,7 @@
             // 
             // txt_NGAYBAOGIA
             // 
-            this.txt_NGAYBAOGIA.Location = new System.Drawing.Point(380, 14);
+            this.txt_NGAYBAOGIA.Location = new System.Drawing.Point(384, 14);
             this.txt_NGAYBAOGIA.Mask = "00/00/0000";
             this.txt_NGAYBAOGIA.Name = "txt_NGAYBAOGIA";
             this.txt_NGAYBAOGIA.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -366,7 +376,7 @@
             this.txt_TENKHACH.FormNametoShow = "";
             this.txt_TENKHACH.Is_DateTime = false;
             this.txt_TENKHACH.IsShowForm = false;
-            this.txt_TENKHACH.Location = new System.Drawing.Point(208, 37);
+            this.txt_TENKHACH.Location = new System.Drawing.Point(212, 37);
             this.txt_TENKHACH.Name = "txt_TENKHACH";
             this.txt_TENKHACH.ReadOnly = true;
             this.txt_TENKHACH.Regular_Expression = null;
@@ -382,7 +392,7 @@
             this.txt_MAKHACH.FormNametoShow = "";
             this.txt_MAKHACH.Is_DateTime = false;
             this.txt_MAKHACH.IsShowForm = false;
-            this.txt_MAKHACH.Location = new System.Drawing.Point(96, 37);
+            this.txt_MAKHACH.Location = new System.Drawing.Point(100, 37);
             this.txt_MAKHACH.Name = "txt_MAKHACH";
             this.txt_MAKHACH.Regular_Expression = null;
             this.txt_MAKHACH.Size = new System.Drawing.Size(105, 20);
@@ -404,10 +414,10 @@
             this.pne_CHITIET.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_CHITIET.Location = new System.Drawing.Point(14, 176);
+            this.pne_CHITIET.Location = new System.Drawing.Point(14, 240);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(1581, 221);
+            this.pne_CHITIET.Size = new System.Drawing.Size(855, 209);
             this.pne_CHITIET.TabIndex = 12;
             // 
             // btn_KHOIPHUC
@@ -416,7 +426,7 @@
             this.btn_KHOIPHUC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_KHOIPHUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 427);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 475);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
             this.btn_KHOIPHUC.TabIndex = 15;
@@ -430,7 +440,7 @@
             this.btn_LUULAI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_LUULAI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(14, 427);
+            this.btn_LUULAI.Location = new System.Drawing.Point(14, 475);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
             this.btn_LUULAI.TabIndex = 13;
@@ -444,7 +454,7 @@
             this.btn_XOA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_XOA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(94, 427);
+            this.btn_XOA.Location = new System.Drawing.Point(94, 475);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
             this.btn_XOA.TabIndex = 14;
@@ -458,7 +468,7 @@
             this.btn_THEMMOI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_THEMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(340, 427);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(340, 475);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
             this.btn_THEMMOI.TabIndex = 17;
@@ -472,7 +482,7 @@
             this.btn_SUA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_SUA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(258, 427);
+            this.btn_SUA.Location = new System.Drawing.Point(258, 475);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
             this.btn_SUA.TabIndex = 16;
@@ -488,7 +498,7 @@
             this.txt_SOBAOGIA.FormNametoShow = "";
             this.txt_SOBAOGIA.Is_DateTime = false;
             this.txt_SOBAOGIA.IsShowForm = false;
-            this.txt_SOBAOGIA.Location = new System.Drawing.Point(96, 13);
+            this.txt_SOBAOGIA.Location = new System.Drawing.Point(100, 13);
             this.txt_SOBAOGIA.Name = "txt_SOBAOGIA";
             this.txt_SOBAOGIA.Regular_Expression = null;
             this.txt_SOBAOGIA.Size = new System.Drawing.Size(105, 20);
@@ -503,11 +513,69 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Số báo giá";
             // 
+            // txt_THOIGIANGIAO
+            // 
+            this.txt_THOIGIANGIAO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_THOIGIANGIAO.BannerText = null;
+            this.txt_THOIGIANGIAO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_THOIGIANGIAO.FormNametoShow = "";
+            this.txt_THOIGIANGIAO.Is_DateTime = false;
+            this.txt_THOIGIANGIAO.IsShowForm = false;
+            this.txt_THOIGIANGIAO.Location = new System.Drawing.Point(100, 112);
+            this.txt_THOIGIANGIAO.Name = "txt_THOIGIANGIAO";
+            this.txt_THOIGIANGIAO.Regular_Expression = null;
+            this.txt_THOIGIANGIAO.Size = new System.Drawing.Size(390, 20);
+            this.txt_THOIGIANGIAO.TabIndex = 179;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.TabIndex = 180;
+            this.label4.Text = "TG giao hàng";
+            // 
+            // chk_XACNHANBAOGIA
+            // 
+            this.chk_XACNHANBAOGIA.AutoSize = true;
+            this.chk_XACNHANBAOGIA.Location = new System.Drawing.Point(12, 173);
+            this.chk_XACNHANBAOGIA.Margin = new System.Windows.Forms.Padding(2);
+            this.chk_XACNHANBAOGIA.Name = "chk_XACNHANBAOGIA";
+            this.chk_XACNHANBAOGIA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chk_XACNHANBAOGIA.Size = new System.Drawing.Size(102, 17);
+            this.chk_XACNHANBAOGIA.TabIndex = 181;
+            this.chk_XACNHANBAOGIA.Text = "    Xác nhận BG";
+            this.chk_XACNHANBAOGIA.UseVisualStyleBackColor = true;
+            // 
+            // txt_LYDO
+            // 
+            this.txt_LYDO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_LYDO.BannerText = null;
+            this.txt_LYDO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_LYDO.FormNametoShow = "";
+            this.txt_LYDO.Is_DateTime = false;
+            this.txt_LYDO.IsShowForm = false;
+            this.txt_LYDO.Location = new System.Drawing.Point(212, 170);
+            this.txt_LYDO.Name = "txt_LYDO";
+            this.txt_LYDO.Regular_Expression = null;
+            this.txt_LYDO.Size = new System.Drawing.Size(657, 20);
+            this.txt_LYDO.TabIndex = 182;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(172, 173);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.TabIndex = 183;
+            this.label6.Text = "Lý do";
+            // 
             // FRM_BAOGIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 548);
+            this.ClientSize = new System.Drawing.Size(1395, 548);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -551,7 +619,7 @@
         private CONTROL.TEXTBOX txt_PHUONGTHUCTT;
         private CONTROL.LABEL label3;
         private System.Windows.Forms.Panel pne_CHITIET;
-        private CONTROL.TEXTBOX txt_DIADIEMGIAO;
+        private CONTROL.TEXTBOX txt_PHUONGTHUCGIAO;
         private CONTROL.LABEL label7;
         private System.Windows.Forms.MaskedTextBox txt_NGAYHIEULUC;
         private CONTROL.LABEL label5;
@@ -563,5 +631,10 @@
         private CONTROL.BUTTON btn_IN;
         private CONTROL.BUTTON btn_SAOCHEP;
         private CONTROL.BUTTON btn_THEMSP;
+        private CONTROL.TEXTBOX txt_THOIGIANGIAO;
+        private CONTROL.LABEL label4;
+        private CONTROL.TEXTBOX txt_LYDO;
+        private CONTROL.LABEL label6;
+        private System.Windows.Forms.CheckBox chk_XACNHANBAOGIA;
     }
 }
