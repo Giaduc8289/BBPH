@@ -1243,6 +1243,20 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCLUONGTOTUA()), mmru.Text);
                     break;
+                case "FRM_BCTONGHOPLUONGTOIN":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCTONGHOPLUONGTOIN") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCTONGHOPLUONGTOIN()), mmru.Text);
+                    break;
+                case "BCTONGHOPLUONGTOTUA":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "BCTONGHOPLUONGTOTUA") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.BCTONGHOPLUONGTOTUA()), mmru.Text);
+                    break;
                 #endregion
 
                 #endregion
