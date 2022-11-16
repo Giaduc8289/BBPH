@@ -47,18 +47,18 @@
               <Width>11.34188cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.06884cm</Width>
+              <Width>1.61735cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.40441cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.65213cm</Width>
+              <Width>3.1036cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.58942cm</Height>
+              <Height>0.9863cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -201,7 +201,22 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Giá bán</Value>
+                              <Value>Giá thanh toán</Value>
+                              <Style>
+                                <FontFamily>Times New Roman</FontFamily>
+                                <FontSize>9pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>(bao gồm VAT)</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
@@ -250,7 +265,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Số lượng</Value>
+                              <Value>Số lượng tối thiểu một đơn hàng</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>9pt</FontSize>
@@ -332,14 +347,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox23">
+                    <Textbox Name="Tenhang">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!Tensanpham.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -348,7 +363,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox23</rd:DefaultName>
+                      <rd:DefaultName>Tenhang</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -360,6 +375,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -371,7 +387,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>túi</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
@@ -406,7 +422,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Dongiatongcovat.Value</Value>
+                              <Value>=Fields!Dongia.Value</Value>
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontSize>9pt</FontSize>
@@ -495,9 +511,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Inbaogia</DataSetName>
-        <Top>2.61692cm</Top>
+        <Top>2.55342cm</Top>
         <Left>0.04978cm</Left>
-        <Height>1.18942cm</Height>
+        <Height>1.5863cm</Height>
         <Width>19.78273cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -586,7 +602,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "  	  " + First(Fields!Noidung.Value, "Thamso")</Value>
+                <Value>= First(Fields!Noidung.Value, "Thamso")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>9pt</FontSize>
@@ -616,44 +632,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox8">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Ghi chú: </Value>
-                <Style>
-                  <FontStyle>Italic</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <TextDecoration>Underline</TextDecoration>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.94745cm</Top>
-        <Left>0.04978cm</Left>
-        <Height>0.51026cm</Height>
-        <Width>1.44084cm</Width>
-        <ZIndex>5</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox9">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -661,7 +639,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant">Đơn giá trên đã có VAT 10% và chi phí vận chuyển tới kho Quý công ty.</Value>
+                <Value>1. PHƯƠNG THỨC THANH TOÁN</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -671,19 +649,17 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <ListStyle>Bulleted</ListStyle>
-            <ListLevel>1</ListLevel>
             <Style>
               <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.49299cm</Top>
+        <Top>4.23899cm</Top>
         <Left>0.76415cm</Left>
         <Height>0.6161cm</Height>
         <Width>19.09482cm</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -701,7 +677,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "Đơn giá có hiệu lực kể từ ngày  " + Format(First(Fields!Ngayhieuluc.Value, "Thamso"),"dd/MM/yyyy") + " đến khi có thông báo điều chỉnh giá mới."</Value>
+                <Value>=First(Fields!Phuongthuctt.Value, "Thamso")</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -711,19 +687,17 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <ListStyle>Bulleted</ListStyle>
-            <ListLevel>1</ListLevel>
             <Style>
               <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.10909cm</Top>
+        <Top>4.85509cm</Top>
         <Left>0.76415cm</Left>
         <Height>0.6161cm</Height>
         <Width>19.09482cm</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -741,7 +715,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>="Áp dụng đối với tất cả các đơn đặt hàng mới kể từ ngày  " + Microsoft.VisualBasic.Strings.Format(First(Fields!Ngayhieuluc.Value, "Thamso"), "dd/MM/yyyy") + "."</Value>
+                <Value>2. PHƯƠNG THỨC GIAO HÀNG</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -751,19 +725,17 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <ListStyle>Bulleted</ListStyle>
-            <ListLevel>1</ListLevel>
             <Style>
               <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.72519cm</Top>
+        <Top>5.53469cm</Top>
         <Left>0.76415cm</Left>
         <Height>0.6161cm</Height>
         <Width>19.09482cm</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -781,7 +753,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant">Giao hàng trong vòng 10-15 ngày kể từ ngày nhận đơn đặt hàng.</Value>
+                <Value>=First(Fields!Phuongthucgiao.Value, "Thamso")</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -791,19 +763,17 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <ListStyle>Bulleted</ListStyle>
-            <ListLevel>1</ListLevel>
             <Style>
               <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>6.34129cm</Top>
+        <Top>6.15079cm</Top>
         <Left>0.76415cm</Left>
         <Height>0.6161cm</Height>
         <Width>19.09482cm</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -821,7 +791,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value EvaluationMode="Constant">Thanh toán: Trong vòng 20 ngày kể từ ngày giao hàng và xuất hóa đơn tài chính.</Value>
+                <Value>Sau 15 ngày kể từ ngày xác nhận giá sản phẩm.</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -831,59 +801,17 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <ListStyle>Bulleted</ListStyle>
-            <ListLevel>1</ListLevel>
             <Style>
               <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>6.95739cm</Top>
+        <Top>8.89414cm</Top>
         <Left>0.76415cm</Left>
         <Height>0.6161cm</Height>
         <Width>19.09482cm</Width>
-        <ZIndex>10</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox14">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>="Hình thức thanh toán:  " + First(Fields!Phuongthuctt.Value, "Thamso") + "."</Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>9pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <ListStyle>Bulleted</ListStyle>
-            <ListLevel>1</ListLevel>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>7.57349cm</Top>
-        <Left>0.76415cm</Left>
-        <Height>0.6161cm</Height>
-        <Width>19.09482cm</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -901,7 +829,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Rất mong nhận được sự hợp tác của Quý công ty</Value>
+                <Value>Chúng tôi mong rằng hai bên sẽ sớm lập hợp đồng cho sản phẩm trên.</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -911,36 +839,34 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <ListLevel>1</ListLevel>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Chúng tôi chân thành cảm ơn !</Value>
+                <Value>Trân trọng kính chào!</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                   <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
             </TextRuns>
-            <ListLevel>1</ListLevel>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Left</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>8.39744cm</Top>
-        <Left>0.02332cm</Left>
+        <Top>9.66744cm</Top>
+        <Left>0.76415cm</Left>
         <Height>0.98652cm</Height>
-        <Width>19.80919cm</Width>
-        <ZIndex>12</ZIndex>
+        <Width>19.09482cm</Width>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -974,11 +900,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>9.45452cm</Top>
+        <Top>10.78802cm</Top>
         <Left>11.61207cm</Left>
         <Height>0.53673cm</Height>
         <Width>8.2469cm</Width>
-        <ZIndex>13</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1015,7 +941,7 @@
         <Left>0.04978cm</Left>
         <Height>0.72193cm</Height>
         <Width>6.89756cm</Width>
-        <ZIndex>14</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1151,10 +1077,86 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>9.45452cm</Top>
+        <Top>10.78802cm</Top>
         <Left>0.10177cm</Left>
         <Height>2.91798cm</Height>
         <Width>8.2469cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>3. THỜI GIAN GIAO HÀNG</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>6.8719cm</Top>
+        <Left>0.76415cm</Left>
+        <Height>0.6161cm</Height>
+        <Width>19.09482cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!Thoigiangiao.Value, "Thamso")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>7.488cm</Top>
+        <Left>0.76415cm</Left>
+        <Height>0.6161cm</Height>
+        <Width>19.09482cm</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -1166,8 +1168,46 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox24">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>4. HIỆU LỰC BÁO GIÁ</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>8.2277cm</Top>
+        <Left>0.76415cm</Left>
+        <Height>0.6161cm</Height>
+        <Width>19.09482cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>12.3725cm</Height>
+    <Height>13.706cm</Height>
     <Style />
   </Body>
   <Width>19.88043cm</Width>
@@ -1220,7 +1260,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>KCN Phố Nối B, Nghĩa Hiệp, Yên Mỹ, T.Hưng Yên</Value>
+                  <Value>KCN Phố Nối B, Nghĩa Hiệp, Yên Mỹ, Tỉnh Hưng Yên</Value>
                   <Style>
                     <FontFamily>Times New Roman</FontFamily>
                     <FontSize>8pt</FontSize>
@@ -1287,25 +1327,9 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>3.03311cm</Height>
+      <Height>0.02646cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Image Name="Image1">
-          <Source>Embedded</Source>
-          <Value>Untitled</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>0in</Top>
-          <Left>0.0249cm</Left>
-          <Height>3.03311cm</Height>
-          <Width>19.80919cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
-      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>
@@ -1345,88 +1369,144 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Mahang">
-          <DataField>Mahang</DataField>
+        <Field Name="Mamay">
+          <DataField>Mamay</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Tenhang">
-          <DataField>Tenhang</DataField>
+        <Field Name="Tenmay">
+          <DataField>Tenmay</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Chungloai">
-          <DataField>Chungloai</DataField>
+        <Field Name="Ngay">
+          <DataField>Ngay</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Kichthuoc">
-          <DataField>Kichthuoc</DataField>
+        <Field Name="Ca">
+          <DataField>Ca</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Trongluongbao">
-          <DataField>Trongluongbao</DataField>
+        <Field Name="Macongnhan">
+          <DataField>Macongnhan</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Trongluongpe">
-          <DataField>Trongluongpe</DataField>
+        <Field Name="Tencongnhan">
+          <DataField>Tencongnhan</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Baochuavat">
-          <DataField>Baochuavat</DataField>
+        <Field Name="Dauvaomet">
+          <DataField>Dauvaomet</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Pechuavat">
-          <DataField>Pechuavat</DataField>
+        <Field Name="Dauvaokg">
+          <DataField>Dauvaokg</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Tongchuavat">
-          <DataField>Tongchuavat</DataField>
+        <Field Name="Dauramet">
+          <DataField>Dauramet</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Baocovat">
-          <DataField>Baocovat</DataField>
+        <Field Name="Daurakg">
+          <DataField>Daurakg</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Pecovat">
-          <DataField>Pecovat</DataField>
+        <Field Name="Thoigianbatdau">
+          <DataField>Thoigianbatdau</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Tongcovat">
-          <DataField>Tongcovat</DataField>
+        <Field Name="Thoigianketthuc">
+          <DataField>Thoigianketthuc</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Ghichu">
-          <DataField>Ghichu</DataField>
+        <Field Name="Thoigiandauca">
+          <DataField>Thoigiandauca</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Giavon">
-          <DataField>Giavon</DataField>
+        <Field Name="Thoigianchuanbi">
+          <DataField>Thoigianchuanbi</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Sophieuxuat">
-          <DataField>Sophieuxuat</DataField>
+        <Field Name="Thoigianlencuon">
+          <DataField>Thoigianlencuon</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Ngayxuat">
-          <DataField>Ngayxuat</DataField>
+        <Field Name="Thoigianhacuon">
+          <DataField>Thoigianhacuon</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Soxe">
-          <DataField>Soxe</DataField>
+        <Field Name="Thoigiancatdau">
+          <DataField>Thoigiancatdau</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Laixehoten">
-          <DataField>Laixehoten</DataField>
+        <Field Name="Thoigiansuco">
+          <DataField>Thoigiansuco</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Soluonggiao">
-          <DataField>Soluonggiao</DataField>
+        <Field Name="Thoigiandoilenh">
+          <DataField>Thoigiandoilenh</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Soluongtralai">
-          <DataField>Soluongtralai</DataField>
+        <Field Name="Phenhacungcap">
+          <DataField>Phenhacungcap</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Dongiatongchuavat">
-          <DataField>Dongiatongchuavat</DataField>
+        <Field Name="Phethoi">
+          <DataField>Phethoi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Pheghep">
+          <DataField>Pheghep</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Phein">
+          <DataField>Phein</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Phechia">
+          <DataField>Phechia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Phebien">
+          <DataField>Phebien</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Phesanxuat">
+          <DataField>Phesanxuat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Phechinhmay">
+          <DataField>Phechinhmay</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Phekhac">
+          <DataField>Phekhac</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nangsuat">
+          <DataField>Nangsuat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Chatluong">
+          <DataField>Chatluong</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tylesaihong">
+          <DataField>Tylesaihong</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mamang">
+          <DataField>Mamang</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tenmang">
+          <DataField>Tenmang</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Masanpham">
+          <DataField>Masanpham</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tensanpham">
+          <DataField>Tensanpham</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Makhach">
@@ -1437,35 +1517,251 @@
           <DataField>Tenkhach</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Lenhsanxuat">
+          <DataField>Lenhsanxuat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SoluongLSX">
+          <DataField>SoluongLSX</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dauratua">
+          <DataField>Dauratua</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Manginmet">
+          <DataField>Manginmet</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Manginkg">
+          <DataField>Manginkg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mangcapmet">
+          <DataField>Mangcapmet</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mangcapkg">
+          <DataField>Mangcapkg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Solopghep">
+          <DataField>Solopghep</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dauraghep">
+          <DataField>Dauraghep</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Socuon">
+          <DataField>Socuon</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Kiemtra">
+          <DataField>Kiemtra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ketquatui">
+          <DataField>Ketquatui</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Chatluongtui">
+          <DataField>Chatluongtui</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Lenhhoanthien">
+          <DataField>Lenhhoanthien</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Madon">
+          <DataField>Madon</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Sobaogia">
           <DataField>Sobaogia</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Ngaybaogia">
-          <DataField>Ngaybaogia</DataField>
+        <Field Name="Ghichuchung">
+          <DataField>Ghichuchung</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Madonhang">
-          <DataField>Madonhang</DataField>
+        <Field Name="Ghichusp">
+          <DataField>Ghichusp</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Sopo">
-          <DataField>Sopo</DataField>
+        <Field Name="Soluong">
+          <DataField>Soluong</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dongia">
+          <DataField>Dongia</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Makho">
+          <DataField>Makho</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tenkho">
+          <DataField>Tenkho</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Somet">
+          <DataField>Somet</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sokg">
+          <DataField>Sokg</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Malydo">
+          <DataField>Malydo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tenlydo">
+          <DataField>Tenlydo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sophieugiao">
+          <DataField>Sophieugiao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ngaydat">
+          <DataField>Ngaydat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ngaytra">
+          <DataField>Ngaytra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Soluongtra">
+          <DataField>Soluongtra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sohopdongmua">
+          <DataField>Sohopdongmua</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Somettondau">
+          <DataField>Somettondau</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Soluongtondau">
+          <DataField>Soluongtondau</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Khoiluongtondau">
+          <DataField>Khoiluongtondau</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sometnhapkho">
+          <DataField>Sometnhapkho</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Soluongnhapkho">
+          <DataField>Soluongnhapkho</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Khoiluongnhapkho">
+          <DataField>Khoiluongnhapkho</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sometxuatkho">
+          <DataField>Sometxuatkho</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Soluongxuatkho">
+          <DataField>Soluongxuatkho</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Khoiluongxuatkho">
+          <DataField>Khoiluongxuatkho</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Manguyenlieu">
+          <DataField>Manguyenlieu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tennguyenlieu">
+          <DataField>Tennguyenlieu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Donvitinh">
+          <DataField>Donvitinh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Lenhxuat">
+          <DataField>Lenhxuat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Manhom">
+          <DataField>Manhom</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tennhom">
+          <DataField>Tennhom</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sohinh">
+          <DataField>Sohinh</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Dai">
+          <DataField>Dai</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rong">
+          <DataField>Rong</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Doday">
+          <DataField>Doday</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Somau">
+          <DataField>Somau</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Daicuon">
+          <DataField>Daicuon</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rongcuon">
+          <DataField>Rongcuon</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Hong">
+          <DataField>Hong</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mamau">
+          <DataField>Mamau</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tenmau">
+          <DataField>Tenmau</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Mahieu">
+          <DataField>Mahieu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tenhieu">
+          <DataField>Tenhieu</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Loai">
           <DataField>Loai</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Dongiatongcovat">
-          <DataField>Dongiatongcovat</DataField>
+        <Field Name="Dinhmuc">
+          <DataField>Dinhmuc</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DataKDBB</rd:DataSetName>
-        <rd:SchemaPath>D:\CODE2020\KDBB\GD.KDBB.APP\RDLC\DataKDBB.xsd</rd:SchemaPath>
-        <rd:TableName>Baogia</rd:TableName>
+        <rd:DataSetName>DataBBPH</rd:DataSetName>
+        <rd:SchemaPath>D:\Dev\BBPH\GD.BBPH.APP\RDLC\DataBBPH.xsd</rd:SchemaPath>
+        <rd:TableName>Ketquasanxuat</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
