@@ -126,6 +126,7 @@ namespace GD.BBPH.APP.DANHMUC
                         MAHIEU_PK = _Rowview.Row[DmchucvuFields.Macv.Name].ToString();
                     txt_MAHIEU.Text = _Rowview.Row[DmchucvuFields.Macv.Name].ToString();
                     txt_TENHIEU.Text = _Rowview.Row[DmchucvuFields.Tenchucvu.Name].ToString();
+                    txt_HESO.Text = _Rowview.Row[DmchucvuFields.Heso.Name].ToString();
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_DMCHUCVU_CurrentChanged"); }
@@ -136,6 +137,8 @@ namespace GD.BBPH.APP.DANHMUC
             DmchucvuEntity _DmchucvuEntity = new DmchucvuEntity();
             _DmchucvuEntity.Macv = txt_MAHIEU.Text.Trim();
             _DmchucvuEntity.Tenchucvu = txt_TENHIEU.Text.Trim();
+            try { _DmchucvuEntity.Heso = System.Decimal.Parse(txt_HESO.Text.Trim()); }
+            catch { }
             if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
                 _DmchucvuEntity.Ngaytao = DateTime.Now;
@@ -151,6 +154,7 @@ namespace GD.BBPH.APP.DANHMUC
                 _DmchucvuManager.Update(_DmchucvuEntity);
                 GRID_DMCHUCVU.CurrentRow.Cells[DmchucvuFields.Macv.Name].Value = _DmchucvuEntity.Macv;
                 GRID_DMCHUCVU.CurrentRow.Cells[DmchucvuFields.Tenchucvu.Name].Value = _DmchucvuEntity.Tenchucvu;
+                GRID_DMCHUCVU.CurrentRow.Cells[DmchucvuFields.Heso.Name].Value = _DmchucvuEntity.Heso;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmchucvuManager.Convert(_DmchucvuEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_MAHIEU_PK;
