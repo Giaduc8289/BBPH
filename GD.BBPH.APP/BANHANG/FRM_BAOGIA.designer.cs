@@ -35,6 +35,11 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_LYDO = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label6 = new GD.BBPH.CONTROL.LABEL();
+            this.chk_XACNHANBAOGIA = new System.Windows.Forms.CheckBox();
+            this.txt_THOIGIANGIAO = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label4 = new GD.BBPH.CONTROL.LABEL();
             this.btn_THEMSP = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SAOCHEP = new GD.BBPH.CONTROL.BUTTON();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
@@ -63,11 +68,6 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_SOBAOGIA = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_THOIGIANGIAO = new GD.BBPH.CONTROL.TEXTBOX();
-            this.label4 = new GD.BBPH.CONTROL.LABEL();
-            this.chk_XACNHANBAOGIA = new System.Windows.Forms.CheckBox();
-            this.txt_LYDO = new GD.BBPH.CONTROL.TEXTBOX();
-            this.label6 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -163,6 +163,64 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(893, 518);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // txt_LYDO
+            // 
+            this.txt_LYDO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_LYDO.BannerText = null;
+            this.txt_LYDO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_LYDO.FormNametoShow = "";
+            this.txt_LYDO.Is_DateTime = false;
+            this.txt_LYDO.IsShowForm = false;
+            this.txt_LYDO.Location = new System.Drawing.Point(212, 170);
+            this.txt_LYDO.Name = "txt_LYDO";
+            this.txt_LYDO.Regular_Expression = null;
+            this.txt_LYDO.Size = new System.Drawing.Size(657, 20);
+            this.txt_LYDO.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(172, 173);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.TabIndex = 183;
+            this.label6.Text = "Lý do";
+            // 
+            // chk_XACNHANBAOGIA
+            // 
+            this.chk_XACNHANBAOGIA.AutoSize = true;
+            this.chk_XACNHANBAOGIA.Location = new System.Drawing.Point(12, 173);
+            this.chk_XACNHANBAOGIA.Margin = new System.Windows.Forms.Padding(2);
+            this.chk_XACNHANBAOGIA.Name = "chk_XACNHANBAOGIA";
+            this.chk_XACNHANBAOGIA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chk_XACNHANBAOGIA.Size = new System.Drawing.Size(102, 17);
+            this.chk_XACNHANBAOGIA.TabIndex = 9;
+            this.chk_XACNHANBAOGIA.Text = "    Xác nhận BG";
+            this.chk_XACNHANBAOGIA.UseVisualStyleBackColor = true;
+            // 
+            // txt_THOIGIANGIAO
+            // 
+            this.txt_THOIGIANGIAO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_THOIGIANGIAO.BannerText = null;
+            this.txt_THOIGIANGIAO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_THOIGIANGIAO.FormNametoShow = "";
+            this.txt_THOIGIANGIAO.Is_DateTime = false;
+            this.txt_THOIGIANGIAO.IsShowForm = false;
+            this.txt_THOIGIANGIAO.Location = new System.Drawing.Point(100, 112);
+            this.txt_THOIGIANGIAO.Name = "txt_THOIGIANGIAO";
+            this.txt_THOIGIANGIAO.Regular_Expression = null;
+            this.txt_THOIGIANGIAO.Size = new System.Drawing.Size(390, 20);
+            this.txt_THOIGIANGIAO.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.TabIndex = 180;
+            this.label4.Text = "TG giao hàng";
+            // 
             // btn_THEMSP
             // 
             this.btn_THEMSP.AdjustImageLocation = new System.Drawing.Point(0, 0);
@@ -171,7 +229,7 @@
             this.btn_THEMSP.Location = new System.Drawing.Point(15, 211);
             this.btn_THEMSP.Name = "btn_THEMSP";
             this.btn_THEMSP.Size = new System.Drawing.Size(104, 23);
-            this.btn_THEMSP.TabIndex = 10;
+            this.btn_THEMSP.TabIndex = 11;
             this.btn_THEMSP.Text = "Thêm sản phẩm";
             this.btn_THEMSP.UseVisualStyleBackColor = true;
             this.btn_THEMSP.Click += new System.EventHandler(this.btn_THEMDONG_Click);
@@ -185,7 +243,7 @@
             this.btn_SAOCHEP.Location = new System.Drawing.Point(501, 475);
             this.btn_SAOCHEP.Name = "btn_SAOCHEP";
             this.btn_SAOCHEP.Size = new System.Drawing.Size(75, 23);
-            this.btn_SAOCHEP.TabIndex = 19;
+            this.btn_SAOCHEP.TabIndex = 20;
             this.btn_SAOCHEP.Text = "Sao chép";
             this.btn_SAOCHEP.UseVisualStyleBackColor = true;
             this.btn_SAOCHEP.Click += new System.EventHandler(this.btn_SAOCHEP_Click);
@@ -199,7 +257,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(743, 475);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 22;
+            this.btn_Thoat.TabIndex = 23;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -213,7 +271,7 @@
             this.btn_IN.Location = new System.Drawing.Point(662, 475);
             this.btn_IN.Name = "btn_IN";
             this.btn_IN.Size = new System.Drawing.Size(75, 23);
-            this.btn_IN.TabIndex = 21;
+            this.btn_IN.TabIndex = 22;
             this.btn_IN.Text = "&In";
             this.btn_IN.UseVisualStyleBackColor = true;
             this.btn_IN.Click += new System.EventHandler(this.btn_IN_Click);
@@ -227,7 +285,7 @@
             this.btn_TIMKIEM.Location = new System.Drawing.Point(582, 475);
             this.btn_TIMKIEM.Name = "btn_TIMKIEM";
             this.btn_TIMKIEM.Size = new System.Drawing.Size(75, 23);
-            this.btn_TIMKIEM.TabIndex = 20;
+            this.btn_TIMKIEM.TabIndex = 21;
             this.btn_TIMKIEM.Text = "Tìm kiếm";
             this.btn_TIMKIEM.UseVisualStyleBackColor = true;
             this.btn_TIMKIEM.Click += new System.EventHandler(this.btn_TIMKIEM_Click);
@@ -246,7 +304,7 @@
             this.txt_NOIDUNG.Regular_Expression = null;
             this.txt_NOIDUNG.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_NOIDUNG.Size = new System.Drawing.Size(315, 116);
-            this.txt_NOIDUNG.TabIndex = 7;
+            this.txt_NOIDUNG.TabIndex = 8;
             // 
             // label8
             // 
@@ -266,7 +324,7 @@
             this.btn_LAMMOI.Location = new System.Drawing.Point(420, 475);
             this.btn_LAMMOI.Name = "btn_LAMMOI";
             this.btn_LAMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LAMMOI.TabIndex = 18;
+            this.btn_LAMMOI.TabIndex = 19;
             this.btn_LAMMOI.Text = "Làm mới";
             this.btn_LAMMOI.UseVisualStyleBackColor = true;
             this.btn_LAMMOI.Click += new System.EventHandler(this.btn_LAMMOI_Click);
@@ -279,7 +337,7 @@
             this.btn_XOADONG.Location = new System.Drawing.Point(125, 211);
             this.btn_XOADONG.Name = "btn_XOADONG";
             this.btn_XOADONG.Size = new System.Drawing.Size(78, 23);
-            this.btn_XOADONG.TabIndex = 11;
+            this.btn_XOADONG.TabIndex = 12;
             this.btn_XOADONG.Text = "Xóa dòng";
             this.btn_XOADONG.UseVisualStyleBackColor = true;
             this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
@@ -314,7 +372,7 @@
             this.txt_NGAYHIEULUC.Name = "txt_NGAYHIEULUC";
             this.txt_NGAYHIEULUC.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txt_NGAYHIEULUC.Size = new System.Drawing.Size(105, 20);
-            this.txt_NGAYHIEULUC.TabIndex = 6;
+            this.txt_NGAYHIEULUC.TabIndex = 7;
             this.txt_NGAYHIEULUC.ValidatingType = typeof(System.DateTime);
             // 
             // label5
@@ -418,7 +476,7 @@
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
             this.pne_CHITIET.Size = new System.Drawing.Size(855, 209);
-            this.pne_CHITIET.TabIndex = 12;
+            this.pne_CHITIET.TabIndex = 13;
             // 
             // btn_KHOIPHUC
             // 
@@ -429,7 +487,7 @@
             this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 475);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 15;
+            this.btn_KHOIPHUC.TabIndex = 16;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -443,7 +501,7 @@
             this.btn_LUULAI.Location = new System.Drawing.Point(14, 475);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LUULAI.TabIndex = 13;
+            this.btn_LUULAI.TabIndex = 14;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
             this.btn_LUULAI.Click += new System.EventHandler(this.btn_LUULAI_Click);
@@ -457,7 +515,7 @@
             this.btn_XOA.Location = new System.Drawing.Point(94, 475);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 14;
+            this.btn_XOA.TabIndex = 15;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -471,7 +529,7 @@
             this.btn_THEMMOI.Location = new System.Drawing.Point(340, 475);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 17;
+            this.btn_THEMMOI.TabIndex = 18;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -485,7 +543,7 @@
             this.btn_SUA.Location = new System.Drawing.Point(258, 475);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 16;
+            this.btn_SUA.TabIndex = 17;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
@@ -512,64 +570,6 @@
             this.label22.Size = new System.Drawing.Size(58, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Số báo giá";
-            // 
-            // txt_THOIGIANGIAO
-            // 
-            this.txt_THOIGIANGIAO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_THOIGIANGIAO.BannerText = null;
-            this.txt_THOIGIANGIAO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_THOIGIANGIAO.FormNametoShow = "";
-            this.txt_THOIGIANGIAO.Is_DateTime = false;
-            this.txt_THOIGIANGIAO.IsShowForm = false;
-            this.txt_THOIGIANGIAO.Location = new System.Drawing.Point(100, 112);
-            this.txt_THOIGIANGIAO.Name = "txt_THOIGIANGIAO";
-            this.txt_THOIGIANGIAO.Regular_Expression = null;
-            this.txt_THOIGIANGIAO.Size = new System.Drawing.Size(390, 20);
-            this.txt_THOIGIANGIAO.TabIndex = 179;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 115);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
-            this.label4.TabIndex = 180;
-            this.label4.Text = "TG giao hàng";
-            // 
-            // chk_XACNHANBAOGIA
-            // 
-            this.chk_XACNHANBAOGIA.AutoSize = true;
-            this.chk_XACNHANBAOGIA.Location = new System.Drawing.Point(12, 173);
-            this.chk_XACNHANBAOGIA.Margin = new System.Windows.Forms.Padding(2);
-            this.chk_XACNHANBAOGIA.Name = "chk_XACNHANBAOGIA";
-            this.chk_XACNHANBAOGIA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chk_XACNHANBAOGIA.Size = new System.Drawing.Size(102, 17);
-            this.chk_XACNHANBAOGIA.TabIndex = 181;
-            this.chk_XACNHANBAOGIA.Text = "    Xác nhận BG";
-            this.chk_XACNHANBAOGIA.UseVisualStyleBackColor = true;
-            // 
-            // txt_LYDO
-            // 
-            this.txt_LYDO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_LYDO.BannerText = null;
-            this.txt_LYDO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_LYDO.FormNametoShow = "";
-            this.txt_LYDO.Is_DateTime = false;
-            this.txt_LYDO.IsShowForm = false;
-            this.txt_LYDO.Location = new System.Drawing.Point(212, 170);
-            this.txt_LYDO.Name = "txt_LYDO";
-            this.txt_LYDO.Regular_Expression = null;
-            this.txt_LYDO.Size = new System.Drawing.Size(657, 20);
-            this.txt_LYDO.TabIndex = 182;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(172, 173);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
-            this.label6.TabIndex = 183;
-            this.label6.Text = "Lý do";
             // 
             // FRM_BAOGIA
             // 

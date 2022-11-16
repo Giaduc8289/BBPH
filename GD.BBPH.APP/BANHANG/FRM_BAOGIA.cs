@@ -676,7 +676,7 @@ namespace GD.BBPH.APP.BANHANG
         {
             DataSet dsKetqua = new DataSet();
             DateTime _Ngaybaogia = new DateTime(), _Ngayhieuluc = new DateTime();
-            string _Sobaogia = "", _Khachhang = "", _Phuongthuctt = "", _Diadiemgiao = "", _Noidung = "";
+            string _Sobaogia = "", _Khachhang = "", _Phuongthuctt = "", _Phuongthucgiao = "", _Thoigiangiao = "", _Noidung = "";
 
             try
             {
@@ -700,7 +700,8 @@ namespace GD.BBPH.APP.BANHANG
                 DataTable dtThamso = new DataTable("Thamso");
                 dtThamso.Columns.Add("Khachhang");
                 dtThamso.Columns.Add("Phuongthuctt");
-                dtThamso.Columns.Add("Diadiemgiao");
+                dtThamso.Columns.Add("Phuongthucgiao");
+                dtThamso.Columns.Add("Thoigiangiao");
                 dtThamso.Columns.Add("Ngayhieuluc", Type.GetType("System.DateTime"));
                 dtThamso.Columns.Add("Noidung");
                 dtThamso.Columns.Add("Sobaogia");
@@ -708,7 +709,8 @@ namespace GD.BBPH.APP.BANHANG
                 DataRow dr = dtThamso.NewRow();
                 dr["Khachhang"] = txt_TENKHACH.Text;
                 dr["Phuongthuctt"] = txt_PHUONGTHUCTT.Text;
-                dr["Diadiemgiao"] = txt_PHUONGTHUCGIAO.Text;
+                dr["Phuongthucgiao"] = txt_PHUONGTHUCGIAO.Text;
+                dr["Thoigiangiao"] = txt_THOIGIANGIAO.Text;
                 dr["Ngayhieuluc"] = Convert.ToDateTime(txt_NGAYHIEULUC.Text);
                 dr["Noidung"] = txt_NOIDUNG.Text;
                 dr["Sobaogia"] = txt_SOBAOGIA.Text;
