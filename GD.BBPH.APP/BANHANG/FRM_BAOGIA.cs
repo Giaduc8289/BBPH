@@ -207,9 +207,14 @@ namespace GD.BBPH.APP.BANHANG
                     txt_MAKHACH.Text = _Rowview.Row[BaogiaHFields.Makhach.Name].ToString();
                     txt_NGAYBAOGIA.Text = _Rowview.Row[BaogiaHFields.Ngaybaogia.Name].ToString();
                     txt_PHUONGTHUCTT.Text = _Rowview.Row[BaogiaHFields.Phuongthuctt.Name].ToString();
-                    txt_DIADIEMGIAO.Text = _Rowview.Row[BaogiaHFields.Diadiemgiao.Name].ToString();
                     txt_NGAYHIEULUC.Text = _Rowview.Row[BaogiaHFields.Ngayhieuluc.Name].ToString();
                     txt_NOIDUNG.Text = _Rowview.Row[BaogiaHFields.Noidung.Name].ToString();
+                    try { chk_XACNHANBAOGIA.Checked = Convert.ToBoolean(_Rowview.Row[BaogiaHFields.Xacnhanbaogia.Name].ToString()); }
+                    catch { }
+                    txt_LYDO.Text = _Rowview.Row[BaogiaHFields.Lydo.Name].ToString();
+                    txt_PHUONGTHUCGIAO.Text = _Rowview.Row[BaogiaHFields.Phuongthucgiao.Name].ToString();
+                    txt_THOIGIANGIAO.Text = _Rowview.Row[BaogiaHFields.Thoigiangiao.Name].ToString();
+
                     txt_MAKHACH_Validating(new object(), new CancelEventArgs());
 
                     SHOWGRID(MAHIEU_PK);
@@ -364,10 +369,13 @@ namespace GD.BBPH.APP.BANHANG
             try { _BaogiaHEntity.Ngaybaogia = Convert.ToDateTime(txt_NGAYBAOGIA.Text.Trim()); }
             catch { }
             _BaogiaHEntity.Phuongthuctt = txt_PHUONGTHUCTT.Text.Trim();
-            _BaogiaHEntity.Diadiemgiao = txt_DIADIEMGIAO.Text.Trim();
             _BaogiaHEntity.Noidung = txt_NOIDUNG.Text.Trim();
             try { _BaogiaHEntity.Ngayhieuluc = Convert.ToDateTime(txt_NGAYHIEULUC.Text.Trim()); }
             catch { }
+            _BaogiaHEntity.Xacnhanbaogia = chk_XACNHANBAOGIA.Checked ? true : false;
+            _BaogiaHEntity.Lydo = txt_LYDO.Text.Trim();
+            _BaogiaHEntity.Phuongthucgiao = txt_PHUONGTHUCGIAO.Text.Trim();
+            _BaogiaHEntity.Thoigiangiao = txt_THOIGIANGIAO.Text.Trim();
 
             EntityCollection _BaogiaDEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_BAOGIA_D.GetDataRows();
@@ -460,9 +468,12 @@ namespace GD.BBPH.APP.BANHANG
                 GRID_BAOGIA_H.CurrentRow.Cells[BaogiaHFields.Tenkhach.Name].Value = _BaogiaHEntity.Tenkhach;
                 GRID_BAOGIA_H.CurrentRow.Cells[BaogiaHFields.Ngaybaogia.Name].Value = _BaogiaHEntity.Ngaybaogia;
                 GRID_BAOGIA_H.CurrentRow.Cells[BaogiaHFields.Phuongthuctt.Name].Value = _BaogiaHEntity.Phuongthuctt;
-                GRID_BAOGIA_H.CurrentRow.Cells[BaogiaHFields.Diadiemgiao.Name].Value = _BaogiaHEntity.Diadiemgiao;
                 GRID_BAOGIA_H.CurrentRow.Cells[BaogiaHFields.Ngayhieuluc.Name].Value = _BaogiaHEntity.Ngayhieuluc;
                 GRID_BAOGIA_H.CurrentRow.Cells[BaogiaHFields.Noidung.Name].Value = _BaogiaHEntity.Noidung;
+                GRID_BAOGIA_H.CurrentRow.Cells[BaogiaHFields.Xacnhanbaogia.Name].Value = _BaogiaHEntity.Xacnhanbaogia;
+                GRID_BAOGIA_H.CurrentRow.Cells[BaogiaHFields.Lydo.Name].Value = _BaogiaHEntity.Lydo;
+                GRID_BAOGIA_H.CurrentRow.Cells[BaogiaHFields.Phuongthucgiao.Name].Value = _BaogiaHEntity.Phuongthucgiao;
+                GRID_BAOGIA_H.CurrentRow.Cells[BaogiaHFields.Thoigiangiao.Name].Value = _BaogiaHEntity.Thoigiangiao;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_BaogiaHManager.Convert(_BaogiaHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_BAOGIA_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_BAOGIA_D.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -479,7 +490,7 @@ namespace GD.BBPH.APP.BANHANG
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             txt_SOBAOGIA.Text = txt_MAKHACH.Text = txt_TENKHACH.Text = string.Empty;
-            txt_PHUONGTHUCTT.Text = txt_DIADIEMGIAO.Text = txt_NOIDUNG.Text = string.Empty;
+            txt_PHUONGTHUCTT.Text = txt_PHUONGTHUCGIAO.Text = txt_NOIDUNG.Text = string.Empty;
             r_Insert = DT_BAOGIA_H.NewRow();
             DT_BAOGIA_H.Rows.Add(r_Insert);
             BS_BAOGIA_H.Position = DT_BAOGIA_H.Rows.Count;
@@ -558,9 +569,13 @@ namespace GD.BBPH.APP.BANHANG
                 txt_NGAYBAOGIA.Text = drCopy[0][BaogiaHFields.Ngaybaogia.Name].ToString();
                 txt_MAKHACH.Text = drCopy[0][BaogiaHFields.Makhach.Name].ToString();
                 txt_PHUONGTHUCTT.Text = drCopy[0][BaogiaHFields.Phuongthuctt.Name].ToString();
-                txt_DIADIEMGIAO.Text = drCopy[0][BaogiaHFields.Diadiemgiao.Name].ToString();
                 txt_NGAYHIEULUC.Text = drCopy[0][BaogiaHFields.Ngayhieuluc.Name].ToString();
                 txt_NOIDUNG.Text = drCopy[0][BaogiaHFields.Noidung.Name].ToString();
+                try { chk_XACNHANBAOGIA.Checked = Convert.ToBoolean(drCopy[0][BaogiaHFields.Xacnhanbaogia.Name].ToString()); }
+                catch { }
+                txt_LYDO.Text = drCopy[0][BaogiaHFields.Lydo.Name].ToString();
+                txt_PHUONGTHUCGIAO.Text = drCopy[0][BaogiaHFields.Phuongthucgiao.Name].ToString();
+                txt_THOIGIANGIAO.Text = drCopy[0][BaogiaHFields.Thoigiangiao.Name].ToString();
 
                 txt_MAKHACH_Validating(new object(), new CancelEventArgs());
 
@@ -693,7 +708,7 @@ namespace GD.BBPH.APP.BANHANG
                 DataRow dr = dtThamso.NewRow();
                 dr["Khachhang"] = txt_TENKHACH.Text;
                 dr["Phuongthuctt"] = txt_PHUONGTHUCTT.Text;
-                dr["Diadiemgiao"] = txt_DIADIEMGIAO.Text;
+                dr["Diadiemgiao"] = txt_PHUONGTHUCGIAO.Text;
                 dr["Ngayhieuluc"] = Convert.ToDateTime(txt_NGAYHIEULUC.Text);
                 dr["Noidung"] = txt_NOIDUNG.Text;
                 dr["Sobaogia"] = txt_SOBAOGIA.Text;

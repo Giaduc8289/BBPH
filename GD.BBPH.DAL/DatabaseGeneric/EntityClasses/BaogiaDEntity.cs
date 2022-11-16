@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, November 15, 2022 9:35:07 AM
+// Code is generated on: Wednesday, November 16, 2022 10:18:26 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -779,7 +779,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> The Mota property of the Entity BaogiaD<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "baogia_d"."Mota"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Mota
 		{

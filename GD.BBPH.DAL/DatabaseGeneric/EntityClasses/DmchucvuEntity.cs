@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Tuesday, November 15, 2022 9:35:06 AM
+// Code is generated on: Wednesday, November 16, 2022 10:18:25 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -449,6 +449,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Heso", fieldHashtable);
 		}
 		#endregion
 
@@ -578,6 +581,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmchucvuFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)DmchucvuFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Heso property of the Entity Dmchucvu<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmchucvu"."Heso"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Heso
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmchucvuFieldIndex.Heso, false); }
+			set	{ SetValue((int)DmchucvuFieldIndex.Heso, value); }
 		}
 
 
