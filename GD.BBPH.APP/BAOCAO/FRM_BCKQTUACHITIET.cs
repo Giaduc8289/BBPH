@@ -50,11 +50,11 @@ namespace GD.BBPH.APP.BAOCAO
                 {
                     if (FUNCTION == "LOAD")
                     {
-                        _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQIN");
+                        _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_TKKQTUA");
                         DateTime Ngaydauthang = LIB.SESSION_START.TS_NGAYDAUTHANG;
                         DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
                         
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("IN");
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("TUA");
                         DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
                         DT_DMHANG = LIB.SESSION_START.DM_HANG;
                     }
