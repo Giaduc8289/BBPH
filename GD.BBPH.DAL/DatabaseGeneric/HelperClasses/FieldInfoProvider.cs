@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 16, 2022 10:18:24 AM
+// Code is generated on: Wednesday, November 16, 2022 4:36:38 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -700,6 +700,8 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("KetquachiaEntity", "Tentruongca", typeof(System.String), false, false, false, true,  (int)KetquachiaFieldIndex.Tentruongca, 250, 0, 0);
 			base.AddElementFieldInfo("KetquachiaEntity", "Tocdodinhmuc", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquachiaFieldIndex.Tocdodinhmuc, 0, 3, 20);
 			base.AddElementFieldInfo("KetquachiaEntity", "Lydosuco", typeof(System.String), false, false, false, true,  (int)KetquachiaFieldIndex.Lydosuco, 2147483647, 0, 0);
+			base.AddElementFieldInfo("KetquachiaEntity", "Sometra", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquachiaFieldIndex.Sometra, 0, 3, 20);
+			base.AddElementFieldInfo("KetquachiaEntity", "Sokgra", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)KetquachiaFieldIndex.Sokgra, 0, 3, 20);
 		}
 		/// <summary>Inits KetquaghepEntity's FieldInfo objects</summary>
 		private void InitKetquaghepEntityInfos()

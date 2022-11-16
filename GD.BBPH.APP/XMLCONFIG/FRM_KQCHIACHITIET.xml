@@ -193,6 +193,24 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Sometra</name>
+    <headerText>Số mét ra</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Sokgra</name>
+    <headerText>Số kg ra</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Thoigianbatdau</name>
     <headerText>TG bắt đầu</headerText>
     <BackColor>0</BackColor>

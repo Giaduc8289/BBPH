@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 16, 2022 10:18:26 AM
+// Code is generated on: Wednesday, November 16, 2022 4:36:40 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -542,6 +542,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Lydosuco", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sometra", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sokgra", fieldHashtable);
 		}
 		#endregion
 
@@ -1012,6 +1018,28 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquachiaFieldIndex.Lydosuco, true); }
 			set	{ SetValue((int)KetquachiaFieldIndex.Lydosuco, value); }
+		}
+
+		/// <summary> The Sometra property of the Entity Ketquachia<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquachia"."Sometra"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sometra
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquachiaFieldIndex.Sometra, false); }
+			set	{ SetValue((int)KetquachiaFieldIndex.Sometra, value); }
+		}
+
+		/// <summary> The Sokgra property of the Entity Ketquachia<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquachia"."Sokgra"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sokgra
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KetquachiaFieldIndex.Sokgra, false); }
+			set	{ SetValue((int)KetquachiaFieldIndex.Sokgra, value); }
 		}
 
 

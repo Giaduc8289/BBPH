@@ -199,6 +199,8 @@ namespace GD.BBPH.APP.CHIA
                     txt_MATRUONGCA.Text = _Rowview.Row[KetquachiaFields.Matruongca.Name].ToString();
                     txt_TENTRUONGCA.Text = _Rowview.Row[KetquachiaFields.Tentruongca.Name].ToString();
                     txt_LYDOSUCO.Text = _Rowview.Row[KetquachiaFields.Lydosuco.Name].ToString();
+                    txt_SOMETRA.Text = _Rowview.Row[KetquachiaFields.Sometra.Name].ToString();
+                    txt_SOKGRA.Text = _Rowview.Row[KetquachiaFields.Sokgra.Name].ToString();
                 }
                 else
                 {
@@ -276,6 +278,10 @@ namespace GD.BBPH.APP.CHIA
             try { r_Detail[KetquachiaFields.Tylesaihong.Name] = LIB.ConvertString.NumbertoDB(txt_TYLESAIHONG.Text.Trim()); }
             catch { }
             try { r_Detail[KetquachiaFields.Socuon.Name] = LIB.ConvertString.NumbertoDB(txt_SOCUON.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Sometra.Name] = System.Decimal.Parse(txt_SOMETRA.Text.Trim()); }
+            catch { }
+            try { r_Detail[KetquachiaFields.Sokgra.Name] = System.Decimal.Parse(txt_SOKGRA.Text.Trim()); }
             catch { }
 
             r_Detail[KetquachiaFields.Thoigianbatdau.Name] = txt_THOIGIANBATDAU.Text;
@@ -381,6 +387,10 @@ namespace GD.BBPH.APP.CHIA
                 _KetquachiaEntity.Matruongca = _view.Row[KetquachiaFields.Matruongca.Name].ToString();
                 _KetquachiaEntity.Tentruongca = _view.Row[KetquachiaFields.Tentruongca.Name].ToString();
                 _KetquachiaEntity.Lydosuco = _view.Row[KetquachiaFields.Lydosuco.Name].ToString();
+                try { _KetquachiaEntity.Sometra = System.Decimal.Parse(_view.Row[KetquachiaFields.Sometra.Name].ToString()); }
+                catch { }
+                try { _KetquachiaEntity.Sokgra = System.Decimal.Parse(_view.Row[KetquachiaFields.Sokgra.Name].ToString()); }
+                catch { }
 
                 try { _KetquachiaEntity.Tocdodinhmuc = System.Decimal.Parse(_view.Row[KetquachiaFields.Tocdodinhmuc.Name].ToString()); }
                 catch { }
