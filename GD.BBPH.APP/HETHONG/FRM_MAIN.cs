@@ -1214,6 +1214,16 @@ namespace GD.BBPH.APP.HETHONG
                     break;
                 #endregion
 
+                #region Báo cáo lương
+                case "FRM_BCLUONGTOIN":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCLUONGTOIN") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCLUONGTOIN()), mmru.Text);
+                    break;
+                #endregion
+
                 #endregion
 
 
