@@ -9,15 +9,15 @@ With Encryption As
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
 	
-	SELECT bg.*, hh.Loai, hh.Chatluongkhachyeucau, hh.Chatluongnoibo
-		, Diachi, Sodienthoai, Sofax, Masothue, Taikhoannganhang, Tennganhang, Email
-		, Nguoilienhehoten, Nguoilienhechucvu, Nguoilienhesodienthoai, Nguoilienhethongtinbosung, Tenrutgon
-	FROM dbo.Baogia_d bg LEFT JOIN dbo.Danhmuchanghoa hh ON hh.Mahieu=bg.Mahang
-		LEFT join Danhmuckhach kh on kh.Mahieu = hh.Makhach
-	WHERE Sobaogia = @Sobaogia AND Ngaybaogia = @Ngaybaogia
+	Select ct.Sobaogia, Masp As Masanpham, Tensp As Tensanpham
+		, Cautruc, Rong, Dai, Trongluong, Tenqcthanhpham, Tenqcloaithung, Tenqcdonggoi
+		, Mota
+		, DongiakhongVAT, DongiaVAT As Dongia
+	From baogia_d ct Left Join baogia_h th On th.Sobaogia=ct.Sobaogia
+	Where ct.Sobaogia = @Sobaogia AND Ngaybaogia = @Ngaybaogia
 
 GO
 
-EXEC dbo.Inbaogia '03/04/2021','bg001'
+EXEC dbo.Inbaogia '11/08/2022','BG002'
 
-SELECT * FROM dbo.Baogia_d
+SELECT * FROM dbo.Baogia_h
