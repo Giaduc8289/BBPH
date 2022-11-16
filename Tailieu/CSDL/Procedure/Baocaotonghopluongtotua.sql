@@ -1,9 +1,9 @@
-﻿------------------------Báo cáo lương tổ tua-------------
-If Object_ID('dbo.Baocaoluongtotua','P') is not null
-	Drop Procedure dbo.Baocaoluongtotua
+------------------------B�o c�o t?ng h?p l??ng t? tua-------------
+If Object_ID('dbo.Baocaotonghopluongtotua','P') is not null
+	Drop Procedure dbo.Baocaotonghopluongtotua
 Go
 
-Create Procedure Baocaoluongtotua
+Create Procedure Baocaotonghopluongtotua
 	@Tungay			Date,
 	@Denngay		Date,
 	@Macongnhan		Nvarchar(50)
@@ -36,12 +36,13 @@ As	SET NOCOUNT ON;
 	Where (Macongnhan=@Macongnhan Or @Macongnhan='')
 	GROUP BY Ngay, Macongnhan, Tencongnhan, Masanpham, Tensanpham, Socongnhan
 
-	Select Ngay, Macongnhan, Tencongnhan,Masanpham, Tensanpham
-			, SoMetvao/Socongnhan As Dauvaomet, SoKgvao/Socongnhan As Dauvaokg
-			, SoMetra/Socongnhan As Dauramet, SoKgra/Socongnhan As Daurakg
+	Select Macongnhan, Tencongnhan
+			, SUM(SoMetvao/Socongnhan) Dauvaomet, SUM(SoKgvao/Socongnhan) Dauvaokg
+			, SUM(SoMetra/Socongnhan) Dauramet, SUM(SoKgra/Socongnhan) Daurakg
 	From #Ketquatua
-	Order By Macongnhan, Masanpham
+	GROUP BY Macongnhan, Tencongnhan, Socongnhan
+	Order By Macongnhan
 	
 GO
 
-EXEC Baocaoluongtotua '10/01/2022', '11/30/2022', ''
+EXEC Baocaotonghopluongtotua '10/01/2022', '11/30/2022', ''
