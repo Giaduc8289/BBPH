@@ -54,7 +54,7 @@ namespace GD.BBPH.APP.BAOCAO
                         DateTime Ngaydauthang = LIB.SESSION_START.TS_NGAYDAUTHANG;
                         DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
                         
-                        DT_DMCONGNHAN = new DmcongnhanManager().SelectByMabpRDT("TUA");
+                        DT_DMCONGNHAN = new DmcongnhanManager().SelectByMabpRDT("CHIA");
                     }
                 };
                 worker.RunWorkerCompleted += delegate
