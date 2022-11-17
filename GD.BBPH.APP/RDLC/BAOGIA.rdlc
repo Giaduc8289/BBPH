@@ -375,7 +375,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -644,7 +643,7 @@
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>9pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
+                  <FontWeight>Bold</FontWeight>
                   <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
@@ -657,7 +656,7 @@
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>4.23899cm</Top>
         <Left>0.76415cm</Left>
-        <Height>0.6161cm</Height>
+        <Height>0.52085cm</Height>
         <Width>19.09482cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
@@ -693,10 +692,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>4.85509cm</Top>
-        <Left>0.76415cm</Left>
+        <Top>4.82334cm</Top>
+        <Left>1.36527cm</Left>
         <Height>0.6161cm</Height>
-        <Width>19.09482cm</Width>
+        <Width>18.4937cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -720,7 +719,7 @@
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>9pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
+                  <FontWeight>Bold</FontWeight>
                   <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
@@ -731,9 +730,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.53469cm</Top>
+        <Top>5.59819cm</Top>
         <Left>0.76415cm</Left>
-        <Height>0.6161cm</Height>
+        <Height>0.52085cm</Height>
         <Width>19.09482cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
@@ -770,9 +769,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>6.15079cm</Top>
-        <Left>0.76415cm</Left>
+        <Left>1.36527cm</Left>
         <Height>0.6161cm</Height>
-        <Width>19.09482cm</Width>
+        <Width>18.4937cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -807,10 +806,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>8.89414cm</Top>
-        <Left>0.76415cm</Left>
+        <Top>8.83064cm</Top>
+        <Left>1.36527cm</Left>
         <Height>0.6161cm</Height>
-        <Width>19.09482cm</Width>
+        <Width>18.4937cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -959,7 +958,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>CÔNG TY CP CÔNG NGHỆ BAO BÌ PHƯƠNG BẮC</Value>
+                <Value>CÔNG TY CP CNBB PHƯƠNG BẮC</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -1104,7 +1103,7 @@
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>9pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
+                  <FontWeight>Bold</FontWeight>
                   <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
@@ -1115,9 +1114,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>6.8719cm</Top>
+        <Top>6.90365cm</Top>
         <Left>0.76415cm</Left>
-        <Height>0.6161cm</Height>
+        <Height>0.52085cm</Height>
         <Width>19.09482cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
@@ -1154,9 +1153,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>7.488cm</Top>
-        <Left>0.76415cm</Left>
+        <Left>1.36527cm</Left>
         <Height>0.6161cm</Height>
-        <Width>19.09482cm</Width>
+        <Width>18.4937cm</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -1180,7 +1179,7 @@
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>9pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
+                  <FontWeight>Bold</FontWeight>
                   <TextDecoration>None</TextDecoration>
                 </Style>
               </TextRun>
@@ -1191,9 +1190,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>8.2277cm</Top>
+        <Top>8.25945cm</Top>
         <Left>0.76415cm</Left>
-        <Height>0.6161cm</Height>
+        <Height>0.52085cm</Height>
         <Width>19.09482cm</Width>
         <ZIndex>16</ZIndex>
         <Style>

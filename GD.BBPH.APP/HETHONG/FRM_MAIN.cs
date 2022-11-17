@@ -1243,12 +1243,26 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCLUONGTOTUA()), mmru.Text);
                     break;
+                case "FRM_BCTONGHOPLUONGTOTHOI":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCTONGHOPLUONGTOTHOI") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCTONGHOPLUONGTOTHOI()), mmru.Text);
+                    break;
                 case "FRM_BCTONGHOPLUONGTOIN":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
                         if (frm.Name == "FRM_BCTONGHOPLUONGTOIN") { frm.Activate(); return; }
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCTONGHOPLUONGTOIN()), mmru.Text);
+                    break;
+                case "FRM_BCTONGHOPLUONGTOGHEP":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCTONGHOPLUONGTOGHEP") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCTONGHOPLUONGTOGHEP()), mmru.Text);
                     break;
                 case "BCTONGHOPLUONGTOTUA":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
@@ -1263,6 +1277,13 @@ namespace GD.BBPH.APP.HETHONG
                         if (frm.Name == "FRM_BCLUONGTOCHIA") { frm.Activate(); return; }
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCLUONGTOCHIA()), mmru.Text);
+                    break;
+                case "FRM_BCTONGHOPLUONGTOCHIA":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCTONGHOPLUONGTOCHIA") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCTONGHOPLUONGTOCHIA()), mmru.Text);
                     break;
                 #endregion
 
