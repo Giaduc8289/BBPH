@@ -165,6 +165,18 @@
     <Compile Include="BAOCAO\FRM_BCLUONGTOTHOI.Designer.cs">
       <DependentUpon>FRM_BCLUONGTOTHOI.cs</DependentUpon>
     </Compile>
+    <Compile Include="BAOCAO\FRM_BCTONGHOPLUONGTOTHOI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BCTONGHOPLUONGTOTHOI.Designer.cs">
+      <DependentUpon>FRM_BCTONGHOPLUONGTOTHOI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BCTONGHOPLUONGTOGHEP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BAOCAO\FRM_BCTONGHOPLUONGTOGHEP.Designer.cs">
+      <DependentUpon>FRM_BCTONGHOPLUONGTOGHEP.cs</DependentUpon>
+    </Compile>
     <Compile Include="BAOCAO\FRM_BCTONGHOPLUONGTOTUA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -748,6 +760,12 @@
     <EmbeddedResource Include="BAOCAO\FRM_BCLUONGTOTHOI.resx">
       <DependentUpon>FRM_BCLUONGTOTHOI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BCTONGHOPLUONGTOTHOI.resx">
+      <DependentUpon>FRM_BCTONGHOPLUONGTOTHOI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BAOCAO\FRM_BCTONGHOPLUONGTOGHEP.resx">
+      <DependentUpon>FRM_BCTONGHOPLUONGTOGHEP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_BCTONGHOPLUONGTOTUA.resx">
       <DependentUpon>FRM_BCTONGHOPLUONGTOTUA.cs</DependentUpon>
     </EmbeddedResource>
@@ -992,6 +1010,8 @@
     </Compile>
     <EmbeddedResource Include="RDLC\BAOCAOLUONGTOGHEP.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOLUONGTOTHOI.rdlc" />
+    <EmbeddedResource Include="RDLC\BAOCAOTONGHOPLUONGTOTHOI.rdlc" />
+    <EmbeddedResource Include="RDLC\BAOCAOTONGHOPLUONGTOGHEP.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOTONGHOPLUONGTOTUA.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOTONGHOPLUONGTOIN.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOLUONGTOCHIA.rdlc" />
