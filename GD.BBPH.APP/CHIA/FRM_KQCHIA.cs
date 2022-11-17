@@ -828,16 +828,39 @@ namespace GD.BBPH.APP.CHIA
         #endregion
 
         #region Shortcut Key
-        //private void txt_MAPHONGBAN_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyData == Keys.F4)
-        //    {
-        //        FRM_DMPHONGBAN frm_Dm = new FRM_DMPHONGBAN();
-        //        frm_Dm.Text = "Danh mục phòng ban";
-        //        frm_Dm.ShowDialog();
-        //        DT_DMPHONGBAN = new DanhmucphongbanManager().SelectAllRDT();
-        //    }
-        //}
+        private void txt_MAMAY_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMMAY frm_Dm = new FRM_DMMAY();
+                frm_Dm.Text = "Danh mục máy";
+                frm_Dm.ShowDialog();
+                DT_DMMAY = new DmmayManager().SelectAllRDT();
+            }
+        }
+
+
+        private void txt_MAHANG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMHANG frm_Dm = new FRM_DMHANG();
+                frm_Dm.Text = "Danh mục hàng hoá";
+                frm_Dm.ShowDialog();
+                DT_DMHANG = new DmhangManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MACONGNHAN_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCONGNHAN frm_Dm = new FRM_DMCONGNHAN();
+                frm_Dm.Text = "Danh mục công nhân";
+                frm_Dm.ShowDialog();
+                DT_NHANVIEN = new DmcongnhanManager().SelectAllRDT();
+            }
+        }
         #endregion
 
         private void uiPanel0_Resize(object sender, EventArgs e)

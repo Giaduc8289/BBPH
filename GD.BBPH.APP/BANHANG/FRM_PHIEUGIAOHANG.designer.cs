@@ -490,6 +490,7 @@
             this.txt_MADONHANG.Regular_Expression = null;
             this.txt_MADONHANG.Size = new System.Drawing.Size(105, 20);
             this.txt_MADONHANG.TabIndex = 7;
+            this.txt_MADONHANG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MADONHANG_KeyDown);
             this.txt_MADONHANG.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MADONHANG_Validating);
             // 
             // label8

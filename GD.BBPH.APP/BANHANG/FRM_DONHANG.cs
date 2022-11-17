@@ -67,7 +67,7 @@ namespace GD.BBPH.APP.BANHANG
                         DT_DMHANG = LIB.SESSION_START.DM_HANG;
                         DT_BAOGIA_H = new BaogiaHManager().SelectAllRDT();
                         //DT_BAOGIA_D = LIB.SESSION_START.DT_BAOGIA_D;
-                        DT_NHANVIEN = new DmcongnhanManager().SelectPhongbanChuanghi(new string[] {"KD"});//LIB.SESSION_START.DT_NHANVIEN;
+                        DT_NHANVIEN = new DmcongnhanManager().SelectByMabpRDT("KD");
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -922,15 +922,24 @@ namespace GD.BBPH.APP.BANHANG
         }
         private void txt_SOBAOGIA_KeyDown(object sender, KeyEventArgs e)
         {
-            //if (e.KeyData == Keys.F4)
-            //{
-            //    FRM_BAOGIA frm_Dm = new FRM_BAOGIA();
-            //    frm_Dm.Text = "Danh mục báo giá";
-            //    frm_Dm.ShowDialog();
-            //    DT_BAOGIA_H = new BaogiaHManager().SelectAllRDT();
-            //}
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_BAOGIA frm_Dm = new FRM_BAOGIA();
+                frm_Dm.Text = "Danh mục báo giá";
+                frm_Dm.ShowDialog();
+                DT_BAOGIA_H = new BaogiaHManager().SelectAllRDT();
+            }
         }
-
+        private void txt_MANV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMCONGNHAN frm_Nqc = new FRM_DMCONGNHAN();
+                frm_Nqc.Text = "Danh mục nhân viên";
+                frm_Nqc.ShowDialog();
+                DT_NHANVIEN = new DmcongnhanManager().SelectAllRDT();
+            }
+        }
         #endregion
         private void FRM_DONHANG_KeyDown(object sender, KeyEventArgs e)
         {

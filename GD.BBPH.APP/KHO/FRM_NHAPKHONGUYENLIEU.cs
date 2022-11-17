@@ -577,7 +577,7 @@ namespace GD.BBPH.APP.KHO
             if (e.KeyData == Keys.F4)
             {
                 FRM_DMKHO frm_Dm = new FRM_DMKHO();
-                frm_Dm.Text = "Danh mục lý do";
+                frm_Dm.Text = "Danh mục kho";
                 frm_Dm.ShowDialog();
                 DT_DMKHO = new DmkhoManager().SelectAllRDT();
             }
@@ -587,7 +587,7 @@ namespace GD.BBPH.APP.KHO
             if (e.KeyData == Keys.F4)
             {
                 FRM_DMNGUYENLIEU frm_Dm = new FRM_DMNGUYENLIEU();
-                frm_Dm.Text = "Danh mục lý do";
+                frm_Dm.Text = "Danh mục nguyên liệu";
                 frm_Dm.ShowDialog();
                 DT_DMNGUYENLIEU = new DmnguyenlieuManager().SelectAllRDT();
             }

@@ -205,6 +205,7 @@
             this.txt_MANHOM.Regular_Expression = null;
             this.txt_MANHOM.Size = new System.Drawing.Size(77, 20);
             this.txt_MANHOM.TabIndex = 3;
+            this.txt_MANHOM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MANHOMNL_KeyDown);
             this.txt_MANHOM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MANHOM_Validating);
             // 
             // label5

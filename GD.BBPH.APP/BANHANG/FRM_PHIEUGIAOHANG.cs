@@ -948,6 +948,17 @@ namespace GD.BBPH.APP.BANHANG
                 DT_DMHANGHOA = new DmhangManager().SelectAllRDT();
             }
         }
+       
+        private void txt_MADONHANG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DONHANG frm_Dm = new FRM_DONHANG();
+                frm_Dm.Text = "Danh mục đơn hàng";
+                frm_Dm.ShowDialog();
+                DT_DONHANG_H = new DonhangHManager().SelectAllRDT();
+            }
+        }
         private void txt_BIENKIEMSOAT_KeyDown(object sender, KeyEventArgs e)
         {
             //if (e.KeyData == Keys.F4)

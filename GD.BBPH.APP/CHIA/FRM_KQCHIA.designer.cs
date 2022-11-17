@@ -34,6 +34,10 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_SOMETRA = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.txt_SOKGRA = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label30 = new GD.BBPH.CONTROL.LABEL();
+            this.label31 = new GD.BBPH.CONTROL.LABEL();
             this.txt_LYDOSUCO = new GD.BBPH.CONTROL.TEXTBOX();
             this.label29 = new GD.BBPH.CONTROL.LABEL();
             this.txt_THOIGIANLENCUON = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
@@ -104,10 +108,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_SOMETRA = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.txt_SOKGRA = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.label30 = new GD.BBPH.CONTROL.LABEL();
-            this.label31 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -243,6 +243,50 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(926, 654);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_SOMETRA
+            // 
+            this.txt_SOMETRA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOMETRA.BannerText = null;
+            this.txt_SOMETRA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOMETRA.Giatrithapphan = 2;
+            this.txt_SOMETRA.IsSoNguyen = false;
+            this.txt_SOMETRA.Location = new System.Drawing.Point(642, 142);
+            this.txt_SOMETRA.Name = "txt_SOMETRA";
+            this.txt_SOMETRA.Regular_Expression = "";
+            this.txt_SOMETRA.Size = new System.Drawing.Size(74, 20);
+            this.txt_SOMETRA.TabIndex = 9;
+            // 
+            // txt_SOKGRA
+            // 
+            this.txt_SOKGRA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOKGRA.BannerText = null;
+            this.txt_SOKGRA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOKGRA.Giatrithapphan = 2;
+            this.txt_SOKGRA.IsSoNguyen = false;
+            this.txt_SOKGRA.Location = new System.Drawing.Point(824, 142);
+            this.txt_SOKGRA.Name = "txt_SOKGRA";
+            this.txt_SOKGRA.Regular_Expression = "";
+            this.txt_SOKGRA.Size = new System.Drawing.Size(74, 20);
+            this.txt_SOKGRA.TabIndex = 10;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(774, 146);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(47, 13);
+            this.label30.TabIndex = 275;
+            this.label30.Text = "Số kg ra";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(587, 146);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(52, 13);
+            this.label31.TabIndex = 274;
+            this.label31.Text = "Số mét ra";
             // 
             // txt_LYDOSUCO
             // 
@@ -894,6 +938,7 @@
             this.txt_MACONGNHAN.Regular_Expression = null;
             this.txt_MACONGNHAN.Size = new System.Drawing.Size(74, 20);
             this.txt_MACONGNHAN.TabIndex = 5;
+            this.txt_MACONGNHAN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MACONGNHAN_KeyDown);
             this.txt_MACONGNHAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACONGNHAN_Validating);
             // 
             // label3
@@ -918,6 +963,7 @@
             this.txt_MASANPHAM.Regular_Expression = null;
             this.txt_MASANPHAM.Size = new System.Drawing.Size(74, 20);
             this.txt_MASANPHAM.TabIndex = 4;
+            this.txt_MASANPHAM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAHANG_KeyDown);
             this.txt_MASANPHAM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASANPHAM_Validating);
             // 
             // label4
@@ -1077,6 +1123,7 @@
             this.txt_MAMAY.Regular_Expression = null;
             this.txt_MAMAY.Size = new System.Drawing.Size(74, 20);
             this.txt_MAMAY.TabIndex = 2;
+            this.txt_MAMAY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAMAY_KeyDown);
             this.txt_MAMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMAY_Validating);
             // 
             // label22
@@ -1088,50 +1135,6 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã máy";
             // 
-            // txt_SOMETRA
-            // 
-            this.txt_SOMETRA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOMETRA.BannerText = null;
-            this.txt_SOMETRA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOMETRA.Giatrithapphan = 2;
-            this.txt_SOMETRA.IsSoNguyen = false;
-            this.txt_SOMETRA.Location = new System.Drawing.Point(642, 142);
-            this.txt_SOMETRA.Name = "txt_SOMETRA";
-            this.txt_SOMETRA.Regular_Expression = "";
-            this.txt_SOMETRA.Size = new System.Drawing.Size(74, 20);
-            this.txt_SOMETRA.TabIndex = 9;
-            // 
-            // txt_SOKGRA
-            // 
-            this.txt_SOKGRA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOKGRA.BannerText = null;
-            this.txt_SOKGRA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOKGRA.Giatrithapphan = 2;
-            this.txt_SOKGRA.IsSoNguyen = false;
-            this.txt_SOKGRA.Location = new System.Drawing.Point(824, 142);
-            this.txt_SOKGRA.Name = "txt_SOKGRA";
-            this.txt_SOKGRA.Regular_Expression = "";
-            this.txt_SOKGRA.Size = new System.Drawing.Size(74, 20);
-            this.txt_SOKGRA.TabIndex = 10;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(774, 146);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(47, 13);
-            this.label30.TabIndex = 275;
-            this.label30.Text = "Số kg ra";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(587, 146);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(52, 13);
-            this.label31.TabIndex = 274;
-            this.label31.Text = "Số mét ra";
-            // 
             // FRM_KQCHIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1139,7 +1142,7 @@
             this.ClientSize = new System.Drawing.Size(1382, 684);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_KQCHIA";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_KQCHIA_FormClosing);

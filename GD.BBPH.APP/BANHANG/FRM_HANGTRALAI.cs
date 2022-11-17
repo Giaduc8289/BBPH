@@ -338,6 +338,32 @@ namespace GD.BBPH.APP.BANHANG
         }
         #endregion
 
+        #region Shortcut
+
+        private void txt_MAKHACH_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMKHACH frm_Dm = new FRM_DMKHACH();
+                frm_Dm.Text = "Danh mục khách hàng";
+                frm_Dm.ShowDialog();
+                DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+            }
+        }
+
+        private void txt_MAHANG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMHANG frm_Dm = new FRM_DMHANG();
+                frm_Dm.Text = "Danh mục hàng hoá";
+                frm_Dm.ShowDialog();
+                DT_HANG = new DmhangManager().SelectAllRDT();
+            }
+        }
+
+        #endregion
+
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)

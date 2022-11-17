@@ -498,6 +498,21 @@ namespace GD.BBPH.APP.DANHMUC
         }
         #endregion
 
+        #region Shortcut
+
+        private void txt_MANHOMNL_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMNHOMNGUYENLIEU frm_Nqc = new FRM_DMNHOMNGUYENLIEU();
+                frm_Nqc.Text = "Danh mục nhóm nguyên liệu";
+                frm_Nqc.ShowDialog();
+                DT_DMNHOMNGUYENLIEU = new DmnhomnguyenlieuManager().SelectAllRDT();
+            }
+        }
+
+        #endregion
+
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)
