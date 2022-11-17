@@ -515,7 +515,7 @@
         <Top>2.86034cm</Top>
         <Left>0cm</Left>
         <Height>2.12478cm</Height>
-        <Width>18.87815cm</Width>
+        <Width>18.87816cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -581,9 +581,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>1.20481cm</Top>
-        <Left>6.9544cm</Left>
+        <Left>6.12145cm</Left>
         <Height>0.72193cm</Height>
-        <Width>11.86211cm</Width>
+        <Width>12.75671cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -620,7 +620,7 @@
         <Top>2.06785cm</Top>
         <Left>0.70065cm</Left>
         <Height>0.72193cm</Height>
-        <Width>17.16042cm</Width>
+        <Width>18.14232cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -732,7 +732,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>6.48013cm</Top>
-        <Left>0.72211cm</Left>
+        <Left>0.70065cm</Left>
         <Height>0.73252cm</Height>
         <Width>18.14232cm</Width>
         <ZIndex>7</ZIndex>
@@ -791,7 +791,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>- Sau 15 ngày kể từ ngày xác nhận giá sản phẩm.</Value>
+                <Value>Sau 15 ngày kể từ ngày xác nhận giá sản phẩm.</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -807,10 +807,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>10.54136cm</Top>
-        <Left>0.72211cm</Left>
+        <Top>10.41436cm</Top>
+        <Left>1.32323cm</Left>
         <Height>0.69548cm</Height>
-        <Width>18.12086cm</Width>
+        <Width>17.5412cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -829,7 +829,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>   Chúng tôi mong rằng hai bên sẽ sớm lập hợp đồng cho sản phẩm trên.</Value>
+                <Value>Chúng tôi mong rằng hai bên sẽ sớm lập hợp đồng cho sản phẩm trên.</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
                   <FontFamily>Times New Roman</FontFamily>
@@ -863,9 +863,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>11.28291cm</Top>
-        <Left>0.59888cm</Left>
+        <Left>0.70065cm</Left>
         <Height>1.14527cm</Height>
-        <Width>18.26555cm</Width>
+        <Width>18.14232cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -1117,7 +1117,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>7.96986cm</Top>
-        <Left>0.67419cm</Left>
+        <Left>0.70065cm</Left>
         <Height>0.76427cm</Height>
         <Width>18.14232cm</Width>
         <ZIndex>14</ZIndex>
@@ -1138,16 +1138,6 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>- </Value>
-                <Style>
-                  <FontStyle>Normal</FontStyle>
-                  <FontFamily>Times New Roman</FontFamily>
-                  <FontSize>12pt</FontSize>
-                  <FontWeight>Normal</FontWeight>
-                  <TextDecoration>None</TextDecoration>
-                </Style>
-              </TextRun>
-              <TextRun>
                 <Value>=First(Fields!Thoigiangiao.Value, "Thamso")</Value>
                 <Style>
                   <FontStyle>Normal</FontStyle>
@@ -1164,8 +1154,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>8.87524cm</Top>
-        <Left>1.27531cm</Left>
+        <Top>8.77999cm</Top>
+        <Left>1.32323cm</Left>
         <Height>0.6161cm</Height>
         <Width>17.5412cm</Width>
         <ZIndex>15</ZIndex>
@@ -1254,10 +1244,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>17.06621cm</Height>
+    <Height>16.43272cm</Height>
     <Style />
   </Body>
-  <Width>19.83065cm</Width>
+  <Width>18.87816cm</Width>
   <Page>
     <PageHeader>
       <Height>1.73878cm</Height>
@@ -1287,7 +1277,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.07938cm</Top>
-          <Left>6.8274cm</Left>
+          <Left>6.6369cm</Left>
           <Height>0.68466cm</Height>
           <Width>12.22753cm</Width>
           <Style>
@@ -1335,7 +1325,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox119</rd:DefaultName>
           <Top>0.76404cm</Top>
-          <Left>6.8274cm</Left>
+          <Left>6.6369cm</Left>
           <Height>0.93596cm</Height>
           <Width>12.20107cm</Width>
           <ZIndex>1</ZIndex>
@@ -1372,7 +1362,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>0.60854cm</Height>
+      <Height>0.02646cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <Style>
