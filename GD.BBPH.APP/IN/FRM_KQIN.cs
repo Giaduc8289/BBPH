@@ -35,8 +35,7 @@ namespace GD.BBPH.APP.IN
         private DataTable DT_DMMAY = new DataTable(), DT_LENHIN = new DataTable(), DT_DMSP = new DataTable(), DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable();
         private bool ADDROW = false;
 
-
-
+        
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -128,6 +127,7 @@ namespace GD.BBPH.APP.IN
             btn_THEMMOI.Focus();
         }
 
+        #region Load dữ liệu
         void BS_KQIN_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -154,7 +154,6 @@ namespace GD.BBPH.APP.IN
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KQIN_CurrentChanged"); }
         }
-
         void BS_KQIN_CHITIET_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -220,6 +219,7 @@ namespace GD.BBPH.APP.IN
             BS_KQIN_CHITIET.CurrentChanged += new EventHandler(BS_KQIN_CHITIET_CurrentChanged);
             BS_KQIN_CHITIET_CurrentChanged((new object()), (new EventArgs()));
         }
+        #endregion
 
         #region Xu ly dong chi tiet
         private void btn_THEMDONG_Click(object sender, EventArgs e)
@@ -589,11 +589,13 @@ namespace GD.BBPH.APP.IN
                 txt_MASP.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
                 txt_TENSP.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
                 Tinhtocdodinhmuc();
+                Tinhthoigianchuanbi();
             }
             else
             {
                 txt_TENSP.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
                 Tinhtocdodinhmuc();
+                Tinhthoigianchuanbi();
             }
         }
         private DataRow checkmasp(string macantim, DataTable dt)
@@ -741,21 +743,6 @@ namespace GD.BBPH.APP.IN
             }
         }
         #endregion
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
