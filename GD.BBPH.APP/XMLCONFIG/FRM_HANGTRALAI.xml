@@ -41,33 +41,6 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Sophieugiao</name>
-    <headerText>Số phiếu giao</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Ngaygiao</name>
-    <headerText>Ngày giao</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Madon</name>
-    <headerText>Mã đơn</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
     <name>Makhach</name>
     <headerText>Mã khách</headerText>
     <BackColor>0</BackColor>
@@ -86,15 +59,6 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Ngaydat</name>
-    <headerText>Ngày đặt</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
     <name>Masp</name>
     <headerText>Mã sản phẩm</headerText>
     <BackColor>0</BackColor>
@@ -106,15 +70,6 @@
     <value>1</value>
     <name>Tenhang</name>
     <headerText>Tên hàng</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Soluonggiao</name>
-    <headerText>Số lượng giao</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
