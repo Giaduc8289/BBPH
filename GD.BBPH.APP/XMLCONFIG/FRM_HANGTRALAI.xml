@@ -59,7 +59,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Masp</name>
+    <name>Masanpham</name>
     <headerText>Mã sản phẩm</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -68,7 +68,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tenhang</name>
+    <name>Tensanpham</name>
     <headerText>Tên hàng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
@@ -77,7 +77,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Soluongtralai</name>
+    <name>Soluongtra</name>
     <headerText>Số lượng trả lại</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
