@@ -34,6 +34,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_LYDOSUCO = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label16 = new GD.BBPH.CONTROL.LABEL();
             this.txt_TENTRUONGCA = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MATRUONGCA = new GD.BBPH.CONTROL.TEXTBOX();
             this.label9 = new GD.BBPH.CONTROL.LABEL();
@@ -82,8 +84,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_LYDOSUCO = new GD.BBPH.CONTROL.TEXTBOX();
-            this.label16 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -196,6 +196,29 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(1111, 503);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // txt_LYDOSUCO
+            // 
+            this.txt_LYDOSUCO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_LYDOSUCO.BannerText = null;
+            this.txt_LYDOSUCO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_LYDOSUCO.FormNametoShow = "";
+            this.txt_LYDOSUCO.Is_DateTime = false;
+            this.txt_LYDOSUCO.IsShowForm = false;
+            this.txt_LYDOSUCO.Location = new System.Drawing.Point(831, 189);
+            this.txt_LYDOSUCO.Name = "txt_LYDOSUCO";
+            this.txt_LYDOSUCO.Regular_Expression = null;
+            this.txt_LYDOSUCO.Size = new System.Drawing.Size(258, 20);
+            this.txt_LYDOSUCO.TabIndex = 18;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(766, 193);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(62, 13);
+            this.label16.TabIndex = 271;
+            this.label16.Text = "Lý do sự cố";
+            // 
             // txt_TENTRUONGCA
             // 
             this.txt_TENTRUONGCA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,7 +273,7 @@
             this.txt_TOCDODINHMUC.ReadOnly = true;
             this.txt_TOCDODINHMUC.Regular_Expression = "";
             this.txt_TOCDODINHMUC.Size = new System.Drawing.Size(93, 20);
-            this.txt_TOCDODINHMUC.TabIndex = 18;
+            this.txt_TOCDODINHMUC.TabIndex = 19;
             this.txt_TOCDODINHMUC.TabStop = false;
             this.txt_TOCDODINHMUC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -307,7 +330,7 @@
             this.txt_CHATLUONG.ReadOnly = true;
             this.txt_CHATLUONG.Regular_Expression = "";
             this.txt_CHATLUONG.Size = new System.Drawing.Size(93, 20);
-            this.txt_CHATLUONG.TabIndex = 19;
+            this.txt_CHATLUONG.TabIndex = 20;
             this.txt_CHATLUONG.TabStop = false;
             this.txt_CHATLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -324,7 +347,7 @@
             this.txt_NANGSUAT.ReadOnly = true;
             this.txt_NANGSUAT.Regular_Expression = "";
             this.txt_NANGSUAT.Size = new System.Drawing.Size(93, 20);
-            this.txt_NANGSUAT.TabIndex = 20;
+            this.txt_NANGSUAT.TabIndex = 21;
             this.txt_NANGSUAT.TabStop = false;
             this.txt_NANGSUAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -411,7 +434,7 @@
             this.btn_XOADONG.Location = new System.Drawing.Point(118, 228);
             this.btn_XOADONG.Name = "btn_XOADONG";
             this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
-            this.btn_XOADONG.TabIndex = 22;
+            this.btn_XOADONG.TabIndex = 23;
             this.btn_XOADONG.Text = "Xóa dòng";
             this.btn_XOADONG.UseVisualStyleBackColor = true;
             this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
@@ -425,7 +448,7 @@
             this.btn_THEMDONG.Location = new System.Drawing.Point(16, 228);
             this.btn_THEMDONG.Name = "btn_THEMDONG";
             this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
-            this.btn_THEMDONG.TabIndex = 21;
+            this.btn_THEMDONG.TabIndex = 22;
             this.btn_THEMDONG.Text = "Thêm dòng";
             this.btn_THEMDONG.UseVisualStyleBackColor = true;
             this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
@@ -809,29 +832,6 @@
             this.label22.Size = new System.Drawing.Size(44, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã máy";
-            // 
-            // txt_LYDOSUCO
-            // 
-            this.txt_LYDOSUCO.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_LYDOSUCO.BannerText = null;
-            this.txt_LYDOSUCO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_LYDOSUCO.FormNametoShow = "";
-            this.txt_LYDOSUCO.Is_DateTime = false;
-            this.txt_LYDOSUCO.IsShowForm = false;
-            this.txt_LYDOSUCO.Location = new System.Drawing.Point(831, 189);
-            this.txt_LYDOSUCO.Name = "txt_LYDOSUCO";
-            this.txt_LYDOSUCO.Regular_Expression = null;
-            this.txt_LYDOSUCO.Size = new System.Drawing.Size(258, 20);
-            this.txt_LYDOSUCO.TabIndex = 272;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(766, 193);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(62, 13);
-            this.label16.TabIndex = 271;
-            this.label16.Text = "Lý do sự cố";
             // 
             // FRM_KQTHOI
             // 

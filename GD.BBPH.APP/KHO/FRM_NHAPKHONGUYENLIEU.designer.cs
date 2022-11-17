@@ -184,6 +184,7 @@
             this.txt_TENLYDO.IsShowForm = false;
             this.txt_TENLYDO.Location = new System.Drawing.Point(354, 163);
             this.txt_TENLYDO.Name = "txt_TENLYDO";
+            this.txt_TENLYDO.ReadOnly = true;
             this.txt_TENLYDO.Regular_Expression = null;
             this.txt_TENLYDO.Size = new System.Drawing.Size(132, 20);
             this.txt_TENLYDO.TabIndex = 8;

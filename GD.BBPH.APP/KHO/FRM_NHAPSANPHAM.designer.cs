@@ -320,6 +320,7 @@
             this.txt_TENLYDO.IsShowForm = false;
             this.txt_TENLYDO.Location = new System.Drawing.Point(361, 156);
             this.txt_TENLYDO.Name = "txt_TENLYDO";
+            this.txt_TENLYDO.ReadOnly = true;
             this.txt_TENLYDO.Regular_Expression = null;
             this.txt_TENLYDO.Size = new System.Drawing.Size(174, 20);
             this.txt_TENLYDO.TabIndex = 9;
@@ -422,6 +423,7 @@
             this.txt_TENSP.IsShowForm = false;
             this.txt_TENSP.Location = new System.Drawing.Point(361, 80);
             this.txt_TENSP.Name = "txt_TENSP";
+            this.txt_TENSP.ReadOnly = true;
             this.txt_TENSP.Regular_Expression = null;
             this.txt_TENSP.Size = new System.Drawing.Size(174, 20);
             this.txt_TENSP.TabIndex = 4;
@@ -479,6 +481,7 @@
             this.txt_TENKHO.IsShowForm = false;
             this.txt_TENKHO.Location = new System.Drawing.Point(361, 44);
             this.txt_TENKHO.Name = "txt_TENKHO";
+            this.txt_TENKHO.ReadOnly = true;
             this.txt_TENKHO.Regular_Expression = null;
             this.txt_TENKHO.Size = new System.Drawing.Size(174, 20);
             this.txt_TENKHO.TabIndex = 2;
