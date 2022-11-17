@@ -1264,6 +1264,13 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCLUONGTOCHIA()), mmru.Text);
                     break;
+                case "FRM_BCTONGHOPLUONGTOCHIA":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_BCTONGHOPLUONGTOCHIA") { frm.Activate(); return; }
+                    }
+                    ShowAsMDIChild((new GD.BBPH.APP.BAOCAO.FRM_BCTONGHOPLUONGTOCHIA()), mmru.Text);
+                    break;
                 #endregion
 
                 #endregion
