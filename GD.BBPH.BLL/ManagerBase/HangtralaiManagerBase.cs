@@ -28,27 +28,17 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Id="Id";				
 		
-		public const String Field_Sophieugiao="Sophieugiao";				
-		
-		public const String Field_Ngaygiao="Ngaygiao";				
-		
-		public const String Field_Madon="Madon";				
+		public const String Field_Ngaytra="Ngaytra";				
 		
 		public const String Field_Makhach="Makhach";				
 		
 		public const String Field_Tenkhach="Tenkhach";				
 		
-		public const String Field_Ngaydat="Ngaydat";				
+		public const String Field_Masanpham="Masanpham";				
 		
-		public const String Field_Masp="Masp";				
+		public const String Field_Tensanpham="Tensanpham";				
 		
-		public const String Field_Tenhang="Tenhang";				
-		
-		public const String Field_Soluonggiao="Soluonggiao";				
-		
-		public const String Field_Soluongtralai="Soluongtralai";				
-		
-		public const String Field_Ngaytra="Ngaytra";				
+		public const String Field_Soluongtra="Soluongtra";				
 		
 		public const String Field_Nguyennhan="Nguyennhan";				
 		
@@ -77,27 +67,17 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Id,typeof(System.Int64));
 			
-			dt.Columns.Add(Field_Sophieugiao,typeof(System.String));
-			
-			dt.Columns.Add(Field_Ngaygiao,typeof(System.DateTime));
-			
-			dt.Columns.Add(Field_Madon,typeof(System.String));
+			dt.Columns.Add(Field_Ngaytra,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Makhach,typeof(System.String));
 			
 			dt.Columns.Add(Field_Tenkhach,typeof(System.String));
 			
-			dt.Columns.Add(Field_Ngaydat,typeof(System.DateTime));
+			dt.Columns.Add(Field_Masanpham,typeof(System.String));
 			
-			dt.Columns.Add(Field_Masp,typeof(System.String));
+			dt.Columns.Add(Field_Tensanpham,typeof(System.String));
 			
-			dt.Columns.Add(Field_Tenhang,typeof(System.String));
-			
-			dt.Columns.Add(Field_Soluonggiao,typeof(System.Decimal));
-			
-			dt.Columns.Add(Field_Soluongtralai,typeof(System.Decimal));
-			
-			dt.Columns.Add(Field_Ngaytra,typeof(System.DateTime));
+			dt.Columns.Add(Field_Soluongtra,typeof(System.Decimal));
 			
 			dt.Columns.Add(Field_Nguyennhan,typeof(System.String));
 			
@@ -127,19 +107,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_Sophieugiao]=_HangtralaiEntity.Sophieugiao;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Ngaygiao]=_HangtralaiEntity.Ngaygiao;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Madon]=_HangtralaiEntity.Madon;
+				r[Field_Ngaytra]=_HangtralaiEntity.Ngaytra;
 			}
 			catch { }
 			
@@ -157,37 +125,19 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_Ngaydat]=_HangtralaiEntity.Ngaydat;
+				r[Field_Masanpham]=_HangtralaiEntity.Masanpham;
 			}
 			catch { }
 			
 			try
 			{
-				r[Field_Masp]=_HangtralaiEntity.Masp;
+				r[Field_Tensanpham]=_HangtralaiEntity.Tensanpham;
 			}
 			catch { }
 			
 			try
 			{
-				r[Field_Tenhang]=_HangtralaiEntity.Tenhang;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Soluonggiao]=_HangtralaiEntity.Soluonggiao;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Soluongtralai]=_HangtralaiEntity.Soluongtralai;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Ngaytra]=_HangtralaiEntity.Ngaytra;
+				r[Field_Soluongtra]=_HangtralaiEntity.Soluongtra;
 			}
 			catch { }
 			
@@ -235,19 +185,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_HangtralaiEntity.Sophieugiao= r[Field_Sophieugiao].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_HangtralaiEntity.Ngaygiao= System.DateTime.Parse(r[Field_Ngaygiao].ToString());						
-			}
-			catch { }
-			
-			try
-			{
-				_HangtralaiEntity.Madon= r[Field_Madon].ToString();						
+				_HangtralaiEntity.Ngaytra= System.DateTime.Parse(r[Field_Ngaytra].ToString());						
 			}
 			catch { }
 			
@@ -265,37 +203,19 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_HangtralaiEntity.Ngaydat= System.DateTime.Parse(r[Field_Ngaydat].ToString());						
+				_HangtralaiEntity.Masanpham= r[Field_Masanpham].ToString();						
 			}
 			catch { }
 			
 			try
 			{
-				_HangtralaiEntity.Masp= r[Field_Masp].ToString();						
+				_HangtralaiEntity.Tensanpham= r[Field_Tensanpham].ToString();						
 			}
 			catch { }
 			
 			try
 			{
-				_HangtralaiEntity.Tenhang= r[Field_Tenhang].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_HangtralaiEntity.Soluonggiao= System.Decimal.Parse(r[Field_Soluonggiao].ToString());						
-			}
-			catch { }
-			
-			try
-			{
-				_HangtralaiEntity.Soluongtralai= System.Decimal.Parse(r[Field_Soluongtralai].ToString());						
-			}
-			catch { }
-			
-			try
-			{
-				_HangtralaiEntity.Ngaytra= System.DateTime.Parse(r[Field_Ngaytra].ToString());						
+				_HangtralaiEntity.Soluongtra= System.Decimal.Parse(r[Field_Soluongtra].ToString());						
 			}
 			catch { }
 			
@@ -339,27 +259,17 @@ namespace GD.BBPH.BLL
 			
 			_HangtralaiEntity.Id= _HangtralaiEntity_XML.Id;
 			
-			_HangtralaiEntity.Sophieugiao= _HangtralaiEntity_XML.Sophieugiao;
-			
-			_HangtralaiEntity.Ngaygiao= _HangtralaiEntity_XML.Ngaygiao;
-			
-			_HangtralaiEntity.Madon= _HangtralaiEntity_XML.Madon;
+			_HangtralaiEntity.Ngaytra= _HangtralaiEntity_XML.Ngaytra;
 			
 			_HangtralaiEntity.Makhach= _HangtralaiEntity_XML.Makhach;
 			
 			_HangtralaiEntity.Tenkhach= _HangtralaiEntity_XML.Tenkhach;
 			
-			_HangtralaiEntity.Ngaydat= _HangtralaiEntity_XML.Ngaydat;
+			_HangtralaiEntity.Masanpham= _HangtralaiEntity_XML.Masanpham;
 			
-			_HangtralaiEntity.Masp= _HangtralaiEntity_XML.Masp;
+			_HangtralaiEntity.Tensanpham= _HangtralaiEntity_XML.Tensanpham;
 			
-			_HangtralaiEntity.Tenhang= _HangtralaiEntity_XML.Tenhang;
-			
-			_HangtralaiEntity.Soluonggiao= _HangtralaiEntity_XML.Soluonggiao;
-			
-			_HangtralaiEntity.Soluongtralai= _HangtralaiEntity_XML.Soluongtralai;
-			
-			_HangtralaiEntity.Ngaytra= _HangtralaiEntity_XML.Ngaytra;
+			_HangtralaiEntity.Soluongtra= _HangtralaiEntity_XML.Soluongtra;
 			
 			_HangtralaiEntity.Nguyennhan= _HangtralaiEntity_XML.Nguyennhan;
 			
@@ -393,19 +303,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Sophieugiao,_HangtralaiEntity.Sophieugiao);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Ngaygiao,_HangtralaiEntity.Ngaygiao);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Madon,_HangtralaiEntity.Madon);
+				r.SetField(Field_Ngaytra,_HangtralaiEntity.Ngaytra);
 			}
 			catch { }
 			
@@ -423,37 +321,19 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Ngaydat,_HangtralaiEntity.Ngaydat);
+				r.SetField(Field_Masanpham,_HangtralaiEntity.Masanpham);
 			}
 			catch { }
 			
 			try
 			{
-				r.SetField(Field_Masp,_HangtralaiEntity.Masp);
+				r.SetField(Field_Tensanpham,_HangtralaiEntity.Tensanpham);
 			}
 			catch { }
 			
 			try
 			{
-				r.SetField(Field_Tenhang,_HangtralaiEntity.Tenhang);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Soluonggiao,_HangtralaiEntity.Soluonggiao);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Soluongtralai,_HangtralaiEntity.Soluongtralai);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Ngaytra,_HangtralaiEntity.Ngaytra);
+				r.SetField(Field_Soluongtra,_HangtralaiEntity.Soluongtra);
 			}
 			catch { }
 			
@@ -504,19 +384,7 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Sophieugiao,_HangtralaiEntity.Sophieugiao);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Ngaygiao,_HangtralaiEntity.Ngaygiao);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Madon,_HangtralaiEntity.Madon);
+				r.SetField(Field_Ngaytra,_HangtralaiEntity.Ngaytra);
 			}
 			catch { }
 			
@@ -534,37 +402,19 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Ngaydat,_HangtralaiEntity.Ngaydat);
+				r.SetField(Field_Masanpham,_HangtralaiEntity.Masanpham);
 			}
 			catch { }
 			
 			try
 			{
-				r.SetField(Field_Masp,_HangtralaiEntity.Masp);
+				r.SetField(Field_Tensanpham,_HangtralaiEntity.Tensanpham);
 			}
 			catch { }
 			
 			try
 			{
-				r.SetField(Field_Tenhang,_HangtralaiEntity.Tenhang);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Soluonggiao,_HangtralaiEntity.Soluonggiao);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Soluongtralai,_HangtralaiEntity.Soluongtralai);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Ngaytra,_HangtralaiEntity.Ngaytra);
+				r.SetField(Field_Soluongtra,_HangtralaiEntity.Soluongtra);
 			}
 			catch { }
 			
@@ -619,7 +469,7 @@ namespace GD.BBPH.BLL
 			return HangtralaiEntity;
 		}
 
-		public HangtralaiEntity Insert(System.Int64  Id, System.String  Sophieugiao, System.DateTime  Ngaygiao, System.String  Madon, System.String  Makhach, System.String  Tenkhach, System.DateTime  Ngaydat, System.String  Masp, System.String  Tenhang, System.Decimal  Soluonggiao, System.Decimal  Soluongtralai, System.DateTime  Ngaytra, System.String  Nguyennhan, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public HangtralaiEntity Insert(System.Int64  Id, System.DateTime  Ngaytra, System.String  Makhach, System.String  Tenkhach, System.String  Masanpham, System.String  Tensanpham, System.Decimal  Soluongtra, System.String  Nguyennhan, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
 		{
 			HangtralaiEntity _HangtralaiEntity = new HangtralaiEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -627,27 +477,17 @@ namespace GD.BBPH.BLL
 				
 				_HangtralaiEntity.Id = Id;
 				
-				_HangtralaiEntity.Sophieugiao = Sophieugiao;
-				
-				_HangtralaiEntity.Ngaygiao = Ngaygiao;
-				
-				_HangtralaiEntity.Madon = Madon;
+				_HangtralaiEntity.Ngaytra = Ngaytra;
 				
 				_HangtralaiEntity.Makhach = Makhach;
 				
 				_HangtralaiEntity.Tenkhach = Tenkhach;
 				
-				_HangtralaiEntity.Ngaydat = Ngaydat;
+				_HangtralaiEntity.Masanpham = Masanpham;
 				
-				_HangtralaiEntity.Masp = Masp;
+				_HangtralaiEntity.Tensanpham = Tensanpham;
 				
-				_HangtralaiEntity.Tenhang = Tenhang;
-				
-				_HangtralaiEntity.Soluonggiao = Soluonggiao;
-				
-				_HangtralaiEntity.Soluongtralai = Soluongtralai;
-				
-				_HangtralaiEntity.Ngaytra = Ngaytra;
+				_HangtralaiEntity.Soluongtra = Soluongtra;
 				
 				_HangtralaiEntity.Nguyennhan = Nguyennhan;
 				
@@ -665,34 +505,24 @@ namespace GD.BBPH.BLL
 			return _HangtralaiEntity;
 		}
 
-		public HangtralaiEntity Insert(System.String Sophieugiao, System.DateTime Ngaygiao, System.String Madon, System.String Makhach, System.String Tenkhach, System.DateTime Ngaydat, System.String Masp, System.String Tenhang, System.Decimal Soluonggiao, System.Decimal Soluongtralai, System.DateTime Ngaytra, System.String Nguyennhan, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public HangtralaiEntity Insert(System.DateTime Ngaytra, System.String Makhach, System.String Tenkhach, System.String Masanpham, System.String Tensanpham, System.Decimal Soluongtra, System.String Nguyennhan, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			HangtralaiEntity _HangtralaiEntity = new HangtralaiEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
 			{
 				
 				
-				_HangtralaiEntity.Sophieugiao = Sophieugiao;
-				
-				_HangtralaiEntity.Ngaygiao = Ngaygiao;
-				
-				_HangtralaiEntity.Madon = Madon;
+				_HangtralaiEntity.Ngaytra = Ngaytra;
 				
 				_HangtralaiEntity.Makhach = Makhach;
 				
 				_HangtralaiEntity.Tenkhach = Tenkhach;
 				
-				_HangtralaiEntity.Ngaydat = Ngaydat;
+				_HangtralaiEntity.Masanpham = Masanpham;
 				
-				_HangtralaiEntity.Masp = Masp;
+				_HangtralaiEntity.Tensanpham = Tensanpham;
 				
-				_HangtralaiEntity.Tenhang = Tenhang;
-				
-				_HangtralaiEntity.Soluonggiao = Soluonggiao;
-				
-				_HangtralaiEntity.Soluongtralai = Soluongtralai;
-				
-				_HangtralaiEntity.Ngaytra = Ngaytra;
+				_HangtralaiEntity.Soluongtra = Soluongtra;
 				
 				_HangtralaiEntity.Nguyennhan = Nguyennhan;
 				
@@ -740,7 +570,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.String Sophieugiao, System.DateTime Ngaygiao, System.String Madon, System.String Makhach, System.String Tenkhach, System.DateTime Ngaydat, System.String Masp, System.String Tenhang, System.Decimal Soluonggiao, System.Decimal Soluongtralai, System.DateTime Ngaytra, System.String Nguyennhan, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.Int64 Id, System.DateTime Ngaytra, System.String Makhach, System.String Tenkhach, System.String Masanpham, System.String Tensanpham, System.Decimal Soluongtra, System.String Nguyennhan, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -751,27 +581,17 @@ namespace GD.BBPH.BLL
 				
 					
 					
-					_HangtralaiEntity.Sophieugiao = Sophieugiao;
-					
-					_HangtralaiEntity.Ngaygiao = Ngaygiao;
-					
-					_HangtralaiEntity.Madon = Madon;
+					_HangtralaiEntity.Ngaytra = Ngaytra;
 					
 					_HangtralaiEntity.Makhach = Makhach;
 					
 					_HangtralaiEntity.Tenkhach = Tenkhach;
 					
-					_HangtralaiEntity.Ngaydat = Ngaydat;
+					_HangtralaiEntity.Masanpham = Masanpham;
 					
-					_HangtralaiEntity.Masp = Masp;
+					_HangtralaiEntity.Tensanpham = Tensanpham;
 					
-					_HangtralaiEntity.Tenhang = Tenhang;
-					
-					_HangtralaiEntity.Soluonggiao = Soluonggiao;
-					
-					_HangtralaiEntity.Soluongtralai = Soluongtralai;
-					
-					_HangtralaiEntity.Ngaytra = Ngaytra;
+					_HangtralaiEntity.Soluongtra = Soluongtra;
 					
 					_HangtralaiEntity.Nguyennhan = Nguyennhan;
 					
@@ -832,45 +652,13 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteBySophieugiao(System.String Sophieugiao)
+		public int DeleteByNgaytra(System.DateTime Ngaytra)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Sophieugiao == Sophieugiao);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HangtralaiEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByNgaygiao(System.DateTime Ngaygiao)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Ngaygiao == Ngaygiao);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HangtralaiEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByMadon(System.String Madon)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Madon == Madon);
+			_PredicateExpression.Add(HangtralaiFields.Ngaytra == Ngaytra);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -912,13 +700,13 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByNgaydat(System.DateTime Ngaydat)
+		public int DeleteByMasanpham(System.String Masanpham)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Ngaydat == Ngaydat);
+			_PredicateExpression.Add(HangtralaiFields.Masanpham == Masanpham);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -928,13 +716,13 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByMasp(System.String Masp)
+		public int DeleteByTensanpham(System.String Tensanpham)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Masp == Masp);
+			_PredicateExpression.Add(HangtralaiFields.Tensanpham == Tensanpham);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -944,61 +732,13 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByTenhang(System.String Tenhang)
+		public int DeleteBySoluongtra(System.Decimal Soluongtra)
 		{
 			int toReturn = 0;
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Tenhang == Tenhang);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HangtralaiEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteBySoluonggiao(System.Decimal Soluonggiao)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Soluonggiao == Soluonggiao);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HangtralaiEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteBySoluongtralai(System.Decimal Soluongtralai)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Soluongtralai == Soluongtralai);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("HangtralaiEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByNgaytra(System.DateTime Ngaytra)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Ngaytra == Ngaytra);
+			_PredicateExpression.Add(HangtralaiFields.Soluongtra == Soluongtra);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1163,13 +903,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectBySophieugiao(System.String Sophieugiao)
+		public EntityCollection SelectByNgaytra(System.DateTime Ngaytra)
 		{
 			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Sophieugiao == Sophieugiao);
+			_PredicateExpression.Add(HangtralaiFields.Ngaytra == Ngaytra);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1179,82 +919,14 @@ namespace GD.BBPH.BLL
 			return _HangtralaiCollection;
 		}
 		// Return DataTable
-		public DataTable SelectBySophieugiaoRDT(System.String Sophieugiao)
+		public DataTable SelectByNgaytraRDT(System.DateTime Ngaytra)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Sophieugiao == Sophieugiao);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HangtralaiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByNgaygiao(System.DateTime Ngaygiao)
-		{
-			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Ngaygiao == Ngaygiao);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HangtralaiCollection, filter, 0, null);
-			}
-			return _HangtralaiCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByNgaygiaoRDT(System.DateTime Ngaygiao)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Ngaygiao == Ngaygiao);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HangtralaiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByMadon(System.String Madon)
-		{
-			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Madon == Madon);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HangtralaiCollection, filter, 0, null);
-			}
-			return _HangtralaiCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByMadonRDT(System.String Madon)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Madon == Madon);
+			_PredicateExpression.Add(HangtralaiFields.Ngaytra == Ngaytra);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1333,13 +1005,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByNgaydat(System.DateTime Ngaydat)
+		public EntityCollection SelectByMasanpham(System.String Masanpham)
 		{
 			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Ngaydat == Ngaydat);
+			_PredicateExpression.Add(HangtralaiFields.Masanpham == Masanpham);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1349,14 +1021,14 @@ namespace GD.BBPH.BLL
 			return _HangtralaiCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByNgaydatRDT(System.DateTime Ngaydat)
+		public DataTable SelectByMasanphamRDT(System.String Masanpham)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Ngaydat == Ngaydat);
+			_PredicateExpression.Add(HangtralaiFields.Masanpham == Masanpham);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1367,13 +1039,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByMasp(System.String Masp)
+		public EntityCollection SelectByTensanpham(System.String Tensanpham)
 		{
 			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Masp == Masp);
+			_PredicateExpression.Add(HangtralaiFields.Tensanpham == Tensanpham);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1383,14 +1055,14 @@ namespace GD.BBPH.BLL
 			return _HangtralaiCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByMaspRDT(System.String Masp)
+		public DataTable SelectByTensanphamRDT(System.String Tensanpham)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Masp == Masp);
+			_PredicateExpression.Add(HangtralaiFields.Tensanpham == Tensanpham);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1401,13 +1073,13 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByTenhang(System.String Tenhang)
+		public EntityCollection SelectBySoluongtra(System.Decimal Soluongtra)
 		{
 			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Tenhang == Tenhang);
+			_PredicateExpression.Add(HangtralaiFields.Soluongtra == Soluongtra);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1417,116 +1089,14 @@ namespace GD.BBPH.BLL
 			return _HangtralaiCollection;
 		}
 		// Return DataTable
-		public DataTable SelectByTenhangRDT(System.String Tenhang)
+		public DataTable SelectBySoluongtraRDT(System.Decimal Soluongtra)
 		{
 			DataTable toReturn = new DataTable();
 			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
 			RelationPredicateBucket filter = new RelationPredicateBucket();
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Tenhang == Tenhang);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HangtralaiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectBySoluonggiao(System.Decimal Soluonggiao)
-		{
-			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Soluonggiao == Soluonggiao);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HangtralaiCollection, filter, 0, null);
-			}
-			return _HangtralaiCollection;
-		}
-		// Return DataTable
-		public DataTable SelectBySoluonggiaoRDT(System.Decimal Soluonggiao)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Soluonggiao == Soluonggiao);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HangtralaiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectBySoluongtralai(System.Decimal Soluongtralai)
-		{
-			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Soluongtralai == Soluongtralai);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HangtralaiCollection, filter, 0, null);
-			}
-			return _HangtralaiCollection;
-		}
-		// Return DataTable
-		public DataTable SelectBySoluongtralaiRDT(System.Decimal Soluongtralai)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Soluongtralai == Soluongtralai);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_HangtralaiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByNgaytra(System.DateTime Ngaytra)
-		{
-			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Ngaytra == Ngaytra);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_HangtralaiCollection, filter, 0, null);
-			}
-			return _HangtralaiCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByNgaytraRDT(System.DateTime Ngaytra)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _HangtralaiCollection = new EntityCollection(new HangtralaiEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(HangtralaiFields.Ngaytra == Ngaytra);
+			_PredicateExpression.Add(HangtralaiFields.Soluongtra == Soluongtra);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

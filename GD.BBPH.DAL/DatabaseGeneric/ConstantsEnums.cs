@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 16, 2022 4:36:38 PM
+// Code is generated on: Thursday, November 17, 2022 3:20:14 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -263,16 +263,10 @@ namespace GD.BBPH.DAL
 	/// </summary>
 	public enum DinhmucthoigianFieldIndex:int
 	{
-		///<summary>Madmtg. </summary>
-		Madmtg,
+		///<summary>Madinhmuc. </summary>
+		Madinhmuc,
 		///<summary>Tendinhmuc. </summary>
 		Tendinhmuc,
-		///<summary>Mamay. </summary>
-		Mamay,
-		///<summary>Madongmay. </summary>
-		Madongmay,
-		///<summary>Macongdoan. </summary>
-		Macongdoan,
 		///<summary>Dodaytu. </summary>
 		Dodaytu,
 		///<summary>Dodayden. </summary>
@@ -285,16 +279,26 @@ namespace GD.BBPH.DAL
 		Chieudaitu,
 		///<summary>Chieudaiden. </summary>
 		Chieudaiden,
-		///<summary>Somauma. </summary>
-		Somauma,
-		///<summary>Sohinhma. </summary>
-		Sohinhma,
-		///<summary>Maloaimang. </summary>
-		Maloaimang,
-		///<summary>Maqcthanhpham. </summary>
-		Maqcthanhpham,
+		///<summary>Mamays. </summary>
+		Mamays,
+		///<summary>Macongdoans. </summary>
+		Macongdoans,
+		///<summary>Somaumas. </summary>
+		Somaumas,
+		///<summary>Sohinhmas. </summary>
+		Sohinhmas,
+		///<summary>Maloaimangs. </summary>
+		Maloaimangs,
+		///<summary>Maqcthanhphams. </summary>
+		Maqcthanhphams,
+		///<summary>Makhachs. </summary>
+		Makhachs,
+		///<summary>Mahangs. </summary>
+		Mahangs,
 		///<summary>Dauca. </summary>
 		Dauca,
+		///<summary>Chuanbi. </summary>
+		Chuanbi,
 		///<summary>Daucuon. </summary>
 		Daucuon,
 		///<summary>Doilenh. </summary>
@@ -315,8 +319,6 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
-		///<summary>Chuanbi. </summary>
-		Chuanbi,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1115,28 +1117,18 @@ namespace GD.BBPH.DAL
 	{
 		///<summary>Id. </summary>
 		Id,
-		///<summary>Sophieugiao. </summary>
-		Sophieugiao,
-		///<summary>Ngaygiao. </summary>
-		Ngaygiao,
-		///<summary>Madon. </summary>
-		Madon,
+		///<summary>Ngaytra. </summary>
+		Ngaytra,
 		///<summary>Makhach. </summary>
 		Makhach,
 		///<summary>Tenkhach. </summary>
 		Tenkhach,
-		///<summary>Ngaydat. </summary>
-		Ngaydat,
-		///<summary>Masp. </summary>
-		Masp,
-		///<summary>Tenhang. </summary>
-		Tenhang,
-		///<summary>Soluonggiao. </summary>
-		Soluonggiao,
-		///<summary>Soluongtralai. </summary>
-		Soluongtralai,
-		///<summary>Ngaytra. </summary>
-		Ngaytra,
+		///<summary>Masanpham. </summary>
+		Masanpham,
+		///<summary>Tensanpham. </summary>
+		Tensanpham,
+		///<summary>Soluongtra. </summary>
+		Soluongtra,
 		///<summary>Nguyennhan. </summary>
 		Nguyennhan,
 		///<summary>Ngaytao. </summary>

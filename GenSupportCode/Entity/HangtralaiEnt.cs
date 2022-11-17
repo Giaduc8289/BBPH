@@ -40,17 +40,12 @@ namespace GD.BBPH.DAL.EntityClasses
 						MAHIEU_PK = _Rowview.Row[HangtralaiFields.Id.Name].ToString();
 					
 					txt_ID.Text = _Rowview.Row[HangtralaiFields.Id.Name].ToString();
-					txt_SOPHIEUGIAO.Text = _Rowview.Row[HangtralaiFields.Sophieugiao.Name].ToString();
-					txt_NGAYGIAO.Text = _Rowview.Row[HangtralaiFields.Ngaygiao.Name].ToString();
-					txt_MADON.Text = _Rowview.Row[HangtralaiFields.Madon.Name].ToString();
+					txt_NGAYTRA.Text = _Rowview.Row[HangtralaiFields.Ngaytra.Name].ToString();
 					txt_MAKHACH.Text = _Rowview.Row[HangtralaiFields.Makhach.Name].ToString();
 					txt_TENKHACH.Text = _Rowview.Row[HangtralaiFields.Tenkhach.Name].ToString();
-					txt_NGAYDAT.Text = _Rowview.Row[HangtralaiFields.Ngaydat.Name].ToString();
-					txt_MASP.Text = _Rowview.Row[HangtralaiFields.Masp.Name].ToString();
-					txt_TENHANG.Text = _Rowview.Row[HangtralaiFields.Tenhang.Name].ToString();
-					txt_SOLUONGGIAO.Text = _Rowview.Row[HangtralaiFields.Soluonggiao.Name].ToString();
-					txt_SOLUONGTRALAI.Text = _Rowview.Row[HangtralaiFields.Soluongtralai.Name].ToString();
-					txt_NGAYTRA.Text = _Rowview.Row[HangtralaiFields.Ngaytra.Name].ToString();
+					txt_MASANPHAM.Text = _Rowview.Row[HangtralaiFields.Masanpham.Name].ToString();
+					txt_TENSANPHAM.Text = _Rowview.Row[HangtralaiFields.Tensanpham.Name].ToString();
+					txt_SOLUONGTRA.Text = _Rowview.Row[HangtralaiFields.Soluongtra.Name].ToString();
 					txt_NGUYENNHAN.Text = _Rowview.Row[HangtralaiFields.Nguyennhan.Name].ToString();
 					txt_NGAYTAO.Text = _Rowview.Row[HangtralaiFields.Ngaytao.Name].ToString();
 					txt_NGUOITAO.Text = _Rowview.Row[HangtralaiFields.Nguoitao.Name].ToString();
@@ -66,21 +61,13 @@ namespace GD.BBPH.DAL.EntityClasses
 			HangtralaiEntity _HangtralaiEntity = new HangtralaiEntity();
 			try { _HangtralaiEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); } 
 			catch { }
-			_HangtralaiEntity.Sophieugiao = txt_SOPHIEUGIAO.Text.Trim();
-			try { _HangtralaiEntity.Ngaygiao = System.DateTime.Parse(txt_NGAYGIAO.Text.Trim()); } 
+			try { _HangtralaiEntity.Ngaytra = System.DateTime.Parse(txt_NGAYTRA.Text.Trim()); } 
 			catch { }
-			_HangtralaiEntity.Madon = txt_MADON.Text.Trim();
 			_HangtralaiEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_HangtralaiEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-			try { _HangtralaiEntity.Ngaydat = System.DateTime.Parse(txt_NGAYDAT.Text.Trim()); } 
-			catch { }
-			_HangtralaiEntity.Masp = txt_MASP.Text.Trim();
-			_HangtralaiEntity.Tenhang = txt_TENHANG.Text.Trim();
-			try { _HangtralaiEntity.Soluonggiao = System.Decimal.Parse(txt_SOLUONGGIAO.Text.Trim()); } 
-			catch { }
-			try { _HangtralaiEntity.Soluongtralai = System.Decimal.Parse(txt_SOLUONGTRALAI.Text.Trim()); } 
-			catch { }
-			try { _HangtralaiEntity.Ngaytra = System.DateTime.Parse(txt_NGAYTRA.Text.Trim()); } 
+			_HangtralaiEntity.Masanpham = txt_MASANPHAM.Text.Trim();
+			_HangtralaiEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
+			try { _HangtralaiEntity.Soluongtra = System.Decimal.Parse(txt_SOLUONGTRA.Text.Trim()); } 
 			catch { }
 			_HangtralaiEntity.Nguyennhan = txt_NGUYENNHAN.Text.Trim();
 			try { _HangtralaiEntity.Ngaytao = System.DateTime.Parse(txt_NGAYTAO.Text.Trim()); } 
@@ -102,17 +89,12 @@ namespace GD.BBPH.DAL.EntityClasses
 				_HangtralaiManager.Update(_HangtralaiEntity);
 				
 				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Id.Name].Value = _HangtralaiEntity.Id;
-				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Sophieugiao.Name].Value = _HangtralaiEntity.Sophieugiao;
-				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaygiao.Name].Value = _HangtralaiEntity.Ngaygiao;
-				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Madon.Name].Value = _HangtralaiEntity.Madon;
+				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaytra.Name].Value = _HangtralaiEntity.Ngaytra;
 				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Makhach.Name].Value = _HangtralaiEntity.Makhach;
 				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Tenkhach.Name].Value = _HangtralaiEntity.Tenkhach;
-				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaydat.Name].Value = _HangtralaiEntity.Ngaydat;
-				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Masp.Name].Value = _HangtralaiEntity.Masp;
-				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Tenhang.Name].Value = _HangtralaiEntity.Tenhang;
-				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Soluonggiao.Name].Value = _HangtralaiEntity.Soluonggiao;
-				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Soluongtralai.Name].Value = _HangtralaiEntity.Soluongtralai;
-				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaytra.Name].Value = _HangtralaiEntity.Ngaytra;
+				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Masanpham.Name].Value = _HangtralaiEntity.Masanpham;
+				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Tensanpham.Name].Value = _HangtralaiEntity.Tensanpham;
+				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Soluongtra.Name].Value = _HangtralaiEntity.Soluongtra;
 				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguyennhan.Name].Value = _HangtralaiEntity.Nguyennhan;
 				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Ngaytao.Name].Value = _HangtralaiEntity.Ngaytao;
 				GRID_HANGTRALAI.CurrentRow.Cells[HangtralaiFields.Nguoitao.Name].Value = _HangtralaiEntity.Nguoitao;

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 16, 2022 4:36:40 PM
+// Code is generated on: Thursday, November 17, 2022 3:20:15 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -436,13 +436,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Id", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Sophieugiao", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Ngaygiao", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Madon", fieldHashtable);
+			_fieldsCustomProperties.Add("Ngaytra", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Makhach", fieldHashtable);
@@ -451,22 +445,13 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Tenkhach", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Ngaydat", fieldHashtable);
+			_fieldsCustomProperties.Add("Masanpham", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Masp", fieldHashtable);
+			_fieldsCustomProperties.Add("Tensanpham", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tenhang", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Soluonggiao", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Soluongtralai", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Ngaytra", fieldHashtable);
+			_fieldsCustomProperties.Add("Soluongtra", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguyennhan", fieldHashtable);
@@ -549,7 +534,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Id property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Id"<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Id"<br/>
 		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, true</remarks>
 		public virtual System.Int64 Id
@@ -558,42 +543,20 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)HangtralaiFieldIndex.Id, value); }
 		}
 
-		/// <summary> The Sophieugiao property of the Entity Hangtralai<br/><br/>
+		/// <summary> The Ngaytra property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Sophieugiao"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Sophieugiao
-		{
-			get { return (System.String)GetValue((int)HangtralaiFieldIndex.Sophieugiao, true); }
-			set	{ SetValue((int)HangtralaiFieldIndex.Sophieugiao, value); }
-		}
-
-		/// <summary> The Ngaygiao property of the Entity Hangtralai<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Ngaygiao"<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Ngaytra"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.DateTime> Ngaygiao
+		public virtual Nullable<System.DateTime> Ngaytra
 		{
-			get { return (Nullable<System.DateTime>)GetValue((int)HangtralaiFieldIndex.Ngaygiao, false); }
-			set	{ SetValue((int)HangtralaiFieldIndex.Ngaygiao, value); }
-		}
-
-		/// <summary> The Madon property of the Entity Hangtralai<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Madon"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Madon
-		{
-			get { return (System.String)GetValue((int)HangtralaiFieldIndex.Madon, true); }
-			set	{ SetValue((int)HangtralaiFieldIndex.Madon, value); }
+			get { return (Nullable<System.DateTime>)GetValue((int)HangtralaiFieldIndex.Ngaytra, false); }
+			set	{ SetValue((int)HangtralaiFieldIndex.Ngaytra, value); }
 		}
 
 		/// <summary> The Makhach property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Makhach"<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Makhach"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Makhach
@@ -604,7 +567,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Tenkhach property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Tenkhach"<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Tenkhach"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Tenkhach
@@ -613,76 +576,43 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)HangtralaiFieldIndex.Tenkhach, value); }
 		}
 
-		/// <summary> The Ngaydat property of the Entity Hangtralai<br/><br/>
+		/// <summary> The Masanpham property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Ngaydat"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Masanpham"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.DateTime> Ngaydat
+		public virtual System.String Masanpham
 		{
-			get { return (Nullable<System.DateTime>)GetValue((int)HangtralaiFieldIndex.Ngaydat, false); }
-			set	{ SetValue((int)HangtralaiFieldIndex.Ngaydat, value); }
+			get { return (System.String)GetValue((int)HangtralaiFieldIndex.Masanpham, true); }
+			set	{ SetValue((int)HangtralaiFieldIndex.Masanpham, value); }
 		}
 
-		/// <summary> The Masp property of the Entity Hangtralai<br/><br/>
+		/// <summary> The Tensanpham property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Masp"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
-		public virtual System.String Masp
-		{
-			get { return (System.String)GetValue((int)HangtralaiFieldIndex.Masp, true); }
-			set	{ SetValue((int)HangtralaiFieldIndex.Masp, value); }
-		}
-
-		/// <summary> The Tenhang property of the Entity Hangtralai<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Tenhang"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Tensanpham"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tenhang
+		public virtual System.String Tensanpham
 		{
-			get { return (System.String)GetValue((int)HangtralaiFieldIndex.Tenhang, true); }
-			set	{ SetValue((int)HangtralaiFieldIndex.Tenhang, value); }
+			get { return (System.String)GetValue((int)HangtralaiFieldIndex.Tensanpham, true); }
+			set	{ SetValue((int)HangtralaiFieldIndex.Tensanpham, value); }
 		}
 
-		/// <summary> The Soluonggiao property of the Entity Hangtralai<br/><br/>
+		/// <summary> The Soluongtra property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Soluonggiao"<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Soluongtra"<br/>
 		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Soluonggiao
+		public virtual Nullable<System.Decimal> Soluongtra
 		{
-			get { return (Nullable<System.Decimal>)GetValue((int)HangtralaiFieldIndex.Soluonggiao, false); }
-			set	{ SetValue((int)HangtralaiFieldIndex.Soluonggiao, value); }
-		}
-
-		/// <summary> The Soluongtralai property of the Entity Hangtralai<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Soluongtralai"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Decimal> Soluongtralai
-		{
-			get { return (Nullable<System.Decimal>)GetValue((int)HangtralaiFieldIndex.Soluongtralai, false); }
-			set	{ SetValue((int)HangtralaiFieldIndex.Soluongtralai, value); }
-		}
-
-		/// <summary> The Ngaytra property of the Entity Hangtralai<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Ngaytra"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.DateTime> Ngaytra
-		{
-			get { return (Nullable<System.DateTime>)GetValue((int)HangtralaiFieldIndex.Ngaytra, false); }
-			set	{ SetValue((int)HangtralaiFieldIndex.Ngaytra, value); }
+			get { return (Nullable<System.Decimal>)GetValue((int)HangtralaiFieldIndex.Soluongtra, false); }
+			set	{ SetValue((int)HangtralaiFieldIndex.Soluongtra, value); }
 		}
 
 		/// <summary> The Nguyennhan property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Nguyennhan"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Nguyennhan"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguyennhan
 		{
@@ -692,7 +622,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Ngaytao property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Ngaytao"<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Ngaytao"<br/>
 		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngaytao
@@ -703,7 +633,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Nguoitao property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Nguoitao"<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Nguoitao"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguoitao
@@ -714,7 +644,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Ngaysua property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Ngaysua"<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Ngaysua"<br/>
 		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngaysua
@@ -725,7 +655,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		/// <summary> The Nguoisua property of the Entity Hangtralai<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "hangtralai"."Nguoisua"<br/>
+		/// <remarks>Mapped on  table field: "Hangtralai"."Nguoisua"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguoisua
