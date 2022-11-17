@@ -56,8 +56,9 @@ namespace GD.BBPH.APP.KHO
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_NHAPKHONGUYENLIEU");
                         DT_NHAPKHONGUYENLIEU = LIB.Procedures.Danhsachnhapkhonguyenlieu(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, string.Empty); //LIB.SESSION_START.DT_NHAPKHONGUYENLIEU;
                         DT_NHAPKHONGUYENLIEU_CHITIET = LIB.SESSION_START.DT_NHAPKHONGUYENLIEU;
-
+                        DT_DMLYDONHAPXUAT = LIB.SESSION_START.DT_DMLYDONHAPXUAT;
                         DT_DMNGUYENLIEU = LIB.SESSION_START.DT_DMNGUYENLIEU;
+                        DT_DMKHO = LIB.SESSION_START.DT_DMKHO;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -537,7 +538,7 @@ namespace GD.BBPH.APP.KHO
             if (_RowViewSelect == null)
             {
                 ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMLYDOXUATKHO.xml",
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LYDONHAPXUAT.xml",
                         DT_DMLYDONHAPXUAT, DmlydonhapxuatFields.Malydo.Name, _str_MACANTIM);
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;

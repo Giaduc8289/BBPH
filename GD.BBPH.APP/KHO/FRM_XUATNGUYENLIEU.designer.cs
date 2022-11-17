@@ -176,7 +176,7 @@
             this.txt_SOLUONG.Name = "txt_SOLUONG";
             this.txt_SOLUONG.Regular_Expression = "";
             this.txt_SOLUONG.Size = new System.Drawing.Size(143, 20);
-            this.txt_SOLUONG.TabIndex = 6;
+            this.txt_SOLUONG.TabIndex = 5;
             this.txt_SOLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn_XOADONG
@@ -249,9 +249,11 @@
             this.txt_TENLYDO.IsShowForm = false;
             this.txt_TENLYDO.Location = new System.Drawing.Point(375, 156);
             this.txt_TENLYDO.Name = "txt_TENLYDO";
+            this.txt_TENLYDO.ReadOnly = true;
             this.txt_TENLYDO.Regular_Expression = null;
             this.txt_TENLYDO.Size = new System.Drawing.Size(174, 20);
             this.txt_TENLYDO.TabIndex = 8;
+            this.txt_TENLYDO.TabStop = false;
             // 
             // label12
             // 
@@ -325,7 +327,7 @@
             this.txt_DVTINH.Name = "txt_DVTINH";
             this.txt_DVTINH.Regular_Expression = null;
             this.txt_DVTINH.Size = new System.Drawing.Size(174, 20);
-            this.txt_DVTINH.TabIndex = 5;
+            this.txt_DVTINH.TabIndex = 6;
             // 
             // label7
             // 
@@ -355,6 +357,7 @@
             this.txt_TENNGUYENLIEU.IsShowForm = false;
             this.txt_TENNGUYENLIEU.Location = new System.Drawing.Point(375, 80);
             this.txt_TENNGUYENLIEU.Name = "txt_TENNGUYENLIEU";
+            this.txt_TENNGUYENLIEU.ReadOnly = true;
             this.txt_TENNGUYENLIEU.Regular_Expression = null;
             this.txt_TENNGUYENLIEU.Size = new System.Drawing.Size(174, 20);
             this.txt_TENNGUYENLIEU.TabIndex = 4;
@@ -413,6 +416,7 @@
             this.txt_TENKHO.IsShowForm = false;
             this.txt_TENKHO.Location = new System.Drawing.Point(375, 44);
             this.txt_TENKHO.Name = "txt_TENKHO";
+            this.txt_TENKHO.ReadOnly = true;
             this.txt_TENKHO.Regular_Expression = null;
             this.txt_TENKHO.Size = new System.Drawing.Size(174, 20);
             this.txt_TENKHO.TabIndex = 2;
@@ -465,7 +469,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(432, 492);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 18;
+            this.btn_Thoat.TabIndex = 17;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -479,7 +483,7 @@
             this.btn_KHOIPHUC.Location = new System.Drawing.Point(185, 492);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 15;
+            this.btn_KHOIPHUC.TabIndex = 14;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -493,7 +497,7 @@
             this.btn_LUULAI.Location = new System.Drawing.Point(25, 492);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LUULAI.TabIndex = 13;
+            this.btn_LUULAI.TabIndex = 12;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
             this.btn_LUULAI.Click += new System.EventHandler(this.btn_LUULAI_Click);
@@ -507,7 +511,7 @@
             this.btn_XOA.Location = new System.Drawing.Point(104, 492);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 14;
+            this.btn_XOA.TabIndex = 13;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -521,7 +525,7 @@
             this.btn_THEMMOI.Location = new System.Drawing.Point(350, 492);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 17;
+            this.btn_THEMMOI.TabIndex = 16;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -535,7 +539,7 @@
             this.btn_SUA.Location = new System.Drawing.Point(269, 492);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 16;
+            this.btn_SUA.TabIndex = 15;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);

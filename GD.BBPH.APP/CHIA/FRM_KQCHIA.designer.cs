@@ -255,7 +255,7 @@
             this.txt_SOMETRA.Name = "txt_SOMETRA";
             this.txt_SOMETRA.Regular_Expression = "";
             this.txt_SOMETRA.Size = new System.Drawing.Size(74, 20);
-            this.txt_SOMETRA.TabIndex = 9;
+            this.txt_SOMETRA.TabIndex = 14;
             // 
             // txt_SOKGRA
             // 
@@ -268,7 +268,7 @@
             this.txt_SOKGRA.Name = "txt_SOKGRA";
             this.txt_SOKGRA.Regular_Expression = "";
             this.txt_SOKGRA.Size = new System.Drawing.Size(74, 20);
-            this.txt_SOKGRA.TabIndex = 10;
+            this.txt_SOKGRA.TabIndex = 15;
             // 
             // label30
             // 
@@ -300,7 +300,7 @@
             this.txt_LYDOSUCO.Name = "txt_LYDOSUCO";
             this.txt_LYDOSUCO.Regular_Expression = null;
             this.txt_LYDOSUCO.Size = new System.Drawing.Size(437, 20);
-            this.txt_LYDOSUCO.TabIndex = 28;
+            this.txt_LYDOSUCO.TabIndex = 30;
             // 
             // label29
             // 
@@ -322,7 +322,7 @@
             this.txt_THOIGIANLENCUON.Name = "txt_THOIGIANLENCUON";
             this.txt_THOIGIANLENCUON.Regular_Expression = "";
             this.txt_THOIGIANLENCUON.Size = new System.Drawing.Size(74, 20);
-            this.txt_THOIGIANLENCUON.TabIndex = 25;
+            this.txt_THOIGIANLENCUON.TabIndex = 27;
             // 
             // label10
             // 
@@ -378,7 +378,7 @@
             this.txt_TOCDODINHMUC.ReadOnly = true;
             this.txt_TOCDODINHMUC.Regular_Expression = "";
             this.txt_TOCDODINHMUC.Size = new System.Drawing.Size(74, 20);
-            this.txt_TOCDODINHMUC.TabIndex = 29;
+            this.txt_TOCDODINHMUC.TabIndex = 31;
             this.txt_TOCDODINHMUC.TabStop = false;
             this.txt_TOCDODINHMUC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -411,7 +411,7 @@
             this.txt_THOIGIANSUCO.Name = "txt_THOIGIANSUCO";
             this.txt_THOIGIANSUCO.Regular_Expression = "";
             this.txt_THOIGIANSUCO.Size = new System.Drawing.Size(74, 20);
-            this.txt_THOIGIANSUCO.TabIndex = 27;
+            this.txt_THOIGIANSUCO.TabIndex = 29;
             // 
             // txt_THOIGIANHACUON
             // 
@@ -424,7 +424,7 @@
             this.txt_THOIGIANHACUON.Name = "txt_THOIGIANHACUON";
             this.txt_THOIGIANHACUON.Regular_Expression = "";
             this.txt_THOIGIANHACUON.Size = new System.Drawing.Size(74, 20);
-            this.txt_THOIGIANHACUON.TabIndex = 26;
+            this.txt_THOIGIANHACUON.TabIndex = 28;
             // 
             // txt_THOIGIANDOILENH
             // 
@@ -437,7 +437,7 @@
             this.txt_THOIGIANDOILENH.Name = "txt_THOIGIANDOILENH";
             this.txt_THOIGIANDOILENH.Regular_Expression = "";
             this.txt_THOIGIANDOILENH.Size = new System.Drawing.Size(74, 20);
-            this.txt_THOIGIANDOILENH.TabIndex = 22;
+            this.txt_THOIGIANDOILENH.TabIndex = 24;
             // 
             // txt_THOIGIANCATDAU
             // 
@@ -450,7 +450,7 @@
             this.txt_THOIGIANCATDAU.Name = "txt_THOIGIANCATDAU";
             this.txt_THOIGIANCATDAU.Regular_Expression = "";
             this.txt_THOIGIANCATDAU.Size = new System.Drawing.Size(74, 20);
-            this.txt_THOIGIANCATDAU.TabIndex = 21;
+            this.txt_THOIGIANCATDAU.TabIndex = 23;
             // 
             // txt_CA
             // 
@@ -476,7 +476,7 @@
             this.txt_SOMVAO.Name = "txt_SOMVAO";
             this.txt_SOMVAO.Regular_Expression = "";
             this.txt_SOMVAO.Size = new System.Drawing.Size(74, 20);
-            this.txt_SOMVAO.TabIndex = 7;
+            this.txt_SOMVAO.TabIndex = 12;
             // 
             // txt_SOKGVAO
             // 
@@ -489,7 +489,7 @@
             this.txt_SOKGVAO.Name = "txt_SOKGVAO";
             this.txt_SOKGVAO.Regular_Expression = "";
             this.txt_SOKGVAO.Size = new System.Drawing.Size(74, 20);
-            this.txt_SOKGVAO.TabIndex = 8;
+            this.txt_SOKGVAO.TabIndex = 13;
             // 
             // txt_PHEIN
             // 
@@ -502,7 +502,7 @@
             this.txt_PHEIN.Name = "txt_PHEIN";
             this.txt_PHEIN.Regular_Expression = "";
             this.txt_PHEIN.Size = new System.Drawing.Size(74, 20);
-            this.txt_PHEIN.TabIndex = 11;
+            this.txt_PHEIN.TabIndex = 16;
             // 
             // txt_PHECHIA
             // 
@@ -515,7 +515,7 @@
             this.txt_PHECHIA.Name = "txt_PHECHIA";
             this.txt_PHECHIA.Regular_Expression = "";
             this.txt_PHECHIA.Size = new System.Drawing.Size(74, 20);
-            this.txt_PHECHIA.TabIndex = 13;
+            this.txt_PHECHIA.TabIndex = 18;
             // 
             // txt_PHEGHEP
             // 
@@ -528,7 +528,7 @@
             this.txt_PHEGHEP.Name = "txt_PHEGHEP";
             this.txt_PHEGHEP.Regular_Expression = "";
             this.txt_PHEGHEP.Size = new System.Drawing.Size(74, 20);
-            this.txt_PHEGHEP.TabIndex = 12;
+            this.txt_PHEGHEP.TabIndex = 17;
             // 
             // txt_PHETHOI
             // 
@@ -541,7 +541,7 @@
             this.txt_PHETHOI.Name = "txt_PHETHOI";
             this.txt_PHETHOI.Regular_Expression = "";
             this.txt_PHETHOI.Size = new System.Drawing.Size(74, 20);
-            this.txt_PHETHOI.TabIndex = 14;
+            this.txt_PHETHOI.TabIndex = 19;
             // 
             // txt_PHESANXUAT
             // 
@@ -554,7 +554,7 @@
             this.txt_PHESANXUAT.Name = "txt_PHESANXUAT";
             this.txt_PHESANXUAT.Regular_Expression = "";
             this.txt_PHESANXUAT.Size = new System.Drawing.Size(74, 20);
-            this.txt_PHESANXUAT.TabIndex = 15;
+            this.txt_PHESANXUAT.TabIndex = 20;
             // 
             // txt_SOCUON
             // 
@@ -568,7 +568,7 @@
             this.txt_SOCUON.ReadOnly = true;
             this.txt_SOCUON.Regular_Expression = "";
             this.txt_SOCUON.Size = new System.Drawing.Size(74, 20);
-            this.txt_SOCUON.TabIndex = 23;
+            this.txt_SOCUON.TabIndex = 25;
             this.txt_SOCUON.TabStop = false;
             this.txt_SOCUON.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_SOCUON.Validated += new System.EventHandler(this.txt_THOIGIANLENCUON_Validated);
@@ -595,7 +595,7 @@
             this.txt_TYLESAIHONG.ReadOnly = true;
             this.txt_TYLESAIHONG.Regular_Expression = "";
             this.txt_TYLESAIHONG.Size = new System.Drawing.Size(74, 20);
-            this.txt_TYLESAIHONG.TabIndex = 30;
+            this.txt_TYLESAIHONG.TabIndex = 32;
             this.txt_TYLESAIHONG.TabStop = false;
             this.txt_TYLESAIHONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -623,7 +623,7 @@
             this.txt_NANGSUAT.ReadOnly = true;
             this.txt_NANGSUAT.Regular_Expression = "";
             this.txt_NANGSUAT.Size = new System.Drawing.Size(74, 20);
-            this.txt_NANGSUAT.TabIndex = 31;
+            this.txt_NANGSUAT.TabIndex = 33;
             this.txt_NANGSUAT.TabStop = false;
             this.txt_NANGSUAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -647,7 +647,7 @@
             this.txt_SOLANHACUON.Name = "txt_SOLANHACUON";
             this.txt_SOLANHACUON.Regular_Expression = "";
             this.txt_SOLANHACUON.Size = new System.Drawing.Size(74, 20);
-            this.txt_SOLANHACUON.TabIndex = 24;
+            this.txt_SOLANHACUON.TabIndex = 26;
             this.txt_SOLANHACUON.Validated += new System.EventHandler(this.txt_SOCUON_Validated);
             // 
             // label27
@@ -688,7 +688,7 @@
             this.txt_DAURAGHEP.Name = "txt_DAURAGHEP";
             this.txt_DAURAGHEP.Regular_Expression = "";
             this.txt_DAURAGHEP.Size = new System.Drawing.Size(74, 20);
-            this.txt_DAURAGHEP.TabIndex = 6;
+            this.txt_DAURAGHEP.TabIndex = 11;
             // 
             // label25
             // 
@@ -754,7 +754,7 @@
             this.btn_XOADONG.Location = new System.Drawing.Point(118, 298);
             this.btn_XOADONG.Name = "btn_XOADONG";
             this.btn_XOADONG.Size = new System.Drawing.Size(95, 23);
-            this.btn_XOADONG.TabIndex = 33;
+            this.btn_XOADONG.TabIndex = 35;
             this.btn_XOADONG.Text = "Xóa dòng";
             this.btn_XOADONG.UseVisualStyleBackColor = true;
             this.btn_XOADONG.Click += new System.EventHandler(this.btn_XOADONG_Click);
@@ -768,7 +768,7 @@
             this.btn_THEMDONG.Location = new System.Drawing.Point(16, 298);
             this.btn_THEMDONG.Name = "btn_THEMDONG";
             this.btn_THEMDONG.Size = new System.Drawing.Size(95, 23);
-            this.btn_THEMDONG.TabIndex = 32;
+            this.btn_THEMDONG.TabIndex = 34;
             this.btn_THEMDONG.Text = "Thêm dòng";
             this.btn_THEMDONG.UseVisualStyleBackColor = true;
             this.btn_THEMDONG.Click += new System.EventHandler(this.btn_THEMDONG_Click);
@@ -830,7 +830,7 @@
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
             this.pne_CHITIET.Size = new System.Drawing.Size(904, 256);
-            this.pne_CHITIET.TabIndex = 34;
+            this.pne_CHITIET.TabIndex = 50;
             // 
             // label14
             // 
@@ -862,7 +862,7 @@
             this.txt_THOIGIANKETTHUC.Name = "txt_THOIGIANKETTHUC";
             this.txt_THOIGIANKETTHUC.Regular_Expression = null;
             this.txt_THOIGIANKETTHUC.Size = new System.Drawing.Size(74, 20);
-            this.txt_THOIGIANKETTHUC.TabIndex = 20;
+            this.txt_THOIGIANKETTHUC.TabIndex = 22;
             this.txt_THOIGIANKETTHUC.Validated += new System.EventHandler(this.txt_NANGSUAT_Validated);
             // 
             // label12
@@ -886,7 +886,7 @@
             this.txt_THOIGIANBATDAU.Name = "txt_THOIGIANBATDAU";
             this.txt_THOIGIANBATDAU.Regular_Expression = null;
             this.txt_THOIGIANBATDAU.Size = new System.Drawing.Size(74, 20);
-            this.txt_THOIGIANBATDAU.TabIndex = 19;
+            this.txt_THOIGIANBATDAU.TabIndex = 21;
             this.txt_THOIGIANBATDAU.Validated += new System.EventHandler(this.txt_NANGSUAT_Validated);
             // 
             // label13
@@ -937,8 +937,7 @@
             this.txt_MACONGNHAN.Name = "txt_MACONGNHAN";
             this.txt_MACONGNHAN.Regular_Expression = null;
             this.txt_MACONGNHAN.Size = new System.Drawing.Size(74, 20);
-            this.txt_MACONGNHAN.TabIndex = 5;
-            this.txt_MACONGNHAN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MACONGNHAN_KeyDown);
+            this.txt_MACONGNHAN.TabIndex = 7;
             this.txt_MACONGNHAN.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACONGNHAN_Validating);
             // 
             // label3
@@ -962,8 +961,7 @@
             this.txt_MASANPHAM.Name = "txt_MASANPHAM";
             this.txt_MASANPHAM.Regular_Expression = null;
             this.txt_MASANPHAM.Size = new System.Drawing.Size(74, 20);
-            this.txt_MASANPHAM.TabIndex = 4;
-            this.txt_MASANPHAM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAHANG_KeyDown);
+            this.txt_MASANPHAM.TabIndex = 5;
             this.txt_MASANPHAM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASANPHAM_Validating);
             // 
             // label4
@@ -1012,7 +1010,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(422, 610);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 40;
+            this.btn_Thoat.TabIndex = 41;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -1026,7 +1024,7 @@
             this.btn_KHOIPHUC.Location = new System.Drawing.Point(175, 610);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 37;
+            this.btn_KHOIPHUC.TabIndex = 38;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -1040,7 +1038,7 @@
             this.btn_LUULAI.Location = new System.Drawing.Point(15, 610);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LUULAI.TabIndex = 35;
+            this.btn_LUULAI.TabIndex = 36;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
             this.btn_LUULAI.Click += new System.EventHandler(this.btn_LUULAI_Click);
@@ -1054,7 +1052,7 @@
             this.btn_XOA.Location = new System.Drawing.Point(94, 610);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 36;
+            this.btn_XOA.TabIndex = 37;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -1068,7 +1066,7 @@
             this.btn_THEMMOI.Location = new System.Drawing.Point(340, 610);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 39;
+            this.btn_THEMMOI.TabIndex = 40;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -1082,7 +1080,7 @@
             this.btn_SUA.Location = new System.Drawing.Point(259, 610);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 38;
+            this.btn_SUA.TabIndex = 39;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
@@ -1099,7 +1097,7 @@
             this.txt_LENH.Name = "txt_LENH";
             this.txt_LENH.Regular_Expression = null;
             this.txt_LENH.Size = new System.Drawing.Size(74, 20);
-            this.txt_LENH.TabIndex = 3;
+            this.txt_LENH.TabIndex = 4;
             // 
             // label21
             // 
@@ -1123,7 +1121,6 @@
             this.txt_MAMAY.Regular_Expression = null;
             this.txt_MAMAY.Size = new System.Drawing.Size(74, 20);
             this.txt_MAMAY.TabIndex = 2;
-            this.txt_MAMAY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAMAY_KeyDown);
             this.txt_MAMAY.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MAMAY_Validating);
             // 
             // label22

@@ -584,10 +584,13 @@ namespace GD.BBPH.APP.KHO
         }
         private void txt_MANGUYENLIEU_KeyDown(object sender, KeyEventArgs e)
         {
-            FRM_DMNGUYENLIEU frm_Dm = new FRM_DMNGUYENLIEU();
-            frm_Dm.Text = "Danh mục nguyên liệu";
-            frm_Dm.ShowDialog();
-            DT_DMNGUYENLIEU = new DmnguyenlieuManager().SelectAllRDT();
+            if (e.KeyData == Keys.F4)
+            {
+                FRM_DMNGUYENLIEU frm_Dm = new FRM_DMNGUYENLIEU();
+                frm_Dm.Text = "Danh mục nguyên liệu";
+                frm_Dm.ShowDialog();
+                DT_DMNGUYENLIEU = new DmnguyenlieuManager().SelectAllRDT();
+            }
         }
 
         private void txt_MALYDO_KeyDown(object sender, KeyEventArgs e)
