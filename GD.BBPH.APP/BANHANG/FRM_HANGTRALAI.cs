@@ -31,6 +31,8 @@ namespace GD.BBPH.APP.BANHANG
         private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_HANGTRALAI = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
+        private bool ADDROW = false;
+
 
         private DataTable DT_DMKHACH = new DataTable(), DT_HANG = new DataTable();
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
@@ -125,13 +127,13 @@ namespace GD.BBPH.APP.BANHANG
                     if (_Rowview != null)
                         MAHIEU_PK = _Rowview.Row[HangtralaiFields.Id.Name].ToString();
 
-                    //txt_NGAYTRA.Text = _Rowview.Row[HangtralaiFields.Ngaytra.Name].ToString();
-                    //txt_MAKHACH.Text = _Rowview.Row[HangtralaiFields.Makhach.Name].ToString();
-                    //txt_TENKHACH.Text = _Rowview.Row[HangtralaiFields.Tenkhach.Name].ToString();
-                    //txt_MASANPHAM.Text = _Rowview.Row[HangtralaiFields.Masanpham.Name].ToString();
-                    //txt_TENSANPHAM.Text = _Rowview.Row[HangtralaiFields.Tensanpham.Name].ToString();
-                    //txt_SOLUONGTRA.Text = _Rowview.Row[HangtralaiFields.Soluongtra.Name].ToString();
-                    //txt_NGUYENNHAN.Text = _Rowview.Row[HangtralaiFields.Nguyennhan.Name].ToString();
+                    txt_NGAYTRA.Text = _Rowview.Row[HangtralaiFields.Ngaytra.Name].ToString();
+                    txt_MAKHACH.Text = _Rowview.Row[HangtralaiFields.Makhach.Name].ToString();
+                    txt_TENKHACH.Text = _Rowview.Row[HangtralaiFields.Tenkhach.Name].ToString();
+                    txt_MASANPHAM.Text = _Rowview.Row[HangtralaiFields.Masanpham.Name].ToString();
+                    txt_TENSANPHAM.Text = _Rowview.Row[HangtralaiFields.Tensanpham.Name].ToString();
+                    txt_SOLUONGTRA.Text = _Rowview.Row[HangtralaiFields.Soluongtra.Name].ToString();
+                    txt_NGUYENNHAN.Text = _Rowview.Row[HangtralaiFields.Nguyennhan.Name].ToString();
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_HANGTRALAI_CurrentChanged"); }
@@ -141,17 +143,17 @@ namespace GD.BBPH.APP.BANHANG
         {
             HangtralaiEntity _HangtralaiEntity = new HangtralaiEntity();
 
-            //try { _HangtralaiEntity.Id = System.Int64.Parse(txt_ID.Text.Trim()); }
-            //catch { }
-            //try { _HangtralaiEntity.Ngaytra = System.DateTime.Parse(txt_NGAYTRA.Text.Trim()); }
-            //catch { }
-            //_HangtralaiEntity.Makhach = txt_MAKHACH.Text.Trim();
-            //_HangtralaiEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-            //_HangtralaiEntity.Masanpham = txt_MASANPHAM.Text.Trim();
-            //_HangtralaiEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
-            //try { _HangtralaiEntity.Soluongtra = System.Decimal.Parse(txt_SOLUONGTRA.Text.Trim()); }
-            //catch { }
-            //_HangtralaiEntity.Nguyennhan = txt_NGUYENNHAN.Text.Trim();
+            try { _HangtralaiEntity.Id = System.Int64.Parse(_str_MAHIEU_PK); }
+            catch { }
+            try { _HangtralaiEntity.Ngaytra = System.DateTime.Parse(txt_NGAYTRA.Text.Trim()); }
+            catch { }
+            _HangtralaiEntity.Makhach = txt_MAKHACH.Text.Trim();
+            _HangtralaiEntity.Tenkhach = txt_TENKHACH.Text.Trim();
+            _HangtralaiEntity.Masanpham = txt_MASANPHAM.Text.Trim();
+            _HangtralaiEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
+            try { _HangtralaiEntity.Soluongtra = System.Decimal.Parse(txt_SOLUONGTRA.Text.Trim()); }
+            catch { }
+            _HangtralaiEntity.Nguyennhan = txt_NGUYENNHAN.Text.Trim();
 
             if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
@@ -187,7 +189,7 @@ namespace GD.BBPH.APP.BANHANG
             DT_HANGTRALAI.Rows.Add(r_Insert);
             BS_HANGTRALAI.Position = DT_HANGTRALAI.Rows.Count;
             MAHIEU_PK = "";
-            txt_Sophieugiao.Focus();
+            txt_NGAYTRA.Focus();
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
@@ -199,8 +201,8 @@ namespace GD.BBPH.APP.BANHANG
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_Sophieugiao }));
-                txt_Sophieugiao.Focus();
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAYTRA }));
+                txt_NGAYTRA.Focus();
             }
             GRID_HANGTRALAI.Enabled = false;
         }
@@ -222,7 +224,7 @@ namespace GD.BBPH.APP.BANHANG
             HangtralaiManager _HangtralaiManager = new HangtralaiManager();
             HangtralaiEntity _HangtralaiEntity = new HangtralaiEntity();
             _HangtralaiEntity = _HangtralaiManager.SelectOne(Convert.ToInt64(MAHIEU_PK));
-            if (_HangtralaiEntity != null && MessageBox.Show("Xóa khách hàng: " + MAHIEU_PK + " - " + txt_Sophieugiao.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+            if (_HangtralaiEntity != null && MessageBox.Show("Xóa khách hàng: " + MAHIEU_PK + " - " + txt_NGAYTRA.Text, "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                    System.Windows.Forms.DialogResult.Yes)
             {
                 try
@@ -242,10 +244,10 @@ namespace GD.BBPH.APP.BANHANG
         }
         private void btn_LUULAI_Click(object sender, EventArgs e)
         {
-            if (txt_Sophieugiao.Text == "")
+            if (txt_NGAYTRA.Text == "")
             {
                 MessageBox.Show("Yêu cầu nhập số phiếu giao!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_Sophieugiao.Focus();
+                txt_NGAYTRA.Focus();
                 return;
             }
             else
@@ -267,8 +269,8 @@ namespace GD.BBPH.APP.BANHANG
         private void txt_Makhach_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_Makhach.Text.Trim()) || DT_DMKHACH == null || DT_DMKHACH.Rows.Count == 0) return;
-            string _str_MACANTIM = txt_Makhach.Text.Trim().ToUpper();
+            if (string.IsNullOrEmpty(txt_MAKHACH.Text.Trim()) || DT_DMKHACH == null || DT_DMKHACH.Rows.Count == 0) return;
+            string _str_MACANTIM = txt_MAKHACH.Text.Trim().ToUpper();
             _RowViewSelect = checkmaKhach(_str_MACANTIM, DT_DMKHACH);
             if (_RowViewSelect == null)
             {
@@ -278,11 +280,11 @@ namespace GD.BBPH.APP.BANHANG
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_Makhach.Text = _RowViewSelect[DmkhachFields.Makhach.Name].ToString();
-                txt_Tenkhach.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
+                txt_MAKHACH.Text = _RowViewSelect[DmkhachFields.Makhach.Name].ToString();
+                txt_TENKHACH.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
             }
             else
-                txt_Tenkhach.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
+                txt_TENKHACH.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
         }
         private DataRow checkmaKhach(string macantim, DataTable dt)
         {
@@ -295,32 +297,28 @@ namespace GD.BBPH.APP.BANHANG
 
         private void txt_Masp_Validating(object sender, CancelEventArgs e)
         {
-            _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_Masp.Text.Trim()) || DT_HANG == null || DT_HANG.Rows.Count == 0) return;
-            string _str_MACANTIM = txt_Masp.Text.Trim().ToUpper();
-            _RowViewSelect = checkMasp(_str_MACANTIM, DT_HANG);
-            if (_RowViewSelect == null)
-            {
-                ListviewJanus _frm_SingerRows_Select =
-                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml",
-                        DT_HANG, DmhangFields.Masp.Name, _str_MACANTIM);
-                _frm_SingerRows_Select.ShowDialog();
-                if (_frm_SingerRows_Select._RowViewSelect == null) return;
-                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_Masp.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
-                txt_Tenhang.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
-            }
-            else
-                txt_Tenhang.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
+            if (ADDROW) return;
+            if (string.IsNullOrEmpty(txt_MASANPHAM.Text) || !btn_LUULAI.Enabled) return;
+            txt_TENSANPHAM.Text = string.Empty;
+            ListviewJanusC _frm =
+                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG_CHON.xml", DT_HANG, DmhangFields.Masp.Name, txt_MASANPHAM.Text);
+            _frm.ShowDialog();
+            if (_frm._RowsViewSelect == null) return;
 
-        }
-        private DataRow checkMasp(string macantim, DataTable dt)
-        {
-            try
+            string strMa = "", strTen = "", strMaTC = "", strTenTC = "";
+            foreach (DataRowView drv in _frm._RowsViewSelect)
             {
-                return dt.Select(DmhangFields.Masp.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
+                strMa += drv.Row[DmhangFields.Masp.Name].ToString() + ",";
+                strTen += drv.Row[DmhangFields.Tensp.Name].ToString() + ",";
+                if (drv.Row[DmhangFields.Masp.Name].ToString() == "TC")
+                {
+                    strMaTC = drv.Row[DmhangFields.Masp.Name].ToString();
+                    strTenTC = drv.Row[DmhangFields.Tensp.Name].ToString();
+                }
             }
-            catch { return null; }
+
+            txt_MASANPHAM.Text = strMa;
+            txt_TENSANPHAM.Text = strTen;
         }
         #endregion
 
@@ -359,6 +357,11 @@ namespace GD.BBPH.APP.BANHANG
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
