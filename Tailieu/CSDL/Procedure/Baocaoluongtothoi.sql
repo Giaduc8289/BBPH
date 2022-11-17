@@ -26,17 +26,18 @@ As	SET NOCOUNT ON;
 	From #Ketquain0 kq 
 		Cross Apply (Select * From dbo.SplitString(kq.Macongnhan,',')) As cn
 
-	Select Ngay, Macongnhan, Tencongnhan, Mamang, Tenmang
+	Select Ngay, Macongnhan, Tencongnhan, Macv, Mamang, Tenmang
 			, SUM(ISNULL(Somet,0)) Somet, SUM(ISNULL(Sokg,0)) Sokg
 			, Socongnhan
 	Into #Ketquain
 	From #Ketquain1 kq Inner Join dmcongnhan dm On dm.Macn=kq.Macongnhan
 	Where (Macongnhan=@Macongnhan Or @Macongnhan='')
-	GROUP BY Ngay, Macongnhan, Tencongnhan, Mamang, Tenmang, Socongnhan
+	GROUP BY Ngay, Macongnhan, Tencongnhan, Macv, Mamang, Tenmang, Socongnhan
 	
 	Select Ngay, Macongnhan, Tencongnhan, Mamang, Tenmang
 			, Somet/Socongnhan As Dauramet , Sokg/Socongnhan As Daurakg
-	From #Ketquain
+			, Heso
+	From #Ketquain kq Left Join dmchucvu cv on cv.Macv=kq.Macv		
 	Order By Macongnhan, Mamang
 	
 GO
