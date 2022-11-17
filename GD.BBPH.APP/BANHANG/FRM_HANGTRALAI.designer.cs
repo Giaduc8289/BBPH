@@ -280,6 +280,7 @@
             this.txt_Masp.Regular_Expression = null;
             this.txt_Masp.Size = new System.Drawing.Size(138, 20);
             this.txt_Masp.TabIndex = 5;
+            this.txt_Masp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAHANG_KeyDown);
             this.txt_Masp.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Masp_Validating);
             // 
             // label4
@@ -336,6 +337,7 @@
             this.txt_Makhach.Regular_Expression = null;
             this.txt_Makhach.Size = new System.Drawing.Size(138, 20);
             this.txt_Makhach.TabIndex = 3;
+            this.txt_Makhach.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAKHACH_KeyDown);
             this.txt_Makhach.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Makhach_Validating);
             // 
             // label3

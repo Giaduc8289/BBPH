@@ -497,7 +497,7 @@ namespace GD.BBPH.APP.THOI
             if (e.KeyData == Keys.F4)
             {
                 FRM_DMNGUYENLIEU frm_Dm = new FRM_DMNGUYENLIEU();
-                frm_Dm.Text = "Danh mục lý do";
+                frm_Dm.Text = "Danh mục nguyên liệu";
                 frm_Dm.ShowDialog();
                 DT_DMNGUYENLIEU = new DmnguyenlieuManager().SelectAllRDT();
             }
