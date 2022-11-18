@@ -182,10 +182,10 @@ namespace GD.BBPH.APP.DANHMUC
                     DataRowView _view = (DataRowView)_grid.DataRow;
                     if (_view == null) continue;
                     decimal _dongia = 0, _kluong = 0;
-                    DataRow[] arrDr = DT_DMNGUYENLIEU.Select(DmnguyenlieuFields.Manl.Name + "='" + _view[CtptmangDFields.Manl.Name].ToString() + "'");
-                    if (arrDr.Length > 0)
+                    DataTable dt = LIB.Procedures.Dongianguyenlieuhieuluc(LIB.SESSION_START.TS_NGAYLAMVIEC, _view[CtptmangDFields.Manl.Name].ToString());
+                    if (dt.Rows.Count > 0)
                     {
-                        _dongia = LIB.ConvertString.NumbertoDB(arrDr[0][DmnguyenlieuFields.Gia.Name].ToString());
+                        _dongia = LIB.ConvertString.NumbertoDB(dt.Rows[0][DmnguyenlieuFields.Gia.Name].ToString());
                         _view["Dongia"] = _dongia;
                     }
                     _kluong = LIB.ConvertString.NumbertoDB(_view[CtptmangDFields.Trongluong.Name].ToString());
@@ -208,6 +208,7 @@ namespace GD.BBPH.APP.DANHMUC
         }
         #endregion
 
+        #region Load dữ liệu
         void BS_CTPTMANG_H_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -237,7 +238,6 @@ namespace GD.BBPH.APP.DANHMUC
                 MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         void BS_CTPTMANG_D_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -255,7 +255,6 @@ namespace GD.BBPH.APP.DANHMUC
                 MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void SHOWGRID(string MAHIEU_PK)
         {
             if (string.IsNullOrEmpty(MAHIEU_PK))
@@ -280,6 +279,7 @@ namespace GD.BBPH.APP.DANHMUC
             BS_CTPTMANG_D.CurrentChanged += new EventHandler(BS_CTPTMANG_D_CurrentChanged);
             BS_CTPTMANG_D_CurrentChanged((new object()), (new EventArgs()));
         }
+        #endregion
 
         private string Save_Data(string _str_MAHIEU_PK)
         {

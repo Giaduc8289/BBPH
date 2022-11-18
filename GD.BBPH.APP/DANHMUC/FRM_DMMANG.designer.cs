@@ -157,7 +157,6 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(534, 535);
             this.uiPanel1Container.TabIndex = 0;
-            this.uiPanel1Container.Click += new System.EventHandler(this.uiPanel1Container_Click);
             // 
             // txt_TRONGLUONG
             // 
@@ -294,7 +293,6 @@
             this.label6.Size = new System.Drawing.Size(33, 13);
             this.label6.TabIndex = 135;
             this.label6.Text = "Rộng";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -304,7 +302,6 @@
             this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 133;
             this.label7.Text = "Độ dày";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txt_TENCTPT
             // 
@@ -529,7 +526,6 @@
             this.label21.Size = new System.Drawing.Size(55, 13);
             this.label21.TabIndex = 120;
             this.label21.Text = "Tên màng";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // txt_MAHIEU
             // 
@@ -553,7 +549,6 @@
             this.label22.Size = new System.Drawing.Size(51, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã màng";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // FRM_DMMANG
             // 

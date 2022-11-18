@@ -40,7 +40,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Mactpt</name>
     <headerText>Mã CTPT</headerText>
     <BackColor>0</BackColor>
@@ -49,7 +49,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tenctpt</name>
     <headerText>Tên CTPT</headerText>
     <BackColor>0</BackColor>

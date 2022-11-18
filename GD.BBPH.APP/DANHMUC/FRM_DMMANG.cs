@@ -456,53 +456,19 @@ namespace GD.BBPH.APP.DANHMUC
             if (e.KeyData == Keys.F4)
             {
                 FRM_CTPTMANG frm_Dm = new FRM_CTPTMANG();
-                frm_Dm.Text = "Danh mục quy cách màng";
+                frm_Dm.Text = "Danh mục công thức phối trộn";
                 frm_Dm.ShowDialog();
                 DT_CTPT = new CtptmangHManager().SelectAllRDT();
             }
         }
         #endregion
+
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)
                 GRID_DMMANG.ColumnAutoResize = true;
             else
                 GRID_DMMANG.ColumnAutoResize = false;
-        }
-
-        private void uiPanel1Container_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textbox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textbox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void FRM_DMMANG_FormClosing(object sender, FormClosingEventArgs e)

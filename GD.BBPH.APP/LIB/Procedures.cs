@@ -1698,6 +1698,17 @@ namespace GD.BBPH.APP.LIB
             parameters.CopyTo(myArr, 0);
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachctpt", "Danhsachctpt", myArr).Tables[0];
         }
+        public static DataTable Dongianguyenlieuhieuluc(DateTime Ngaytinhgia, string Manguyenlieu)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Ngaytinhgia", SqlDbType.Date, 0), Ngaytinhgia);
+            parameters.Add(new SqlParameter("@Manguyenlieu", SqlDbType.NVarChar, 0), Manguyenlieu);
+
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader("Dongianguyenlieuhieuluc", "Dongianguyenlieuhieuluc", myArr).Tables[0];
+        }
         public static DataTable Danhsachdonhang(DateTime Tungay, DateTime Denngay, string Madondathang, string Sobaogia, /*string SoPO,*/ string Makhachhang, string Mahang)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
