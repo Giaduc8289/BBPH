@@ -1400,17 +1400,18 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox17">
+                    <Textbox Name="Textbox27">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Fields!Heso.Value</Value>
                               <Style>
                                 <FontFamily>Arial Narrow</FontFamily>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###.00</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1418,7 +1419,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox17</rd:DefaultName>
+                      <rd:DefaultName>Textbox10</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1430,6 +1431,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -2402,10 +2404,22 @@
           <DataField>Dinhmuc</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Thanhtien">
+          <DataField>Thanhtien</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Heso">
+          <DataField>Heso</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tienluong">
+          <DataField>Tienluong</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataBBPH</rd:DataSetName>
-        <rd:SchemaPath>D:\BBPH\GD.BBPH.APP\RDLC\DataBBPH.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Dev\BBPH\GD.BBPH.APP\RDLC\DataBBPH.xsd</rd:SchemaPath>
         <rd:TableName>Ketquasanxuat</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

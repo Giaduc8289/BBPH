@@ -59,7 +59,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.67121cm</Top>
+        <Top>3.57596cm</Top>
         <Left>0.00003cm</Left>
         <Height>0.70583cm</Height>
         <Width>18.72472cm</Width>
@@ -770,10 +770,10 @@
         </Style>
       </Image>
     </ReportItems>
-    <Height>9.49246cm</Height>
+    <Height>7.40225cm</Height>
     <Style />
   </Body>
-  <Width>21.22472cm</Width>
+  <Width>18.72475cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
