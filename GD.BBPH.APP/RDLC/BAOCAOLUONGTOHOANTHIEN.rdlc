@@ -78,37 +78,37 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.60008cm</Width>
+              <Width>1.22969cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.89253cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.44938cm</Width>
+              <Width>1.72451cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.47263cm</Width>
+              <Width>6.31877cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.74042cm</Width>
+              <Width>1.46529cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.40751cm</Width>
+              <Width>1.13238cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.65003cm</Width>
+              <Width>1.3749cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.05441cm</Width>
+              <Width>0.9543cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.67931cm</Width>
+              <Width>1.40418cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.31899cm</Width>
+              <Width>1.04386cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.67649cm</Width>
+              <Width>1.40136cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -124,7 +124,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Mã công</Value>
+                              <Value>Mã</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -444,7 +444,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>nhân</Value>
+                              <Value>CN</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -2032,7 +2032,7 @@
         <Top>4.35263cm</Top>
         <Left>0.00003cm</Left>
         <Height>0.70583cm</Height>
-        <Width>19.57139cm</Width>
+        <Width>19.66664cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>

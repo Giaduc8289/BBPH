@@ -78,34 +78,34 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.94863cm</Width>
+              <Width>1.17411cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.72397cm</Width>
+              <Width>2.04475cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.42751cm</Width>
+              <Width>1.67192cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.45076cm</Width>
+              <Width>7.07244cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.77147cm</Width>
+              <Width>1.43186cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.63918cm</Width>
+              <Width>1.29957cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.1807cm</Width>
+              <Width>0.93634cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.73943cm</Width>
+              <Width>1.49507cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.18777cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.92629cm</Width>
+              <Width>1.68188cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -121,7 +121,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Mã công</Value>
+                              <Value>Mã</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -440,7 +440,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>nhân</Value>
+                              <Value>CN</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -1429,7 +1429,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1872,7 +1871,7 @@
         <Top>4.35263cm</Top>
         <Left>0.00003cm</Left>
         <Height>0.70583cm</Height>
-        <Width>19.65605cm</Width>
+        <Width>19.7513cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>

@@ -78,25 +78,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.03933cm</Width>
+              <Width>1.14616cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.22595cm</Width>
+              <Width>1.96cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.51821cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.54146cm</Width>
+              <Width>6.7644cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.86217cm</Width>
+              <Width>1.59622cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.72988cm</Width>
+              <Width>1.19795cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.44604cm</Width>
+              <Width>1.18009cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.63654cm</Width>
@@ -121,7 +121,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Mã công</Value>
+                              <Value>Mã</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -440,7 +440,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>nhân</Value>
+                              <Value>CN</Value>
                               <Style>
                                 <FontFamily>Times New Roman</FontFamily>
                                 <FontWeight>Bold</FontWeight>
@@ -1429,7 +1429,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1840,7 +1839,7 @@
         <Top>5.22246cm</Top>
         <Left>0.00003cm</Left>
         <Height>3cm</Height>
-        <Width>20.03843cm</Width>
+        <Width>20.03842cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -1872,7 +1871,7 @@
         <Top>4.35263cm</Top>
         <Left>0.00003cm</Left>
         <Height>0.70583cm</Height>
-        <Width>19.67722cm</Width>
+        <Width>19.77247cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
