@@ -1124,15 +1124,16 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Soluongtondau3">
+                    <Textbox Name="Soluongtondau6">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Somettondau.Value)</Value>
+                              <Value>=System.Math.Round(Sum(Fields!Somettondau.Value), 2)</Value>
                               <Style>
+                                <FontStyle>Italic</FontStyle>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,###</Format>
                                 <Language>vi</Language>
@@ -1158,7 +1159,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox7">
+                    <Textbox Name="Textbox37">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1167,7 +1168,9 @@
                             <TextRun>
                               <Value>=Sum(Fields!Khoiluongtondau.Value)</Value>
                               <Style>
+                                <FontStyle>Italic</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###.##</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1175,7 +1178,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <rd:DefaultName>Textbox10</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1191,15 +1194,16 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Soluongnhapkho3">
+                    <Textbox Name="Soluongnhapkho5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Sometnhapkho.Value)</Value>
+                              <Value>=System.Math.Round(Sum(Fields!Sometnhapkho.Value), 2)</Value>
                               <Style>
+                                <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,###</Format>
                                 <Language>vi</Language>
@@ -1225,7 +1229,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox28">
+                    <Textbox Name="Textbox40">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1234,7 +1238,9 @@
                             <TextRun>
                               <Value>=Sum(Fields!Khoiluongnhapkho.Value)</Value>
                               <Style>
+                                <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###.##</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1242,7 +1248,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox28</rd:DefaultName>
+                      <rd:DefaultName>Textbox29</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -1258,16 +1264,19 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Soluongxuatkho3">
+                    <Textbox Name="Soluongxuatkho5">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Sometxuatkho.Value)</Value>
+                              <Value>=System.Math.Round(Sum(Fields!Sometxuatkho.Value), 2)</Value>
                               <Style>
+                                <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
+                                <Language>vi</Language>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1290,7 +1299,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox92">
+                    <Textbox Name="Textbox94">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1301,6 +1310,8 @@
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###.##</Format>
+                                <Language>vi</Language>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1323,17 +1334,19 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox334">
+                    <Textbox Name="Textbox338">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Somettondau.Value + Fields!Sometnhapkho.Value - Fields!Sometxuatkho.Value)</Value>
+                              <Value>=System.Math.Round(Sum(Fields!Somettondau.Value + Fields!Sometnhapkho.Value - Fields!Sometxuatkho.Value), 2)</Value>
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
+                                <Language>vi</Language>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1356,7 +1369,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox335">
+                    <Textbox Name="Textbox339">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1367,6 +1380,8 @@
                               <Style>
                                 <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###.##</Format>
+                                <Language>vi</Language>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1537,7 +1552,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Somettondau.Value)</Value>
+                              <Value>=Round(Sum(Fields!Somettondau.Value),2)</Value>
                               <Style>
                                 <FontStyle>Italic</FontStyle>
                                 <FontWeight>Bold</FontWeight>
@@ -1573,10 +1588,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Khoiluongtondau.Value)</Value>
+                              <Value>=Fields!Khoiluongtondau.Value</Value>
                               <Style>
                                 <FontStyle>Italic</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###.##</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1608,9 +1624,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Sometnhapkho.Value)</Value>
+                              <Value>=Round(Sum(Fields!Sometnhapkho.Value),2)</Value>
                               <Style>
-                                <FontStyle>Italic</FontStyle>
+                                <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
                                 <Format>#,###</Format>
                                 <Language>vi</Language>
@@ -1646,8 +1662,9 @@
                             <TextRun>
                               <Value>=Sum(Fields!Khoiluongnhapkho.Value)</Value>
                               <Style>
-                                <FontStyle>Italic</FontStyle>
+                                <FontStyle>Normal</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###.##</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -1679,10 +1696,12 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!Sometxuatkho.Value)</Value>
+                              <Value>=Round(Sum(Fields!Sometxuatkho.Value),2)</Value>
                               <Style>
                                 <FontStyle>Italic</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
+                                <Language>vi</Language>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1717,6 +1736,8 @@
                               <Style>
                                 <FontStyle>Italic</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###.##</Format>
+                                <Language>vi</Language>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1747,10 +1768,12 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=SUM(Fields!Somettondau.Value + Fields!Sometnhapkho.Value - Fields!Sometxuatkho.Value)</Value>
+                              <Value>=Round(SUM(Fields!Somettondau.Value + Fields!Sometnhapkho.Value - Fields!Sometxuatkho.Value),2)</Value>
                               <Style>
                                 <FontStyle>Italic</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###</Format>
+                                <Language>vi</Language>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1785,6 +1808,8 @@
                               <Style>
                                 <FontStyle>Italic</FontStyle>
                                 <FontWeight>Bold</FontWeight>
+                                <Format>#,###.##</Format>
+                                <Language>vi</Language>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1946,7 +1971,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Somettondau.Value</Value>
+                              <Value>=Round(Fields!Somettondau.Value,2)</Value>
                               <Style>
                                 <Format>#,###</Format>
                                 <Language>vi</Language>
@@ -1981,7 +2006,7 @@
                             <TextRun>
                               <Value>=Fields!Khoiluongtondau.Value</Value>
                               <Style>
-                                <Format>#,###</Format>
+                                <Format>#,###.##</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2012,7 +2037,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Sometnhapkho.Value</Value>
+                              <Value>=Round(Fields!Sometnhapkho.Value,2)</Value>
                               <Style>
                                 <Format>#,###</Format>
                                 <Language>vi</Language>
@@ -2047,6 +2072,7 @@
                             <TextRun>
                               <Value>=Fields!Khoiluongnhapkho.Value</Value>
                               <Style>
+                                <Format>#,###.##</Format>
                                 <Language>vi</Language>
                               </Style>
                             </TextRun>
@@ -2077,8 +2103,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Sometxuatkho.Value</Value>
-                              <Style />
+                              <Value>=Round(Fields!Sometxuatkho.Value,2)</Value>
+                              <Style>
+                                <Format>#,###</Format>
+                                <Language>vi</Language>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2108,7 +2137,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Khoiluongxuatkho.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,###.##</Format>
+                                <Language>vi</Language>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2137,8 +2169,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Somettondau.Value + Fields!Sometnhapkho.Value - Fields!Sometxuatkho.Value</Value>
-                              <Style />
+                              <Value>=Round((Fields!Somettondau.Value + Fields!Sometnhapkho.Value - Fields!Sometxuatkho.Value),2)</Value>
+                              <Style>
+                                <Format>#,###</Format>
+                                <Language>vi</Language>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2168,7 +2203,10 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Khoiluongtondau.Value + Fields!Khoiluongnhapkho.Value - Fields!Khoiluongxuatkho.Value</Value>
-                              <Style />
+                              <Style>
+                                <Format>#,###.##</Format>
+                                <Language>vi</Language>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2248,6 +2286,7 @@
           <Border>
             <Style>None</Style>
           </Border>
+          <Format>#,###</Format>
         </Style>
       </Tablix>
       <Textbox Name="Textbox2">
