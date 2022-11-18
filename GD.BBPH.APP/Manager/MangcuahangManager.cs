@@ -45,6 +45,23 @@ namespace GD.BBPH.BLL
             }
             return toReturn;
         }
+        public DataTable SelectMangghepByMaspRDT(System.String Masp)
+        {
+            DataTable toReturn = new DataTable();
+            EntityCollection _MangcuahangCollection = new EntityCollection(new MangcuahangEntityFactory());
+            RelationPredicateBucket filter = new RelationPredicateBucket();
+
+            IPredicateExpression _PredicateExpression = new PredicateExpression();
+            _PredicateExpression.Add(MangcuahangFields.Masp == Masp);
+            _PredicateExpression.Add(MangcuahangFields.Mangin == false);
+            filter.PredicateExpression.Add(_PredicateExpression);
+
+            using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+            {
+                adapter.FetchTypedList(_MangcuahangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+            }
+            return toReturn;
+        }
 
     }
 }
