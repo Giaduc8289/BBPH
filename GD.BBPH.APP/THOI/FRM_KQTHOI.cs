@@ -36,8 +36,6 @@ namespace GD.BBPH.APP.THOI
 
         private DataTable DT_DMMAY = new DataTable(), DT_LENHTHOI = new DataTable(), DT_DMMANG = new DataTable(), DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable();
 
-        //private DataTable DT_DMPHONGBAN = new DataTable();
-
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -129,6 +127,7 @@ namespace GD.BBPH.APP.THOI
             btn_THEMMOI.Focus();
         }
 
+        #region Load dữ liệu
         void BS_KQTHOI_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -155,7 +154,6 @@ namespace GD.BBPH.APP.THOI
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KQTHOI_CurrentChanged"); }
         }
-
         void BS_KQTHOI_CHITIET_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -217,6 +215,7 @@ namespace GD.BBPH.APP.THOI
             BS_KQTHOI_CHITIET.CurrentChanged += new EventHandler(BS_KQTHOI_CHITIET_CurrentChanged);
             BS_KQTHOI_CHITIET_CurrentChanged((new object()), (new EventArgs()));
         }
+        #endregion
 
         #region Xu ly dong chi tiet
         private void btn_THEMDONG_Click(object sender, EventArgs e)

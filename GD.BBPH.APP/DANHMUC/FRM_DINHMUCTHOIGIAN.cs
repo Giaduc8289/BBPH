@@ -100,9 +100,8 @@ namespace GD.BBPH.APP.DANHMUC
         public FRM_DINHMUCTHOIGIAN()
         {
             InitializeComponent();
-            DinhmucthoigianManager _DinhmucthoigianManager = new DinhmucthoigianManager();
-            DataTable dt111 = _DinhmucthoigianManager.Clone();
-            GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DINHMUCTHOIGIAN.xml");
+            //DataTable dt111 = new DinhmucthoigianManager().Clone();
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DINHMUCTHOIGIAN.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -174,7 +173,7 @@ namespace GD.BBPH.APP.DANHMUC
             DT_DINHMUCTHOIGIAN.Rows.Add(r_Insert);
             BS_DINHMUCTHOIGIAN.Position = DT_DINHMUCTHOIGIAN.Rows.Count;
             MAHIEU_PK = "";
-            txt_MADINHMUC.Text = LIB.Procedures.GetMadanhmuc(new DinhmucthoigianManager().SelectAllRDT(), DinhmucthoigianFields.Madinhmuc.Name, "CS", 3);
+            txt_MADINHMUC.Text = LIB.Procedures.GetMadanhmuc(new DinhmucthoigianManager().SelectAllRDT(), DinhmucthoigianFields.Madinhmuc.Name, "DM", 3);
             txt_MADINHMUC.Focus();
             TEXTBOX_Only_Control(false, null);
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
@@ -231,7 +230,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_DUNGMAY.Text = drCopy[0][DinhmucthoigianFields.Dungmay.Name].ToString();
 
                 MAHIEU_PK = "";
-                txt_MADINHMUC.Text = LIB.Procedures.GetMadanhmuc(new DinhmucthoigianManager().SelectAllRDT(), DinhmucthoigianFields.Madinhmuc.Name, "CS", 3);
+                txt_MADINHMUC.Text = LIB.Procedures.GetMadanhmuc(new DinhmucthoigianManager().SelectAllRDT(), DinhmucthoigianFields.Madinhmuc.Name, "DM", 3);
                 txt_MADINHMUC.Focus();
                 //TEXTBOX_Only_Control(false, null);
                 // txt_MAHIEU.Text = DmcapmaManager.GET_MA_INT(DmcapmaManager.LOAI_MA_HIEU, false, KTXPT.DATA);

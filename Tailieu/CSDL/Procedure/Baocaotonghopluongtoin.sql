@@ -27,20 +27,21 @@ As	SET NOCOUNT ON;
 	From #Ketquain0 kq 
 		Cross Apply (Select * From dbo.SplitString(kq.Macongnhan,',')) As cn
 
-	Select Ngay, Macongnhan, Tencongnhan, Masanpham, Tensanpham
+	Select Ngay, Macongnhan, Tencongnhan, Macv, Masanpham, Tensanpham
 			, SUM(ISNULL(SometLSX,0)) SometLSX, SUM(ISNULL(Sometcap,0)) Sometcap, SUM(ISNULL(Sokgcap,0)) Sokgcap
 			, SUM(ISNULL(Thuctein,0)) Thuctein, SUM(ISNULL(Sokgin,0)) Sokgin
 			, Socongnhan
 	Into #Ketquain
 	From #Ketquain1 kq Inner Join dmcongnhan dm On dm.Macn=kq.Macongnhan
 	Where (Macongnhan=@Macongnhan Or @Macongnhan='')
-	GROUP BY Ngay, Macongnhan, Tencongnhan, Masanpham, Tensanpham, Socongnhan
+	GROUP BY Ngay, Macongnhan, Tencongnhan, Macv, Masanpham, Tensanpham, Socongnhan
 	
 	Select Macongnhan, Tencongnhan
 			, SUM(SometLSX/Socongnhan)  SoluongLSX, SUM(Sometcap/Socongnhan) Dauvaomet, SUM(Sokgcap/Socongnhan) Dauvaokg
 			, SUM(Thuctein/Socongnhan ) Dauramet, SUM(Sokgin/Socongnhan) Daurakg
-	From #Ketquain
-	GROUP BY Macongnhan, Tencongnhan, Socongnhan
+			, Heso
+	From #Ketquain kq Left Join dmchucvu cv on cv.Macv=kq.Macv
+	GROUP BY Macongnhan, Tencongnhan, Heso
 	Order By Macongnhan 
 	
 GO

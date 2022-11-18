@@ -36,8 +36,6 @@ namespace GD.BBPH.APP.CHIA
 
         private DataTable DT_DMMAY = new DataTable(), DT_LENHTHOI = new DataTable(), DT_DMHANG = new DataTable(), DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable();
 
-        //private DataTable DT_DMPHONGBAN = new DataTable();
-
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -128,6 +126,7 @@ namespace GD.BBPH.APP.CHIA
             btn_THEMMOI.Focus();
         }
 
+        #region Load dữ liệu
         void BS_KQCHIA_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -154,7 +153,6 @@ namespace GD.BBPH.APP.CHIA
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KQCHIA_CurrentChanged"); }
         }
-
         void BS_KQCHIA_CHITIET_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -230,6 +228,7 @@ namespace GD.BBPH.APP.CHIA
             BS_KQCHIA_CHITIET.CurrentChanged += new EventHandler(BS_KQCHIA_CHITIET_CurrentChanged);
             BS_KQCHIA_CHITIET_CurrentChanged((new object()), (new EventArgs()));
         }
+        #endregion
 
         #region Xu ly dong chi tiet
         private void btn_THEMDONG_Click(object sender, EventArgs e)
@@ -570,17 +569,11 @@ namespace GD.BBPH.APP.CHIA
                 GRID_KQCHIACHITIET.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_KQCHIACHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
                 FUNCTION = GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD;
-
             }
         }
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
         }
         #endregion
 

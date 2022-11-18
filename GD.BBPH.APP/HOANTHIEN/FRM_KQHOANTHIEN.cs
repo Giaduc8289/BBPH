@@ -36,8 +36,6 @@ namespace GD.BBPH.APP.HOANTHIEN
 
         private DataTable DT_DMMAY = new DataTable(), DT_LENHTHOI = new DataTable(), DT_DMHANG = new DataTable(), DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable();
 
-        //private DataTable DT_DMPHONGBAN = new DataTable();
-
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -126,6 +124,7 @@ namespace GD.BBPH.APP.HOANTHIEN
             btn_THEMMOI.Focus();
         }
 
+        #region Load dữ liệu
         void BS_KQHOANTHIEN_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -151,7 +150,6 @@ namespace GD.BBPH.APP.HOANTHIEN
             }
             catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KQHOANTHIEN_CurrentChanged"); }
         }
-
         void BS_KQHOANTHIEN_CHITIET_CurrentChanged(object sender, EventArgs e)
         {
             try
@@ -223,6 +221,7 @@ namespace GD.BBPH.APP.HOANTHIEN
             BS_KQHOANTHIEN_CHITIET.CurrentChanged += new EventHandler(BS_KQHOANTHIEN_CHITIET_CurrentChanged);
             BS_KQHOANTHIEN_CHITIET_CurrentChanged((new object()), (new EventArgs()));
         }
+        #endregion
 
         #region Xu ly dong chi tiet
         private void btn_THEMDONG_Click(object sender, EventArgs e)
@@ -564,7 +563,6 @@ namespace GD.BBPH.APP.HOANTHIEN
         #endregion
 
         #region Validate
-
         private void txt_MAMAY_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
@@ -596,43 +594,6 @@ namespace GD.BBPH.APP.HOANTHIEN
             catch { return null; }
         }
 
-        //private void txt_LENHTHOI_Validating(object sender, CancelEventArgs e)
-        //{
-        //    _RowViewSelect = null;
-        //    if (string.IsNullOrEmpty(txt_LENHTHOI.Text.Trim()) || DT_LENHTHOI == null || DT_LENHTHOI.Rows.Count == 0) return;
-        //    string _str_MACANTIM = txt_LENHTHOI.Text.Trim().ToUpper();
-        //    _RowViewSelect = checklenhthoi(_str_MACANTIM, DT_LENHTHOI);
-        //    if (_RowViewSelect == null)
-        //    {
-        //        ListviewJanus _frm_SingerRows_Select =
-        //            new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMKHACH.xml",
-        //                DT_LENHTHOI, DmkhachFields.Makhach.Name, _str_MACANTIM);
-        //        _frm_SingerRows_Select.ShowDialog();
-        //        if (_frm_SingerRows_Select._RowViewSelect == null) return;
-        //        _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-        //        txt_LENHTHOI.Text = _RowViewSelect[DmkhachFields.Makhach.Name].ToString();
-        //        txt_LENHTHOI.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
-
-        //        DT_LENHTHOI = new DmhangManager().SelectByMakhachRDT(txt_LENHTHOI.Text);
-
-        //    }
-        //    else
-        //    {
-        //        txt_LENHTHOI.Text = _RowViewSelect[DmkhachFields.Tenkhach.Name].ToString();
-        //        DT_LENHTHOI = new DmhangManager().SelectByMakhachRDT(txt_LENHTHOI.Text);
-
-        //    }
-        //}
-        //private DataRow checklenhthoi(string macantim, DataTable dt)
-        //{
-        //    try
-        //    {
-        //        return dt.Select(.Mamay.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
-        //    }
-        //    catch { return null; }
-        //}
-
-
         private void txt_MASANPHAM_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
@@ -650,11 +611,13 @@ namespace GD.BBPH.APP.HOANTHIEN
                 txt_MASANPHAM.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
                 txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
                 Tinhtocdodinhmuc();
+                Tinhthoigianchuanbi();
             }
             else
             {
                 txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
                 Tinhtocdodinhmuc();
+                Tinhthoigianchuanbi();
             }
         }
         private DataRow checksanpham(string macantim, DataTable dt)

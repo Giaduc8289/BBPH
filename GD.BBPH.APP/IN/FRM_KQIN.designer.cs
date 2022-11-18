@@ -686,7 +686,6 @@
             this.label12.Size = new System.Drawing.Size(79, 13);
             this.label12.TabIndex = 185;
             this.label12.Text = "T.gian kết thúc";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // txt_THOIGIANBATDAU
             // 
@@ -720,7 +719,6 @@
             this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 177;
             this.label8.Text = "Số kg in";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -748,7 +746,6 @@
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 171;
             this.label5.Text = "Số mét cấp";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 

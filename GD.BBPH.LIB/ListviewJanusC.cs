@@ -68,8 +68,10 @@ namespace GD.BBPH.LIB
             //GRID_LIST.RootTable.Columns[dttheme.Rows.Count - 1].AutoSizeMode = Janus.Windows.GridEX.ColumnAutoSizeMode.Default;// = DataGridViewAutoSizeColumnMode.Fill;
             GRID_LIST.FilterMode = Janus.Windows.GridEX.FilterMode.Automatic;
             GRID_LIST.GroupByBoxVisible = false;
+            GRID_LIST.CellEdited += GRID_LIST_CellEdited;
             txtKeySearch.Text = Paramsearch;
             txtKeySearch_TextChanged((new object()), (new EventArgs()));
+            _Fieldname_Search = Fieldname_Search_MA;
         }
 
         private void btnchon_Click(object sender, EventArgs e)

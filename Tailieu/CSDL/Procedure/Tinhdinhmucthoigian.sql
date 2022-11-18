@@ -20,54 +20,55 @@ BEGIN
 
 	-----Tạo bảng định mức thời gian chứa cột tên trường
 	DECLARE @Dinhmuctg TABLE (
-		Madmtg			Nvarchar(50),
+		Madinhmuc			Nvarchar(50),
 		Tendinhmuc		Nvarchar(250) Not null,
-		Mamay			Nvarchar(50),
-		Madongmay		Nvarchar(50),
-		Macongdoan		Nvarchar(50),
+		Mamays			Nvarchar(MAX),
+		Macongdoans		Nvarchar(MAX),
 		Dodaytu			Decimal(20,3),
 		Dodayden		Decimal(20,3),
 		Khotu			Decimal(20,3),
 		Khoden			Decimal(20,3),
 		Chieudaitu		Decimal(20,3),
 		Chieudaiden		Decimal(20,3),
-		Somauma				Nvarchar(MAX),
-		Sohinhma			Nvarchar(MAX),
-		Maloaimang			Nvarchar(MAX),
-		Maqcthanhpham		Nvarchar(MAX),
+		Somaumas			Nvarchar(MAX),
+		Sohinhmas			Nvarchar(MAX),
+		Maloaimangs			Nvarchar(MAX),
+		Maqcthanhphams		Nvarchar(MAX),
+		Makhachs			Nvarchar(MAX),
+		Mahangs				Nvarchar(MAX),
 		Tentruong		Nvarchar(50),
 		Giatri			Decimal(20,3))
 				
-	INSERT INTO @Dinhmuctg(Madmtg, Tendinhmuc, Mamay, Madongmay, Macongdoan, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somauma, Sohinhma, Maloaimang, Maqcthanhpham, Tentruong, Giatri)
-		Select Madmtg, Tendinhmuc, Mamay, Madongmay, Macongdoan, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somauma, Sohinhma, Maloaimang, Maqcthanhpham
+	INSERT INTO @Dinhmuctg(Madinhmuc, Tendinhmuc, Mamays, Macongdoans, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somaumas, Sohinhmas, Maloaimangs, Maqcthanhphams, Makhachs, Mahangs, Tentruong, Giatri)
+		Select Madinhmuc, Tendinhmuc, Mamays, Macongdoans, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somaumas, Sohinhmas, Maloaimangs, Maqcthanhphams, Makhachs, Mahangs
 			, 'Dauca', Dauca
 		From dinhmucthoigian
 		Union
-		Select Madmtg, Tendinhmuc, Mamay, Madongmay, Macongdoan, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somauma, Sohinhma, Maloaimang, Maqcthanhpham
+		Select Madinhmuc, Tendinhmuc, Mamays, Macongdoans, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somaumas, Sohinhmas, Maloaimangs, Maqcthanhphams, Makhachs, Mahangs
 			, 'Chuanbi', Chuanbi
 		From dinhmucthoigian
 		Union
-		Select Madmtg, Tendinhmuc, Mamay, Madongmay, Macongdoan, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somauma, Sohinhma, Maloaimang, Maqcthanhpham
+		Select Madinhmuc, Tendinhmuc, Mamays, Macongdoans, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somaumas, Sohinhmas, Maloaimangs, Maqcthanhphams, Makhachs, Mahangs
 			, 'Daucuon', Daucuon
 		From dinhmucthoigian
 		Union
-		Select Madmtg, Tendinhmuc, Mamay, Madongmay, Macongdoan, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somauma, Sohinhma, Maloaimang, Maqcthanhpham
+		Select Madinhmuc, Tendinhmuc, Mamays, Macongdoans, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somaumas, Sohinhmas, Maloaimangs, Maqcthanhphams, Makhachs, Mahangs
 			, 'Doilenh', Doilenh
 		From dinhmucthoigian
 		Union
-		Select Madmtg, Tendinhmuc, Mamay, Madongmay, Macongdoan, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somauma, Sohinhma, Maloaimang, Maqcthanhpham
+		Select Madinhmuc, Tendinhmuc, Mamays, Macongdoans, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somaumas, Sohinhmas, Maloaimangs, Maqcthanhphams, Makhachs, Mahangs
 			, 'Lencuon', Lencuon
 		From dinhmucthoigian
 		Union
-		Select Madmtg, Tendinhmuc, Mamay, Madongmay, Macongdoan, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somauma, Sohinhma, Maloaimang, Maqcthanhpham
+		Select Madinhmuc, Tendinhmuc, Mamays, Macongdoans, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somaumas, Sohinhmas, Maloaimangs, Maqcthanhphams, Makhachs, Mahangs
 			, 'Xuongcuon', Xuongcuon
 		From dinhmucthoigian
 		Union
-		Select Madmtg, Tendinhmuc, Mamay, Madongmay, Macongdoan, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somauma, Sohinhma, Maloaimang, Maqcthanhpham
+		Select Madinhmuc, Tendinhmuc, Mamays, Macongdoans, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somaumas, Sohinhmas, Maloaimangs, Maqcthanhphams, Makhachs, Mahangs
 			, 'Thaythietbi', Thaythietbi
 		From dinhmucthoigian
 		Union
-		Select Madmtg, Tendinhmuc, Mamay, Madongmay, Macongdoan, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somauma, Sohinhma, Maloaimang, Maqcthanhpham
+		Select Madinhmuc, Tendinhmuc, Mamays, Macongdoans, Dodaytu, Dodayden, Khotu, Khoden, Chieudaitu, Chieudaiden, Somaumas, Sohinhmas, Maloaimangs, Maqcthanhphams, Makhachs, Mahangs
 			, 'Dungmay', Dungmay
 		From dinhmucthoigian
 	
@@ -78,7 +79,7 @@ BEGIN
 		Select @v_Thoigian=Giatri
 		From @Dinhmuctg
 		Where Tentruong = @Tentruong
-			And (CHARINDEX(@Mamay+',',Mamay)>0 OR ISNULL(Mamay,'') = '')
+			And (CHARINDEX(@Mamay+',',Mamays)>0 OR ISNULL(Mamays,'') = '')
 			And ((Dodaytu<=@v_Doday And Dodayden>=@v_Doday) Or (Dodaytu=0 And Dodayden=0))	
 	End
 	Else
@@ -106,17 +107,17 @@ BEGIN
 		Select @v_Thoigian=Min(Giatri)
 		From @Dinhmuctg dm, (Select Value As Maloaimang From dbo.SplitString(@v_Maloaimang,',')) a
 		Where Tentruong = @Tentruong
-			And (CHARINDEX(@Mamay+',',Mamay)>0 OR ISNULL(Mamay,'') = '')
+			And (CHARINDEX(@Mamay+',',Mamays)>0 OR ISNULL(Mamays,'') = '')
 			--And (CHARINDEX(@Macongdoan+',',Macongdoans)>0 OR ISNULL(Macongdoans,'') = '')
 			And ((Dodaytu<=@v_Doday And Dodayden>=@v_Doday) Or (Dodaytu=0 And Dodayden=0))	
 			And ((Khotu<=@v_Rong And Khoden>=@v_Rong) Or (Khotu=0 And Khoden=0))	
 			And ((Chieudaitu<=@v_Dai And Chieudaiden>=@v_Dai) Or (Chieudaitu=0 And Chieudaiden=0))	
-			AND	(CHARINDEX(@v_Sohinhma+',',Sohinhma)>0 OR ISNULL(Sohinhma,'') = '')
-			AND	(CHARINDEX(@v_Somauma+',',Somauma)>0 OR ISNULL(Somauma,'') = '')
-			AND (CHARINDEX(@v_Maqcthanhpham+',',Maqcthanhpham)>0 OR ISNULL(Maqcthanhpham,'') = '')			
-			AND	(CHARINDEX(a.Maloaimang+',',dm.Maloaimang)>0 OR ISNULL(dm.Maloaimang,'') = '')
-			--AND (CHARINDEX(@v_Makhach+',',Makhach)>0 OR ISNULL(Makhach,'') = '')			
-			--AND (CHARINDEX(@Masanpham+',',Mahang)>0 OR ISNULL(Mahang,'') = '')			
+			AND	(CHARINDEX(@v_Sohinhma+',',Sohinhmas)>0 OR ISNULL(Sohinhmas,'') = '')
+			AND	(CHARINDEX(@v_Somauma+',',Somaumas)>0 OR ISNULL(Somaumas,'') = '')
+			AND (CHARINDEX(@v_Maqcthanhpham+',',Maqcthanhphams)>0 OR ISNULL(Maqcthanhphams,'') = '')			
+			AND	(CHARINDEX(a.Maloaimang+',',dm.Maloaimangs)>0 OR ISNULL(dm.Maloaimangs,'') = '')
+			AND (CHARINDEX(@v_Makhach+',',Makhachs)>0 OR ISNULL(Makhachs,'') = '')			
+			AND (CHARINDEX(@Masanpham+',',Mahangs)>0 OR ISNULL(Mahangs,'') = '')		
 	End
 
 	RETURN ISNULL(@v_Thoigian,0);
@@ -124,7 +125,7 @@ END
 	
 Go
 
-SELECT dbo.fTinhdinhmucthoigian('L1', 'SP 1450', 'Chuanbi') --('T1', 'CPP50x1120')
+SELECT dbo.fTinhdinhmucthoigian('L1', 'SP 1450', 'Dauca') --('T1', 'CPP50x1120')
 
 GO	
 

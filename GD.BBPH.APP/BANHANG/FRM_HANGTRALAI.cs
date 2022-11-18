@@ -194,6 +194,7 @@ namespace GD.BBPH.APP.BANHANG
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_HANGTRALAI.Enabled = false;
+            txt_NGAYTRA.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {

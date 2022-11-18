@@ -231,7 +231,6 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(973, 535);
             this.uiPanel1Container.TabIndex = 0;
-            this.uiPanel1Container.Click += new System.EventHandler(this.uiPanel1Container_Click);
             // 
             // txt_LYDOSUCO
             // 
@@ -248,7 +247,6 @@
             this.txt_LYDOSUCO.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_LYDOSUCO.Size = new System.Drawing.Size(281, 47);
             this.txt_LYDOSUCO.TabIndex = 23;
-            this.txt_LYDOSUCO.TextChanged += new System.EventHandler(this.txt_Nguyennhan_TextChanged);
             // 
             // label28
             // 
