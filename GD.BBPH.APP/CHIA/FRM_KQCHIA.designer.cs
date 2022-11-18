@@ -716,7 +716,6 @@
             this.label24.Size = new System.Drawing.Size(49, 13);
             this.label24.TabIndex = 197;
             this.label24.Text = "Phế chia";
-            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // label23
             // 

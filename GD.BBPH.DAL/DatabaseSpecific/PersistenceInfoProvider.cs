@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, November 17, 2022 3:20:16 PM
+// Code is generated on: Friday, November 18, 2022 8:51:46 AM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -733,7 +733,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Inits KetquaghepEntity's mappings</summary>
 		private void InitKetquaghepEntityMappings()
 		{
-			base.AddElementMapping( "KetquaghepEntity", "BBPH", @"dbo", "Ketquaghep", 39 );
+			base.AddElementMapping( "KetquaghepEntity", "BBPH", @"dbo", "Ketquaghep", 41 );
 			base.AddElementFieldMapping( "KetquaghepEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "KetquaghepEntity", "Ngay", "Ngay", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 1 );
 			base.AddElementFieldMapping( "KetquaghepEntity", "Ca", "Ca", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 2 );
@@ -773,6 +773,8 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "KetquaghepEntity", "Tentruongca", "Tentruongca", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 36 );
 			base.AddElementFieldMapping( "KetquaghepEntity", "Tocdodinhmuc", "Tocdodinhmuc", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 37 );
 			base.AddElementFieldMapping( "KetquaghepEntity", "Lydosuco", "Lydosuco", true, (int)SqlDbType.NVarChar, 2147483647, 0, 0, false, "", null, typeof(System.String), 38 );
+			base.AddElementFieldMapping( "KetquaghepEntity", "Mamang", "Mamang", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 39 );
+			base.AddElementFieldMapping( "KetquaghepEntity", "Tenmang", "Tenmang", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 40 );
 		}
 		/// <summary>Inits KetquahoanthienEntity's mappings</summary>
 		private void InitKetquahoanthienEntityMappings()

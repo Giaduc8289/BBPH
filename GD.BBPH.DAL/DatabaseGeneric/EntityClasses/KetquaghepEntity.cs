@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Thursday, November 17, 2022 3:20:15 PM
+// Code is generated on: Friday, November 18, 2022 8:51:44 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -579,6 +579,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Lydosuco", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Mamang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tenmang", fieldHashtable);
 		}
 		#endregion
 
@@ -1114,6 +1120,28 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquaghepFieldIndex.Lydosuco, true); }
 			set	{ SetValue((int)KetquaghepFieldIndex.Lydosuco, value); }
+		}
+
+		/// <summary> The Mamang property of the Entity Ketquaghep<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquaghep"."Mamang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Mamang
+		{
+			get { return (System.String)GetValue((int)KetquaghepFieldIndex.Mamang, true); }
+			set	{ SetValue((int)KetquaghepFieldIndex.Mamang, value); }
+		}
+
+		/// <summary> The Tenmang property of the Entity Ketquaghep<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquaghep"."Tenmang"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenmang
+		{
+			get { return (System.String)GetValue((int)KetquaghepFieldIndex.Tenmang, true); }
+			set	{ SetValue((int)KetquaghepFieldIndex.Tenmang, value); }
 		}
 
 
