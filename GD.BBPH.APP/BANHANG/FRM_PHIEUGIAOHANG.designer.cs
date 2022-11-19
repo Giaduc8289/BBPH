@@ -74,6 +74,7 @@
             this.btn_XOA = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
+            this.btn_SUADONG = new GD.BBPH.CONTROL.BUTTON();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -131,6 +132,7 @@
             // uiPanel1Container
             // 
             this.uiPanel1Container.AutoScroll = true;
+            this.uiPanel1Container.Controls.Add(this.btn_SUADONG);
             this.uiPanel1Container.Controls.Add(this.label9);
             this.uiPanel1Container.Controls.Add(this.txt_VAT);
             this.uiPanel1Container.Controls.Add(this.label18);
@@ -183,6 +185,7 @@
             this.label9.Size = new System.Drawing.Size(88, 13);
             this.label9.TabIndex = 191;
             this.label9.Text = "Đơn hàng chi tiết";
+            this.label9.Visible = false;
             // 
             // txt_VAT
             // 
@@ -665,6 +668,20 @@
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
             // 
+            // btn_SUADONG
+            // 
+            this.btn_SUADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_SUADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_SUADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_SUADONG.Enabled = false;
+            this.btn_SUADONG.Location = new System.Drawing.Point(271, 207);
+            this.btn_SUADONG.Name = "btn_SUADONG";
+            this.btn_SUADONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_SUADONG.TabIndex = 273;
+            this.btn_SUADONG.Text = "Sửa dòng";
+            this.btn_SUADONG.UseVisualStyleBackColor = true;
+            this.btn_SUADONG.Click += new System.EventHandler(this.btn_SUADONG_Click);
+            // 
             // FRM_PHIEUGIAOHANG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -736,5 +753,6 @@
         private CONTROL.TEXTBOXNUMBER txt_VAT;
         private CONTROL.LABEL label18;
         private CONTROL.LABEL label9;
+        private CONTROL.BUTTON btn_SUADONG;
     }
 }
