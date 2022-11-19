@@ -376,9 +376,10 @@ namespace GD.BBPH.APP.TUA
                 _KetquatuaEntity.Lydosuco = _view.Row[KetquatuaFields.Lydosuco.Name].ToString();
                 _KetquatuaEntity.Macongnhan = _view.Row[KetquatuaFields.Macongnhan.Name].ToString();
                 _KetquatuaEntity.Tencongnhan = _view.Row[KetquatuaFields.Tencongnhan.Name].ToString();
+                _KetquatuaEntity.Matruongca = _view.Row[KetquatuaFields.Matruongca.Name].ToString();
+                _KetquatuaEntity.Tentruongca = _view.Row[KetquatuaFields.Tentruongca.Name].ToString();
                 _KetquatuaEntity.Masanpham = _view.Row[KetquatuaFields.Masanpham.Name].ToString();
                 _KetquatuaEntity.Tensanpham = _view.Row[KetquatuaFields.Tensanpham.Name].ToString();
-                //_KetquatuaEntity.Tennguyenlieu = _view.Row[KetquatuaFields.Tennguyenlieu.Name].ToString();
                 try { _KetquatuaEntity.SoMetvao = Convert.ToDecimal(_view.Row[KetquatuaFields.SoMetvao.Name].ToString()); }
                 catch { }
                 try { _KetquatuaEntity.SoMetra = Convert.ToDecimal(_view.Row[KetquatuaFields.SoMetra.Name].ToString()); }
@@ -410,6 +411,10 @@ namespace GD.BBPH.APP.TUA
                 try { _KetquatuaEntity.Thoigiandoilenh = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigiandoilenh.Name].ToString()); }
                 catch { }
                 try { _KetquatuaEntity.Thoigiansuco = Convert.ToDecimal(_view.Row[KetquatuaFields.Thoigiansuco.Name].ToString()); }
+                catch { }
+                try { _KetquatuaEntity.Tocdodinhmuc = System.Decimal.Parse(_view.Row[KetquatuaFields.Tocdodinhmuc.Name].ToString()); }
+                catch { }
+                try { _KetquatuaEntity.Nangsuat = System.Decimal.Parse(_view.Row[KetquatuaFields.Nangsuat.Name].ToString()); }
                 catch { }
 
                 #region xét isnew

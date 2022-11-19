@@ -449,8 +449,8 @@ namespace GD.BBPH.APP.GHEP
                 _KetquaghepEntity.Phethoi = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.Phethoi.Name].ToString());
                 _KetquaghepEntity.Nangsuat = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.Nangsuat.Name].ToString());
                 _KetquaghepEntity.Tocdodinhmuc = LIB.ConvertString.NumbertoDB(_view.Row[KetquaghepFields.Tocdodinhmuc.Name].ToString());
-                _KetquaghepEntity.Matruongca = _view.Row[KetquaghepFields.Tentruongca.Name].ToString();
-                _KetquaghepEntity.Tentruongca = _view.Row[KetquaghepFields.Nangsuat.Name].ToString();
+                _KetquaghepEntity.Matruongca = _view.Row[KetquaghepFields.Matruongca.Name].ToString();
+                _KetquaghepEntity.Tentruongca = _view.Row[KetquaghepFields.Tentruongca.Name].ToString();
                 _KetquaghepEntity.Mamang = _view.Row[KetquaghepFields.Mamang.Name].ToString();
                 _KetquaghepEntity.Tenmang = _view.Row[KetquaghepFields.Tenmang.Name].ToString();
 
