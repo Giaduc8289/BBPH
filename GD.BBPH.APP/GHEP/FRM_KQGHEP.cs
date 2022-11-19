@@ -190,10 +190,10 @@ namespace GD.BBPH.APP.GHEP
                     txt_MATRUONGCA.Text = _Rowview.Row[KetquaghepFields.Matruongca.Name].ToString();
                     txt_TENTRUONGCA.Text = _Rowview.Row[KetquaghepFields.Tentruongca.Name].ToString();
                     txt_LYDOSUCO.Text = _Rowview.Row[KetquaghepFields.Lydosuco.Name].ToString();
-                    txt_MAMANG.Text = _Rowview.Row[KetquaghepFields.Mamang.Name].ToString();
-                    txt_TENMANG.Text = _Rowview.Row[KetquaghepFields.Tenmang.Name].ToString();
 
                     txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
+                    txt_MAMANG.Text = _Rowview.Row[KetquaghepFields.Mamang.Name].ToString();
+                    txt_TENMANG.Text = _Rowview.Row[KetquaghepFields.Tenmang.Name].ToString();
 
                     txt_NANGSUAT.Text = _Rowview.Row[KetquaghepFields.Nangsuat.Name].ToString();
                     txt_TOCDODINHMUC.Text = _Rowview.Row[KetquaghepFields.Tocdodinhmuc.Name].ToString();

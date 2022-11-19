@@ -121,6 +121,24 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Mamang</name>
+    <headerText>Mã màng</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tenmang</name>
+    <headerText>Tên màng</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Dauratua</name>
     <headerText>Đầu ra tua</headerText>
     <BackColor>0</BackColor>

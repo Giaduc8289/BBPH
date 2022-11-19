@@ -238,6 +238,15 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Thoigiandauca</name>
+    <headerText>TG đầu ca</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Thoigianchuanbi</name>
     <headerText>TG chuẩn bị</headerText>
     <BackColor>0</BackColor>
