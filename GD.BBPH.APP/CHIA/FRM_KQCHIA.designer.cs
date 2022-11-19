@@ -34,6 +34,7 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.btn_SUADONG = new GD.BBPH.CONTROL.BUTTON();
             this.txt_SOMETRA = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_SOKGRA = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.label30 = new GD.BBPH.CONTROL.LABEL();
@@ -165,6 +166,7 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.btn_SUADONG);
             this.uiPanel1Container.Controls.Add(this.txt_SOMETRA);
             this.uiPanel1Container.Controls.Add(this.txt_SOKGRA);
             this.uiPanel1Container.Controls.Add(this.label30);
@@ -243,6 +245,20 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(926, 654);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // btn_SUADONG
+            // 
+            this.btn_SUADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_SUADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_SUADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_SUADONG.Enabled = false;
+            this.btn_SUADONG.Location = new System.Drawing.Point(219, 298);
+            this.btn_SUADONG.Name = "btn_SUADONG";
+            this.btn_SUADONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_SUADONG.TabIndex = 276;
+            this.btn_SUADONG.Text = "Sửa dòng";
+            this.btn_SUADONG.UseVisualStyleBackColor = true;
+            this.btn_SUADONG.Click += new System.EventHandler(this.btn_SUADONG_Click);
             // 
             // txt_SOMETRA
             // 
@@ -372,7 +388,7 @@
             this.txt_TOCDODINHMUC.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_TOCDODINHMUC.Giatrithapphan = 2;
             this.txt_TOCDODINHMUC.IsSoNguyen = false;
-            this.txt_TOCDODINHMUC.Location = new System.Drawing.Point(279, 301);
+            this.txt_TOCDODINHMUC.Location = new System.Drawing.Point(461, 299);
             this.txt_TOCDODINHMUC.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_TOCDODINHMUC.Name = "txt_TOCDODINHMUC";
             this.txt_TOCDODINHMUC.ReadOnly = true;
@@ -394,7 +410,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(214, 305);
+            this.label17.Location = new System.Drawing.Point(396, 303);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(62, 13);
             this.label17.TabIndex = 261;
@@ -589,7 +605,7 @@
             this.txt_TYLESAIHONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_TYLESAIHONG.Giatrithapphan = 2;
             this.txt_TYLESAIHONG.IsSoNguyen = false;
-            this.txt_TYLESAIHONG.Location = new System.Drawing.Point(461, 301);
+            this.txt_TYLESAIHONG.Location = new System.Drawing.Point(643, 299);
             this.txt_TYLESAIHONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_TYLESAIHONG.Name = "txt_TYLESAIHONG";
             this.txt_TYLESAIHONG.ReadOnly = true;
@@ -617,7 +633,7 @@
             this.txt_NANGSUAT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_NANGSUAT.Giatrithapphan = 2;
             this.txt_NANGSUAT.IsSoNguyen = false;
-            this.txt_NANGSUAT.Location = new System.Drawing.Point(642, 301);
+            this.txt_NANGSUAT.Location = new System.Drawing.Point(824, 299);
             this.txt_NANGSUAT.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_NANGSUAT.Name = "txt_NANGSUAT";
             this.txt_NANGSUAT.ReadOnly = true;
@@ -630,7 +646,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(583, 305);
+            this.label18.Location = new System.Drawing.Point(765, 303);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(56, 13);
             this.label18.TabIndex = 257;
@@ -653,7 +669,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(385, 305);
+            this.label27.Location = new System.Drawing.Point(567, 303);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(73, 13);
             this.label27.TabIndex = 254;
@@ -1237,5 +1253,6 @@
         private CONTROL.TEXTBOXNUMBER txt_SOKGRA;
         private CONTROL.LABEL label30;
         private CONTROL.LABEL label31;
+        private CONTROL.BUTTON btn_SUADONG;
     }
 }

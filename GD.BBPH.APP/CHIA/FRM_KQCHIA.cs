@@ -113,6 +113,7 @@ namespace GD.BBPH.APP.CHIA
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQCHIA.xml", GRID_KQCHIA, uiPanel0Container);
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KQCHIACHITIET.xml", GRID_KQCHIACHITIET, pne_CHITIET);
+            GRID_KQCHIACHITIET.DeletingRecord += GRID_KQCHIACHITIET_DeletingRecord;
             //GRID_KQCHIA.RootTable.Groups.Add(GRID_KQCHIA.Tables[0].Columns[KetquachiaFields.Phongban.Name]);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_KQCHIA);
@@ -342,12 +343,76 @@ namespace GD.BBPH.APP.CHIA
             }
             //Tinhtong();
         }
+        private void btn_SUADONG_Click(object sender, EventArgs e)
+        {
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Lenh.Name].Value = txt_LENH.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Macongnhan.Name].Value = txt_MACONGNHAN.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Tencongnhan.Name].Value = txt_TENCONGNHAN.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Masanpham.Name].Value = txt_MASANPHAM.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Tensanpham.Name].Value = txt_TENSANPHAM.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Mamay.Name].Value = txt_MAMAY.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Tenmay.Name].Value = txt_TENMAY.Text;
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Ca.Name].Value = LIB.ConvertString.NumbertoDB(txt_CA.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Sometvao.Name].Value = LIB.ConvertString.NumbertoDB(txt_SOMVAO.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Sokgvao.Name].Value = LIB.ConvertString.NumbertoDB(txt_SOKGVAO.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Dauraghep.Name].Value = LIB.ConvertString.NumbertoDB(txt_DAURAGHEP.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Thoigiancatdau.Name].Value = LIB.ConvertString.NumbertoDB(txt_THOIGIANCATDAU.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Thoigiandoilenh.Name].Value = LIB.ConvertString.NumbertoDB(txt_THOIGIANDOILENH.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Solanhacuon.Name].Value = LIB.ConvertString.NumbertoDB(txt_SOLANHACUON.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Thoigianlencuon.Name].Value = LIB.ConvertString.NumbertoDB(txt_THOIGIANLENCUON.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Thoigianhacuon.Name].Value = LIB.ConvertString.NumbertoDB(txt_THOIGIANHACUON.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Thoigiansuco.Name].Value = LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Phein.Name].Value = LIB.ConvertString.NumbertoDB(txt_PHEIN.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Pheghep.Name].Value = LIB.ConvertString.NumbertoDB(txt_PHEGHEP.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Phechia.Name].Value = LIB.ConvertString.NumbertoDB(txt_PHECHIA.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.PhethoiNcc.Name].Value = LIB.ConvertString.NumbertoDB(txt_PHETHOI.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Phesx.Name].Value = LIB.ConvertString.NumbertoDB(txt_PHESANXUAT.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Nangsuat.Name].Value = LIB.ConvertString.NumbertoDB(txt_NANGSUAT.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Tylesaihong.Name].Value = LIB.ConvertString.NumbertoDB(txt_TYLESAIHONG.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Socuon.Name].Value = LIB.ConvertString.NumbertoDB(txt_SOCUON.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Sometra.Name].Value = System.Decimal.Parse(txt_SOMETRA.Text.Trim()); }
+            catch { }
+            try { GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Sokgra.Name].Value = System.Decimal.Parse(txt_SOKGRA.Text.Trim()); }
+            catch { }
+
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Thoigianbatdau.Name].Value = txt_THOIGIANBATDAU.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Thoigianketthuc.Name].Value = txt_THOIGIANKETTHUC.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Tocdodinhmuc.Name].Value = LIB.ConvertString.NumbertoDB(txt_TOCDODINHMUC.Text.Trim());
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Matruongca.Name].Value = txt_MATRUONGCA.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Tentruongca.Name].Value = txt_TENTRUONGCA.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Lydosuco.Name].Value = txt_LYDOSUCO.Text.Trim();
+        }
+
+        private void GRID_KQCHIACHITIET_DeletingRecord(object sender, RowActionCancelEventArgs e)
+        {
+            btn_XOADONG_Click(new object(), new EventArgs());
+        }
+
         #endregion
 
         private string Save_Data(string _str_MAHIEU_PK)
         {
             DateTime _ngayxuat = Convert.ToDateTime(txt_NGAY.Text.Trim());
 
+            GRID_KQCHIACHITIET.UpdateData();
             EntityCollection _KetquachiaEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_KQCHIACHITIET.GetDataRows();
             foreach (GridEXRow _grid in listGrid)
@@ -438,7 +503,7 @@ namespace GD.BBPH.APP.CHIA
             GRID_KQCHIA.CurrentRow.Cells[KetquachiaFields.Mamay.Name].Value = txt_MAMAY.Text.Trim();
 
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquachiaManager.Convert(_KetquachiaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_SUADONG.Enabled = false;
 
             return _str_MAHIEU_PK;
         }
@@ -457,7 +522,7 @@ namespace GD.BBPH.APP.CHIA
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY, txt_MATRUONGCA, txt_TENTRUONGCA, txt_TOCDODINHMUC }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             FUNCTION = GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI;
-            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_SUADONG.Enabled = true;
             GRID_KQCHIA.Enabled = false;
 
             //---tu dong dien tham so
@@ -470,7 +535,7 @@ namespace GD.BBPH.APP.CHIA
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 FUNCTION = GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA;
-                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = true;
+                btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_SUADONG.Enabled = true;
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENCONGNHAN, txt_TENSANPHAM, txt_TENMAY, txt_MATRUONGCA, txt_TENTRUONGCA, txt_TOCDODINHMUC }));
             }
             GRID_KQCHIACHITIET.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
@@ -479,7 +544,7 @@ namespace GD.BBPH.APP.CHIA
             GRID_KQCHIACHITIET.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
             GRID_KQCHIACHITIET.Enabled = true;
             GRID_KQCHIA.Enabled = false;
-            btn_XOADONG.Enabled = true;
+            btn_XOADONG.Enabled = btn_SUADONG.Enabled = true;
         }
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
@@ -490,7 +555,7 @@ namespace GD.BBPH.APP.CHIA
             BS_KQCHIA_CurrentChanged(new object(), new EventArgs());
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             FUNCTION = GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL;
-            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+            btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_SUADONG.Enabled = false;
             FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
             GRID_KQCHIA.Enabled = true;
             GRID_KQCHIACHITIET.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -524,7 +589,7 @@ namespace GD.BBPH.APP.CHIA
                     BS_KQCHIA_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
                     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KetquachiaManager.Convert(_KetquachiaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                    btn_THEMDONG.Enabled = btn_XOADONG.Enabled = false;
+                    btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_SUADONG.Enabled = false;
                 }
                 catch
                 {

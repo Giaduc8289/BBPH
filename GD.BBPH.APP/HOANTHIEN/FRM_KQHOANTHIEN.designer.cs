@@ -34,6 +34,7 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.btn_SUADONG = new GD.BBPH.CONTROL.BUTTON();
             this.txt_LYDOSUCO = new GD.BBPH.CONTROL.TEXTBOX();
             this.label8 = new GD.BBPH.CONTROL.LABEL();
             this.txt_TOCDODINHMUC = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
@@ -124,7 +125,7 @@
             // 
             this.uiPanelManager1.BeginPanelInfo();
             this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(448, 541), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(738, 541), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(926, 541), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -155,12 +156,13 @@
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(451, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(738, 541);
+            this.uiPanel1.Size = new System.Drawing.Size(926, 541);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.btn_SUADONG);
             this.uiPanel1Container.Controls.Add(this.txt_LYDOSUCO);
             this.uiPanel1Container.Controls.Add(this.label8);
             this.uiPanel1Container.Controls.Add(this.txt_TOCDODINHMUC);
@@ -233,8 +235,22 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(736, 517);
+            this.uiPanel1Container.Size = new System.Drawing.Size(924, 517);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // btn_SUADONG
+            // 
+            this.btn_SUADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_SUADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_SUADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_SUADONG.Enabled = false;
+            this.btn_SUADONG.Location = new System.Drawing.Point(215, 282);
+            this.btn_SUADONG.Name = "btn_SUADONG";
+            this.btn_SUADONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_SUADONG.TabIndex = 273;
+            this.btn_SUADONG.Text = "Sửa dòng";
+            this.btn_SUADONG.UseVisualStyleBackColor = true;
+            this.btn_SUADONG.Click += new System.EventHandler(this.btn_SUADONG_Click);
             // 
             // txt_LYDOSUCO
             // 
@@ -266,7 +282,7 @@
             this.txt_TOCDODINHMUC.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_TOCDODINHMUC.Giatrithapphan = 2;
             this.txt_TOCDODINHMUC.IsSoNguyen = false;
-            this.txt_TOCDODINHMUC.Location = new System.Drawing.Point(278, 283);
+            this.txt_TOCDODINHMUC.Location = new System.Drawing.Point(461, 283);
             this.txt_TOCDODINHMUC.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_TOCDODINHMUC.Name = "txt_TOCDODINHMUC";
             this.txt_TOCDODINHMUC.ReadOnly = true;
@@ -279,7 +295,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(215, 287);
+            this.label17.Location = new System.Drawing.Point(398, 287);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(62, 13);
             this.label17.TabIndex = 267;
@@ -541,7 +557,7 @@
             this.txt_CHATLUONGTUI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_CHATLUONGTUI.Giatrithapphan = 2;
             this.txt_CHATLUONGTUI.IsSoNguyen = false;
-            this.txt_CHATLUONGTUI.Location = new System.Drawing.Point(461, 283);
+            this.txt_CHATLUONGTUI.Location = new System.Drawing.Point(644, 283);
             this.txt_CHATLUONGTUI.Name = "txt_CHATLUONGTUI";
             this.txt_CHATLUONGTUI.ReadOnly = true;
             this.txt_CHATLUONGTUI.Regular_Expression = "";
@@ -556,7 +572,7 @@
             this.txt_NANGSUAT.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_NANGSUAT.Giatrithapphan = 2;
             this.txt_NANGSUAT.IsSoNguyen = false;
-            this.txt_NANGSUAT.Location = new System.Drawing.Point(645, 283);
+            this.txt_NANGSUAT.Location = new System.Drawing.Point(828, 283);
             this.txt_NANGSUAT.Name = "txt_NANGSUAT";
             this.txt_NANGSUAT.ReadOnly = true;
             this.txt_NANGSUAT.Regular_Expression = "";
@@ -633,7 +649,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(587, 287);
+            this.label30.Location = new System.Drawing.Point(770, 287);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(56, 13);
             this.label30.TabIndex = 262;
@@ -723,7 +739,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(402, 287);
+            this.label18.Location = new System.Drawing.Point(585, 287);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(58, 13);
             this.label18.TabIndex = 253;
@@ -737,7 +753,7 @@
             this.label16.Location = new System.Drawing.Point(0, 68);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(734, 2);
+            this.label16.Size = new System.Drawing.Size(922, 2);
             this.label16.TabIndex = 249;
             // 
             // label26
@@ -833,7 +849,7 @@
             this.pne_CHITIET.Location = new System.Drawing.Point(11, 318);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(715, 137);
+            this.pne_CHITIET.Size = new System.Drawing.Size(903, 137);
             this.pne_CHITIET.TabIndex = 30;
             // 
             // label9
@@ -1077,7 +1093,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 547);
+            this.ClientSize = new System.Drawing.Size(1380, 547);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -1172,5 +1188,6 @@
         private CONTROL.LABEL label17;
         private CONTROL.TEXTBOX txt_LYDOSUCO;
         private CONTROL.LABEL label8;
+        private CONTROL.BUTTON btn_SUADONG;
     }
 }
