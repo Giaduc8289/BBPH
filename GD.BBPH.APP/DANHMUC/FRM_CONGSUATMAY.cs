@@ -150,6 +150,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_SOMAUMAS.Text = _Rowview.Row[CongsuatmayFields.Somaumas.Name].ToString();
                     txt_SOHINHMAS.Text = _Rowview.Row[CongsuatmayFields.Sohinhmas.Name].ToString();
                     txt_MALOAIMANGS1.Text = _Rowview.Row[CongsuatmayFields.Maloaimangs1.Name].ToString();
+                    txt_MALOAIMANGS2.Text = _Rowview.Row[CongsuatmayFields.Maloaimangs2.Name].ToString();
                     txt_MAQCTHANHPHAMS.Text = _Rowview.Row[CongsuatmayFields.Maqcthanhphams.Name].ToString();
                     txt_TOCDO.Text = _Rowview.Row[CongsuatmayFields.Tocdo.Name].ToString();
                     txt_MAKHACHS.Text = _Rowview.Row[CongsuatmayFields.Makhachs.Name].ToString();
@@ -212,6 +213,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_SOMAUMAS.Text = drCopy[0][CongsuatmayFields.Somaumas.Name].ToString();
                 txt_SOHINHMAS.Text = drCopy[0][CongsuatmayFields.Sohinhmas.Name].ToString();
                 txt_MALOAIMANGS1.Text = drCopy[0][CongsuatmayFields.Maloaimangs1.Name].ToString();
+                txt_MALOAIMANGS2.Text = drCopy[0][CongsuatmayFields.Maloaimangs2.Name].ToString();
                 txt_MAQCTHANHPHAMS.Text = drCopy[0][CongsuatmayFields.Maqcthanhphams.Name].ToString();
                 txt_TOCDO.Text = drCopy[0][CongsuatmayFields.Tocdo.Name].ToString();
                 txt_MAKHACHS.Text = drCopy[0][CongsuatmayFields.Makhachs.Name].ToString();
@@ -319,6 +321,7 @@ namespace GD.BBPH.APP.DANHMUC
             _CongsuatmayEntity.Somaumas = txt_SOMAUMAS.Text.Trim();
             _CongsuatmayEntity.Sohinhmas = txt_SOHINHMAS.Text.Trim();
             _CongsuatmayEntity.Maloaimangs1 = txt_MALOAIMANGS1.Text.Trim();
+            _CongsuatmayEntity.Maloaimangs2 = txt_MALOAIMANGS2.Text.Trim();
             _CongsuatmayEntity.Maqcthanhphams = txt_MAQCTHANHPHAMS.Text.Trim();
             _CongsuatmayEntity.Tocdo = LIB.ConvertString.NumbertoDB(txt_TOCDO.Text.Trim());
             _CongsuatmayEntity.Makhachs = txt_MAKHACHS.Text.Trim();
@@ -351,6 +354,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Somaumas.Name].Value = _CongsuatmayEntity.Somaumas;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Sohinhmas.Name].Value = _CongsuatmayEntity.Sohinhmas;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maloaimangs1.Name].Value = _CongsuatmayEntity.Maloaimangs1;
+                GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maloaimangs2.Name].Value = _CongsuatmayEntity.Maloaimangs2;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maqcthanhphams.Name].Value = _CongsuatmayEntity.Maqcthanhphams;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Tocdo.Name].Value = _CongsuatmayEntity.Tocdo;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Makhachs.Name].Value = _CongsuatmayEntity.Makhachs;
