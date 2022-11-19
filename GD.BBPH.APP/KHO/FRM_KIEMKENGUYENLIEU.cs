@@ -270,6 +270,7 @@ namespace GD.BBPH.APP.KHO
             String _kho = txt_MAKHO.Text.Trim();
             String _tenkho = txt_TENKHO.Text.Trim();
 
+            GRID_SODUNGUYENLIEU_CHITIET.UpdateData();
             EntityCollection _SodunguyenlieuEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_SODUNGUYENLIEU_CHITIET.GetDataRows();
             foreach (GridEXRow _grid in listGrid)

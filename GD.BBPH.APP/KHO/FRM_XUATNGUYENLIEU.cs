@@ -280,6 +280,7 @@ namespace GD.BBPH.APP.KHO
         {
             DateTime _ngayxuat = Convert.ToDateTime(txt_NGAY.Text.Trim());
 
+            GRID_XUATNGUYENLIEUCHITIET.UpdateData();
             EntityCollection _XuatkhonguyenlieuEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_XUATNGUYENLIEUCHITIET.GetDataRows();
             foreach (GridEXRow _grid in listGrid)

@@ -284,6 +284,7 @@ namespace GD.BBPH.APP.KHO
         {
             DateTime _ngaynhap = Convert.ToDateTime(txt_NGAY.Text.Trim());
 
+            GRID_NHAPMANGCHITIET.UpdateData();
             EntityCollection _NhapkhomangEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_NHAPMANGCHITIET.GetDataRows();
             foreach (GridEXRow _grid in listGrid)
