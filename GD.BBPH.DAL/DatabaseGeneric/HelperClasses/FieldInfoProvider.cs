@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 18, 2022 8:51:43 AM
+// Code is generated on: Saturday, November 19, 2022 7:55:25 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -180,7 +180,6 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("CongsuatmayEntity", "Macongdoans", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Macongdoans, 2147483647, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Somaumas", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Somaumas, 2147483647, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Sohinhmas", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Sohinhmas, 2147483647, 0, 0);
-			base.AddElementFieldInfo("CongsuatmayEntity", "Maloaimangs", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Maloaimangs, 2147483647, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Maqcthanhphams", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Maqcthanhphams, 2147483647, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Makhachs", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Makhachs, 2147483647, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Mahangs", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Mahangs, 2147483647, 0, 0);
@@ -189,6 +188,8 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("CongsuatmayEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)CongsuatmayFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("CongsuatmayEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Nguoisua, 50, 0, 0);
+			base.AddElementFieldInfo("CongsuatmayEntity", "Maloaimangs2", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Maloaimangs2, 2147483647, 0, 0);
+			base.AddElementFieldInfo("CongsuatmayEntity", "Maloaimangs1", typeof(System.String), false, false, false, true,  (int)CongsuatmayFieldIndex.Maloaimangs1, 2147483647, 0, 0);
 		}
 		/// <summary>Inits CtptmangDEntity's FieldInfo objects</summary>
 		private void InitCtptmangDEntityInfos()

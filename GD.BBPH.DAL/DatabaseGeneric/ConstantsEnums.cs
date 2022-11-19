@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 18, 2022 8:51:43 AM
+// Code is generated on: Saturday, November 19, 2022 7:55:25 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -133,8 +133,6 @@ namespace GD.BBPH.DAL
 		Somaumas,
 		///<summary>Sohinhmas. </summary>
 		Sohinhmas,
-		///<summary>Maloaimangs. </summary>
-		Maloaimangs,
 		///<summary>Maqcthanhphams. </summary>
 		Maqcthanhphams,
 		///<summary>Makhachs. </summary>
@@ -151,6 +149,10 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Maloaimangs2. </summary>
+		Maloaimangs2,
+		///<summary>Maloaimangs1. </summary>
+		Maloaimangs1,
 		/// <summary></summary>
 		AmountOfFields
 	}

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 18, 2022 8:51:45 AM
+// Code is generated on: Saturday, November 19, 2022 7:55:26 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -267,11 +267,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Sohinhmas);}
 		}
-		/// <summary>Creates a new CongsuatmayEntity.Maloaimangs field instance</summary>
-		public static EntityField2 Maloaimangs
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Maloaimangs);}
-		}
 		/// <summary>Creates a new CongsuatmayEntity.Maqcthanhphams field instance</summary>
 		public static EntityField2 Maqcthanhphams
 		{
@@ -311,6 +306,16 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Nguoisua);}
+		}
+		/// <summary>Creates a new CongsuatmayEntity.Maloaimangs2 field instance</summary>
+		public static EntityField2 Maloaimangs2
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Maloaimangs2);}
+		}
+		/// <summary>Creates a new CongsuatmayEntity.Maloaimangs1 field instance</summary>
+		public static EntityField2 Maloaimangs1
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(CongsuatmayFieldIndex.Maloaimangs1);}
 		}
 	}
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 18, 2022 8:51:45 AM
+// Code is generated on: Saturday, November 19, 2022 7:55:26 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -469,9 +469,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Sohinhmas", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Maloaimangs", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Maqcthanhphams", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -494,6 +491,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maloaimangs2", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Maloaimangs1", fieldHashtable);
 		}
 		#endregion
 
@@ -691,17 +694,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)CongsuatmayFieldIndex.Sohinhmas, value); }
 		}
 
-		/// <summary> The Maloaimangs property of the Entity Congsuatmay<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "congsuatmay"."Maloaimangs"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Maloaimangs
-		{
-			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maloaimangs, true); }
-			set	{ SetValue((int)CongsuatmayFieldIndex.Maloaimangs, value); }
-		}
-
 		/// <summary> The Maqcthanhphams property of the Entity Congsuatmay<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "congsuatmay"."Maqcthanhphams"<br/>
@@ -788,6 +780,28 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)CongsuatmayFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Maloaimangs2 property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Maloaimangs2"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maloaimangs2
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maloaimangs2, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Maloaimangs2, value); }
+		}
+
+		/// <summary> The Maloaimangs1 property of the Entity Congsuatmay<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "congsuatmay"."Maloaimangs1"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Maloaimangs1
+		{
+			get { return (System.String)GetValue((int)CongsuatmayFieldIndex.Maloaimangs1, true); }
+			set	{ SetValue((int)CongsuatmayFieldIndex.Maloaimangs1, value); }
 		}
 
 

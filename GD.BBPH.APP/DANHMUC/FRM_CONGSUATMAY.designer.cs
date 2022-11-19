@@ -34,6 +34,9 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.btn_CHONLOAIMANG2 = new GD.BBPH.CONTROL.BUTTON();
+            this.label3 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_MALOAIMANGS2 = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_DODAYTU = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_DODAYDEN = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_KHOTU = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
@@ -51,7 +54,7 @@
             this.btn_SAOCHEP = new GD.BBPH.CONTROL.BUTTON();
             this.txt_TOCDO = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.btn_CHONQCTHANHPHAM = new GD.BBPH.CONTROL.BUTTON();
-            this.btn_CHONLOAIMANG = new GD.BBPH.CONTROL.BUTTON();
+            this.btn_CHONLOAIMANG1 = new GD.BBPH.CONTROL.BUTTON();
             this.btn_CHONSOHINH = new GD.BBPH.CONTROL.BUTTON();
             this.btn_CHONSOMAU = new GD.BBPH.CONTROL.BUTTON();
             this.label15 = new GD.BBPH.CONTROL.LABEL();
@@ -67,7 +70,7 @@
             this.label4 = new GD.BBPH.CONTROL.LABEL();
             this.label2 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAQCTHANHPHAMS = new GD.BBPH.CONTROL.TEXTBOX();
-            this.txt_MALOAIMANGS = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_MALOAIMANGS1 = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_SOHINHMAS = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_SOMAUMAS = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MACONGDOANS = new GD.BBPH.CONTROL.TEXTBOX();
@@ -114,7 +117,7 @@
             this.uiPanel0.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
-            this.uiPanel0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiPanel0.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel0.Name = "uiPanel0";
             this.uiPanel0.Size = new System.Drawing.Size(1096, 760);
             this.uiPanel0.TabIndex = 4;
@@ -124,7 +127,7 @@
             // uiPanel0Container
             // 
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
-            this.uiPanel0Container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiPanel0Container.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel0Container.Name = "uiPanel0Container";
             this.uiPanel0Container.Size = new System.Drawing.Size(1090, 736);
             this.uiPanel0Container.TabIndex = 0;
@@ -135,7 +138,7 @@
             this.uiPanel1.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
             this.uiPanel1.Location = new System.Drawing.Point(1099, 3);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.Size = new System.Drawing.Size(810, 760);
             this.uiPanel1.TabIndex = 4;
@@ -143,6 +146,9 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.btn_CHONLOAIMANG2);
+            this.uiPanel1Container.Controls.Add(this.label3);
+            this.uiPanel1Container.Controls.Add(this.txt_MALOAIMANGS2);
             this.uiPanel1Container.Controls.Add(this.txt_DODAYTU);
             this.uiPanel1Container.Controls.Add(this.txt_DODAYDEN);
             this.uiPanel1Container.Controls.Add(this.txt_KHOTU);
@@ -160,7 +166,7 @@
             this.uiPanel1Container.Controls.Add(this.btn_SAOCHEP);
             this.uiPanel1Container.Controls.Add(this.txt_TOCDO);
             this.uiPanel1Container.Controls.Add(this.btn_CHONQCTHANHPHAM);
-            this.uiPanel1Container.Controls.Add(this.btn_CHONLOAIMANG);
+            this.uiPanel1Container.Controls.Add(this.btn_CHONLOAIMANG1);
             this.uiPanel1Container.Controls.Add(this.btn_CHONSOHINH);
             this.uiPanel1Container.Controls.Add(this.btn_CHONSOMAU);
             this.uiPanel1Container.Controls.Add(this.label15);
@@ -176,7 +182,7 @@
             this.uiPanel1Container.Controls.Add(this.label4);
             this.uiPanel1Container.Controls.Add(this.label2);
             this.uiPanel1Container.Controls.Add(this.txt_MAQCTHANHPHAMS);
-            this.uiPanel1Container.Controls.Add(this.txt_MALOAIMANGS);
+            this.uiPanel1Container.Controls.Add(this.txt_MALOAIMANGS1);
             this.uiPanel1Container.Controls.Add(this.txt_SOHINHMAS);
             this.uiPanel1Container.Controls.Add(this.txt_SOMAUMAS);
             this.uiPanel1Container.Controls.Add(this.txt_MACONGDOANS);
@@ -193,10 +199,49 @@
             this.uiPanel1Container.Controls.Add(this.txt_MACONGSUAT);
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
-            this.uiPanel1Container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiPanel1Container.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(808, 736);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // btn_CHONLOAIMANG2
+            // 
+            this.btn_CHONLOAIMANG2.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_CHONLOAIMANG2.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_CHONLOAIMANG2.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_CHONLOAIMANG2.Location = new System.Drawing.Point(683, 350);
+            this.btn_CHONLOAIMANG2.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_CHONLOAIMANG2.Name = "btn_CHONLOAIMANG2";
+            this.btn_CHONLOAIMANG2.Size = new System.Drawing.Size(107, 28);
+            this.btn_CHONLOAIMANG2.TabIndex = 18;
+            this.btn_CHONLOAIMANG2.Text = "Chọn LM 2";
+            this.btn_CHONLOAIMANG2.UseVisualStyleBackColor = true;
+            this.btn_CHONLOAIMANG2.Click += new System.EventHandler(this.btn_CHONLOAIMANG2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 352);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 17);
+            this.label3.TabIndex = 183;
+            this.label3.Text = "Loại màng 2";
+            // 
+            // txt_MALOAIMANGS2
+            // 
+            this.txt_MALOAIMANGS2.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MALOAIMANGS2.BannerText = null;
+            this.txt_MALOAIMANGS2.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_MALOAIMANGS2.FormNametoShow = "";
+            this.txt_MALOAIMANGS2.Is_DateTime = false;
+            this.txt_MALOAIMANGS2.IsShowForm = false;
+            this.txt_MALOAIMANGS2.Location = new System.Drawing.Point(123, 352);
+            this.txt_MALOAIMANGS2.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MALOAIMANGS2.Name = "txt_MALOAIMANGS2";
+            this.txt_MALOAIMANGS2.Regular_Expression = null;
+            this.txt_MALOAIMANGS2.Size = new System.Drawing.Size(543, 22);
+            this.txt_MALOAIMANGS2.TabIndex = 19;
             // 
             // txt_DODAYTU
             // 
@@ -294,10 +339,10 @@
             this.btn_CHONCONGDOAN.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_CHONCONGDOAN.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
             this.btn_CHONCONGDOAN.Location = new System.Drawing.Point(683, 118);
-            this.btn_CHONCONGDOAN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CHONCONGDOAN.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CHONCONGDOAN.Name = "btn_CHONCONGDOAN";
             this.btn_CHONCONGDOAN.Size = new System.Drawing.Size(107, 28);
-            this.btn_CHONCONGDOAN.TabIndex = 5;
+            this.btn_CHONCONGDOAN.TabIndex = 4;
             this.btn_CHONCONGDOAN.Text = "Chọn CĐ";
             this.btn_CHONCONGDOAN.UseVisualStyleBackColor = true;
             this.btn_CHONCONGDOAN.Click += new System.EventHandler(this.btn_CHONCONGDOAN_Click);
@@ -308,10 +353,10 @@
             this.btn_CHONMAY.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_CHONMAY.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
             this.btn_CHONMAY.Location = new System.Drawing.Point(683, 84);
-            this.btn_CHONMAY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CHONMAY.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CHONMAY.Name = "btn_CHONMAY";
             this.btn_CHONMAY.Size = new System.Drawing.Size(107, 28);
-            this.btn_CHONMAY.TabIndex = 3;
+            this.btn_CHONMAY.TabIndex = 2;
             this.btn_CHONMAY.Text = "Chọn máy";
             this.btn_CHONMAY.UseVisualStyleBackColor = true;
             this.btn_CHONMAY.Click += new System.EventHandler(this.btn_CHONMAY_Click);
@@ -322,7 +367,7 @@
             this.btn_CHONSANPHAM.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_CHONSANPHAM.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
             this.btn_CHONSANPHAM.Location = new System.Drawing.Point(683, 550);
-            this.btn_CHONSANPHAM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CHONSANPHAM.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CHONSANPHAM.Name = "btn_CHONSANPHAM";
             this.btn_CHONSANPHAM.Size = new System.Drawing.Size(107, 28);
             this.btn_CHONSANPHAM.TabIndex = 26;
@@ -349,11 +394,11 @@
             this.txt_MAHANGS.Is_DateTime = false;
             this.txt_MAHANGS.IsShowForm = false;
             this.txt_MAHANGS.Location = new System.Drawing.Point(123, 551);
-            this.txt_MAHANGS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MAHANGS.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MAHANGS.Multiline = true;
             this.txt_MAHANGS.Name = "txt_MAHANGS";
             this.txt_MAHANGS.Regular_Expression = null;
-            this.txt_MAHANGS.Size = new System.Drawing.Size(543, 84);
+            this.txt_MAHANGS.Size = new System.Drawing.Size(543, 66);
             this.txt_MAHANGS.TabIndex = 27;
             // 
             // btn_CHONKHACH
@@ -361,8 +406,8 @@
             this.btn_CHONKHACH.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_CHONKHACH.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_CHONKHACH.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_CHONKHACH.Location = new System.Drawing.Point(683, 450);
-            this.btn_CHONKHACH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CHONKHACH.Location = new System.Drawing.Point(683, 469);
+            this.btn_CHONKHACH.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CHONKHACH.Name = "btn_CHONKHACH";
             this.btn_CHONKHACH.Size = new System.Drawing.Size(107, 28);
             this.btn_CHONKHACH.TabIndex = 24;
@@ -373,7 +418,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(20, 451);
+            this.label14.Location = new System.Drawing.Point(20, 470);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(84, 17);
@@ -388,12 +433,12 @@
             this.txt_MAKHACHS.FormNametoShow = "";
             this.txt_MAKHACHS.Is_DateTime = false;
             this.txt_MAKHACHS.IsShowForm = false;
-            this.txt_MAKHACHS.Location = new System.Drawing.Point(123, 451);
-            this.txt_MAKHACHS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MAKHACHS.Location = new System.Drawing.Point(123, 470);
+            this.txt_MAKHACHS.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MAKHACHS.Multiline = true;
             this.txt_MAKHACHS.Name = "txt_MAKHACHS";
             this.txt_MAKHACHS.Regular_Expression = null;
-            this.txt_MAKHACHS.Size = new System.Drawing.Size(543, 84);
+            this.txt_MAKHACHS.Size = new System.Drawing.Size(543, 66);
             this.txt_MAKHACHS.TabIndex = 25;
             // 
             // btn_SAOCHEP
@@ -403,8 +448,8 @@
             this.btn_SAOCHEP.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SAOCHEP.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
             this.btn_SAOCHEP.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_SAOCHEP.Location = new System.Drawing.Point(579, 696);
-            this.btn_SAOCHEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_SAOCHEP.Location = new System.Drawing.Point(579, 676);
+            this.btn_SAOCHEP.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SAOCHEP.Name = "btn_SAOCHEP";
             this.btn_SAOCHEP.Size = new System.Drawing.Size(100, 28);
             this.btn_SAOCHEP.TabIndex = 34;
@@ -419,7 +464,7 @@
             this.txt_TOCDO.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_TOCDO.Giatrithapphan = 2;
             this.txt_TOCDO.IsSoNguyen = false;
-            this.txt_TOCDO.Location = new System.Drawing.Point(123, 652);
+            this.txt_TOCDO.Location = new System.Drawing.Point(123, 632);
             this.txt_TOCDO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_TOCDO.Name = "txt_TOCDO";
             this.txt_TOCDO.Regular_Expression = "";
@@ -432,8 +477,8 @@
             this.btn_CHONQCTHANHPHAM.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_CHONQCTHANHPHAM.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_CHONQCTHANHPHAM.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_CHONQCTHANHPHAM.Location = new System.Drawing.Point(683, 347);
-            this.btn_CHONQCTHANHPHAM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CHONQCTHANHPHAM.Location = new System.Drawing.Point(683, 386);
+            this.btn_CHONQCTHANHPHAM.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CHONQCTHANHPHAM.Name = "btn_CHONQCTHANHPHAM";
             this.btn_CHONQCTHANHPHAM.Size = new System.Drawing.Size(107, 28);
             this.btn_CHONQCTHANHPHAM.TabIndex = 22;
@@ -441,19 +486,19 @@
             this.btn_CHONQCTHANHPHAM.UseVisualStyleBackColor = true;
             this.btn_CHONQCTHANHPHAM.Click += new System.EventHandler(this.btn_CHONQCTHANHPHAM_Click);
             // 
-            // btn_CHONLOAIMANG
+            // btn_CHONLOAIMANG1
             // 
-            this.btn_CHONLOAIMANG.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.btn_CHONLOAIMANG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
-            this.btn_CHONLOAIMANG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_CHONLOAIMANG.Location = new System.Drawing.Point(683, 313);
-            this.btn_CHONLOAIMANG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_CHONLOAIMANG.Name = "btn_CHONLOAIMANG";
-            this.btn_CHONLOAIMANG.Size = new System.Drawing.Size(107, 28);
-            this.btn_CHONLOAIMANG.TabIndex = 20;
-            this.btn_CHONLOAIMANG.Text = "Chọn LM";
-            this.btn_CHONLOAIMANG.UseVisualStyleBackColor = true;
-            this.btn_CHONLOAIMANG.Click += new System.EventHandler(this.btn_CHONLOAIMANG_Click);
+            this.btn_CHONLOAIMANG1.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_CHONLOAIMANG1.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_CHONLOAIMANG1.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_CHONLOAIMANG1.Location = new System.Drawing.Point(683, 313);
+            this.btn_CHONLOAIMANG1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_CHONLOAIMANG1.Name = "btn_CHONLOAIMANG1";
+            this.btn_CHONLOAIMANG1.Size = new System.Drawing.Size(107, 28);
+            this.btn_CHONLOAIMANG1.TabIndex = 16;
+            this.btn_CHONLOAIMANG1.Text = "Chọn LM 1";
+            this.btn_CHONLOAIMANG1.UseVisualStyleBackColor = true;
+            this.btn_CHONLOAIMANG1.Click += new System.EventHandler(this.btn_CHONLOAIMANG1_Click);
             // 
             // btn_CHONSOHINH
             // 
@@ -461,10 +506,10 @@
             this.btn_CHONSOHINH.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_CHONSOHINH.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
             this.btn_CHONSOHINH.Location = new System.Drawing.Point(683, 278);
-            this.btn_CHONSOHINH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CHONSOHINH.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CHONSOHINH.Name = "btn_CHONSOHINH";
             this.btn_CHONSOHINH.Size = new System.Drawing.Size(107, 28);
-            this.btn_CHONSOHINH.TabIndex = 16;
+            this.btn_CHONSOHINH.TabIndex = 14;
             this.btn_CHONSOHINH.Text = "Chọn số hình";
             this.btn_CHONSOHINH.UseVisualStyleBackColor = true;
             this.btn_CHONSOHINH.Click += new System.EventHandler(this.btn_CHONSOHINH_Click);
@@ -475,10 +520,10 @@
             this.btn_CHONSOMAU.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_CHONSOMAU.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
             this.btn_CHONSOMAU.Location = new System.Drawing.Point(683, 242);
-            this.btn_CHONSOMAU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CHONSOMAU.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CHONSOMAU.Name = "btn_CHONSOMAU";
             this.btn_CHONSOMAU.Size = new System.Drawing.Size(107, 28);
-            this.btn_CHONSOMAU.TabIndex = 14;
+            this.btn_CHONSOMAU.TabIndex = 12;
             this.btn_CHONSOMAU.Text = "Chọn số màu";
             this.btn_CHONSOMAU.UseVisualStyleBackColor = true;
             this.btn_CHONSOMAU.Click += new System.EventHandler(this.btn_CHONSOMAU_Click);
@@ -486,7 +531,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(20, 350);
+            this.label15.Location = new System.Drawing.Point(20, 389);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(90, 17);
@@ -499,9 +544,9 @@
             this.label13.Location = new System.Drawing.Point(20, 315);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 17);
+            this.label13.Size = new System.Drawing.Size(86, 17);
             this.label13.TabIndex = 150;
-            this.label13.Text = "Loại màng";
+            this.label13.Text = "Loại màng 1";
             // 
             // label12
             // 
@@ -611,28 +656,28 @@
             this.txt_MAQCTHANHPHAMS.FormNametoShow = "";
             this.txt_MAQCTHANHPHAMS.Is_DateTime = false;
             this.txt_MAQCTHANHPHAMS.IsShowForm = false;
-            this.txt_MAQCTHANHPHAMS.Location = new System.Drawing.Point(123, 350);
-            this.txt_MAQCTHANHPHAMS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MAQCTHANHPHAMS.Location = new System.Drawing.Point(123, 389);
+            this.txt_MAQCTHANHPHAMS.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MAQCTHANHPHAMS.Multiline = true;
             this.txt_MAQCTHANHPHAMS.Name = "txt_MAQCTHANHPHAMS";
             this.txt_MAQCTHANHPHAMS.Regular_Expression = null;
-            this.txt_MAQCTHANHPHAMS.Size = new System.Drawing.Size(543, 84);
+            this.txt_MAQCTHANHPHAMS.Size = new System.Drawing.Size(543, 66);
             this.txt_MAQCTHANHPHAMS.TabIndex = 23;
             // 
-            // txt_MALOAIMANGS
+            // txt_MALOAIMANGS1
             // 
-            this.txt_MALOAIMANGS.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MALOAIMANGS.BannerText = null;
-            this.txt_MALOAIMANGS.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_MALOAIMANGS.FormNametoShow = "";
-            this.txt_MALOAIMANGS.Is_DateTime = false;
-            this.txt_MALOAIMANGS.IsShowForm = false;
-            this.txt_MALOAIMANGS.Location = new System.Drawing.Point(123, 315);
-            this.txt_MALOAIMANGS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_MALOAIMANGS.Name = "txt_MALOAIMANGS";
-            this.txt_MALOAIMANGS.Regular_Expression = null;
-            this.txt_MALOAIMANGS.Size = new System.Drawing.Size(543, 22);
-            this.txt_MALOAIMANGS.TabIndex = 21;
+            this.txt_MALOAIMANGS1.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MALOAIMANGS1.BannerText = null;
+            this.txt_MALOAIMANGS1.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_MALOAIMANGS1.FormNametoShow = "";
+            this.txt_MALOAIMANGS1.Is_DateTime = false;
+            this.txt_MALOAIMANGS1.IsShowForm = false;
+            this.txt_MALOAIMANGS1.Location = new System.Drawing.Point(123, 315);
+            this.txt_MALOAIMANGS1.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MALOAIMANGS1.Name = "txt_MALOAIMANGS1";
+            this.txt_MALOAIMANGS1.Regular_Expression = null;
+            this.txt_MALOAIMANGS1.Size = new System.Drawing.Size(543, 22);
+            this.txt_MALOAIMANGS1.TabIndex = 17;
             // 
             // txt_SOHINHMAS
             // 
@@ -643,11 +688,11 @@
             this.txt_SOHINHMAS.Is_DateTime = false;
             this.txt_SOHINHMAS.IsShowForm = false;
             this.txt_SOHINHMAS.Location = new System.Drawing.Point(123, 280);
-            this.txt_SOHINHMAS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SOHINHMAS.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SOHINHMAS.Name = "txt_SOHINHMAS";
             this.txt_SOHINHMAS.Regular_Expression = null;
             this.txt_SOHINHMAS.Size = new System.Drawing.Size(543, 22);
-            this.txt_SOHINHMAS.TabIndex = 17;
+            this.txt_SOHINHMAS.TabIndex = 15;
             // 
             // txt_SOMAUMAS
             // 
@@ -658,11 +703,11 @@
             this.txt_SOMAUMAS.Is_DateTime = false;
             this.txt_SOMAUMAS.IsShowForm = false;
             this.txt_SOMAUMAS.Location = new System.Drawing.Point(123, 247);
-            this.txt_SOMAUMAS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SOMAUMAS.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SOMAUMAS.Name = "txt_SOMAUMAS";
             this.txt_SOMAUMAS.Regular_Expression = null;
             this.txt_SOMAUMAS.Size = new System.Drawing.Size(543, 22);
-            this.txt_SOMAUMAS.TabIndex = 15;
+            this.txt_SOMAUMAS.TabIndex = 13;
             // 
             // txt_MACONGDOANS
             // 
@@ -673,11 +718,11 @@
             this.txt_MACONGDOANS.Is_DateTime = false;
             this.txt_MACONGDOANS.IsShowForm = false;
             this.txt_MACONGDOANS.Location = new System.Drawing.Point(123, 121);
-            this.txt_MACONGDOANS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MACONGDOANS.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MACONGDOANS.Name = "txt_MACONGDOANS";
             this.txt_MACONGDOANS.Regular_Expression = null;
             this.txt_MACONGDOANS.Size = new System.Drawing.Size(543, 22);
-            this.txt_MACONGDOANS.TabIndex = 4;
+            this.txt_MACONGDOANS.TabIndex = 5;
             this.txt_MACONGDOANS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MACONGDOAN_KeyDown);
             // 
             // txt_MAMAYS
@@ -689,17 +734,17 @@
             this.txt_MAMAYS.Is_DateTime = false;
             this.txt_MAMAYS.IsShowForm = false;
             this.txt_MAMAYS.Location = new System.Drawing.Point(123, 87);
-            this.txt_MAMAYS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MAMAYS.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MAMAYS.Name = "txt_MAMAYS";
             this.txt_MAMAYS.Regular_Expression = null;
             this.txt_MAMAYS.Size = new System.Drawing.Size(543, 22);
-            this.txt_MAMAYS.TabIndex = 2;
+            this.txt_MAMAYS.TabIndex = 3;
             this.txt_MAMAYS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAMAY_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 657);
+            this.label1.Location = new System.Drawing.Point(20, 637);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
@@ -711,8 +756,8 @@
             this.btn_Thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_Thoat.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(690, 696);
-            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Thoat.Location = new System.Drawing.Point(690, 676);
+            this.btn_Thoat.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(100, 28);
             this.btn_Thoat.TabIndex = 35;
@@ -725,8 +770,8 @@
             this.btn_KHOIPHUC.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_KHOIPHUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(246, 696);
-            this.btn_KHOIPHUC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(246, 676);
+            this.btn_KHOIPHUC.Margin = new System.Windows.Forms.Padding(4);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(100, 28);
             this.btn_KHOIPHUC.TabIndex = 31;
@@ -739,8 +784,8 @@
             this.btn_LUULAI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_LUULAI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(24, 696);
-            this.btn_LUULAI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_LUULAI.Location = new System.Drawing.Point(24, 676);
+            this.btn_LUULAI.Margin = new System.Windows.Forms.Padding(4);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(100, 28);
             this.btn_LUULAI.TabIndex = 29;
@@ -753,8 +798,8 @@
             this.btn_XOA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_XOA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(135, 696);
-            this.btn_XOA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_XOA.Location = new System.Drawing.Point(135, 676);
+            this.btn_XOA.Margin = new System.Windows.Forms.Padding(4);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(100, 28);
             this.btn_XOA.TabIndex = 30;
@@ -767,8 +812,8 @@
             this.btn_THEMMOI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_THEMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(468, 696);
-            this.btn_THEMMOI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(468, 676);
+            this.btn_THEMMOI.Margin = new System.Windows.Forms.Padding(4);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(100, 28);
             this.btn_THEMMOI.TabIndex = 33;
@@ -781,8 +826,8 @@
             this.btn_SUA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_SUA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(357, 696);
-            this.btn_SUA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_SUA.Location = new System.Drawing.Point(357, 676);
+            this.btn_SUA.Margin = new System.Windows.Forms.Padding(4);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(100, 28);
             this.btn_SUA.TabIndex = 32;
@@ -799,7 +844,7 @@
             this.txt_TENCONGSUAT.Is_DateTime = false;
             this.txt_TENCONGSUAT.IsShowForm = false;
             this.txt_TENCONGSUAT.Location = new System.Drawing.Point(123, 52);
-            this.txt_TENCONGSUAT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TENCONGSUAT.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TENCONGSUAT.Name = "txt_TENCONGSUAT";
             this.txt_TENCONGSUAT.Regular_Expression = null;
             this.txt_TENCONGSUAT.Size = new System.Drawing.Size(543, 22);
@@ -824,7 +869,7 @@
             this.txt_MACONGSUAT.Is_DateTime = false;
             this.txt_MACONGSUAT.IsShowForm = false;
             this.txt_MACONGSUAT.Location = new System.Drawing.Point(123, 21);
-            this.txt_MACONGSUAT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MACONGSUAT.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MACONGSUAT.Name = "txt_MACONGSUAT";
             this.txt_MACONGSUAT.Regular_Expression = null;
             this.txt_MACONGSUAT.Size = new System.Drawing.Size(144, 22);
@@ -847,7 +892,7 @@
             this.ClientSize = new System.Drawing.Size(1912, 766);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FRM_CONGSUATMAY";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_CONGSUATMAY_FormClosing);
@@ -883,7 +928,7 @@
         private CONTROL.TEXTBOX txt_MACONGDOANS;
         private CONTROL.TEXTBOX txt_MAMAYS;
         private CONTROL.TEXTBOX txt_SOMAUMAS;
-        private CONTROL.TEXTBOX txt_MALOAIMANGS;
+        private CONTROL.TEXTBOX txt_MALOAIMANGS1;
         private CONTROL.TEXTBOX txt_SOHINHMAS;
         private CONTROL.TEXTBOX txt_MAQCTHANHPHAMS;
         private CONTROL.LABEL label15;
@@ -899,7 +944,7 @@
         private CONTROL.LABEL label4;
         private CONTROL.LABEL label2;
         private CONTROL.BUTTON btn_CHONQCTHANHPHAM;
-        private CONTROL.BUTTON btn_CHONLOAIMANG;
+        private CONTROL.BUTTON btn_CHONLOAIMANG1;
         private CONTROL.BUTTON btn_CHONSOHINH;
         private CONTROL.BUTTON btn_CHONSOMAU;
         private CONTROL.TEXTBOXNUMBER txt_TOCDO;
@@ -918,5 +963,8 @@
         private CONTROL.TEXTBOXNUMBER txt_KHODEN;
         private CONTROL.TEXTBOXNUMBER txt_CHIEUDAITU;
         private CONTROL.TEXTBOXNUMBER txt_CHIEUDAIDEN;
+        private CONTROL.BUTTON btn_CHONLOAIMANG2;
+        private CONTROL.LABEL label3;
+        private CONTROL.TEXTBOX txt_MALOAIMANGS2;
     }
 }

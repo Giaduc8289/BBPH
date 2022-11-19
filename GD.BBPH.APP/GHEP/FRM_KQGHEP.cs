@@ -673,6 +673,7 @@ namespace GD.BBPH.APP.GHEP
         private void txt_MASANPHAM_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
+            txt_TENMANG.Text = txt_MAMANG.Text = txt_TENSANPHAM.Text = string.Empty;
             if (string.IsNullOrEmpty(txt_MASANPHAM.Text.Trim()) || DT_DMHANG == null || DT_DMHANG.Rows.Count == 0) return;
             string _str_MACANTIM = txt_MASANPHAM.Text.Trim().ToUpper();
             _RowViewSelect = checksanpham(_str_MACANTIM, DT_DMHANG);
@@ -688,7 +689,13 @@ namespace GD.BBPH.APP.GHEP
                 txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
 
                 DT_MANGCUAHANG = new MangcuahangManager().SelectMangghepByMaspRDT(txt_MASANPHAM.Text.Trim());
-                Tinhtocdodinhmuc();
+                //-----Tự động điền mã màng nếu chỉ tìm đc 1 màng ghép
+                if(DT_MANGCUAHANG.Rows.Count == 1)
+                {
+                    txt_MAMANG.Text = DT_MANGCUAHANG.Rows[0][MangcuahangFields.Mamang.Name].ToString();
+                    txt_MAMANG_Validating(new object(), new CancelEventArgs());
+                }
+
                 Tinhthoigianchuanbi();
             }
             else
@@ -696,7 +703,13 @@ namespace GD.BBPH.APP.GHEP
                 txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
 
                 DT_MANGCUAHANG = new MangcuahangManager().SelectMangghepByMaspRDT(txt_MASANPHAM.Text.Trim());
-                Tinhtocdodinhmuc();
+                //-----Tự động điền mã màng nếu chỉ tìm đc 1 màng ghép
+                if (DT_MANGCUAHANG.Rows.Count == 1)
+                {
+                    txt_MAMANG.Text = DT_MANGCUAHANG.Rows[0][MangcuahangFields.Mamang.Name].ToString();
+                    txt_MAMANG_Validating(new object(), new CancelEventArgs());
+                }
+
                 Tinhthoigianchuanbi();
             }
         }
@@ -725,10 +738,14 @@ namespace GD.BBPH.APP.GHEP
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_MAMANG.Text = _RowViewSelect[MangcuahangFields.Mamang.Name].ToString();
                 txt_TENMANG.Text = _RowViewSelect[MangcuahangFields.Tenmang.Name].ToString();
+
+                Tinhtocdodinhmuc();
             }
             else
             {
                 txt_TENMANG.Text = _RowViewSelect[MangcuahangFields.Tenmang.Name].ToString();
+
+                Tinhtocdodinhmuc();
             }
         }
         private DataRow checkmaMang(string macantim, DataTable dt)
@@ -812,7 +829,7 @@ namespace GD.BBPH.APP.GHEP
             {
                 decimal _timerun = 0, _tocdo = 0, _somet = 0, _nangsuat = 0;
                 _somet = LIB.ConvertString.NumbertoDB(txt_THUCTEMET.Text.Trim());
-                _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text);
+                _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text, txt_MAMANG.Text);
                 _timerun = Convert.ToDecimal((Convert.ToDateTime(txt_THOIGIANKETTHUC.Text) - Convert.ToDateTime(txt_THOIGIANBATDAU.Text)).TotalMinutes)
                     - LIB.ConvertString.NumbertoDB(txt_THOIGIANCHUANBI.Text.Trim()) - LIB.ConvertString.NumbertoDB(txt_THOIGIANSUCO.Text.Trim());
                 _nangsuat = _somet / _tocdo / _timerun * 100;
@@ -829,7 +846,7 @@ namespace GD.BBPH.APP.GHEP
         {
             try
             {
-                decimal _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text);
+                decimal _tocdo = LIB.Procedures.fTinhtocdomay(txt_MAMAY.Text, txt_MASANPHAM.Text, txt_MAMANG.Text);
                 txt_TOCDODINHMUC.Text = Math.Round(_tocdo).ToString();
             }
             catch { }

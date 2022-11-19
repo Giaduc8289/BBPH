@@ -2177,12 +2177,13 @@ namespace GD.BBPH.APP.LIB
         #endregion
 
         #region Hàm trả về giá trị
-        public static decimal fTinhtocdomay(string Mamay, string Masanpham)
+        public static decimal fTinhtocdomay(string Mamay, string Masanpham, string Mamang = "")
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
             ListDictionary parameters = new ListDictionary();
             parameters.Add(new SqlParameter("@Mamay", SqlDbType.NVarChar, 0), Mamay);
             parameters.Add(new SqlParameter("@Masanpham", SqlDbType.NVarChar, 0), Masanpham);
+            parameters.Add(new SqlParameter("@Mamang", SqlDbType.NVarChar, 0), Mamang);
 
             DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
             parameters.CopyTo(myArr, 0);

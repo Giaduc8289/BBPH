@@ -50,8 +50,6 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Sohinhmas="Sohinhmas";				
 		
-		public const String Field_Maloaimangs="Maloaimangs";				
-		
 		public const String Field_Maqcthanhphams="Maqcthanhphams";				
 		
 		public const String Field_Makhachs="Makhachs";				
@@ -67,6 +65,10 @@ namespace GD.BBPH.BLL
 		public const String Field_Ngaysua="Ngaysua";				
 		
 		public const String Field_Nguoisua="Nguoisua";				
+		
+		public const String Field_Maloaimangs2="Maloaimangs2";				
+		
+		public const String Field_Maloaimangs1="Maloaimangs1";				
 		
 				
 		#endregion	
@@ -107,8 +109,6 @@ namespace GD.BBPH.BLL
 			
 			dt.Columns.Add(Field_Sohinhmas,typeof(System.String));
 			
-			dt.Columns.Add(Field_Maloaimangs,typeof(System.String));
-			
 			dt.Columns.Add(Field_Maqcthanhphams,typeof(System.String));
 			
 			dt.Columns.Add(Field_Makhachs,typeof(System.String));
@@ -124,6 +124,10 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Ngaysua,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
+			
+			dt.Columns.Add(Field_Maloaimangs2,typeof(System.String));
+			
+			dt.Columns.Add(Field_Maloaimangs1,typeof(System.String));
 									
 		            
 			return dt;			
@@ -209,12 +213,6 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r[Field_Maloaimangs]=_CongsuatmayEntity.Maloaimangs;
-			}
-			catch { }
-			
-			try
-			{
 				r[Field_Maqcthanhphams]=_CongsuatmayEntity.Maqcthanhphams;
 			}
 			catch { }
@@ -258,6 +256,18 @@ namespace GD.BBPH.BLL
 			try
 			{
 				r[Field_Nguoisua]=_CongsuatmayEntity.Nguoisua;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Maloaimangs2]=_CongsuatmayEntity.Maloaimangs2;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Maloaimangs1]=_CongsuatmayEntity.Maloaimangs1;
 			}
 			catch { }
 									
@@ -341,12 +351,6 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_CongsuatmayEntity.Maloaimangs= r[Field_Maloaimangs].ToString();						
-			}
-			catch { }
-			
-			try
-			{
 				_CongsuatmayEntity.Maqcthanhphams= r[Field_Maqcthanhphams].ToString();						
 			}
 			catch { }
@@ -392,6 +396,18 @@ namespace GD.BBPH.BLL
 				_CongsuatmayEntity.Nguoisua= r[Field_Nguoisua].ToString();						
 			}
 			catch { }
+			
+			try
+			{
+				_CongsuatmayEntity.Maloaimangs2= r[Field_Maloaimangs2].ToString();						
+			}
+			catch { }
+			
+			try
+			{
+				_CongsuatmayEntity.Maloaimangs1= r[Field_Maloaimangs1].ToString();						
+			}
+			catch { }
 									
 									
 			return _CongsuatmayEntity;
@@ -425,8 +441,6 @@ namespace GD.BBPH.BLL
 			
 			_CongsuatmayEntity.Sohinhmas= _CongsuatmayEntity_XML.Sohinhmas;
 			
-			_CongsuatmayEntity.Maloaimangs= _CongsuatmayEntity_XML.Maloaimangs;
-			
 			_CongsuatmayEntity.Maqcthanhphams= _CongsuatmayEntity_XML.Maqcthanhphams;
 			
 			_CongsuatmayEntity.Makhachs= _CongsuatmayEntity_XML.Makhachs;
@@ -442,6 +456,10 @@ namespace GD.BBPH.BLL
 			_CongsuatmayEntity.Ngaysua= _CongsuatmayEntity_XML.Ngaysua;
 			
 			_CongsuatmayEntity.Nguoisua= _CongsuatmayEntity_XML.Nguoisua;
+			
+			_CongsuatmayEntity.Maloaimangs2= _CongsuatmayEntity_XML.Maloaimangs2;
+			
+			_CongsuatmayEntity.Maloaimangs1= _CongsuatmayEntity_XML.Maloaimangs1;
 									
 				
 			return _CongsuatmayEntity;
@@ -531,12 +549,6 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Maloaimangs,_CongsuatmayEntity.Maloaimangs);
-			}
-			catch { }
-			
-			try
-			{
 				r.SetField(Field_Maqcthanhphams,_CongsuatmayEntity.Maqcthanhphams);
 			}
 			catch { }
@@ -580,6 +592,18 @@ namespace GD.BBPH.BLL
 			try
 			{
 				r.SetField(Field_Nguoisua,_CongsuatmayEntity.Nguoisua);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Maloaimangs2,_CongsuatmayEntity.Maloaimangs2);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Maloaimangs1,_CongsuatmayEntity.Maloaimangs1);
 			}
 			catch { }
 									
@@ -666,12 +690,6 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Maloaimangs,_CongsuatmayEntity.Maloaimangs);
-			}
-			catch { }
-			
-			try
-			{
 				r.SetField(Field_Maqcthanhphams,_CongsuatmayEntity.Maqcthanhphams);
 			}
 			catch { }
@@ -717,6 +735,18 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_CongsuatmayEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Maloaimangs2,_CongsuatmayEntity.Maloaimangs2);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Maloaimangs1,_CongsuatmayEntity.Maloaimangs1);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -739,7 +769,7 @@ namespace GD.BBPH.BLL
 			return CongsuatmayEntity;
 		}
 
-		public CongsuatmayEntity Insert(System.String  Macongsuat, System.String  Tencongsuat, System.Decimal  Dodaytu, System.Decimal  Dodayden, System.Decimal  Khotu, System.Decimal  Khoden, System.Decimal  Chieudaitu, System.Decimal  Chieudaiden, System.String  Mamays, System.String  Macongdoans, System.String  Somaumas, System.String  Sohinhmas, System.String  Maloaimangs, System.String  Maqcthanhphams, System.String  Makhachs, System.String  Mahangs, System.Decimal  Tocdo, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public CongsuatmayEntity Insert(System.String  Macongsuat, System.String  Tencongsuat, System.Decimal  Dodaytu, System.Decimal  Dodayden, System.Decimal  Khotu, System.Decimal  Khoden, System.Decimal  Chieudaitu, System.Decimal  Chieudaiden, System.String  Mamays, System.String  Macongdoans, System.String  Somaumas, System.String  Sohinhmas, System.String  Maqcthanhphams, System.String  Makhachs, System.String  Mahangs, System.Decimal  Tocdo, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.String  Maloaimangs2, System.String  Maloaimangs1)
 		{
 			CongsuatmayEntity _CongsuatmayEntity = new CongsuatmayEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -769,8 +799,6 @@ namespace GD.BBPH.BLL
 				
 				_CongsuatmayEntity.Sohinhmas = Sohinhmas;
 				
-				_CongsuatmayEntity.Maloaimangs = Maloaimangs;
-				
 				_CongsuatmayEntity.Maqcthanhphams = Maqcthanhphams;
 				
 				_CongsuatmayEntity.Makhachs = Makhachs;
@@ -786,6 +814,10 @@ namespace GD.BBPH.BLL
 				_CongsuatmayEntity.Ngaysua = Ngaysua;
 				
 				_CongsuatmayEntity.Nguoisua = Nguoisua;
+				
+				_CongsuatmayEntity.Maloaimangs2 = Maloaimangs2;
+				
+				_CongsuatmayEntity.Maloaimangs1 = Maloaimangs1;
 					
 					
 				adapter.SaveEntity(_CongsuatmayEntity, true);
@@ -793,7 +825,7 @@ namespace GD.BBPH.BLL
 			return _CongsuatmayEntity;
 		}
 
-		public CongsuatmayEntity Insert(System.String Tencongsuat, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.String Mamays, System.String Macongdoans, System.String Somaumas, System.String Sohinhmas, System.String Maloaimangs, System.String Maqcthanhphams, System.String Makhachs, System.String Mahangs, System.Decimal Tocdo, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public CongsuatmayEntity Insert(System.String Tencongsuat, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.String Mamays, System.String Macongdoans, System.String Somaumas, System.String Sohinhmas, System.String Maqcthanhphams, System.String Makhachs, System.String Mahangs, System.Decimal Tocdo, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Maloaimangs2, System.String Maloaimangs1)//ko co mahieu
 		{
 			CongsuatmayEntity _CongsuatmayEntity = new CongsuatmayEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -822,8 +854,6 @@ namespace GD.BBPH.BLL
 				
 				_CongsuatmayEntity.Sohinhmas = Sohinhmas;
 				
-				_CongsuatmayEntity.Maloaimangs = Maloaimangs;
-				
 				_CongsuatmayEntity.Maqcthanhphams = Maqcthanhphams;
 				
 				_CongsuatmayEntity.Makhachs = Makhachs;
@@ -839,6 +869,10 @@ namespace GD.BBPH.BLL
 				_CongsuatmayEntity.Ngaysua = Ngaysua;
 				
 				_CongsuatmayEntity.Nguoisua = Nguoisua;
+				
+				_CongsuatmayEntity.Maloaimangs2 = Maloaimangs2;
+				
+				_CongsuatmayEntity.Maloaimangs1 = Maloaimangs1;
 					
 
 				adapter.SaveEntity(_CongsuatmayEntity, true);
@@ -876,7 +910,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Macongsuat, System.String Tencongsuat, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.String Mamays, System.String Macongdoans, System.String Somaumas, System.String Sohinhmas, System.String Maloaimangs, System.String Maqcthanhphams, System.String Makhachs, System.String Mahangs, System.Decimal Tocdo, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.String Macongsuat, System.String Tencongsuat, System.Decimal Dodaytu, System.Decimal Dodayden, System.Decimal Khotu, System.Decimal Khoden, System.Decimal Chieudaitu, System.Decimal Chieudaiden, System.String Mamays, System.String Macongdoans, System.String Somaumas, System.String Sohinhmas, System.String Maqcthanhphams, System.String Makhachs, System.String Mahangs, System.Decimal Tocdo, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.String Maloaimangs2, System.String Maloaimangs1)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -909,8 +943,6 @@ namespace GD.BBPH.BLL
 					
 					_CongsuatmayEntity.Sohinhmas = Sohinhmas;
 					
-					_CongsuatmayEntity.Maloaimangs = Maloaimangs;
-					
 					_CongsuatmayEntity.Maqcthanhphams = Maqcthanhphams;
 					
 					_CongsuatmayEntity.Makhachs = Makhachs;
@@ -926,6 +958,10 @@ namespace GD.BBPH.BLL
 					_CongsuatmayEntity.Ngaysua = Ngaysua;
 					
 					_CongsuatmayEntity.Nguoisua = Nguoisua;
+					
+					_CongsuatmayEntity.Maloaimangs2 = Maloaimangs2;
+					
+					_CongsuatmayEntity.Maloaimangs1 = Maloaimangs1;
 						
 
 					adapter.SaveEntity(_CongsuatmayEntity, true);
@@ -1152,22 +1188,6 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}		
 		
-		public int DeleteByMaloaimangs(System.String Maloaimangs)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs == Maloaimangs);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
-			}
-			return toReturn;
-		}		
-		
 		public int DeleteByMaqcthanhphams(System.String Maqcthanhphams)
 		{
 			int toReturn = 0;
@@ -1287,6 +1307,38 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(CongsuatmayFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByMaloaimangs2(System.String Maloaimangs2)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs2 == Maloaimangs2);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("CongsuatmayEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByMaloaimangs1(System.String Maloaimangs1)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs1 == Maloaimangs1);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1745,40 +1797,6 @@ namespace GD.BBPH.BLL
 		}
 		
 		// Return EntityCollection
-		public EntityCollection SelectByMaloaimangs(System.String Maloaimangs)
-		{
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs == Maloaimangs);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
-			}
-			return _CongsuatmayCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByMaloaimangsRDT(System.String Maloaimangs)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs == Maloaimangs);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
 		public EntityCollection SelectByMaqcthanhphams(System.String Maqcthanhphams)
 		{
 			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
@@ -2041,6 +2059,74 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(CongsuatmayFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByMaloaimangs2(System.String Maloaimangs2)
+		{
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs2 == Maloaimangs2);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
+			}
+			return _CongsuatmayCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByMaloaimangs2RDT(System.String Maloaimangs2)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs2 == Maloaimangs2);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_CongsuatmayCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByMaloaimangs1(System.String Maloaimangs1)
+		{
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs1 == Maloaimangs1);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_CongsuatmayCollection, filter, 0, null);
+			}
+			return _CongsuatmayCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByMaloaimangs1RDT(System.String Maloaimangs1)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _CongsuatmayCollection = new EntityCollection(new CongsuatmayEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(CongsuatmayFields.Maloaimangs1 == Maloaimangs1);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

@@ -121,7 +121,7 @@ namespace GD.BBPH.APP.DANHMUC
             BS_CONGSUATMAY.CurrentChanged += new EventHandler(BS_CONGSUATMAY_CurrentChanged);
             BS_CONGSUATMAY_CurrentChanged((new object()), (new EventArgs()));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
+            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  = btn_CHONLOAIMANG1.Enabled = btn_CHONLOAIMANG2.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             btn_THEMMOI.Focus();
         }
@@ -149,7 +149,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_CHIEUDAIDEN.Text = _Rowview.Row[CongsuatmayFields.Chieudaiden.Name].ToString();
                     txt_SOMAUMAS.Text = _Rowview.Row[CongsuatmayFields.Somaumas.Name].ToString();
                     txt_SOHINHMAS.Text = _Rowview.Row[CongsuatmayFields.Sohinhmas.Name].ToString();
-                    txt_MALOAIMANGS.Text = _Rowview.Row[CongsuatmayFields.Maloaimangs.Name].ToString();
+                    txt_MALOAIMANGS1.Text = _Rowview.Row[CongsuatmayFields.Maloaimangs1.Name].ToString();
                     txt_MAQCTHANHPHAMS.Text = _Rowview.Row[CongsuatmayFields.Maqcthanhphams.Name].ToString();
                     txt_TOCDO.Text = _Rowview.Row[CongsuatmayFields.Tocdo.Name].ToString();
                     txt_MAKHACHS.Text = _Rowview.Row[CongsuatmayFields.Makhachs.Name].ToString();
@@ -173,7 +173,7 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_CONGSUATMAY.Enabled = false;
-            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = true;
+            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  = btn_CHONLOAIMANG1.Enabled = btn_CHONLOAIMANG2.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = true;
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {
@@ -185,7 +185,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_TENCONGSUAT.Focus();
             }
             GRID_CONGSUATMAY.Enabled = false;
-            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = true;
+            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  = btn_CHONLOAIMANG1.Enabled = btn_CHONLOAIMANG2.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = true;
         }
         private void btn_SAOCHEP_Click(object sender, EventArgs e)
         {
@@ -211,7 +211,7 @@ namespace GD.BBPH.APP.DANHMUC
                 txt_CHIEUDAIDEN.Text = drCopy[0][CongsuatmayFields.Chieudaiden.Name].ToString();
                 txt_SOMAUMAS.Text = drCopy[0][CongsuatmayFields.Somaumas.Name].ToString();
                 txt_SOHINHMAS.Text = drCopy[0][CongsuatmayFields.Sohinhmas.Name].ToString();
-                txt_MALOAIMANGS.Text = drCopy[0][CongsuatmayFields.Maloaimangs.Name].ToString();
+                txt_MALOAIMANGS1.Text = drCopy[0][CongsuatmayFields.Maloaimangs1.Name].ToString();
                 txt_MAQCTHANHPHAMS.Text = drCopy[0][CongsuatmayFields.Maqcthanhphams.Name].ToString();
                 txt_TOCDO.Text = drCopy[0][CongsuatmayFields.Tocdo.Name].ToString();
                 txt_MAKHACHS.Text = drCopy[0][CongsuatmayFields.Makhachs.Name].ToString();
@@ -224,7 +224,7 @@ namespace GD.BBPH.APP.DANHMUC
                 BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
                 BBPH.BLL.MenuroleManager.set_Enable_controls(BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_CONGSUATMAY.Enabled = false;
-                btn_CHONSOMAU.Enabled = btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = btn_CHONSOHINH.Enabled = true;
+                btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled = btn_CHONLOAIMANG1.Enabled = btn_CHONLOAIMANG2.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = true;
             }
             catch { }
         }
@@ -238,7 +238,7 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
             GRID_CONGSUATMAY.Enabled = true;
-            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
+            btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  = btn_CHONLOAIMANG1.Enabled = btn_CHONLOAIMANG2.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
         }
         private void btn_XOA_Click(object sender, EventArgs e)
         {
@@ -257,7 +257,7 @@ namespace GD.BBPH.APP.DANHMUC
                     BS_CONGSUATMAY_CurrentChanged(new object(), new EventArgs());
                     GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
                     GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CongsuatmayManager.Convert(_CongsuatmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                    btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
+                    btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  = btn_CHONLOAIMANG1.Enabled = btn_CHONLOAIMANG2.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
                 }
                 catch
                 {
@@ -293,7 +293,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
                 GRID_CONGSUATMAY.Enabled = true;
                 btn_THEMMOI.Focus();
-                btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
+                btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  = btn_CHONLOAIMANG1.Enabled = btn_CHONLOAIMANG2.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
             }
         }
         private void btn_Thoat_Click(object sender, EventArgs e)
@@ -318,7 +318,7 @@ namespace GD.BBPH.APP.DANHMUC
             _CongsuatmayEntity.Dodayden = LIB.ConvertString.NumbertoDB(txt_DODAYDEN.Text.Trim());
             _CongsuatmayEntity.Somaumas = txt_SOMAUMAS.Text.Trim();
             _CongsuatmayEntity.Sohinhmas = txt_SOHINHMAS.Text.Trim();
-            _CongsuatmayEntity.Maloaimangs = txt_MALOAIMANGS.Text.Trim();
+            _CongsuatmayEntity.Maloaimangs1 = txt_MALOAIMANGS1.Text.Trim();
             _CongsuatmayEntity.Maqcthanhphams = txt_MAQCTHANHPHAMS.Text.Trim();
             _CongsuatmayEntity.Tocdo = LIB.ConvertString.NumbertoDB(txt_TOCDO.Text.Trim());
             _CongsuatmayEntity.Makhachs = txt_MAKHACHS.Text.Trim();
@@ -330,7 +330,7 @@ namespace GD.BBPH.APP.DANHMUC
                 _CongsuatmayEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
                 _str_MAHIEU_PK = _CongsuatmayManager.InsertV2(_CongsuatmayEntity, r_Insert, DT_CONGSUATMAY, BS_CONGSUATMAY);
                  GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CongsuatmayManager.Convert(_CongsuatmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
+                btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  = btn_CHONLOAIMANG1.Enabled = btn_CHONLOAIMANG2.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
                 BS_CONGSUATMAY.ResetCurrentItem();
             }
             else
@@ -350,13 +350,13 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Dodayden.Name].Value = _CongsuatmayEntity.Dodayden;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Somaumas.Name].Value = _CongsuatmayEntity.Somaumas;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Sohinhmas.Name].Value = _CongsuatmayEntity.Sohinhmas;
-                GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maloaimangs.Name].Value = _CongsuatmayEntity.Maloaimangs;
+                GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maloaimangs1.Name].Value = _CongsuatmayEntity.Maloaimangs1;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Maqcthanhphams.Name].Value = _CongsuatmayEntity.Maqcthanhphams;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Tocdo.Name].Value = _CongsuatmayEntity.Tocdo;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Makhachs.Name].Value = _CongsuatmayEntity.Makhachs;
                 GRID_CONGSUATMAY.CurrentRow.Cells[CongsuatmayFields.Mahangs.Name].Value = _CongsuatmayEntity.Mahangs;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_CongsuatmayManager.Convert(_CongsuatmayEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  =btn_CHONLOAIMANG.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
+                btn_CHONSOMAU.Enabled = btn_CHONSOHINH.Enabled  = btn_CHONLOAIMANG1.Enabled = btn_CHONLOAIMANG2.Enabled = btn_CHONQCTHANHPHAM.Enabled = btn_CHONKHACH.Enabled = btn_CHONSANPHAM.Enabled = btn_CHONMAY.Enabled = btn_CHONCONGDOAN.Enabled = false;
             }
             return _str_MAHIEU_PK;
         }
@@ -446,10 +446,10 @@ namespace GD.BBPH.APP.DANHMUC
             txt_MAHANGS.Text = str;
         }
 
-        private void btn_CHONLOAIMANG_Click(object sender, EventArgs e)
+        private void btn_CHONLOAIMANG1_Click(object sender, EventArgs e)
         {
             ListviewJanusC _frm =
-                new ListviewJanusC("Danh sách loại màng", LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_LOAIMANG, DmquycachFields.Maquycach.Name, txt_MALOAIMANGS.Text);
+                new ListviewJanusC("Danh sách loại màng", LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_LOAIMANG, DmquycachFields.Maquycach.Name, txt_MALOAIMANGS1.Text);
             _frm.ShowDialog();
             if (_frm._RowsViewSelect == null) return;
 
@@ -457,7 +457,21 @@ namespace GD.BBPH.APP.DANHMUC
             foreach (DataRowView drv in _frm._RowsViewSelect)
                 str += drv.Row[DmquycachFields.Maquycach.Name].ToString() + ",";
 
-            txt_MALOAIMANGS.Text = str;
+            txt_MALOAIMANGS1.Text = str;
+        }
+
+        private void btn_CHONLOAIMANG2_Click(object sender, EventArgs e)
+        {
+            ListviewJanusC _frm =
+                new ListviewJanusC("Danh sách loại màng", LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMQUYCACH_CHON.xml", DT_LOAIMANG, DmquycachFields.Maquycach.Name, txt_MALOAIMANGS2.Text);
+            _frm.ShowDialog();
+            if (_frm._RowsViewSelect == null) return;
+
+            string str = string.Empty;
+            foreach (DataRowView drv in _frm._RowsViewSelect)
+                str += drv.Row[DmquycachFields.Maquycach.Name].ToString() + ",";
+
+            txt_MALOAIMANGS2.Text = str;
         }
 
         private void btn_CHONQCTHANHPHAM_Click(object sender, EventArgs e)

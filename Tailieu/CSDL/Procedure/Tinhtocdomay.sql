@@ -3,7 +3,7 @@ If Object_ID('dbo.fTinhtocdomay','FN') is not null
 	Drop FUNCTION dbo.fTinhtocdomay
 Go
 
-Create FUNCTION dbo.fTinhtocdomay(@Mamay Nvarchar(50), @Masanpham Nvarchar(50)) RETURNS DECIMAL(20,2)
+Create FUNCTION dbo.fTinhtocdomay(@Mamay Nvarchar(50), @Masanpham Nvarchar(50), @Mamang Nvarchar(50)) RETURNS DECIMAL(20,2)
 AS
 BEGIN
 
@@ -61,7 +61,7 @@ BEGIN
 			AND	(CHARINDEX(@v_Sohinhma+',',Sohinhmas)>0 OR ISNULL(Sohinhmas,'') = '')
 			AND	(CHARINDEX(@v_Somauma+',',Somaumas)>0 OR ISNULL(Somaumas,'') = '')
 			AND (CHARINDEX(@v_Maqcthanhpham+',',Maqcthanhphams)>0 OR ISNULL(Maqcthanhphams,'') = '')			
-			AND	(CHARINDEX(a.Maloaimang+',',cs.Maloaimangs)>0 OR ISNULL(cs.Maloaimangs,'') = '')
+			AND	(CHARINDEX(a.Maloaimang+',',cs.Maloaimangs1)>0 OR ISNULL(cs.Maloaimangs1,'') = '')
 			AND (CHARINDEX(@v_Makhach+',',Makhachs)>0 OR ISNULL(Makhachs,'') = '')			
 			AND (CHARINDEX(@Masanpham+',',Mahangs)>0 OR ISNULL(Mahangs,'') = '')			
 	End
@@ -71,7 +71,7 @@ END
 	
 Go
 
-SELECT dbo.fTinhtocdomay('L1', 'SP 1450') --('T1', 'CPP50x1120')
+SELECT dbo.fTinhtocdomay('L1', 'SP 1566', 'PE 85x800') --('T1', 'CPP50x1120')
 
 GO	
 
