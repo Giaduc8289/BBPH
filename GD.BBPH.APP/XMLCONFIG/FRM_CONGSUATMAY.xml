@@ -139,8 +139,17 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Maloaimangs</name>
-    <headerText>Loại màng</headerText>
+    <name>Maloaimangs1</name>
+    <headerText>Loại màng 1</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Maloaimangs2</name>
+    <headerText>Loại màng 2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
