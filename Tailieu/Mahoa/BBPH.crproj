@@ -10,7 +10,6 @@
       <protection id="invalid metadata" />
       <protection id="ref proxy" />
       <protection id="resources" />
-      <protection id="rename" />
     </rule>
   </module>
   <module path="GD.BBPH.BLL.dll">
