@@ -53,31 +53,57 @@ BEGIN
 			= STUFF((Select ',' + Maloaimang
 					From @Loaimang t1
 					For XML Path('')), 1, Len(','), '')
-	
-		Select @v_Tocdo=Min(Tocdo)
-		From congsuatmay cs
-			, (Select Value As Maloaimang2 From dbo.SplitString(@v_Maloaimangs,',')) a
-		Where (CHARINDEX(@Mamay+',',Mamays)>0 OR ISNULL(Mamays,'') = '')
-			--And (CHARINDEX(@Macongdoan+',',Macongdoans)>0 OR ISNULL(Macongdoans,'') = '')
-			And ((Dodaytu<=@v_Doday And Dodayden>=@v_Doday) Or (Dodaytu=0 And Dodayden=0))	
-			And ((Khotu<=@v_Rong And Khoden>=@v_Rong) Or (Khotu=0 And Khoden=0))	
-			And ((Chieudaitu<=@v_Dai And Chieudaiden>=@v_Dai) Or (Chieudaitu=0 And Chieudaiden=0))	
-			AND	(CHARINDEX(@v_Sohinhma+',',Sohinhmas)>0 OR ISNULL(Sohinhmas,'') = '')
-			AND	(CHARINDEX(@v_Somauma+',',Somaumas)>0 OR ISNULL(Somaumas,'') = '')
-			AND (CHARINDEX(@v_Maqcthanhpham+',',Maqcthanhphams)>0 OR ISNULL(Maqcthanhphams,'') = '')			
-			AND (CHARINDEX(@v_Makhach+',',Makhachs)>0 OR ISNULL(Makhachs,'') = '')			
-			AND (CHARINDEX(@Masanpham+',',Mahangs)>0 OR ISNULL(Mahangs,'') = '')	
-			--AND	(CHARINDEX(a.Maloaimang+',',cs.Maloaimangs1)>0 OR ISNULL(cs.Maloaimangs1,'') = '')
-			--AND	(CHARINDEX(@v_Maloaimangghep1+',',cs.Maloaimangs1)>0 OR ISNULL(cs.Maloaimangs1,'') = '')
-			AND (
-					( ISNULL(cs.Maloaimangs1,'') = '' And IsNull(cs.Maloaimangs2,'') = '' )--Không kiểm tra điều kiện loại màng (2 trường loại màng đều null)
-					OR
-					( CHARINDEX(@v_Maloaimang+',',cs.Maloaimangs1)>0 And IsNull(cs.Maloaimangs2,'') = '' )--Chỉ kiểm tra loại màng mang ghép (Maloaimangs2 null) 
-					OR
-					( CHARINDEX(@v_Maloaimang+',',cs.Maloaimangs1)>0 And CHARINDEX(a.Maloaimang2+',',cs.Maloaimangs2)>0 )--Kiểm tra điều kiện 2 màng ghép với nhau
-					OR
-					( CHARINDEX(@v_Maloaimang+',',cs.Maloaimangs2)>0 And CHARINDEX(a.Maloaimang2+',',cs.Maloaimangs1)>0 )--Kiểm tra điều kiện 2 màng ghép với nhau
-				)
+					
+		If(ISNULL(@v_Maloaimangs,'') <> '')
+		BEGIN
+			Select @v_Tocdo=Min(Tocdo)
+			From congsuatmay cs
+				, (Select Value As Maloaimang2 From dbo.SplitString(@v_Maloaimangs,',')) a
+			Where (CHARINDEX(@Mamay+',',Mamays)>0 OR ISNULL(Mamays,'') = '')
+				--And (CHARINDEX(@Macongdoan+',',Macongdoans)>0 OR ISNULL(Macongdoans,'') = '')
+				And ((Dodaytu<=@v_Doday And Dodayden>=@v_Doday) Or (Dodaytu=0 And Dodayden=0))	
+				And ((Khotu<=@v_Rong And Khoden>=@v_Rong) Or (Khotu=0 And Khoden=0))	
+				And ((Chieudaitu<=@v_Dai And Chieudaiden>=@v_Dai) Or (Chieudaitu=0 And Chieudaiden=0))	
+				AND	(CHARINDEX(@v_Sohinhma+',',Sohinhmas)>0 OR ISNULL(Sohinhmas,'') = '')
+				AND	(CHARINDEX(@v_Somauma+',',Somaumas)>0 OR ISNULL(Somaumas,'') = '')
+				AND (CHARINDEX(@v_Maqcthanhpham+',',Maqcthanhphams)>0 OR ISNULL(Maqcthanhphams,'') = '')			
+				AND (CHARINDEX(@v_Makhach+',',Makhachs)>0 OR ISNULL(Makhachs,'') = '')			
+				AND (CHARINDEX(@Masanpham+',',Mahangs)>0 OR ISNULL(Mahangs,'') = '')	
+				AND (
+						( ISNULL(cs.Maloaimangs1,'') = '' And IsNull(cs.Maloaimangs2,'') = '' )--Không kiểm tra điều kiện loại màng (2 trường loại màng đều null)
+						OR
+						( CHARINDEX(@v_Maloaimang+',',cs.Maloaimangs1)>0 And IsNull(cs.Maloaimangs2,'') = '' )--Chỉ kiểm tra loại màng mang ghép (Maloaimangs2 null) 
+						OR
+						( CHARINDEX(@v_Maloaimang+',',cs.Maloaimangs1)>0 And CHARINDEX(a.Maloaimang2+',',cs.Maloaimangs2)>0 )--Kiểm tra điều kiện 2 màng ghép với nhau
+						OR
+						( CHARINDEX(@v_Maloaimang+',',cs.Maloaimangs2)>0 And CHARINDEX(a.Maloaimang2+',',cs.Maloaimangs1)>0 )--Kiểm tra điều kiện 2 màng ghép với nhau
+					)
+		END
+		ELSE
+		BEGIN
+			Select @v_Tocdo=Min(Tocdo)
+			From congsuatmay cs
+				--, (Select Value As Maloaimang2 From dbo.SplitString(@v_Maloaimangs,',')) a
+			Where (CHARINDEX(@Mamay+',',Mamays)>0 OR ISNULL(Mamays,'') = '')
+				--And (CHARINDEX(@Macongdoan+',',Macongdoans)>0 OR ISNULL(Macongdoans,'') = '')
+				And ((Dodaytu<=@v_Doday And Dodayden>=@v_Doday) Or (Dodaytu=0 And Dodayden=0))	
+				And ((Khotu<=@v_Rong And Khoden>=@v_Rong) Or (Khotu=0 And Khoden=0))	
+				And ((Chieudaitu<=@v_Dai And Chieudaiden>=@v_Dai) Or (Chieudaitu=0 And Chieudaiden=0))	
+				AND	(CHARINDEX(@v_Sohinhma+',',Sohinhmas)>0 OR ISNULL(Sohinhmas,'') = '')
+				AND	(CHARINDEX(@v_Somauma+',',Somaumas)>0 OR ISNULL(Somaumas,'') = '')
+				AND (CHARINDEX(@v_Maqcthanhpham+',',Maqcthanhphams)>0 OR ISNULL(Maqcthanhphams,'') = '')			
+				AND (CHARINDEX(@v_Makhach+',',Makhachs)>0 OR ISNULL(Makhachs,'') = '')			
+				AND (CHARINDEX(@Masanpham+',',Mahangs)>0 OR ISNULL(Mahangs,'') = '')	
+				AND (
+						( ISNULL(cs.Maloaimangs1,'') = '' And IsNull(cs.Maloaimangs2,'') = '' )--Không kiểm tra điều kiện loại màng (2 trường loại màng đều null)
+						OR
+						( CHARINDEX(@v_Maloaimang+',',cs.Maloaimangs1)>0 And IsNull(cs.Maloaimangs2,'') = '' )--Chỉ kiểm tra loại màng mang ghép (Maloaimangs2 null) 
+						--OR
+						--( CHARINDEX(@v_Maloaimang+',',cs.Maloaimangs1)>0 And CHARINDEX(a.Maloaimang2+',',cs.Maloaimangs2)>0 )--Kiểm tra điều kiện 2 màng ghép với nhau
+						--OR
+						--( CHARINDEX(@v_Maloaimang+',',cs.Maloaimangs2)>0 And CHARINDEX(a.Maloaimang2+',',cs.Maloaimangs1)>0 )--Kiểm tra điều kiện 2 màng ghép với nhau
+					)
+		END
 
 	End
 
@@ -91,6 +117,9 @@ SELECT dbo.fTinhtocdomay('L1', 'SP 1566', 'MPET 12x800')
 SELECT dbo.fTinhtocdomay('L1', 'SP 1566', 'PE 85x800')
 SELECT dbo.fTinhtocdomay('G2', 'SP 1566', 'MPET 12x800')
 SELECT dbo.fTinhtocdomay('G2', 'SP 1566', 'PE 85x800') 
+
+SELECT dbo.fTinhtocdomay('L3', 'SP 017', '') 
+
 
 GO	
 
