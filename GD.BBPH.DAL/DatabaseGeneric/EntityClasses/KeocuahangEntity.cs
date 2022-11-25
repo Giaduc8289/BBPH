@@ -26,15 +26,17 @@ namespace GD.BBPH.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
+	
 
 	/// <summary>
-	/// Entity class which represents the entity 'Dmnhomdinhmuc'.<br/><br/>
+	/// Entity class which represents the entity 'Keocuahang'.<br/><br/>
 	/// 
 	/// </summary>
 	[Serializable]
-	public partial class DmnhomdinhmucEntity : CommonEntityBase, ISerializable
+	public partial class KeocuahangEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END	
+		// __LLBLGENPRO_USER_CODE_REGION_END
+			
 	{
 		#region Class Member Declarations
 
@@ -44,6 +46,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
+		
 		#endregion
 
 		#region Statics
@@ -61,13 +64,13 @@ namespace GD.BBPH.DAL.EntityClasses
 		#endregion
 		
 		/// <summary> Static CTor for setting up custom property hashtables. Is executed before the first instance of this entity class or derived classes is constructed. </summary>
-		static DmnhomdinhmucEntity()
+		static KeocuahangEntity()
 		{
 			SetupCustomPropertyHashtables();
 		}
 
 		/// <summary> CTor</summary>
-		public DmnhomdinhmucEntity():base("DmnhomdinhmucEntity")
+		public KeocuahangEntity():base("KeocuahangEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 		}
@@ -75,43 +78,43 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> CTor</summary>
 		/// <remarks>For framework usage.</remarks>
 		/// <param name="fields">Fields object to set as the fields for this entity.</param>
-		public DmnhomdinhmucEntity(IEntityFields2 fields):base("DmnhomdinhmucEntity")
+		public KeocuahangEntity(IEntityFields2 fields):base("KeocuahangEntity")
 		{
 			InitClassEmpty(null, fields);
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="validator">The custom validator object for this DmnhomdinhmucEntity</param>
-		public DmnhomdinhmucEntity(IValidator validator):base("DmnhomdinhmucEntity")
+		/// <param name="validator">The custom validator object for this KeocuahangEntity</param>
+		public KeocuahangEntity(IValidator validator):base("KeocuahangEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 		}
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="manhom">PK value for Dmnhomdinhmuc which data should be fetched into this Dmnhomdinhmuc object</param>
+		/// <param name="id">PK value for Keocuahang which data should be fetched into this Keocuahang object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DmnhomdinhmucEntity(System.String manhom):base("DmnhomdinhmucEntity")
+		public KeocuahangEntity(System.Int64 id):base("KeocuahangEntity")
 		{
 			InitClassEmpty(null, CreateFields());
-			this.Manhom = manhom;
+			this.Id = id;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="manhom">PK value for Dmnhomdinhmuc which data should be fetched into this Dmnhomdinhmuc object</param>
-		/// <param name="validator">The custom validator object for this DmnhomdinhmucEntity</param>
+		/// <param name="id">PK value for Keocuahang which data should be fetched into this Keocuahang object</param>
+		/// <param name="validator">The custom validator object for this KeocuahangEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public DmnhomdinhmucEntity(System.String manhom, IValidator validator):base("DmnhomdinhmucEntity")
+		public KeocuahangEntity(System.Int64 id, IValidator validator):base("KeocuahangEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
-			this.Manhom = manhom;
+			this.Id = id;
 		}
 
 		/// <summary> Protected CTor for deserialization</summary>
 		/// <param name="info"></param>
 		/// <param name="context"></param>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		protected DmnhomdinhmucEntity(SerializationInfo info, StreamingContext context) : base(info, context)
+		protected KeocuahangEntity(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
@@ -124,6 +127,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 		}
 
 		
@@ -131,7 +135,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="fieldIndex">The fieldindex.</param>
 		protected override void PerformDesyncSetupFKFieldChange(int fieldIndex)
 		{
-			switch((DmnhomdinhmucFieldIndex)fieldIndex)
+			switch((KeocuahangFieldIndex)fieldIndex)
 			{
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
@@ -169,7 +173,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>RelationCollection with relation object(s) which represent the relation the field is maped on</returns>
 		public override RelationCollection GetRelationsForFieldOfType(string fieldName)
 		{
-			return DmnhomdinhmucEntity.GetRelationsForField(fieldName);
+			return KeocuahangEntity.GetRelationsForField(fieldName);
 		}
 
 		/// <summary>Gets the relation objects which represent the relation the fieldName specified is mapped on. </summary>
@@ -292,6 +296,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 			base.GetObjectData(info, context);
 		}
 
@@ -299,7 +304,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the current value is NULL, use <see cref="TestCurrentFieldValueForNull"/> for that.</summary>
 		/// <param name="fieldIndex">Index of the field to test if that field was NULL in the persistent storage</param>
 		/// <returns>true if the field with the passed in index was NULL in the persistent storage, false otherwise</returns>
-		public bool TestOriginalFieldValueForNull(DmnhomdinhmucFieldIndex fieldIndex)
+		public bool TestOriginalFieldValueForNull(KeocuahangFieldIndex fieldIndex)
 		{
 			return base.Fields[(int)fieldIndex].IsNull;
 		}
@@ -308,7 +313,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the original value (read from the db) is NULL</summary>
 		/// <param name="fieldIndex">Index of the field to test if its currentvalue is null/undefined</param>
 		/// <returns>true if the field's value isn't defined yet, false otherwise</returns>
-		public bool TestCurrentFieldValueForNull(DmnhomdinhmucFieldIndex fieldIndex)
+		public bool TestCurrentFieldValueForNull(KeocuahangFieldIndex fieldIndex)
 		{
 			return base.CheckIfCurrentFieldValueIsNull((int)fieldIndex);
 		}
@@ -318,7 +323,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>A list of all the EntityRelation objects the type of this instance has. Hierarchy relations are excluded.</returns>
 		public override List<IEntityRelation> GetAllRelations()
 		{
-			return new DmnhomdinhmucRelations().GetAllRelations();
+			return new KeocuahangRelations().GetAllRelations();
 		}
 		
 
@@ -330,7 +335,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates entity fields object for this entity. Used in constructor to setup this entity in a polymorphic scenario.</summary>
 		protected virtual IEntityFields2 CreateFields()
 		{
-			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.DmnhomdinhmucEntity);
+			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.KeocuahangEntity);
 		}
 
 		/// <summary>
@@ -345,7 +350,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates a new instance of the factory related to this entity</summary>
 		protected override IEntityFactory2 CreateEntityFactory()
 		{
-			return EntityFactoryCache2.GetEntityFactory(typeof(DmnhomdinhmucEntityFactory));
+			return EntityFactoryCache2.GetEntityFactory(typeof(KeocuahangEntityFactory));
 		}
 #if !CF
 		/// <summary>Adds the member collections to the collections queue (base first)</summary>
@@ -420,6 +425,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 			OnInitClassMembersComplete();
 		}
 
@@ -433,13 +439,22 @@ namespace GD.BBPH.DAL.EntityClasses
 			Dictionary<string, string> fieldHashtable = null;
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Manhom", fieldHashtable);
+			_fieldsCustomProperties.Add("Id", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tennhom", fieldHashtable);
+			_fieldsCustomProperties.Add("Masp", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Tenrutgon", fieldHashtable);
+			_fieldsCustomProperties.Add("Tensp", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("MakeoDongran", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("TenkeoDongran", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("DinhmuckeoDongran", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
@@ -458,7 +473,7 @@ namespace GD.BBPH.DAL.EntityClasses
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
-		/// <param name="validator">The validator object for this DmnhomdinhmucEntity</param>
+		/// <param name="validator">The validator object for this KeocuahangEntity</param>
 		/// <param name="fields">Fields of this entity</param>
 		protected virtual void InitClassEmpty(IValidator validator, IEntityFields2 fields)
 		{
@@ -471,15 +486,16 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
+			
 
 			OnInitialized();
 		}
 
 		#region Class Property Declarations
 		/// <summary> The relations object holding all relations of this entity with other entity classes.</summary>
-		public  static DmnhomdinhmucRelations Relations
+		public  static KeocuahangRelations Relations
 		{
-			get	{ return new DmnhomdinhmucRelations(); }
+			get	{ return new KeocuahangRelations(); }
 		}
 		
 		/// <summary> The custom properties for this entity type.</summary>
@@ -498,7 +514,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, string> CustomPropertiesOfType
 		{
-			get { return DmnhomdinhmucEntity.CustomProperties;}
+			get { return KeocuahangEntity.CustomProperties;}
 		}
 
 		/// <summary> The custom properties for the fields of this entity type. The returned Hashtable contains per fieldname a hashtable of name-value
@@ -514,84 +530,117 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, Dictionary<string, string>> FieldsCustomPropertiesOfType
 		{
-			get { return DmnhomdinhmucEntity.FieldsCustomProperties;}
+			get { return KeocuahangEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The Manhom property of the Entity Dmnhomdinhmuc<br/><br/>
+		/// <summary> The Id property of the Entity Keocuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnhomdinhmuc"."Manhom"<br/>
+		/// <remarks>Mapped on  table field: "Keocuahang"."Id"<br/>
+		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, true</remarks>
+		public virtual System.Int64 Id
+		{
+			get { return (System.Int64)GetValue((int)KeocuahangFieldIndex.Id, true); }
+			set	{ SetValue((int)KeocuahangFieldIndex.Id, value); }
+		}
+
+		/// <summary> The Masp property of the Entity Keocuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Keocuahang"."Masp"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
-		public virtual System.String Manhom
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, false, false</remarks>
+		public virtual System.String Masp
 		{
-			get { return (System.String)GetValue((int)DmnhomdinhmucFieldIndex.Manhom, true); }
-			set	{ SetValue((int)DmnhomdinhmucFieldIndex.Manhom, value); }
+			get { return (System.String)GetValue((int)KeocuahangFieldIndex.Masp, true); }
+			set	{ SetValue((int)KeocuahangFieldIndex.Masp, value); }
 		}
 
-		/// <summary> The Tennhom property of the Entity Dmnhomdinhmuc<br/><br/>
+		/// <summary> The Tensp property of the Entity Keocuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnhomdinhmuc"."Tennhom"<br/>
+		/// <remarks>Mapped on  table field: "Keocuahang"."Tensp"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tennhom
+		public virtual System.String Tensp
 		{
-			get { return (System.String)GetValue((int)DmnhomdinhmucFieldIndex.Tennhom, true); }
-			set	{ SetValue((int)DmnhomdinhmucFieldIndex.Tennhom, value); }
+			get { return (System.String)GetValue((int)KeocuahangFieldIndex.Tensp, true); }
+			set	{ SetValue((int)KeocuahangFieldIndex.Tensp, value); }
 		}
 
-		/// <summary> The Tenrutgon property of the Entity Dmnhomdinhmuc<br/><br/>
+		/// <summary> The MakeoDongran property of the Entity Keocuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnhomdinhmuc"."Tenrutgon"<br/>
+		/// <remarks>Mapped on  table field: "Keocuahang"."Makeo_dongran"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String MakeoDongran
+		{
+			get { return (System.String)GetValue((int)KeocuahangFieldIndex.MakeoDongran, true); }
+			set	{ SetValue((int)KeocuahangFieldIndex.MakeoDongran, value); }
+		}
+
+		/// <summary> The TenkeoDongran property of the Entity Keocuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Keocuahang"."Tenkeo_dongran"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tenrutgon
+		public virtual System.String TenkeoDongran
 		{
-			get { return (System.String)GetValue((int)DmnhomdinhmucFieldIndex.Tenrutgon, true); }
-			set	{ SetValue((int)DmnhomdinhmucFieldIndex.Tenrutgon, value); }
+			get { return (System.String)GetValue((int)KeocuahangFieldIndex.TenkeoDongran, true); }
+			set	{ SetValue((int)KeocuahangFieldIndex.TenkeoDongran, value); }
 		}
 
-		/// <summary> The Ngaytao property of the Entity Dmnhomdinhmuc<br/><br/>
+		/// <summary> The DinhmuckeoDongran property of the Entity Keocuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnhomdinhmuc"."Ngaytao"<br/>
+		/// <remarks>Mapped on  table field: "Keocuahang"."Dinhmuckeo_dongran"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> DinhmuckeoDongran
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KeocuahangFieldIndex.DinhmuckeoDongran, false); }
+			set	{ SetValue((int)KeocuahangFieldIndex.DinhmuckeoDongran, value); }
+		}
+
+		/// <summary> The Ngaytao property of the Entity Keocuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Keocuahang"."Ngaytao"<br/>
 		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngaytao
 		{
-			get { return (Nullable<System.DateTime>)GetValue((int)DmnhomdinhmucFieldIndex.Ngaytao, false); }
-			set	{ SetValue((int)DmnhomdinhmucFieldIndex.Ngaytao, value); }
+			get { return (Nullable<System.DateTime>)GetValue((int)KeocuahangFieldIndex.Ngaytao, false); }
+			set	{ SetValue((int)KeocuahangFieldIndex.Ngaytao, value); }
 		}
 
-		/// <summary> The Nguoitao property of the Entity Dmnhomdinhmuc<br/><br/>
+		/// <summary> The Nguoitao property of the Entity Keocuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnhomdinhmuc"."Nguoitao"<br/>
+		/// <remarks>Mapped on  table field: "Keocuahang"."Nguoitao"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguoitao
 		{
-			get { return (System.String)GetValue((int)DmnhomdinhmucFieldIndex.Nguoitao, true); }
-			set	{ SetValue((int)DmnhomdinhmucFieldIndex.Nguoitao, value); }
+			get { return (System.String)GetValue((int)KeocuahangFieldIndex.Nguoitao, true); }
+			set	{ SetValue((int)KeocuahangFieldIndex.Nguoitao, value); }
 		}
 
-		/// <summary> The Ngaysua property of the Entity Dmnhomdinhmuc<br/><br/>
+		/// <summary> The Ngaysua property of the Entity Keocuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnhomdinhmuc"."Ngaysua"<br/>
+		/// <remarks>Mapped on  table field: "Keocuahang"."Ngaysua"<br/>
 		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual Nullable<System.DateTime> Ngaysua
 		{
-			get { return (Nullable<System.DateTime>)GetValue((int)DmnhomdinhmucFieldIndex.Ngaysua, false); }
-			set	{ SetValue((int)DmnhomdinhmucFieldIndex.Ngaysua, value); }
+			get { return (Nullable<System.DateTime>)GetValue((int)KeocuahangFieldIndex.Ngaysua, false); }
+			set	{ SetValue((int)KeocuahangFieldIndex.Ngaysua, value); }
 		}
 
-		/// <summary> The Nguoisua property of the Entity Dmnhomdinhmuc<br/><br/>
+		/// <summary> The Nguoisua property of the Entity Keocuahang<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "dmnhomdinhmuc"."Nguoisua"<br/>
+		/// <remarks>Mapped on  table field: "Keocuahang"."Nguoisua"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
 		public virtual System.String Nguoisua
 		{
-			get { return (System.String)GetValue((int)DmnhomdinhmucFieldIndex.Nguoisua, true); }
-			set	{ SetValue((int)DmnhomdinhmucFieldIndex.Nguoisua, value); }
+			get { return (System.String)GetValue((int)KeocuahangFieldIndex.Nguoisua, true); }
+			set	{ SetValue((int)KeocuahangFieldIndex.Nguoisua, value); }
 		}
 
 
@@ -615,7 +664,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override int LLBLGenProEntityTypeValue 
 		{ 
-			get { return (int)GD.BBPH.DAL.EntityType.DmnhomdinhmucEntity; }
+			get { return (int)GD.BBPH.DAL.EntityType.KeocuahangEntity; }
 		}
 		#endregion
 
@@ -624,6 +673,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
+		
 		#endregion
 
 		#region Included code

@@ -707,6 +707,7 @@
     <Compile Include="Manager\DonhangDManager.cs" />
     <Compile Include="Manager\DonhangHManager.cs" />
     <Compile Include="Manager\HangtralaiManager.cs" />
+    <Compile Include="Manager\KeocuahangManager.cs" />
     <Compile Include="Manager\KetquachiaManager.cs" />
     <Compile Include="Manager\KetquaghepManager.cs" />
     <Compile Include="Manager\KetquahoanthienManager.cs" />

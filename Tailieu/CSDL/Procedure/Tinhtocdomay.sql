@@ -117,9 +117,7 @@ SELECT dbo.fTinhtocdomay('L1', 'SP 1566', 'MPET 12x800')
 SELECT dbo.fTinhtocdomay('L1', 'SP 1566', 'PE 85x800')
 SELECT dbo.fTinhtocdomay('G2', 'SP 1566', 'MPET 12x800')
 SELECT dbo.fTinhtocdomay('G2', 'SP 1566', 'PE 85x800') 
-
 SELECT dbo.fTinhtocdomay('L3', 'SP 017', '') 
-
 
 GO	
 

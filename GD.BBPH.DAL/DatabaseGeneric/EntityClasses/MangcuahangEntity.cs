@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 19, 2022 7:55:26 PM
+// Code is generated on: Friday, November 25, 2022 4:31:51 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -509,6 +509,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Tenloaimang", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Thutulopghep", fieldHashtable);
 		}
 		#endregion
 
@@ -858,6 +861,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)MangcuahangFieldIndex.Tenloaimang, true); }
 			set	{ SetValue((int)MangcuahangFieldIndex.Tenloaimang, value); }
+		}
+
+		/// <summary> The Thutulopghep property of the Entity Mangcuahang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "mangcuahang"."Thutulopghep"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Int32> Thutulopghep
+		{
+			get { return (Nullable<System.Int32>)GetValue((int)MangcuahangFieldIndex.Thutulopghep, false); }
+			set	{ SetValue((int)MangcuahangFieldIndex.Thutulopghep, value); }
 		}
 
 

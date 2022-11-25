@@ -55,6 +55,7 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NGUOITAO.Text = _Rowview.Row[NhapkhomangFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[NhapkhomangFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[NhapkhomangFields.Nguoisua.Name].ToString();
+					txt_CUONDO.Text = _Rowview.Row[NhapkhomangFields.Cuondo.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_NHAPKHOMANG_CurrentChanged"); }
@@ -85,6 +86,8 @@ namespace GD.BBPH.DAL.EntityClasses
 			try { _NhapkhomangEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
 			catch { }
 			_NhapkhomangEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			try { _NhapkhomangEntity.Cuondo = System.Boolean.Parse(txt_CUONDO.Text.Trim()); } 
+			catch { }
 			
 			
 			if (string.IsNullOrEmpty(_str_NHAPKHOMANG_PK))
@@ -113,6 +116,7 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_NHAPKHOMANG.CurrentRow.Cells[NhapkhomangFields.Nguoitao.Name].Value = _NhapkhomangEntity.Nguoitao;
 				GRID_NHAPKHOMANG.CurrentRow.Cells[NhapkhomangFields.Ngaysua.Name].Value = _NhapkhomangEntity.Ngaysua;
 				GRID_NHAPKHOMANG.CurrentRow.Cells[NhapkhomangFields.Nguoisua.Name].Value = _NhapkhomangEntity.Nguoisua;
+				GRID_NHAPKHOMANG.CurrentRow.Cells[NhapkhomangFields.Cuondo.Name].Value = _NhapkhomangEntity.Cuondo;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_NhapkhomangManager.Convert(_NhapkhomangEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_NHAPKHOMANG_PK;

@@ -138,6 +138,7 @@
     <Compile Include="ManagerBase\DonhangDManagerBase.cs" />
     <Compile Include="ManagerBase\DonhangHManagerBase.cs" />
     <Compile Include="ManagerBase\HangtralaiManagerBase.cs" />
+    <Compile Include="ManagerBase\KeocuahangManagerBase.cs" />
     <Compile Include="ManagerBase\KetquachiaManagerBase.cs" />
     <Compile Include="ManagerBase\KetquaghepManagerBase.cs" />
     <Compile Include="ManagerBase\KetquahoanthienManagerBase.cs" />
