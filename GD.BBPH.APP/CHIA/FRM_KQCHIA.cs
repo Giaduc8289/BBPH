@@ -177,8 +177,8 @@ namespace GD.BBPH.APP.CHIA
                     txt_DAURAGHEP.Text = _Rowview.Row[KetquachiaFields.Dauraghep.Name].ToString();
 
                     txt_THOIGIANCATDAU.Text = _Rowview.Row[KetquachiaFields.Thoigiancatdau.Name].ToString();
-                    txt_THOIGIANBATDAU.Text = _Rowview.Row[KetquachiaFields.Thoigianbatdau.Name].ToString();
-                    txt_THOIGIANKETTHUC.Text = _Rowview.Row[KetquachiaFields.Thoigianketthuc.Name].ToString();
+                    txt_THOIGIANBATDAU.Text = Convert.ToDateTime(_Rowview.Row[KetquachiaFields.Thoigianbatdau.Name].ToString()).ToString("hh:mm tt dd/MM/yyyy");
+                    txt_THOIGIANKETTHUC.Text = Convert.ToDateTime(_Rowview.Row[KetquachiaFields.Thoigianketthuc.Name].ToString()).ToString("hh:mm tt dd/MM/yyyy");
                     txt_THOIGIANDOILENH.Text = _Rowview.Row[KetquachiaFields.Thoigiandoilenh.Name].ToString();
                     txt_SOLANHACUON.Text = _Rowview.Row[KetquachiaFields.Solanhacuon.Name].ToString();
                     txt_THOIGIANLENCUON.Text = _Rowview.Row[KetquachiaFields.Thoigianlencuon.Name].ToString();
