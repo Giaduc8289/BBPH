@@ -50,6 +50,8 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAQC = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_HESORIENG = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label3 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -107,6 +109,8 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_HESORIENG);
+            this.uiPanel1Container.Controls.Add(this.label3);
             this.uiPanel1Container.Controls.Add(this.txt_TENNHOMQC);
             this.uiPanel1Container.Controls.Add(this.txt_TENCD);
             this.uiPanel1Container.Controls.Add(this.txt_MANHOMQC);
@@ -211,7 +215,7 @@
             this.btn_Thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_Thoat.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(421, 168);
+            this.btn_Thoat.Location = new System.Drawing.Point(422, 190);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
             this.btn_Thoat.TabIndex = 9;
@@ -224,7 +228,7 @@
             this.btn_KHOIPHUC.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_KHOIPHUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(174, 168);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(175, 190);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
             this.btn_KHOIPHUC.TabIndex = 6;
@@ -237,7 +241,7 @@
             this.btn_LUULAI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_LUULAI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(14, 168);
+            this.btn_LUULAI.Location = new System.Drawing.Point(15, 190);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
             this.btn_LUULAI.TabIndex = 4;
@@ -250,7 +254,7 @@
             this.btn_XOA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_XOA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(93, 168);
+            this.btn_XOA.Location = new System.Drawing.Point(94, 190);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
             this.btn_XOA.TabIndex = 5;
@@ -263,7 +267,7 @@
             this.btn_THEMMOI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_THEMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(339, 168);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(340, 190);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
             this.btn_THEMMOI.TabIndex = 8;
@@ -276,7 +280,7 @@
             this.btn_SUA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_SUA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(258, 168);
+            this.btn_SUA.Location = new System.Drawing.Point(259, 190);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
             this.btn_SUA.TabIndex = 7;
@@ -330,6 +334,29 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã quy cách";
             // 
+            // txt_HESORIENG
+            // 
+            this.txt_HESORIENG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_HESORIENG.BannerText = null;
+            this.txt_HESORIENG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_HESORIENG.FormNametoShow = "";
+            this.txt_HESORIENG.Is_DateTime = false;
+            this.txt_HESORIENG.IsShowForm = false;
+            this.txt_HESORIENG.Location = new System.Drawing.Point(136, 149);
+            this.txt_HESORIENG.Name = "txt_HESORIENG";
+            this.txt_HESORIENG.Regular_Expression = null;
+            this.txt_HESORIENG.Size = new System.Drawing.Size(114, 20);
+            this.txt_HESORIENG.TabIndex = 128;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 129;
+            this.label3.Text = "Hệ số riêng";
+            // 
             // FRM_DMQUYCACH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,5 +402,7 @@
         protected internal CONTROL.LABEL label2;
         protected internal CONTROL.TEXTBOX txt_TENNHOMQC;
         protected internal CONTROL.TEXTBOX txt_TENCD;
+        protected internal CONTROL.TEXTBOX txt_HESORIENG;
+        protected internal CONTROL.LABEL label3;
     }
 }

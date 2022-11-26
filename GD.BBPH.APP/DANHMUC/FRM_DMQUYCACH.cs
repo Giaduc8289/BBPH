@@ -132,6 +132,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_TENCD.Text = _Rowview.Row[DmquycachFields.Tencongdoan.Name].ToString();
                     txt_MANHOMQC.Text = _Rowview.Row[DmquycachFields.Manhom.Name].ToString();
                     txt_TENNHOMQC.Text = _Rowview.Row[DmquycachFields.Tennhom.Name].ToString();
+                    txt_HESORIENG.Text = _Rowview.Row[DmquycachFields.Hesorieng.Name].ToString();
                     txt_MACD_Validating(new object(), new CancelEventArgs());
                     txt_MANHOMQC_Validating(new object(), new CancelEventArgs());
 
@@ -331,6 +332,8 @@ namespace GD.BBPH.APP.DANHMUC
             _DmquycachEntity.Manhom = txt_MANHOMQC.Text.Trim();
             _DmquycachEntity.Tencongdoan = txt_TENCD.Text.Trim();
             _DmquycachEntity.Tennhom = txt_TENNHOMQC.Text.Trim();
+            try { _DmquycachEntity.Hesorieng = System.Decimal.Parse(txt_HESORIENG.Text.Trim()); }
+            catch { }
 
             if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
@@ -351,6 +354,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Tencongdoan.Name].Value = _DmquycachEntity.Tencongdoan;
                 GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Manhom.Name].Value = _DmquycachEntity.Manhom;
                 GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Tennhom.Name].Value = _DmquycachEntity.Tennhom;
+                GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Hesorieng.Name].Value = _DmquycachEntity.Hesorieng;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmquycachManager.Convert(_DmquycachEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_MAHIEU_PK;

@@ -414,9 +414,30 @@ namespace GD.BBPH.APP.DANHMUC
             }
             catch { return null; }
         }
+       
 
 
+        #endregion
 
+        #region Tính trọng lượng riêng
+        private void Tinhtrongluong()
+        {
+            try
+            {
+                decimal _hesorieng = 0, _doday = 0, _rong = 0, _trongluong = 0;
+                _doday = LIB.ConvertString.NumbertoDB(txt_DODAY.Text.Trim());
+                _rong = LIB.ConvertString.NumbertoDB(txt_RONG.Text.Trim());
+                DmquycachEntity _DmquycachEntity = new DmquycachManager().SelectOne(txt_MALOAIMANG.Text);
+                _hesorieng = Convert.ToDecimal(_DmquycachEntity.Hesorieng);
+                _trongluong = _doday * _rong * _hesorieng;
+                txt_TRONGLUONG.Text = Math.Round(_trongluong).ToString();
+            }
+            catch { }
+        }
+        private void txt_TRONGLUONG_Validated(object sender, EventArgs e)
+        {
+            Tinhtrongluong();
+        }
         #endregion
 
         #region Shortcut Key
