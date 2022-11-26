@@ -175,8 +175,8 @@ namespace GD.BBPH.APP.THOI
                     txt_PHELIEUTHUCTE.Text = _Rowview.Row[KetquathoiFields.Phelieuthucte.Name].ToString();
                     //txt_SOKGQUYDOI.Text = _Rowview.Row[KetquathoiFields.Sokgquydoi.Name].ToString();
                     //txt_CHATLUONG.Text = _Rowview.Row[KetquathoiFields.Chenhlechkg.Name].ToString();
-                    txt_THOIGIANBATDAU.Text = _Rowview.Row[KetquathoiFields.Thoigianbatdau.Name].ToString();
-                    txt_THOIGIANKETTHUC.Text = _Rowview.Row[KetquathoiFields.Thoigianketthuc.Name].ToString();
+                    txt_THOIGIANBATDAU.Text = Convert.ToDateTime(_Rowview.Row[KetquachiaFields.Thoigianbatdau.Name].ToString()).ToString("hh:mm tt dd/MM/yyyy");
+                    txt_THOIGIANKETTHUC.Text = Convert.ToDateTime(_Rowview.Row[KetquachiaFields.Thoigianketthuc.Name].ToString()).ToString("hh:mm tt dd/MM/yyyy");
                     txt_THOIGIANCHUANBI.Text = _Rowview.Row[KetquathoiFields.Thoigianchuanbi.Name].ToString();
                     txt_THOIGIANSUCO.Text = _Rowview.Row[KetquathoiFields.Thoigiansuco.Name].ToString();
                     //txt_SOKGDUKIEN.Text = _Rowview.Row[KetquathoiFields.Sokgdukiendat.Name].ToString();

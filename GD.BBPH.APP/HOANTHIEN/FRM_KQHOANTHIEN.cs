@@ -169,8 +169,8 @@ namespace GD.BBPH.APP.HOANTHIEN
                     txt_DAURACHIAGHEP.Text = _Rowview.Row[KetquahoanthienFields.Daurachiaghep.Name].ToString();
                     txt_DAUVAOMET.Text = _Rowview.Row[KetquahoanthienFields.Dauvaomet.Name].ToString();
                     txt_DAUVAOKG.Text = _Rowview.Row[KetquahoanthienFields.Dauvaokg.Name].ToString();
-                    txt_THOIGIANBATDAU.Text = _Rowview.Row[KetquahoanthienFields.Thoigianbatdau.Name].ToString();
-                    txt_THOIGIANKETTHUC.Text = _Rowview.Row[KetquahoanthienFields.Thoigianketthuc.Name].ToString();
+                    txt_THOIGIANBATDAU.Text = Convert.ToDateTime(_Rowview.Row[KetquachiaFields.Thoigianbatdau.Name].ToString()).ToString("hh:mm tt dd/MM/yyyy");
+                    txt_THOIGIANKETTHUC.Text = Convert.ToDateTime(_Rowview.Row[KetquachiaFields.Thoigianketthuc.Name].ToString()).ToString("hh:mm tt dd/MM/yyyy");
                     txt_THOIGIANCHUANBI.Text = _Rowview.Row[KetquahoanthienFields.Thoigianchuanbi.Name].ToString();
                     txt_THOIGIANLENHACUON.Text = _Rowview.Row[KetquahoanthienFields.Thoigianlenhacuon.Name].ToString();
                     txt_THOIGIANCATDAU.Text = _Rowview.Row[KetquahoanthienFields.Thoigiancatdau.Name].ToString();

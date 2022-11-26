@@ -178,8 +178,8 @@ namespace GD.BBPH.APP.TUA
                     txt_KHOILUONGVAO.Text = _Rowview.Row[KetquatuaFields.SoKgvao.Name].ToString();
                     txt_SOMETRA.Text = _Rowview.Row[KetquatuaFields.SoMetra.Name].ToString();
                     txt_KHOILUONGRA.Text = _Rowview.Row[KetquatuaFields.SoKgra.Name].ToString();
-                    txt_THOIGIANBATDAU.Text = _Rowview.Row[KetquatuaFields.Thoigianbatdau.Name].ToString();
-                    txt_THOIGIANKETTHUC.Text = _Rowview.Row[KetquatuaFields.Thoigianketthuc.Name].ToString();
+                    txt_THOIGIANBATDAU.Text = Convert.ToDateTime(_Rowview.Row[KetquachiaFields.Thoigianbatdau.Name].ToString()).ToString("hh:mm tt dd/MM/yyyy");
+                    txt_THOIGIANKETTHUC.Text = Convert.ToDateTime(_Rowview.Row[KetquachiaFields.Thoigianketthuc.Name].ToString()).ToString("hh:mm tt dd/MM/yyyy");
                     txt_THOIGIANLENHACUON.Text = _Rowview.Row[KetquatuaFields.Thoigianhacuon.Name].ToString();
                     txt_THOIGIANCATDAU.Text = _Rowview.Row[KetquatuaFields.Thoigiancatdau.Name].ToString();
                     txt_THOIGIANDOILENH.Text = _Rowview.Row[KetquatuaFields.Thoigiandoilenh.Name].ToString();
