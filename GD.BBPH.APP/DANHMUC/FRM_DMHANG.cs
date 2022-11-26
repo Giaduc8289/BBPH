@@ -128,7 +128,7 @@ namespace GD.BBPH.APP.DANHMUC
         public FRM_DMHANG()
         {
             InitializeComponent();
-            DataTable dt111 = new DmhangManager().Clone();
+            //DataTable dt111 = new DmhangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml");
             //dt111 = new MaucuahangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MAUCUAHANG.xml");
@@ -136,8 +136,8 @@ namespace GD.BBPH.APP.DANHMUC
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_TRUCCUAHANG.xml");
             //dt111 = new MangcuahangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MANGCUAHANG.xml");
-            dt111 = new KeocuahangManager().Clone();
-            GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KEOCUAHANG.xml");
+            //dt111 = new KeocuahangManager().Clone();
+            //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KEOCUAHANG.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -160,6 +160,8 @@ namespace GD.BBPH.APP.DANHMUC
             GRID_TRUCCUAHANG.GroupByBoxVisible = false;
             GRID_MANGCUAHANG.FilterMode = FilterMode.None;
             GRID_MANGCUAHANG.GroupByBoxVisible = false;
+            GRID_KEOCUAHANG.FilterMode = FilterMode.None;
+            GRID_KEOCUAHANG.GroupByBoxVisible = false;
 
             GRID_MAUCUAHANG.COMBO_MULTICOLUMN(GRID_MAUCUAHANG, MaucuahangFields.Mamau.Name, DmmauFields.Tenmau.Name, DmmauFields.Mamau.Name, DmmauFields.Mamau.Name, DT_DMMAU);
             GRID_MAUCUAHANG.CellEdited += GRID_MAUCUAHANG_CellEdited;
@@ -762,6 +764,7 @@ namespace GD.BBPH.APP.DANHMUC
             _DmhangEntity.Cautruc = txt_CAUTRUC.Text.Trim();
 
             #region Lấy dữ liệu lưới chi tiết
+            #region Lấy dữ liệu lưới màu của hàng
             EntityCollection _MaucuahangEntityCol = new EntityCollection();
             GridEXRow[] listGrid = GRID_MAUCUAHANG.GetDataRows();
             foreach (GridEXRow _grid in listGrid)
@@ -799,6 +802,8 @@ namespace GD.BBPH.APP.DANHMUC
 
                 _MaucuahangEntityCol.Add(_MaucuahangEntity);
             }
+            #endregion
+            #region Lấy dữ liệu lưới trục của hàng
             EntityCollection _TruccuahangEntityCol = new EntityCollection();
             GridEXRow[] listGridTruc = GRID_TRUCCUAHANG.GetDataRows();
             foreach (GridEXRow _grid in listGridTruc)
@@ -834,6 +839,8 @@ namespace GD.BBPH.APP.DANHMUC
 
                 _TruccuahangEntityCol.Add(_TruccuahangEntity);
             }
+            #endregion
+            #region Lấy dữ liệu lưới màng của hàng
             EntityCollection _MangcuahangEntityCol = new EntityCollection();
             GridEXRow[] listGridMang = GRID_MANGCUAHANG.GetDataRows();
             foreach (GridEXRow _grid in listGridMang)
@@ -845,6 +852,8 @@ namespace GD.BBPH.APP.DANHMUC
                 _MangcuahangEntity.Masp = txt_MASP.Text.Trim();
                 _MangcuahangEntity.Tensp = txt_TENSP.Text.Trim();
                 _MangcuahangEntity.Mangin = Convert.ToBoolean(_view[MangcuahangFields.Mangin.Name].ToString());
+                try { _MangcuahangEntity.Thutulopghep = Convert.ToInt32(_view[MangcuahangFields.Thutulopghep.Name].ToString()); }
+                catch { }
                 _MangcuahangEntity.Mamang = _view[MangcuahangFields.Mamang.Name].ToString();
                 _MangcuahangEntity.Tenmang = _view[MangcuahangFields.Tenmang.Name].ToString();
                 _MangcuahangEntity.Doday = LIB.ConvertString.NumbertoDB(_view[MangcuahangFields.Doday.Name].ToString());
@@ -886,6 +895,44 @@ namespace GD.BBPH.APP.DANHMUC
                 _MangcuahangEntityCol.Add(_MangcuahangEntity);
             }
             #endregion
+            #region Lấy dữ liệu lưới keo của hàng
+            EntityCollection _KeocuahangEntityCol = new EntityCollection();
+            GridEXRow[] listGridKeo = GRID_KEOCUAHANG.GetDataRows();
+            foreach (GridEXRow _grid in listGridKeo)
+            {
+                DataRowView _view = (DataRowView)_grid.DataRow;
+                if (_view == null) continue;
+                KeocuahangEntity _KeocuahangEntity = new KeocuahangEntity();
+
+                _KeocuahangEntity.Masp = txt_MASP.Text.Trim();
+                _KeocuahangEntity.Tensp = txt_TENSP.Text.Trim();
+                _KeocuahangEntity.MakeoDongran = _view[KeocuahangFields.MakeoDongran.Name].ToString();
+                _KeocuahangEntity.TenkeoDongran = _view[KeocuahangFields.TenkeoDongran.Name].ToString();
+                _KeocuahangEntity.DinhmuckeoDongran = LIB.ConvertString.NumbertoDB(_view[KeocuahangFields.DinhmuckeoDongran.Name].ToString());
+
+                try { _KeocuahangEntity.Id = Convert.ToInt64(_view[KeocuahangFields.Id.Name].ToString()); }
+                catch { }
+                _KeocuahangEntity.IsNew = _view.Row.RowState == DataRowState.Added ? true : false;
+                if (_KeocuahangEntity.IsNew)
+                {
+                    EntityCollection drDHCT = (new KeocuahangManager()).SelectById(_KeocuahangEntity.Id);
+                    if (drDHCT.Count > 0)
+                    {
+                        _KeocuahangEntity.Ngaysua = DateTime.Now;
+                        _KeocuahangEntity.Nguoisua = LIB.SESSION_START.TS_USER_LOGIN;
+                        _KeocuahangEntity.IsNew = false;
+                    }
+                    else
+                    {
+                        _KeocuahangEntity.Ngaytao = DateTime.Now;
+                        _KeocuahangEntity.Nguoitao = LIB.SESSION_START.TS_USER_LOGIN;
+                    }
+                }
+
+                _KeocuahangEntityCol.Add(_KeocuahangEntity);
+            }
+            #endregion
+            #endregion
 
             if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
@@ -895,6 +942,7 @@ namespace GD.BBPH.APP.DANHMUC
                 new MaucuahangManager().InsertCollection(_MaucuahangEntityCol);
                 new TruccuahangManager().InsertCollection(_TruccuahangEntityCol);
                 new MangcuahangManager().InsertCollection(_MangcuahangEntityCol);
+                new KeocuahangManager().InsertCollection(_KeocuahangEntityCol);
                 GRID_MAUCUAHANG.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_MAUCUAHANG.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
                 GRID_MAUCUAHANG.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.False;
@@ -942,6 +990,16 @@ namespace GD.BBPH.APP.DANHMUC
                         new MangcuahangManager().InsertV2(_MangcuahangEntity, _r_Insert, DT_MANGCUAHANG, BS_MANGCUAHANG);
                     }
                     else new MangcuahangManager().Update(_MangcuahangEntity);
+                }
+                foreach (KeocuahangEntity _KeocuahangEntity in _KeocuahangEntityCol)
+                {
+                    if (_KeocuahangEntity.IsNew)
+                    {
+                        DataRow _r_Insert = DT_KEOCUAHANG.NewRow();
+                        DT_KEOCUAHANG.Rows.Add(_r_Insert);
+                        new KeocuahangManager().InsertV2(_KeocuahangEntity, _r_Insert, DT_KEOCUAHANG, BS_KEOCUAHANG);
+                    }
+                    else new KeocuahangManager().Update(_KeocuahangEntity);
                 }
                 #region Update lưới chính
                 GRID_DMHANGHOA.CurrentRow.Cells[DmhangFields.Masp.Name].Value = _DmhangEntity.Masp;

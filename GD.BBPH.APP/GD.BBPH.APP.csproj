@@ -1213,6 +1213,7 @@
     <Content Include="XMLCONFIG\FRM_DONHANG_D.xml" />
     <Content Include="XMLCONFIG\FRM_DONHANG_H.xml" />
     <Content Include="XMLCONFIG\FRM_HANGTRALAI.xml" />
+    <Content Include="XMLCONFIG\FRM_KEOCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANG.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANGCHITIET.xml">
       <SubType>Designer</SubType>
