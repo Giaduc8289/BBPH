@@ -102,6 +102,15 @@
     <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tonkhotoithieu</name>
+    <headerText>Tồn kho tối thiểu</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>60</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
   <tablename>
     <name>Dmnguyenlieu</name>
     <headerText>Danh sách nguyên liệu</headerText>

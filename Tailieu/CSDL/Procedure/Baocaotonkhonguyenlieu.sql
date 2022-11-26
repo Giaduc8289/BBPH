@@ -66,9 +66,9 @@ With Encryption As
 	From #Xuat
 	
 	Select Makho, Tenkho, Manguyenlieu, Tennguyenlieu
-		, SUM(Soluong) As Soluong, Donvitinh
-	From #Ketqua
-	Group By Makho, Tenkho, Manguyenlieu, Tennguyenlieu, Donvitinh
+		, SUM(Soluong) As Soluong, Donvitinh, Tonkhotoithieu
+	From #Ketqua LEFT JOIN dbo.Dmnguyenlieu ON Manl = Manguyenlieu
+	Group By Makho, Tenkho, Manguyenlieu, Tennguyenlieu, Donvitinh, Tonkhotoithieu
 	
 GO
 

@@ -121,6 +121,7 @@ namespace GD.BBPH.APP.DANHMUC
             try
             {
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_DMNGUYENLIEU_H.UpdateData();
                 if (BS_DMNGUYENLIEU_H.Current != null)
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_DMNGUYENLIEU_H.Current;
@@ -129,7 +130,7 @@ namespace GD.BBPH.APP.DANHMUC
 
                     txt_MANL.Text = _Rowview.Row[DmnguyenlieuFields.Manl.Name].ToString();
                     txt_TENNL.Text = _Rowview.Row[DmnguyenlieuFields.Tennl.Name].ToString();
-                    txt_TENRUTGON.Text = _Rowview.Row[DmnguyenlieuFields.Tenrutgon.Name].ToString();
+                    txt_TONKHOMIN.Text = _Rowview.Row[DmnguyenlieuFields.Tonkhotoithieu.Name].ToString();
                     txt_MANHOM.Text = _Rowview.Row[DmnguyenlieuFields.Manhom.Name].ToString();
                     txt_GIA.Text = _Rowview.Row[DmnguyenlieuFields.Gia.Name].ToString();
 
@@ -259,7 +260,7 @@ namespace GD.BBPH.APP.DANHMUC
 
             _DmnguyenlieuHEntity.Manl = txt_MANL.Text.Trim();
             _DmnguyenlieuHEntity.Tennl = txt_TENNL.Text.Trim();
-            _DmnguyenlieuHEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
+            _DmnguyenlieuHEntity.Tonkhotoithieu = Convert.ToDecimal(txt_TONKHOMIN.Text.Trim());
             _DmnguyenlieuHEntity.Manhom = txt_MANHOM.Text.Trim();
             _DmnguyenlieuHEntity.Tennhom = txt_TENNHOM.Text.Trim();
 
@@ -272,7 +273,7 @@ namespace GD.BBPH.APP.DANHMUC
                 DmnguyenlieuEntity _DmnguyenlieuEntity = new DmnguyenlieuEntity();
                 _DmnguyenlieuEntity.Manl = txt_MANL.Text.Trim();
                 _DmnguyenlieuEntity.Tennl = txt_TENNL.Text.Trim();
-                _DmnguyenlieuEntity.Tenrutgon = txt_TENRUTGON.Text.Trim();
+                _DmnguyenlieuEntity.Tonkhotoithieu = Convert.ToDecimal(txt_TONKHOMIN.Text.Trim());
                 _DmnguyenlieuEntity.Manhom = txt_MANHOM.Text.Trim();
                 _DmnguyenlieuEntity.Tennhom = txt_TENNHOM.Text.Trim();
                 try { _DmnguyenlieuEntity.Gia = _DmnguyenlieuEntity.Giahientai = LIB.ConvertString.NumbertoDB(_view[DmnguyenlieuFields.Gia.Name].ToString()); }
@@ -301,7 +302,7 @@ namespace GD.BBPH.APP.DANHMUC
                 _str_DMCHUONG_PK = _DmnguyenlieuHEntity.Manl;// _DmnguyenlieuManager.InsertV2(_DmnguyenlieuHEntity, r_Insert, DT_DMNGUYENLIEU_H, BS_DMNGUYENLIEU_H);
                 r_Insert.SetField(DmnguyenlieuFields.Manl.Name, _DmnguyenlieuHEntity.Manl);
                 r_Insert.SetField(DmnguyenlieuFields.Tennl.Name, _DmnguyenlieuHEntity.Tennl);
-                r_Insert.SetField(DmnguyenlieuFields.Tenrutgon.Name, _DmnguyenlieuHEntity.Tenrutgon);
+                r_Insert.SetField(DmnguyenlieuFields.Tonkhotoithieu.Name, _DmnguyenlieuHEntity.Tonkhotoithieu);
                 r_Insert.SetField(DmnguyenlieuFields.Manhom.Name, _DmnguyenlieuHEntity.Manhom);
                 r_Insert.SetField(DmnguyenlieuFields.Tennhom.Name, _DmnguyenlieuHEntity.Tennhom);
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmnguyenlieuManager.Convert(_DmnguyenlieuHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_INSERT, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
@@ -327,7 +328,7 @@ namespace GD.BBPH.APP.DANHMUC
                 //_DmnguyenlieuManager.Update(_DmnguyenlieuEntity);
                 GRID_DMNGUYENLIEU_H.CurrentRow.Cells[DmnguyenlieuFields.Manl.Name].Value = _DmnguyenlieuHEntity.Manl;
                 GRID_DMNGUYENLIEU_H.CurrentRow.Cells[DmnguyenlieuFields.Tennl.Name].Value = _DmnguyenlieuHEntity.Tennl;
-                GRID_DMNGUYENLIEU_H.CurrentRow.Cells[DmnguyenlieuFields.Tenrutgon.Name].Value = _DmnguyenlieuHEntity.Tenrutgon;
+                GRID_DMNGUYENLIEU_H.CurrentRow.Cells[DmnguyenlieuFields.Tonkhotoithieu.Name].Value = _DmnguyenlieuHEntity.Tonkhotoithieu;
                 GRID_DMNGUYENLIEU_H.CurrentRow.Cells[DmnguyenlieuFields.Manhom.Name].Value = _DmnguyenlieuHEntity.Manhom;
                 GRID_DMNGUYENLIEU_H.CurrentRow.Cells[DmnguyenlieuFields.Tennhom.Name].Value = _DmnguyenlieuHEntity.Tennhom;
                 DataTable dt = LIB.Procedures.Danhsachnguyenlieu(_DmnguyenlieuHEntity.Manl, string.Empty, LIB.SESSION_START.TS_NGAYCUOITHANG);
