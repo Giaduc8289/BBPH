@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 25, 2022 4:31:49 PM
+// Code is generated on: Friday, November 25, 2022 4:31:50 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -17,20 +17,20 @@ using SD.LLBLGen.Pro.ORMSupportClasses;
 
 namespace GD.BBPH.DAL.RelationClasses
 {
-	/// <summary>Implements the static Relations variant for the entity: Dmnhomnguyenlieu. </summary>
-	public partial class DmnhomnguyenlieuRelations
+	/// <summary>Implements the static Relations variant for the entity: Keocuahang. </summary>
+	public partial class KeocuahangRelations
 	{
 		/// <summary>CTor</summary>
-		public DmnhomnguyenlieuRelations()
+		public KeocuahangRelations()
 		{
 		}
 
-		/// <summary>Gets all relations of the DmnhomnguyenlieuEntity as a list of IEntityRelation objects.</summary>
+		/// <summary>Gets all relations of the KeocuahangEntity as a list of IEntityRelation objects.</summary>
 		/// <returns>a list of IEntityRelation objects</returns>
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
-			toReturn.Add(this.DmnguyenlieuEntityUsingManhom);
+
 
 
 			return toReturn;
@@ -38,20 +38,6 @@ namespace GD.BBPH.DAL.RelationClasses
 
 		#region Class Property Declarations
 
-		/// <summary>Returns a new IEntityRelation object, between DmnhomnguyenlieuEntity and DmnguyenlieuEntity over the 1:n relation they have, using the relation between the fields:
-		/// Dmnhomnguyenlieu.Manhom - Dmnguyenlieu.Manhom
-		/// </summary>
-		public virtual IEntityRelation DmnguyenlieuEntityUsingManhom
-		{
-			get
-			{
-				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Dmnguyenlieu" , true);
-				relation.AddEntityFieldPair(DmnhomnguyenlieuFields.Manhom, DmnguyenlieuFields.Manhom);
-				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmnhomnguyenlieuEntity", true);
-				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmnguyenlieuEntity", false);
-				return relation;
-			}
-		}
 
 
 

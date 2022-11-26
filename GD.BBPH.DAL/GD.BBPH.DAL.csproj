@@ -149,6 +149,7 @@
     <Compile Include="DatabaseGeneric\EntityClasses\DonhangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DonhangHEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\HangtralaiEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KeocuahangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\KetquachiaEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\KetquaghepEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\KetquahoanthienEntity.cs" />
@@ -260,6 +261,7 @@
     <Compile Include="DatabaseGeneric\RelationClasses\DonhangHRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DynamicRelation.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\HangtralaiRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KeocuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\KetquachiaRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\KetquaghepRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\KetquahoanthienRelations.cs" />

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 19, 2022 7:55:25 PM
+// Code is generated on: Friday, November 25, 2022 4:31:49 PM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -153,6 +153,9 @@ namespace GD.BBPH.DAL.Linq
 					break;
 				case GD.BBPH.DAL.EntityType.HangtralaiEntity:
 					toReturn = this.Hangtralai;
+					break;
+				case GD.BBPH.DAL.EntityType.KeocuahangEntity:
+					toReturn = this.Keocuahang;
 					break;
 				case GD.BBPH.DAL.EntityType.KetquachiaEntity:
 					toReturn = this.Ketquachia;
@@ -432,6 +435,12 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<HangtralaiEntity> Hangtralai
 		{
 			get { return new DataSource2<HangtralaiEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KeocuahangEntity instances in the database.</summary>
+		public DataSource2<KeocuahangEntity> Keocuahang
+		{
+			get { return new DataSource2<KeocuahangEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting KetquachiaEntity instances in the database.</summary>

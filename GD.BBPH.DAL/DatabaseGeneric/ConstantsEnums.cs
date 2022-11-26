@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 19, 2022 7:55:25 PM
+// Code is generated on: Friday, November 25, 2022 4:31:49 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -893,6 +893,8 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Tonkhotoithieu. </summary>
+		Tonkhotoithieu,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1133,6 +1135,36 @@ namespace GD.BBPH.DAL
 		Soluongtra,
 		///<summary>Nguyennhan. </summary>
 		Nguyennhan,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Keocuahang.
+	/// </summary>
+	public enum KeocuahangFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tensp. </summary>
+		Tensp,
+		///<summary>MakeoDongran. </summary>
+		MakeoDongran,
+		///<summary>TenkeoDongran. </summary>
+		TenkeoDongran,
+		///<summary>DinhmuckeoDongran. </summary>
+		DinhmuckeoDongran,
 		///<summary>Ngaytao. </summary>
 		Ngaytao,
 		///<summary>Nguoitao. </summary>
@@ -1747,6 +1779,8 @@ namespace GD.BBPH.DAL
 		Maloaimang,
 		///<summary>Tenloaimang. </summary>
 		Tenloaimang,
+		///<summary>Thutulopghep. </summary>
+		Thutulopghep,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1869,6 +1903,8 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Cuondo. </summary>
+		Cuondo,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -2506,6 +2542,8 @@ namespace GD.BBPH.DAL
 		DonhangHEntity,
 		///<summary>Hangtralai</summary>
 		HangtralaiEntity,
+		///<summary>Keocuahang</summary>
+		KeocuahangEntity,
 		///<summary>Ketquachia</summary>
 		KetquachiaEntity,
 		///<summary>Ketquaghep</summary>

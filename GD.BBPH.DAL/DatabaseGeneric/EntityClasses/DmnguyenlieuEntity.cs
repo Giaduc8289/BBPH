@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 19, 2022 7:55:26 PM
+// Code is generated on: Friday, November 25, 2022 4:31:51 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -507,6 +507,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tonkhotoithieu", fieldHashtable);
 		}
 		#endregion
 
@@ -778,6 +781,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmnguyenlieuFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)DmnguyenlieuFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Tonkhotoithieu property of the Entity Dmnguyenlieu<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmnguyenlieu"."Tonkhotoithieu"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Tonkhotoithieu
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmnguyenlieuFieldIndex.Tonkhotoithieu, false); }
+			set	{ SetValue((int)DmnguyenlieuFieldIndex.Tonkhotoithieu, value); }
 		}
 
 

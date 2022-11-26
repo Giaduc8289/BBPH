@@ -58,6 +58,8 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Nguoisua="Nguoisua";				
 		
+		public const String Field_Cuondo="Cuondo";				
+		
 				
 		#endregion	
 
@@ -104,6 +106,8 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Ngaysua,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
+			
+			dt.Columns.Add(Field_Cuondo,typeof(System.Boolean));
 									
 		            
 			return dt;			
@@ -210,6 +214,12 @@ namespace GD.BBPH.BLL
 				r[Field_Nguoisua]=_NhapkhomangEntity.Nguoisua;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_Cuondo]=_NhapkhomangEntity.Cuondo;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -312,6 +322,12 @@ namespace GD.BBPH.BLL
 				_NhapkhomangEntity.Nguoisua= r[Field_Nguoisua].ToString();						
 			}
 			catch { }
+			
+			try
+			{
+				_NhapkhomangEntity.Cuondo= System.Boolean.Parse(r[Field_Cuondo].ToString());						
+			}
+			catch { }
 									
 									
 			return _NhapkhomangEntity;
@@ -352,6 +368,8 @@ namespace GD.BBPH.BLL
 			_NhapkhomangEntity.Ngaysua= _NhapkhomangEntity_XML.Ngaysua;
 			
 			_NhapkhomangEntity.Nguoisua= _NhapkhomangEntity_XML.Nguoisua;
+			
+			_NhapkhomangEntity.Cuondo= _NhapkhomangEntity_XML.Cuondo;
 									
 				
 			return _NhapkhomangEntity;
@@ -462,6 +480,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_NhapkhomangEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Cuondo,_NhapkhomangEntity.Cuondo);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -567,6 +591,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_NhapkhomangEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Cuondo,_NhapkhomangEntity.Cuondo);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -589,7 +619,7 @@ namespace GD.BBPH.BLL
 			return NhapkhomangEntity;
 		}
 
-		public NhapkhomangEntity Insert(System.Int64  Id, System.DateTime  Ngaynhap, System.String  Makho, System.String  Tenkho, System.String  Mamang, System.String  Tenmang, System.Decimal  Somet, System.Decimal  Sokg, System.String  Malydo, System.String  Tenlydo, System.String  Lenhsx, System.String  Sohopdongmua, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public NhapkhomangEntity Insert(System.Int64  Id, System.DateTime  Ngaynhap, System.String  Makho, System.String  Tenkho, System.String  Mamang, System.String  Tenmang, System.Decimal  Somet, System.Decimal  Sokg, System.String  Malydo, System.String  Tenlydo, System.String  Lenhsx, System.String  Sohopdongmua, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Boolean  Cuondo)
 		{
 			NhapkhomangEntity _NhapkhomangEntity = new NhapkhomangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -626,6 +656,8 @@ namespace GD.BBPH.BLL
 				_NhapkhomangEntity.Ngaysua = Ngaysua;
 				
 				_NhapkhomangEntity.Nguoisua = Nguoisua;
+				
+				_NhapkhomangEntity.Cuondo = Cuondo;
 					
 					
 				adapter.SaveEntity(_NhapkhomangEntity, true);
@@ -633,7 +665,7 @@ namespace GD.BBPH.BLL
 			return _NhapkhomangEntity;
 		}
 
-		public NhapkhomangEntity Insert(System.DateTime Ngaynhap, System.String Makho, System.String Tenkho, System.String Mamang, System.String Tenmang, System.Decimal Somet, System.Decimal Sokg, System.String Malydo, System.String Tenlydo, System.String Lenhsx, System.String Sohopdongmua, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public NhapkhomangEntity Insert(System.DateTime Ngaynhap, System.String Makho, System.String Tenkho, System.String Mamang, System.String Tenmang, System.Decimal Somet, System.Decimal Sokg, System.String Malydo, System.String Tenlydo, System.String Lenhsx, System.String Sohopdongmua, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Boolean Cuondo)//ko co mahieu
 		{
 			NhapkhomangEntity _NhapkhomangEntity = new NhapkhomangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -669,6 +701,8 @@ namespace GD.BBPH.BLL
 				_NhapkhomangEntity.Ngaysua = Ngaysua;
 				
 				_NhapkhomangEntity.Nguoisua = Nguoisua;
+				
+				_NhapkhomangEntity.Cuondo = Cuondo;
 					
 
 				adapter.SaveEntity(_NhapkhomangEntity, true);
@@ -706,7 +740,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.DateTime Ngaynhap, System.String Makho, System.String Tenkho, System.String Mamang, System.String Tenmang, System.Decimal Somet, System.Decimal Sokg, System.String Malydo, System.String Tenlydo, System.String Lenhsx, System.String Sohopdongmua, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.Int64 Id, System.DateTime Ngaynhap, System.String Makho, System.String Tenkho, System.String Mamang, System.String Tenmang, System.Decimal Somet, System.Decimal Sokg, System.String Malydo, System.String Tenlydo, System.String Lenhsx, System.String Sohopdongmua, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Boolean Cuondo)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -746,6 +780,8 @@ namespace GD.BBPH.BLL
 					_NhapkhomangEntity.Ngaysua = Ngaysua;
 					
 					_NhapkhomangEntity.Nguoisua = Nguoisua;
+					
+					_NhapkhomangEntity.Cuondo = Cuondo;
 						
 
 					adapter.SaveEntity(_NhapkhomangEntity, true);
@@ -1027,6 +1063,22 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(NhapkhomangFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("NhapkhomangEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByCuondo(System.Boolean Cuondo)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(NhapkhomangFields.Cuondo == Cuondo);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1611,6 +1663,40 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(NhapkhomangFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_NhapkhomangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByCuondo(System.Boolean Cuondo)
+		{
+			EntityCollection _NhapkhomangCollection = new EntityCollection(new NhapkhomangEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(NhapkhomangFields.Cuondo == Cuondo);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_NhapkhomangCollection, filter, 0, null);
+			}
+			return _NhapkhomangCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByCuondoRDT(System.Boolean Cuondo)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _NhapkhomangCollection = new EntityCollection(new NhapkhomangEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(NhapkhomangFields.Cuondo == Cuondo);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

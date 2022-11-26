@@ -56,6 +56,8 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Nguoisua="Nguoisua";				
 		
+		public const String Field_Tonkhotoithieu="Tonkhotoithieu";				
+		
 				
 		#endregion	
 
@@ -100,6 +102,8 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Ngaysua,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
+			
+			dt.Columns.Add(Field_Tonkhotoithieu,typeof(System.Decimal));
 									
 		            
 			return dt;			
@@ -200,6 +204,12 @@ namespace GD.BBPH.BLL
 				r[Field_Nguoisua]=_DmnguyenlieuEntity.Nguoisua;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_Tonkhotoithieu]=_DmnguyenlieuEntity.Tonkhotoithieu;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -296,6 +306,12 @@ namespace GD.BBPH.BLL
 				_DmnguyenlieuEntity.Nguoisua= r[Field_Nguoisua].ToString();						
 			}
 			catch { }
+			
+			try
+			{
+				_DmnguyenlieuEntity.Tonkhotoithieu= System.Decimal.Parse(r[Field_Tonkhotoithieu].ToString());						
+			}
+			catch { }
 									
 									
 			return _DmnguyenlieuEntity;
@@ -334,6 +350,8 @@ namespace GD.BBPH.BLL
 			_DmnguyenlieuEntity.Ngaysua= _DmnguyenlieuEntity_XML.Ngaysua;
 			
 			_DmnguyenlieuEntity.Nguoisua= _DmnguyenlieuEntity_XML.Nguoisua;
+			
+			_DmnguyenlieuEntity.Tonkhotoithieu= _DmnguyenlieuEntity_XML.Tonkhotoithieu;
 									
 				
 			return _DmnguyenlieuEntity;
@@ -438,6 +456,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_DmnguyenlieuEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Tonkhotoithieu,_DmnguyenlieuEntity.Tonkhotoithieu);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -537,6 +561,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_DmnguyenlieuEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Tonkhotoithieu,_DmnguyenlieuEntity.Tonkhotoithieu);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -559,7 +589,7 @@ namespace GD.BBPH.BLL
 			return DmnguyenlieuEntity;
 		}
 
-		public DmnguyenlieuEntity Insert(System.Int64  Id, System.String  Manl, System.String  Tennl, System.String  Tenrutgon, System.String  Manhom, System.String  Tennhom, System.Decimal  Gia, System.DateTime  Ngay, System.Decimal  Giahientai, System.Decimal  Tang, System.Decimal  Giam, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public DmnguyenlieuEntity Insert(System.Int64  Id, System.String  Manl, System.String  Tennl, System.String  Tenrutgon, System.String  Manhom, System.String  Tennhom, System.Decimal  Gia, System.DateTime  Ngay, System.Decimal  Giahientai, System.Decimal  Tang, System.Decimal  Giam, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Decimal  Tonkhotoithieu)
 		{
 			DmnguyenlieuEntity _DmnguyenlieuEntity = new DmnguyenlieuEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -594,6 +624,8 @@ namespace GD.BBPH.BLL
 				_DmnguyenlieuEntity.Ngaysua = Ngaysua;
 				
 				_DmnguyenlieuEntity.Nguoisua = Nguoisua;
+				
+				_DmnguyenlieuEntity.Tonkhotoithieu = Tonkhotoithieu;
 					
 					
 				adapter.SaveEntity(_DmnguyenlieuEntity, true);
@@ -601,7 +633,7 @@ namespace GD.BBPH.BLL
 			return _DmnguyenlieuEntity;
 		}
 
-		public DmnguyenlieuEntity Insert(System.String Manl, System.String Tennl, System.String Tenrutgon, System.String Manhom, System.String Tennhom, System.Decimal Gia, System.DateTime Ngay, System.Decimal Giahientai, System.Decimal Tang, System.Decimal Giam, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public DmnguyenlieuEntity Insert(System.String Manl, System.String Tennl, System.String Tenrutgon, System.String Manhom, System.String Tennhom, System.Decimal Gia, System.DateTime Ngay, System.Decimal Giahientai, System.Decimal Tang, System.Decimal Giam, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Tonkhotoithieu)//ko co mahieu
 		{
 			DmnguyenlieuEntity _DmnguyenlieuEntity = new DmnguyenlieuEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -635,6 +667,8 @@ namespace GD.BBPH.BLL
 				_DmnguyenlieuEntity.Ngaysua = Ngaysua;
 				
 				_DmnguyenlieuEntity.Nguoisua = Nguoisua;
+				
+				_DmnguyenlieuEntity.Tonkhotoithieu = Tonkhotoithieu;
 					
 
 				adapter.SaveEntity(_DmnguyenlieuEntity, true);
@@ -672,7 +706,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.String Manl, System.String Tennl, System.String Tenrutgon, System.String Manhom, System.String Tennhom, System.Decimal Gia, System.DateTime Ngay, System.Decimal Giahientai, System.Decimal Tang, System.Decimal Giam, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.Int64 Id, System.String Manl, System.String Tennl, System.String Tenrutgon, System.String Manhom, System.String Tennhom, System.Decimal Gia, System.DateTime Ngay, System.Decimal Giahientai, System.Decimal Tang, System.Decimal Giam, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Tonkhotoithieu)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -710,6 +744,8 @@ namespace GD.BBPH.BLL
 					_DmnguyenlieuEntity.Ngaysua = Ngaysua;
 					
 					_DmnguyenlieuEntity.Nguoisua = Nguoisua;
+					
+					_DmnguyenlieuEntity.Tonkhotoithieu = Tonkhotoithieu;
 						
 
 					adapter.SaveEntity(_DmnguyenlieuEntity, true);
@@ -975,6 +1011,22 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DmnguyenlieuFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmnguyenlieuEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByTonkhotoithieu(System.Decimal Tonkhotoithieu)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmnguyenlieuFields.Tonkhotoithieu == Tonkhotoithieu);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1525,6 +1577,40 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DmnguyenlieuFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmnguyenlieuCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByTonkhotoithieu(System.Decimal Tonkhotoithieu)
+		{
+			EntityCollection _DmnguyenlieuCollection = new EntityCollection(new DmnguyenlieuEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmnguyenlieuFields.Tonkhotoithieu == Tonkhotoithieu);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmnguyenlieuCollection, filter, 0, null);
+			}
+			return _DmnguyenlieuCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByTonkhotoithieuRDT(System.Decimal Tonkhotoithieu)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmnguyenlieuCollection = new EntityCollection(new DmnguyenlieuEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmnguyenlieuFields.Tonkhotoithieu == Tonkhotoithieu);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
