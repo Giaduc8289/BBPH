@@ -102,6 +102,8 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MASP = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pne_DSKEODR = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -111,6 +113,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiPanelManager1
@@ -124,8 +127,8 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(633, 525), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(804, 525), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(507, 525), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(947, 525), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -137,7 +140,7 @@
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(633, 525);
+            this.uiPanel0.Size = new System.Drawing.Size(507, 525);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Danh sách";
             // 
@@ -145,7 +148,7 @@
             // 
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(627, 501);
+            this.uiPanel0Container.Size = new System.Drawing.Size(501, 501);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // uiPanel1
@@ -153,14 +156,15 @@
             this.uiPanel1.CloseButtonVisible = Janus.Windows.UI.InheritableBoolean.False;
             this.uiPanel1.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
-            this.uiPanel1.Location = new System.Drawing.Point(636, 3);
+            this.uiPanel1.Location = new System.Drawing.Point(510, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(804, 525);
+            this.uiPanel1.Size = new System.Drawing.Size(947, 525);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.groupBox4);
             this.uiPanel1Container.Controls.Add(this.txt_BANGDINHDAN);
             this.uiPanel1Container.Controls.Add(this.label17);
             this.uiPanel1Container.Controls.Add(this.groupBox3);
@@ -228,7 +232,7 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(802, 501);
+            this.uiPanel1Container.Size = new System.Drawing.Size(945, 501);
             this.uiPanel1Container.TabIndex = 0;
             // 
             // txt_BANGDINHDAN
@@ -261,10 +265,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.pne_DSMANG);
             this.groupBox3.Location = new System.Drawing.Point(24, 212);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Size = new System.Drawing.Size(761, 132);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(904, 132);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách màng";
@@ -275,9 +279,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pne_DSMANG.Location = new System.Drawing.Point(4, 21);
-            this.pne_DSMANG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pne_DSMANG.Margin = new System.Windows.Forms.Padding(2);
             this.pne_DSMANG.Name = "pne_DSMANG";
-            this.pne_DSMANG.Size = new System.Drawing.Size(748, 106);
+            this.pne_DSMANG.Size = new System.Drawing.Size(891, 106);
             this.pne_DSMANG.TabIndex = 14;
             // 
             // txt_KHOMANG
@@ -475,13 +479,13 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.pne_DSTRUC);
             this.groupBox2.Location = new System.Drawing.Point(501, 349);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(322, 95);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(212, 95);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh sách trục ghép";
+            this.groupBox2.Text = "Danh sách trục";
             // 
             // pne_DSTRUC
             // 
@@ -489,9 +493,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pne_DSTRUC.Location = new System.Drawing.Point(6, 21);
-            this.pne_DSTRUC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pne_DSTRUC.Margin = new System.Windows.Forms.Padding(2);
             this.pne_DSTRUC.Name = "pne_DSTRUC";
-            this.pne_DSTRUC.Size = new System.Drawing.Size(307, 69);
+            this.pne_DSTRUC.Size = new System.Drawing.Size(197, 69);
             this.pne_DSTRUC.TabIndex = 15;
             // 
             // groupBox1
@@ -500,9 +504,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.pne_DSMAU);
             this.groupBox1.Location = new System.Drawing.Point(24, 349);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(472, 95);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
@@ -514,7 +518,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pne_DSMAU.Location = new System.Drawing.Point(4, 21);
-            this.pne_DSMAU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pne_DSMAU.Margin = new System.Windows.Forms.Padding(2);
             this.pne_DSMAU.Name = "pne_DSMAU";
             this.pne_DSMAU.Size = new System.Drawing.Size(458, 69);
             this.pne_DSMAU.TabIndex = 14;
@@ -1109,14 +1113,39 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã sản phẩm";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox4.Controls.Add(this.pne_DSKEODR);
+            this.groupBox4.Location = new System.Drawing.Point(717, 349);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Size = new System.Drawing.Size(212, 95);
+            this.groupBox4.TabIndex = 242;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Định lượng keo, đóng rắn";
+            // 
+            // pne_DSKEODR
+            // 
+            this.pne_DSKEODR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pne_DSKEODR.Location = new System.Drawing.Point(6, 21);
+            this.pne_DSKEODR.Margin = new System.Windows.Forms.Padding(2);
+            this.pne_DSKEODR.Name = "pne_DSKEODR";
+            this.pne_DSKEODR.Size = new System.Drawing.Size(197, 69);
+            this.pne_DSKEODR.TabIndex = 15;
+            // 
             // FRM_DMHANG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1443, 531);
+            this.ClientSize = new System.Drawing.Size(1460, 531);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_DMHANG";
             this.Text = "DANH MỤC CHƯƠNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRM_DMHANG_FormClosing);
@@ -1130,6 +1159,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1209,5 +1239,7 @@
         private CONTROL.LABEL label15;
         private CONTROL.TEXTBOXNUMBER txt_BANGDINHDAN;
         private CONTROL.LABEL label17;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Panel pne_DSKEODR;
     }
 }

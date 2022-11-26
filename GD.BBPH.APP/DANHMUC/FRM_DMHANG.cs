@@ -24,14 +24,15 @@ namespace GD.BBPH.APP.DANHMUC
         private DmhangManager _DmhangManager = new DmhangManager();
         private DmhangEntity _DmhangEntity = new DmhangEntity();
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-        private DataTable DT_DMHANGHOA = new DataTable(), DT_MAUCUAHANG = new DataTable(), DT_TRUCCUAHANG = new DataTable(), DT_MANGCUAHANG = new DataTable();
-        private BindingSource BS_DMHANGHOA = new BindingSource(), BS_MAUCUAHANG = new BindingSource(), BS_TRUCCUAHANG = new BindingSource(), BS_MANGCUAHANG = new BindingSource();
+        private DataTable DT_DMHANGHOA = new DataTable(), DT_MAUCUAHANG = new DataTable(), DT_TRUCCUAHANG = new DataTable(), DT_MANGCUAHANG = new DataTable(), DT_KEOCUAHANG = new DataTable();
+        private BindingSource BS_DMHANGHOA = new BindingSource(), BS_MAUCUAHANG = new BindingSource(), BS_TRUCCUAHANG = new BindingSource(), BS_MANGCUAHANG = new BindingSource(), BS_KEOCUAHANG = new BindingSource();
         private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_DMHANGHOA = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_MAUCUAHANG = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_TRUCCUAHANG = new GD.BBPH.CONTROL.JGridEX();
         private GD.BBPH.CONTROL.JGridEX GRID_MANGCUAHANG = new GD.BBPH.CONTROL.JGridEX();
-        private string FUNCTION = "LOAD", MAHIEU_PK = "", MAMAUCHITIET = "", MATRUCCHITIET = "", MAMANGCHITIET = "";
+        private GD.BBPH.CONTROL.JGridEX GRID_KEOCUAHANG = new GD.BBPH.CONTROL.JGridEX();
+        private string FUNCTION = "LOAD", MAHIEU_PK = "", MAMAUCHITIET = "", MATRUCCHITIET = "", MAMANGCHITIET = "", MAKEOCHITIET = "";
 
         private DataTable DT_DMKHACH = new DataTable(), DT_DMCHUNGLOAI = new DataTable(), DT_DMMANG = new DataTable(), DT_DMMAU = new DataTable()
             , DT_LOAIMUC = new DataTable(), DT_SOMAU = new DataTable(), DT_SOHINH = new DataTable(), DT_SOLOP = new DataTable()
@@ -127,7 +128,7 @@ namespace GD.BBPH.APP.DANHMUC
         public FRM_DMHANG()
         {
             InitializeComponent();
-            //DataTable dt111 = new DmhangManager().Clone();
+            DataTable dt111 = new DmhangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml");
             //dt111 = new MaucuahangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MAUCUAHANG.xml");
@@ -135,6 +136,8 @@ namespace GD.BBPH.APP.DANHMUC
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_TRUCCUAHANG.xml");
             //dt111 = new MangcuahangManager().Clone();
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MANGCUAHANG.xml");
+            dt111 = new KeocuahangManager().Clone();
+            GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KEOCUAHANG.xml");
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
@@ -148,6 +151,7 @@ namespace GD.BBPH.APP.DANHMUC
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MAUCUAHANG.xml", GRID_MAUCUAHANG, pne_DSMAU);
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_TRUCCUAHANG.xml", GRID_TRUCCUAHANG, pne_DSTRUC);
             GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MANGCUAHANG.xml", GRID_MANGCUAHANG, pne_DSMANG);
+            GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KEOCUAHANG.xml", GRID_KEOCUAHANG, pne_DSKEODR);
             FORM_PROCESS();
 
             GRID_MAUCUAHANG.FilterMode = FilterMode.None;
@@ -183,6 +187,186 @@ namespace GD.BBPH.APP.DANHMUC
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
             btn_THEMMOI.Focus();
         }
+
+        #region Load dữ liệu
+        void BS_DMHANGHOA_CurrentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                GRID_DMHANGHOA.UpdateData();
+                if (BS_DMHANGHOA.Current != null)
+                {
+                    DataRowView _Rowview = (DataRowView)this.BS_DMHANGHOA.Current;
+                    if (_Rowview != null)
+                        MAHIEU_PK = _Rowview.Row[DmhangFields.Masp.Name].ToString();
+
+                    txt_MASP.Text = _Rowview.Row[DmhangFields.Masp.Name].ToString();
+                    txt_TENSP.Text = _Rowview.Row[DmhangFields.Tensp.Name].ToString();
+                    txt_MAKHACH.Text = _Rowview.Row[DmhangFields.Makhach.Name].ToString();
+                    txt_TENKHACH.Text = _Rowview.Row[DmhangFields.Tenkhach.Name].ToString();
+                    txt_MASPCUAKHACH.Text = _Rowview.Row[DmhangFields.Maspcuakhach.Name].ToString();
+                    txt_TRONGLUONG.Text = _Rowview.Row[DmhangFields.Trongluong.Name].ToString();
+                    txt_RONG.Text = _Rowview.Row[DmhangFields.Rong.Name].ToString();
+                    txt_DAI.Text = _Rowview.Row[DmhangFields.Dai.Name].ToString();
+                    txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
+                    txt_SOMAUMA.Text = _Rowview.Row[DmhangFields.Somauma.Name].ToString();
+                    txt_SOHINHMA.Text = _Rowview.Row[DmhangFields.Sohinhma.Name].ToString();
+                    txt_SOLOPGHEPMA.Text = _Rowview.Row[DmhangFields.Solopghepma.Name].ToString();
+                    txt_KHOILUONGMUC.Text = _Rowview.Row[DmhangFields.Khoiluongmuc.Name].ToString();
+                    txt_KICHTHUOCTRUC.Text = _Rowview.Row[DmhangFields.Kichthuoctruc.Name].ToString();
+                    txt_VITRI.Text = _Rowview.Row[DmhangFields.Vitri.Name].ToString();
+                    txt_MAQCTHANHPHAM.Text = _Rowview.Row[DmhangFields.Maqcthanhpham.Name].ToString();
+                    txt_MAQCDONGGOI.Text = _Rowview.Row[DmhangFields.Maqcdonggoi.Name].ToString();
+                    txt_MAQCLOAITHUNG.Text = _Rowview.Row[DmhangFields.Maqcloaithung.Name].ToString();
+                    txt_KHOMANG.Text = _Rowview.Row[DmhangFields.Khomang.Name].ToString();
+                    txt_RONGCUON.Text = _Rowview.Row[DmhangFields.Rongcuon.Name].ToString();
+                    txt_DAICUON.Text = _Rowview.Row[DmhangFields.Daicuon.Name].ToString();
+                    txt_HONG.Text = _Rowview.Row[DmhangFields.Hong.Name].ToString();
+                    txt_BANGDINHDAN.Text = _Rowview.Row[DmhangFields.Bangdinhdan.Name].ToString();
+                    txt_CAUTRUC.Text = _Rowview.Row[DmhangFields.Cautruc.Name].ToString();
+
+                    txt_MAKHACH_Validating(new object(), new CancelEventArgs());
+                    //txt_MACHUNGLOAI_Validating(new object(), new CancelEventArgs());
+                    txt_MALOAIMUC_Validating(new object(), new CancelEventArgs());
+                    txt_SOMAUMA_Validating(new object(), new CancelEventArgs());
+                    txt_SOHINHMA_Validating(new object(), new CancelEventArgs());
+                    txt_SOLOPGHEPMA_Validating(new object(), new CancelEventArgs());
+                    txt_MAQCTHANHPHAM_Validating(new object(), new CancelEventArgs());
+                    txt_MAQCDONGGOI_Validating(new object(), new CancelEventArgs());
+                    txt_MAQCLOAITHUNG_Validating(new object(), new CancelEventArgs());
+
+                    SHOWGRID(MAHIEU_PK);
+                }
+                else
+                {
+                    SHOWGRID("");
+                    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmhang_CurrentChanged"); }
+        }
+        void BS_MAUCUAHANG_CurrentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (BS_MAUCUAHANG.Current != null)
+                {
+                    DataRowView _Rowview = (DataRowView)this.BS_MAUCUAHANG.Current;
+                    if (_Rowview != null)
+                        MAMAUCHITIET = _Rowview.Row[MaucuahangFields.Id.Name].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        void BS_TRUCCUAHANG_CurrentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (BS_TRUCCUAHANG.Current != null)
+                {
+                    DataRowView _Rowview = (DataRowView)this.BS_TRUCCUAHANG.Current;
+                    if (_Rowview != null)
+                        MATRUCCHITIET = _Rowview.Row[TruccuahangFields.Id.Name].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        void BS_MANGCUAHANG_CurrentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (BS_MANGCUAHANG.Current != null)
+                {
+                    DataRowView _Rowview = (DataRowView)this.BS_MANGCUAHANG.Current;
+                    if (_Rowview != null)
+                        MAMANGCHITIET = _Rowview.Row[MangcuahangFields.Id.Name].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        void BS_KEOCUAHANG_CurrentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (BS_KEOCUAHANG.Current != null)
+                {
+                    DataRowView _Rowview = (DataRowView)this.BS_KEOCUAHANG.Current;
+                    if (_Rowview != null)
+                        MAKEOCHITIET = _Rowview.Row[KeocuahangFields.Id.Name].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void SHOWGRID(string MAHIEU_PK)
+        {
+            if (string.IsNullOrEmpty(MAHIEU_PK))
+            {
+                DT_MAUCUAHANG = new MaucuahangManager().Clone();
+                BS_MAUCUAHANG = new BindingSource(DT_MAUCUAHANG, null);
+                GRID_MAUCUAHANG.DataSource = BS_MAUCUAHANG;
+
+                DT_TRUCCUAHANG = new TruccuahangManager().Clone();
+                BS_TRUCCUAHANG = new BindingSource(DT_TRUCCUAHANG, null);
+                GRID_TRUCCUAHANG.DataSource = BS_TRUCCUAHANG;
+
+                DT_MANGCUAHANG = new MangcuahangManager().Clone();
+                BS_MANGCUAHANG = new BindingSource(DT_MANGCUAHANG, null);
+                GRID_MANGCUAHANG.DataSource = BS_MANGCUAHANG;
+
+                DT_KEOCUAHANG = new KeocuahangManager().Clone();
+                BS_KEOCUAHANG = new BindingSource(DT_KEOCUAHANG, null);
+                GRID_KEOCUAHANG.DataSource = BS_KEOCUAHANG;
+            }
+            else
+            {
+                DT_MAUCUAHANG = new MaucuahangManager().SelectByMaspRDT(MAHIEU_PK);
+                DataView Source_View_Mau = new DataView(DT_MAUCUAHANG);
+                BS_MAUCUAHANG = new BindingSource();
+                BS_MAUCUAHANG.DataSource = Source_View_Mau;
+                GRID_MAUCUAHANG.DataSource = BS_MAUCUAHANG;
+
+                DT_TRUCCUAHANG = new TruccuahangManager().SelectByMaspRDT(MAHIEU_PK);
+                DataView Source_View_Truc = new DataView(DT_TRUCCUAHANG);
+                BS_TRUCCUAHANG = new BindingSource();
+                BS_TRUCCUAHANG.DataSource = Source_View_Truc;
+                GRID_TRUCCUAHANG.DataSource = BS_TRUCCUAHANG;
+
+                DT_MANGCUAHANG = new MangcuahangManager().SelectByMaspRDT(MAHIEU_PK);
+                DataView Source_View_Mang = new DataView(DT_MANGCUAHANG);
+                BS_MANGCUAHANG = new BindingSource();
+                BS_MANGCUAHANG.DataSource = Source_View_Mang;
+                GRID_MANGCUAHANG.DataSource = BS_MANGCUAHANG;
+
+                DT_KEOCUAHANG = new KeocuahangManager().SelectByMaspRDT(MAHIEU_PK);
+                DataView Source_View_Keo = new DataView(DT_KEOCUAHANG);
+                BS_KEOCUAHANG = new BindingSource();
+                BS_KEOCUAHANG.DataSource = Source_View_Keo;
+                GRID_KEOCUAHANG.DataSource = BS_KEOCUAHANG;
+            }
+            BS_MAUCUAHANG.CurrentChanged += new EventHandler(BS_MAUCUAHANG_CurrentChanged);
+            BS_MAUCUAHANG_CurrentChanged((new object()), (new EventArgs()));
+            BS_TRUCCUAHANG.CurrentChanged += new EventHandler(BS_TRUCCUAHANG_CurrentChanged);
+            BS_TRUCCUAHANG_CurrentChanged((new object()), (new EventArgs()));
+            BS_MANGCUAHANG.CurrentChanged += new EventHandler(BS_MANGCUAHANG_CurrentChanged);
+            BS_MANGCUAHANG_CurrentChanged((new object()), (new EventArgs()));
+            BS_KEOCUAHANG.CurrentChanged += new EventHandler(BS_KEOCUAHANG_CurrentChanged);
+            BS_KEOCUAHANG_CurrentChanged((new object()), (new EventArgs()));
+        }
+        #endregion
 
         #region Xử lý Grid chi tiết
         private void GRID_MAUCUAHANG_CellEdited(object sender, ColumnActionEventArgs e)
@@ -531,158 +715,6 @@ namespace GD.BBPH.APP.DANHMUC
                 return dt.Select(DmnguyenlieuFields.Manl.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
-        }
-        #endregion
-
-        #region Load dữ liệu
-        void BS_DMHANGHOA_CurrentChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-                GRID_DMHANGHOA.UpdateData();
-                if (BS_DMHANGHOA.Current != null)
-                {
-                    DataRowView _Rowview = (DataRowView)this.BS_DMHANGHOA.Current;
-                    if (_Rowview != null)
-                        MAHIEU_PK = _Rowview.Row[DmhangFields.Masp.Name].ToString();
-
-                    txt_MASP.Text = _Rowview.Row[DmhangFields.Masp.Name].ToString();
-                    txt_TENSP.Text = _Rowview.Row[DmhangFields.Tensp.Name].ToString();
-                    txt_MAKHACH.Text = _Rowview.Row[DmhangFields.Makhach.Name].ToString();
-                    txt_TENKHACH.Text = _Rowview.Row[DmhangFields.Tenkhach.Name].ToString();
-                    txt_MASPCUAKHACH.Text = _Rowview.Row[DmhangFields.Maspcuakhach.Name].ToString();
-                    txt_TRONGLUONG.Text = _Rowview.Row[DmhangFields.Trongluong.Name].ToString();
-                    txt_RONG.Text = _Rowview.Row[DmhangFields.Rong.Name].ToString();
-                    txt_DAI.Text = _Rowview.Row[DmhangFields.Dai.Name].ToString();
-                    txt_MALOAIMUC.Text = _Rowview.Row[DmhangFields.Maloaimuc.Name].ToString();
-                    txt_SOMAUMA.Text = _Rowview.Row[DmhangFields.Somauma.Name].ToString();
-                    txt_SOHINHMA.Text = _Rowview.Row[DmhangFields.Sohinhma.Name].ToString();
-                    txt_SOLOPGHEPMA.Text = _Rowview.Row[DmhangFields.Solopghepma.Name].ToString();
-                    txt_KHOILUONGMUC.Text = _Rowview.Row[DmhangFields.Khoiluongmuc.Name].ToString();
-                    txt_KICHTHUOCTRUC.Text = _Rowview.Row[DmhangFields.Kichthuoctruc.Name].ToString();
-                    txt_VITRI.Text = _Rowview.Row[DmhangFields.Vitri.Name].ToString();
-                    txt_MAQCTHANHPHAM.Text = _Rowview.Row[DmhangFields.Maqcthanhpham.Name].ToString();
-                    txt_MAQCDONGGOI.Text = _Rowview.Row[DmhangFields.Maqcdonggoi.Name].ToString();
-                    txt_MAQCLOAITHUNG.Text = _Rowview.Row[DmhangFields.Maqcloaithung.Name].ToString();
-                    txt_KHOMANG.Text = _Rowview.Row[DmhangFields.Khomang.Name].ToString();
-                    txt_RONGCUON.Text = _Rowview.Row[DmhangFields.Rongcuon.Name].ToString();
-                    txt_DAICUON.Text = _Rowview.Row[DmhangFields.Daicuon.Name].ToString();
-                    txt_HONG.Text = _Rowview.Row[DmhangFields.Hong.Name].ToString();
-                    txt_BANGDINHDAN.Text = _Rowview.Row[DmhangFields.Bangdinhdan.Name].ToString();
-                    txt_CAUTRUC.Text = _Rowview.Row[DmhangFields.Cautruc.Name].ToString();
-
-                    txt_MAKHACH_Validating(new object(), new CancelEventArgs());
-                    //txt_MACHUNGLOAI_Validating(new object(), new CancelEventArgs());
-                    txt_MALOAIMUC_Validating(new object(), new CancelEventArgs());
-                    txt_SOMAUMA_Validating(new object(), new CancelEventArgs());
-                    txt_SOHINHMA_Validating(new object(), new CancelEventArgs());
-                    txt_SOLOPGHEPMA_Validating(new object(), new CancelEventArgs());
-                    txt_MAQCTHANHPHAM_Validating(new object(), new CancelEventArgs());
-                    txt_MAQCDONGGOI_Validating(new object(), new CancelEventArgs());
-                    txt_MAQCLOAITHUNG_Validating(new object(), new CancelEventArgs());
-
-                    SHOWGRID(MAHIEU_PK);
-                }
-                else
-                {
-                    SHOWGRID("");
-                    GD.BBPH.LIB.FORM_PROCESS_UTIL.clearControls(uiPanel1Container, GD.BBPH.LIB.FORM_PROCESS_UTIL.getAllControl(uiPanel1Container));
-                }
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "BS_Dmhang_CurrentChanged"); }
-        }
-        void BS_MAUCUAHANG_CurrentChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (BS_MAUCUAHANG.Current != null)
-                {
-                    DataRowView _Rowview = (DataRowView)this.BS_MAUCUAHANG.Current;
-                    if (_Rowview != null)
-                        MAMAUCHITIET = _Rowview.Row[MaucuahangFields.Id.Name].ToString();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-        void BS_TRUCCUAHANG_CurrentChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (BS_TRUCCUAHANG.Current != null)
-                {
-                    DataRowView _Rowview = (DataRowView)this.BS_TRUCCUAHANG.Current;
-                    if (_Rowview != null)
-                        MATRUCCHITIET = _Rowview.Row[TruccuahangFields.Id.Name].ToString();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-        void BS_MANGCUAHANG_CurrentChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (BS_MANGCUAHANG.Current != null)
-                {
-                    DataRowView _Rowview = (DataRowView)this.BS_MANGCUAHANG.Current;
-                    if (_Rowview != null)
-                        MAMANGCHITIET = _Rowview.Row[MangcuahangFields.Id.Name].ToString();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Dữ liệu nhập vào chưa đúng, xin mời nhập lại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void SHOWGRID(string MAHIEU_PK)
-        {
-            if (string.IsNullOrEmpty(MAHIEU_PK))
-            {
-                DT_MAUCUAHANG = new MaucuahangManager().Clone();
-                BS_MAUCUAHANG = new BindingSource(DT_MAUCUAHANG, null);
-                GRID_MAUCUAHANG.DataSource = BS_MAUCUAHANG;
-
-                DT_TRUCCUAHANG = new TruccuahangManager().Clone();
-                BS_TRUCCUAHANG = new BindingSource(DT_TRUCCUAHANG, null);
-                GRID_TRUCCUAHANG.DataSource = BS_TRUCCUAHANG;
-
-                DT_MANGCUAHANG = new MangcuahangManager().Clone();
-                BS_MANGCUAHANG = new BindingSource(DT_MANGCUAHANG, null);
-                GRID_MANGCUAHANG.DataSource = BS_MANGCUAHANG;
-            }
-            else
-            {
-                DT_MAUCUAHANG = new MaucuahangManager().SelectByMaspRDT(MAHIEU_PK);
-                DataView Source_View_Mau = new DataView(DT_MAUCUAHANG);
-                BS_MAUCUAHANG = new BindingSource();
-                BS_MAUCUAHANG.DataSource = Source_View_Mau;
-                GRID_MAUCUAHANG.DataSource = BS_MAUCUAHANG;
-
-                DT_TRUCCUAHANG = new TruccuahangManager().SelectByMaspRDT(MAHIEU_PK);
-                DataView Source_View_Truc = new DataView(DT_TRUCCUAHANG);
-                BS_TRUCCUAHANG = new BindingSource();
-                BS_TRUCCUAHANG.DataSource = Source_View_Truc;
-                GRID_TRUCCUAHANG.DataSource = BS_TRUCCUAHANG;
-
-                DT_MANGCUAHANG = new MangcuahangManager().SelectByMaspRDT(MAHIEU_PK);
-                DataView Source_View_Mang = new DataView(DT_MANGCUAHANG);
-                BS_MANGCUAHANG = new BindingSource();
-                BS_MANGCUAHANG.DataSource = Source_View_Mang;
-                GRID_MANGCUAHANG.DataSource = BS_MANGCUAHANG;
-            }
-            BS_MAUCUAHANG.CurrentChanged += new EventHandler(BS_MAUCUAHANG_CurrentChanged);
-            BS_MAUCUAHANG_CurrentChanged((new object()), (new EventArgs()));
-            BS_TRUCCUAHANG.CurrentChanged += new EventHandler(BS_TRUCCUAHANG_CurrentChanged);
-            BS_TRUCCUAHANG_CurrentChanged((new object()), (new EventArgs()));
-            BS_MANGCUAHANG.CurrentChanged += new EventHandler(BS_MANGCUAHANG_CurrentChanged);
-            BS_MANGCUAHANG_CurrentChanged((new object()), (new EventArgs()));
         }
         #endregion
 
