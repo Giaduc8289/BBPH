@@ -58,15 +58,6 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Stttruc</name>
-    <headerText>STT trục</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>60</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
     <name>Matruc</name>
     <headerText>Mã trục</headerText>
     <BackColor>0</BackColor>

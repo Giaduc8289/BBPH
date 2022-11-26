@@ -67,6 +67,15 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
+    <name>Thutulopghep</name>
+    <headerText>TT lớp ghép</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>80</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
     <name>Mamang</name>
     <headerText>Mã màng</headerText>
     <BackColor>0</BackColor>
@@ -165,7 +174,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tylekeokho</name>
     <headerText>T.lệ keo khô</headerText>
     <BackColor>0</BackColor>
@@ -174,7 +183,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tyledongrankho</name>
     <headerText>T.lệ đ.rắn khô</headerText>
     <BackColor>0</BackColor>
@@ -183,7 +192,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tylekeo</name>
     <headerText>T.lệ keo</headerText>
     <BackColor>0</BackColor>
@@ -192,7 +201,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Tyledongran</name>
     <headerText>T.lệ đ.rắn</headerText>
     <BackColor>0</BackColor>
@@ -201,7 +210,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Dinhmuckeouot</name>
     <headerText>ĐM keo ướt</headerText>
     <BackColor>0</BackColor>
@@ -210,7 +219,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Dinhmucdongranuot</name>
     <headerText>ĐM đ.rắn ướt</headerText>
     <BackColor>0</BackColor>
@@ -219,7 +228,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>1</value>
+    <value>2</value>
     <name>Dinhmucdungmoi</name>
     <headerText>ĐM dung môi</headerText>
     <BackColor>0</BackColor>
