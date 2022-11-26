@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 25, 2022 4:31:50 PM
+// Code is generated on: Saturday, November 26, 2022 9:47:46 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -461,6 +461,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Hesorieng", fieldHashtable);
 		}
 		#endregion
 
@@ -634,6 +637,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmquycachFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)DmquycachFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Hesorieng property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Hesorieng"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Hesorieng
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmquycachFieldIndex.Hesorieng, false); }
+			set	{ SetValue((int)DmquycachFieldIndex.Hesorieng, value); }
 		}
 
 

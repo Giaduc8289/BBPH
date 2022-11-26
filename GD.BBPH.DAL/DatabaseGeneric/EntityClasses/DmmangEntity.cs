@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 25, 2022 4:31:50 PM
+// Code is generated on: Saturday, November 26, 2022 9:47:46 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -482,6 +482,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Trongluong", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Hesoquydoi", fieldHashtable);
 		}
 		#endregion
 
@@ -732,6 +735,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)DmmangFieldIndex.Trongluong, false); }
 			set	{ SetValue((int)DmmangFieldIndex.Trongluong, value); }
+		}
+
+		/// <summary> The Hesoquydoi property of the Entity Dmmang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmmang"."Hesoquydoi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Hesoquydoi
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmmangFieldIndex.Hesoquydoi, false); }
+			set	{ SetValue((int)DmmangFieldIndex.Hesoquydoi, value); }
 		}
 
 

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 25, 2022 4:31:50 PM
+// Code is generated on: Saturday, November 26, 2022 9:47:46 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -542,6 +542,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Cautruc", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Hesoquydoi", fieldHashtable);
 		}
 		#endregion
 
@@ -1012,6 +1015,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmhangFieldIndex.Cautruc, true); }
 			set	{ SetValue((int)DmhangFieldIndex.Cautruc, value); }
+		}
+
+		/// <summary> The Hesoquydoi property of the Entity Dmhang<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "dmhang"."Hesoquydoi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Hesoquydoi
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)DmhangFieldIndex.Hesoquydoi, false); }
+			set	{ SetValue((int)DmhangFieldIndex.Hesoquydoi, value); }
 		}
 
 

@@ -60,6 +60,8 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Trongluong="Trongluong";				
 		
+		public const String Field_Hesoquydoi="Hesoquydoi";				
+		
 				
 		#endregion	
 
@@ -108,6 +110,8 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Tenqcmang,typeof(System.String));
 			
 			dt.Columns.Add(Field_Trongluong,typeof(System.Decimal));
+			
+			dt.Columns.Add(Field_Hesoquydoi,typeof(System.Decimal));
 									
 		            
 			return dt;			
@@ -220,6 +224,12 @@ namespace GD.BBPH.BLL
 				r[Field_Trongluong]=_DmmangEntity.Trongluong;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_Hesoquydoi]=_DmmangEntity.Hesoquydoi;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -328,6 +338,12 @@ namespace GD.BBPH.BLL
 				_DmmangEntity.Trongluong= System.Decimal.Parse(r[Field_Trongluong].ToString());						
 			}
 			catch { }
+			
+			try
+			{
+				_DmmangEntity.Hesoquydoi= System.Decimal.Parse(r[Field_Hesoquydoi].ToString());						
+			}
+			catch { }
 									
 									
 			return _DmmangEntity;
@@ -370,6 +386,8 @@ namespace GD.BBPH.BLL
 			_DmmangEntity.Tenqcmang= _DmmangEntity_XML.Tenqcmang;
 			
 			_DmmangEntity.Trongluong= _DmmangEntity_XML.Trongluong;
+			
+			_DmmangEntity.Hesoquydoi= _DmmangEntity_XML.Hesoquydoi;
 									
 				
 			return _DmmangEntity;
@@ -486,6 +504,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Trongluong,_DmmangEntity.Trongluong);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Hesoquydoi,_DmmangEntity.Hesoquydoi);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -597,6 +621,12 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Trongluong,_DmmangEntity.Trongluong);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Hesoquydoi,_DmmangEntity.Hesoquydoi);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -619,7 +649,7 @@ namespace GD.BBPH.BLL
 			return DmmangEntity;
 		}
 
-		public DmmangEntity Insert(System.String  Mamang, System.String  Tenmang, System.String  Makhach, System.String  Tenkhach, System.String  Kichthuoc, System.String  Mactpt, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Decimal  Doday, System.Decimal  Rong, System.String  Maloaimang, System.String  Tenloaimang, System.String  Maqcmang, System.String  Tenqcmang, System.Decimal  Trongluong)
+		public DmmangEntity Insert(System.String  Mamang, System.String  Tenmang, System.String  Makhach, System.String  Tenkhach, System.String  Kichthuoc, System.String  Mactpt, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Decimal  Doday, System.Decimal  Rong, System.String  Maloaimang, System.String  Tenloaimang, System.String  Maqcmang, System.String  Tenqcmang, System.Decimal  Trongluong, System.Decimal  Hesoquydoi)
 		{
 			DmmangEntity _DmmangEntity = new DmmangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -658,6 +688,8 @@ namespace GD.BBPH.BLL
 				_DmmangEntity.Tenqcmang = Tenqcmang;
 				
 				_DmmangEntity.Trongluong = Trongluong;
+				
+				_DmmangEntity.Hesoquydoi = Hesoquydoi;
 					
 					
 				adapter.SaveEntity(_DmmangEntity, true);
@@ -665,7 +697,7 @@ namespace GD.BBPH.BLL
 			return _DmmangEntity;
 		}
 
-		public DmmangEntity Insert(System.String Tenmang, System.String Makhach, System.String Tenkhach, System.String Kichthuoc, System.String Mactpt, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Doday, System.Decimal Rong, System.String Maloaimang, System.String Tenloaimang, System.String Maqcmang, System.String Tenqcmang, System.Decimal Trongluong)//ko co mahieu
+		public DmmangEntity Insert(System.String Tenmang, System.String Makhach, System.String Tenkhach, System.String Kichthuoc, System.String Mactpt, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Doday, System.Decimal Rong, System.String Maloaimang, System.String Tenloaimang, System.String Maqcmang, System.String Tenqcmang, System.Decimal Trongluong, System.Decimal Hesoquydoi)//ko co mahieu
 		{
 			DmmangEntity _DmmangEntity = new DmmangEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -703,6 +735,8 @@ namespace GD.BBPH.BLL
 				_DmmangEntity.Tenqcmang = Tenqcmang;
 				
 				_DmmangEntity.Trongluong = Trongluong;
+				
+				_DmmangEntity.Hesoquydoi = Hesoquydoi;
 					
 
 				adapter.SaveEntity(_DmmangEntity, true);
@@ -740,7 +774,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Mamang, System.String Tenmang, System.String Makhach, System.String Tenkhach, System.String Kichthuoc, System.String Mactpt, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Doday, System.Decimal Rong, System.String Maloaimang, System.String Tenloaimang, System.String Maqcmang, System.String Tenqcmang, System.Decimal Trongluong)
+		public bool Update(System.String Mamang, System.String Tenmang, System.String Makhach, System.String Tenkhach, System.String Kichthuoc, System.String Mactpt, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Doday, System.Decimal Rong, System.String Maloaimang, System.String Tenloaimang, System.String Maqcmang, System.String Tenqcmang, System.Decimal Trongluong, System.Decimal Hesoquydoi)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -782,6 +816,8 @@ namespace GD.BBPH.BLL
 					_DmmangEntity.Tenqcmang = Tenqcmang;
 					
 					_DmmangEntity.Trongluong = Trongluong;
+					
+					_DmmangEntity.Hesoquydoi = Hesoquydoi;
 						
 
 					adapter.SaveEntity(_DmmangEntity, true);
@@ -1079,6 +1115,22 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DmmangFields.Trongluong == Trongluong);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("DmmangEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByHesoquydoi(System.Decimal Hesoquydoi)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmmangFields.Hesoquydoi == Hesoquydoi);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1697,6 +1749,40 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DmmangFields.Trongluong == Trongluong);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_DmmangCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByHesoquydoi(System.Decimal Hesoquydoi)
+		{
+			EntityCollection _DmmangCollection = new EntityCollection(new DmmangEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmmangFields.Hesoquydoi == Hesoquydoi);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_DmmangCollection, filter, 0, null);
+			}
+			return _DmmangCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByHesoquydoiRDT(System.Decimal Hesoquydoi)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _DmmangCollection = new EntityCollection(new DmmangEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(DmmangFields.Hesoquydoi == Hesoquydoi);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

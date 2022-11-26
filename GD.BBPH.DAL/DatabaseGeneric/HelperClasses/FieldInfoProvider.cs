@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 25, 2022 4:31:49 PM
+// Code is generated on: Saturday, November 26, 2022 9:47:45 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -428,6 +428,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmhangEntity", "Hong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmhangFieldIndex.Hong, 0, 3, 20);
 			base.AddElementFieldInfo("DmhangEntity", "Bangdinhdan", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmhangFieldIndex.Bangdinhdan, 0, 3, 20);
 			base.AddElementFieldInfo("DmhangEntity", "Cautruc", typeof(System.String), false, false, false, true,  (int)DmhangFieldIndex.Cautruc, 250, 0, 0);
+			base.AddElementFieldInfo("DmhangEntity", "Hesoquydoi", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmhangFieldIndex.Hesoquydoi, 0, 3, 20);
 		}
 		/// <summary>Inits DmkhachEntity's FieldInfo objects</summary>
 		private void InitDmkhachEntityInfos()
@@ -494,6 +495,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmmangEntity", "Maqcmang", typeof(System.String), false, false, false, true,  (int)DmmangFieldIndex.Maqcmang, 50, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Tenqcmang", typeof(System.String), false, false, false, true,  (int)DmmangFieldIndex.Tenqcmang, 250, 0, 0);
 			base.AddElementFieldInfo("DmmangEntity", "Trongluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmmangFieldIndex.Trongluong, 0, 3, 20);
+			base.AddElementFieldInfo("DmmangEntity", "Hesoquydoi", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmmangFieldIndex.Hesoquydoi, 0, 3, 20);
 		}
 		/// <summary>Inits DmmauEntity's FieldInfo objects</summary>
 		private void InitDmmauEntityInfos()
@@ -589,6 +591,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmquycachEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)DmquycachFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("DmquycachEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)DmquycachFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("DmquycachEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)DmquycachFieldIndex.Nguoisua, 50, 0, 0);
+			base.AddElementFieldInfo("DmquycachEntity", "Hesorieng", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmquycachFieldIndex.Hesorieng, 0, 3, 20);
 		}
 		/// <summary>Inits DmtaikhoanEntity's FieldInfo objects</summary>
 		private void InitDmtaikhoanEntityInfos()

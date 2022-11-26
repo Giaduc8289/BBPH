@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, November 25, 2022 4:31:51 PM
+// Code is generated on: Saturday, November 26, 2022 9:47:47 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1307,6 +1307,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Cautruc);}
 		}
+		/// <summary>Creates a new DmhangEntity.Hesoquydoi field instance</summary>
+		public static EntityField2 Hesoquydoi
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmhangFieldIndex.Hesoquydoi);}
+		}
 	}
 
 	/// <summary>Field Creation Class for entity DmkhachEntity</summary>
@@ -1576,6 +1581,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Trongluong
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Trongluong);}
+		}
+		/// <summary>Creates a new DmmangEntity.Hesoquydoi field instance</summary>
+		public static EntityField2 Hesoquydoi
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmmangFieldIndex.Hesoquydoi);}
 		}
 	}
 
@@ -1946,6 +1956,11 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(DmquycachFieldIndex.Nguoisua);}
+		}
+		/// <summary>Creates a new DmquycachEntity.Hesorieng field instance</summary>
+		public static EntityField2 Hesorieng
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(DmquycachFieldIndex.Hesorieng);}
 		}
 	}
 
