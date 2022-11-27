@@ -684,6 +684,9 @@ namespace GD.BBPH.APP.DANHMUC
                 catch { }
                 #endregion
 
+                //-----Cập nhật định mức keo, đóng rắn của hàng
+                Tinhdinhmuckeovadongran();
+
                 //-----Cập nhật trường cấu trúc
                 string _strCautruc = "";
                 bool first = true;
@@ -717,6 +720,90 @@ namespace GD.BBPH.APP.DANHMUC
                 return dt.Select(DmnguyenlieuFields.Manl.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
             }
             catch { return null; }
+        }
+        private void Tinhdinhmuckeovadongran()
+        {
+            //-----Tạo table để lưu kết quả tổng hợp keo, đóng rắn của hàng
+            DataTable dtKeocuahang = new KeocuahangManager().Clone();
+
+            #region Duyệt lưới màng để tổng hợp định mức keo, đóng rắn
+            EntityCollection _MangcuahangEntityCol = new EntityCollection();
+            GridEXRow[] listGridMang = GRID_MANGCUAHANG.GetDataRows();
+            foreach (GridEXRow _grid in listGridMang)
+            {
+                DataRowView _view = (DataRowView)_grid.DataRow;
+                if (_view == null) continue;
+                MangcuahangEntity _MangcuahangEntity = new MangcuahangEntity();
+                if (Convert.ToBoolean(_view[MangcuahangFields.Mangin.Name])) continue;
+
+                string makeo, madongran, tenkeo, tendongran;
+                decimal dmkeouot, dmdruot;
+                dmkeouot = dmdruot = 0;
+
+                makeo = _view[MangcuahangFields.Maloaikeo.Name].ToString();
+                tenkeo = _view[MangcuahangFields.Tenloaikeo.Name].ToString();
+                dmkeouot = Convert.ToDecimal(_view[MangcuahangFields.Dinhmuckeouot.Name].ToString());
+                madongran = _view[MangcuahangFields.Maloaidongran.Name].ToString();
+                tendongran = _view[MangcuahangFields.Tenloaidongran.Name].ToString();
+                dmdruot = Convert.ToDecimal(_view[MangcuahangFields.Dinhmucdongranuot.Name].ToString());
+
+                //-----Kiểm tra trong table đã có loại keo, loại đóng rắn chưa?
+                DataRow[] arrDr = dtKeocuahang.Select(KeocuahangFields.MakeoDongran.Name + "='" + makeo + "'");
+                if(arrDr.Length>0)
+                {
+                    arrDr[0][KeocuahangFields.DinhmuckeoDongran.Name] = dmkeouot + Convert.ToDecimal(arrDr[0][KeocuahangFields.DinhmuckeoDongran.Name]);
+                }
+                else
+                {
+                    DataRow dr = dtKeocuahang.NewRow();
+                    dr[KeocuahangFields.MakeoDongran.Name] = makeo;
+                    dr[KeocuahangFields.TenkeoDongran.Name] = tenkeo;
+                    dr[KeocuahangFields.DinhmuckeoDongran.Name] = dmkeouot;
+                    dtKeocuahang.Rows.Add(dr);
+                }
+                arrDr = dtKeocuahang.Select(KeocuahangFields.MakeoDongran.Name + "='" + madongran + "'");
+                if (arrDr.Length > 0)
+                {
+                    arrDr[0][KeocuahangFields.DinhmuckeoDongran.Name] = dmdruot + Convert.ToDecimal(arrDr[0][KeocuahangFields.DinhmuckeoDongran.Name]);
+                }
+                else
+                {
+                    DataRow dr = dtKeocuahang.NewRow();
+                    dr[KeocuahangFields.MakeoDongran.Name] = madongran;
+                    dr[KeocuahangFields.TenkeoDongran.Name] = tendongran;
+                    dr[KeocuahangFields.DinhmuckeoDongran.Name] = dmdruot;
+                    dtKeocuahang.Rows.Add(dr);
+                }
+            }
+            #endregion
+
+            //-----Duyệt table tổng hợp để cập nhật vào lưới Keocuahang (DT_KEOCUAHANG)
+            foreach (DataRow dr in dtKeocuahang.Rows)
+            {
+                string maKeo_dongran;
+                maKeo_dongran = dr[KeocuahangFields.MakeoDongran.Name].ToString();
+                DataRow[] arrDr = DT_KEOCUAHANG.Select(KeocuahangFields.MakeoDongran.Name + "='" + maKeo_dongran + "'");
+                if(arrDr.Length>0)
+                {
+                    arrDr[0][KeocuahangFields.DinhmuckeoDongran.Name] = Convert.ToDecimal(dr[KeocuahangFields.DinhmuckeoDongran.Name].ToString()); 
+                }
+                else
+                {
+                    DataRow drKeocuahang = DT_KEOCUAHANG.NewRow();
+                    drKeocuahang[KeocuahangFields.MakeoDongran.Name] = dr[KeocuahangFields.MakeoDongran.Name];
+                    drKeocuahang[KeocuahangFields.TenkeoDongran.Name] = dr[KeocuahangFields.TenkeoDongran.Name];
+                    drKeocuahang[KeocuahangFields.DinhmuckeoDongran.Name] = Convert.ToDecimal(dr[KeocuahangFields.DinhmuckeoDongran.Name].ToString());
+                    DT_KEOCUAHANG.Rows.Add(drKeocuahang);
+                }
+            }
+
+            DataView Source_View_Keo = new DataView(DT_KEOCUAHANG);
+            BS_KEOCUAHANG = new BindingSource();
+            BS_KEOCUAHANG.DataSource = Source_View_Keo;
+            GRID_KEOCUAHANG.DataSource = BS_KEOCUAHANG;
+
+            BS_KEOCUAHANG.CurrentChanged += new EventHandler(BS_KEOCUAHANG_CurrentChanged);
+            BS_KEOCUAHANG_CurrentChanged((new object()), (new EventArgs()));
         }
         #endregion
 

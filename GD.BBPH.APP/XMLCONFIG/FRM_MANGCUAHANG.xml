@@ -210,7 +210,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Dinhmuckeouot</name>
     <headerText>ĐM keo ướt</headerText>
     <BackColor>0</BackColor>
@@ -219,7 +219,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Dinhmucdongranuot</name>
     <headerText>ĐM đ.rắn ướt</headerText>
     <BackColor>0</BackColor>
