@@ -146,6 +146,7 @@
     <Compile Include="ManagerBase\KetquainmauManagerBase.cs" />
     <Compile Include="ManagerBase\KetquathoiManagerBase.cs" />
     <Compile Include="ManagerBase\KetquatuaManagerBase.cs" />
+    <Compile Include="ManagerBase\LenhsanxuatManagerBase.cs" />
     <Compile Include="ManagerBase\LogbackupManagerBase.cs" />
     <Compile Include="ManagerBase\MangcuahangManagerBase.cs" />
     <Compile Include="ManagerBase\MaucuahangManagerBase.cs" />

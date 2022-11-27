@@ -17,15 +17,15 @@ using SD.LLBLGen.Pro.ORMSupportClasses;
 
 namespace GD.BBPH.DAL.RelationClasses
 {
-	/// <summary>Implements the static Relations variant for the entity: Dmkho. </summary>
-	public partial class DmkhoRelations
+	/// <summary>Implements the static Relations variant for the entity: Lenhsanxuat. </summary>
+	public partial class LenhsanxuatRelations
 	{
 		/// <summary>CTor</summary>
-		public DmkhoRelations()
+		public LenhsanxuatRelations()
 		{
 		}
 
-		/// <summary>Gets all relations of the DmkhoEntity as a list of IEntityRelation objects.</summary>
+		/// <summary>Gets all relations of the LenhsanxuatEntity as a list of IEntityRelation objects.</summary>
 		/// <returns>a list of IEntityRelation objects</returns>
 		public virtual List<IEntityRelation> GetAllRelations()
 		{

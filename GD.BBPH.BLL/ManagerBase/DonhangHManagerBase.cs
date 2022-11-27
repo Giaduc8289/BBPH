@@ -34,10 +34,6 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Tenkhach="Tenkhach";				
 		
-		public const String Field_Sobaogia="Sobaogia";				
-		
-		public const String Field_Ngaybaogia="Ngaybaogia";				
-		
 		public const String Field_Userid="Userid";				
 		
 		public const String Field_Tennv="Tennv";				
@@ -74,10 +70,6 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Makhach,typeof(System.String));
 			
 			dt.Columns.Add(Field_Tenkhach,typeof(System.String));
-			
-			dt.Columns.Add(Field_Sobaogia,typeof(System.String));
-			
-			dt.Columns.Add(Field_Ngaybaogia,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Userid,typeof(System.String));
 			
@@ -124,18 +116,6 @@ namespace GD.BBPH.BLL
 			try
 			{
 				r[Field_Tenkhach]=_DonhangHEntity.Tenkhach;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Sobaogia]=_DonhangHEntity.Sobaogia;
-			}
-			catch { }
-			
-			try
-			{
-				r[Field_Ngaybaogia]=_DonhangHEntity.Ngaybaogia;
 			}
 			catch { }
 			
@@ -213,18 +193,6 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				_DonhangHEntity.Sobaogia= r[Field_Sobaogia].ToString();						
-			}
-			catch { }
-			
-			try
-			{
-				_DonhangHEntity.Ngaybaogia= System.DateTime.Parse(r[Field_Ngaybaogia].ToString());						
-			}
-			catch { }
-			
-			try
-			{
 				_DonhangHEntity.Userid= r[Field_Userid].ToString();						
 			}
 			catch { }
@@ -281,10 +249,6 @@ namespace GD.BBPH.BLL
 			
 			_DonhangHEntity.Tenkhach= _DonhangHEntity_XML.Tenkhach;
 			
-			_DonhangHEntity.Sobaogia= _DonhangHEntity_XML.Sobaogia;
-			
-			_DonhangHEntity.Ngaybaogia= _DonhangHEntity_XML.Ngaybaogia;
-			
 			_DonhangHEntity.Userid= _DonhangHEntity_XML.Userid;
 			
 			_DonhangHEntity.Tennv= _DonhangHEntity_XML.Tennv;
@@ -334,18 +298,6 @@ namespace GD.BBPH.BLL
 			try
 			{
 				r.SetField(Field_Tenkhach,_DonhangHEntity.Tenkhach);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Sobaogia,_DonhangHEntity.Sobaogia);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Ngaybaogia,_DonhangHEntity.Ngaybaogia);
 			}
 			catch { }
 			
@@ -426,18 +378,6 @@ namespace GD.BBPH.BLL
 			
 			try
 			{
-				r.SetField(Field_Sobaogia,_DonhangHEntity.Sobaogia);
-			}
-			catch { }
-			
-			try
-			{
-				r.SetField(Field_Ngaybaogia,_DonhangHEntity.Ngaybaogia);
-			}
-			catch { }
-			
-			try
-			{
 				r.SetField(Field_Userid,_DonhangHEntity.Userid);
 			}
 			catch { }
@@ -499,7 +439,7 @@ namespace GD.BBPH.BLL
 			return DonhangHEntity;
 		}
 
-		public DonhangHEntity Insert(System.String  Madon, System.DateTime  Ngaydat, System.String  Makhach, System.String  Tenkhach, System.String  Sobaogia, System.DateTime  Ngaybaogia, System.String  Userid, System.String  Tennv, System.String  Ghichu, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public DonhangHEntity Insert(System.String  Madon, System.DateTime  Ngaydat, System.String  Makhach, System.String  Tenkhach, System.String  Userid, System.String  Tennv, System.String  Ghichu, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
 		{
 			DonhangHEntity _DonhangHEntity = new DonhangHEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -512,10 +452,6 @@ namespace GD.BBPH.BLL
 				_DonhangHEntity.Makhach = Makhach;
 				
 				_DonhangHEntity.Tenkhach = Tenkhach;
-				
-				_DonhangHEntity.Sobaogia = Sobaogia;
-				
-				_DonhangHEntity.Ngaybaogia = Ngaybaogia;
 				
 				_DonhangHEntity.Userid = Userid;
 				
@@ -537,7 +473,7 @@ namespace GD.BBPH.BLL
 			return _DonhangHEntity;
 		}
 
-		public DonhangHEntity Insert(System.DateTime Ngaydat, System.String Makhach, System.String Tenkhach, System.String Sobaogia, System.DateTime Ngaybaogia, System.String Userid, System.String Tennv, System.String Ghichu, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public DonhangHEntity Insert(System.DateTime Ngaydat, System.String Makhach, System.String Tenkhach, System.String Userid, System.String Tennv, System.String Ghichu, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
 		{
 			DonhangHEntity _DonhangHEntity = new DonhangHEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -549,10 +485,6 @@ namespace GD.BBPH.BLL
 				_DonhangHEntity.Makhach = Makhach;
 				
 				_DonhangHEntity.Tenkhach = Tenkhach;
-				
-				_DonhangHEntity.Sobaogia = Sobaogia;
-				
-				_DonhangHEntity.Ngaybaogia = Ngaybaogia;
 				
 				_DonhangHEntity.Userid = Userid;
 				
@@ -604,7 +536,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.String Madon, System.DateTime Ngaydat, System.String Makhach, System.String Tenkhach, System.String Sobaogia, System.DateTime Ngaybaogia, System.String Userid, System.String Tennv, System.String Ghichu, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.String Madon, System.DateTime Ngaydat, System.String Makhach, System.String Tenkhach, System.String Userid, System.String Tennv, System.String Ghichu, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -620,10 +552,6 @@ namespace GD.BBPH.BLL
 					_DonhangHEntity.Makhach = Makhach;
 					
 					_DonhangHEntity.Tenkhach = Tenkhach;
-					
-					_DonhangHEntity.Sobaogia = Sobaogia;
-					
-					_DonhangHEntity.Ngaybaogia = Ngaybaogia;
 					
 					_DonhangHEntity.Userid = Userid;
 					
@@ -727,38 +655,6 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DonhangHFields.Tenkhach == Tenkhach);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("DonhangHEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteBySobaogia(System.String Sobaogia)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DonhangHFields.Sobaogia == Sobaogia);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				toReturn = adapter.DeleteEntitiesDirectly("DonhangHEntity", filter);
-			}
-			return toReturn;
-		}		
-		
-		public int DeleteByNgaybaogia(System.DateTime Ngaybaogia)
-		{
-			int toReturn = 0;
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DonhangHFields.Ngaybaogia == Ngaybaogia);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1047,74 +943,6 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(DonhangHFields.Tenkhach == Tenkhach);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_DonhangHCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectBySobaogia(System.String Sobaogia)
-		{
-			EntityCollection _DonhangHCollection = new EntityCollection(new DonhangHEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DonhangHFields.Sobaogia == Sobaogia);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_DonhangHCollection, filter, 0, null);
-			}
-			return _DonhangHCollection;
-		}
-		// Return DataTable
-		public DataTable SelectBySobaogiaRDT(System.String Sobaogia)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _DonhangHCollection = new EntityCollection(new DonhangHEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DonhangHFields.Sobaogia == Sobaogia);
-			filter.PredicateExpression.Add(_PredicateExpression);
-
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchTypedList(_DonhangHCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
-			}
-			return toReturn;
-		}
-		
-		// Return EntityCollection
-		public EntityCollection SelectByNgaybaogia(System.DateTime Ngaybaogia)
-		{
-			EntityCollection _DonhangHCollection = new EntityCollection(new DonhangHEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DonhangHFields.Ngaybaogia == Ngaybaogia);
-			filter.PredicateExpression.Add(_PredicateExpression);
-			
-			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
-			{
-				adapter.FetchEntityCollection(_DonhangHCollection, filter, 0, null);
-			}
-			return _DonhangHCollection;
-		}
-		// Return DataTable
-		public DataTable SelectByNgaybaogiaRDT(System.DateTime Ngaybaogia)
-		{
-			DataTable toReturn = new DataTable();
-			EntityCollection _DonhangHCollection = new EntityCollection(new DonhangHEntityFactory());
-			RelationPredicateBucket filter = new RelationPredicateBucket();
-			
-			IPredicateExpression _PredicateExpression = new PredicateExpression();
-			_PredicateExpression.Add(DonhangHFields.Ngaybaogia == Ngaybaogia);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

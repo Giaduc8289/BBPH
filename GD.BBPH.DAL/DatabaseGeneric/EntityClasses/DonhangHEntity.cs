@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 26, 2022 9:47:46 AM
+// Code is generated on: Sunday, November 27, 2022 2:58:13 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -541,12 +541,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Tenkhach", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Sobaogia", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Ngaybaogia", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Userid", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -738,28 +732,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DonhangHFieldIndex.Tenkhach, true); }
 			set	{ SetValue((int)DonhangHFieldIndex.Tenkhach, value); }
-		}
-
-		/// <summary> The Sobaogia property of the Entity DonhangH<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "donhang_h"."Sobaogia"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Sobaogia
-		{
-			get { return (System.String)GetValue((int)DonhangHFieldIndex.Sobaogia, true); }
-			set	{ SetValue((int)DonhangHFieldIndex.Sobaogia, value); }
-		}
-
-		/// <summary> The Ngaybaogia property of the Entity DonhangH<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "donhang_h"."Ngaybaogia"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.DateTime> Ngaybaogia
-		{
-			get { return (Nullable<System.DateTime>)GetValue((int)DonhangHFieldIndex.Ngaybaogia, false); }
-			set	{ SetValue((int)DonhangHFieldIndex.Ngaybaogia, value); }
 		}
 
 		/// <summary> The Userid property of the Entity DonhangH<br/><br/>

@@ -229,12 +229,10 @@ namespace GD.BBPH.APP.BANHANG
                     txt_NGAYDAT.Text = _Rowview.Row[DonhangHFields.Ngaydat.Name].ToString();
                     //txt_SOPO.Text = _Rowview.Row[DonhangHFields.Sopo.Name].ToString();
                     txt_MAKHACH.Text = _Rowview.Row[DonhangHFields.Makhach.Name].ToString();
-                    txt_SOBAOGIA.Text = _Rowview.Row[DonhangHFields.Sobaogia.Name].ToString();
                     txt_MANHANVIEN.Text = _Rowview.Row[DonhangHFields.Userid.Name].ToString();
                     txt_GHICHU.Text = _Rowview.Row[DonhangHFields.Ghichu.Name].ToString();
 
                     txt_MAKHACH_Validating(new object(), new CancelEventArgs());
-                    txt_SOBAOGIA_Validating(new object(), new CancelEventArgs());
                     txt_MANHANVIEN_Validating(new object(), new CancelEventArgs());
                     SHOWGRID(MAHIEU_PK);
 
@@ -268,6 +266,8 @@ namespace GD.BBPH.APP.BANHANG
                     DataRowView _Rowview = (DataRowView)this.BS_DONDATHANG_D.Current;
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[DonhangDFields.Id.Name].ToString();
+                    txt_SOBAOGIA.Text = _Rowview.Row[DonhangDFields.Sobaogia.Name].ToString();
+                    txt_SOBAOGIA_Validating(new object(), new CancelEventArgs());
                 }
                 //else
                 //{
@@ -341,7 +341,9 @@ namespace GD.BBPH.APP.BANHANG
                 //catch { }
                 try { r_Detail[DonhangDFields.Dongia.Name] = LIB.ConvertString.NumbertoDB(dr[BaogiaDFields.DongiaVat.Name].ToString()); }
                 catch { }
-                r_Detail[DonhangDFields.Sobaogia.Name] = dr[BaogiaDFields.Sobaogia.Name].ToString();
+                r_Detail[DonhangDFields.Sobaogia.Name] = strSobaogia;
+                try { r_Detail[DonhangDFields.Ngaybaogia.Name] = Convert.ToDateTime(txt_NGAYBAOGIA.Text.ToString()); }
+                catch { }
 
                 DT_DONDATHANG_D_FILL.Rows.Add(r_Detail);
             }
@@ -471,9 +473,9 @@ namespace GD.BBPH.APP.BANHANG
             //_DonhangHEntity.Sopo = txt_SOPO.Text.Trim();
             _DonhangHEntity.Makhach = txt_MAKHACH.Text.Trim();
             _DonhangHEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-            _DonhangHEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
-            try { _DonhangHEntity.Ngaybaogia = Convert.ToDateTime(txt_NGAYBAOGIA.Text.Trim()); }
-            catch { }
+            //_DonhangHEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
+            //try { _DonhangHEntity.Ngaybaogia = Convert.ToDateTime(txt_NGAYBAOGIA.Text.Trim()); }
+            //catch { }
             _DonhangHEntity.Userid = txt_MANHANVIEN.Text.Trim();
             _DonhangHEntity.Tennv = txt_HOTEN.Text.Trim();
             _DonhangHEntity.Ghichu = txt_GHICHU.Text.Trim();
@@ -497,6 +499,8 @@ namespace GD.BBPH.APP.BANHANG
                 //_DonhangDEntity.Mauin = _view[DonhangDFields.Mauin.Name].ToString();
                 //_DonhangDEntity.Loai = _view[DonhangDFields.Loai.Name].ToString();
                 _DonhangDEntity.Sobaogia = _view[DonhangDFields.Sobaogia.Name].ToString();
+                try { _DonhangDEntity.Ngaybaogia = Convert.ToDateTime(_view[DonhangDFields.Ngaybaogia.Name].ToString()); }
+                catch { }
                 try { _DonhangDEntity.Soluong = Convert.ToInt32(_view[DonhangDFields.Soluong.Name].ToString()); }
                 catch { }
                 try { _DonhangDEntity.Dongia = Convert.ToDecimal(_view[DonhangDFields.Dongia.Name].ToString()); }
@@ -566,8 +570,8 @@ namespace GD.BBPH.APP.BANHANG
                 GRID_DONHANG_H.CurrentRow.Cells[DonhangHFields.Userid.Name].Value = _DonhangHEntity.Userid;
                 GRID_DONHANG_H.CurrentRow.Cells[DonhangHFields.Tennv.Name].Value = _DonhangHEntity.Tennv;
                 GRID_DONHANG_H.CurrentRow.Cells[DonhangHFields.Ngaydat.Name].Value = _DonhangHEntity.Ngaydat;
-                GRID_DONHANG_H.CurrentRow.Cells[DonhangHFields.Sobaogia.Name].Value = _DonhangHEntity.Sobaogia;
-                GRID_DONHANG_H.CurrentRow.Cells[DonhangHFields.Ngaybaogia.Name].Value = _DonhangHEntity.Ngaybaogia;
+                //GRID_DONHANG_H.CurrentRow.Cells[DonhangHFields.Sobaogia.Name].Value = _DonhangHEntity.Sobaogia;
+                //GRID_DONHANG_H.CurrentRow.Cells[DonhangHFields.Ngaybaogia.Name].Value = _DonhangHEntity.Ngaybaogia;
                 GRID_DONHANG_H.CurrentRow.Cells[DonhangHFields.Ghichu.Name].Value = _DonhangHEntity.Ghichu;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DonhangHManager.Convert(_DonhangHEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 GRID_DONHANG_D.AllowAddNew = Janus.Windows.GridEX.InheritableBoolean.False;

@@ -76,6 +76,15 @@
   </viewgrid>
   <viewgrid>
     <value>2</value>
+    <name>Ngaybaogia</name>
+    <headerText>Ngày báo giá</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>100</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>2</value>
     <name>Loaihang</name>
     <headerText>Loại hàng</headerText>
     <BackColor>0</BackColor>

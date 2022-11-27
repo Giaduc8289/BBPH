@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 26, 2022 9:47:45 AM
+// Code is generated on: Sunday, November 27, 2022 2:58:12 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1079,6 +1079,8 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Ngaybaogia. </summary>
+		Ngaybaogia,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1097,10 +1099,6 @@ namespace GD.BBPH.DAL
 		Makhach,
 		///<summary>Tenkhach. </summary>
 		Tenkhach,
-		///<summary>Sobaogia. </summary>
-		Sobaogia,
-		///<summary>Ngaybaogia. </summary>
-		Ngaybaogia,
 		///<summary>Userid. </summary>
 		Userid,
 		///<summary>Tennv. </summary>
@@ -1705,6 +1703,52 @@ namespace GD.BBPH.DAL
 		Tocdodinhmuc,
 		///<summary>Lydosuco. </summary>
 		Lydosuco,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Lenhsanxuat.
+	/// </summary>
+	public enum LenhsanxuatFieldIndex:int
+	{
+		///<summary>Solenhsx. </summary>
+		Solenhsx,
+		///<summary>Ngayphatlenh. </summary>
+		Ngayphatlenh,
+		///<summary>Ngaybatdausx. </summary>
+		Ngaybatdausx,
+		///<summary>Ngayhoanthanhsx. </summary>
+		Ngayhoanthanhsx,
+		///<summary>Madon. </summary>
+		Madon,
+		///<summary>Ngaydat. </summary>
+		Ngaydat,
+		///<summary>Makhach. </summary>
+		Makhach,
+		///<summary>Tenkhach. </summary>
+		Tenkhach,
+		///<summary>Madonhangchitiet. </summary>
+		Madonhangchitiet,
+		///<summary>Loaihang. </summary>
+		Loaihang,
+		///<summary>Masp. </summary>
+		Masp,
+		///<summary>Tenhang. </summary>
+		Tenhang,
+		///<summary>Soluong. </summary>
+		Soluong,
+		///<summary>Ngaygiao. </summary>
+		Ngaygiao,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -2564,6 +2608,8 @@ namespace GD.BBPH.DAL
 		KetquathoiEntity,
 		///<summary>Ketquatua</summary>
 		KetquatuaEntity,
+		///<summary>Lenhsanxuat</summary>
+		LenhsanxuatEntity,
 		///<summary>Logbackup</summary>
 		LogbackupEntity,
 		///<summary>Mangcuahang</summary>

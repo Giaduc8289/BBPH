@@ -43,8 +43,6 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NGAYDAT.Text = _Rowview.Row[DonhangHFields.Ngaydat.Name].ToString();
 					txt_MAKHACH.Text = _Rowview.Row[DonhangHFields.Makhach.Name].ToString();
 					txt_TENKHACH.Text = _Rowview.Row[DonhangHFields.Tenkhach.Name].ToString();
-					txt_SOBAOGIA.Text = _Rowview.Row[DonhangHFields.Sobaogia.Name].ToString();
-					txt_NGAYBAOGIA.Text = _Rowview.Row[DonhangHFields.Ngaybaogia.Name].ToString();
 					txt_USERID.Text = _Rowview.Row[DonhangHFields.Userid.Name].ToString();
 					txt_TENNV.Text = _Rowview.Row[DonhangHFields.Tennv.Name].ToString();
 					txt_GHICHU.Text = _Rowview.Row[DonhangHFields.Ghichu.Name].ToString();
@@ -65,9 +63,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			catch { }
 			_DonhangHEntity.Makhach = txt_MAKHACH.Text.Trim();
 			_DonhangHEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-			_DonhangHEntity.Sobaogia = txt_SOBAOGIA.Text.Trim();
-			try { _DonhangHEntity.Ngaybaogia = System.DateTime.Parse(txt_NGAYBAOGIA.Text.Trim()); } 
-			catch { }
 			_DonhangHEntity.Userid = txt_USERID.Text.Trim();
 			_DonhangHEntity.Tennv = txt_TENNV.Text.Trim();
 			_DonhangHEntity.Ghichu = txt_GHICHU.Text.Trim();
@@ -93,8 +88,6 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_DONHANGH.CurrentRow.Cells[DonhangHFields.Ngaydat.Name].Value = _DonhangHEntity.Ngaydat;
 				GRID_DONHANGH.CurrentRow.Cells[DonhangHFields.Makhach.Name].Value = _DonhangHEntity.Makhach;
 				GRID_DONHANGH.CurrentRow.Cells[DonhangHFields.Tenkhach.Name].Value = _DonhangHEntity.Tenkhach;
-				GRID_DONHANGH.CurrentRow.Cells[DonhangHFields.Sobaogia.Name].Value = _DonhangHEntity.Sobaogia;
-				GRID_DONHANGH.CurrentRow.Cells[DonhangHFields.Ngaybaogia.Name].Value = _DonhangHEntity.Ngaybaogia;
 				GRID_DONHANGH.CurrentRow.Cells[DonhangHFields.Userid.Name].Value = _DonhangHEntity.Userid;
 				GRID_DONHANGH.CurrentRow.Cells[DonhangHFields.Tennv.Name].Value = _DonhangHEntity.Tennv;
 				GRID_DONHANGH.CurrentRow.Cells[DonhangHFields.Ghichu.Name].Value = _DonhangHEntity.Ghichu;

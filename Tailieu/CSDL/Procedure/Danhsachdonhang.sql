@@ -18,7 +18,8 @@ Create Procedure dbo.Danhsachdonhang
 	From dbo.Donhang_h
 	Where Ngaydat BETWEEN @Tungay AND @Denngay
 		AND (Madon=@Madondathang OR @Madondathang='')
-		AND (Sobaogia = @Sobaogia OR @Sobaogia = '')
+		--AND (Sobaogia = @Sobaogia OR @Sobaogia = '')
+		AND	((Madon IN (SELECT DISTINCT Madon FROM dbo.Donhang_d WHERE  Sobaogia=@Sobaogia)) OR @Sobaogia='')
 		AND (Makhach=@Makhachhang OR @Makhachhang='')
 		AND	((Madon IN (SELECT DISTINCT Madon FROM dbo.Donhang_d WHERE  Masp=@Mahang)) OR @Mahang='')
 	ORDER BY Ngaydat DESC

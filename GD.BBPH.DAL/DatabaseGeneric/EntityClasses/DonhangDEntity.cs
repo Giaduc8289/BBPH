@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 26, 2022 9:47:46 AM
+// Code is generated on: Sunday, November 27, 2022 2:58:13 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -510,6 +510,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaybaogia", fieldHashtable);
 		}
 		#endregion
 
@@ -792,6 +795,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DonhangDFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)DonhangDFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Ngaybaogia property of the Entity DonhangD<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "donhang_d"."Ngaybaogia"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaybaogia
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)DonhangDFieldIndex.Ngaybaogia, false); }
+			set	{ SetValue((int)DonhangDFieldIndex.Ngaybaogia, value); }
 		}
 
 

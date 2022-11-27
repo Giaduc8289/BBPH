@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, November 26, 2022 9:47:45 AM
+// Code is generated on: Sunday, November 27, 2022 2:58:13 PM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -177,6 +177,9 @@ namespace GD.BBPH.DAL.Linq
 					break;
 				case GD.BBPH.DAL.EntityType.KetquatuaEntity:
 					toReturn = this.Ketquatua;
+					break;
+				case GD.BBPH.DAL.EntityType.LenhsanxuatEntity:
+					toReturn = this.Lenhsanxuat;
 					break;
 				case GD.BBPH.DAL.EntityType.LogbackupEntity:
 					toReturn = this.Logbackup;
@@ -483,6 +486,12 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<KetquatuaEntity> Ketquatua
 		{
 			get { return new DataSource2<KetquatuaEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting LenhsanxuatEntity instances in the database.</summary>
+		public DataSource2<LenhsanxuatEntity> Lenhsanxuat
+		{
+			get { return new DataSource2<LenhsanxuatEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting LogbackupEntity instances in the database.</summary>
