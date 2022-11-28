@@ -493,6 +493,7 @@
             this.txt_SOMVAO.Regular_Expression = "";
             this.txt_SOMVAO.Size = new System.Drawing.Size(74, 20);
             this.txt_SOMVAO.TabIndex = 12;
+            this.txt_SOMVAO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_SOKGVAO
             // 
@@ -506,6 +507,7 @@
             this.txt_SOKGVAO.Regular_Expression = "";
             this.txt_SOKGVAO.Size = new System.Drawing.Size(74, 20);
             this.txt_SOKGVAO.TabIndex = 13;
+            this.txt_SOKGVAO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHEIN
             // 
