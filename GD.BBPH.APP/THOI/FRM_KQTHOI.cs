@@ -61,7 +61,7 @@ namespace GD.BBPH.APP.THOI
 
                         DT_DMMAY = new DmmayManager().SelectByMadmRDT("TH");// LIB.SESSION_START.DT_DMMAY;
                         DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
-                        DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
+                        DT_NHANVIEN = new DmcongnhanManager().SelectByMabpRDT("THOI");
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -639,15 +639,18 @@ namespace GD.BBPH.APP.THOI
         {
             try
             {
-                decimal _doday = 0, _rong = 0, _sokg = 0, _somet = 0, _sokgtieuchuan = 0, _chatluong = 0;
+                decimal  _rong = 0, _sokg = 0, _somet = 0,  _Dodaytrungbinh = 0, _hesoquydoi = 0; //_sokgtieuchuan = 0, _doday = 0,
                 _sokg = LIB.ConvertString.NumbertoDB(txt_SOKG.Text.Trim());
                 _somet = LIB.ConvertString.NumbertoDB(txt_SOM.Text.Trim());
                 DmmangEntity _DmmangEntity = new DmmangManager().SelectOne(txt_MAMANG.Text);
-                _doday = Convert.ToDecimal(_DmmangEntity.Doday);
+                DmquycachEntity _DmquycachEntity = new DmquycachManager().SelectOne(_DmmangEntity.Maloaimang);
+                //_doday = Convert.ToDecimal(_DmmangEntity.Doday);
                 _rong = Convert.ToDecimal(_DmmangEntity.Rong);
-                _sokgtieuchuan = _doday * _rong * _somet * Convert.ToDecimal(0.925) / 1000000;
-                _chatluong = (_sokg - _sokgtieuchuan) / _sokgtieuchuan * 100;
-                txt_CHATLUONG.Text = Math.Round(_chatluong).ToString();
+                _hesoquydoi = Convert.ToDecimal(_DmquycachEntity.Hesorieng);  
+                //_sokgtieuchuan = _doday * _rong * _somet * Convert.ToDecimal(0.925) / 1000000;
+                //_chatluong = (_sokg - _sokgtieuchuan) / _sokgtieuchuan * 100;
+                _Dodaytrungbinh = _sokg / _rong / _somet / _hesoquydoi * 1000000;
+                txt_CHATLUONG.Text = Math.Round(_Dodaytrungbinh).ToString();
             }
             catch { }
         }
