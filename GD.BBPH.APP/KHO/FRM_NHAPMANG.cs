@@ -118,6 +118,8 @@ namespace GD.BBPH.APP.KHO
 
             //GRID_NHAPMANG.RootTable.Groups.Add(GRID_NHAPMANG.Tables[0].Columns[NhapkhomangFields.Phongban.Name]);
             FORM_PROCESS();
+            GRID_NHAPMANGCHITIET.RootTable.Columns[NhapkhomangFields.Cuondo.Name].ColumnType = ColumnType.CheckBox;
+            GRID_NHAPMANGCHITIET.RootTable.Columns[NhapkhomangFields.Cuondo.Name].EditType = EditType.CheckBox;
             DataView Source_View = new DataView(DT_NHAPMANG);
             BS_NHAPMANG = new BindingSource();
             BS_NHAPMANG.DataSource = Source_View;
@@ -140,7 +142,6 @@ namespace GD.BBPH.APP.KHO
                     DataRowView _Rowview = (DataRowView)this.BS_NHAPMANG.Current;
                     if (_Rowview != null)
                         MAHIEU_PK = _Rowview.Row[NhapkhomangFields.Ngaynhap.Name].ToString();
-
                     txt_NGAY.Text = _Rowview.Row[NhapkhomangFields.Ngaynhap.Name].ToString();
                     txt_MAKHO.Text = _Rowview.Row[NhapkhomangFields.Makho.Name].ToString();
                     //txt_TENKHO.Text = _Rowview.Row[NhapkhomangFields.Tenkho.Name].ToString();
@@ -172,6 +173,8 @@ namespace GD.BBPH.APP.KHO
                     txt_TENLYDO.Text = _Rowview.Row[NhapkhomangFields.Tenlydo.Name].ToString();
                     txt_LENHSX.Text = _Rowview.Row[NhapkhomangFields.Lenhsx.Name].ToString();
                     txt_SOHD.Text = _Rowview.Row[NhapkhomangFields.Sohopdongmua.Name].ToString();
+                    try { chk_CUONDO.Checked = Convert.ToBoolean(_Rowview.Row[NhapkhomangFields.Cuondo.Name].ToString()); }
+                    catch { }
 
                     txt_MAMANG_Validating(new object(), new CancelEventArgs());
                     txt_LYDO_Validating(new object(), new CancelEventArgs());
@@ -219,6 +222,8 @@ namespace GD.BBPH.APP.KHO
             r_Detail[NhapkhomangFields.Tenlydo.Name] = txt_TENLYDO.Text;
             r_Detail[NhapkhomangFields.Lenhsx.Name] = txt_LENHSX.Text;
             r_Detail[NhapkhomangFields.Sohopdongmua.Name] = txt_SOHD.Text;
+            try { r_Detail[NhapkhomangFields.Cuondo.Name] = chk_CUONDO.Checked; }
+            catch { }
 
             DT_NHAPMANG_CHITIET_FILL.Rows.Add(r_Detail);
 
@@ -303,6 +308,8 @@ namespace GD.BBPH.APP.KHO
                 _NhapkhomangEntity.Tenlydo = _view.Row[NhapkhomangFields.Tenlydo.Name].ToString();
                 _NhapkhomangEntity.Lenhsx = _view.Row[NhapkhomangFields.Lenhsx.Name].ToString();
                 _NhapkhomangEntity.Sohopdongmua = _view.Row[NhapkhomangFields.Sohopdongmua.Name].ToString();
+                try { _NhapkhomangEntity.Cuondo = Convert.ToBoolean(_view.Row[NhapkhomangFields.Cuondo.Name].ToString()); }
+                catch { }
 
                 #region xét isnew
                 try { _NhapkhomangEntity.Id = Convert.ToInt64(_view[NhapkhomangFields.Id.Name].ToString()); }
