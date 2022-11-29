@@ -272,6 +272,7 @@
             this.txt_SOMETRA.Regular_Expression = "";
             this.txt_SOMETRA.Size = new System.Drawing.Size(74, 20);
             this.txt_SOMETRA.TabIndex = 14;
+            this.txt_SOMETRA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_SOKGRA
             // 
@@ -285,6 +286,7 @@
             this.txt_SOKGRA.Regular_Expression = "";
             this.txt_SOKGRA.Size = new System.Drawing.Size(74, 20);
             this.txt_SOKGRA.TabIndex = 15;
+            this.txt_SOKGRA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // label30
             // 
@@ -521,6 +523,7 @@
             this.txt_PHEIN.Regular_Expression = "";
             this.txt_PHEIN.Size = new System.Drawing.Size(74, 20);
             this.txt_PHEIN.TabIndex = 16;
+            this.txt_PHEIN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHECHIA
             // 
@@ -534,6 +537,7 @@
             this.txt_PHECHIA.Regular_Expression = "";
             this.txt_PHECHIA.Size = new System.Drawing.Size(74, 20);
             this.txt_PHECHIA.TabIndex = 18;
+            this.txt_PHECHIA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHEGHEP
             // 
@@ -547,6 +551,7 @@
             this.txt_PHEGHEP.Regular_Expression = "";
             this.txt_PHEGHEP.Size = new System.Drawing.Size(74, 20);
             this.txt_PHEGHEP.TabIndex = 17;
+            this.txt_PHEGHEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHETHOI
             // 
@@ -560,6 +565,7 @@
             this.txt_PHETHOI.Regular_Expression = "";
             this.txt_PHETHOI.Size = new System.Drawing.Size(74, 20);
             this.txt_PHETHOI.TabIndex = 19;
+            this.txt_PHETHOI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHESANXUAT
             // 
@@ -573,6 +579,7 @@
             this.txt_PHESANXUAT.Regular_Expression = "";
             this.txt_PHESANXUAT.Size = new System.Drawing.Size(74, 20);
             this.txt_PHESANXUAT.TabIndex = 20;
+            this.txt_PHESANXUAT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_SOCUON
             // 

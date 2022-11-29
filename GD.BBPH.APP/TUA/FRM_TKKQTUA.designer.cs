@@ -567,6 +567,7 @@
             this.txt_SOMETRA.Size = new System.Drawing.Size(84, 20);
             this.txt_SOMETRA.TabIndex = 14;
             this.txt_SOMETRA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOMETRA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_THOIGIANLENHACUON
             // 
@@ -597,6 +598,7 @@
             this.txt_KHOILUONGVAO.Size = new System.Drawing.Size(84, 20);
             this.txt_KHOILUONGVAO.TabIndex = 13;
             this.txt_KHOILUONGVAO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_KHOILUONGVAO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // label24
             // 
@@ -621,6 +623,7 @@
             this.txt_SOMETVAO.Size = new System.Drawing.Size(84, 20);
             this.txt_SOMETVAO.TabIndex = 12;
             this.txt_SOMETVAO.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOMETVAO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_THOIGIANDAUCA
             // 
@@ -666,6 +669,7 @@
             this.txt_KHOILUONGRA.Size = new System.Drawing.Size(84, 20);
             this.txt_KHOILUONGRA.TabIndex = 15;
             this.txt_KHOILUONGRA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_KHOILUONGRA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_CHENHLECHKG
             // 

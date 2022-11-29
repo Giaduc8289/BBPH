@@ -18,29 +18,8 @@ using Janus.Windows.GridEX;
 using Janus.Windows.Common;
 using GD.BBPH.APP.DANHMUC;
 
-//using System.Runtime.InteropServices;
-
 namespace GD.BBPH.APP.CHIA
 {
-    //public static class Interaction
-    //{
-    //    // Callers require Unmanaged permission        
-    //    public static void Beep()
-    //    {
-    //        // No need to demand a permission as callers of Interaction.Beep            
-    //        // will require UnmanagedCode permission            
-    //        if (!NativeMethods.MessageBeep(-1))
-    //            throw new Win32Exception();
-    //    }
-    //}
-    //internal static class NativeMethods
-    //{
-    //    [DllImport("user32.dll", CharSet = CharSet.Auto)]
-    //    [return: MarshalAs(UnmanagedType.Bool)]
-    //    internal static extern bool MessageBeep(int uType);
-    //}
-
-
     public partial class FRM_KQCHIA : FRM_DMPARENT
     {
         private KetquachiaManager _KetquachiaManager = new KetquachiaManager();
