@@ -728,6 +728,7 @@ namespace GD.BBPH.APP.DANHMUC
 
             #region Duyệt lưới màng để tổng hợp định mức keo, đóng rắn
             EntityCollection _MangcuahangEntityCol = new EntityCollection();
+            GRID_MANGCUAHANG.UpdateData();
             GridEXRow[] listGridMang = GRID_MANGCUAHANG.GetDataRows();
             foreach (GridEXRow _grid in listGridMang)
             {
