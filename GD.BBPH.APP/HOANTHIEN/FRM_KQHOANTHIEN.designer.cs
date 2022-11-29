@@ -432,6 +432,7 @@
             this.txt_DAUVAOMET.Regular_Expression = "";
             this.txt_DAUVAOMET.Size = new System.Drawing.Size(74, 20);
             this.txt_DAUVAOMET.TabIndex = 12;
+            this.txt_DAUVAOMET.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_DAUVAOKG
             // 
@@ -445,6 +446,7 @@
             this.txt_DAUVAOKG.Regular_Expression = "";
             this.txt_DAUVAOKG.Size = new System.Drawing.Size(74, 20);
             this.txt_DAUVAOKG.TabIndex = 13;
+            this.txt_DAUVAOKG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_KETQUATUI
             // 
@@ -458,6 +460,7 @@
             this.txt_KETQUATUI.Regular_Expression = "";
             this.txt_KETQUATUI.Size = new System.Drawing.Size(74, 20);
             this.txt_KETQUATUI.TabIndex = 14;
+            this.txt_KETQUATUI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHEIN
             // 
@@ -471,6 +474,7 @@
             this.txt_PHEIN.Regular_Expression = "";
             this.txt_PHEIN.Size = new System.Drawing.Size(74, 20);
             this.txt_PHEIN.TabIndex = 15;
+            this.txt_PHEIN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHEGHEP
             // 
@@ -484,6 +488,7 @@
             this.txt_PHEGHEP.Regular_Expression = "";
             this.txt_PHEGHEP.Size = new System.Drawing.Size(74, 20);
             this.txt_PHEGHEP.TabIndex = 16;
+            this.txt_PHEGHEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHECHIA
             // 
@@ -497,6 +502,7 @@
             this.txt_PHECHIA.Regular_Expression = "";
             this.txt_PHECHIA.Size = new System.Drawing.Size(74, 20);
             this.txt_PHECHIA.TabIndex = 17;
+            this.txt_PHECHIA.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHEBIEN
             // 
@@ -510,6 +516,7 @@
             this.txt_PHEBIEN.Regular_Expression = "";
             this.txt_PHEBIEN.Size = new System.Drawing.Size(74, 20);
             this.txt_PHEBIEN.TabIndex = 18;
+            this.txt_PHEBIEN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHETHOI
             // 
@@ -523,6 +530,7 @@
             this.txt_PHETHOI.Regular_Expression = "";
             this.txt_PHETHOI.Size = new System.Drawing.Size(74, 20);
             this.txt_PHETHOI.TabIndex = 19;
+            this.txt_PHETHOI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHECHINHMAY
             // 
@@ -536,6 +544,7 @@
             this.txt_PHECHINHMAY.Regular_Expression = "";
             this.txt_PHECHINHMAY.Size = new System.Drawing.Size(74, 20);
             this.txt_PHECHINHMAY.TabIndex = 20;
+            this.txt_PHECHINHMAY.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHEKHAC
             // 
@@ -549,6 +558,7 @@
             this.txt_PHEKHAC.Regular_Expression = "";
             this.txt_PHEKHAC.Size = new System.Drawing.Size(74, 20);
             this.txt_PHEKHAC.TabIndex = 21;
+            this.txt_PHEKHAC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_CHATLUONGTUI
             // 

@@ -820,6 +820,15 @@ namespace GD.BBPH.APP.GHEP
                 DT_NHANVIEN = new DmcongnhanManager().SelectAllRDT();
             }
         }
+        private void txt_CALCULATOR_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F3)
+            {
+                System.Diagnostics.Process p = System.Diagnostics.Process.Start("calc.exe");
+                p.WaitForInputIdle();
+                //NativeMethods.SetParent(p.MainWindowHandle, this.Handle);
+            }
+        }
         #endregion
 
         #region  Tính năng suất

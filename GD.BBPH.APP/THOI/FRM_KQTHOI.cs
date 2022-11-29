@@ -715,6 +715,15 @@ namespace GD.BBPH.APP.THOI
                 DT_DMMANG = new DmmangManager().SelectAllRDT();
             }
         }
+        private void txt_CALCULATOR_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F3)
+            {
+                System.Diagnostics.Process p = System.Diagnostics.Process.Start("calc.exe");
+                p.WaitForInputIdle();
+                //NativeMethods.SetParent(p.MainWindowHandle, this.Handle);
+            }
+        }
         #endregion
 
         private void uiPanel0_Resize(object sender, EventArgs e)

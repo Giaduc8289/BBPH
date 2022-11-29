@@ -397,6 +397,7 @@
             this.txt_PHELIEUTHUCTE.Size = new System.Drawing.Size(93, 20);
             this.txt_PHELIEUTHUCTE.TabIndex = 13;
             this.txt_PHELIEUTHUCTE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_PHELIEUTHUCTE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_SOKG
             // 
@@ -412,6 +413,7 @@
             this.txt_SOKG.Size = new System.Drawing.Size(93, 20);
             this.txt_SOKG.TabIndex = 12;
             this.txt_SOKG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOKG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             this.txt_SOKG.Validated += new System.EventHandler(this.txt_NANGSUAT_CHATLUONG_Validated);
             // 
             // txt_SOM
@@ -428,6 +430,7 @@
             this.txt_SOM.Size = new System.Drawing.Size(93, 20);
             this.txt_SOM.TabIndex = 11;
             this.txt_SOM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             this.txt_SOM.Validated += new System.EventHandler(this.txt_NANGSUAT_CHATLUONG_Validated);
             // 
             // label19
