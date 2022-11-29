@@ -875,6 +875,14 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.BANHANG.FRM_PHIEUGIAOHANG()), mmru.Text);
                     break;
+
+                case "FRM_LENHSANXUAT":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_LENHSANXUAT") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    ShowAsMDIChildMax((new GD.BBPH.APP.BANHANG.FRM_LENHSANXUAT()), mmru.Text);
+                    break;
                 #endregion
 
                 #region Mua hàng

@@ -135,6 +135,12 @@
     <Compile Include="BANHANG\FRM_BAOGIA.designer.cs">
       <DependentUpon>FRM_BAOGIA.cs</DependentUpon>
     </Compile>
+    <Compile Include="BANHANG\FRM_LENHSANXUAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BANHANG\FRM_LENHSANXUAT.designer.cs">
+      <DependentUpon>FRM_LENHSANXUAT.cs</DependentUpon>
+    </Compile>
     <Compile Include="BANHANG\FRM_DONHANG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -771,6 +777,9 @@
     <EmbeddedResource Include="BANHANG\FRM_BAOGIA.resx">
       <DependentUpon>FRM_BAOGIA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BANHANG\FRM_LENHSANXUAT.resx">
+      <DependentUpon>FRM_LENHSANXUAT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BANHANG\FRM_DONHANG.resx">
       <DependentUpon>FRM_DONHANG.cs</DependentUpon>
     </EmbeddedResource>
@@ -1230,6 +1239,7 @@
     <Content Include="XMLCONFIG\FRM_KQHOANTHIENCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOI.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOICHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHSANXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDONHAPXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDOXUATKHO.xml" />
     <Content Include="XMLCONFIG\FRM_MANGCUAHANG.xml" />

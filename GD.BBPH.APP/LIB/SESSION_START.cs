@@ -775,6 +775,17 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
         #endregion
-
+        #region LENHSANXUAT
+        private static DataTable _DT_LENHSANXUAT = null;
+        public static DataTable DT_LENHSANXUAT
+        {
+            get
+            {
+                _DT_LENHSANXUAT = new LenhsanxuatManager().SelectAllRDT();
+                return _DT_LENHSANXUAT;
+            }
+            set { _DT_LENHSANXUAT = value; }
+        }
+        #endregion
     }
 }
