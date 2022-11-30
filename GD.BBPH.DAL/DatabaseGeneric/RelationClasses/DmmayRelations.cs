@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, November 27, 2022 2:58:13 PM
+// Code is generated on: Wednesday, November 30, 2022 10:20:40 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -30,6 +30,11 @@ namespace GD.BBPH.DAL.RelationClasses
 		public virtual List<IEntityRelation> GetAllRelations()
 		{
 			List<IEntityRelation> toReturn = new List<IEntityRelation>();
+			toReturn.Add(this.KehoachghepEntityUsingMamay);
+			toReturn.Add(this.KehoachinEntityUsingMamay);
+			toReturn.Add(this.KehoachlocEntityUsingMamay);
+			toReturn.Add(this.KehoachthoiEntityUsingMamay);
+			toReturn.Add(this.KehoachtuaEntityUsingMamay);
 			toReturn.Add(this.KetquaghepEntityUsingMamay);
 			toReturn.Add(this.KetquahoanthienEntityUsingMamay);
 			toReturn.Add(this.KetquainEntityUsingMamay);
@@ -41,6 +46,81 @@ namespace GD.BBPH.DAL.RelationClasses
 		}
 
 		#region Class Property Declarations
+
+		/// <summary>Returns a new IEntityRelation object, between DmmayEntity and KehoachghepEntity over the 1:n relation they have, using the relation between the fields:
+		/// Dmmay.Mamay - Kehoachghep.Mamay
+		/// </summary>
+		public virtual IEntityRelation KehoachghepEntityUsingMamay
+		{
+			get
+			{
+				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Kehoachghep" , true);
+				relation.AddEntityFieldPair(DmmayFields.Mamay, KehoachghepFields.Mamay);
+				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", true);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KehoachghepEntity", false);
+				return relation;
+			}
+		}
+
+		/// <summary>Returns a new IEntityRelation object, between DmmayEntity and KehoachinEntity over the 1:n relation they have, using the relation between the fields:
+		/// Dmmay.Mamay - Kehoachin.Mamay
+		/// </summary>
+		public virtual IEntityRelation KehoachinEntityUsingMamay
+		{
+			get
+			{
+				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Kehoachin" , true);
+				relation.AddEntityFieldPair(DmmayFields.Mamay, KehoachinFields.Mamay);
+				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", true);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KehoachinEntity", false);
+				return relation;
+			}
+		}
+
+		/// <summary>Returns a new IEntityRelation object, between DmmayEntity and KehoachlocEntity over the 1:n relation they have, using the relation between the fields:
+		/// Dmmay.Mamay - Kehoachloc.Mamay
+		/// </summary>
+		public virtual IEntityRelation KehoachlocEntityUsingMamay
+		{
+			get
+			{
+				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Kehoachloc" , true);
+				relation.AddEntityFieldPair(DmmayFields.Mamay, KehoachlocFields.Mamay);
+				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", true);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KehoachlocEntity", false);
+				return relation;
+			}
+		}
+
+		/// <summary>Returns a new IEntityRelation object, between DmmayEntity and KehoachthoiEntity over the 1:n relation they have, using the relation between the fields:
+		/// Dmmay.Mamay - Kehoachthoi.Mamay
+		/// </summary>
+		public virtual IEntityRelation KehoachthoiEntityUsingMamay
+		{
+			get
+			{
+				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Kehoachthoi" , true);
+				relation.AddEntityFieldPair(DmmayFields.Mamay, KehoachthoiFields.Mamay);
+				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", true);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KehoachthoiEntity", false);
+				return relation;
+			}
+		}
+
+		/// <summary>Returns a new IEntityRelation object, between DmmayEntity and KehoachtuaEntity over the 1:n relation they have, using the relation between the fields:
+		/// Dmmay.Mamay - Kehoachtua.Mamay
+		/// </summary>
+		public virtual IEntityRelation KehoachtuaEntityUsingMamay
+		{
+			get
+			{
+				IEntityRelation relation = new EntityRelation(SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany, "Kehoachtua" , true);
+				relation.AddEntityFieldPair(DmmayFields.Mamay, KehoachtuaFields.Mamay);
+				relation.InheritanceInfoPkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("DmmayEntity", true);
+				relation.InheritanceInfoFkSideEntity = InheritanceInfoProviderSingleton.GetInstance().GetInheritanceInfo("KehoachtuaEntity", false);
+				return relation;
+			}
+		}
 
 		/// <summary>Returns a new IEntityRelation object, between DmmayEntity and KetquaghepEntity over the 1:n relation they have, using the relation between the fields:
 		/// Dmmay.Mamay - Ketquaghep.Mamay

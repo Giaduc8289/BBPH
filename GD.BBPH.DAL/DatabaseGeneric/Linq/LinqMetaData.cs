@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, November 27, 2022 2:58:13 PM
+// Code is generated on: Wednesday, November 30, 2022 10:20:40 AM
 // Code is generated using templates: SD.TemplateBindings.Linq
 // Templates vendor: Solutions Design.
 //////////////////////////////////////////////////////////////
@@ -153,6 +153,27 @@ namespace GD.BBPH.DAL.Linq
 					break;
 				case GD.BBPH.DAL.EntityType.HangtralaiEntity:
 					toReturn = this.Hangtralai;
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachchiaEntity:
+					toReturn = this.Kehoachchia;
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachghepEntity:
+					toReturn = this.Kehoachghep;
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachhoanthienEntity:
+					toReturn = this.Kehoachhoanthien;
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachinEntity:
+					toReturn = this.Kehoachin;
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachlocEntity:
+					toReturn = this.Kehoachloc;
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachthoiEntity:
+					toReturn = this.Kehoachthoi;
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachtuaEntity:
+					toReturn = this.Kehoachtua;
 					break;
 				case GD.BBPH.DAL.EntityType.KeocuahangEntity:
 					toReturn = this.Keocuahang;
@@ -438,6 +459,48 @@ namespace GD.BBPH.DAL.Linq
 		public DataSource2<HangtralaiEntity> Hangtralai
 		{
 			get { return new DataSource2<HangtralaiEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KehoachchiaEntity instances in the database.</summary>
+		public DataSource2<KehoachchiaEntity> Kehoachchia
+		{
+			get { return new DataSource2<KehoachchiaEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KehoachghepEntity instances in the database.</summary>
+		public DataSource2<KehoachghepEntity> Kehoachghep
+		{
+			get { return new DataSource2<KehoachghepEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KehoachhoanthienEntity instances in the database.</summary>
+		public DataSource2<KehoachhoanthienEntity> Kehoachhoanthien
+		{
+			get { return new DataSource2<KehoachhoanthienEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KehoachinEntity instances in the database.</summary>
+		public DataSource2<KehoachinEntity> Kehoachin
+		{
+			get { return new DataSource2<KehoachinEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KehoachlocEntity instances in the database.</summary>
+		public DataSource2<KehoachlocEntity> Kehoachloc
+		{
+			get { return new DataSource2<KehoachlocEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KehoachthoiEntity instances in the database.</summary>
+		public DataSource2<KehoachthoiEntity> Kehoachthoi
+		{
+			get { return new DataSource2<KehoachthoiEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
+		}
+		
+		/// <summary>returns the datasource to use in a Linq query when targeting KehoachtuaEntity instances in the database.</summary>
+		public DataSource2<KehoachtuaEntity> Kehoachtua
+		{
+			get { return new DataSource2<KehoachtuaEntity>(_adapterToUse, new ElementCreator(), _customFunctionMappings, _contextToUse); }
 		}
 		
 		/// <summary>returns the datasource to use in a Linq query when targeting KeocuahangEntity instances in the database.</summary>

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, November 27, 2022 2:58:13 PM
+// Code is generated on: Wednesday, November 30, 2022 10:20:41 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -37,6 +37,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
+		private EntityCollection<KehoachghepEntity> _kehoachghep;
+		private EntityCollection<KehoachinEntity> _kehoachin;
+		private EntityCollection<KehoachlocEntity> _kehoachloc;
+		private EntityCollection<KehoachthoiEntity> _kehoachthoi;
+		private EntityCollection<KehoachtuaEntity> _kehoachtua;
 		private EntityCollection<KetquaghepEntity> _ketquaghep;
 		private EntityCollection<KetquahoanthienEntity> _ketquahoanthien;
 		private EntityCollection<KetquainEntity> _ketquain;
@@ -58,6 +63,16 @@ namespace GD.BBPH.DAL.EntityClasses
 		public static class MemberNames
 		{
 
+			/// <summary>Member name Kehoachghep</summary>
+			public static readonly string Kehoachghep = "Kehoachghep";
+			/// <summary>Member name Kehoachin</summary>
+			public static readonly string Kehoachin = "Kehoachin";
+			/// <summary>Member name Kehoachloc</summary>
+			public static readonly string Kehoachloc = "Kehoachloc";
+			/// <summary>Member name Kehoachthoi</summary>
+			public static readonly string Kehoachthoi = "Kehoachthoi";
+			/// <summary>Member name Kehoachtua</summary>
+			public static readonly string Kehoachtua = "Kehoachtua";
 			/// <summary>Member name Ketquaghep</summary>
 			public static readonly string Ketquaghep = "Ketquaghep";
 			/// <summary>Member name Ketquahoanthien</summary>
@@ -128,6 +143,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
+				_kehoachghep = (EntityCollection<KehoachghepEntity>)info.GetValue("_kehoachghep", typeof(EntityCollection<KehoachghepEntity>));
+				_kehoachin = (EntityCollection<KehoachinEntity>)info.GetValue("_kehoachin", typeof(EntityCollection<KehoachinEntity>));
+				_kehoachloc = (EntityCollection<KehoachlocEntity>)info.GetValue("_kehoachloc", typeof(EntityCollection<KehoachlocEntity>));
+				_kehoachthoi = (EntityCollection<KehoachthoiEntity>)info.GetValue("_kehoachthoi", typeof(EntityCollection<KehoachthoiEntity>));
+				_kehoachtua = (EntityCollection<KehoachtuaEntity>)info.GetValue("_kehoachtua", typeof(EntityCollection<KehoachtuaEntity>));
 				_ketquaghep = (EntityCollection<KetquaghepEntity>)info.GetValue("_ketquaghep", typeof(EntityCollection<KetquaghepEntity>));
 				_ketquahoanthien = (EntityCollection<KetquahoanthienEntity>)info.GetValue("_ketquahoanthien", typeof(EntityCollection<KetquahoanthienEntity>));
 				_ketquain = (EntityCollection<KetquainEntity>)info.GetValue("_ketquain", typeof(EntityCollection<KetquainEntity>));
@@ -173,6 +193,21 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(propertyName)
 			{
 
+				case "Kehoachghep":
+					this.Kehoachghep.Add((KehoachghepEntity)entity);
+					break;
+				case "Kehoachin":
+					this.Kehoachin.Add((KehoachinEntity)entity);
+					break;
+				case "Kehoachloc":
+					this.Kehoachloc.Add((KehoachlocEntity)entity);
+					break;
+				case "Kehoachthoi":
+					this.Kehoachthoi.Add((KehoachthoiEntity)entity);
+					break;
+				case "Kehoachtua":
+					this.Kehoachtua.Add((KehoachtuaEntity)entity);
+					break;
 				case "Ketquaghep":
 					this.Ketquaghep.Add((KetquaghepEntity)entity);
 					break;
@@ -212,6 +247,21 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
+				case "Kehoachghep":
+					toReturn.Add(DmmayEntity.Relations.KehoachghepEntityUsingMamay);
+					break;
+				case "Kehoachin":
+					toReturn.Add(DmmayEntity.Relations.KehoachinEntityUsingMamay);
+					break;
+				case "Kehoachloc":
+					toReturn.Add(DmmayEntity.Relations.KehoachlocEntityUsingMamay);
+					break;
+				case "Kehoachthoi":
+					toReturn.Add(DmmayEntity.Relations.KehoachthoiEntityUsingMamay);
+					break;
+				case "Kehoachtua":
+					toReturn.Add(DmmayEntity.Relations.KehoachtuaEntityUsingMamay);
+					break;
 				case "Ketquaghep":
 					toReturn.Add(DmmayEntity.Relations.KetquaghepEntityUsingMamay);
 					break;
@@ -265,6 +315,21 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
+				case "Kehoachghep":
+					this.Kehoachghep.Add((KehoachghepEntity)relatedEntity);
+					break;
+				case "Kehoachin":
+					this.Kehoachin.Add((KehoachinEntity)relatedEntity);
+					break;
+				case "Kehoachloc":
+					this.Kehoachloc.Add((KehoachlocEntity)relatedEntity);
+					break;
+				case "Kehoachthoi":
+					this.Kehoachthoi.Add((KehoachthoiEntity)relatedEntity);
+					break;
+				case "Kehoachtua":
+					this.Kehoachtua.Add((KehoachtuaEntity)relatedEntity);
+					break;
 				case "Ketquaghep":
 					this.Ketquaghep.Add((KetquaghepEntity)relatedEntity);
 					break;
@@ -296,6 +361,21 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
+				case "Kehoachghep":
+					base.PerformRelatedEntityRemoval(this.Kehoachghep, relatedEntity, signalRelatedEntityManyToOne);
+					break;
+				case "Kehoachin":
+					base.PerformRelatedEntityRemoval(this.Kehoachin, relatedEntity, signalRelatedEntityManyToOne);
+					break;
+				case "Kehoachloc":
+					base.PerformRelatedEntityRemoval(this.Kehoachloc, relatedEntity, signalRelatedEntityManyToOne);
+					break;
+				case "Kehoachthoi":
+					base.PerformRelatedEntityRemoval(this.Kehoachthoi, relatedEntity, signalRelatedEntityManyToOne);
+					break;
+				case "Kehoachtua":
+					base.PerformRelatedEntityRemoval(this.Kehoachtua, relatedEntity, signalRelatedEntityManyToOne);
+					break;
 				case "Ketquaghep":
 					base.PerformRelatedEntityRemoval(this.Ketquaghep, relatedEntity, signalRelatedEntityManyToOne);
 					break;
@@ -342,6 +422,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntityCollection2> GetMemberEntityCollections()
 		{
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
+			toReturn.Add(this.Kehoachghep);
+			toReturn.Add(this.Kehoachin);
+			toReturn.Add(this.Kehoachloc);
+			toReturn.Add(this.Kehoachthoi);
+			toReturn.Add(this.Kehoachtua);
 			toReturn.Add(this.Ketquaghep);
 			toReturn.Add(this.Ketquahoanthien);
 			toReturn.Add(this.Ketquain);
@@ -361,6 +446,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
+				info.AddValue("_kehoachghep", ((_kehoachghep!=null) && (_kehoachghep.Count>0) && !this.MarkedForDeletion)?_kehoachghep:null);
+				info.AddValue("_kehoachin", ((_kehoachin!=null) && (_kehoachin.Count>0) && !this.MarkedForDeletion)?_kehoachin:null);
+				info.AddValue("_kehoachloc", ((_kehoachloc!=null) && (_kehoachloc.Count>0) && !this.MarkedForDeletion)?_kehoachloc:null);
+				info.AddValue("_kehoachthoi", ((_kehoachthoi!=null) && (_kehoachthoi.Count>0) && !this.MarkedForDeletion)?_kehoachthoi:null);
+				info.AddValue("_kehoachtua", ((_kehoachtua!=null) && (_kehoachtua.Count>0) && !this.MarkedForDeletion)?_kehoachtua:null);
 				info.AddValue("_ketquaghep", ((_ketquaghep!=null) && (_ketquaghep.Count>0) && !this.MarkedForDeletion)?_ketquaghep:null);
 				info.AddValue("_ketquahoanthien", ((_ketquahoanthien!=null) && (_ketquahoanthien.Count>0) && !this.MarkedForDeletion)?_ketquahoanthien:null);
 				info.AddValue("_ketquain", ((_ketquain!=null) && (_ketquain.Count>0) && !this.MarkedForDeletion)?_ketquain:null);
@@ -402,6 +492,56 @@ namespace GD.BBPH.DAL.EntityClasses
 			return new DmmayRelations().GetAllRelations();
 		}
 		
+
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Kehoachghep' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoKehoachghep()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(KehoachghepFields.Mamay, null, ComparisonOperator.Equal, this.Mamay));
+			return bucket;
+		}
+
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Kehoachin' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoKehoachin()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(KehoachinFields.Mamay, null, ComparisonOperator.Equal, this.Mamay));
+			return bucket;
+		}
+
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Kehoachloc' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoKehoachloc()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(KehoachlocFields.Mamay, null, ComparisonOperator.Equal, this.Mamay));
+			return bucket;
+		}
+
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Kehoachthoi' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoKehoachthoi()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(KehoachthoiFields.Mamay, null, ComparisonOperator.Equal, this.Mamay));
+			return bucket;
+		}
+
+		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
+		/// the related entities of type 'Kehoachtua' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
+		/// <returns></returns>
+		public virtual IRelationPredicateBucket GetRelationInfoKehoachtua()
+		{
+			IRelationPredicateBucket bucket = new RelationPredicateBucket();
+			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(KehoachtuaFields.Mamay, null, ComparisonOperator.Equal, this.Mamay));
+			return bucket;
+		}
 
 		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
 		/// the related entities of type 'Ketquaghep' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
@@ -483,6 +623,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void AddToMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue) 
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
+			collectionsQueue.Enqueue(this._kehoachghep);
+			collectionsQueue.Enqueue(this._kehoachin);
+			collectionsQueue.Enqueue(this._kehoachloc);
+			collectionsQueue.Enqueue(this._kehoachthoi);
+			collectionsQueue.Enqueue(this._kehoachtua);
 			collectionsQueue.Enqueue(this._ketquaghep);
 			collectionsQueue.Enqueue(this._ketquahoanthien);
 			collectionsQueue.Enqueue(this._ketquain);
@@ -496,6 +641,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void GetFromMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue)
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
+			this._kehoachghep = (EntityCollection<KehoachghepEntity>) collectionsQueue.Dequeue();
+			this._kehoachin = (EntityCollection<KehoachinEntity>) collectionsQueue.Dequeue();
+			this._kehoachloc = (EntityCollection<KehoachlocEntity>) collectionsQueue.Dequeue();
+			this._kehoachthoi = (EntityCollection<KehoachthoiEntity>) collectionsQueue.Dequeue();
+			this._kehoachtua = (EntityCollection<KehoachtuaEntity>) collectionsQueue.Dequeue();
 			this._ketquaghep = (EntityCollection<KetquaghepEntity>) collectionsQueue.Dequeue();
 			this._ketquahoanthien = (EntityCollection<KetquahoanthienEntity>) collectionsQueue.Dequeue();
 			this._ketquain = (EntityCollection<KetquainEntity>) collectionsQueue.Dequeue();
@@ -508,6 +658,26 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>true if the entity has populated member collections.</returns>
 		protected override bool HasPopulatedMemberEntityCollections()
 		{
+			if (this._kehoachghep != null)
+			{
+				return true;
+			}
+			if (this._kehoachin != null)
+			{
+				return true;
+			}
+			if (this._kehoachloc != null)
+			{
+				return true;
+			}
+			if (this._kehoachthoi != null)
+			{
+				return true;
+			}
+			if (this._kehoachtua != null)
+			{
+				return true;
+			}
 			if (this._ketquaghep != null)
 			{
 				return true;
@@ -538,6 +708,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void CreateMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue, Queue<bool> requiredQueue) 
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KehoachghepEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachghepEntityFactory))) : null);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KehoachinEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachinEntityFactory))) : null);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KehoachlocEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachlocEntityFactory))) : null);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KehoachthoiEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachthoiEntityFactory))) : null);
+			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KehoachtuaEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachtuaEntityFactory))) : null);
 			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquaghepEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquaghepEntityFactory))) : null);
 			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquahoanthienEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquahoanthienEntityFactory))) : null);
 			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<KetquainEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KetquainEntityFactory))) : null);
@@ -554,6 +729,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
 
+			toReturn.Add("Kehoachghep", _kehoachghep);
+			toReturn.Add("Kehoachin", _kehoachin);
+			toReturn.Add("Kehoachloc", _kehoachloc);
+			toReturn.Add("Kehoachthoi", _kehoachthoi);
+			toReturn.Add("Kehoachtua", _kehoachtua);
 			toReturn.Add("Ketquaghep", _ketquaghep);
 			toReturn.Add("Ketquahoanthien", _ketquahoanthien);
 			toReturn.Add("Ketquain", _ketquain);
@@ -567,6 +747,26 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> Adds the internals to the active context. </summary>
 		protected override void AddInternalsToContext()
 		{
+			if(_kehoachghep!=null)
+			{
+				_kehoachghep.ActiveContext = base.ActiveContext;
+			}
+			if(_kehoachin!=null)
+			{
+				_kehoachin.ActiveContext = base.ActiveContext;
+			}
+			if(_kehoachloc!=null)
+			{
+				_kehoachloc.ActiveContext = base.ActiveContext;
+			}
+			if(_kehoachthoi!=null)
+			{
+				_kehoachthoi.ActiveContext = base.ActiveContext;
+			}
+			if(_kehoachtua!=null)
+			{
+				_kehoachtua.ActiveContext = base.ActiveContext;
+			}
 			if(_ketquaghep!=null)
 			{
 				_ketquaghep.ActiveContext = base.ActiveContext;
@@ -596,6 +796,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected virtual void InitClassMembers()
 		{
 
+			_kehoachghep = null;
+			_kehoachin = null;
+			_kehoachloc = null;
+			_kehoachthoi = null;
+			_kehoachtua = null;
 			_ketquaghep = null;
 			_ketquahoanthien = null;
 			_ketquain = null;
@@ -680,6 +885,61 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return _customProperties;}
 		}
 
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Kehoachghep' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathKehoachghep
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<KehoachghepEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachghepEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Kehoachghep")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KehoachghepEntity, 0, null, null, null, null, "Kehoachghep", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Kehoachin' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathKehoachin
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<KehoachinEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachinEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Kehoachin")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KehoachinEntity, 0, null, null, null, null, "Kehoachin", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Kehoachloc' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathKehoachloc
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<KehoachlocEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachlocEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Kehoachloc")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KehoachlocEntity, 0, null, null, null, null, "Kehoachloc", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Kehoachthoi' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathKehoachthoi
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<KehoachthoiEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachthoiEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Kehoachthoi")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KehoachthoiEntity, 0, null, null, null, null, "Kehoachthoi", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
+		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Kehoachtua' 
+		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
+		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
+		public static IPrefetchPathElement2 PrefetchPathKehoachtua
+		{
+			get
+			{
+				return new PrefetchPathElement2( new EntityCollection<KehoachtuaEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachtuaEntityFactory))),
+					(IEntityRelation)GetRelationsForField("Kehoachtua")[0], (int)GD.BBPH.DAL.EntityType.DmmayEntity, (int)GD.BBPH.DAL.EntityType.KehoachtuaEntity, 0, null, null, null, null, "Kehoachtua", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
+			}
+		}
 		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Ketquaghep' 
 		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
 		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
@@ -849,6 +1109,86 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)DmmayFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)DmmayFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'KehoachghepEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(KehoachghepEntity))]
+		public virtual EntityCollection<KehoachghepEntity> Kehoachghep
+		{
+			get
+			{
+				if(_kehoachghep==null)
+				{
+					_kehoachghep = new EntityCollection<KehoachghepEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachghepEntityFactory)));
+					_kehoachghep.SetContainingEntityInfo(this, "Dmmay");
+				}
+				return _kehoachghep;
+			}
+		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'KehoachinEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(KehoachinEntity))]
+		public virtual EntityCollection<KehoachinEntity> Kehoachin
+		{
+			get
+			{
+				if(_kehoachin==null)
+				{
+					_kehoachin = new EntityCollection<KehoachinEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachinEntityFactory)));
+					_kehoachin.SetContainingEntityInfo(this, "Dmmay");
+				}
+				return _kehoachin;
+			}
+		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'KehoachlocEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(KehoachlocEntity))]
+		public virtual EntityCollection<KehoachlocEntity> Kehoachloc
+		{
+			get
+			{
+				if(_kehoachloc==null)
+				{
+					_kehoachloc = new EntityCollection<KehoachlocEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachlocEntityFactory)));
+					_kehoachloc.SetContainingEntityInfo(this, "Dmmay");
+				}
+				return _kehoachloc;
+			}
+		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'KehoachthoiEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(KehoachthoiEntity))]
+		public virtual EntityCollection<KehoachthoiEntity> Kehoachthoi
+		{
+			get
+			{
+				if(_kehoachthoi==null)
+				{
+					_kehoachthoi = new EntityCollection<KehoachthoiEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachthoiEntityFactory)));
+					_kehoachthoi.SetContainingEntityInfo(this, "Dmmay");
+				}
+				return _kehoachthoi;
+			}
+		}
+
+		/// <summary> Gets the EntityCollection with the related entities of type 'KehoachtuaEntity' which are related to this entity via a relation of type '1:n'.
+		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
+		[TypeContainedAttribute(typeof(KehoachtuaEntity))]
+		public virtual EntityCollection<KehoachtuaEntity> Kehoachtua
+		{
+			get
+			{
+				if(_kehoachtua==null)
+				{
+					_kehoachtua = new EntityCollection<KehoachtuaEntity>(EntityFactoryCache2.GetEntityFactory(typeof(KehoachtuaEntityFactory)));
+					_kehoachtua.SetContainingEntityInfo(this, "Dmmay");
+				}
+				return _kehoachtua;
+			}
 		}
 
 		/// <summary> Gets the EntityCollection with the related entities of type 'KetquaghepEntity' which are related to this entity via a relation of type '1:n'.

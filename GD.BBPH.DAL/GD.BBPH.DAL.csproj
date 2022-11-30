@@ -149,6 +149,13 @@
     <Compile Include="DatabaseGeneric\EntityClasses\DonhangDEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\DonhangHEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\HangtralaiEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KehoachchiaEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KehoachghepEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KehoachhoanthienEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KehoachinEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KehoachlocEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KehoachthoiEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\KehoachtuaEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\KeocuahangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\KetquachiaEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\KetquaghepEntity.cs" />
@@ -262,6 +269,13 @@
     <Compile Include="DatabaseGeneric\RelationClasses\DonhangHRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\DynamicRelation.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\HangtralaiRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KehoachchiaRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KehoachghepRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KehoachhoanthienRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KehoachinRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KehoachlocRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KehoachthoiRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\KehoachtuaRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\KeocuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\KetquachiaRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\KetquaghepRelations.cs" />

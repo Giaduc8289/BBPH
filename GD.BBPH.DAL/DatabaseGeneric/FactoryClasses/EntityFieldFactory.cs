@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, November 27, 2022 2:58:13 PM
+// Code is generated on: Wednesday, November 30, 2022 10:20:41 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -272,6 +272,62 @@ namespace GD.BBPH.DAL.FactoryClasses
 		public static IEntityField2 Create(HangtralaiFieldIndex fieldIndex)
 		{
 			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("HangtralaiEntity", (int)fieldIndex));
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the KehoachchiaEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(KehoachchiaFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("KehoachchiaEntity", (int)fieldIndex));
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the KehoachghepEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(KehoachghepFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("KehoachghepEntity", (int)fieldIndex));
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the KehoachhoanthienEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(KehoachhoanthienFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("KehoachhoanthienEntity", (int)fieldIndex));
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the KehoachinEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(KehoachinFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("KehoachinEntity", (int)fieldIndex));
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the KehoachlocEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(KehoachlocFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("KehoachlocEntity", (int)fieldIndex));
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the KehoachthoiEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(KehoachthoiFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("KehoachthoiEntity", (int)fieldIndex));
+		}
+
+		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the KehoachtuaEntity. Which EntityField is created is specified by fieldIndex</summary>
+		/// <param name="fieldIndex">The field which IEntityField2 instance should be created</param>
+		/// <returns>The IEntityField2 instance for the field specified in fieldIndex</returns>
+		public static IEntityField2 Create(KehoachtuaFieldIndex fieldIndex)
+		{
+			return new EntityField2(FieldInfoProviderSingleton.GetInstance().GetFieldInfo("KehoachtuaEntity", (int)fieldIndex));
 		}
 
 		/// <summary> Creates a new IEntityField2 instance for usage in the EntityFields object for the KeocuahangEntity. Which EntityField is created is specified by fieldIndex</summary>

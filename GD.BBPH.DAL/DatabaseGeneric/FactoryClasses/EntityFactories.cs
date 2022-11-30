@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, November 27, 2022 2:58:13 PM
+// Code is generated on: Wednesday, November 30, 2022 10:20:41 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1298,6 +1298,293 @@ namespace GD.BBPH.DAL.FactoryClasses
 
 		#endregion
 	}	
+	/// <summary>Factory to create new, empty KehoachchiaEntity objects.</summary>
+	[Serializable]
+	public partial class KehoachchiaEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KehoachchiaEntityFactory() : base("KehoachchiaEntity", GD.BBPH.DAL.EntityType.KehoachchiaEntity) { }
+
+		/// <summary>Creates a new, empty KehoachchiaEntity object.</summary>
+		/// <returns>A new, empty KehoachchiaEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KehoachchiaEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachchia
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KehoachchiaEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KehoachchiaEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachchiaUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KehoachchiaEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KehoachghepEntity objects.</summary>
+	[Serializable]
+	public partial class KehoachghepEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KehoachghepEntityFactory() : base("KehoachghepEntity", GD.BBPH.DAL.EntityType.KehoachghepEntity) { }
+
+		/// <summary>Creates a new, empty KehoachghepEntity object.</summary>
+		/// <returns>A new, empty KehoachghepEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KehoachghepEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachghep
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KehoachghepEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KehoachghepEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachghepUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KehoachghepEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KehoachhoanthienEntity objects.</summary>
+	[Serializable]
+	public partial class KehoachhoanthienEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KehoachhoanthienEntityFactory() : base("KehoachhoanthienEntity", GD.BBPH.DAL.EntityType.KehoachhoanthienEntity) { }
+
+		/// <summary>Creates a new, empty KehoachhoanthienEntity object.</summary>
+		/// <returns>A new, empty KehoachhoanthienEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KehoachhoanthienEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachhoanthien
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KehoachhoanthienEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KehoachhoanthienEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachhoanthienUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KehoachhoanthienEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KehoachinEntity objects.</summary>
+	[Serializable]
+	public partial class KehoachinEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KehoachinEntityFactory() : base("KehoachinEntity", GD.BBPH.DAL.EntityType.KehoachinEntity) { }
+
+		/// <summary>Creates a new, empty KehoachinEntity object.</summary>
+		/// <returns>A new, empty KehoachinEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KehoachinEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachin
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KehoachinEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KehoachinEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachinUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KehoachinEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KehoachlocEntity objects.</summary>
+	[Serializable]
+	public partial class KehoachlocEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KehoachlocEntityFactory() : base("KehoachlocEntity", GD.BBPH.DAL.EntityType.KehoachlocEntity) { }
+
+		/// <summary>Creates a new, empty KehoachlocEntity object.</summary>
+		/// <returns>A new, empty KehoachlocEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KehoachlocEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachloc
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KehoachlocEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KehoachlocEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachlocUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KehoachlocEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KehoachthoiEntity objects.</summary>
+	[Serializable]
+	public partial class KehoachthoiEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KehoachthoiEntityFactory() : base("KehoachthoiEntity", GD.BBPH.DAL.EntityType.KehoachthoiEntity) { }
+
+		/// <summary>Creates a new, empty KehoachthoiEntity object.</summary>
+		/// <returns>A new, empty KehoachthoiEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KehoachthoiEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachthoi
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KehoachthoiEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KehoachthoiEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachthoiUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KehoachthoiEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
+	/// <summary>Factory to create new, empty KehoachtuaEntity objects.</summary>
+	[Serializable]
+	public partial class KehoachtuaEntityFactory : EntityFactoryBase2 {
+		/// <summary>CTor</summary>
+		public KehoachtuaEntityFactory() : base("KehoachtuaEntity", GD.BBPH.DAL.EntityType.KehoachtuaEntity) { }
+
+		/// <summary>Creates a new, empty KehoachtuaEntity object.</summary>
+		/// <returns>A new, empty KehoachtuaEntity object.</returns>
+		public override IEntity2 Create() {
+			IEntity2 toReturn = new KehoachtuaEntity();
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachtua
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new KehoachtuaEntity instance but uses a special constructor which will set the Fields object of the new IEntity2 instance to the passed in fields object.</summary>
+		/// <param name="fields">Populated IEntityFields2 object for the new IEntity2 to create</param>
+		/// <returns>Fully created and populated (due to the IEntityFields2 object) IEntity2 object</returns>
+		public override IEntity2 Create(IEntityFields2 fields) {
+			IEntity2 toReturn = new KehoachtuaEntity(fields);
+			
+			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKehoachtuaUsingFields
+			// __LLBLGENPRO_USER_CODE_REGION_END
+			
+			return toReturn;
+		}
+		
+		/// <summary>Creates a new generic EntityCollection(Of T) for the entity to which this factory belongs.</summary>
+		/// <returns>ready to use generic EntityCollection(Of T) with this factory set as the factory</returns>
+		public override IEntityCollection2 CreateEntityCollection()
+		{
+			return new EntityCollection<KehoachtuaEntity>(this);
+		}
+		
+
+		#region Included Code
+
+		#endregion
+	}	
 	/// <summary>Factory to create new, empty KeocuahangEntity objects.</summary>
 	[Serializable]
 	public partial class KeocuahangEntityFactory : EntityFactoryBase2 {
@@ -1311,7 +1598,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKeocuahang
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -1323,7 +1609,6 @@ namespace GD.BBPH.DAL.FactoryClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START CreateNewKeocuahangUsingFields
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			return toReturn;
 		}
 		
@@ -2616,6 +2901,27 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.HangtralaiEntity:
 					factoryToUse = new HangtralaiEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachchiaEntity:
+					factoryToUse = new KehoachchiaEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachghepEntity:
+					factoryToUse = new KehoachghepEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachhoanthienEntity:
+					factoryToUse = new KehoachhoanthienEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachinEntity:
+					factoryToUse = new KehoachinEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachlocEntity:
+					factoryToUse = new KehoachlocEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachthoiEntity:
+					factoryToUse = new KehoachthoiEntityFactory();
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachtuaEntity:
+					factoryToUse = new KehoachtuaEntityFactory();
 					break;
 				case GD.BBPH.DAL.EntityType.KeocuahangEntity:
 					factoryToUse = new KeocuahangEntityFactory();

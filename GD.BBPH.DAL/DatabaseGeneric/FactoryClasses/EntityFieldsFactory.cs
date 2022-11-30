@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Sunday, November 27, 2022 2:58:13 PM
+// Code is generated on: Wednesday, November 30, 2022 10:20:41 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -124,6 +124,27 @@ namespace GD.BBPH.DAL.FactoryClasses
 					break;
 				case GD.BBPH.DAL.EntityType.HangtralaiEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "HangtralaiEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachchiaEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KehoachchiaEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachghepEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KehoachghepEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachhoanthienEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KehoachhoanthienEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachinEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KehoachinEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachlocEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KehoachlocEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachthoiEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KehoachthoiEntity");
+					break;
+				case GD.BBPH.DAL.EntityType.KehoachtuaEntity:
+					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KehoachtuaEntity");
 					break;
 				case GD.BBPH.DAL.EntityType.KeocuahangEntity:
 					fieldsToReturn = fieldProvider.GetEntityFields(inheritanceProvider, "KeocuahangEntity");

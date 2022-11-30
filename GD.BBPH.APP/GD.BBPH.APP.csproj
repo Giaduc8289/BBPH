@@ -713,6 +713,13 @@
     <Compile Include="Manager\DonhangDManager.cs" />
     <Compile Include="Manager\DonhangHManager.cs" />
     <Compile Include="Manager\HangtralaiManager.cs" />
+    <Compile Include="Manager\KehoachchiaManager.cs" />
+    <Compile Include="Manager\KehoachghepManager.cs" />
+    <Compile Include="Manager\KehoachhoanthienManager.cs" />
+    <Compile Include="Manager\KehoachinManager.cs" />
+    <Compile Include="Manager\KehoachlocManager.cs" />
+    <Compile Include="Manager\KehoachthoiManager.cs" />
+    <Compile Include="Manager\KehoachtuaManager.cs" />
     <Compile Include="Manager\KeocuahangManager.cs" />
     <Compile Include="Manager\KetquachiaManager.cs" />
     <Compile Include="Manager\KetquaghepManager.cs" />
