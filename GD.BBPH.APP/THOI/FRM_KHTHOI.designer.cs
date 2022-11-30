@@ -1,4 +1,4 @@
-﻿namespace GD.BBPH.APP.THOI
+﻿namespace GD.BBPH.APP.IN
 {
     partial class FRM_KHTHOI
     {

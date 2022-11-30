@@ -115,17 +115,17 @@ namespace GD.BBPH.APP.LIB
         //    set { _TS_GIOLAMVIEC = value; }
         //}
         //#endregion
-        #region PHUTLAPKH
-        private static Decimal _TS_PHUTLAPKH = Convert.ToDecimal(Procedures.Laygiatrithamso("Sophutlapkh"));
-        public static Decimal TS_PHUTLAPKH
-        {
-            get
-            {
-                return _TS_PHUTLAPKH;
-            }
-            set { _TS_PHUTLAPKH = value; }
-        }
-        #endregion
+        //#region PHUTLAPKH
+        //private static Decimal _TS_PHUTLAPKH = Convert.ToDecimal(Procedures.Laygiatrithamso("Sophutlapkh"));
+        //public static Decimal TS_PHUTLAPKH
+        //{
+        //    get
+        //    {
+        //        return _TS_PHUTLAPKH;
+        //    }
+        //    set { _TS_PHUTLAPKH = value; }
+        //}
+        //#endregion
 
         #region USER
         private static DataTable _DT_USER = null;

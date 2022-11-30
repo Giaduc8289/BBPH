@@ -889,16 +889,6 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Thổi
-                case "FRM_KHTHOI":
-                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
-                    {
-                        if (frm.Name == "FRM_KHTHOI") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
-                    }
-                    GD.BBPH.APP.DANHMUC.FRM_THOIGIANDCKH _FRM_THOIGIANDCKH = new GD.BBPH.APP.DANHMUC.FRM_THOIGIANDCKH();
-                    _FRM_THOIGIANDCKH.ShowDialog();
-                    if (_FRM_THOIGIANDCKH._DialogResult == DialogResult.No) return;
-                    ShowAsMDIChildMax((new GD.BBPH.APP.THOI.FRM_KHTHOI(_FRM_THOIGIANDCKH.Tungay, _FRM_THOIGIANDCKH.Denngay)), mmru.Text);
-                    break;
                 case "FRM_KQTHOI":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
