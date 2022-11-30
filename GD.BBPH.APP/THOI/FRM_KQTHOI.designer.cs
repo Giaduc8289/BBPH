@@ -340,12 +340,12 @@
             this.txt_CHATLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_CHATLUONG.Giatrithapphan = 2;
             this.txt_CHATLUONG.IsSoNguyen = false;
-            this.txt_CHATLUONG.Location = new System.Drawing.Point(656, 229);
+            this.txt_CHATLUONG.Location = new System.Drawing.Point(670, 229);
             this.txt_CHATLUONG.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_CHATLUONG.Name = "txt_CHATLUONG";
             this.txt_CHATLUONG.ReadOnly = true;
             this.txt_CHATLUONG.Regular_Expression = "";
-            this.txt_CHATLUONG.Size = new System.Drawing.Size(93, 20);
+            this.txt_CHATLUONG.Size = new System.Drawing.Size(79, 20);
             this.txt_CHATLUONG.TabIndex = 20;
             this.txt_CHATLUONG.TabStop = false;
             this.txt_CHATLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -397,6 +397,7 @@
             this.txt_PHELIEUTHUCTE.Size = new System.Drawing.Size(93, 20);
             this.txt_PHELIEUTHUCTE.TabIndex = 13;
             this.txt_PHELIEUTHUCTE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_PHELIEUTHUCTE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_SOKG
             // 
@@ -412,6 +413,7 @@
             this.txt_SOKG.Size = new System.Drawing.Size(93, 20);
             this.txt_SOKG.TabIndex = 12;
             this.txt_SOKG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOKG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             this.txt_SOKG.Validated += new System.EventHandler(this.txt_NANGSUAT_CHATLUONG_Validated);
             // 
             // txt_SOM
@@ -428,6 +430,7 @@
             this.txt_SOM.Size = new System.Drawing.Size(93, 20);
             this.txt_SOM.TabIndex = 11;
             this.txt_SOM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             this.txt_SOM.Validated += new System.EventHandler(this.txt_NANGSUAT_CHATLUONG_Validated);
             // 
             // label19
@@ -615,11 +618,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(592, 233);
+            this.label8.Location = new System.Drawing.Point(574, 233);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.Size = new System.Drawing.Size(91, 13);
             this.label8.TabIndex = 10;
-            this.label8.Text = "Chất lượng";
+            this.label8.Text = "Độ dày trung bình";
             // 
             // label5
             // 

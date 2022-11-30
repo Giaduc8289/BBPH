@@ -458,6 +458,7 @@
             this.txt_MANGINMET.Regular_Expression = "";
             this.txt_MANGINMET.Size = new System.Drawing.Size(74, 20);
             this.txt_MANGINMET.TabIndex = 10;
+            this.txt_MANGINMET.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_MANGINKG
             // 
@@ -471,6 +472,7 @@
             this.txt_MANGINKG.Regular_Expression = "";
             this.txt_MANGINKG.Size = new System.Drawing.Size(74, 20);
             this.txt_MANGINKG.TabIndex = 11;
+            this.txt_MANGINKG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_MANGCAPMET
             // 
@@ -484,6 +486,7 @@
             this.txt_MANGCAPMET.Regular_Expression = "";
             this.txt_MANGCAPMET.Size = new System.Drawing.Size(74, 20);
             this.txt_MANGCAPMET.TabIndex = 12;
+            this.txt_MANGCAPMET.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_MANGCAPKG
             // 
@@ -497,6 +500,7 @@
             this.txt_MANGCAPKG.Regular_Expression = "";
             this.txt_MANGCAPKG.Size = new System.Drawing.Size(74, 20);
             this.txt_MANGCAPKG.TabIndex = 13;
+            this.txt_MANGCAPKG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_THUCTEMET
             // 
@@ -510,6 +514,7 @@
             this.txt_THUCTEMET.Regular_Expression = "";
             this.txt_THUCTEMET.Size = new System.Drawing.Size(74, 20);
             this.txt_THUCTEMET.TabIndex = 14;
+            this.txt_THUCTEMET.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_THUCTEKG
             // 
@@ -523,6 +528,7 @@
             this.txt_THUCTEKG.Regular_Expression = "";
             this.txt_THUCTEKG.Size = new System.Drawing.Size(74, 20);
             this.txt_THUCTEKG.TabIndex = 15;
+            this.txt_THUCTEKG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_THUCTEKEO
             // 

@@ -34,6 +34,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.chk_CUONDO = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txt_SOKG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_SOM = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
@@ -65,7 +67,6 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_MAKHO = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -123,6 +124,7 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.chk_CUONDO);
             this.uiPanel1Container.Controls.Add(this.label2);
             this.uiPanel1Container.Controls.Add(this.txt_SOKG);
             this.uiPanel1Container.Controls.Add(this.txt_SOM);
@@ -159,6 +161,29 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(763, 535);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // chk_CUONDO
+            // 
+            this.chk_CUONDO.AutoSize = true;
+            this.chk_CUONDO.Location = new System.Drawing.Point(461, 95);
+            this.chk_CUONDO.Margin = new System.Windows.Forms.Padding(2);
+            this.chk_CUONDO.Name = "chk_CUONDO";
+            this.chk_CUONDO.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chk_CUONDO.Size = new System.Drawing.Size(93, 17);
+            this.chk_CUONDO.TabIndex = 7;
+            this.chk_CUONDO.Text = "Cuộn dở dang";
+            this.chk_CUONDO.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.BackColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(5, 74);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(751, 2);
+            this.label2.TabIndex = 250;
             // 
             // txt_SOKG
             // 
@@ -544,17 +569,6 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã kho";
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.BackColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(5, 74);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(751, 2);
-            this.label2.TabIndex = 250;
-            // 
             // FRM_NHAPMANG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -616,5 +630,6 @@
         private CONTROL.TEXTBOXNUMBER txt_SOKG;
         private CONTROL.TEXTBOXNUMBER txt_SOM;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox chk_CUONDO;
     }
 }

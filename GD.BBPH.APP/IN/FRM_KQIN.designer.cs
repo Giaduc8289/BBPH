@@ -396,6 +396,7 @@
             this.txt_SOMCAP.Size = new System.Drawing.Size(93, 20);
             this.txt_SOMCAP.TabIndex = 11;
             this.txt_SOMCAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOMCAP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_SOKGCAP
             // 
@@ -411,6 +412,7 @@
             this.txt_SOKGCAP.Size = new System.Drawing.Size(93, 20);
             this.txt_SOKGCAP.TabIndex = 12;
             this.txt_SOKGCAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOKGCAP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_THUCTEIN
             // 
@@ -426,6 +428,7 @@
             this.txt_THUCTEIN.Size = new System.Drawing.Size(93, 20);
             this.txt_THUCTEIN.TabIndex = 14;
             this.txt_THUCTEIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_THUCTEIN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_SOKGIN
             // 
@@ -441,6 +444,7 @@
             this.txt_SOKGIN.Size = new System.Drawing.Size(93, 20);
             this.txt_SOKGIN.TabIndex = 15;
             this.txt_SOKGIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOKGIN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_SAIHONGTHUCTE
             // 
@@ -456,6 +460,7 @@
             this.txt_SAIHONGTHUCTE.Size = new System.Drawing.Size(93, 20);
             this.txt_SAIHONGTHUCTE.TabIndex = 16;
             this.txt_SAIHONGTHUCTE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SAIHONGTHUCTE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_CALCULATOR_KeyDown);
             // 
             // txt_PHENCC
             // 
