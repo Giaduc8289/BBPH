@@ -615,6 +615,12 @@
     <Compile Include="HOANTHIEN\FRM_KQHOANTHIEN.designer.cs">
       <DependentUpon>FRM_KQHOANTHIEN.cs</DependentUpon>
     </Compile>
+    <Compile Include="IN\FRM_KHIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IN\FRM_KHIN.designer.cs">
+      <DependentUpon>FRM_KHIN.cs</DependentUpon>
+    </Compile>
     <Compile Include="IN\FRM_KQIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1041,6 +1047,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HOANTHIEN\FRM_KQHOANTHIEN.resx">
       <DependentUpon>FRM_KQHOANTHIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IN\FRM_KHIN.resx">
+      <DependentUpon>FRM_KHIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IN\FRM_KQIN.resx">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>

@@ -916,6 +916,16 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region In
+                case "FRM_KHIN":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KHIN") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    GD.BBPH.APP.DANHMUC.FRM_THOIGIANDCKH _FRM_THOIGIANDCKH_IN = new GD.BBPH.APP.DANHMUC.FRM_THOIGIANDCKH();
+                    _FRM_THOIGIANDCKH_IN.ShowDialog();
+                    if (_FRM_THOIGIANDCKH_IN._DialogResult == DialogResult.No) return;
+                    ShowAsMDIChildMax((new GD.BBPH.APP.IN.FRM_KHIN(_FRM_THOIGIANDCKH_IN.Tungay, _FRM_THOIGIANDCKH_IN.Denngay)), mmru.Text);
+                    break;
                 case "FRM_KQIN":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {

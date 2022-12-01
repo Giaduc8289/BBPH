@@ -56,7 +56,6 @@ With Encryption As
 	From Kehoachhoanthien
 	Where Ngaychay Between @Tungay And @Denngay 
 	
-select * from dmmay	
 	Select Mamay, Tenmay, Madm
 		, 2*(@v_Songay - @v_Songaynghi) + @v_Songaynghi
 			- (Select Count(*) 

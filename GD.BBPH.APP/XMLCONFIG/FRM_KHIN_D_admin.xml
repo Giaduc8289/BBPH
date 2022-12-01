@@ -17,14 +17,22 @@
               </xs:sequence>
             </xs:complexType>
           </xs:element>
+          <xs:element name="tablename">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="name" type="xs:string" minOccurs="0" />
+                <xs:element name="headerText" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
         </xs:choice>
       </xs:complexType>
     </xs:element>
   </xs:schema>
   <viewgrid>
     <value>1</value>
-    <name>Mahieu</name>
-    <headerText>Mahieu</headerText>
+    <name>Mamay</name>
+    <headerText>Mamay</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -32,8 +40,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tenhieu</name>
-    <headerText>Tenhieu</headerText>
+    <name>Tenmay</name>
+    <headerText>Tenmay</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -41,17 +49,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Madongmay</name>
-    <headerText>Madongmay</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Tendongmay</name>
-    <headerText>Tendongmay</headerText>
+    <name>Madm</name>
+    <headerText>Madm</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -86,8 +85,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>01/07_K1</name>
-    <headerText>01/07_K1</headerText>
+    <name>01/12_K1</name>
+    <headerText>01/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -95,8 +94,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>01/07_K2</name>
-    <headerText>01/07_K2</headerText>
+    <name>01/12_K2</name>
+    <headerText>01/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -104,8 +103,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>02/07_K1</name>
-    <headerText>02/07_K1</headerText>
+    <name>02/12_K1</name>
+    <headerText>02/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -113,8 +112,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>02/07_K2</name>
-    <headerText>02/07_K2</headerText>
+    <name>02/12_K2</name>
+    <headerText>02/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -122,8 +121,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>03/07_K1</name>
-    <headerText>03/07_K1</headerText>
+    <name>03/12_K1</name>
+    <headerText>03/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -131,8 +130,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>03/07_K2</name>
-    <headerText>03/07_K2</headerText>
+    <name>03/12_K2</name>
+    <headerText>03/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -140,8 +139,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>04/07_K1</name>
-    <headerText>04/07_K1</headerText>
+    <name>04/12_K1</name>
+    <headerText>04/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -149,8 +148,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>04/07_K2</name>
-    <headerText>04/07_K2</headerText>
+    <name>04/12_K2</name>
+    <headerText>04/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -158,8 +157,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>05/07_K1</name>
-    <headerText>05/07_K1</headerText>
+    <name>05/12_K1</name>
+    <headerText>05/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -167,8 +166,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>05/07_K2</name>
-    <headerText>05/07_K2</headerText>
+    <name>05/12_K2</name>
+    <headerText>05/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -176,8 +175,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>06/07_K1</name>
-    <headerText>06/07_K1</headerText>
+    <name>06/12_K1</name>
+    <headerText>06/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -185,8 +184,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>06/07_K2</name>
-    <headerText>06/07_K2</headerText>
+    <name>06/12_K2</name>
+    <headerText>06/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -194,8 +193,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>07/07_K1</name>
-    <headerText>07/07_K1</headerText>
+    <name>07/12_K1</name>
+    <headerText>07/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -203,8 +202,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>07/07_K2</name>
-    <headerText>07/07_K2</headerText>
+    <name>07/12_K2</name>
+    <headerText>07/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -212,8 +211,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>08/07_K1</name>
-    <headerText>08/07_K1</headerText>
+    <name>08/12_K1</name>
+    <headerText>08/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -221,8 +220,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>08/07_K2</name>
-    <headerText>08/07_K2</headerText>
+    <name>08/12_K2</name>
+    <headerText>08/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -230,8 +229,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>09/07_K1</name>
-    <headerText>09/07_K1</headerText>
+    <name>09/12_K1</name>
+    <headerText>09/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -239,8 +238,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>09/07_K2</name>
-    <headerText>09/07_K2</headerText>
+    <name>09/12_K2</name>
+    <headerText>09/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -248,8 +247,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>10/07_K1</name>
-    <headerText>10/07_K1</headerText>
+    <name>10/12_K1</name>
+    <headerText>10/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -257,8 +256,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>10/07_K2</name>
-    <headerText>10/07_K2</headerText>
+    <name>10/12_K2</name>
+    <headerText>10/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -266,8 +265,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>11/07_K1</name>
-    <headerText>11/07_K1</headerText>
+    <name>11/12_K1</name>
+    <headerText>11/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -275,8 +274,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>11/07_K2</name>
-    <headerText>11/07_K2</headerText>
+    <name>11/12_K2</name>
+    <headerText>11/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -284,8 +283,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>12/07_K1</name>
-    <headerText>12/07_K1</headerText>
+    <name>12/12_K1</name>
+    <headerText>12/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -293,8 +292,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>12/07_K2</name>
-    <headerText>12/07_K2</headerText>
+    <name>12/12_K2</name>
+    <headerText>12/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -302,8 +301,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>13/07_K1</name>
-    <headerText>13/07_K1</headerText>
+    <name>13/12_K1</name>
+    <headerText>13/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -311,8 +310,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>13/07_K2</name>
-    <headerText>13/07_K2</headerText>
+    <name>13/12_K2</name>
+    <headerText>13/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -320,8 +319,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>14/07_K1</name>
-    <headerText>14/07_K1</headerText>
+    <name>14/12_K1</name>
+    <headerText>14/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -329,8 +328,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>14/07_K2</name>
-    <headerText>14/07_K2</headerText>
+    <name>14/12_K2</name>
+    <headerText>14/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -338,8 +337,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>15/07_K1</name>
-    <headerText>15/07_K1</headerText>
+    <name>15/12_K1</name>
+    <headerText>15/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -347,8 +346,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>15/07_K2</name>
-    <headerText>15/07_K2</headerText>
+    <name>15/12_K2</name>
+    <headerText>15/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -356,8 +355,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>16/07_K1</name>
-    <headerText>16/07_K1</headerText>
+    <name>16/12_K1</name>
+    <headerText>16/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -365,8 +364,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>16/07_K2</name>
-    <headerText>16/07_K2</headerText>
+    <name>16/12_K2</name>
+    <headerText>16/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -374,8 +373,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>17/07_K1</name>
-    <headerText>17/07_K1</headerText>
+    <name>17/12_K1</name>
+    <headerText>17/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -383,8 +382,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>17/07_K2</name>
-    <headerText>17/07_K2</headerText>
+    <name>17/12_K2</name>
+    <headerText>17/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -392,8 +391,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>18/07_K1</name>
-    <headerText>18/07_K1</headerText>
+    <name>18/12_K1</name>
+    <headerText>18/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -401,8 +400,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>18/07_K2</name>
-    <headerText>18/07_K2</headerText>
+    <name>18/12_K2</name>
+    <headerText>18/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -410,8 +409,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>19/07_K1</name>
-    <headerText>19/07_K1</headerText>
+    <name>19/12_K1</name>
+    <headerText>19/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -419,8 +418,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>19/07_K2</name>
-    <headerText>19/07_K2</headerText>
+    <name>19/12_K2</name>
+    <headerText>19/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -428,8 +427,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>20/07_K1</name>
-    <headerText>20/07_K1</headerText>
+    <name>20/12_K1</name>
+    <headerText>20/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -437,8 +436,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>20/07_K2</name>
-    <headerText>20/07_K2</headerText>
+    <name>20/12_K2</name>
+    <headerText>20/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -446,8 +445,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>21/07_K1</name>
-    <headerText>21/07_K1</headerText>
+    <name>21/12_K1</name>
+    <headerText>21/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -455,8 +454,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>21/07_K2</name>
-    <headerText>21/07_K2</headerText>
+    <name>21/12_K2</name>
+    <headerText>21/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -464,8 +463,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>22/07_K1</name>
-    <headerText>22/07_K1</headerText>
+    <name>22/12_K1</name>
+    <headerText>22/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -473,8 +472,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>22/07_K2</name>
-    <headerText>22/07_K2</headerText>
+    <name>22/12_K2</name>
+    <headerText>22/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -482,8 +481,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>23/07_K1</name>
-    <headerText>23/07_K1</headerText>
+    <name>23/12_K1</name>
+    <headerText>23/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -491,8 +490,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>23/07_K2</name>
-    <headerText>23/07_K2</headerText>
+    <name>23/12_K2</name>
+    <headerText>23/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -500,8 +499,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>24/07_K1</name>
-    <headerText>24/07_K1</headerText>
+    <name>24/12_K1</name>
+    <headerText>24/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -509,8 +508,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>24/07_K2</name>
-    <headerText>24/07_K2</headerText>
+    <name>24/12_K2</name>
+    <headerText>24/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -518,8 +517,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>25/07_K1</name>
-    <headerText>25/07_K1</headerText>
+    <name>25/12_K1</name>
+    <headerText>25/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -527,8 +526,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>25/07_K2</name>
-    <headerText>25/07_K2</headerText>
+    <name>25/12_K2</name>
+    <headerText>25/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -536,8 +535,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>26/07_K1</name>
-    <headerText>26/07_K1</headerText>
+    <name>26/12_K1</name>
+    <headerText>26/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -545,8 +544,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>26/07_K2</name>
-    <headerText>26/07_K2</headerText>
+    <name>26/12_K2</name>
+    <headerText>26/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -554,8 +553,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>27/07_K1</name>
-    <headerText>27/07_K1</headerText>
+    <name>27/12_K1</name>
+    <headerText>27/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -563,8 +562,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>27/07_K2</name>
-    <headerText>27/07_K2</headerText>
+    <name>27/12_K2</name>
+    <headerText>27/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -572,8 +571,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>28/07_K1</name>
-    <headerText>28/07_K1</headerText>
+    <name>28/12_K1</name>
+    <headerText>28/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -581,8 +580,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>28/07_K2</name>
-    <headerText>28/07_K2</headerText>
+    <name>28/12_K2</name>
+    <headerText>28/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -590,8 +589,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>29/07_K1</name>
-    <headerText>29/07_K1</headerText>
+    <name>29/12_K1</name>
+    <headerText>29/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -599,8 +598,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>29/07_K2</name>
-    <headerText>29/07_K2</headerText>
+    <name>29/12_K2</name>
+    <headerText>29/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -608,8 +607,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>30/07_K1</name>
-    <headerText>30/07_K1</headerText>
+    <name>30/12_K1</name>
+    <headerText>30/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -617,8 +616,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>30/07_K2</name>
-    <headerText>30/07_K2</headerText>
+    <name>30/12_K2</name>
+    <headerText>30/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -626,8 +625,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>31/07_K1</name>
-    <headerText>31/07_K1</headerText>
+    <name>31/12_K1</name>
+    <headerText>31/12_K1</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -635,11 +634,15 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>31/07_K2</name>
-    <headerText>31/07_K2</headerText>
+    <name>31/12_K2</name>
+    <headerText>31/12_K2</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
+  <tablename>
+    <name>tablename</name>
+    <headerText>Danh sách tendanhsach</headerText>
+  </tablename>
 </NewDataSet>
