@@ -162,12 +162,14 @@ namespace GD.BBPH.APP.BANHANG
             _LenhsanxuatEntity.Ngaydat = Convert.ToDateTime(txt_NGAYDAT.Text.Trim());
             _LenhsanxuatEntity.Makhach = txt_MAKHACH.Text.Trim();
             _LenhsanxuatEntity.Tenkhach = txt_TENKHACH.Text.Trim();
-            _LenhsanxuatEntity.Madonhangchitiet = Convert.ToInt64(txt_MADONCHITIET.Text.Trim());
+            try { _LenhsanxuatEntity.Madonhangchitiet = Convert.ToInt64(txt_MADONCHITIET.Text.Trim()); }
+            catch { }
             _LenhsanxuatEntity.Masp = txt_MASP.Text.Trim();
             _LenhsanxuatEntity.Tenhang = txt_TENSP.Text.Trim();
             try { _LenhsanxuatEntity.Soluong = System.Decimal.Parse(txt_SOLUONG.Text.Trim()); }
             catch { }
-            _LenhsanxuatEntity.Ngaygiao = Convert.ToDateTime(txt_NGAYGIAO.Text.Trim());
+            try { _LenhsanxuatEntity.Ngaygiao = Convert.ToDateTime(txt_NGAYGIAO.Text.Trim()); }
+            catch { }
 
             if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
@@ -376,13 +378,14 @@ namespace GD.BBPH.APP.BANHANG
                 txt_TENSP.Text = _RowViewSelect[DonhangDFields.Tenhang.Name].ToString();
                 txt_SOLUONG.Text = _RowViewSelect[DonhangDFields.Soluong.Name].ToString();
                 txt_NGAYGIAO.Text = _RowViewSelect[DonhangDFields.Ngaygiao.Name].ToString();
-
+                txt_MADONCHITIET.Text = _RowViewSelect[DonhangDFields.Id.Name].ToString();
             }
             else
             {
                 txt_TENSP.Text = _RowViewSelect[DonhangDFields.Tenhang.Name].ToString();
                 txt_SOLUONG.Text = _RowViewSelect[DonhangDFields.Soluong.Name].ToString();
                 txt_NGAYGIAO.Text = _RowViewSelect[DonhangDFields.Ngaygiao.Name].ToString();
+                txt_MADONCHITIET.Text = _RowViewSelect[DonhangDFields.Id.Name].ToString();
             }
         }
         private DataRow checkmadonchitiet(string macantim, DataTable dt)

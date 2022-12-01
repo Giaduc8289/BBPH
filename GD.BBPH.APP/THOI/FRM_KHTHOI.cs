@@ -181,7 +181,7 @@ namespace GD.BBPH.APP.THOI
         private void SHOWGRID(string MAHIEU_PK)
         {
             #region Tạo bảng dữ liệu
-            DT_DMMAY_TEMP = LIB.Procedures.Ngaysudungmayinthang(Tungay, Denngay);
+            DT_DMMAY_TEMP = LIB.Procedures.Ngaysudungmay(Tungay, Denngay, "TH");
             DT_DMMAY_TEMP.Columns.Add("Congsuat", Type.GetType("System.Decimal"));
             DT_DMMAY_TEMP.Columns.Add("Congsuattrong", Type.GetType("System.Decimal"));
             for (DateTime date = Tungay; date <= Denngay; date = date.AddDays(1))

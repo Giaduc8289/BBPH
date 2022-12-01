@@ -1678,6 +1678,18 @@ namespace GD.BBPH.APP.LIB
         #region BBPH
 
         #region Hàm trả về bảng dữ liệu
+        public static DataTable Ngaysudungmay(DateTime Tungay, DateTime Denngay, string Madongmay)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Tungay", SqlDbType.Date, 0), Tungay);
+            parameters.Add(new SqlParameter("@Denngay", SqlDbType.Date, 0), Denngay);
+            parameters.Add(new SqlParameter("@Madongmay", SqlDbType.NVarChar, 0), Madongmay);
+
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Ngaysudungmay", "Ngaysudungmay", myArr).Tables[0];
+        }
         public static DataTable Danhsachnguyenlieu(string Manguyenlieu, string Manhom, DateTime Ngay)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
@@ -1750,7 +1762,6 @@ namespace GD.BBPH.APP.LIB
             parameters.CopyTo(myArr, 0);
             return _SimpleStoredProcedure.ExecuteSPReader("Danhsachbaogiachon", "Danhsachbaogiachon", myArr).Tables[0];
         }
-
 
         public static DataTable Danhsachbaogia(DateTime Tungay, DateTime Denngay, string Sobaogia, /*string SoPO,*/ string Makhachhang, string Mahang)
         {
