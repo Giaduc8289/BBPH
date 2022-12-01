@@ -537,6 +537,12 @@
     <Compile Include="DANHMUC\FRM_DMVATTUSAIHONG.designer.cs">
       <DependentUpon>FRM_DMVATTUSAIHONG.cs</DependentUpon>
     </Compile>
+    <Compile Include="DANHMUC\FRM_THOIGIANDCKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANHMUC\FRM_THOIGIANDCKH.Designer.cs">
+      <DependentUpon>FRM_THOIGIANDCKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="GHEP\FRM_KQGHEP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -763,6 +769,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataBBPH.xsd</DependentUpon>
     </Compile>
+    <Compile Include="THOI\FRM_KHTHOI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="THOI\FRM_KHTHOI.designer.cs">
+      <DependentUpon>FRM_KHTHOI.cs</DependentUpon>
+    </Compile>
     <Compile Include="THOI\FRM_KQTHOI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -985,6 +997,9 @@
     <EmbeddedResource Include="DANHMUC\FRM_DMVATTUSAIHONG.resx">
       <DependentUpon>FRM_DMVATTUSAIHONG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DANHMUC\FRM_THOIGIANDCKH.resx">
+      <DependentUpon>FRM_THOIGIANDCKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GHEP\FRM_KQGHEP.resx">
       <DependentUpon>FRM_KQGHEP.cs</DependentUpon>
     </EmbeddedResource>
@@ -1098,6 +1113,9 @@
     <EmbeddedResource Include="RDLC\KQCHIACHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\KQINCHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOXUATKHOMANG.rdlc" />
+    <EmbeddedResource Include="THOI\FRM_KHTHOI.resx">
+      <DependentUpon>FRM_KHTHOI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="THOI\FRM_KQTHOI.resx">
       <DependentUpon>FRM_KQTHOI.cs</DependentUpon>
     </EmbeddedResource>
