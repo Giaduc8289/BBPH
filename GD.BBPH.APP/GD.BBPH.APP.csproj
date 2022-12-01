@@ -787,6 +787,12 @@
     <Compile Include="THOI\FRM_TKNLTHOI.designer.cs">
       <DependentUpon>FRM_TKNLTHOI.cs</DependentUpon>
     </Compile>
+    <Compile Include="TUA\FRM_KHTUA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TUA\FRM_KHTUA.designer.cs">
+      <DependentUpon>FRM_KHTUA.cs</DependentUpon>
+    </Compile>
     <Compile Include="TUA\FRM_TKKQTUA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1121,6 +1127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="THOI\FRM_TKNLTHOI.resx">
       <DependentUpon>FRM_TKNLTHOI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TUA\FRM_KHTUA.resx">
+      <DependentUpon>FRM_KHTUA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TUA\FRM_TKKQTUA.resx">
       <DependentUpon>FRM_TKKQTUA.cs</DependentUpon>

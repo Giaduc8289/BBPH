@@ -947,6 +947,17 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.TUA.FRM_TKKQTUA()), mmru.Text);
                     break;
+
+                case "FRM_KHTUA":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KHTUA") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    GD.BBPH.APP.DANHMUC.FRM_THOIGIANDCKH _FRM_THOIGIANDCKH_1 = new GD.BBPH.APP.DANHMUC.FRM_THOIGIANDCKH();
+                    _FRM_THOIGIANDCKH_1.ShowDialog();
+                    if (_FRM_THOIGIANDCKH_1._DialogResult == DialogResult.No) return;
+                    ShowAsMDIChildMax((new GD.BBPH.APP.TUA.FRM_KHTUA(_FRM_THOIGIANDCKH_1.Tungay, _FRM_THOIGIANDCKH_1.Denngay)), mmru.Text);
+                    break;
                 #endregion
 
                 #region Chia
