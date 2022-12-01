@@ -157,8 +157,6 @@ namespace GD.BBPH.APP.THOI
                     if (_Rowview != null)
                         MAHIEU_PK = _Rowview.Row[LenhsanxuatFields.Solenhsx.Name].ToString();
 
-                    SHOWGRID(MAHIEU_PK);
-
                     txt_MADONHANG.Text = _Rowview.Row[LenhsanxuatFields.Madon.Name].ToString();
                     txt_TENKHACH.Text = _Rowview.Row[LenhsanxuatFields.Tenkhach.Name].ToString();
                     txt_MAHANG.Text = _Rowview.Row[LenhsanxuatFields.Masp.Name].ToString();
@@ -169,6 +167,8 @@ namespace GD.BBPH.APP.THOI
                     catch { }
 
                     //txt_MAMANH_Validating(new object(), new CancelEventArgs());
+
+                    SHOWGRID(MAHIEU_PK);
                 }
                 else
                 {
@@ -181,7 +181,7 @@ namespace GD.BBPH.APP.THOI
         private void SHOWGRID(string MAHIEU_PK)
         {
             #region Tạo bảng dữ liệu
-            DT_DMMAY_TEMP = LIB.Procedures.Ngaysudungmay(Tungay, Denngay, "TH");
+            DT_DMMAY_TEMP = LIB.Procedures.Ngaysudungmay(Tungay, Denngay, "TH", "");
             DT_DMMAY_TEMP.Columns.Add("Congsuat", Type.GetType("System.Decimal"));
             DT_DMMAY_TEMP.Columns.Add("Congsuattrong", Type.GetType("System.Decimal"));
             for (DateTime date = Tungay; date <= Denngay; date = date.AddDays(1))
@@ -212,12 +212,12 @@ namespace GD.BBPH.APP.THOI
             {
                 foreach (DataRow dr in DT_DMMAY_TEMP.Rows)
                 {
-                    DmdongmayEntity _DmdongmayEntity = new DmdongmayEntity();
-                    _DmdongmayEntity = new DmdongmayManager().SelectOne(dr[DmmayFields.Madm.Name].ToString());
                     try
                     {
-                        //dr["Congsuat"] = _DmdongmayEntity.Congsuat;
-                        dr["Congsuattrong"] = Convert.ToDecimal(dr["Congsuat"]) * Convert.ToDecimal(dr["Catrong"]);
+                        Decimal _tocdo = 0, _congsuat = 0;
+                        _tocdo = LIB.Procedures.fTinhtocdomay(dr[DmmayFields.Mamay.Name].ToString(), txt_MAHANG.Text);
+                        _congsuat = _tocdo * 60 * 12;//-----Công suất của 1 ca
+                        dr["Congsuattrong"] = _congsuat * Convert.ToDecimal(dr["Catrong"]);
                     }
                     catch { }
                 }

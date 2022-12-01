@@ -6,7 +6,8 @@ Go
 Create Procedure dbo.Ngaysudungmay
 	@Tungay		Date,
 	@Denngay	Date,
-	@Madongmay		Nvarchar(50)
+	@Madongmay		Nvarchar(50),
+	@Mamays			Nvarchar(MAX)
 With Encryption As
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
@@ -55,17 +56,20 @@ With Encryption As
 	From Kehoachhoanthien
 	Where Ngaychay Between @Tungay And @Denngay 
 	
-	
-	Select *, 2*(@v_Songay - @v_Songaynghi) + @v_Songaynghi
-		- (Select Count(*) 
-			From (SELECT DISTINCT Ngaychay, Ca FROM #Kehoachmay
-			Where Ngaychay Between @Tungay And @Denngay 
-				And Mamay = dbo.dmmay.Mamay) a) As Catrong
+select * from dmmay	
+	Select Mamay, Tenmay, Madm
+		, 2*(@v_Songay - @v_Songaynghi) + @v_Songaynghi
+			- (Select Count(*) 
+				From (SELECT DISTINCT Ngaychay, Ca FROM #Kehoachmay
+				Where Ngaychay Between @Tungay And @Denngay 
+					And Mamay = dbo.dmmay.Mamay) a) As Catrong
 	From dbo.dmmay
 	Where (Madm = @Madongmay Or @Madongmay='')	
+		And (CHARINDEX(Mamay+',',@Mamays)>0 OR ISNULL(@Mamays,'') = '')
 	ORDER BY Madm 
 			
 Go
 
-Exec Ngaysudungmay '12/01/2022', '12/30/2022', 'TH'
+Exec Ngaysudungmay '12/01/2022', '12/30/2022', 'TH', ''
+Exec Ngaysudungmay '12/01/2022', '12/30/2022', '', 'C1,C2,'
 
