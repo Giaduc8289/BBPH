@@ -2198,6 +2198,17 @@ namespace GD.BBPH.APP.LIB
             parameters.CopyTo(myArr, 0);
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachxuatnguyenlieuchitiet", "Danhsachxuatnguyenlieuchitiet", myArr).Tables[0];
         }
+
+        public static DataTable Danhsachlocmangtheosp(DateTime Ngayphatlenh, string Masp)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Ngayphatlenh", SqlDbType.NVarChar, 0), Ngayphatlenh);
+            parameters.Add(new SqlParameter("@Masanpham", SqlDbType.NVarChar, 0), Masp);
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachlocmangtheosp", "Danhsachlocmangtheosp", myArr).Tables[0];
+        }
         #endregion
 
         #region Hàm trả về giá trị
