@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 30, 2022 10:20:41 AM
+// Code is generated on: Friday, December 2, 2022 10:08:05 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -26,7 +26,6 @@ namespace GD.BBPH.DAL.EntityClasses
 	
 	// __LLBLGENPRO_USER_CODE_REGION_START AdditionalNamespaces
 	// __LLBLGENPRO_USER_CODE_REGION_END
-	
 
 	/// <summary>
 	/// Entity class which represents the entity 'Kehoachhoanthien'.<br/><br/>
@@ -35,8 +34,7 @@ namespace GD.BBPH.DAL.EntityClasses
 	[Serializable]
 	public partial class KehoachhoanthienEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
-		// __LLBLGENPRO_USER_CODE_REGION_END
-			
+		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
 
@@ -46,7 +44,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START PrivateMembers
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Statics
@@ -127,7 +124,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START DeserializationConstructor
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 		}
 
 		
@@ -296,7 +292,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START GetObjectInfo
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			base.GetObjectData(info, context);
 		}
 
@@ -425,7 +420,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassMembers
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 			OnInitClassMembersComplete();
 		}
 
@@ -482,6 +476,18 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sometdukien", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sokgdukien", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sldukien", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tgdukien", fieldHashtable);
 		}
 		#endregion
 
@@ -501,7 +507,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			
 			// __LLBLGENPRO_USER_CODE_REGION_START InitClassEmpty
 			// __LLBLGENPRO_USER_CODE_REGION_END
-			
 
 			OnInitialized();
 		}
@@ -713,6 +718,50 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)KehoachhoanthienFieldIndex.Nguoisua, value); }
 		}
 
+		/// <summary> The Sometdukien property of the Entity Kehoachhoanthien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Kehoachhoanthien"."Sometdukien"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sometdukien
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KehoachhoanthienFieldIndex.Sometdukien, false); }
+			set	{ SetValue((int)KehoachhoanthienFieldIndex.Sometdukien, value); }
+		}
+
+		/// <summary> The Sokgdukien property of the Entity Kehoachhoanthien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Kehoachhoanthien"."Sokgdukien"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sokgdukien
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)KehoachhoanthienFieldIndex.Sokgdukien, false); }
+			set	{ SetValue((int)KehoachhoanthienFieldIndex.Sokgdukien, value); }
+		}
+
+		/// <summary> The Sldukien property of the Entity Kehoachhoanthien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Kehoachhoanthien"."Sldukien"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Int32> Sldukien
+		{
+			get { return (Nullable<System.Int32>)GetValue((int)KehoachhoanthienFieldIndex.Sldukien, false); }
+			set	{ SetValue((int)KehoachhoanthienFieldIndex.Sldukien, value); }
+		}
+
+		/// <summary> The Tgdukien property of the Entity Kehoachhoanthien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Kehoachhoanthien"."Tgdukien"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Int32> Tgdukien
+		{
+			get { return (Nullable<System.Int32>)GetValue((int)KehoachhoanthienFieldIndex.Tgdukien, false); }
+			set	{ SetValue((int)KehoachhoanthienFieldIndex.Tgdukien, value); }
+		}
+
 
 
 
@@ -743,7 +792,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		
 		// __LLBLGENPRO_USER_CODE_REGION_START CustomEntityCode
 		// __LLBLGENPRO_USER_CODE_REGION_END
-		
 		#endregion
 
 		#region Included code

@@ -166,6 +166,7 @@
     <Compile Include="DatabaseGeneric\EntityClasses\KetquatuaEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\LenhsanxuatEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\MangcuahangEntity.cs" />
+    <Compile Include="DatabaseGeneric\EntityClasses\MangtheolenhEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\MaucuahangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\NhapkhomangEntity.cs" />
     <Compile Include="DatabaseGeneric\EntityClasses\NhapkhonguyenlieuEntity.cs" />
@@ -287,6 +288,7 @@
     <Compile Include="DatabaseGeneric\RelationClasses\LenhsanxuatRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\LogbackupRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MangcuahangRelations.cs" />
+    <Compile Include="DatabaseGeneric\RelationClasses\MangtheolenhRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MaucuahangRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuRelations.cs" />
     <Compile Include="DatabaseGeneric\RelationClasses\MenuroleRelations.cs" />

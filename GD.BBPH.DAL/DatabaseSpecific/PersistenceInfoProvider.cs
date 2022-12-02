@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 30, 2022 10:20:42 AM
+// Code is generated on: Friday, December 2, 2022 10:08:06 AM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -55,7 +55,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Method which initializes the internal datastores with the structure of hierarchical types.</summary>
 		private void Init()
 		{
-			base.InitClass((69 + 0));
+			base.InitClass((70 + 0));
 			InitBaogiaDEntityMappings();
 			InitBaogiaHEntityMappings();
 			InitCongsuatmayEntityMappings();
@@ -105,6 +105,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			InitLenhsanxuatEntityMappings();
 			InitLogbackupEntityMappings();
 			InitMangcuahangEntityMappings();
+			InitMangtheolenhEntityMappings();
 			InitMaucuahangEntityMappings();
 			InitMenuEntityMappings();
 			InitMenuroleEntityMappings();
@@ -702,7 +703,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Inits KehoachchiaEntity's mappings</summary>
 		private void InitKehoachchiaEntityMappings()
 		{
-			base.AddElementMapping( "KehoachchiaEntity", "BBPH", @"dbo", "Kehoachchia", 14 );
+			base.AddElementMapping( "KehoachchiaEntity", "BBPH", @"dbo", "Kehoachchia", 19 );
 			base.AddElementFieldMapping( "KehoachchiaEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "KehoachchiaEntity", "Solenhsx", "Solenhsx", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "KehoachchiaEntity", "Ngaydat", "Ngaydat", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 2 );
@@ -717,11 +718,16 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "KehoachchiaEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 11 );
 			base.AddElementFieldMapping( "KehoachchiaEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 12 );
 			base.AddElementFieldMapping( "KehoachchiaEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 13 );
+			base.AddElementFieldMapping( "KehoachchiaEntity", "Sometdukien", "Sometdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 14 );
+			base.AddElementFieldMapping( "KehoachchiaEntity", "Sokgdukien", "Sokgdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 15 );
+			base.AddElementFieldMapping( "KehoachchiaEntity", "Soluong", "Soluong", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 16 );
+			base.AddElementFieldMapping( "KehoachchiaEntity", "Sldukien", "Sldukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 17 );
+			base.AddElementFieldMapping( "KehoachchiaEntity", "Tgdukien", "Tgdukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 18 );
 		}
 		/// <summary>Inits KehoachghepEntity's mappings</summary>
 		private void InitKehoachghepEntityMappings()
 		{
-			base.AddElementMapping( "KehoachghepEntity", "BBPH", @"dbo", "Kehoachghep", 14 );
+			base.AddElementMapping( "KehoachghepEntity", "BBPH", @"dbo", "Kehoachghep", 19 );
 			base.AddElementFieldMapping( "KehoachghepEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "KehoachghepEntity", "Solenhsx", "Solenhsx", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "KehoachghepEntity", "Ngaydat", "Ngaydat", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 2 );
@@ -736,11 +742,16 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "KehoachghepEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 11 );
 			base.AddElementFieldMapping( "KehoachghepEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 12 );
 			base.AddElementFieldMapping( "KehoachghepEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 13 );
+			base.AddElementFieldMapping( "KehoachghepEntity", "Sometdukien", "Sometdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 14 );
+			base.AddElementFieldMapping( "KehoachghepEntity", "Sokgdukien", "Sokgdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 15 );
+			base.AddElementFieldMapping( "KehoachghepEntity", "Soluong", "Soluong", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 16 );
+			base.AddElementFieldMapping( "KehoachghepEntity", "Sldukien", "Sldukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 17 );
+			base.AddElementFieldMapping( "KehoachghepEntity", "Tgdukien", "Tgdukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 18 );
 		}
 		/// <summary>Inits KehoachhoanthienEntity's mappings</summary>
 		private void InitKehoachhoanthienEntityMappings()
 		{
-			base.AddElementMapping( "KehoachhoanthienEntity", "BBPH", @"dbo", "Kehoachhoanthien", 15 );
+			base.AddElementMapping( "KehoachhoanthienEntity", "BBPH", @"dbo", "Kehoachhoanthien", 19 );
 			base.AddElementFieldMapping( "KehoachhoanthienEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "KehoachhoanthienEntity", "Solenhsx", "Solenhsx", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "KehoachhoanthienEntity", "Ngaydat", "Ngaydat", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 2 );
@@ -756,11 +767,15 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "KehoachhoanthienEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 12 );
 			base.AddElementFieldMapping( "KehoachhoanthienEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 13 );
 			base.AddElementFieldMapping( "KehoachhoanthienEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 14 );
+			base.AddElementFieldMapping( "KehoachhoanthienEntity", "Sometdukien", "Sometdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 15 );
+			base.AddElementFieldMapping( "KehoachhoanthienEntity", "Sokgdukien", "Sokgdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 16 );
+			base.AddElementFieldMapping( "KehoachhoanthienEntity", "Sldukien", "Sldukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 17 );
+			base.AddElementFieldMapping( "KehoachhoanthienEntity", "Tgdukien", "Tgdukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 18 );
 		}
 		/// <summary>Inits KehoachinEntity's mappings</summary>
 		private void InitKehoachinEntityMappings()
 		{
-			base.AddElementMapping( "KehoachinEntity", "BBPH", @"dbo", "Kehoachin", 14 );
+			base.AddElementMapping( "KehoachinEntity", "BBPH", @"dbo", "Kehoachin", 19 );
 			base.AddElementFieldMapping( "KehoachinEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "KehoachinEntity", "Solenhsx", "Solenhsx", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "KehoachinEntity", "Ngaydat", "Ngaydat", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 2 );
@@ -775,6 +790,11 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "KehoachinEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 11 );
 			base.AddElementFieldMapping( "KehoachinEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 12 );
 			base.AddElementFieldMapping( "KehoachinEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 13 );
+			base.AddElementFieldMapping( "KehoachinEntity", "Sometdukien", "Sometdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 14 );
+			base.AddElementFieldMapping( "KehoachinEntity", "Sokgdukien", "Sokgdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 15 );
+			base.AddElementFieldMapping( "KehoachinEntity", "Soluong", "Soluong", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 16 );
+			base.AddElementFieldMapping( "KehoachinEntity", "Sldukien", "Sldukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 17 );
+			base.AddElementFieldMapping( "KehoachinEntity", "Tgdukien", "Tgdukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 18 );
 		}
 		/// <summary>Inits KehoachlocEntity's mappings</summary>
 		private void InitKehoachlocEntityMappings()
@@ -798,7 +818,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Inits KehoachthoiEntity's mappings</summary>
 		private void InitKehoachthoiEntityMappings()
 		{
-			base.AddElementMapping( "KehoachthoiEntity", "BBPH", @"dbo", "Kehoachthoi", 14 );
+			base.AddElementMapping( "KehoachthoiEntity", "BBPH", @"dbo", "Kehoachthoi", 19 );
 			base.AddElementFieldMapping( "KehoachthoiEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "KehoachthoiEntity", "Solenhsx", "Solenhsx", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "KehoachthoiEntity", "Ngaydat", "Ngaydat", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 2 );
@@ -813,11 +833,16 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "KehoachthoiEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 11 );
 			base.AddElementFieldMapping( "KehoachthoiEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 12 );
 			base.AddElementFieldMapping( "KehoachthoiEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 13 );
+			base.AddElementFieldMapping( "KehoachthoiEntity", "Sometdukien", "Sometdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 14 );
+			base.AddElementFieldMapping( "KehoachthoiEntity", "Sokgdukien", "Sokgdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 15 );
+			base.AddElementFieldMapping( "KehoachthoiEntity", "Soluong", "Soluong", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 16 );
+			base.AddElementFieldMapping( "KehoachthoiEntity", "Sldukien", "Sldukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 17 );
+			base.AddElementFieldMapping( "KehoachthoiEntity", "Tgdukien", "Tgdukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 18 );
 		}
 		/// <summary>Inits KehoachtuaEntity's mappings</summary>
 		private void InitKehoachtuaEntityMappings()
 		{
-			base.AddElementMapping( "KehoachtuaEntity", "BBPH", @"dbo", "Kehoachtua", 14 );
+			base.AddElementMapping( "KehoachtuaEntity", "BBPH", @"dbo", "Kehoachtua", 19 );
 			base.AddElementFieldMapping( "KehoachtuaEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
 			base.AddElementFieldMapping( "KehoachtuaEntity", "Solenhsx", "Solenhsx", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "KehoachtuaEntity", "Ngaydat", "Ngaydat", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 2 );
@@ -832,6 +857,11 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "KehoachtuaEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 11 );
 			base.AddElementFieldMapping( "KehoachtuaEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 12 );
 			base.AddElementFieldMapping( "KehoachtuaEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 13 );
+			base.AddElementFieldMapping( "KehoachtuaEntity", "Sometdukien", "Sometdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 14 );
+			base.AddElementFieldMapping( "KehoachtuaEntity", "Sokgdukien", "Sokgdukien", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 15 );
+			base.AddElementFieldMapping( "KehoachtuaEntity", "Soluong", "Soluong", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 16 );
+			base.AddElementFieldMapping( "KehoachtuaEntity", "Sldukien", "Sldukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 17 );
+			base.AddElementFieldMapping( "KehoachtuaEntity", "Tgdukien", "Tgdukien", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 18 );
 		}
 		/// <summary>Inits KeocuahangEntity's mappings</summary>
 		private void InitKeocuahangEntityMappings()
@@ -1174,6 +1204,28 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "MangcuahangEntity", "Maloaimang", "Maloaimang", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 24 );
 			base.AddElementFieldMapping( "MangcuahangEntity", "Tenloaimang", "Tenloaimang", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 25 );
 			base.AddElementFieldMapping( "MangcuahangEntity", "Thutulopghep", "Thutulopghep", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 26 );
+		}
+		/// <summary>Inits MangtheolenhEntity's mappings</summary>
+		private void InitMangtheolenhEntityMappings()
+		{
+			base.AddElementMapping( "MangtheolenhEntity", "BBPH", @"dbo", "Mangtheolenh", 17 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Id", "Id", false, (int)SqlDbType.BigInt, 0, 0, 19, true, "SCOPE_IDENTITY()", null, typeof(System.Int64), 0 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Solenhsx", "Solenhsx", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 1 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Ngayphatlenh", "Ngayphatlenh", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 2 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Mamangquydinh", "Mamangquydinh", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 3 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Tenmangquydinh", "Tenmangquydinh", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 4 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Sometquydinh", "Sometquydinh", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 5 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Sokgquydinh", "Sokgquydinh", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 6 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Sometthoi", "Sometthoi", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 7 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Sokgthoi", "Sokgthoi", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 8 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Mamangsudung", "Mamangsudung", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 9 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Tenmangsudung", "Tenmangsudung", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 10 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Sometsudung", "Sometsudung", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 11 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Sokgsudung", "Sokgsudung", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 12 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Ngaytao", "Ngaytao", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 13 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 14 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 15 );
+			base.AddElementFieldMapping( "MangtheolenhEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 16 );
 		}
 		/// <summary>Inits MaucuahangEntity's mappings</summary>
 		private void InitMaucuahangEntityMappings()

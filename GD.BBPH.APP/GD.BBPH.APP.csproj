@@ -745,6 +745,7 @@
     <Compile Include="Manager\DmkhachManager.cs" />
     <Compile Include="Manager\DmbophanManager.cs" />
     <Compile Include="Manager\MangcuahangManager.cs" />
+    <Compile Include="Manager\MangtheolenhManager.cs" />
     <Compile Include="Manager\MaucuahangManager.cs" />
     <Compile Include="Manager\MenuManager.cs" />
     <Compile Include="Manager\MenuroleManager.cs" />

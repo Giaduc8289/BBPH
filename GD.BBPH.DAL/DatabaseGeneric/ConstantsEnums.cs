@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Wednesday, November 30, 2022 10:20:39 AM
+// Code is generated on: Friday, December 2, 2022 10:08:04 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1185,6 +1185,16 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Sometdukien. </summary>
+		Sometdukien,
+		///<summary>Sokgdukien. </summary>
+		Sokgdukien,
+		///<summary>Soluong. </summary>
+		Soluong,
+		///<summary>Sldukien. </summary>
+		Sldukien,
+		///<summary>Tgdukien. </summary>
+		Tgdukien,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1223,6 +1233,16 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Sometdukien. </summary>
+		Sometdukien,
+		///<summary>Sokgdukien. </summary>
+		Sokgdukien,
+		///<summary>Soluong. </summary>
+		Soluong,
+		///<summary>Sldukien. </summary>
+		Sldukien,
+		///<summary>Tgdukien. </summary>
+		Tgdukien,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1263,6 +1283,14 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Sometdukien. </summary>
+		Sometdukien,
+		///<summary>Sokgdukien. </summary>
+		Sokgdukien,
+		///<summary>Sldukien. </summary>
+		Sldukien,
+		///<summary>Tgdukien. </summary>
+		Tgdukien,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1301,6 +1329,16 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Sometdukien. </summary>
+		Sometdukien,
+		///<summary>Sokgdukien. </summary>
+		Sokgdukien,
+		///<summary>Soluong. </summary>
+		Soluong,
+		///<summary>Sldukien. </summary>
+		Sldukien,
+		///<summary>Tgdukien. </summary>
+		Tgdukien,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1377,6 +1415,16 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Sometdukien. </summary>
+		Sometdukien,
+		///<summary>Sokgdukien. </summary>
+		Sokgdukien,
+		///<summary>Soluong. </summary>
+		Soluong,
+		///<summary>Sldukien. </summary>
+		Sldukien,
+		///<summary>Tgdukien. </summary>
+		Tgdukien,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1415,6 +1463,16 @@ namespace GD.BBPH.DAL
 		Ngaysua,
 		///<summary>Nguoisua. </summary>
 		Nguoisua,
+		///<summary>Sometdukien. </summary>
+		Sometdukien,
+		///<summary>Sokgdukien. </summary>
+		Sokgdukien,
+		///<summary>Soluong. </summary>
+		Soluong,
+		///<summary>Sldukien. </summary>
+		Sldukien,
+		///<summary>Tgdukien. </summary>
+		Tgdukien,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -2099,6 +2157,50 @@ namespace GD.BBPH.DAL
 		Tenloaimang,
 		///<summary>Thutulopghep. </summary>
 		Thutulopghep,
+		/// <summary></summary>
+		AmountOfFields
+	}
+
+
+	/// <summary>
+	/// Index enum to fast-access EntityFields in the IEntityFields collection for the entity: Mangtheolenh.
+	/// </summary>
+	public enum MangtheolenhFieldIndex:int
+	{
+		///<summary>Id. </summary>
+		Id,
+		///<summary>Solenhsx. </summary>
+		Solenhsx,
+		///<summary>Ngayphatlenh. </summary>
+		Ngayphatlenh,
+		///<summary>Mamangquydinh. </summary>
+		Mamangquydinh,
+		///<summary>Tenmangquydinh. </summary>
+		Tenmangquydinh,
+		///<summary>Sometquydinh. </summary>
+		Sometquydinh,
+		///<summary>Sokgquydinh. </summary>
+		Sokgquydinh,
+		///<summary>Sometthoi. </summary>
+		Sometthoi,
+		///<summary>Sokgthoi. </summary>
+		Sokgthoi,
+		///<summary>Mamangsudung. </summary>
+		Mamangsudung,
+		///<summary>Tenmangsudung. </summary>
+		Tenmangsudung,
+		///<summary>Sometsudung. </summary>
+		Sometsudung,
+		///<summary>Sokgsudung. </summary>
+		Sokgsudung,
+		///<summary>Ngaytao. </summary>
+		Ngaytao,
+		///<summary>Nguoitao. </summary>
+		Nguoitao,
+		///<summary>Ngaysua. </summary>
+		Ngaysua,
+		///<summary>Nguoisua. </summary>
+		Nguoisua,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -2896,6 +2998,8 @@ namespace GD.BBPH.DAL
 		LogbackupEntity,
 		///<summary>Mangcuahang</summary>
 		MangcuahangEntity,
+		///<summary>Mangtheolenh</summary>
+		MangtheolenhEntity,
 		///<summary>Maucuahang</summary>
 		MaucuahangEntity,
 		///<summary>Menu</summary>

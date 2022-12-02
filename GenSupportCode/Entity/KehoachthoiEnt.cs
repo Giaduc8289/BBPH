@@ -53,6 +53,11 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_NGUOITAO.Text = _Rowview.Row[KehoachthoiFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[KehoachthoiFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[KehoachthoiFields.Nguoisua.Name].ToString();
+					txt_SOMETDUKIEN.Text = _Rowview.Row[KehoachthoiFields.Sometdukien.Name].ToString();
+					txt_SOKGDUKIEN.Text = _Rowview.Row[KehoachthoiFields.Sokgdukien.Name].ToString();
+					txt_SOLUONG.Text = _Rowview.Row[KehoachthoiFields.Soluong.Name].ToString();
+					txt_SLDUKIEN.Text = _Rowview.Row[KehoachthoiFields.Sldukien.Name].ToString();
+					txt_TGDUKIEN.Text = _Rowview.Row[KehoachthoiFields.Tgdukien.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_KEHOACHTHOI_CurrentChanged"); }
@@ -84,6 +89,16 @@ namespace GD.BBPH.DAL.EntityClasses
 			try { _KehoachthoiEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
 			catch { }
 			_KehoachthoiEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			try { _KehoachthoiEntity.Sometdukien = System.Decimal.Parse(txt_SOMETDUKIEN.Text.Trim()); } 
+			catch { }
+			try { _KehoachthoiEntity.Sokgdukien = System.Decimal.Parse(txt_SOKGDUKIEN.Text.Trim()); } 
+			catch { }
+			try { _KehoachthoiEntity.Soluong = System.Int32.Parse(txt_SOLUONG.Text.Trim()); } 
+			catch { }
+			try { _KehoachthoiEntity.Sldukien = System.Int32.Parse(txt_SLDUKIEN.Text.Trim()); } 
+			catch { }
+			try { _KehoachthoiEntity.Tgdukien = System.Int32.Parse(txt_TGDUKIEN.Text.Trim()); } 
+			catch { }
 			
 			
 			if (string.IsNullOrEmpty(_str_KEHOACHTHOI_PK))
@@ -110,6 +125,11 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_KEHOACHTHOI.CurrentRow.Cells[KehoachthoiFields.Nguoitao.Name].Value = _KehoachthoiEntity.Nguoitao;
 				GRID_KEHOACHTHOI.CurrentRow.Cells[KehoachthoiFields.Ngaysua.Name].Value = _KehoachthoiEntity.Ngaysua;
 				GRID_KEHOACHTHOI.CurrentRow.Cells[KehoachthoiFields.Nguoisua.Name].Value = _KehoachthoiEntity.Nguoisua;
+				GRID_KEHOACHTHOI.CurrentRow.Cells[KehoachthoiFields.Sometdukien.Name].Value = _KehoachthoiEntity.Sometdukien;
+				GRID_KEHOACHTHOI.CurrentRow.Cells[KehoachthoiFields.Sokgdukien.Name].Value = _KehoachthoiEntity.Sokgdukien;
+				GRID_KEHOACHTHOI.CurrentRow.Cells[KehoachthoiFields.Soluong.Name].Value = _KehoachthoiEntity.Soluong;
+				GRID_KEHOACHTHOI.CurrentRow.Cells[KehoachthoiFields.Sldukien.Name].Value = _KehoachthoiEntity.Sldukien;
+				GRID_KEHOACHTHOI.CurrentRow.Cells[KehoachthoiFields.Tgdukien.Name].Value = _KehoachthoiEntity.Tgdukien;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KehoachthoiManager.Convert(_KehoachthoiEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_KEHOACHTHOI_PK;

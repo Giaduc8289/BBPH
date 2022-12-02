@@ -28,17 +28,17 @@ namespace GD.BBPH.DAL.EntityClasses
 	// __LLBLGENPRO_USER_CODE_REGION_END
 
 	/// <summary>
-	/// Entity class which represents the entity 'Menu'.<br/><br/>
+	/// Entity class which represents the entity 'Mangtheolenh'.<br/><br/>
 	/// 
 	/// </summary>
 	[Serializable]
-	public partial class MenuEntity : CommonEntityBase, ISerializable
+	public partial class MangtheolenhEntity : CommonEntityBase, ISerializable
 		// __LLBLGENPRO_USER_CODE_REGION_START AdditionalInterfaces
 		// __LLBLGENPRO_USER_CODE_REGION_END	
 	{
 		#region Class Member Declarations
-		private EntityCollection<MenuroleEntity> _menurole;
-		private EntityCollection<RolesEntity> _rolesCollectionViaMenurole;
+
+
 
 
 		
@@ -54,22 +54,20 @@ namespace GD.BBPH.DAL.EntityClasses
 		public static class MemberNames
 		{
 
-			/// <summary>Member name Menurole</summary>
-			public static readonly string Menurole = "Menurole";
-			/// <summary>Member name RolesCollectionViaMenurole</summary>
-			public static readonly string RolesCollectionViaMenurole = "RolesCollectionViaMenurole";
+
+
 
 		}
 		#endregion
 		
 		/// <summary> Static CTor for setting up custom property hashtables. Is executed before the first instance of this entity class or derived classes is constructed. </summary>
-		static MenuEntity()
+		static MangtheolenhEntity()
 		{
 			SetupCustomPropertyHashtables();
 		}
 
 		/// <summary> CTor</summary>
-		public MenuEntity():base("MenuEntity")
+		public MangtheolenhEntity():base("MangtheolenhEntity")
 		{
 			InitClassEmpty(null, CreateFields());
 		}
@@ -77,48 +75,48 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> CTor</summary>
 		/// <remarks>For framework usage.</remarks>
 		/// <param name="fields">Fields object to set as the fields for this entity.</param>
-		public MenuEntity(IEntityFields2 fields):base("MenuEntity")
+		public MangtheolenhEntity(IEntityFields2 fields):base("MangtheolenhEntity")
 		{
 			InitClassEmpty(null, fields);
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="validator">The custom validator object for this MenuEntity</param>
-		public MenuEntity(IValidator validator):base("MenuEntity")
+		/// <param name="validator">The custom validator object for this MangtheolenhEntity</param>
+		public MangtheolenhEntity(IValidator validator):base("MangtheolenhEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
 		}
 				
 
 		/// <summary> CTor</summary>
-		/// <param name="menuId">PK value for Menu which data should be fetched into this Menu object</param>
+		/// <param name="id">PK value for Mangtheolenh which data should be fetched into this Mangtheolenh object</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public MenuEntity(System.String menuId):base("MenuEntity")
+		public MangtheolenhEntity(System.Int64 id):base("MangtheolenhEntity")
 		{
 			InitClassEmpty(null, CreateFields());
-			this.MenuId = menuId;
+			this.Id = id;
 		}
 
 		/// <summary> CTor</summary>
-		/// <param name="menuId">PK value for Menu which data should be fetched into this Menu object</param>
-		/// <param name="validator">The custom validator object for this MenuEntity</param>
+		/// <param name="id">PK value for Mangtheolenh which data should be fetched into this Mangtheolenh object</param>
+		/// <param name="validator">The custom validator object for this MangtheolenhEntity</param>
 		/// <remarks>The entity is not fetched by this constructor. Use a DataAccessAdapter for that.</remarks>
-		public MenuEntity(System.String menuId, IValidator validator):base("MenuEntity")
+		public MangtheolenhEntity(System.Int64 id, IValidator validator):base("MangtheolenhEntity")
 		{
 			InitClassEmpty(validator, CreateFields());
-			this.MenuId = menuId;
+			this.Id = id;
 		}
 
 		/// <summary> Protected CTor for deserialization</summary>
 		/// <param name="info"></param>
 		/// <param name="context"></param>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		protected MenuEntity(SerializationInfo info, StreamingContext context) : base(info, context)
+		protected MangtheolenhEntity(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 			if(SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-				_menurole = (EntityCollection<MenuroleEntity>)info.GetValue("_menurole", typeof(EntityCollection<MenuroleEntity>));
-				_rolesCollectionViaMenurole = (EntityCollection<RolesEntity>)info.GetValue("_rolesCollectionViaMenurole", typeof(EntityCollection<RolesEntity>));
+
+
 
 
 				base.FixupDeserialization(FieldInfoProviderSingleton.GetInstance());
@@ -133,7 +131,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <param name="fieldIndex">The fieldindex.</param>
 		protected override void PerformDesyncSetupFKFieldChange(int fieldIndex)
 		{
-			switch((MenuFieldIndex)fieldIndex)
+			switch((MangtheolenhFieldIndex)fieldIndex)
 			{
 				default:
 					base.PerformDesyncSetupFKFieldChange(fieldIndex);
@@ -158,14 +156,8 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(propertyName)
 			{
 
-				case "Menurole":
-					this.Menurole.Add((MenuroleEntity)entity);
-					break;
-				case "RolesCollectionViaMenurole":
-					this.RolesCollectionViaMenurole.IsReadOnly = false;
-					this.RolesCollectionViaMenurole.Add((RolesEntity)entity);
-					this.RolesCollectionViaMenurole.IsReadOnly = true;
-					break;
+
+
 
 				default:
 					break;
@@ -177,7 +169,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>RelationCollection with relation object(s) which represent the relation the field is maped on</returns>
 		public override RelationCollection GetRelationsForFieldOfType(string fieldName)
 		{
-			return MenuEntity.GetRelationsForField(fieldName);
+			return MangtheolenhEntity.GetRelationsForField(fieldName);
 		}
 
 		/// <summary>Gets the relation objects which represent the relation the fieldName specified is mapped on. </summary>
@@ -189,13 +181,8 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-				case "Menurole":
-					toReturn.Add(MenuEntity.Relations.MenuroleEntityUsingMenuid);
-					break;
-				case "RolesCollectionViaMenurole":
-					toReturn.Add(MenuEntity.Relations.MenuroleEntityUsingMenuid, "MenuEntity__", "Menurole_", JoinHint.None);
-					toReturn.Add(MenuroleEntity.Relations.RolesEntityUsingRolesid, "Menurole_", string.Empty, JoinHint.None);
-					break;
+
+
 
 				default:
 
@@ -233,9 +220,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-				case "Menurole":
-					this.Menurole.Add((MenuroleEntity)relatedEntity);
-					break;
+
 
 				default:
 					break;
@@ -252,9 +237,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			switch(fieldName)
 			{
 
-				case "Menurole":
-					base.PerformRelatedEntityRemoval(this.Menurole, relatedEntity, signalRelatedEntityManyToOne);
-					break;
+
 
 				default:
 					break;
@@ -286,7 +269,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		public override List<IEntityCollection2> GetMemberEntityCollections()
 		{
 			List<IEntityCollection2> toReturn = new List<IEntityCollection2>();
-			toReturn.Add(this.Menurole);
+
 
 			return toReturn;
 		}
@@ -301,8 +284,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			if (SerializationHelper.Optimization != SerializationOptimization.Fast) 
 			{
-				info.AddValue("_menurole", ((_menurole!=null) && (_menurole.Count>0) && !this.MarkedForDeletion)?_menurole:null);
-				info.AddValue("_rolesCollectionViaMenurole", ((_rolesCollectionViaMenurole!=null) && (_rolesCollectionViaMenurole.Count>0) && !this.MarkedForDeletion)?_rolesCollectionViaMenurole:null);
+
+
 
 
 			}
@@ -316,7 +299,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the current value is NULL, use <see cref="TestCurrentFieldValueForNull"/> for that.</summary>
 		/// <param name="fieldIndex">Index of the field to test if that field was NULL in the persistent storage</param>
 		/// <returns>true if the field with the passed in index was NULL in the persistent storage, false otherwise</returns>
-		public bool TestOriginalFieldValueForNull(MenuFieldIndex fieldIndex)
+		public bool TestOriginalFieldValueForNull(MangtheolenhFieldIndex fieldIndex)
 		{
 			return base.Fields[(int)fieldIndex].IsNull;
 		}
@@ -325,7 +308,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// Should not be used for testing if the original value (read from the db) is NULL</summary>
 		/// <param name="fieldIndex">Index of the field to test if its currentvalue is null/undefined</param>
 		/// <returns>true if the field's value isn't defined yet, false otherwise</returns>
-		public bool TestCurrentFieldValueForNull(MenuFieldIndex fieldIndex)
+		public bool TestCurrentFieldValueForNull(MangtheolenhFieldIndex fieldIndex)
 		{
 			return base.CheckIfCurrentFieldValueIsNull((int)fieldIndex);
 		}
@@ -335,30 +318,11 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <returns>A list of all the EntityRelation objects the type of this instance has. Hierarchy relations are excluded.</returns>
 		public override List<IEntityRelation> GetAllRelations()
 		{
-			return new MenuRelations().GetAllRelations();
+			return new MangtheolenhRelations().GetAllRelations();
 		}
 		
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entities of type 'Menurole' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoMenurole()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(MenuroleFields.Menuid, null, ComparisonOperator.Equal, this.MenuId));
-			return bucket;
-		}
 
-		/// <summary> Creates a new IRelationPredicateBucket object which contains the predicate expression and relation collection to fetch
-		/// the related entities of type 'Roles' to this entity. Use DataAccessAdapter.FetchEntityCollection() to fetch these related entities.</summary>
-		/// <returns></returns>
-		public virtual IRelationPredicateBucket GetRelationInfoRolesCollectionViaMenurole()
-		{
-			IRelationPredicateBucket bucket = new RelationPredicateBucket();
-			bucket.Relations.AddRange(GetRelationsForFieldOfType("RolesCollectionViaMenurole"));
-			bucket.PredicateExpression.Add(new FieldCompareValuePredicate(MenuFields.MenuId, null, ComparisonOperator.Equal, this.MenuId, "MenuEntity__"));
-			return bucket;
-		}
 
 
 	
@@ -366,7 +330,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates entity fields object for this entity. Used in constructor to setup this entity in a polymorphic scenario.</summary>
 		protected virtual IEntityFields2 CreateFields()
 		{
-			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.MenuEntity);
+			return EntityFieldsFactory.CreateEntityFieldsObject(GD.BBPH.DAL.EntityType.MangtheolenhEntity);
 		}
 
 		/// <summary>
@@ -381,7 +345,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary>Creates a new instance of the factory related to this entity</summary>
 		protected override IEntityFactory2 CreateEntityFactory()
 		{
-			return EntityFactoryCache2.GetEntityFactory(typeof(MenuEntityFactory));
+			return EntityFactoryCache2.GetEntityFactory(typeof(MangtheolenhEntityFactory));
 		}
 #if !CF
 		/// <summary>Adds the member collections to the collections queue (base first)</summary>
@@ -389,8 +353,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void AddToMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue) 
 		{
 			base.AddToMemberEntityCollectionsQueue(collectionsQueue);
-			collectionsQueue.Enqueue(this._menurole);
-			collectionsQueue.Enqueue(this._rolesCollectionViaMenurole);
+
+
 		}
 		
 		/// <summary>Gets the member collections queue from the queue (base first)</summary>
@@ -398,22 +362,16 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void GetFromMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue)
 		{
 			base.GetFromMemberEntityCollectionsQueue(collectionsQueue);
-			this._menurole = (EntityCollection<MenuroleEntity>) collectionsQueue.Dequeue();
-			this._rolesCollectionViaMenurole = (EntityCollection<RolesEntity>) collectionsQueue.Dequeue();
+
+
 		}
 		
 		/// <summary>Determines whether the entity has populated member collections</summary>
 		/// <returns>true if the entity has populated member collections.</returns>
 		protected override bool HasPopulatedMemberEntityCollections()
 		{
-			if (this._menurole != null)
-			{
-				return true;
-			}
-			if (this._rolesCollectionViaMenurole != null)
-			{
-				return true;
-			}
+
+
 			return base.HasPopulatedMemberEntityCollections();
 		}
 		
@@ -423,8 +381,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected override void CreateMemberEntityCollectionsQueue(Queue<IEntityCollection2> collectionsQueue, Queue<bool> requiredQueue) 
 		{
 			base.CreateMemberEntityCollectionsQueue(collectionsQueue, requiredQueue);
-			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<MenuroleEntity>(EntityFactoryCache2.GetEntityFactory(typeof(MenuroleEntityFactory))) : null);
-			collectionsQueue.Enqueue(requiredQueue.Dequeue() ? new EntityCollection<RolesEntity>(EntityFactoryCache2.GetEntityFactory(typeof(RolesEntityFactory))) : null);
+
+
 		}
 #endif
 		/// <summary>
@@ -435,8 +393,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			Dictionary<string, object> toReturn = new Dictionary<string, object>();
 
-			toReturn.Add("Menurole", _menurole);
-			toReturn.Add("RolesCollectionViaMenurole", _rolesCollectionViaMenurole);
+
+
 
 			return toReturn;
 		}
@@ -444,14 +402,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		/// <summary> Adds the internals to the active context. </summary>
 		protected override void AddInternalsToContext()
 		{
-			if(_menurole!=null)
-			{
-				_menurole.ActiveContext = base.ActiveContext;
-			}
-			if(_rolesCollectionViaMenurole!=null)
-			{
-				_rolesCollectionViaMenurole.ActiveContext = base.ActiveContext;
-			}
+
+
 
 
 		}
@@ -460,8 +412,8 @@ namespace GD.BBPH.DAL.EntityClasses
 		protected virtual void InitClassMembers()
 		{
 
-			_menurole = null;
-			_rolesCollectionViaMenurole = null;
+
+
 
 
 			PerformDependencyInjection();
@@ -481,44 +433,62 @@ namespace GD.BBPH.DAL.EntityClasses
 			Dictionary<string, string> fieldHashtable = null;
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("MenuId", fieldHashtable);
+			_fieldsCustomProperties.Add("Id", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("MenuName", fieldHashtable);
+			_fieldsCustomProperties.Add("Solenhsx", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Icon", fieldHashtable);
+			_fieldsCustomProperties.Add("Ngayphatlenh", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Issudung", fieldHashtable);
+			_fieldsCustomProperties.Add("Mamangquydinh", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Istrangthai", fieldHashtable);
+			_fieldsCustomProperties.Add("Tenmangquydinh", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Menuparent", fieldHashtable);
+			_fieldsCustomProperties.Add("Sometquydinh", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Thutu", fieldHashtable);
+			_fieldsCustomProperties.Add("Sokgquydinh", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("FormName", fieldHashtable);
+			_fieldsCustomProperties.Add("Sometthoi", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("LoaiMenu", fieldHashtable);
+			_fieldsCustomProperties.Add("Sokgthoi", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Param", fieldHashtable);
+			_fieldsCustomProperties.Add("Mamangsudung", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Maphanhe", fieldHashtable);
+			_fieldsCustomProperties.Add("Tenmangsudung", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sometsudung", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Sokgsudung", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaytao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nguoitao", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Ngaysua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
 		}
 		#endregion
 
 
 
 		/// <summary> Initializes the class with empty data, as if it is a new Entity.</summary>
-		/// <param name="validator">The validator object for this MenuEntity</param>
+		/// <param name="validator">The validator object for this MangtheolenhEntity</param>
 		/// <param name="fields">Fields of this entity</param>
 		protected virtual void InitClassEmpty(IValidator validator, IEntityFields2 fields)
 		{
@@ -537,9 +507,9 @@ namespace GD.BBPH.DAL.EntityClasses
 
 		#region Class Property Declarations
 		/// <summary> The relations object holding all relations of this entity with other entity classes.</summary>
-		public  static MenuRelations Relations
+		public  static MangtheolenhRelations Relations
 		{
-			get	{ return new MenuRelations(); }
+			get	{ return new MangtheolenhRelations(); }
 		}
 		
 		/// <summary> The custom properties for this entity type.</summary>
@@ -549,31 +519,7 @@ namespace GD.BBPH.DAL.EntityClasses
 			get { return _customProperties;}
 		}
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Menurole' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathMenurole
-		{
-			get
-			{
-				return new PrefetchPathElement2( new EntityCollection<MenuroleEntity>(EntityFactoryCache2.GetEntityFactory(typeof(MenuroleEntityFactory))),
-					(IEntityRelation)GetRelationsForField("Menurole")[0], (int)GD.BBPH.DAL.EntityType.MenuEntity, (int)GD.BBPH.DAL.EntityType.MenuroleEntity, 0, null, null, null, null, "Menurole", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.OneToMany);
-			}
-		}
 
-		/// <summary> Creates a new PrefetchPathElement2 object which contains all the information to prefetch the related entities of type 'Roles' 
-		/// for this entity. Add the object returned by this property to an existing PrefetchPath2 instance.</summary>
-		/// <returns>Ready to use IPrefetchPathElement2 implementation.</returns>
-		public static IPrefetchPathElement2 PrefetchPathRolesCollectionViaMenurole
-		{
-			get
-			{
-				IEntityRelation intermediateRelation = MenuEntity.Relations.MenuroleEntityUsingMenuid;
-				intermediateRelation.SetAliases(string.Empty, "Menurole_");
-				return new PrefetchPathElement2(new EntityCollection<RolesEntity>(EntityFactoryCache2.GetEntityFactory(typeof(RolesEntityFactory))), intermediateRelation,
-					(int)GD.BBPH.DAL.EntityType.MenuEntity, (int)GD.BBPH.DAL.EntityType.RolesEntity, 0, null, null, GetRelationsForField("RolesCollectionViaMenurole"), null, "RolesCollectionViaMenurole", SD.LLBLGen.Pro.ORMSupportClasses.RelationType.ManyToMany);
-			}
-		}
 
 
 
@@ -582,7 +528,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, string> CustomPropertiesOfType
 		{
-			get { return MenuEntity.CustomProperties;}
+			get { return MangtheolenhEntity.CustomProperties;}
 		}
 
 		/// <summary> The custom properties for the fields of this entity type. The returned Hashtable contains per fieldname a hashtable of name-value
@@ -598,161 +544,197 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override Dictionary<string, Dictionary<string, string>> FieldsCustomPropertiesOfType
 		{
-			get { return MenuEntity.FieldsCustomProperties;}
+			get { return MangtheolenhEntity.FieldsCustomProperties;}
 		}
 
-		/// <summary> The MenuId property of the Entity Menu<br/><br/>
+		/// <summary> The Id property of the Entity Mangtheolenh<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."MenuId"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, false</remarks>
-		public virtual System.String MenuId
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Id"<br/>
+		/// Table field type characteristics (type, precision, scale, length): BigInt, 19, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): false, true, true</remarks>
+		public virtual System.Int64 Id
 		{
-			get { return (System.String)GetValue((int)MenuFieldIndex.MenuId, true); }
-			set	{ SetValue((int)MenuFieldIndex.MenuId, value); }
+			get { return (System.Int64)GetValue((int)MangtheolenhFieldIndex.Id, true); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Id, value); }
 		}
 
-		/// <summary> The MenuName property of the Entity Menu<br/><br/>
+		/// <summary> The Solenhsx property of the Entity Mangtheolenh<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."MenuName"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 500<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String MenuName
-		{
-			get { return (System.String)GetValue((int)MenuFieldIndex.MenuName, true); }
-			set	{ SetValue((int)MenuFieldIndex.MenuName, value); }
-		}
-
-		/// <summary> The Icon property of the Entity Menu<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."Icon"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 500<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Icon
-		{
-			get { return (System.String)GetValue((int)MenuFieldIndex.Icon, true); }
-			set	{ SetValue((int)MenuFieldIndex.Icon, value); }
-		}
-
-		/// <summary> The Issudung property of the Entity Menu<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."Issudung"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Int32> Issudung
-		{
-			get { return (Nullable<System.Int32>)GetValue((int)MenuFieldIndex.Issudung, false); }
-			set	{ SetValue((int)MenuFieldIndex.Issudung, value); }
-		}
-
-		/// <summary> The Istrangthai property of the Entity Menu<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."Istrangthai"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Int32> Istrangthai
-		{
-			get { return (Nullable<System.Int32>)GetValue((int)MenuFieldIndex.Istrangthai, false); }
-			set	{ SetValue((int)MenuFieldIndex.Istrangthai, value); }
-		}
-
-		/// <summary> The Menuparent property of the Entity Menu<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."Menuparent"<br/>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Solenhsx"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Menuparent
+		public virtual System.String Solenhsx
 		{
-			get { return (System.String)GetValue((int)MenuFieldIndex.Menuparent, true); }
-			set	{ SetValue((int)MenuFieldIndex.Menuparent, value); }
+			get { return (System.String)GetValue((int)MangtheolenhFieldIndex.Solenhsx, true); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Solenhsx, value); }
 		}
 
-		/// <summary> The Thutu property of the Entity Menu<br/><br/>
+		/// <summary> The Ngayphatlenh property of the Entity Mangtheolenh<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."Thutu"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Ngayphatlenh"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Date, 0, 0, 0<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Int32> Thutu
+		public virtual Nullable<System.DateTime> Ngayphatlenh
 		{
-			get { return (Nullable<System.Int32>)GetValue((int)MenuFieldIndex.Thutu, false); }
-			set	{ SetValue((int)MenuFieldIndex.Thutu, value); }
+			get { return (Nullable<System.DateTime>)GetValue((int)MangtheolenhFieldIndex.Ngayphatlenh, false); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Ngayphatlenh, value); }
 		}
 
-		/// <summary> The FormName property of the Entity Menu<br/><br/>
+		/// <summary> The Mamangquydinh property of the Entity Mangtheolenh<br/><br/>
 		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."FormName"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 1000<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String FormName
-		{
-			get { return (System.String)GetValue((int)MenuFieldIndex.FormName, true); }
-			set	{ SetValue((int)MenuFieldIndex.FormName, value); }
-		}
-
-		/// <summary> The LoaiMenu property of the Entity Menu<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."LoaiMenu"<br/>
-		/// Table field type characteristics (type, precision, scale, length): Int, 10, 0, 0<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual Nullable<System.Int32> LoaiMenu
-		{
-			get { return (Nullable<System.Int32>)GetValue((int)MenuFieldIndex.LoaiMenu, false); }
-			set	{ SetValue((int)MenuFieldIndex.LoaiMenu, value); }
-		}
-
-		/// <summary> The Param property of the Entity Menu<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."Param"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 500<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Param
-		{
-			get { return (System.String)GetValue((int)MenuFieldIndex.Param, true); }
-			set	{ SetValue((int)MenuFieldIndex.Param, value); }
-		}
-
-		/// <summary> The Maphanhe property of the Entity Menu<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Menu"."Maphanhe"<br/>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Mamangquydinh"<br/>
 		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
 		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Maphanhe
+		public virtual System.String Mamangquydinh
 		{
-			get { return (System.String)GetValue((int)MenuFieldIndex.Maphanhe, true); }
-			set	{ SetValue((int)MenuFieldIndex.Maphanhe, value); }
+			get { return (System.String)GetValue((int)MangtheolenhFieldIndex.Mamangquydinh, true); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Mamangquydinh, value); }
 		}
 
-		/// <summary> Gets the EntityCollection with the related entities of type 'MenuroleEntity' which are related to this entity via a relation of type '1:n'.
-		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
-		[TypeContainedAttribute(typeof(MenuroleEntity))]
-		public virtual EntityCollection<MenuroleEntity> Menurole
+		/// <summary> The Tenmangquydinh property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Tenmangquydinh"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenmangquydinh
 		{
-			get
-			{
-				if(_menurole==null)
-				{
-					_menurole = new EntityCollection<MenuroleEntity>(EntityFactoryCache2.GetEntityFactory(typeof(MenuroleEntityFactory)));
-					_menurole.SetContainingEntityInfo(this, "Menu");
-				}
-				return _menurole;
-			}
+			get { return (System.String)GetValue((int)MangtheolenhFieldIndex.Tenmangquydinh, true); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Tenmangquydinh, value); }
 		}
 
-		/// <summary> Gets the EntityCollection with the related entities of type 'RolesEntity' which are related to this entity via a relation of type 'm:n'.
-		/// If the EntityCollection hasn't been fetched yet, the collection returned will be empty.</summary>
-		[TypeContainedAttribute(typeof(RolesEntity))]
-		public virtual EntityCollection<RolesEntity> RolesCollectionViaMenurole
+		/// <summary> The Sometquydinh property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Sometquydinh"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sometquydinh
 		{
-			get
-			{
-				if(_rolesCollectionViaMenurole==null)
-				{
-					_rolesCollectionViaMenurole = new EntityCollection<RolesEntity>(EntityFactoryCache2.GetEntityFactory(typeof(RolesEntityFactory)));
-					_rolesCollectionViaMenurole.IsReadOnly=true;
-				}
-				return _rolesCollectionViaMenurole;
-			}
+			get { return (Nullable<System.Decimal>)GetValue((int)MangtheolenhFieldIndex.Sometquydinh, false); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Sometquydinh, value); }
 		}
+
+		/// <summary> The Sokgquydinh property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Sokgquydinh"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sokgquydinh
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)MangtheolenhFieldIndex.Sokgquydinh, false); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Sokgquydinh, value); }
+		}
+
+		/// <summary> The Sometthoi property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Sometthoi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sometthoi
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)MangtheolenhFieldIndex.Sometthoi, false); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Sometthoi, value); }
+		}
+
+		/// <summary> The Sokgthoi property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Sokgthoi"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sokgthoi
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)MangtheolenhFieldIndex.Sokgthoi, false); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Sokgthoi, value); }
+		}
+
+		/// <summary> The Mamangsudung property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Mamangsudung"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Mamangsudung
+		{
+			get { return (System.String)GetValue((int)MangtheolenhFieldIndex.Mamangsudung, true); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Mamangsudung, value); }
+		}
+
+		/// <summary> The Tenmangsudung property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Tenmangsudung"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tenmangsudung
+		{
+			get { return (System.String)GetValue((int)MangtheolenhFieldIndex.Tenmangsudung, true); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Tenmangsudung, value); }
+		}
+
+		/// <summary> The Sometsudung property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Sometsudung"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sometsudung
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)MangtheolenhFieldIndex.Sometsudung, false); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Sometsudung, value); }
+		}
+
+		/// <summary> The Sokgsudung property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Sokgsudung"<br/>
+		/// Table field type characteristics (type, precision, scale, length): Decimal, 20, 3, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.Decimal> Sokgsudung
+		{
+			get { return (Nullable<System.Decimal>)GetValue((int)MangtheolenhFieldIndex.Sokgsudung, false); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Sokgsudung, value); }
+		}
+
+		/// <summary> The Ngaytao property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Ngaytao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaytao
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)MangtheolenhFieldIndex.Ngaytao, false); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Ngaytao, value); }
+		}
+
+		/// <summary> The Nguoitao property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Nguoitao"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoitao
+		{
+			get { return (System.String)GetValue((int)MangtheolenhFieldIndex.Nguoitao, true); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Nguoitao, value); }
+		}
+
+		/// <summary> The Ngaysua property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Ngaysua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): DateTime, 0, 0, 0<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual Nullable<System.DateTime> Ngaysua
+		{
+			get { return (Nullable<System.DateTime>)GetValue((int)MangtheolenhFieldIndex.Ngaysua, false); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Ngaysua, value); }
+		}
+
+		/// <summary> The Nguoisua property of the Entity Mangtheolenh<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Mangtheolenh"."Nguoisua"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nguoisua
+		{
+			get { return (System.String)GetValue((int)MangtheolenhFieldIndex.Nguoisua, true); }
+			set	{ SetValue((int)MangtheolenhFieldIndex.Nguoisua, value); }
+		}
+
+
 
 
 	
@@ -773,7 +755,7 @@ namespace GD.BBPH.DAL.EntityClasses
 		[Browsable(false), XmlIgnore]
 		public override int LLBLGenProEntityTypeValue 
 		{ 
-			get { return (int)GD.BBPH.DAL.EntityType.MenuEntity; }
+			get { return (int)GD.BBPH.DAL.EntityType.MangtheolenhEntity; }
 		}
 		#endregion
 

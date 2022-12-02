@@ -54,6 +54,16 @@ namespace GD.BBPH.BLL
 		
 		public const String Field_Nguoisua="Nguoisua";				
 		
+		public const String Field_Sometdukien="Sometdukien";				
+		
+		public const String Field_Sokgdukien="Sokgdukien";				
+		
+		public const String Field_Soluong="Soluong";				
+		
+		public const String Field_Sldukien="Sldukien";				
+		
+		public const String Field_Tgdukien="Tgdukien";				
+		
 				
 		#endregion	
 
@@ -96,6 +106,16 @@ namespace GD.BBPH.BLL
 			dt.Columns.Add(Field_Ngaysua,typeof(System.DateTime));
 			
 			dt.Columns.Add(Field_Nguoisua,typeof(System.String));
+			
+			dt.Columns.Add(Field_Sometdukien,typeof(System.Decimal));
+			
+			dt.Columns.Add(Field_Sokgdukien,typeof(System.Decimal));
+			
+			dt.Columns.Add(Field_Soluong,typeof(System.Int32));
+			
+			dt.Columns.Add(Field_Sldukien,typeof(System.Int32));
+			
+			dt.Columns.Add(Field_Tgdukien,typeof(System.Int32));
 									
 		            
 			return dt;			
@@ -190,6 +210,36 @@ namespace GD.BBPH.BLL
 				r[Field_Nguoisua]=_KehoachthoiEntity.Nguoisua;
 			}
 			catch { }
+			
+			try
+			{
+				r[Field_Sometdukien]=_KehoachthoiEntity.Sometdukien;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Sokgdukien]=_KehoachthoiEntity.Sokgdukien;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Soluong]=_KehoachthoiEntity.Soluong;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Sldukien]=_KehoachthoiEntity.Sldukien;
+			}
+			catch { }
+			
+			try
+			{
+				r[Field_Tgdukien]=_KehoachthoiEntity.Tgdukien;
+			}
+			catch { }
 									
 						
 			dt.Rows.Add(r);
@@ -280,6 +330,36 @@ namespace GD.BBPH.BLL
 				_KehoachthoiEntity.Nguoisua= r[Field_Nguoisua].ToString();						
 			}
 			catch { }
+			
+			try
+			{
+				_KehoachthoiEntity.Sometdukien= System.Decimal.Parse(r[Field_Sometdukien].ToString());						
+			}
+			catch { }
+			
+			try
+			{
+				_KehoachthoiEntity.Sokgdukien= System.Decimal.Parse(r[Field_Sokgdukien].ToString());						
+			}
+			catch { }
+			
+			try
+			{
+				_KehoachthoiEntity.Soluong= System.Int32.Parse(r[Field_Soluong].ToString());						
+			}
+			catch { }
+			
+			try
+			{
+				_KehoachthoiEntity.Sldukien= System.Int32.Parse(r[Field_Sldukien].ToString());						
+			}
+			catch { }
+			
+			try
+			{
+				_KehoachthoiEntity.Tgdukien= System.Int32.Parse(r[Field_Tgdukien].ToString());						
+			}
+			catch { }
 									
 									
 			return _KehoachthoiEntity;
@@ -316,6 +396,16 @@ namespace GD.BBPH.BLL
 			_KehoachthoiEntity.Ngaysua= _KehoachthoiEntity_XML.Ngaysua;
 			
 			_KehoachthoiEntity.Nguoisua= _KehoachthoiEntity_XML.Nguoisua;
+			
+			_KehoachthoiEntity.Sometdukien= _KehoachthoiEntity_XML.Sometdukien;
+			
+			_KehoachthoiEntity.Sokgdukien= _KehoachthoiEntity_XML.Sokgdukien;
+			
+			_KehoachthoiEntity.Soluong= _KehoachthoiEntity_XML.Soluong;
+			
+			_KehoachthoiEntity.Sldukien= _KehoachthoiEntity_XML.Sldukien;
+			
+			_KehoachthoiEntity.Tgdukien= _KehoachthoiEntity_XML.Tgdukien;
 									
 				
 			return _KehoachthoiEntity;
@@ -414,6 +504,36 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_KehoachthoiEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Sometdukien,_KehoachthoiEntity.Sometdukien);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Sokgdukien,_KehoachthoiEntity.Sokgdukien);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Soluong,_KehoachthoiEntity.Soluong);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Sldukien,_KehoachthoiEntity.Sldukien);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Tgdukien,_KehoachthoiEntity.Tgdukien);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -507,6 +627,36 @@ namespace GD.BBPH.BLL
 				r.SetField(Field_Nguoisua,_KehoachthoiEntity.Nguoisua);
 			}
 			catch { }
+			
+			try
+			{
+				r.SetField(Field_Sometdukien,_KehoachthoiEntity.Sometdukien);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Sokgdukien,_KehoachthoiEntity.Sokgdukien);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Soluong,_KehoachthoiEntity.Soluong);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Sldukien,_KehoachthoiEntity.Sldukien);
+			}
+			catch { }
+			
+			try
+			{
+				r.SetField(Field_Tgdukien,_KehoachthoiEntity.Tgdukien);
+			}
+			catch { }
 									
 			
 			_BindingSource.ResetCurrentItem();
@@ -529,7 +679,7 @@ namespace GD.BBPH.BLL
 			return KehoachthoiEntity;
 		}
 
-		public KehoachthoiEntity Insert(System.Int64  Id, System.String  Solenhsx, System.DateTime  Ngaydat, System.DateTime  Ngaygiao, System.String  Mamang, System.String  Mamay, System.DateTime  Ngaychay, System.Int32  Ca, System.Decimal  Somet, System.Decimal  Sokg, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua)
+		public KehoachthoiEntity Insert(System.Int64  Id, System.String  Solenhsx, System.DateTime  Ngaydat, System.DateTime  Ngaygiao, System.String  Mamang, System.String  Mamay, System.DateTime  Ngaychay, System.Int32  Ca, System.Decimal  Somet, System.Decimal  Sokg, System.DateTime  Ngaytao, System.String  Nguoitao, System.DateTime  Ngaysua, System.String  Nguoisua, System.Decimal  Sometdukien, System.Decimal  Sokgdukien, System.Int32  Soluong, System.Int32  Sldukien, System.Int32  Tgdukien)
 		{
 			KehoachthoiEntity _KehoachthoiEntity = new KehoachthoiEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -562,6 +712,16 @@ namespace GD.BBPH.BLL
 				_KehoachthoiEntity.Ngaysua = Ngaysua;
 				
 				_KehoachthoiEntity.Nguoisua = Nguoisua;
+				
+				_KehoachthoiEntity.Sometdukien = Sometdukien;
+				
+				_KehoachthoiEntity.Sokgdukien = Sokgdukien;
+				
+				_KehoachthoiEntity.Soluong = Soluong;
+				
+				_KehoachthoiEntity.Sldukien = Sldukien;
+				
+				_KehoachthoiEntity.Tgdukien = Tgdukien;
 					
 					
 				adapter.SaveEntity(_KehoachthoiEntity, true);
@@ -569,7 +729,7 @@ namespace GD.BBPH.BLL
 			return _KehoachthoiEntity;
 		}
 
-		public KehoachthoiEntity Insert(System.String Solenhsx, System.DateTime Ngaydat, System.DateTime Ngaygiao, System.String Mamang, System.String Mamay, System.DateTime Ngaychay, System.Int32 Ca, System.Decimal Somet, System.Decimal Sokg, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)//ko co mahieu
+		public KehoachthoiEntity Insert(System.String Solenhsx, System.DateTime Ngaydat, System.DateTime Ngaygiao, System.String Mamang, System.String Mamay, System.DateTime Ngaychay, System.Int32 Ca, System.Decimal Somet, System.Decimal Sokg, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Sometdukien, System.Decimal Sokgdukien, System.Int32 Soluong, System.Int32 Sldukien, System.Int32 Tgdukien)//ko co mahieu
 		{
 			KehoachthoiEntity _KehoachthoiEntity = new KehoachthoiEntity();
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -601,6 +761,16 @@ namespace GD.BBPH.BLL
 				_KehoachthoiEntity.Ngaysua = Ngaysua;
 				
 				_KehoachthoiEntity.Nguoisua = Nguoisua;
+				
+				_KehoachthoiEntity.Sometdukien = Sometdukien;
+				
+				_KehoachthoiEntity.Sokgdukien = Sokgdukien;
+				
+				_KehoachthoiEntity.Soluong = Soluong;
+				
+				_KehoachthoiEntity.Sldukien = Sldukien;
+				
+				_KehoachthoiEntity.Tgdukien = Tgdukien;
 					
 
 				adapter.SaveEntity(_KehoachthoiEntity, true);
@@ -638,7 +808,7 @@ namespace GD.BBPH.BLL
 			return toReturn;
 		}
 
-		public bool Update(System.Int64 Id, System.String Solenhsx, System.DateTime Ngaydat, System.DateTime Ngaygiao, System.String Mamang, System.String Mamay, System.DateTime Ngaychay, System.Int32 Ca, System.Decimal Somet, System.Decimal Sokg, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua)
+		public bool Update(System.Int64 Id, System.String Solenhsx, System.DateTime Ngaydat, System.DateTime Ngaygiao, System.String Mamang, System.String Mamay, System.DateTime Ngaychay, System.Int32 Ca, System.Decimal Somet, System.Decimal Sokg, System.DateTime Ngaytao, System.String Nguoitao, System.DateTime Ngaysua, System.String Nguoisua, System.Decimal Sometdukien, System.Decimal Sokgdukien, System.Int32 Soluong, System.Int32 Sldukien, System.Int32 Tgdukien)
 		{
 			bool toReturn = false;
 			using(DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -674,6 +844,16 @@ namespace GD.BBPH.BLL
 					_KehoachthoiEntity.Ngaysua = Ngaysua;
 					
 					_KehoachthoiEntity.Nguoisua = Nguoisua;
+					
+					_KehoachthoiEntity.Sometdukien = Sometdukien;
+					
+					_KehoachthoiEntity.Sokgdukien = Sokgdukien;
+					
+					_KehoachthoiEntity.Soluong = Soluong;
+					
+					_KehoachthoiEntity.Sldukien = Sldukien;
+					
+					_KehoachthoiEntity.Tgdukien = Tgdukien;
 						
 
 					adapter.SaveEntity(_KehoachthoiEntity, true);
@@ -923,6 +1103,86 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(KehoachthoiFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("KehoachthoiEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteBySometdukien(System.Decimal Sometdukien)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Sometdukien == Sometdukien);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("KehoachthoiEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteBySokgdukien(System.Decimal Sokgdukien)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Sokgdukien == Sokgdukien);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("KehoachthoiEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteBySoluong(System.Int32 Soluong)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Soluong == Soluong);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("KehoachthoiEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteBySldukien(System.Int32 Sldukien)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Sldukien == Sldukien);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				toReturn = adapter.DeleteEntitiesDirectly("KehoachthoiEntity", filter);
+			}
+			return toReturn;
+		}		
+		
+		public int DeleteByTgdukien(System.Int32 Tgdukien)
+		{
+			int toReturn = 0;
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Tgdukien == Tgdukien);
 			filter.PredicateExpression.Add(_PredicateExpression);
 			
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
@@ -1439,6 +1699,176 @@ namespace GD.BBPH.BLL
 			
 			IPredicateExpression _PredicateExpression = new PredicateExpression();
 			_PredicateExpression.Add(KehoachthoiFields.Nguoisua == Nguoisua);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_KehoachthoiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectBySometdukien(System.Decimal Sometdukien)
+		{
+			EntityCollection _KehoachthoiCollection = new EntityCollection(new KehoachthoiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Sometdukien == Sometdukien);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_KehoachthoiCollection, filter, 0, null);
+			}
+			return _KehoachthoiCollection;
+		}
+		// Return DataTable
+		public DataTable SelectBySometdukienRDT(System.Decimal Sometdukien)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _KehoachthoiCollection = new EntityCollection(new KehoachthoiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Sometdukien == Sometdukien);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_KehoachthoiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectBySokgdukien(System.Decimal Sokgdukien)
+		{
+			EntityCollection _KehoachthoiCollection = new EntityCollection(new KehoachthoiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Sokgdukien == Sokgdukien);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_KehoachthoiCollection, filter, 0, null);
+			}
+			return _KehoachthoiCollection;
+		}
+		// Return DataTable
+		public DataTable SelectBySokgdukienRDT(System.Decimal Sokgdukien)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _KehoachthoiCollection = new EntityCollection(new KehoachthoiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Sokgdukien == Sokgdukien);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_KehoachthoiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectBySoluong(System.Int32 Soluong)
+		{
+			EntityCollection _KehoachthoiCollection = new EntityCollection(new KehoachthoiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Soluong == Soluong);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_KehoachthoiCollection, filter, 0, null);
+			}
+			return _KehoachthoiCollection;
+		}
+		// Return DataTable
+		public DataTable SelectBySoluongRDT(System.Int32 Soluong)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _KehoachthoiCollection = new EntityCollection(new KehoachthoiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Soluong == Soluong);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_KehoachthoiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectBySldukien(System.Int32 Sldukien)
+		{
+			EntityCollection _KehoachthoiCollection = new EntityCollection(new KehoachthoiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Sldukien == Sldukien);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_KehoachthoiCollection, filter, 0, null);
+			}
+			return _KehoachthoiCollection;
+		}
+		// Return DataTable
+		public DataTable SelectBySldukienRDT(System.Int32 Sldukien)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _KehoachthoiCollection = new EntityCollection(new KehoachthoiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Sldukien == Sldukien);
+			filter.PredicateExpression.Add(_PredicateExpression);
+
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchTypedList(_KehoachthoiCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+			}
+			return toReturn;
+		}
+		
+		// Return EntityCollection
+		public EntityCollection SelectByTgdukien(System.Int32 Tgdukien)
+		{
+			EntityCollection _KehoachthoiCollection = new EntityCollection(new KehoachthoiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Tgdukien == Tgdukien);
+			filter.PredicateExpression.Add(_PredicateExpression);
+			
+			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+			{
+				adapter.FetchEntityCollection(_KehoachthoiCollection, filter, 0, null);
+			}
+			return _KehoachthoiCollection;
+		}
+		// Return DataTable
+		public DataTable SelectByTgdukienRDT(System.Int32 Tgdukien)
+		{
+			DataTable toReturn = new DataTable();
+			EntityCollection _KehoachthoiCollection = new EntityCollection(new KehoachthoiEntityFactory());
+			RelationPredicateBucket filter = new RelationPredicateBucket();
+			
+			IPredicateExpression _PredicateExpression = new PredicateExpression();
+			_PredicateExpression.Add(KehoachthoiFields.Tgdukien == Tgdukien);
 			filter.PredicateExpression.Add(_PredicateExpression);
 
 			using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())

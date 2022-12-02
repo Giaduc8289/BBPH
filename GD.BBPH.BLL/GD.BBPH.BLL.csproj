@@ -156,6 +156,7 @@
     <Compile Include="ManagerBase\LenhsanxuatManagerBase.cs" />
     <Compile Include="ManagerBase\LogbackupManagerBase.cs" />
     <Compile Include="ManagerBase\MangcuahangManagerBase.cs" />
+    <Compile Include="ManagerBase\MangtheolenhManagerBase.cs" />
     <Compile Include="ManagerBase\MaucuahangManagerBase.cs" />
     <Compile Include="ManagerBase\MenuManagerBase.cs" />
     <Compile Include="ManagerBase\MenuroleManagerBase.cs" />
