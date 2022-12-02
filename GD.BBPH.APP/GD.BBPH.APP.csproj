@@ -1283,6 +1283,7 @@
     <Content Include="XMLCONFIG\FRM_KQHOANTHIENCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOI.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOICHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHSANXUAT_DIEUDO.xml" />
     <Content Include="XMLCONFIG\FRM_LENHSANXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDONHAPXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDOXUATKHO.xml" />

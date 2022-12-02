@@ -47,7 +47,7 @@ namespace GD.BBPH.LIB
                 ,"Thoigianlencuon"
                 //KQhoanthienchitiet
                 ,"Thoigianlenhacuon", "Ketquatui"
-
+                ,"Catrong", "Thoigiantrong"
         };
 
         //-----Danh sách các cột số thập phân
@@ -80,6 +80,7 @@ namespace GD.BBPH.LIB
             "Ngaychungtu", "Ngayhachtoan", "Ngaydat", "Ngaygiao", "Ngaychay", "Ngay", "Ngayapdung", "Ngaymarket", "Ngayha", "Ngaynhap"
                 , "Ngayhoanthanh", "Ngaycuoink", "Ngaytrang", "Ngayin1", "Ngayin2", "Ngayxuat", "Ngaykiemke", "Ngaydieuchuyen"
                 , "Ngaybaogia", "Ngayhieuluc", "Ngayhoadon", "Ngayctkt"
+                , "Ngayphatlenh", "Ngaybatdausx", "Ngayhoanthanhsx"
         };
 
         public static DataTable RebindRotator(string path)
@@ -391,7 +392,7 @@ namespace GD.BBPH.LIB
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
                                               + "<Caption>" + dv[i]["headerText"].ToString() + "</Caption>"
                                               + "<DataMember>" + dv[i]["name"].ToString() + "</DataMember>"
-                                              + "<FormatString>dd/MM/yyyy</FormatString>"
+                                              + "<FormatString>dd/MM/yy</FormatString>"
                                               + "<Key>" + dv[i]["name"].ToString() + "</Key>"
                                                + "<Width>" + dv[i]["Width"].ToString() + "</Width>"
                                               + "<Position>" + i + "</Position></Column" + i + ">";
@@ -600,7 +601,7 @@ namespace GD.BBPH.LIB
                     CCollection = CCollection + "<Column" + i + " ID='" + dv[i]["name"].ToString() + "'>"
                                               + "<Caption>" + dv[i]["headerText"].ToString() + "</Caption>"
                                               + "<DataMember>" + dv[i]["name"].ToString() + "</DataMember>"
-                                              + "<FormatString>dd/MM/yyyy</FormatString>"
+                                              + "<FormatString>dd/MM/yy</FormatString>"
                                               + "<Key>" + dv[i]["name"].ToString() + "</Key>"
                                                + "<Width>" + dv[i]["Width"].ToString() + "</Width>"
                                               + "<Position>" + i + "</Position></Column" + i + ">";
