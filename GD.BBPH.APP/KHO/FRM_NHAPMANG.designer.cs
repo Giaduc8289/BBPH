@@ -67,6 +67,7 @@
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.txt_MAKHO = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
+            this.btn_SUADONG = new GD.BBPH.CONTROL.BUTTON();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -124,6 +125,7 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.btn_SUADONG);
             this.uiPanel1Container.Controls.Add(this.chk_CUONDO);
             this.uiPanel1Container.Controls.Add(this.label2);
             this.uiPanel1Container.Controls.Add(this.txt_SOKG);
@@ -569,6 +571,20 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã kho";
             // 
+            // btn_SUADONG
+            // 
+            this.btn_SUADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_SUADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_SUADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_SUADONG.Enabled = false;
+            this.btn_SUADONG.Location = new System.Drawing.Point(221, 155);
+            this.btn_SUADONG.Name = "btn_SUADONG";
+            this.btn_SUADONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_SUADONG.TabIndex = 274;
+            this.btn_SUADONG.Text = "Sửa dòng";
+            this.btn_SUADONG.UseVisualStyleBackColor = true;
+            this.btn_SUADONG.Click += new System.EventHandler(this.btn_SUADONG_Click);
+            // 
             // FRM_NHAPMANG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -631,5 +647,6 @@
         private CONTROL.TEXTBOXNUMBER txt_SOM;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chk_CUONDO;
+        private CONTROL.BUTTON btn_SUADONG;
     }
 }

@@ -59,6 +59,7 @@
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
+            this.btn_SUADONG = new GD.BBPH.CONTROL.BUTTON();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -116,6 +117,7 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.btn_SUADONG);
             this.uiPanel1Container.Controls.Add(this.txt_SOLUONG);
             this.uiPanel1Container.Controls.Add(this.txt_TENLYDO);
             this.uiPanel1Container.Controls.Add(this.label6);
@@ -472,6 +474,20 @@
             this.label21.TabIndex = 120;
             this.label21.Text = "Ngày nhập";
             // 
+            // btn_SUADONG
+            // 
+            this.btn_SUADONG.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_SUADONG.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_SUADONG.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_SUADONG.Enabled = false;
+            this.btn_SUADONG.Location = new System.Drawing.Point(212, 150);
+            this.btn_SUADONG.Name = "btn_SUADONG";
+            this.btn_SUADONG.Size = new System.Drawing.Size(95, 23);
+            this.btn_SUADONG.TabIndex = 275;
+            this.btn_SUADONG.Text = "Sửa dòng";
+            this.btn_SUADONG.UseVisualStyleBackColor = true;
+            this.btn_SUADONG.Click += new System.EventHandler(this.btn_SUADONG_Click);
+            // 
             // FRM_NHAPKHONGUYENLIEU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,5 +542,6 @@
         private CONTROL.TEXTBOX txt_TENKHO;
         private CONTROL.TEXTBOX txt_TENLYDO;
         private CONTROL.TEXTBOXNUMBER txt_SOLUONG;
+        private CONTROL.BUTTON btn_SUADONG;
     }
 }
