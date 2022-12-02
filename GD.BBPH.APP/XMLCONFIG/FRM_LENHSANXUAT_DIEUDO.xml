@@ -35,22 +35,22 @@
     <headerText>Số lệnh SX</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>60</Width>
+    <Width>65</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
     <name>Ngayphatlenh</name>
-    <headerText>Ngày phát lệnh</headerText>
+    <headerText>Ngày phát</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>65</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>2</value>
     <name>Ngaybatdausx</name>
-    <headerText>Ngày bắt đầu SX</headerText>
+    <headerText>Ngày bắt đầu</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -59,7 +59,7 @@
   <viewgrid>
     <value>2</value>
     <name>Ngayhoanthanhsx</name>
-    <headerText>Ngày hoàn thành SX</headerText>
+    <headerText>Ngày hoàn thành</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
@@ -71,7 +71,7 @@
     <headerText>Mã đơn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>50</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -125,7 +125,7 @@
     <headerText>Mã sp</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -143,7 +143,7 @@
     <headerText>Số lượng</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -152,7 +152,7 @@
     <headerText>Ngày giao</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
+    <Width>65</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>

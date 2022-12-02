@@ -67,17 +67,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Congsuat</name>
-    <headerText>Congsuat</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Congsuattrong</name>
-    <headerText>Congsuattrong</headerText>
+    <name>Thoigiantrong</name>
+    <headerText>Thoigiantrong</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>
