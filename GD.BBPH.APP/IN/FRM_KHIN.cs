@@ -40,7 +40,7 @@ namespace GD.BBPH.APP.IN
         private decimal Tongnhucauin = 0, LuuTongnhucauin = 0, Tongsongayvuot = 0;
         private DataTable DT_Nhucauin = new DataTable(), DT_DGKQ = new DataTable(), DT_DGKQ_CX = new DataTable();
         Int32 phuongan = 0, Socatrongngay = 0;
-        private DataTable DT_DMMANH = new DataTable(), DT_KEHOACH_FULL = new DataTable(), DT_KEHOACH_KQ = new DataTable();
+        private DataTable DT_HANG = new DataTable(), DT_KEHOACH_FULL = new DataTable(), DT_KEHOACH_KQ = new DataTable();
         private DateTime start = new DateTime();
         private DataTable DT_CSMAYIN = new DataTable();
 
@@ -78,12 +78,8 @@ namespace GD.BBPH.APP.IN
                         }
 
                         //Socatrongngay = Convert.ToInt32((Convert.ToInt32(LIB.Procedures.Laygiatrithamso("Socongnhanin"))-4)/2);
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("THOI"); // LIB.SESSION_START.DT_DMMAY.Select("",DmmayFields.Madm.Name).CopyToDataTable();
-                        //DT_DMMANH = LIB.SESSION_START.DT_DMMANH;
-                        ////GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(DT_LENHSANXUAT, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KHIN.xml");
-
-                        //DT_DMHANGHOA = LIB.SESSION_START.DT_DMHANGHOA;
-                        //DT_DONDATHANGCHITIET = LIB.SESSION_START.DT_DONDATHANGCHITIET;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("IN"); 
+                        DT_HANG = LIB.SESSION_START.DM_HANG;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -134,7 +130,7 @@ namespace GD.BBPH.APP.IN
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_XOA, btn_XOA.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_KHOIPHUC, btn_KHOIPHUC.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
-            GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LENHSANXUAT.xml", GRID_LENHSANXUAT, uiPanel0Container);
+            GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LENHSANXUAT_DIEUDO.xml", GRID_LENHSANXUAT, uiPanel0Container);
             //GRID_LENHSANXUAT.RootTable.Groups.Add(GRID_LENHSANXUAT.Tables[0].Columns[KehoachinFields.Thang.Name]);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_LENHSANXUAT);
@@ -159,14 +155,12 @@ namespace GD.BBPH.APP.IN
 
                     txt_MADONHANG.Text = _Rowview.Row[LenhsanxuatFields.Madon.Name].ToString();
                     txt_TENKHACH.Text = _Rowview.Row[LenhsanxuatFields.Tenkhach.Name].ToString();
-                    txt_MAHANG.Text = _Rowview.Row[LenhsanxuatFields.Masp.Name].ToString();
-                    //txt_MAUIN.Text = _Rowview.Row[LenhsanxuatFields.Mauin.Name].ToString();
-                    //txt_MAMANH.Text = _Rowview.Row[LenhsanxuatFields.Mamanh.Name].ToString();
+                    txt_MASANPHAM.Text = _Rowview.Row[LenhsanxuatFields.Masp.Name].ToString();
                     txt_NGAYGIAO.Text = _Rowview.Row[LenhsanxuatFields.Ngaygiao.Name].ToString();
                     try { txt_SOLUONG.Text = double.Parse(_Rowview.Row[LenhsanxuatFields.Soluong.Name].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN")); }
                     catch { }
 
-                    //txt_MAMANH_Validating(new object(), new CancelEventArgs());
+                    txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
 
                     SHOWGRID(MAHIEU_PK);
                 }
@@ -216,9 +210,9 @@ namespace GD.BBPH.APP.IN
                     {
                         Decimal _tocdo = 0, _congsuat = 0, _daitui = 0;
                         int _sohinh = 0;
-                        _tocdo = LIB.Procedures.fTinhtocdomay(dr[DmmayFields.Mamay.Name].ToString(), txt_MAHANG.Text);
+                        _tocdo = LIB.Procedures.fTinhtocdomay(dr[DmmayFields.Mamay.Name].ToString(), txt_MASANPHAM.Text);
                         _congsuat = _tocdo * 60 * 12;   //-----Công suất của 1 ca (m/ca)
-                        DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(txt_MAHANG.Text);
+                        DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(txt_MASANPHAM.Text);
                         _sohinh = Convert.ToInt32(_DmhangEntity.Sohinh);
                         _daitui = Convert.ToDecimal(_DmhangEntity.Dai);
                         _congsuat = _congsuat * 1000 / _daitui * _sohinh;   //-----Công suất của 1 ca (túi/ca)
@@ -230,7 +224,7 @@ namespace GD.BBPH.APP.IN
             }
             #endregion
 
-            #region Ke hoach san xuat soi theo loai soi
+            #region Ke hoach san xuat
             Decimal _tongcongsuat = 0;
             DataTable dtKH = new KehoachinManager().SelectBySolenhsxRDT(MAHIEU_PK);
             if (dtKH.Rows.Count > 0)
@@ -1196,35 +1190,36 @@ namespace GD.BBPH.APP.IN
         }
 
         #region Validate
-        private void txt_MAMANH_Validating(object sender, CancelEventArgs e)
+        private void txt_MASANPHAM_Validating(object sender, CancelEventArgs e)
         {
-            //_RowViewSelect = null;
-            //if (string.IsNullOrEmpty(txt_MAMANH.Text.Trim()) || DT_DMMANH == null || DT_DMMANH.Rows.Count == 0) return;
-            //string Str_MASIEUTHI = txt_MAMANH.Text.Trim().ToUpper();
-            //_RowViewSelect = checkmaManh(Str_MASIEUTHI, DT_DMMANH);
-            //if (_RowViewSelect == null)
-            //{
-            //    ListviewJanus _frm_SingerRows_Select =
-            //        new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMMANH.xml",
-            //            DT_DMMANH, DanhmucmanhFields.Mahieu.Name, Str_MASIEUTHI);
-            //    _frm_SingerRows_Select.ShowDialog();
-            //    if (_frm_SingerRows_Select._RowViewSelect == null) return;
-            //    _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-            //    txt_MAMANH.Text = _RowViewSelect[DanhmucmanhFields.Mahieu.Name].ToString();
-            //    txt_TENMANH.Text = _RowViewSelect[DanhmucmanhFields.Tenhieu.Name].ToString();
-            //}
-            //else
-            //    txt_TENMANH.Text = _RowViewSelect[DanhmucmanhFields.Tenhieu.Name].ToString();
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_MASANPHAM.Text.Trim()) || DT_HANG == null || DT_HANG.Rows.Count == 0) return;
+            string _str_MACANTIM = txt_MASANPHAM.Text.Trim().ToUpper();
+            _RowViewSelect = new DmhangManager().CheckMa(_str_MACANTIM, DT_HANG);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMHANG.xml",
+                        DT_HANG, DmhangFields.Masp.Name, _str_MACANTIM);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_MASANPHAM.Text = _RowViewSelect[DmhangFields.Masp.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
+            }
+            else
+            {
+                txt_TENSANPHAM.Text = _RowViewSelect[DmhangFields.Tensp.Name].ToString();
+            }
         }
-
-        //private DataRow checkmaManh(string masieuthi, DataTable dt)
-        //{
-        //    try
-        //    {
-        //        return dt.Select(DanhmucmanhFields.Mahieu.Name + "=" + "'" + masieuthi + "'").CopyToDataTable().Rows[0];
-        //    }
-        //    catch { return null; }
-        //}
+        private DataRow checkmaSanpham(string macantim, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(DmhangFields.Masp.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
         #endregion
 
         private void uiPanel0_Resize(object sender, EventArgs e)
