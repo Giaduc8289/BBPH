@@ -34,6 +34,7 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.pne_DSMANG = new System.Windows.Forms.Panel();
             this.txt_TENKHACH = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MADONCHITIET = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MASP = new GD.BBPH.CONTROL.TEXTBOX();
@@ -123,6 +124,7 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.pne_DSMANG);
             this.uiPanel1Container.Controls.Add(this.txt_TENKHACH);
             this.uiPanel1Container.Controls.Add(this.txt_MADONCHITIET);
             this.uiPanel1Container.Controls.Add(this.txt_MASP);
@@ -159,7 +161,17 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(685, 535);
             this.uiPanel1Container.TabIndex = 0;
-            this.uiPanel1Container.Click += new System.EventHandler(this.uiPanel1Container_Click);
+            // 
+            // pne_DSMANG
+            // 
+            this.pne_DSMANG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pne_DSMANG.Location = new System.Drawing.Point(17, 232);
+            this.pne_DSMANG.Margin = new System.Windows.Forms.Padding(2);
+            this.pne_DSMANG.Name = "pne_DSMANG";
+            this.pne_DSMANG.Size = new System.Drawing.Size(481, 150);
+            this.pne_DSMANG.TabIndex = 198;
             // 
             // txt_TENKHACH
             // 
@@ -175,6 +187,7 @@
             this.txt_TENKHACH.Regular_Expression = null;
             this.txt_TENKHACH.Size = new System.Drawing.Size(208, 20);
             this.txt_TENKHACH.TabIndex = 7;
+            this.txt_TENKHACH.TabStop = false;
             // 
             // txt_MADONCHITIET
             // 
@@ -221,6 +234,7 @@
             this.txt_TENSP.Regular_Expression = null;
             this.txt_TENSP.Size = new System.Drawing.Size(208, 20);
             this.txt_TENSP.TabIndex = 9;
+            this.txt_TENSP.TabStop = false;
             // 
             // txt_MAKHACH
             // 
@@ -236,6 +250,7 @@
             this.txt_MAKHACH.Regular_Expression = null;
             this.txt_MAKHACH.Size = new System.Drawing.Size(98, 20);
             this.txt_MAKHACH.TabIndex = 6;
+            this.txt_MAKHACH.TabStop = false;
             // 
             // label10
             // 
@@ -334,6 +349,7 @@
             this.txt_NGAYDAT.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txt_NGAYDAT.Size = new System.Drawing.Size(109, 20);
             this.txt_NGAYDAT.TabIndex = 5;
+            this.txt_NGAYDAT.TabStop = false;
             this.txt_NGAYDAT.ValidatingType = typeof(System.DateTime);
             // 
             // label4
@@ -405,9 +421,10 @@
             // btn_Thoat
             // 
             this.btn_Thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_Thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_Thoat.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(423, 456);
+            this.btn_Thoat.Location = new System.Drawing.Point(423, 500);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
             this.btn_Thoat.TabIndex = 18;
@@ -418,9 +435,10 @@
             // btn_KHOIPHUC
             // 
             this.btn_KHOIPHUC.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_KHOIPHUC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_KHOIPHUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(176, 456);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(176, 500);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
             this.btn_KHOIPHUC.TabIndex = 15;
@@ -431,9 +449,10 @@
             // btn_LUULAI
             // 
             this.btn_LUULAI.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_LUULAI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_LUULAI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(16, 456);
+            this.btn_LUULAI.Location = new System.Drawing.Point(16, 500);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
             this.btn_LUULAI.TabIndex = 13;
@@ -444,9 +463,10 @@
             // btn_XOA
             // 
             this.btn_XOA.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_XOA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_XOA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(95, 456);
+            this.btn_XOA.Location = new System.Drawing.Point(95, 500);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
             this.btn_XOA.TabIndex = 14;
@@ -457,9 +477,10 @@
             // btn_THEMMOI
             // 
             this.btn_THEMMOI.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_THEMMOI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_THEMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(341, 456);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(341, 500);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
             this.btn_THEMMOI.TabIndex = 17;
@@ -470,9 +491,10 @@
             // btn_SUA
             // 
             this.btn_SUA.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_SUA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_SUA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(260, 456);
+            this.btn_SUA.Location = new System.Drawing.Point(260, 500);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
             this.btn_SUA.TabIndex = 16;
@@ -588,5 +610,6 @@
         private CONTROL.TEXTBOX txt_MAKHACH;
         private CONTROL.TEXTBOX txt_MADONCHITIET;
         protected internal CONTROL.LABEL label8;
+        private System.Windows.Forms.Panel pne_DSMANG;
     }
 }
