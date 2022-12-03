@@ -19,5 +19,3 @@ As
 GO
 
 Exec Danhsachlocmangtheosp  '12/01/2022','Sp 1566'
-
-select * from Mangtheolenh
