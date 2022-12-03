@@ -106,7 +106,7 @@
             this.btn_XOA = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
-            this.txt_SOLSX = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_SOLENHSX = new GD.BBPH.CONTROL.TEXTBOX();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
@@ -239,7 +239,7 @@
             this.uiPanel1Container.Controls.Add(this.btn_XOA);
             this.uiPanel1Container.Controls.Add(this.btn_THEMMOI);
             this.uiPanel1Container.Controls.Add(this.btn_SUA);
-            this.uiPanel1Container.Controls.Add(this.txt_SOLSX);
+            this.uiPanel1Container.Controls.Add(this.txt_SOLENHSX);
             this.uiPanel1Container.Controls.Add(this.label21);
             this.uiPanel1Container.Controls.Add(this.txt_MAMAY);
             this.uiPanel1Container.Controls.Add(this.label22);
@@ -1119,28 +1119,28 @@
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
             // 
-            // txt_SOLSX
+            // txt_SOLENHSX
             // 
-            this.txt_SOLSX.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOLSX.BannerText = null;
-            this.txt_SOLSX.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOLSX.FormNametoShow = "";
-            this.txt_SOLSX.Is_DateTime = false;
-            this.txt_SOLSX.IsShowForm = false;
-            this.txt_SOLSX.Location = new System.Drawing.Point(94, 84);
-            this.txt_SOLSX.Name = "txt_SOLSX";
-            this.txt_SOLSX.Regular_Expression = null;
-            this.txt_SOLSX.Size = new System.Drawing.Size(74, 20);
-            this.txt_SOLSX.TabIndex = 3;
+            this.txt_SOLENHSX.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOLENHSX.BannerText = null;
+            this.txt_SOLENHSX.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOLENHSX.FormNametoShow = "";
+            this.txt_SOLENHSX.Is_DateTime = false;
+            this.txt_SOLENHSX.IsShowForm = false;
+            this.txt_SOLENHSX.Location = new System.Drawing.Point(94, 84);
+            this.txt_SOLENHSX.Name = "txt_SOLENHSX";
+            this.txt_SOLENHSX.Regular_Expression = null;
+            this.txt_SOLENHSX.Size = new System.Drawing.Size(74, 20);
+            this.txt_SOLENHSX.TabIndex = 3;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(12, 86);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(58, 13);
+            this.label21.Size = new System.Drawing.Size(74, 13);
             this.label21.TabIndex = 120;
-            this.label21.Text = "Lệnh ghép";
+            this.label21.Text = "Lệnh sản xuất";
             // 
             // txt_MAMAY
             // 
@@ -1202,7 +1202,7 @@
         private GD.BBPH.CONTROL.BUTTON btn_THEMMOI;
         private GD.BBPH.CONTROL.BUTTON btn_SUA;
         private GD.BBPH.CONTROL.BUTTON btn_Thoat;
-        private CONTROL.TEXTBOX txt_SOLSX;
+        private CONTROL.TEXTBOX txt_SOLENHSX;
         private CONTROL.LABEL label21;
         private CONTROL.TEXTBOX txt_MAMAY;
         private CONTROL.LABEL label22;

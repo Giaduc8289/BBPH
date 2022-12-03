@@ -27,7 +27,7 @@ namespace GD.BBPH.BLL
 		{
 			// Nothing for now.
 		}
-        public DataTable SelectByNgayCaLenhtuaRDT(System.DateTime Ngay, System.String Ca, System.String Lenhtua )
+        public DataTable SelectByNgayCaLenhtuaRDT(System.DateTime Ngay, System.String Ca, System.String Solenhsx)
         {
             DataTable toReturn = new DataTable();
             EntityCollection _KetquatuaCollection = new EntityCollection(new KetquatuaEntityFactory());
@@ -36,7 +36,7 @@ namespace GD.BBPH.BLL
             IPredicateExpression _PredicateExpression = new PredicateExpression();
             _PredicateExpression.Add(KetquatuaFields.Ngay == Ngay);
             _PredicateExpression.Add(KetquatuaFields.Ca == Ca);
-            _PredicateExpression.Add(KetquatuaFields.Lenhtua == Lenhtua);
+            _PredicateExpression.Add(KetquatuaFields.Solenhsx == Solenhsx);
             filter.PredicateExpression.Add(_PredicateExpression);
 
             using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
