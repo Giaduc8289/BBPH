@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>= "Số: " + First(Fields!Sobaogia.Value, "Inbaogia")</Value>
+                <Value EvaluationMode="Constant">Số:</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontWeight>Normal</FontWeight>
@@ -511,7 +511,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>Inbaogia</DataSetName>
+        <DataSetName>Dondathang</DataSetName>
         <Top>2.86034cm</Top>
         <Left>0cm</Left>
         <Height>2.12478cm</Height>
@@ -1477,7 +1477,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="Inbaogia">
+    <DataSet Name="Dondathang">
       <Query>
         <DataSourceName>DataKDBB</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -1871,6 +1871,22 @@
           <DataField>Dinhmuc</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Thanhtien">
+          <DataField>Thanhtien</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Heso">
+          <DataField>Heso</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tienluong">
+          <DataField>Tienluong</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Tonkhotoithieu">
+          <DataField>Tonkhotoithieu</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataBBPH</rd:DataSetName>
@@ -1986,7 +2002,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataBBPH</rd:DataSetName>
-        <rd:SchemaPath>D:\BBPH\GD.BBPH.APP\RDLC\DataBBPH.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Dev\BBPH\GD.BBPH.APP\RDLC\DataBBPH.xsd</rd:SchemaPath>
         <rd:TableName>Thamso</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
