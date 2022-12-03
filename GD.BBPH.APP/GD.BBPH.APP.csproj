@@ -1105,6 +1105,7 @@
     <EmbeddedResource Include="RDLC\BAOCAOTONGHOPLUONGTOIN.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOLUONGTOCHIA.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOLUONGTOTUA.rdlc" />
+    <EmbeddedResource Include="RDLC\DONHANG.rdlc" />
     <EmbeddedResource Include="RDLC\BAOGIA.rdlc" />
     <EmbeddedResource Include="RDLC\KQHOANTHIENCHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOLUONGTOIN.rdlc" />
