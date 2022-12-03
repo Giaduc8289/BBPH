@@ -545,22 +545,22 @@ namespace GD.BBPH.APP.IN
                 //dtKehoachin.Columns.Add(KehoachinFields.Id.Name, Type.GetType("System.Int64"));
                 dtKehoachin.Columns.Add(KehoachinFields.Ca.Name, Type.GetType("System.Int32"));
                 dtKehoachin.Columns.Add(KehoachinFields.Mamay.Name, Type.GetType("System.String"));
-                dtKehoachin.Columns.Add(KehoachinFields.Solenhsx.Name, Type.GetType("System.Int64"));
-                dtKehoachin.Columns.Add(KehoachinFields.Sokg.Name, Type.GetType("System.Int32"));
+                dtKehoachin.Columns.Add(KehoachinFields.Solenhsx.Name, Type.GetType("System.String"));
+                dtKehoachin.Columns.Add(KehoachinFields.Somet.Name, Type.GetType("System.Int32"));
                 dtKehoachin.Columns.Add(DonhangDFields.Masp.Name, Type.GetType("System.String"));
                 dtKehoachin.Columns.Add(DmhangFields.Makhach.Name, Type.GetType("System.String"));
 
-                DT_Nhucauin = LIB.Procedures.Nhucaulapkehoachintheodondathangchitiet(Tungay, Denngay, ncdaphatlenh);
+                DT_Nhucauin = LIB.Procedures.Nhucaulapkehoachin(Tungay, Denngay, ncdaphatlenh);
                 DT_Nhucauin.Columns.Add("Dasanxuat", Type.GetType("System.Decimal"));
                 foreach (DataRow dr in DT_Nhucauin.Rows)
                 {
                     dr["Dasanxuat"] = 0;
-                    Tongnhucauin += Convert.ToDecimal(dr["Soluong"].ToString()) > 0 ? Convert.ToDecimal(dr["Soluong"].ToString()) : 0;
+                    Tongnhucauin += Convert.ToDecimal(dr["Somet"].ToString()) > 0 ? Convert.ToDecimal(dr["Somet"].ToString()) : 0;
                 }
                 Tongsomay = DT_DMMAY_TEMP.Rows.Count;
                 Tongsoca = ((Denngay - Tungay).Days + 1) * 2;
-                //-----Tính công suất máy sợi cho từng loại sợi thuộc kế hoạch dệt
-                DT_CSMAYIN = LIB.Procedures.Congsuatmayinchotungmauin(Tungay, Denngay);
+                //-----Tính công suất máy cho từng mã sản phẩm thuộc kế hoạch
+                DT_CSMAYIN = LIB.Procedures.Congsuatmayinchotungsanpham(Tungay, Denngay);
                 //-----Kế hoạch in đã lập
                 dtKehoachdalap = LIB.Procedures.Kehoachindalap(Tungay, Denngay);// new KehoachinManager().SelectByCondition(Tungay, Denngay);
                 foreach (DataRow dr in dtKehoachdalap.Rows)
@@ -570,7 +570,7 @@ namespace GD.BBPH.APP.IN
                     drKhin[KehoachinFields.Ca.Name] = (Convert.ToDateTime(dr[KehoachinFields.Ngaychay.Name].ToString()) - Tungay).Days * 2 + Convert.ToInt32(dr[KehoachinFields.Ca.Name].ToString()) - 1;
                     drKhin[KehoachinFields.Mamay.Name] = dr[KehoachinFields.Mamay.Name];
                     drKhin[KehoachinFields.Solenhsx.Name] = dr[KehoachinFields.Solenhsx.Name];
-                    drKhin[KehoachinFields.Sokg.Name] = dr[KehoachinFields.Sokg.Name];
+                    drKhin[KehoachinFields.Somet.Name] = dr[KehoachinFields.Somet.Name];
                     drKhin[DonhangDFields.Masp.Name] = dr[DonhangDFields.Masp.Name];
                     drKhin[DmhangFields.Makhach.Name] = dr[DmhangFields.Makhach.Name];
                     dtKehoachin.Rows.Add(drKhin);

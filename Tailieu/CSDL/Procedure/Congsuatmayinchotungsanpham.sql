@@ -1,15 +1,17 @@
-﻿------------------------Chi tiết nhu cầu in-------------
-If Object_ID('dbo.Nhucaulapkehoachin','P') is not null
-	Drop Procedure dbo.Nhucaulapkehoachin;
+﻿------------------------Công suất máy in cho từng sản phẩm------------
+If Object_ID('dbo.Congsuatmayinchotungsanpham','P') is not null
+	Drop Procedure dbo.Congsuatmayinchotungsanpham;
 Go
-Create Procedure dbo.Nhucaulapkehoachin
-	@Tungay			DATETIME,
-	@Denngay		DATETIME,
-	@Daphatlenh		BIT
+Create Procedure dbo.Congsuatmayinchotungsanpham
+	@Tungay		DATETIME,
+	@Denngay	DATETIME
 With Encryption As
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
 	
+	DECLARE @v_columns	NVARCHAR(MAX), 
+			@v_sql		NVARCHAR(MAX)
+			
 	DECLARE @v_Ngaydauthang			DATE,
 			@v_Ngaycuoithang		DATE,
 			@v_Sothangxetnhucau		INT
@@ -37,14 +39,39 @@ With Encryption As
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao 
 		--, Soluong - Sometin*1000/Dai*Sohinh As Soluong
 		, Soluong/Sohinh*Dai/1000 - Sometdain As Somet
-	Into #Nhucau
+	Into #Nhucau1
 	From #Nhucau0
 	
 	--SELECT * FROM #Nhucau WHERE Soluong>0 ORDER BY Ngaygiao
-	SELECT * FROM #Nhucau WHERE Somet>0 ORDER BY Ngaygiao
+	SELECT * 
+	Into #Nhucau
+	FROM #Nhucau1 WHERE Somet>0 ORDER BY Ngaygiao
+
+
+
+	SELECT Mamay, Madm As Madongmay
+		, Masanpham, Makhach, Madonhangchitiet
+		, dbo.fTinhtocdomay(Mamay,Masanpham,'') As Congsuat
+	INTO #CsMay_Donchitiet
+	FROM (Select * From Dmmay Where Madm='IN')m 
+		,(Select DISTINCT Masanpham, Makhach, Madonhangchitiet
+					FROM #Nhucau) nc
+
+
+	SET @v_columns = N''
+	SELECT @v_columns += N', ' + QUOTENAME(Madonhangchitiet) FROM (SELECT Madonhangchitiet FROM #CsMay_Donchitiet GROUP BY Madonhangchitiet) AS x ORDER BY x.Madonhangchitiet
+	SET	@v_sql = N'Select Mamay,' 
+		+ STUFF(@v_columns,1, 2, '') 
+		+ ' From (Select Mamay, Madongmay, Madonhangchitiet, Congsuat From #CsMay_Donchitiet) As j '
+		+ ' PIVOT ('
+		+ ' SUM(Congsuat) FOR Madonhangchitiet IN ('
+		+ STUFF(REPLACE(@v_columns,', [',',['),1,1,'')
+		+ ') 
+		) As p Order by Madongmay'
+
+	EXEC sp_executesql @v_sql;
 	
 Go
 
-Exec Nhucaulapkehoachin '12/01/2022', '12/30/2022', 'TRUE'
-
+Exec Congsuatmayinchotungsanpham '12/03/2022', '12/31/2022'
 
