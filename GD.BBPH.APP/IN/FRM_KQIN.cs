@@ -32,7 +32,8 @@ namespace GD.BBPH.APP.IN
         private GD.BBPH.CONTROL.JGridEX GRID_KQINCHITIET = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "", MACHITIET="";
         private string MASP = "", CA="0";
-        private DataTable DT_DMMAY = new DataTable(), DT_LENHIN = new DataTable(), DT_DMSP = new DataTable(), DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable();
+        private DataTable DT_DMMAY = new DataTable(), DT_LENHIN = new DataTable(), DT_DMSP = new DataTable()
+                           , DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable(), DT_LENHSANXUAT = new DataTable();
         private bool ADDROW = false;
 
         
@@ -61,6 +62,7 @@ namespace GD.BBPH.APP.IN
 
                         DT_DMMAY = new DmmayManager().SelectByMadmRDT("IN");// LIB.SESSION_START.DT_DMMAY;
                         DT_DMSP = LIB.SESSION_START.DM_HANG;
+                        DT_LENHSANXUAT = LIB.SESSION_START.DT_LENHSANXUAT;
                         DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
                     }
                 };
@@ -164,7 +166,7 @@ namespace GD.BBPH.APP.IN
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[KetquainFields.Id.Name].ToString();
 
-                    txt_SOLENHSX.Text = _Rowview.Row[KetquainFields.Solenhsx.Name].ToString();
+                    txt_SOLENHSX_Validating(new object(), new CancelEventArgs());
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquainFields.Macongnhan.Name].ToString();
                     txt_TENCONGNHAN.Text = _Rowview.Row[KetquainFields.Tencongnhan.Name].ToString();
                     txt_MASP.Text = _Rowview.Row[KetquainFields.Masanpham.Name].ToString();
@@ -574,6 +576,41 @@ namespace GD.BBPH.APP.IN
         #endregion
 
         #region Validate
+        private void txt_SOLENHSX_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_SOLENHSX.Text.Trim()) || DT_LENHSANXUAT == null || DT_LENHSANXUAT.Rows.Count == 0) return;
+            string _str_MACANTIM = txt_SOLENHSX.Text.Trim().ToUpper();
+            _RowViewSelect = checklenhsx(_str_MACANTIM, DT_LENHSANXUAT);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LENHSANXUAT.xml",
+                        DT_LENHSANXUAT, LenhsanxuatFields.Solenhsx.Name, _str_MACANTIM);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_SOLENHSX.Text = _RowViewSelect[LenhsanxuatFields.Solenhsx.Name].ToString();
+                txt_SOMLSX.Text = _RowViewSelect[LenhsanxuatFields.Soluong.Name].ToString();
+                txt_MASP.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_MASP_Validating(new object(), new CancelEventArgs());
+            }
+            else
+            {
+                txt_SOMLSX.Text = _RowViewSelect[LenhsanxuatFields.Soluong.Name].ToString();
+                txt_MASP.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_MASP_Validating(new object(), new CancelEventArgs());
+            }
+        }
+        private DataRow checklenhsx(string macantim, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(LenhsanxuatFields.Solenhsx.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
+
         private void txt_MAMAY_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;

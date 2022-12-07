@@ -924,9 +924,11 @@
             this.txt_MASANPHAM.IsShowForm = false;
             this.txt_MASANPHAM.Location = new System.Drawing.Point(278, 84);
             this.txt_MASANPHAM.Name = "txt_MASANPHAM";
+            this.txt_MASANPHAM.ReadOnly = true;
             this.txt_MASANPHAM.Regular_Expression = null;
             this.txt_MASANPHAM.Size = new System.Drawing.Size(74, 20);
             this.txt_MASANPHAM.TabIndex = 5;
+            this.txt_MASANPHAM.TabStop = false;
             this.txt_MASANPHAM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MAHANG_KeyDown);
             this.txt_MASANPHAM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASANPHAM_Validating);
             // 
@@ -1064,6 +1066,7 @@
             this.txt_SOLENHSX.Regular_Expression = null;
             this.txt_SOLENHSX.Size = new System.Drawing.Size(74, 20);
             this.txt_SOLENHSX.TabIndex = 4;
+            this.txt_SOLENHSX.Validating += new System.ComponentModel.CancelEventHandler(this.txt_SOLENHSX_Validating);
             // 
             // label21
             // 
