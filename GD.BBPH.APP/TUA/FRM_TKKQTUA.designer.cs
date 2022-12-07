@@ -884,6 +884,7 @@
             this.txt_SOLENHSX.Regular_Expression = null;
             this.txt_SOLENHSX.Size = new System.Drawing.Size(84, 20);
             this.txt_SOLENHSX.TabIndex = 4;
+            this.txt_SOLENHSX.Validating += new System.ComponentModel.CancelEventHandler(this.txt_LENHSANXUAT_Validating);
             // 
             // label5
             // 

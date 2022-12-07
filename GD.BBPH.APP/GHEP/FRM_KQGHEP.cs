@@ -25,7 +25,7 @@ namespace GD.BBPH.APP.GHEP
         private KetquaghepManager _KetquaghepManager = new KetquaghepManager();
         private KetquaghepEntity _KetquaghepEntity = new KetquaghepEntity();
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-        private DataTable DT_KQGHEP = new DataTable(), DT_KQGHEP_CHITIET = new DataTable(), DT_KQGHEP_CHITIET_FILL = new DataTable();
+        private DataTable DT_KQGHEP = new DataTable(), DT_KQGHEP_CHITIET = new DataTable(), DT_KQGHEP_CHITIET_FILL = new DataTable(), DT_LENHSX = new DataTable();
         private BindingSource BS_KQGHEP = new BindingSource(), BS_KQGHEP_CHITIET = new BindingSource();
         private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_KQGHEP = new GD.BBPH.CONTROL.JGridEX();
@@ -62,6 +62,8 @@ namespace GD.BBPH.APP.GHEP
                         DT_DMMAY = new DmmayManager().SelectByMadmRDT("GH");// LIB.SESSION_START.DT_DMMAY;
                         DT_DMHANG = LIB.SESSION_START.DM_HANG;
                         DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
+                        DT_LENHSX = LIB.SESSION_START.DT_LENHSANXUAT;
+
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -784,6 +786,35 @@ namespace GD.BBPH.APP.GHEP
             txt_MATRUONGCA.Text = strMaTC;
             txt_TENTRUONGCA.Text = strTenTC;
         }
+        private void txt_LENHSANXUAT_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_SOLENHSX.Text.Trim()) || DT_LENHSX == null || DT_LENHSX.Rows.Count == 0) return;
+            string _str_MACANTIM = txt_SOLENHSX.Text.Trim().ToUpper();
+            _RowViewSelect = new LenhsanxuatManager().CheckMa(_str_MACANTIM, DT_LENHSX);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LENHSANXUAT.xml",
+                        DT_LENHSX, LenhsanxuatFields.Solenhsx.Name, _str_MACANTIM);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_SOLENHSX.Text = _RowViewSelect[LenhsanxuatFields.Solenhsx.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tenhang.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                Tinhtocdodinhmuc();
+                Tinhthoigianchuanbi();
+            }
+            else
+            {
+                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tenhang.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                Tinhtocdodinhmuc();
+                Tinhthoigianchuanbi();
+            }
+        }
+
         #endregion
 
         #region Shortcut Key
