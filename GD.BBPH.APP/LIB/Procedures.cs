@@ -2256,24 +2256,26 @@ namespace GD.BBPH.APP.LIB
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachxuatnguyenlieuchitiet", "Danhsachxuatnguyenlieuchitiet", myArr).Tables[0];
         }
 
-        public static DataTable Danhsachlocmangtheosp(DateTime Ngayphatlenh, string Masp)
+        public static DataTable Danhsachlocmangtheosp(DateTime Ngayphatlenh, string Masp, string SoLSX)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
             ListDictionary parameters = new ListDictionary();
             parameters.Add(new SqlParameter("@Ngayphatlenh", SqlDbType.NVarChar, 0), Ngayphatlenh);
             parameters.Add(new SqlParameter("@Masanpham", SqlDbType.NVarChar, 0), Masp);
+            parameters.Add(new SqlParameter("@Lenhsanxuat", SqlDbType.NVarChar, 0), SoLSX);
             DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
             parameters.CopyTo(myArr, 0);
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachlocmangtheosp", "Danhsachlocmangtheosp", myArr).Tables[0];
         }
 
-        public static DataTable Danhsachmangtuongtu(DateTime Ngayphatlenh, Decimal Doday, Decimal Rong)
+        public static DataTable Danhsachmangtuongtu(DateTime Ngayphatlenh, Decimal Doday, Decimal Rong, string Tenloaimang)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
             ListDictionary parameters = new ListDictionary();
             parameters.Add(new SqlParameter("@Ngayphatlenh", SqlDbType.NVarChar, 0), Ngayphatlenh);
             parameters.Add(new SqlParameter("@Doday", SqlDbType.Decimal, 0), Doday);
             parameters.Add(new SqlParameter("@Rong", SqlDbType.Decimal, 0), Rong);
+            parameters.Add(new SqlParameter("@Tenloaimang", SqlDbType.NVarChar, 0), Tenloaimang);
 
             DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
             parameters.CopyTo(myArr, 0);

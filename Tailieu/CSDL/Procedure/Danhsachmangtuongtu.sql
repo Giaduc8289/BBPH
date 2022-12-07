@@ -6,7 +6,8 @@ Go
 Create Procedure dbo.Danhsachmangtuongtu
 	@Ngayphatlenh		Date,
 	@Doday				Decimal (20,3),
-	@Rong				Decimal (20,3)
+	@Rong				Decimal (20,3),
+	@Tenloaimang		NVARCHAR(250)
 As
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
@@ -23,6 +24,7 @@ As
 	WHERE Doday = @Doday 
 		  And Rong - @Rong <= @v_Dungsaikho	
 		  And Rong - @Rong >= 0	
+		  And Tenloaimang = @Tenloaimang
 GO
 
-Exec Danhsachmangtuongtu  '12/01/2022', 85, 800
+Exec Danhsachmangtuongtu  '12/01/2022', 85, 800, 'MPET'
