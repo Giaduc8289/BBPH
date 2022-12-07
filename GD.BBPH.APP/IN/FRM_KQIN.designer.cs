@@ -377,9 +377,11 @@
             this.txt_SOMLSX.Location = new System.Drawing.Point(493, 166);
             this.txt_SOMLSX.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_SOMLSX.Name = "txt_SOMLSX";
+            this.txt_SOMLSX.ReadOnly = true;
             this.txt_SOMLSX.Regular_Expression = "";
             this.txt_SOMLSX.Size = new System.Drawing.Size(93, 20);
             this.txt_SOMLSX.TabIndex = 13;
+            this.txt_SOMLSX.TabStop = false;
             this.txt_SOMLSX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_SOMCAP
@@ -620,6 +622,7 @@
             this.txt_TENSP.IsShowForm = false;
             this.txt_TENSP.Location = new System.Drawing.Point(204, 138);
             this.txt_TENSP.Name = "txt_TENSP";
+            this.txt_TENSP.ReadOnly = true;
             this.txt_TENSP.Regular_Expression = null;
             this.txt_TENSP.Size = new System.Drawing.Size(192, 20);
             this.txt_TENSP.TabIndex = 10;
@@ -812,9 +815,11 @@
             this.txt_MASP.IsShowForm = false;
             this.txt_MASP.Location = new System.Drawing.Point(105, 138);
             this.txt_MASP.Name = "txt_MASP";
+            this.txt_MASP.ReadOnly = true;
             this.txt_MASP.Regular_Expression = null;
             this.txt_MASP.Size = new System.Drawing.Size(93, 20);
             this.txt_MASP.TabIndex = 9;
+            this.txt_MASP.TabStop = false;
             this.txt_MASP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MASP_KeyDown);
             this.txt_MASP.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MASP_Validating);
             // 
@@ -952,6 +957,7 @@
             this.txt_SOLENHSX.Regular_Expression = null;
             this.txt_SOLENHSX.Size = new System.Drawing.Size(93, 20);
             this.txt_SOLENHSX.TabIndex = 4;
+            this.txt_SOLENHSX.Validating += new System.ComponentModel.CancelEventHandler(this.txt_SOLENHSX_Validating);
             // 
             // label21
             // 

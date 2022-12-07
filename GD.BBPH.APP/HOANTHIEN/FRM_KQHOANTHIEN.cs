@@ -34,7 +34,8 @@ namespace GD.BBPH.APP.HOANTHIEN
         private string MASP = "", CA = "0";
         private bool ADDROW = false;
 
-        private DataTable DT_DMMAY = new DataTable(), DT_LENHTHOI = new DataTable(), DT_DMHANG = new DataTable(), DT_NHANVIEN = new DataTable(), DT_DMKHACH = new DataTable();
+        private DataTable DT_DMMAY = new DataTable(), DT_LENHTHOI = new DataTable(), DT_DMHANG = new DataTable(), DT_NHANVIEN = new DataTable()
+                        , DT_DMKHACH = new DataTable(), DT_LENHSANXUAT = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
@@ -61,6 +62,7 @@ namespace GD.BBPH.APP.HOANTHIEN
 
                         DT_DMMAY = new DmmayManager().SelectByMadmRDT("CA");// LIB.SESSION_START.DT_DMMAY;
                         DT_DMHANG = LIB.SESSION_START.DM_HANG;
+                        DT_LENHSANXUAT = LIB.SESSION_START.DT_LENHSANXUAT;
                         DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
                     }
                 };
@@ -624,6 +626,40 @@ namespace GD.BBPH.APP.HOANTHIEN
         #endregion
 
         #region Validate
+
+        private void txt_SOLENHSX_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_SOLENHSX.Text.Trim()) || DT_LENHSANXUAT == null || DT_LENHSANXUAT.Rows.Count == 0) return;
+            string _str_MACANTIM = txt_SOLENHSX.Text.Trim().ToUpper();
+            _RowViewSelect = checklenhsx(_str_MACANTIM, DT_LENHSANXUAT);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LENHSANXUAT.xml",
+                        DT_LENHSANXUAT, LenhsanxuatFields.Solenhsx.Name, _str_MACANTIM);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_SOLENHSX.Text = _RowViewSelect[LenhsanxuatFields.Solenhsx.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
+            }
+            else
+            {
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
+            }
+        }
+        private DataRow checklenhsx(string macantim, DataTable dt)
+        {
+            try
+            {
+                return dt.Select(LenhsanxuatFields.Solenhsx.Name + "=" + "'" + macantim + "'").CopyToDataTable().Rows[0];
+            }
+            catch { return null; }
+        }
+
         private void txt_MAMAY_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
