@@ -164,7 +164,7 @@ namespace GD.BBPH.APP.CHIA
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[KetquachiaFields.Id.Name].ToString();
 
-                    txt_LENH.Text = _Rowview.Row[KetquachiaFields.Lenh.Name].ToString();
+                    txt_SOLENHSX.Text = _Rowview.Row[KetquachiaFields.Solenhsx.Name].ToString();
                     txt_MAMAY.Text = _Rowview.Row[KetquachiaFields.Mamay.Name].ToString();
                     txt_MAMAY_Validating(new object(), new CancelEventArgs());
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquachiaFields.Macongnhan.Name].ToString();
@@ -236,7 +236,7 @@ namespace GD.BBPH.APP.CHIA
         {
             ADDROW = true;
             DataRow r_Detail = DT_KQCHIA_CHITIET_FILL.NewRow();
-            r_Detail[KetquachiaFields.Lenh.Name] = txt_LENH.Text;
+            r_Detail[KetquachiaFields.Solenhsx.Name] = txt_SOLENHSX.Text;
             r_Detail[KetquachiaFields.Macongnhan.Name] = txt_MACONGNHAN.Text;
             r_Detail[KetquachiaFields.Tencongnhan.Name] = txt_TENCONGNHAN.Text;
             r_Detail[KetquachiaFields.Masanpham.Name] = txt_MASANPHAM.Text;
@@ -345,7 +345,7 @@ namespace GD.BBPH.APP.CHIA
         }
         private void btn_SUADONG_Click(object sender, EventArgs e)
         {
-            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Lenh.Name].Value = txt_LENH.Text;
+            GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Solenhsx.Name].Value = txt_SOLENHSX.Text;
             GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Macongnhan.Name].Value = txt_MACONGNHAN.Text;
             GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Tencongnhan.Name].Value = txt_TENCONGNHAN.Text;
             GRID_KQCHIACHITIET.CurrentRow.Cells[KetquachiaFields.Masanpham.Name].Value = txt_MASANPHAM.Text;
@@ -424,7 +424,7 @@ namespace GD.BBPH.APP.CHIA
                 _KetquachiaEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
                 _KetquachiaEntity.Mamay = txt_MAMAY.Text.Trim();
                 _KetquachiaEntity.Tenmay = txt_TENMAY.Text.Trim();
-                _KetquachiaEntity.Lenh = _view.Row[KetquachiaFields.Lenh.Name].ToString();
+                _KetquachiaEntity.Solenhsx = _view.Row[KetquachiaFields.Solenhsx.Name].ToString();
                 _KetquachiaEntity.Macongnhan = _view.Row[KetquachiaFields.Macongnhan.Name].ToString();
                 _KetquachiaEntity.Tencongnhan = _view.Row[KetquachiaFields.Tencongnhan.Name].ToString();
                 _KetquachiaEntity.Masanpham = _view.Row[KetquachiaFields.Masanpham.Name].ToString();

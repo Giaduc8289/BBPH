@@ -84,7 +84,7 @@
             this.txt_MACONGNHAN = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_TENCONGNHAN = new GD.BBPH.CONTROL.TEXTBOX();
             this.label6 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_LENHTUA = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_SOLENHSX = new GD.BBPH.CONTROL.TEXTBOX();
             this.label5 = new GD.BBPH.CONTROL.LABEL();
             this.btn_XOADONG = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THEMDONG = new GD.BBPH.CONTROL.BUTTON();
@@ -210,7 +210,7 @@
             this.uiPanel1Container.Controls.Add(this.txt_MACONGNHAN);
             this.uiPanel1Container.Controls.Add(this.txt_TENCONGNHAN);
             this.uiPanel1Container.Controls.Add(this.label6);
-            this.uiPanel1Container.Controls.Add(this.txt_LENHTUA);
+            this.uiPanel1Container.Controls.Add(this.txt_SOLENHSX);
             this.uiPanel1Container.Controls.Add(this.label5);
             this.uiPanel1Container.Controls.Add(this.btn_XOADONG);
             this.uiPanel1Container.Controls.Add(this.btn_THEMDONG);
@@ -871,28 +871,28 @@
             this.label6.TabIndex = 255;
             this.label6.Text = "Công nhân";
             // 
-            // txt_LENHTUA
+            // txt_SOLENHSX
             // 
-            this.txt_LENHTUA.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_LENHTUA.BannerText = null;
-            this.txt_LENHTUA.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_LENHTUA.FormNametoShow = "";
-            this.txt_LENHTUA.Is_DateTime = false;
-            this.txt_LENHTUA.IsShowForm = false;
-            this.txt_LENHTUA.Location = new System.Drawing.Point(94, 74);
-            this.txt_LENHTUA.Name = "txt_LENHTUA";
-            this.txt_LENHTUA.Regular_Expression = null;
-            this.txt_LENHTUA.Size = new System.Drawing.Size(84, 20);
-            this.txt_LENHTUA.TabIndex = 4;
+            this.txt_SOLENHSX.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOLENHSX.BannerText = null;
+            this.txt_SOLENHSX.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOLENHSX.FormNametoShow = "";
+            this.txt_SOLENHSX.Is_DateTime = false;
+            this.txt_SOLENHSX.IsShowForm = false;
+            this.txt_SOLENHSX.Location = new System.Drawing.Point(94, 74);
+            this.txt_SOLENHSX.Name = "txt_SOLENHSX";
+            this.txt_SOLENHSX.Regular_Expression = null;
+            this.txt_SOLENHSX.Size = new System.Drawing.Size(84, 20);
+            this.txt_SOLENHSX.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(14, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(74, 13);
             this.label5.TabIndex = 252;
-            this.label5.Text = "Lệnh tua";
+            this.label5.Text = "Lệnh sản xuất";
             // 
             // btn_XOADONG
             // 
@@ -1153,7 +1153,7 @@
         private CONTROL.BUTTON btn_XOADONG;
         private CONTROL.BUTTON btn_THEMDONG;
         private System.Windows.Forms.Panel pne_CHITIET;
-        private CONTROL.TEXTBOX txt_LENHTUA;
+        private CONTROL.TEXTBOX txt_SOLENHSX;
         private CONTROL.LABEL label5;
         private CONTROL.LABEL label11;
         private CONTROL.LABEL label12;

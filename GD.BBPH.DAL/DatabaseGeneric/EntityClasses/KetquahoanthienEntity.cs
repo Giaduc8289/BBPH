@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, December 2, 2022 10:08:05 AM
+// Code is generated on: Saturday, December 3, 2022 11:01:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -479,9 +479,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Tenmay", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Lenhhoanthien", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Masanpham", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -576,6 +573,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Lydosuco", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Solenhsx", fieldHashtable);
 		}
 		#endregion
 
@@ -737,17 +737,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquahoanthienFieldIndex.Tenmay, true); }
 			set	{ SetValue((int)KetquahoanthienFieldIndex.Tenmay, value); }
-		}
-
-		/// <summary> The Lenhhoanthien property of the Entity Ketquahoanthien<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquahoanthien"."Lenhhoanthien"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Lenhhoanthien
-		{
-			get { return (System.String)GetValue((int)KetquahoanthienFieldIndex.Lenhhoanthien, true); }
-			set	{ SetValue((int)KetquahoanthienFieldIndex.Lenhhoanthien, value); }
 		}
 
 		/// <summary> The Masanpham property of the Entity Ketquahoanthien<br/><br/>
@@ -1100,6 +1089,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquahoanthienFieldIndex.Lydosuco, true); }
 			set	{ SetValue((int)KetquahoanthienFieldIndex.Lydosuco, value); }
+		}
+
+		/// <summary> The Solenhsx property of the Entity Ketquahoanthien<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquahoanthien"."Solenhsx"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Solenhsx
+		{
+			get { return (System.String)GetValue((int)KetquahoanthienFieldIndex.Solenhsx, true); }
+			set	{ SetValue((int)KetquahoanthienFieldIndex.Solenhsx, value); }
 		}
 
 

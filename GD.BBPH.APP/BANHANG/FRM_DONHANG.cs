@@ -266,7 +266,7 @@ namespace GD.BBPH.APP.BANHANG
                     DataRowView _Rowview = (DataRowView)this.BS_DONDATHANG_D.Current;
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[DonhangDFields.Id.Name].ToString();
-                    txt_SOBAOGIA.Text = _Rowview.Row[DonhangDFields.Sobaogia.Name].ToString();
+                    txt_DIADIEMGIAO.Text = _Rowview.Row[DonhangDFields.Sobaogia.Name].ToString();
                     txt_SOBAOGIA_Validating(new object(), new CancelEventArgs());
                 }
                 //else
@@ -302,11 +302,11 @@ namespace GD.BBPH.APP.BANHANG
         private void btn_THEMDONG_Click(object sender, EventArgs e)
         {
             DataTable DT_BAOGIA_D = new DataTable();
-            string strSobaogia = txt_SOBAOGIA.Text.ToString();
+            string strSobaogia = txt_DIADIEMGIAO.Text.ToString();
             if(string.IsNullOrEmpty(strSobaogia))
             {
                 MessageBox.Show("Yêu cầu nhập số báo giá!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_SOBAOGIA.Focus();
+                txt_DIADIEMGIAO.Focus();
                 return;
             }
             DT_BAOGIA_D = LIB.Procedures.Danhsachbaogiachon(strSobaogia);//.Select(DmhangFields.Makhach.Name + "='"+txt_MAKHACH.Text.Trim()+"'").CopyToDataTable();
@@ -342,7 +342,7 @@ namespace GD.BBPH.APP.BANHANG
                 try { r_Detail[DonhangDFields.Dongia.Name] = LIB.ConvertString.NumbertoDB(dr[BaogiaDFields.DongiaVat.Name].ToString()); }
                 catch { }
                 r_Detail[DonhangDFields.Sobaogia.Name] = strSobaogia;
-                try { r_Detail[DonhangDFields.Ngaybaogia.Name] = Convert.ToDateTime(txt_NGAYBAOGIA.Text.ToString()); }
+                try { r_Detail[DonhangDFields.Ngaybaogia.Name] = Convert.ToDateTime(txt_NGAYGIAO.Text.ToString()); }
                 catch { }
 
                 DT_DONDATHANG_D_FILL.Rows.Add(r_Detail);
@@ -588,7 +588,7 @@ namespace GD.BBPH.APP.BANHANG
         private void btn_THEMMOI_Click(object sender, EventArgs e)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { }));
-            txt_MADONDATHANG.Text = txt_MAKHACH.Text = txt_TENKHACH.Text = txt_NGAYBAOGIA.Text = txt_HOTEN.Text = string.Empty;
+            txt_MADONDATHANG.Text = txt_MAKHACH.Text = txt_TENKHACH.Text = txt_NGAYGIAO.Text = txt_HOTEN.Text = string.Empty;
             r_Insert = DT_DONDATHANG_H.NewRow();
             DT_DONDATHANG_H.Rows.Add(r_Insert);
             BS_DONDATHANG_H.Position = DT_DONDATHANG_H.Rows.Count;
@@ -600,7 +600,7 @@ namespace GD.BBPH.APP.BANHANG
             MAHIEU_PK = "";
             txt_MADONDATHANG.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH, txt_NGAYBAOGIA, txt_HOTEN }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH, txt_NGAYGIAO, txt_HOTEN }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_DIEUCHINH.Enabled = true;
             GRID_DONHANG_H.Enabled = false;
@@ -614,7 +614,7 @@ namespace GD.BBPH.APP.BANHANG
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 btn_THEMDONG.Enabled = btn_XOADONG.Enabled = btn_DIEUCHINH.Enabled = true;
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH, txt_NGAYBAOGIA, txt_HOTEN }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_TENKHACH, txt_NGAYGIAO, txt_HOTEN }));
                 //txt_TENHIEU.Focus();
             }
             GRID_DONHANG_D.NewRowPosition = Janus.Windows.GridEX.NewRowPosition.BottomRow;
@@ -715,10 +715,15 @@ namespace GD.BBPH.APP.BANHANG
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btn_IN_Click(object sender, EventArgs e)
         {
             DataSet dsKetqua = new DataSet();
-            string _Madondathang = "";
+            string _Madondathang = "", _Khachhang = "", _Thoigiangiao = "", _Yeucau = "", _Diadiemgiao = "";
 
             try
             {
@@ -731,7 +736,7 @@ namespace GD.BBPH.APP.BANHANG
                 SqlParameter[] parameters = new SqlParameter[1];
                 parameters[0] = new SqlParameter("@Madondathang", _Madondathang);
 
-                _DataAccessAdapter.CallRetrievalStoredProcedure("Indondathang", parameters, dsKetqua);
+                _DataAccessAdapter.CallRetrievalStoredProcedure("Dondathang", parameters, dsKetqua);
                 _DataAccessAdapter.CloseConnection();
                 dsKetqua.Tables[0].TableName = "Dondathang";
                 #endregion
@@ -739,20 +744,28 @@ namespace GD.BBPH.APP.BANHANG
                 #region Tham so
                 DataTable dtThamso = new DataTable("Thamso");
                 dtThamso.Columns.Add("Khachhang");
+                dtThamso.Columns.Add("Diachikhach");
+                dtThamso.Columns.Add("Lienhe");
                 dtThamso.Columns.Add("Ghichu");
                 dtThamso.Columns.Add("Thoigianbaocao");
                 dtThamso.Columns.Add("Tennhanvien");
+                dtThamso.Columns.Add("Ngaygiao");
+                dtThamso.Columns.Add("Diadiemgiao");
                 DataRow dr = dtThamso.NewRow();
                 dr["Khachhang"] = txt_TENKHACH.Text;
+                dr["Diachikhach"] = txt_DIACHIKHACH.Text;
+                dr["Lienhe"] = txt_LIENHE.Text;
                 dr["Ghichu"] = txt_GHICHU.Text;
                 dr["Thoigianbaocao"] = "Hà Nội, ngày " + txt_NGAYDAT.Text;
                 dr["Tennhanvien"] = txt_HOTEN.Text;
+                dr["Ngaygiao"] = txt_NGAYGIAO.Text;
+                dr["Diadiemgiao"] = txt_DIADIEMGIAO.Text;
                 dtThamso.Rows.Add(dr);
                 dsKetqua.Tables.Add(dtThamso);
                 #endregion
 
                 #region Hien bao cao
-                //new BAOCAO.FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\NHUCAUSANXUAT.rdlc", "Dondathang", this.Text, true).Show();
+                new BAOCAO.FRM_REPORTVIEWER(dsKetqua, LIB.PATH.BBPH_PATH + @"\RDLC\DONHANG.rdlc", "Dondathang", this.Text, true).Show();
                 #endregion
             }
             catch (Exception ex)
@@ -853,8 +866,8 @@ namespace GD.BBPH.APP.BANHANG
         private void txt_SOBAOGIA_Validating(object sender, CancelEventArgs e)
         {
             _RowViewSelect = null;
-            if (string.IsNullOrEmpty(txt_SOBAOGIA.Text.Trim()) || DT_BAOGIA_H == null || DT_BAOGIA_H.Rows.Count == 0) return;
-            string _str_MACANTIM = txt_SOBAOGIA.Text.Trim().ToUpper();
+            if (string.IsNullOrEmpty(txt_DIADIEMGIAO.Text.Trim()) || DT_BAOGIA_H == null || DT_BAOGIA_H.Rows.Count == 0) return;
+            string _str_MACANTIM = txt_DIADIEMGIAO.Text.Trim().ToUpper();
             _RowViewSelect = checkmaBaogia(_str_MACANTIM, DT_BAOGIA_H);
             if (_RowViewSelect == null)
             {
@@ -864,12 +877,12 @@ namespace GD.BBPH.APP.BANHANG
                 _frm_SingerRows_Select.ShowDialog();
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
-                txt_SOBAOGIA.Text = _RowViewSelect[BaogiaHFields.Sobaogia.Name].ToString();
-                txt_NGAYBAOGIA.Text = _RowViewSelect[BaogiaHFields.Ngayhieuluc.Name].ToString();
+                txt_DIADIEMGIAO.Text = _RowViewSelect[BaogiaHFields.Sobaogia.Name].ToString();
+                txt_NGAYGIAO.Text = _RowViewSelect[BaogiaHFields.Ngayhieuluc.Name].ToString();
             }
             else
             {
-                txt_NGAYBAOGIA.Text = _RowViewSelect[BaogiaHFields.Ngayhieuluc.Name].ToString();
+                txt_NGAYGIAO.Text = _RowViewSelect[BaogiaHFields.Ngayhieuluc.Name].ToString();
             }
         }
         private DataRow checkmaBaogia(string macantim, DataTable dt)

@@ -1105,6 +1105,7 @@
     <EmbeddedResource Include="RDLC\BAOCAOTONGHOPLUONGTOIN.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOLUONGTOCHIA.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOLUONGTOTUA.rdlc" />
+    <EmbeddedResource Include="RDLC\DONHANG.rdlc" />
     <EmbeddedResource Include="RDLC\BAOGIA.rdlc" />
     <EmbeddedResource Include="RDLC\KQHOANTHIENCHITIET.rdlc" />
     <EmbeddedResource Include="RDLC\BAOCAOLUONGTOIN.rdlc" />
@@ -1283,6 +1284,7 @@
     <Content Include="XMLCONFIG\FRM_KQHOANTHIENCHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOI.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOICHITIET.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHSANXUAT_DIEUDO.xml" />
     <Content Include="XMLCONFIG\FRM_LENHSANXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDONHAPXUAT.xml" />
     <Content Include="XMLCONFIG\FRM_LYDOXUATKHO.xml" />

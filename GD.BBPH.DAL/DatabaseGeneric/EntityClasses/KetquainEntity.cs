@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, December 2, 2022 10:08:05 AM
+// Code is generated on: Saturday, December 3, 2022 11:01:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -476,9 +476,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Mamay", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Lenhin", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Masanpham", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -561,6 +558,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Lydosuco", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Solenhsx", fieldHashtable);
 		}
 		#endregion
 
@@ -711,17 +711,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquainFieldIndex.Mamay, true); }
 			set	{ SetValue((int)KetquainFieldIndex.Mamay, value); }
-		}
-
-		/// <summary> The Lenhin property of the Entity Ketquain<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquain"."Lenhin"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Lenhin
-		{
-			get { return (System.String)GetValue((int)KetquainFieldIndex.Lenhin, true); }
-			set	{ SetValue((int)KetquainFieldIndex.Lenhin, value); }
 		}
 
 		/// <summary> The Masanpham property of the Entity Ketquain<br/><br/>
@@ -1030,6 +1019,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquainFieldIndex.Lydosuco, true); }
 			set	{ SetValue((int)KetquainFieldIndex.Lydosuco, value); }
+		}
+
+		/// <summary> The Solenhsx property of the Entity Ketquain<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquain"."Solenhsx"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Solenhsx
+		{
+			get { return (System.String)GetValue((int)KetquainFieldIndex.Solenhsx, true); }
+			set	{ SetValue((int)KetquainFieldIndex.Solenhsx, value); }
 		}
 
 

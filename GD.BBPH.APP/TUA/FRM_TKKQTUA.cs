@@ -169,7 +169,7 @@ namespace GD.BBPH.APP.TUA
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[KetquatuaFields.Id.Name].ToString();
 
-                    txt_LENHTUA.Text = _Rowview.Row[KetquatuaFields.Lenhtua.Name].ToString();
+                    txt_SOLENHSX.Text = _Rowview.Row[KetquatuaFields.Solenhsx.Name].ToString();
                     txt_MASANPHAM.Text = _Rowview.Row[KetquatuaFields.Masanpham.Name].ToString();
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquatuaFields.Macongnhan.Name].ToString();
                     txt_TENCONGNHAN.Text = _Rowview.Row[KetquatuaFields.Tencongnhan.Name].ToString();
@@ -235,7 +235,7 @@ namespace GD.BBPH.APP.TUA
             ADDROW = true;
             DataRow r_Detail = DT_TKKQTUA_CHITIET_FILL.NewRow();
 
-            r_Detail[KetquatuaFields.Lenhtua.Name] = txt_LENHTUA.Text;
+            r_Detail[KetquatuaFields.Solenhsx.Name] = txt_SOLENHSX.Text;
             r_Detail[KetquatuaFields.Masanpham.Name] = txt_MASANPHAM.Text;
             r_Detail[KetquatuaFields.Tensanpham.Name] = txt_TENSANPHAM.Text;
             r_Detail[KetquatuaFields.Matruongca.Name] = txt_MATRUONGCA.Text;
@@ -318,7 +318,7 @@ namespace GD.BBPH.APP.TUA
         }
         private void btn_SUADONG_Click(object sender, EventArgs e)
         {
-            GRID_TKKQTUA_CHITIET.CurrentRow.Cells[KetquatuaFields.Lenhtua.Name].Value = txt_LENHTUA.Text;
+            GRID_TKKQTUA_CHITIET.CurrentRow.Cells[KetquatuaFields.Solenhsx.Name].Value = txt_SOLENHSX.Text;
             GRID_TKKQTUA_CHITIET.CurrentRow.Cells[KetquatuaFields.Masanpham.Name].Value = txt_MASANPHAM.Text;
             GRID_TKKQTUA_CHITIET.CurrentRow.Cells[KetquatuaFields.Tensanpham.Name].Value = txt_TENSANPHAM.Text;
             GRID_TKKQTUA_CHITIET.CurrentRow.Cells[KetquatuaFields.Matruongca.Name].Value = txt_MATRUONGCA.Text;
@@ -372,7 +372,7 @@ namespace GD.BBPH.APP.TUA
                 _KetquatuaEntity.Ca = _ca;
                 _KetquatuaEntity.Mamay = _mamay;
                 _KetquatuaEntity.Tenmay = _view.Row[KetquatuaFields.Tenmay.Name].ToString();
-                _KetquatuaEntity.Lenhtua = _view.Row[KetquatuaFields.Lenhtua.Name].ToString();
+                _KetquatuaEntity.Solenhsx = _view.Row[KetquatuaFields.Solenhsx.Name].ToString();
                 _KetquatuaEntity.Lydosuco = _view.Row[KetquatuaFields.Lydosuco.Name].ToString();
                 _KetquatuaEntity.Macongnhan = _view.Row[KetquatuaFields.Macongnhan.Name].ToString();
                 _KetquatuaEntity.Tencongnhan = _view.Row[KetquatuaFields.Tencongnhan.Name].ToString();

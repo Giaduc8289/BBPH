@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, December 2, 2022 10:08:04 AM
+// Code is generated on: Saturday, December 3, 2022 11:01:14 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1521,8 +1521,6 @@ namespace GD.BBPH.DAL
 		Ca,
 		///<summary>Mamay. </summary>
 		Mamay,
-		///<summary>Lenh. </summary>
-		Lenh,
 		///<summary>Masanpham. </summary>
 		Masanpham,
 		///<summary>Macongnhan. </summary>
@@ -1591,6 +1589,8 @@ namespace GD.BBPH.DAL
 		Sometra,
 		///<summary>Sokgra. </summary>
 		Sokgra,
+		///<summary>Solenhsx. </summary>
+		Solenhsx,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1609,8 +1609,6 @@ namespace GD.BBPH.DAL
 		Ca,
 		///<summary>Mamay. </summary>
 		Mamay,
-		///<summary>Lenhghep. </summary>
-		Lenhghep,
 		///<summary>Masanpham. </summary>
 		Masanpham,
 		///<summary>Macongnhan. </summary>
@@ -1683,6 +1681,8 @@ namespace GD.BBPH.DAL
 		Mamang,
 		///<summary>Tenmang. </summary>
 		Tenmang,
+		///<summary>Solenhsx. </summary>
+		Solenhsx,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1703,8 +1703,6 @@ namespace GD.BBPH.DAL
 		Mamay,
 		///<summary>Tenmay. </summary>
 		Tenmay,
-		///<summary>Lenhhoanthien. </summary>
-		Lenhhoanthien,
 		///<summary>Masanpham. </summary>
 		Masanpham,
 		///<summary>Tensanpham. </summary>
@@ -1769,6 +1767,8 @@ namespace GD.BBPH.DAL
 		Tocdodinhmuc,
 		///<summary>Lydosuco. </summary>
 		Lydosuco,
+		///<summary>Solenhsx. </summary>
+		Solenhsx,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1787,8 +1787,6 @@ namespace GD.BBPH.DAL
 		Ca,
 		///<summary>Mamay. </summary>
 		Mamay,
-		///<summary>Lenhin. </summary>
-		Lenhin,
 		///<summary>Masanpham. </summary>
 		Masanpham,
 		///<summary>Macongnhan. </summary>
@@ -1845,6 +1843,8 @@ namespace GD.BBPH.DAL
 		Tocdodinhmuc,
 		///<summary>Lydosuco. </summary>
 		Lydosuco,
+		///<summary>Solenhsx. </summary>
+		Solenhsx,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1901,8 +1901,6 @@ namespace GD.BBPH.DAL
 		Ca,
 		///<summary>Mamay. </summary>
 		Mamay,
-		///<summary>Lenhthoi. </summary>
-		Lenhthoi,
 		///<summary>Mamang. </summary>
 		Mamang,
 		///<summary>Macongnhan. </summary>
@@ -1947,6 +1945,8 @@ namespace GD.BBPH.DAL
 		Tocdodinhmuc,
 		///<summary>Lydosuco. </summary>
 		Lydosuco,
+		///<summary>Solenhsx. </summary>
+		Solenhsx,
 		/// <summary></summary>
 		AmountOfFields
 	}
@@ -1965,8 +1965,6 @@ namespace GD.BBPH.DAL
 		Ca,
 		///<summary>Mamay. </summary>
 		Mamay,
-		///<summary>Lenhtua. </summary>
-		Lenhtua,
 		///<summary>Masanpham. </summary>
 		Masanpham,
 		///<summary>Macongnhan. </summary>
@@ -2029,6 +2027,8 @@ namespace GD.BBPH.DAL
 		Tocdodinhmuc,
 		///<summary>Lydosuco. </summary>
 		Lydosuco,
+		///<summary>Solenhsx. </summary>
+		Solenhsx,
 		/// <summary></summary>
 		AmountOfFields
 	}

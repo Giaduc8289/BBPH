@@ -164,7 +164,7 @@ namespace GD.BBPH.APP.IN
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[KetquainFields.Id.Name].ToString();
 
-                    txt_LENHIN.Text = _Rowview.Row[KetquainFields.Lenhin.Name].ToString();
+                    txt_SOLENHSX.Text = _Rowview.Row[KetquainFields.Solenhsx.Name].ToString();
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquainFields.Macongnhan.Name].ToString();
                     txt_TENCONGNHAN.Text = _Rowview.Row[KetquainFields.Tencongnhan.Name].ToString();
                     txt_MASP.Text = _Rowview.Row[KetquainFields.Masanpham.Name].ToString();
@@ -226,7 +226,7 @@ namespace GD.BBPH.APP.IN
         {
             ADDROW = true;
             DataRow r_Detail = DT_KQIN_CHITIET_FILL.NewRow();
-            r_Detail[KetquainFields.Lenhin.Name] = txt_LENHIN.Text;
+            r_Detail[KetquainFields.Solenhsx.Name] = txt_SOLENHSX.Text;
             r_Detail[KetquainFields.Macongnhan.Name] = txt_MACONGNHAN.Text;
             r_Detail[KetquainFields.Tencongnhan.Name] = txt_TENCONGNHAN.Text;
             r_Detail[KetquainFields.Matruongca.Name] = txt_MATRUONGCA.Text;
@@ -311,7 +311,7 @@ namespace GD.BBPH.APP.IN
         }
         private void btn_SUADONG_Click(object sender, EventArgs e)
         {
-            GRID_KQINCHITIET.CurrentRow.Cells[KetquainFields.Lenhin.Name].Value = txt_LENHIN.Text;
+            GRID_KQINCHITIET.CurrentRow.Cells[KetquainFields.Solenhsx.Name].Value = txt_SOLENHSX.Text;
             GRID_KQINCHITIET.CurrentRow.Cells[KetquainFields.Macongnhan.Name].Value = txt_MACONGNHAN.Text;
             GRID_KQINCHITIET.CurrentRow.Cells[KetquainFields.Tencongnhan.Name].Value = txt_TENCONGNHAN.Text;
             GRID_KQINCHITIET.CurrentRow.Cells[KetquainFields.Matruongca.Name].Value = txt_MATRUONGCA.Text;
@@ -363,7 +363,7 @@ namespace GD.BBPH.APP.IN
                 _KetquainEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
                 _KetquainEntity.Mamay = txt_MAMAY.Text.Trim();
                 _KetquainEntity.Tenmay = txt_TENMAY.Text.Trim();
-                _KetquainEntity.Lenhin = _view.Row[KetquainFields.Lenhin.Name].ToString();
+                _KetquainEntity.Solenhsx = _view.Row[KetquainFields.Solenhsx.Name].ToString();
                 _KetquainEntity.Macongnhan = _view.Row[KetquainFields.Macongnhan.Name].ToString();
                 _KetquainEntity.Tencongnhan = _view.Row[KetquainFields.Tencongnhan.Name].ToString();
                 _KetquainEntity.Masanpham = _view.Row[KetquainFields.Masanpham.Name].ToString();

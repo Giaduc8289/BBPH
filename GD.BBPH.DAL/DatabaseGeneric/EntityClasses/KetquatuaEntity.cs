@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, December 2, 2022 10:08:05 AM
+// Code is generated on: Saturday, December 3, 2022 11:01:16 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -476,9 +476,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Mamay", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Lenhtua", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Masanpham", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -570,6 +567,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Lydosuco", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Solenhsx", fieldHashtable);
 		}
 		#endregion
 
@@ -720,17 +720,6 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Mamay, true); }
 			set	{ SetValue((int)KetquatuaFieldIndex.Mamay, value); }
-		}
-
-		/// <summary> The Lenhtua property of the Entity Ketquatua<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Ketquatua"."Lenhtua"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Lenhtua
-		{
-			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Lenhtua, true); }
-			set	{ SetValue((int)KetquatuaFieldIndex.Lenhtua, value); }
 		}
 
 		/// <summary> The Masanpham property of the Entity Ketquatua<br/><br/>
@@ -1072,6 +1061,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Lydosuco, true); }
 			set	{ SetValue((int)KetquatuaFieldIndex.Lydosuco, value); }
+		}
+
+		/// <summary> The Solenhsx property of the Entity Ketquatua<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Ketquatua"."Solenhsx"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Solenhsx
+		{
+			get { return (System.String)GetValue((int)KetquatuaFieldIndex.Solenhsx, true); }
+			set	{ SetValue((int)KetquatuaFieldIndex.Solenhsx, value); }
 		}
 
 

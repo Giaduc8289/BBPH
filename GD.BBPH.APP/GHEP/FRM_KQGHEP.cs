@@ -163,7 +163,7 @@ namespace GD.BBPH.APP.GHEP
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[KetquaghepFields.Id.Name].ToString();
 
-                    txt_SOLSX.Text = _Rowview.Row[KetquaghepFields.Lenhghep.Name].ToString();
+                    txt_SOLENHSX.Text = _Rowview.Row[KetquaghepFields.Solenhsx.Name].ToString();
                     txt_MASANPHAM.Text = _Rowview.Row[KetquaghepFields.Masanpham.Name].ToString();
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquaghepFields.Macongnhan.Name].ToString();
                     txt_TENCONGNHAN.Text = _Rowview.Row[KetquaghepFields.Tencongnhan.Name].ToString();
@@ -233,7 +233,7 @@ namespace GD.BBPH.APP.GHEP
         {
             ADDROW = true;
             DataRow r_Detail = DT_KQGHEP_CHITIET_FILL.NewRow();
-            r_Detail[KetquaghepFields.Lenhghep.Name] = txt_SOLSX.Text;
+            r_Detail[KetquaghepFields.Solenhsx.Name] = txt_SOLENHSX.Text;
             r_Detail[KetquaghepFields.Macongnhan.Name] = txt_MACONGNHAN.Text;
             r_Detail[KetquaghepFields.Tencongnhan.Name] = txt_TENCONGNHAN.Text;
             r_Detail[KetquaghepFields.Masanpham.Name] = txt_MASANPHAM.Text;
@@ -342,7 +342,7 @@ namespace GD.BBPH.APP.GHEP
         }
         private void btn_SUADONG_Click(object sender, EventArgs e)
         {
-            GRID_KQGHEPCHITIET.CurrentRow.Cells[KetquaghepFields.Lenhghep.Name].Value = txt_SOLSX.Text;
+            GRID_KQGHEPCHITIET.CurrentRow.Cells[KetquaghepFields.Solenhsx.Name].Value = txt_SOLENHSX.Text;
             GRID_KQGHEPCHITIET.CurrentRow.Cells[KetquaghepFields.Macongnhan.Name].Value = txt_MACONGNHAN.Text;
             GRID_KQGHEPCHITIET.CurrentRow.Cells[KetquaghepFields.Tencongnhan.Name].Value = txt_TENCONGNHAN.Text;
             GRID_KQGHEPCHITIET.CurrentRow.Cells[KetquaghepFields.Masanpham.Name].Value = txt_MASANPHAM.Text;
@@ -422,7 +422,7 @@ namespace GD.BBPH.APP.GHEP
                 _KetquaghepEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
                 _KetquaghepEntity.Mamay = txt_MAMAY.Text.Trim();
                 _KetquaghepEntity.Tenmay = txt_TENMAY.Text.Trim();
-                _KetquaghepEntity.Lenhghep = txt_SOLSX.Text.Trim();
+                _KetquaghepEntity.Solenhsx = txt_SOLENHSX.Text.Trim();
                 _KetquaghepEntity.Masanpham = txt_MASANPHAM.Text.Trim();
                 _KetquaghepEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
                 _KetquaghepEntity.Macongnhan = txt_MACONGNHAN.Text.Trim();

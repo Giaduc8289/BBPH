@@ -91,7 +91,7 @@
             this.btn_XOA = new GD.BBPH.CONTROL.BUTTON();
             this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
-            this.txt_LENHIN = new GD.BBPH.CONTROL.TEXTBOX();
+            this.txt_SOLENHSX = new GD.BBPH.CONTROL.TEXTBOX();
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAMAY = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
@@ -209,7 +209,7 @@
             this.uiPanel1Container.Controls.Add(this.btn_XOA);
             this.uiPanel1Container.Controls.Add(this.btn_THEMMOI);
             this.uiPanel1Container.Controls.Add(this.btn_SUA);
-            this.uiPanel1Container.Controls.Add(this.txt_LENHIN);
+            this.uiPanel1Container.Controls.Add(this.txt_SOLENHSX);
             this.uiPanel1Container.Controls.Add(this.label21);
             this.uiPanel1Container.Controls.Add(this.txt_MAMAY);
             this.uiPanel1Container.Controls.Add(this.label22);
@@ -939,28 +939,28 @@
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
             // 
-            // txt_LENHIN
+            // txt_SOLENHSX
             // 
-            this.txt_LENHIN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_LENHIN.BannerText = null;
-            this.txt_LENHIN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_LENHIN.FormNametoShow = "";
-            this.txt_LENHIN.Is_DateTime = false;
-            this.txt_LENHIN.IsShowForm = false;
-            this.txt_LENHIN.Location = new System.Drawing.Point(105, 82);
-            this.txt_LENHIN.Name = "txt_LENHIN";
-            this.txt_LENHIN.Regular_Expression = null;
-            this.txt_LENHIN.Size = new System.Drawing.Size(93, 20);
-            this.txt_LENHIN.TabIndex = 4;
+            this.txt_SOLENHSX.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOLENHSX.BannerText = null;
+            this.txt_SOLENHSX.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOLENHSX.FormNametoShow = "";
+            this.txt_SOLENHSX.Is_DateTime = false;
+            this.txt_SOLENHSX.IsShowForm = false;
+            this.txt_SOLENHSX.Location = new System.Drawing.Point(105, 82);
+            this.txt_SOLENHSX.Name = "txt_SOLENHSX";
+            this.txt_SOLENHSX.Regular_Expression = null;
+            this.txt_SOLENHSX.Size = new System.Drawing.Size(93, 20);
+            this.txt_SOLENHSX.TabIndex = 4;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(16, 84);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(42, 13);
+            this.label21.Size = new System.Drawing.Size(74, 13);
             this.label21.TabIndex = 120;
-            this.label21.Text = "Lệnh in";
+            this.label21.Text = "Lệnh sản xuất";
             // 
             // txt_MAMAY
             // 
@@ -1024,7 +1024,7 @@
         private GD.BBPH.CONTROL.BUTTON btn_THEMMOI;
         private GD.BBPH.CONTROL.BUTTON btn_SUA;
         private GD.BBPH.CONTROL.BUTTON btn_Thoat;
-        private CONTROL.TEXTBOX txt_LENHIN;
+        private CONTROL.TEXTBOX txt_SOLENHSX;
         private CONTROL.LABEL label21;
         private CONTROL.TEXTBOX txt_MAMAY;
         private CONTROL.LABEL label22;

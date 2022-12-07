@@ -161,7 +161,7 @@ namespace GD.BBPH.APP.HOANTHIEN
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[KetquahoanthienFields.Id.Name].ToString();
 
-                    txt_LENHHOANTHIEN.Text = _Rowview.Row[KetquahoanthienFields.Lenhhoanthien.Name].ToString();
+                    txt_SOLENHSX.Text = _Rowview.Row[KetquahoanthienFields.Solenhsx.Name].ToString();
                     txt_MASANPHAM.Text = _Rowview.Row[KetquahoanthienFields.Masanpham.Name].ToString();
                     txt_TENSANPHAM.Text = _Rowview.Row[KetquahoanthienFields.Tensanpham.Name].ToString();
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquahoanthienFields.Macongnhan.Name].ToString();
@@ -229,7 +229,7 @@ namespace GD.BBPH.APP.HOANTHIEN
         {
             ADDROW = true;
             DataRow r_Detail = DT_KQHOANTHIEN_CHITIET_FILL.NewRow();
-            r_Detail[KetquahoanthienFields.Lenhhoanthien.Name] = txt_LENHHOANTHIEN.Text;
+            r_Detail[KetquahoanthienFields.Solenhsx.Name] = txt_SOLENHSX.Text;
             r_Detail[KetquahoanthienFields.Macongnhan.Name] = txt_MACONGNHAN.Text;
             r_Detail[KetquahoanthienFields.Tencongnhan.Name] = txt_TENCONGNHAN.Text;
             r_Detail[KetquahoanthienFields.Masanpham.Name] = txt_MASANPHAM.Text;
@@ -334,7 +334,7 @@ namespace GD.BBPH.APP.HOANTHIEN
         }
         private void btn_SUADONG_Click(object sender, EventArgs e)
         {
-            GRID_KQHOANTHIENCHITIET.CurrentRow.Cells[KetquahoanthienFields.Lenhhoanthien.Name].Value = txt_LENHHOANTHIEN.Text;
+            GRID_KQHOANTHIENCHITIET.CurrentRow.Cells[KetquahoanthienFields.Solenhsx.Name].Value = txt_SOLENHSX.Text;
             GRID_KQHOANTHIENCHITIET.CurrentRow.Cells[KetquahoanthienFields.Macongnhan.Name].Value = txt_MACONGNHAN.Text;
             GRID_KQHOANTHIENCHITIET.CurrentRow.Cells[KetquahoanthienFields.Tencongnhan.Name].Value = txt_TENCONGNHAN.Text;
             GRID_KQHOANTHIENCHITIET.CurrentRow.Cells[KetquahoanthienFields.Masanpham.Name].Value = txt_MASANPHAM.Text;
@@ -409,7 +409,7 @@ namespace GD.BBPH.APP.HOANTHIEN
                 _KetquahoanthienEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
                 _KetquahoanthienEntity.Mamay = txt_MAMAY.Text.Trim();
                 _KetquahoanthienEntity.Tenmay = txt_TENMAY.Text.Trim();
-                _KetquahoanthienEntity.Lenhhoanthien = _view.Row[KetquahoanthienFields.Lenhhoanthien.Name].ToString();
+                _KetquahoanthienEntity.Solenhsx = _view.Row[KetquahoanthienFields.Solenhsx.Name].ToString();
                 _KetquahoanthienEntity.Masanpham = _view.Row[KetquahoanthienFields.Masanpham.Name].ToString();
                 _KetquahoanthienEntity.Tensanpham = _view.Row[KetquahoanthienFields.Tensanpham.Name].ToString();
                 _KetquahoanthienEntity.Macongnhan = _view.Row[KetquahoanthienFields.Macongnhan.Name].ToString();

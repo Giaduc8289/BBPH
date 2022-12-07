@@ -165,7 +165,7 @@ namespace GD.BBPH.APP.THOI
                     if (_Rowview != null)
                         MACHITIET = _Rowview.Row[KetquathoiFields.Id.Name].ToString();
 
-                    txt_LENHTHOI.Text = _Rowview.Row[KetquathoiFields.Lenhthoi.Name].ToString();
+                    txt_SOLENHSX.Text = _Rowview.Row[KetquathoiFields.Solenhsx.Name].ToString();
                     txt_MACONGNHAN.Text = _Rowview.Row[KetquathoiFields.Macongnhan.Name].ToString();
                     txt_TENCONGNHAN.Text = _Rowview.Row[KetquathoiFields.Tencongnhan.Name].ToString();
                     txt_MAMANG.Text = _Rowview.Row[KetquathoiFields.Mamang.Name].ToString();
@@ -223,7 +223,7 @@ namespace GD.BBPH.APP.THOI
         {
             ADDROW = true;
             DataRow r_Detail = DT_KQTHOI_CHITIET_FILL.NewRow();
-            r_Detail[KetquathoiFields.Lenhthoi.Name] = txt_LENHTHOI.Text;
+            r_Detail[KetquathoiFields.Solenhsx.Name] = txt_SOLENHSX.Text;
             r_Detail[KetquathoiFields.Macongnhan.Name] = txt_MACONGNHAN.Text;
             r_Detail[KetquathoiFields.Tencongnhan.Name] = txt_TENCONGNHAN.Text;
             r_Detail[KetquathoiFields.Matruongca.Name] = txt_MATRUONGCA.Text;
@@ -298,7 +298,7 @@ namespace GD.BBPH.APP.THOI
 
         private void btn_SUADONG_Click(object sender, EventArgs e)
         {
-            GRID_KQTHOICHITIET.CurrentRow.Cells[KetquathoiFields.Lenhthoi.Name].Value = txt_LENHTHOI.Text;
+            GRID_KQTHOICHITIET.CurrentRow.Cells[KetquathoiFields.Solenhsx.Name].Value = txt_SOLENHSX.Text;
             GRID_KQTHOICHITIET.CurrentRow.Cells[KetquathoiFields.Macongnhan.Name].Value = txt_MACONGNHAN.Text;
             GRID_KQTHOICHITIET.CurrentRow.Cells[KetquathoiFields.Tencongnhan.Name].Value = txt_TENCONGNHAN.Text;
             GRID_KQTHOICHITIET.CurrentRow.Cells[KetquathoiFields.Matruongca.Name].Value = txt_MATRUONGCA.Text;
@@ -341,7 +341,7 @@ namespace GD.BBPH.APP.THOI
                 _KetquathoiEntity.Ca = Convert.ToInt32(txt_CA.Text.Trim());
                 _KetquathoiEntity.Mamay = txt_MAMAY.Text.Trim();
                 _KetquathoiEntity.Tenmay = txt_TENMAY.Text.Trim();
-                _KetquathoiEntity.Lenhthoi = _view.Row[KetquathoiFields.Lenhthoi.Name].ToString();
+                _KetquathoiEntity.Solenhsx = _view.Row[KetquathoiFields.Solenhsx.Name].ToString();
                 _KetquathoiEntity.Macongnhan = _view.Row[KetquathoiFields.Macongnhan.Name].ToString();
                 _KetquathoiEntity.Tencongnhan = _view.Row[KetquathoiFields.Tencongnhan.Name].ToString();
                 _KetquathoiEntity.Mamang = _view.Row[KetquathoiFields.Mamang.Name].ToString();
