@@ -2209,6 +2209,19 @@ namespace GD.BBPH.APP.LIB
             parameters.CopyTo(myArr, 0);
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachlocmangtheosp", "Danhsachlocmangtheosp", myArr).Tables[0];
         }
+
+        public static DataTable Danhsachmangtuongtu(DateTime Ngayphatlenh, Decimal Doday, Decimal Rong)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Ngayphatlenh", SqlDbType.NVarChar, 0), Ngayphatlenh);
+            parameters.Add(new SqlParameter("@Doday", SqlDbType.Decimal, 0), Doday);
+            parameters.Add(new SqlParameter("@Rong", SqlDbType.Decimal, 0), Rong);
+
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Danhsachmangtuongtu", "Danhsachmangtuongtu", myArr).Tables[0];
+        }
         #endregion
 
         #region Hàm trả về giá trị
