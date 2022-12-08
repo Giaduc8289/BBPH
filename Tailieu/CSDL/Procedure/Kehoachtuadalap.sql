@@ -10,8 +10,9 @@ With Encryption As
 	SET XACT_ABORT ON;
 	
 	SELECT kh.Id, Mamay, Ngaychay, Ca
-		, Madonhangchitiet--, Madonhang, Makhach, Tenkhachhang
+		, Madonhangchitiet, Makhach--, Madonhang, Tenkhachhang
 		, Masanpham
+		, kh.Solenhsx
 		--, Ngaydat, Ngaygiao 
 		, Sldukien 
 		--, ddh.Chieudaicat, dmm.Dorong
