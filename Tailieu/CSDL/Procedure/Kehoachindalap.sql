@@ -10,8 +10,9 @@ With Encryption As
 	SET XACT_ABORT ON;
 	
 	SELECT kh.Id, Mamay, Ngaychay, Ca
-		, Madonhangchitiet--, Madonhang, Makhach, Tenkhachhang
+		, Madonhangchitiet, Makhach--, Madonhang, Tenkhachhang
 		, Masanpham
+		, kh.Solenhsx
 		--, Ngaydat, Ngaygiao 
 		, Sldukien 
 		--, ddh.Chieudaicat, dmm.Dorong
@@ -23,5 +24,5 @@ Go
 
 Exec Kehoachindalap '12/01/2022', '12/30/2022'
 
---SELECT * FROM dbo.Dondathangchitiet
+--SELECT * FROM dbo.Donhang_d
 --SELECT * FROM dbo.Kehoachin
