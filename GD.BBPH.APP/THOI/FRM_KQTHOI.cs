@@ -56,11 +56,11 @@ namespace GD.BBPH.APP.THOI
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQTHOI");
-                        DT_KQTHOI = LIB.Procedures.Danhsachketquathoi(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // LIB.SESSION_START.DT_KQTHOI;
-                        DT_KQTHOI_CHITIET = LIB.SESSION_START.DT_KQTHOI;
+                        DT_KQTHOI = LIB.Procedures.Danhsachketquathoi(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // new KetquathoiManager().SelectAllRDT();
+                        DT_KQTHOI_CHITIET = new KetquathoiManager().SelectAllRDT();
 
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("TH");// LIB.SESSION_START.DT_DMMAY;
-                        DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("TH");// new DmmayManager().SelectAllRDT();
+                        DT_DMMANG = new DmmangManager().SelectAllRDT();
                         DT_NHANVIEN = new DmcongnhanManager().SelectByMabpRDT("THOI");
                         DT_LENHSANXUAT = new LenhsanxuatManager().SelectAllRDT();
                     }

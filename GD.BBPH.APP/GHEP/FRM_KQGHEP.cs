@@ -56,13 +56,13 @@ namespace GD.BBPH.APP.GHEP
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQGHEP");
-                        DT_KQGHEP = LIB.Procedures.Danhsachketquaghep(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // LIB.SESSION_START.DT_KQGHEP;
-                        DT_KQGHEP_CHITIET = LIB.SESSION_START.DT_KQGHEP;
+                        DT_KQGHEP = LIB.Procedures.Danhsachketquaghep(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // new KetquaghepManager().SelectAllRDT();
+                        DT_KQGHEP_CHITIET = new KetquaghepManager().SelectAllRDT();
 
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("GH");// LIB.SESSION_START.DT_DMMAY;
-                        DT_DMHANG = LIB.SESSION_START.DM_HANG;
-                        DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
-                        DT_LENHSX = LIB.SESSION_START.DT_LENHSANXUAT;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("GH");// new DmmayManager().SelectAllRDT();
+                        DT_DMHANG = new DmhangManager().SelectAllRDT();
+                        DT_NHANVIEN =  new DmcongnhanManager().SelectAllRDT();
+                        DT_LENHSX = new LenhsanxuatManager().SelectAllRDT();
 
                     }
                 };

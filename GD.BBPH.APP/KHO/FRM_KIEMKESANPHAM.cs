@@ -57,10 +57,10 @@ namespace GD.BBPH.APP.KHO
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KIEMKESANPHAM");
                         DT_SODUSANPHAM = LIB.Procedures.Danhsachkiemkesanpham(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, string.Empty);
-                        DT_SODUSANPHAM_CHITIET = LIB.SESSION_START.DT_SODUSANPHAM;
+                        DT_SODUSANPHAM_CHITIET = new SodusanphamManager().SelectAllRDT();
 
-                        DT_DMKHO = LIB.SESSION_START.DT_DMKHO;
-                        DT_DMSP = LIB.SESSION_START.DM_HANG;
+                        DT_DMKHO = new DmkhoManager().SelectAllRDT();
+                        DT_DMSP = new DmhangManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate

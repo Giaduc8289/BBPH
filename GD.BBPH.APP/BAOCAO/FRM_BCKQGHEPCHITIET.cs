@@ -55,8 +55,8 @@ namespace GD.BBPH.APP.BAOCAO
                         DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
                         
                         DT_DMMAY = new DmmayManager().SelectByMadmRDT("GHEP");
-                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-                        DT_DMHANG = LIB.SESSION_START.DM_HANG;
+                        DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+                        DT_DMHANG = new DmhangManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate

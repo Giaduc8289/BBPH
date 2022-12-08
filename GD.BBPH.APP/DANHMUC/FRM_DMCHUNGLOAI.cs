@@ -53,7 +53,7 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMCHUNGLOAI");
-                        DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
+                        DT_DMCHUNGLOAI = new DmchungloaiManager().SelectAllRDT();
 
                         DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
                         DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");

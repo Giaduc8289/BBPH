@@ -64,9 +64,9 @@ namespace GD.BBPH.APP.BANHANG
                         DT_BAOGIA_D = LIB.Procedures.Danhsachbaogiachitiet(LIB.SESSION_START.TS_NGAYDAUNAM, LIB.SESSION_START.TS_NGAYCUOINAM, MAHIEU_PK, MAKHACHHANG, MAHANG);
                         DT_BAOGIA_D_FILL = DT_BAOGIA_D.Clone();
 
-                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-                        DT_DMHANG = LIB.SESSION_START.DM_HANG;
-                        //DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
+                        DT_DMKHACH = new DmkhachManager().SelectAllRDT(); 
+                        DT_DMHANG = new DmhangManager().SelectAllRDT();
+                        //DT_DMCHUNGLOAI = new DmchungloaiManager().SelectAllRDT();
                         //DT_DMPE = LIB.SESSION_START.DT_DMPE;
                         //DT_DMMANH_SOI = LIB.SESSION_START.DT_DMMANH_SOI;
                         _Vat = LIB.ConvertString.NumbertoDB(LIB.Procedures.Laygiatrithamso("Vat"));
@@ -655,8 +655,8 @@ namespace GD.BBPH.APP.BANHANG
 
         private void btn_LAMMOI_Click(object sender, EventArgs e)
         {
-            DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-            //DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
+            DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+            //DT_DMCHUNGLOAI = new DmchungloaiManager().SelectAllRDT();
             if (btn_SUA.Enabled == true || btn_THEMMOI.Enabled == true)
             {
                 MAKHACHHANG = "";
@@ -734,8 +734,8 @@ namespace GD.BBPH.APP.BANHANG
             //FRM_TIMKIEM frm = new FRM_TIMKIEM();
             //frm.ShowDialog();
             //if (frm._DialogResult == DialogResult.No) return;
-            //DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-            ////DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
+            //DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+            ////DT_DMCHUNGLOAI = new DmchungloaiManager().SelectAllRDT();
             //MAKHACHHANG = frm._Makhachhang;
             //MAHANG = frm._Mahang;
             //MAHIEU_PK = frm._Sobaogia;
