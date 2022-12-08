@@ -188,25 +188,18 @@ namespace GD.BBPH.APP.BANHANG
                     if (_Rowview != null)
                         MAMANGCHITIET = _Rowview.Row[MangcuahangFields.Mamang.Name].ToString();
 
-                    DmmangEntity _DmmangEntity = new DmmangManager().SelectOne(MAMANGCHITIET);
-                    if(_DmmangEntity.Tenloaimang == "PE")
-                    {
+                    DmmangEntity _DmmangEntity = new DmmangManager().SelectOne(MAMANGCHITIET);              
                         Decimal _doday = 0, _rong = 0;
+                        String _tenloaimang = "";
                         _doday = Convert.ToDecimal(_DmmangEntity.Doday);
                         _rong = Convert.ToDecimal(_DmmangEntity.Rong);
-
-                        DT_MANGTUONGTU = LIB.Procedures.Danhsachmangtuongtu(Convert.ToDateTime(txt_NGAYPHATLENH.Text.Trim()), _doday, _rong);
+                        _tenloaimang = _DmmangEntity.Tenloaimang;
+                        DT_MANGTUONGTU = LIB.Procedures.Danhsachmangtuongtu(Convert.ToDateTime(txt_NGAYPHATLENH.Text.Trim()), _doday, _rong, _tenloaimang);
                         DataView Source_View_Mangtuongtu = new DataView(DT_MANGTUONGTU);
                         BS_MANGTUONGTU = new BindingSource();
                         BS_MANGTUONGTU.DataSource = Source_View_Mangtuongtu;
                         GRID_MANGTUONGTU.DataSource = BS_MANGTUONGTU;
-                    }
-                    else
-                    {
-                        DT_MANGTUONGTU = new MangtheolenhManager().Clone();
-                        BS_MANGTUONGTU = new BindingSource(DT_MANGTUONGTU, null);
-                        GRID_MANGTUONGTU.DataSource = BS_MANGTUONGTU;
-                    }
+                   
                 }
             }
             catch
@@ -249,7 +242,7 @@ namespace GD.BBPH.APP.BANHANG
             {
                 DataRowView _Rowview = (DataRowView)this.BS_MANGCUAHANG.Current;
 
-                DT_MANGCUAHANG = LIB.Procedures.Danhsachlocmangtheosp(Convert.ToDateTime(txt_NGAYPHATLENH.Text.Trim()), txt_MASP.Text.Trim());
+                DT_MANGCUAHANG = LIB.Procedures.Danhsachlocmangtheosp(Convert.ToDateTime(txt_NGAYPHATLENH.Text.Trim()), txt_MASP.Text.Trim(), txt_SOLSX.Text.Trim());
                 DataView Source_View_Mang = new DataView(DT_MANGCUAHANG);
                 BS_MANGCUAHANG = new BindingSource();
                 BS_MANGCUAHANG.DataSource = Source_View_Mang;
@@ -278,7 +271,7 @@ namespace GD.BBPH.APP.BANHANG
         }
         private void SHOWGRID_1()
         {
-            DT_MANGCUAHANG = LIB.Procedures.Danhsachlocmangtheosp(Convert.ToDateTime(txt_NGAYPHATLENH.Text.Trim()), txt_MASP.Text.Trim());
+            DT_MANGCUAHANG = LIB.Procedures.Danhsachlocmangtheosp(Convert.ToDateTime(txt_NGAYPHATLENH.Text.Trim()), txt_MASP.Text.Trim(), txt_SOLSX.Text.Trim());
             DataView Source_View_Mang = new DataView(DT_MANGCUAHANG);
             BS_MANGCUAHANG = new BindingSource();
             BS_MANGCUAHANG.DataSource = Source_View_Mang;

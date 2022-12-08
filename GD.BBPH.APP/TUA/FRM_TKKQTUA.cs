@@ -25,7 +25,7 @@ namespace GD.BBPH.APP.TUA
         private KetquatuaManager _KetquatuaManager = new KetquatuaManager();
         private KetquatuaEntity _KetquatuaEntity = new KetquatuaEntity();
         private MenuroleEntity _MenuroleEntity = new MenuroleEntity();
-        private DataTable DT_TKKQTUA = new DataTable(), DT_TKKQTUA_CHITIET = new DataTable(), DT_TKKQTUA_CHITIET_FILL = new DataTable();
+        private DataTable DT_TKKQTUA = new DataTable(), DT_TKKQTUA_CHITIET = new DataTable(), DT_TKKQTUA_CHITIET_FILL = new DataTable(), DT_LENHSX = new DataTable();
         private BindingSource BS_TKKQTUA = new BindingSource(), BS_TKKQTUA_CHITIET = new BindingSource();
         private DataRow r_Insert = null, _RowViewSelect = null;
         private GD.BBPH.CONTROL.JGridEX GRID_TKKQTUA = new GD.BBPH.CONTROL.JGridEX();
@@ -61,6 +61,7 @@ namespace GD.BBPH.APP.TUA
                         DT_HANG = LIB.SESSION_START.DM_HANG;
                         DT_DMCONGNHAN = LIB.SESSION_START.DT_DMCONGNHAN;
                         DT_DMMAY = new DmmayManager().SelectByMadmRDT("KT");// LIB.SESSION_START.DT_DMMAY;
+                        DT_LENHSX = LIB.SESSION_START.DT_LENHSANXUAT;
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -696,6 +697,36 @@ namespace GD.BBPH.APP.TUA
             }
             catch { return null; }
         }
+
+        private void txt_LENHSANXUAT_Validating(object sender, CancelEventArgs e)
+        {
+            _RowViewSelect = null;
+            if (string.IsNullOrEmpty(txt_SOLENHSX.Text.Trim()) || DT_LENHSX == null || DT_LENHSX.Rows.Count == 0) return;
+            string _str_MACANTIM = txt_SOLENHSX.Text.Trim().ToUpper();
+            _RowViewSelect = new LenhsanxuatManager().CheckMa(_str_MACANTIM, DT_LENHSX);
+            if (_RowViewSelect == null)
+            {
+                ListviewJanus _frm_SingerRows_Select =
+                    new ListviewJanus(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LENHSANXUAT.xml",
+                        DT_LENHSX, LenhsanxuatFields.Solenhsx.Name, _str_MACANTIM);
+                _frm_SingerRows_Select.ShowDialog();
+                if (_frm_SingerRows_Select._RowViewSelect == null) return;
+                _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
+                txt_SOLENHSX.Text = _RowViewSelect[LenhsanxuatFields.Solenhsx.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tenhang.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                Tinhtocdodinhmuc();
+                Tinhthoigianchuanbi();
+            }
+            else
+            {
+                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tenhang.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                Tinhtocdodinhmuc();
+                Tinhthoigianchuanbi();
+            }
+        }
+      
         #endregion
 
         #region Tính năng suất và khối lượng chênh lệch

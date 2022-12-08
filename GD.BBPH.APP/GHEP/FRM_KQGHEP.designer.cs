@@ -1132,6 +1132,7 @@
             this.txt_SOLENHSX.Regular_Expression = null;
             this.txt_SOLENHSX.Size = new System.Drawing.Size(74, 20);
             this.txt_SOLENHSX.TabIndex = 3;
+            this.txt_SOLENHSX.Validating += new System.ComponentModel.CancelEventHandler(this.txt_LENHSANXUAT_Validating);
             // 
             // label21
             // 
