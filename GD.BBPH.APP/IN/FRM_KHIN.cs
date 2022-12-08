@@ -246,7 +246,7 @@ namespace GD.BBPH.APP.IN
                                 foreach (DataRow drMay in arrDrMay)
                                 {
                                     decimal kluong = 0;
-                                    try { kluong = Convert.ToDecimal(drMay[KehoachinFields.Sokg.Name].ToString()); }
+                                    try { kluong = Convert.ToDecimal(drMay[KehoachinFields.Sldukien.Name].ToString()); }
                                     catch { }
                                     dr[Convert.ToDateTime(drMay[KehoachinFields.Ngaychay.Name].ToString()).ToString("dd/MM")
                                         + (drMay[KehoachinFields.Ca.Name].ToString() == "1" ? "_K1" : "_K2")] = kluong;
