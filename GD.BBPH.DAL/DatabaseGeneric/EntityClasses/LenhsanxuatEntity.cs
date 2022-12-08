@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, December 3, 2022 11:01:16 AM
+// Code is generated on: Friday, December 9, 2022 2:57:58 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -463,12 +463,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			_fieldsCustomProperties.Add("Loaihang", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
-			_fieldsCustomProperties.Add("Masp", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
-			_fieldsCustomProperties.Add("Tenhang", fieldHashtable);
-			fieldHashtable = new Dictionary<string, string>();
-
 			_fieldsCustomProperties.Add("Soluong", fieldHashtable);
 			fieldHashtable = new Dictionary<string, string>();
 
@@ -485,6 +479,12 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Nguoisua", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Masanpham", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Tensanpham", fieldHashtable);
 		}
 		#endregion
 
@@ -660,28 +660,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			set	{ SetValue((int)LenhsanxuatFieldIndex.Loaihang, value); }
 		}
 
-		/// <summary> The Masp property of the Entity Lenhsanxuat<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Lenhsanxuat"."Masp"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Masp
-		{
-			get { return (System.String)GetValue((int)LenhsanxuatFieldIndex.Masp, true); }
-			set	{ SetValue((int)LenhsanxuatFieldIndex.Masp, value); }
-		}
-
-		/// <summary> The Tenhang property of the Entity Lenhsanxuat<br/><br/>
-		/// </summary>
-		/// <remarks>Mapped on  table field: "Lenhsanxuat"."Tenhang"<br/>
-		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
-		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
-		public virtual System.String Tenhang
-		{
-			get { return (System.String)GetValue((int)LenhsanxuatFieldIndex.Tenhang, true); }
-			set	{ SetValue((int)LenhsanxuatFieldIndex.Tenhang, value); }
-		}
-
 		/// <summary> The Soluong property of the Entity Lenhsanxuat<br/><br/>
 		/// </summary>
 		/// <remarks>Mapped on  table field: "Lenhsanxuat"."Soluong"<br/>
@@ -746,6 +724,28 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (System.String)GetValue((int)LenhsanxuatFieldIndex.Nguoisua, true); }
 			set	{ SetValue((int)LenhsanxuatFieldIndex.Nguoisua, value); }
+		}
+
+		/// <summary> The Masanpham property of the Entity Lenhsanxuat<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Lenhsanxuat"."Masanpham"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 50<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Masanpham
+		{
+			get { return (System.String)GetValue((int)LenhsanxuatFieldIndex.Masanpham, true); }
+			set	{ SetValue((int)LenhsanxuatFieldIndex.Masanpham, value); }
+		}
+
+		/// <summary> The Tensanpham property of the Entity Lenhsanxuat<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Lenhsanxuat"."Tensanpham"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 250<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Tensanpham
+		{
+			get { return (System.String)GetValue((int)LenhsanxuatFieldIndex.Tensanpham, true); }
+			set	{ SetValue((int)LenhsanxuatFieldIndex.Tensanpham, value); }
 		}
 
 

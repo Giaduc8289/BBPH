@@ -12,7 +12,7 @@ With Encryption As
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
 	
-	SELECT Ngay, Ca, Mamay, Tenmay, Lenhin As Lenhsanxuat, SometLSX As SoluongLSX
+	SELECT Ngay, Ca, Mamay, Tenmay, Solenhsx As Lenhsanxuat, SometLSX As SoluongLSX
 		, Masanpham, Tensanpham, Makhach, Tenkhach, Macongnhan, Tencongnhan
 		, Sometcap As Dauvaomet, Sokgcap As Dauvaokg
 		, Thuctein As Dauramet, Sokgin As Daurakg

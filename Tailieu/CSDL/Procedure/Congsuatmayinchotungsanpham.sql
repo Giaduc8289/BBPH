@@ -25,12 +25,12 @@ With Encryption As
 	-----Lệnh sản xuất với Ngày đặt <= Ngày cuối tháng, và kết quả in theo Lệnh		
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, sp.Makhach, sp.Tenkhach
-		, Madonhangchitiet, lsx.Masp As Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
+		, Madonhangchitiet, lsx.Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
 		, Soluong
 		, IsNull((Select Sum(Thuctein) From Ketquain Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdain
 		, sp.Sohinh, sp.Dai
 	Into #Nhucau0
-	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masp
+	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 	Where Ngaydat<=@v_Ngaycuoithang
 	 
 	-----Lấy số lượng trong đơn trừ đi kết quả đã in

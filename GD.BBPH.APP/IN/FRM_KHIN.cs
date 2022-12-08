@@ -155,7 +155,7 @@ namespace GD.BBPH.APP.IN
 
                     txt_MADONHANG.Text = _Rowview.Row[LenhsanxuatFields.Madon.Name].ToString();
                     txt_TENKHACH.Text = _Rowview.Row[LenhsanxuatFields.Tenkhach.Name].ToString();
-                    txt_MASANPHAM.Text = _Rowview.Row[LenhsanxuatFields.Masp.Name].ToString();
+                    txt_MASANPHAM.Text = _Rowview.Row[LenhsanxuatFields.Masanpham.Name].ToString();
                     txt_NGAYGIAO.Text = _Rowview.Row[LenhsanxuatFields.Ngaygiao.Name].ToString();
                     try { txt_SOLUONG.Text = double.Parse(_Rowview.Row[LenhsanxuatFields.Soluong.Name].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN")); }
                     catch { }

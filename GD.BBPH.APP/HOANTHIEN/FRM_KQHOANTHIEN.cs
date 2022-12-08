@@ -642,12 +642,12 @@ namespace GD.BBPH.APP.HOANTHIEN
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_SOLENHSX.Text = _RowViewSelect[LenhsanxuatFields.Solenhsx.Name].ToString();
-                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
             }
             else
             {
-                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
             }
         }

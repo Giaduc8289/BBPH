@@ -1,4 +1,4 @@
-﻿------------------------Kết quả in chi tiết-------------
+﻿------------------------Kết quả tua chi tiết-------------
 If Object_ID('dbo.Baocaoketquatuachitiet','P') is not null
 	Drop Procedure dbo.Baocaoketquatuachitiet;
 Go
@@ -12,7 +12,7 @@ With Encryption As
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
 	
-	SELECT Ngay, Ca, Mamay, Tenmay, Lenhtua As Lenhsanxuat
+	SELECT Ngay, Ca, Mamay, Tenmay, Solenhsx As Lenhsanxuat
 		, Masanpham, Tensanpham, Makhach, Tenkhach, Macongnhan, Tencongnhan
 		, SoMetvao As Dauvaomet, SoKgvao As Dauvaokg
 		, SoMetra As Dauramet, SoKgra As Daurakg

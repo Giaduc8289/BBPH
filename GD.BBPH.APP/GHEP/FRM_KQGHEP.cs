@@ -801,15 +801,15 @@ namespace GD.BBPH.APP.GHEP
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_SOLENHSX.Text = _RowViewSelect[LenhsanxuatFields.Solenhsx.Name].ToString();
-                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tenhang.Name].ToString();
-                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tensanpham.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 Tinhtocdodinhmuc();
                 Tinhthoigianchuanbi();
             }
             else
             {
-                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tenhang.Name].ToString();
-                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tensanpham.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 Tinhtocdodinhmuc();
                 Tinhthoigianchuanbi();
             }

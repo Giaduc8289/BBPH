@@ -11,7 +11,7 @@ With Encryption As
 	SET XACT_ABORT ON;
 	
 	SELECT kh.Id, lsx.Solenhsx, Madon, Makhach, Tenkhach
-		, Masp As Masanpham, lsx.Ngaydat, lsx.Ngaygiao 
+		, lsx.Masanpham, lsx.Ngaydat, lsx.Ngaygiao 
 		, Sldukien 
 	FROM dbo.Kehoachin kh LEFT JOIN Lenhsanxuat lsx On lsx.Solenhsx=kh.Solenhsx
 	WHERE  Ngaychay = @Ngay

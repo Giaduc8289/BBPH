@@ -121,8 +121,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Masp</name>
-    <headerText>Mã sp</headerText>
+    <name>Masanpham</name>
+    <headerText>Mã SP</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>60</Width>
@@ -130,8 +130,8 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tenhang</name>
-    <headerText>Tên sp</headerText>
+    <name>Tensanpham</name>
+    <headerText>Tên SP</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>100</Width>

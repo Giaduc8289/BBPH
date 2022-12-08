@@ -592,13 +592,13 @@ namespace GD.BBPH.APP.IN
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_SOLENHSX.Text = _RowViewSelect[LenhsanxuatFields.Solenhsx.Name].ToString();
                 txt_SOMLSX.Text = _RowViewSelect[LenhsanxuatFields.Soluong.Name].ToString();
-                txt_MASP.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_MASP.Text = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 txt_MASP_Validating(new object(), new CancelEventArgs());
             }
             else
             {
                 txt_SOMLSX.Text = _RowViewSelect[LenhsanxuatFields.Soluong.Name].ToString();
-                txt_MASP.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_MASP.Text = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 txt_MASP_Validating(new object(), new CancelEventArgs());
             }
         }

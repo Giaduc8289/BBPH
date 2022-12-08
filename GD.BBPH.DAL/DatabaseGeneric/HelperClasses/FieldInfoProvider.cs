@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, December 3, 2022 11:01:14 AM
+// Code is generated on: Friday, December 9, 2022 2:57:56 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1109,14 +1109,14 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("LenhsanxuatEntity", "Tenkhach", typeof(System.String), false, false, false, false,  (int)LenhsanxuatFieldIndex.Tenkhach, 250, 0, 0);
 			base.AddElementFieldInfo("LenhsanxuatEntity", "Madonhangchitiet", typeof(Nullable<System.Int64>), false, false, false, true,  (int)LenhsanxuatFieldIndex.Madonhangchitiet, 0, 0, 19);
 			base.AddElementFieldInfo("LenhsanxuatEntity", "Loaihang", typeof(Nullable<System.Int32>), false, false, false, true,  (int)LenhsanxuatFieldIndex.Loaihang, 0, 0, 10);
-			base.AddElementFieldInfo("LenhsanxuatEntity", "Masp", typeof(System.String), false, false, false, true,  (int)LenhsanxuatFieldIndex.Masp, 50, 0, 0);
-			base.AddElementFieldInfo("LenhsanxuatEntity", "Tenhang", typeof(System.String), false, false, false, true,  (int)LenhsanxuatFieldIndex.Tenhang, 250, 0, 0);
 			base.AddElementFieldInfo("LenhsanxuatEntity", "Soluong", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)LenhsanxuatFieldIndex.Soluong, 0, 3, 20);
 			base.AddElementFieldInfo("LenhsanxuatEntity", "Ngaygiao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)LenhsanxuatFieldIndex.Ngaygiao, 0, 0, 0);
 			base.AddElementFieldInfo("LenhsanxuatEntity", "Ngaytao", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)LenhsanxuatFieldIndex.Ngaytao, 0, 0, 0);
 			base.AddElementFieldInfo("LenhsanxuatEntity", "Nguoitao", typeof(System.String), false, false, false, true,  (int)LenhsanxuatFieldIndex.Nguoitao, 50, 0, 0);
 			base.AddElementFieldInfo("LenhsanxuatEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)LenhsanxuatFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("LenhsanxuatEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)LenhsanxuatFieldIndex.Nguoisua, 50, 0, 0);
+			base.AddElementFieldInfo("LenhsanxuatEntity", "Masanpham", typeof(System.String), false, false, false, true,  (int)LenhsanxuatFieldIndex.Masanpham, 50, 0, 0);
+			base.AddElementFieldInfo("LenhsanxuatEntity", "Tensanpham", typeof(System.String), false, false, false, true,  (int)LenhsanxuatFieldIndex.Tensanpham, 250, 0, 0);
 		}
 		/// <summary>Inits LogbackupEntity's FieldInfo objects</summary>
 		private void InitLogbackupEntityInfos()

@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, December 3, 2022 11:01:16 AM
+// Code is generated on: Friday, December 9, 2022 2:57:58 AM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -4202,16 +4202,6 @@ namespace GD.BBPH.DAL.HelperClasses
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(LenhsanxuatFieldIndex.Loaihang);}
 		}
-		/// <summary>Creates a new LenhsanxuatEntity.Masp field instance</summary>
-		public static EntityField2 Masp
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(LenhsanxuatFieldIndex.Masp);}
-		}
-		/// <summary>Creates a new LenhsanxuatEntity.Tenhang field instance</summary>
-		public static EntityField2 Tenhang
-		{
-			get { return (EntityField2)EntityFieldFactory.Create(LenhsanxuatFieldIndex.Tenhang);}
-		}
 		/// <summary>Creates a new LenhsanxuatEntity.Soluong field instance</summary>
 		public static EntityField2 Soluong
 		{
@@ -4241,6 +4231,16 @@ namespace GD.BBPH.DAL.HelperClasses
 		public static EntityField2 Nguoisua
 		{
 			get { return (EntityField2)EntityFieldFactory.Create(LenhsanxuatFieldIndex.Nguoisua);}
+		}
+		/// <summary>Creates a new LenhsanxuatEntity.Masanpham field instance</summary>
+		public static EntityField2 Masanpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(LenhsanxuatFieldIndex.Masanpham);}
+		}
+		/// <summary>Creates a new LenhsanxuatEntity.Tensanpham field instance</summary>
+		public static EntityField2 Tensanpham
+		{
+			get { return (EntityField2)EntityFieldFactory.Create(LenhsanxuatFieldIndex.Tensanpham);}
 		}
 	}
 

@@ -162,8 +162,8 @@ namespace GD.BBPH.APP.BANHANG
                     txt_MAKHACH.Text = _Rowview.Row[LenhsanxuatFields.Makhach.Name].ToString();
                     txt_TENKHACH.Text = _Rowview.Row[LenhsanxuatFields.Tenkhach.Name].ToString();
                     txt_MADONCHITIET.Text = _Rowview.Row[LenhsanxuatFields.Madonhangchitiet.Name].ToString();
-                    txt_MASP.Text = _Rowview.Row[LenhsanxuatFields.Masp.Name].ToString();
-                    txt_TENSP.Text = _Rowview.Row[LenhsanxuatFields.Tenhang.Name].ToString();
+                    txt_MASP.Text = _Rowview.Row[LenhsanxuatFields.Masanpham.Name].ToString();
+                    txt_TENSP.Text = _Rowview.Row[LenhsanxuatFields.Tensanpham.Name].ToString();
                     txt_SOLUONG.Text = _Rowview.Row[LenhsanxuatFields.Soluong.Name].ToString();
                     txt_NGAYGIAO.Text = _Rowview.Row[LenhsanxuatFields.Ngaygiao.Name].ToString();
 
@@ -294,8 +294,8 @@ namespace GD.BBPH.APP.BANHANG
             _LenhsanxuatEntity.Tenkhach = txt_TENKHACH.Text.Trim();
             try { _LenhsanxuatEntity.Madonhangchitiet = Convert.ToInt64(txt_MADONCHITIET.Text.Trim()); }
             catch { }
-            _LenhsanxuatEntity.Masp = txt_MASP.Text.Trim();
-            _LenhsanxuatEntity.Tenhang = txt_TENSP.Text.Trim();
+            _LenhsanxuatEntity.Masanpham = txt_MASP.Text.Trim();
+            _LenhsanxuatEntity.Tensanpham = txt_TENSP.Text.Trim();
             try { _LenhsanxuatEntity.Soluong = System.Decimal.Parse(txt_SOLUONG.Text.Trim()); }
             catch { }
             try { _LenhsanxuatEntity.Ngaygiao = Convert.ToDateTime(txt_NGAYGIAO.Text.Trim()); }
@@ -458,8 +458,8 @@ namespace GD.BBPH.APP.BANHANG
                 GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Makhach.Name].Value = _LenhsanxuatEntity.Makhach;
                 GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Tenkhach.Name].Value = _LenhsanxuatEntity.Tenkhach;
                 GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Madonhangchitiet.Name].Value = _LenhsanxuatEntity.Madonhangchitiet;
-                GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Masp.Name].Value = _LenhsanxuatEntity.Masp;
-                GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Tenhang.Name].Value = _LenhsanxuatEntity.Tenhang;
+                GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Masanpham.Name].Value = _LenhsanxuatEntity.Masanpham;
+                GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Tensanpham.Name].Value = _LenhsanxuatEntity.Tensanpham;
                 GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Soluong.Name].Value = _LenhsanxuatEntity.Soluong;
                 GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Ngaygiao.Name].Value = _LenhsanxuatEntity.Ngaygiao;
 

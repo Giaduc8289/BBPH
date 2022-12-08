@@ -564,7 +564,7 @@ namespace GD.BBPH.APP.THOI
                 //txt_TENMAY.Text = _RowViewSelect[DmmayFields.Tenmay.Name].ToString();
 
                 string _masp = "";
-                _masp = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                _masp = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 DataRow[] arrDr = new MangcuahangManager().SelectByMaspRDT(_masp).Select(MangcuahangFields.Tenloaimang.Name + "='PE'");
                 if(arrDr.Length>0)
                 {
@@ -581,7 +581,7 @@ namespace GD.BBPH.APP.THOI
 
                 //-----Lấy mã màng, tên màng theo lệnh sản xuất
                 string _masp = "";
-                _masp = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                _masp = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 DataRow[] arrDr = new MangcuahangManager().SelectByMaspRDT(_masp).Select(MangcuahangFields.Tenloaimang.Name + "='PE'");
                 if (arrDr.Length > 0)
                 {

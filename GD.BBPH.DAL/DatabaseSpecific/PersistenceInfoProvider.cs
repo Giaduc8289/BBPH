@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Saturday, December 3, 2022 11:01:17 AM
+// Code is generated on: Friday, December 9, 2022 2:57:59 AM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -1155,14 +1155,14 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "LenhsanxuatEntity", "Tenkhach", "Tenkhach", false, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 7 );
 			base.AddElementFieldMapping( "LenhsanxuatEntity", "Madonhangchitiet", "Madonhangchitiet", true, (int)SqlDbType.BigInt, 0, 0, 19, false, "", null, typeof(System.Int64), 8 );
 			base.AddElementFieldMapping( "LenhsanxuatEntity", "Loaihang", "Loaihang", true, (int)SqlDbType.Int, 0, 0, 10, false, "", null, typeof(System.Int32), 9 );
-			base.AddElementFieldMapping( "LenhsanxuatEntity", "Masp", "Masp", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 10 );
-			base.AddElementFieldMapping( "LenhsanxuatEntity", "Tenhang", "Tenhang", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 11 );
-			base.AddElementFieldMapping( "LenhsanxuatEntity", "Soluong", "Soluong", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 12 );
-			base.AddElementFieldMapping( "LenhsanxuatEntity", "Ngaygiao", "Ngaygiao", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 13 );
-			base.AddElementFieldMapping( "LenhsanxuatEntity", "Ngaytao", "Ngaytao", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 14 );
-			base.AddElementFieldMapping( "LenhsanxuatEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 15 );
-			base.AddElementFieldMapping( "LenhsanxuatEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 16 );
-			base.AddElementFieldMapping( "LenhsanxuatEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 17 );
+			base.AddElementFieldMapping( "LenhsanxuatEntity", "Soluong", "Soluong", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 10 );
+			base.AddElementFieldMapping( "LenhsanxuatEntity", "Ngaygiao", "Ngaygiao", true, (int)SqlDbType.Date, 0, 0, 0, false, "", null, typeof(System.DateTime), 11 );
+			base.AddElementFieldMapping( "LenhsanxuatEntity", "Ngaytao", "Ngaytao", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 12 );
+			base.AddElementFieldMapping( "LenhsanxuatEntity", "Nguoitao", "Nguoitao", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 13 );
+			base.AddElementFieldMapping( "LenhsanxuatEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 14 );
+			base.AddElementFieldMapping( "LenhsanxuatEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 15 );
+			base.AddElementFieldMapping( "LenhsanxuatEntity", "Masanpham", "Masanpham", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 16 );
+			base.AddElementFieldMapping( "LenhsanxuatEntity", "Tensanpham", "Tensanpham", true, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 17 );
 		}
 		/// <summary>Inits LogbackupEntity's mappings</summary>
 		private void InitLogbackupEntityMappings()
