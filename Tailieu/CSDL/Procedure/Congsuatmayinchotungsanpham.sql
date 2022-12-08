@@ -48,23 +48,22 @@ With Encryption As
 	FROM #Nhucau1 WHERE Somet>0 ORDER BY Ngaygiao
 
 
-
 	SELECT Mamay, Madm As Madongmay
-		, Masanpham, Makhach, Madonhangchitiet
-		, dbo.fTinhtocdomay(Mamay,Masanpham,'') As Congsuat
-	INTO #CsMay_Donchitiet
+		, Masanpham, Makhach, Solenhsx
+		, dbo.fTinhtocdomay(Mamay,Masanpham,'')*60*12 As Congsuat
+	INTO #CsMay_Lenhsx
 	FROM (Select * From Dmmay Where Madm='IN')m 
-		,(Select DISTINCT Masanpham, Makhach, Madonhangchitiet
+		,(Select DISTINCT Masanpham, Makhach, Solenhsx
 					FROM #Nhucau) nc
 
 
 	SET @v_columns = N''
-	SELECT @v_columns += N', ' + QUOTENAME(Madonhangchitiet) FROM (SELECT Madonhangchitiet FROM #CsMay_Donchitiet GROUP BY Madonhangchitiet) AS x ORDER BY x.Madonhangchitiet
+	SELECT @v_columns += N', ' + QUOTENAME(Solenhsx) FROM (SELECT Solenhsx FROM #CsMay_Lenhsx GROUP BY Solenhsx) AS x ORDER BY x.Solenhsx
 	SET	@v_sql = N'Select Mamay,' 
 		+ STUFF(@v_columns,1, 2, '') 
-		+ ' From (Select Mamay, Madongmay, Madonhangchitiet, Congsuat From #CsMay_Donchitiet) As j '
+		+ ' From (Select Mamay, Madongmay, Solenhsx, Congsuat From #CsMay_Lenhsx) As j '
 		+ ' PIVOT ('
-		+ ' SUM(Congsuat) FOR Madonhangchitiet IN ('
+		+ ' SUM(Congsuat) FOR Solenhsx IN ('
 		+ STUFF(REPLACE(@v_columns,', [',',['),1,1,'')
 		+ ') 
 		) As p Order by Madongmay'

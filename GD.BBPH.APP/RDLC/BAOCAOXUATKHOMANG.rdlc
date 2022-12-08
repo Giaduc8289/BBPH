@@ -1049,14 +1049,14 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="GDSXBBAPPRDLC">
+    <DataSource Name="GDBBPHAPPRDLC">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
       <rd:DataSourceID>aab5d838-892d-4cba-8857-2b616dc0eea5</rd:DataSourceID>
     </DataSource>
-    <DataSource Name="DataSXBB">
+    <DataSource Name="DataBBPH">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
@@ -1067,7 +1067,7 @@
   <DataSets>
     <DataSet Name="Ketqua">
       <Query>
-        <DataSourceName>DataSXBB</DataSourceName>
+        <DataSourceName>DataBBPH</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1339,7 +1339,7 @@
     </DataSet>
     <DataSet Name="Thamso">
       <Query>
-        <DataSourceName>DataSXBB</DataSourceName>
+        <DataSourceName>DataBBPH</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>

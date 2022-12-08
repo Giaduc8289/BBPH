@@ -17,6 +17,6 @@ Create Procedure dbo.Loclenhsanxuat
 		
 GO
 
-Exec Loclenhsanxuat '10/01/2022', '10/30/2022'
+Exec Loclenhsanxuat '12/01/2022', '12/30/2022'
 
 

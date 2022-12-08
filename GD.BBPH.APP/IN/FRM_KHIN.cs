@@ -126,7 +126,7 @@ namespace GD.BBPH.APP.IN
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LUULAI, btn_LUULAI.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_SUA, btn_SUA.Name + ".xml");
-            GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_THEMMOI, btn_THEMMOI.Name + ".xml");
+            GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_LAPKH, btn_LAPKH.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_XOA, btn_XOA.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_KHOIPHUC, btn_KHOIPHUC.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
@@ -139,9 +139,9 @@ namespace GD.BBPH.APP.IN
             GRID_LENHSANXUAT.DataSource = BS_LENHSANXUAT;
             BS_LENHSANXUAT.CurrentChanged += new EventHandler(BS_LENHSANXUAT_CurrentChanged);
             BS_LENHSANXUAT_CurrentChanged((new object()), (new EventArgs()));
-            GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+            GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_LOAD, _MenuroleEntity, ref btn_LAPKH, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
-            btn_THEMMOI.Focus();
+            btn_LAPKH.Focus();
         }
         void BS_LENHSANXUAT_CurrentChanged(object sender, EventArgs e)
         {
@@ -212,7 +212,7 @@ namespace GD.BBPH.APP.IN
                         Decimal _tocdo = 0, _congsuat = 0, _daitui = 0;
                         int _sohinh = 0;
                         _tocdo = LIB.Procedures.fTinhtocdomay(dr[DmmayFields.Mamay.Name].ToString(), txt_MASANPHAM.Text);
-                        _congsuat = _tocdo * 60 * 12;   //-----Công suất của 1 ca (m/ca)
+                        _congsuat = _tocdo * 60 * 12;                       //-----Công suất của 1 ca (m/ca)
                         DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(txt_MASANPHAM.Text);
                         _sohinh = Convert.ToInt32(_DmhangEntity.Sohinh);
                         _daitui = Convert.ToDecimal(_DmhangEntity.Dai);
@@ -327,7 +327,7 @@ namespace GD.BBPH.APP.IN
             }
             #endregion
 
-            //DT_KEHOACH_FULL = new KehoachinManager().SelectByCondition(Tungay, Denngay);
+            DT_KEHOACH_FULL = new KehoachinManager().SelectByCondition(Tungay, Denngay);
         }
 
         #region Event GRID_DMMAY
@@ -343,15 +343,15 @@ namespace GD.BBPH.APP.IN
                 int _Ca = Convert.ToInt32(sCol.Substring(sCol.Length - 1));
                 string _May = GRID_DMMAY.CurrentRow.Cells[DmmayFields.Mamay.Name].Value.ToString();
 
-                //FRM_VIEWKHIN frm = new FRM_VIEWKHIN(_Ngay, _Ca, _May);
-                //frm.StartPosition = FormStartPosition.Manual;
-                //frm.Left = Cursor.Position.X + frm.Width + GRID_DMMAY.CurrentColumn.Width < Screen.PrimaryScreen.WorkingArea.Width
-                //    ? Cursor.Position.X + GRID_DMMAY.CurrentColumn.Width
-                //    : Cursor.Position.X - frm.Width - GRID_DMMAY.CurrentColumn.Width;
-                //frm.Top = Cursor.Position.Y + frm.Height < Screen.PrimaryScreen.WorkingArea.Height
-                //    ? Cursor.Position.Y
-                //    : Cursor.Position.Y - frm.Height;
-                //frm.ShowDialog();
+                FRM_VIEWKHIN frm = new FRM_VIEWKHIN(_Ngay, _Ca, _May);
+                frm.StartPosition = FormStartPosition.Manual;
+                frm.Left = Cursor.Position.X + frm.Width + GRID_DMMAY.CurrentColumn.Width < Screen.PrimaryScreen.WorkingArea.Width
+                    ? Cursor.Position.X + GRID_DMMAY.CurrentColumn.Width
+                    : Cursor.Position.X - frm.Width - GRID_DMMAY.CurrentColumn.Width;
+                frm.Top = Cursor.Position.Y + frm.Height < Screen.PrimaryScreen.WorkingArea.Height
+                    ? Cursor.Position.Y
+                    : Cursor.Position.Y - frm.Height;
+                frm.ShowDialog();
 
                 GRID_DMMAY.CurrentRow.Cells[GRID_DMMAY.CurrentColumn.Key].FormatStyle.BackColor = currentColor;
             }
@@ -416,10 +416,10 @@ namespace GD.BBPH.APP.IN
                         }
                     }
 
-                    string s_mamayin = _GridEXRow.Cells[DmmayFields.Mamay.Name].Value.ToString();
+                    string s_mamay = _GridEXRow.Cells[DmmayFields.Mamay.Name].Value.ToString();
                     if (DT_KEHOACH_FULL.Rows.Count > 0)
                     {
-                        DataRow[] arrDr = DT_KEHOACH_FULL.Select(KehoachinFields.Mamay.Name + "='" + s_mamayin + "'");
+                        DataRow[] arrDr = DT_KEHOACH_FULL.Select(KehoachinFields.Mamay.Name + "='" + s_mamay + "'");
                         if (arrDr.Length > 0)
                         {
                             foreach (DataRow dr in arrDr)
@@ -452,14 +452,14 @@ namespace GD.BBPH.APP.IN
                 //----Tinh khoi luong da sap xep trong ca
                 string sngay = e.Column.DataMember.Substring(0, 5) + "/" + LIB.SESSION_START.TS_NGAYLAMVIEC.Year.ToString();
                 DateTime ngay = Convert.ToDateTime(sngay);
-                string s_mamayin = GRID_DMMAY.CurrentRow.Cells[DmmayFields.Mamay.Name].Value.ToString();
+                string s_mamay = GRID_DMMAY.CurrentRow.Cells[DmmayFields.Mamay.Name].Value.ToString();
                 decimal congsuat = Convert.ToDecimal(GRID_DMMAY.CurrentRow.Cells["Congsuat"].Value.ToString());
                 decimal kluongdachay = 0;
                 decimal gtri = Convert.ToDecimal(GRID_DMMAY.CurrentRow.Cells[e.Column.DataMember].Value.ToString());
 
                 if (DT_KEHOACH_FULL.Rows.Count > 0)
                 {
-                    DataRow[] arrDr = DT_KEHOACH_FULL.Select(KehoachinFields.Mamay.Name + "='" + s_mamayin + "' And "
+                    DataRow[] arrDr = DT_KEHOACH_FULL.Select(KehoachinFields.Mamay.Name + "='" + s_mamay + "' And "
                         + KehoachinFields.Ngaychay.Name + "='" + sngay + "' And "
                         + KehoachinFields.Ca.Name + "='" + e.Column.DataMember.Substring(7, 1) + "' And "
                         + KehoachinFields.Solenhsx.Name + "<>'" + MAHIEU_PK + "'");
@@ -515,7 +515,7 @@ namespace GD.BBPH.APP.IN
         }
         #endregion
 
-        private void btn_THEMMOI_Click(object sender, EventArgs e)
+        private void btn_LAPKH_Click(object sender, EventArgs e)
         {
             try
             {
@@ -545,7 +545,7 @@ namespace GD.BBPH.APP.IN
                 //dtKehoachin.Columns.Add(KehoachinFields.Id.Name, Type.GetType("System.Int64"));
                 dtKehoachin.Columns.Add(KehoachinFields.Ca.Name, Type.GetType("System.Int32"));
                 dtKehoachin.Columns.Add(KehoachinFields.Mamay.Name, Type.GetType("System.String"));
-                dtKehoachin.Columns.Add(KehoachinFields.Solenhsx.Name, Type.GetType("System.String"));//-----bên SXBB Madonhangct
+                dtKehoachin.Columns.Add(KehoachinFields.Solenhsx.Name, Type.GetType("System.String"));
                 dtKehoachin.Columns.Add(KehoachinFields.Sldukien.Name, Type.GetType("System.Decimal"));
                 dtKehoachin.Columns.Add(KehoachinFields.Masanpham.Name, Type.GetType("System.String"));
                 dtKehoachin.Columns.Add(DmhangFields.Makhach.Name, Type.GetType("System.String"));
@@ -569,7 +569,7 @@ namespace GD.BBPH.APP.IN
                     //drKhin[KehoachinFields.Id.Name] = dr[KehoachinFields.Id.Name];
                     drKhin[KehoachinFields.Ca.Name] = (Convert.ToDateTime(dr[KehoachinFields.Ngaychay.Name].ToString()) - Tungay).Days * 2 + Convert.ToInt32(dr[KehoachinFields.Ca.Name].ToString()) - 1;
                     drKhin[KehoachinFields.Mamay.Name] = dr[KehoachinFields.Mamay.Name];
-                    drKhin[KehoachinFields.Solenhsx.Name] = dr[KehoachinFields.Solenhsx.Name];//-----bên SXBB Madonhangct
+                    drKhin[KehoachinFields.Solenhsx.Name] = dr[KehoachinFields.Solenhsx.Name];
                     drKhin[KehoachinFields.Sldukien.Name] = dr[KehoachinFields.Sldukien.Name];
                     drKhin[KehoachinFields.Masanpham.Name] = dr[KehoachinFields.Masanpham.Name];
                     drKhin[DmhangFields.Makhach.Name] = dr[DmhangFields.Makhach.Name];
@@ -610,8 +610,6 @@ namespace GD.BBPH.APP.IN
                                     _KehoachinEntity.Ngaychay = Tungay.AddDays(Convert.ToInt32(dr[KehoachinFields.Ca.Name].ToString()) / 2);
                                     _KehoachinEntity.Ca = Convert.ToInt32(Convert.ToInt32(dr[KehoachinFields.Ca.Name].ToString()) % 2 + 1);
                                     _KehoachinEntity.Mamay = dr[KehoachinFields.Mamay.Name].ToString();
-                                    //_KehoachinEntity.Mauin = DT_Nhucauin.Select(DonhangDFields.Id.Name + "='" + dr[KehoachinFields.Solenhsx.Name].ToString() + "'")[0][KehoachinFields.Masanpham.Name].ToString();
-                                    //_KehoachinEntity.Mamanh = DT_Nhucauin.Select(DonhangDFields.Id.Name + "='" + dr[KehoachinFields.Solenhsx.Name].ToString() + "'")[0][KehoachinFields.Mamanh.Name].ToString();
                                     _KehoachinEntity.Solenhsx = dr[KehoachinFields.Solenhsx.Name].ToString();
                                     _KehoachinEntity.Sldukien = Convert.ToInt32(Convert.ToDecimal(dr[KehoachinFields.Sldukien.Name].ToString()));
 
@@ -624,7 +622,7 @@ namespace GD.BBPH.APP.IN
                             GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
                             return true;
                         }
-                        catch (Exception ex) { MessageBox.Show("Lỗi ghi kế hoạch!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                        catch (Exception ex) { MessageBox.Show("Lỗi ghi kế hoạch!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                     }
                 }
                 #endregion
@@ -737,7 +735,7 @@ namespace GD.BBPH.APP.IN
                         {
                             ktra = false;
                             //-----Thông tin tính Kldukien
-                            Decimal _Congsuat = Convert.ToDecimal(DT_CSMAYIN.Rows[May][dr[LenhsanxuatFields.Madonhangchitiet.Name].ToString()].ToString()) - _Csdabotri;// Convert.ToDecimal(DT_DMMAY_TEMP.Rows[May][CongsuatmaysoiFields.Congsuat.Name].ToString());
+                            Decimal _Congsuat = Convert.ToDecimal(DT_CSMAYIN.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString()) - _Csdabotri;
                             Decimal _Nhucauconlai = Convert.ToDecimal(dr["Somet"].ToString()) - Convert.ToDecimal(dr["Dasanxuat"].ToString());
                             Decimal _Kldukien = 0;
 
@@ -745,13 +743,12 @@ namespace GD.BBPH.APP.IN
                             else _Kldukien = _Nhucauconlai;
 
                             DataRow drKehoachin = dtKehoachin.NewRow();
-                            //drKehoachin[KehoachinFields.Ngaychay.Name] = sNgay;
-                            drKehoachin[KehoachinFields.Ca.Name] = Ca;// sCa;
+                            drKehoachin[KehoachinFields.Ca.Name] = Ca;
                             drKehoachin[KehoachinFields.Mamay.Name] = sMay;
-                            drKehoachin[KehoachinFields.Solenhsx.Name] = dr[KehoachinFields.Solenhsx.Name];// dr[DonhangDFields.Id.Name];
+                            drKehoachin[KehoachinFields.Solenhsx.Name] = dr[KehoachinFields.Solenhsx.Name];
                             drKehoachin[KehoachinFields.Masanpham.Name] = dr[KehoachinFields.Masanpham.Name];
                             drKehoachin[DmhangFields.Makhach.Name] = dr[DmhangFields.Makhach.Name];
-                            drKehoachin[KehoachinFields.Sldukien.Name] = _Kldukien;//drKehoachin[KehoachinFields.Sldukien.Name] = _Kldukien;
+                            drKehoachin[KehoachinFields.Sldukien.Name] = _Kldukien;
                             dtKehoachin.Rows.Add(drKehoachin);
                             dr["Dasanxuat"] = Convert.ToDecimal(dr["Dasanxuat"].ToString()) + _Kldukien;
                             Tongnhucauin -= _Kldukien;
@@ -778,24 +775,20 @@ namespace GD.BBPH.APP.IN
         {
             try
             {
-                string sMay = "";//, sDongmay = "";
-                string sFillter = "";
-                //sFillter = "(" + KehoachinFields.Ca.Name + "='" + ((int)(Ca / 2))*2 + "' Or " + KehoachinFields.Ca.Name + "='" + (((int)(Ca / 2))*2 + 1) + "') ";
+                string sMay = "", sFillter = "", sFilterNgay = "";
                 sFillter = KehoachinFields.Ca.Name + "='" + Ca + "'";
-                string sFilterNgay = "";
                 sFilterNgay = KehoachinFields.Ca.Name + "<='" + Ca + "' And " + KehoachinFields.Ca.Name + ">='"
                     + (Ca - 3 < 0 ? "0" : (Ca - 3).ToString()) + "'";
                 sMay = DT_DMMAY_TEMP.Rows[May][DmmayFields.Mamay.Name].ToString();
-                //sDongmay = DT_DMMAY_TEMP.Rows[May][DmmayFields.Madm.Name].ToString();
 
                 Decimal _Nhucauconlai = Convert.ToDecimal(dr["Somet"].ToString()) - Convert.ToDecimal(dr["Dasanxuat"].ToString());
-                string sMadonhangct = dr[LenhsanxuatFields.Madonhangchitiet.Name].ToString(); //dr[DonhangDFields.Id.Name].ToString();
-                string sMahang = dr[KehoachinFields.Masanpham.Name].ToString(); //dr[DonhangDFields.Masp.Name].ToString();
+                string sMadonhangct = dr[LenhsanxuatFields.Madonhangchitiet.Name].ToString(); 
+                string sMahang = dr[KehoachinFields.Masanpham.Name].ToString(); 
 
                 //----Đã sản xuất xong không sắp xếp chạy
                 if (_Nhucauconlai <= 0) return false;
                 //----Công suất = 0 không chạy
-                decimal _Congsuat = LIB.ConvertString.NumbertoDB(DT_CSMAYIN.Rows[May][dr[LenhsanxuatFields.Madonhangchitiet.Name].ToString()].ToString());//[dr[DonhangDFields.Masp.Name].ToString()].ToString());
+                decimal _Congsuat = LIB.ConvertString.NumbertoDB(DT_CSMAYIN.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
                 if (_Congsuat == 0) return false;
                 else
                 {
@@ -1098,11 +1091,13 @@ namespace GD.BBPH.APP.IN
                 //        }
                 //    }
                 //}
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_LAPKH, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             catch (Exception ex) { }
             return _str_DMCHUONG_PK;
         }
+
+        #region Button
         private void btn_SUA_Click(object sender, EventArgs e)
         {
             try
@@ -1110,7 +1105,7 @@ namespace GD.BBPH.APP.IN
                 if (string.IsNullOrEmpty(MAHIEU_PK)) { return; }
                 else
                 {
-                    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                    GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_LAPKH, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                     //GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_DONHANG }));
                     //txt_MAHANG.Focus();
                     GRID_DMMAY.Enabled = true;
@@ -1125,7 +1120,7 @@ namespace GD.BBPH.APP.IN
             try
             {
                 BS_LENHSANXUAT_CurrentChanged(new object(), new EventArgs());
-                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_CANCEL, _MenuroleEntity, ref btn_LAPKH, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                 FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, new List<Control>(new Control[] { }));
                 GRID_LENHSANXUAT.Enabled = true;
             }
@@ -1146,7 +1141,7 @@ namespace GD.BBPH.APP.IN
                         LIB.Procedures.Xoakehoachin("", Tungay, Denngay);
                         BS_LENHSANXUAT_CurrentChanged(new object(), new EventArgs());
                         GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
-                        GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KehoachinManager.Convert(_KehoachinEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
+                        GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KehoachinManager.Convert(_KehoachinEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_LAPKH, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
                     }
                     catch (Exception ex)
                     {
@@ -1185,11 +1180,12 @@ namespace GD.BBPH.APP.IN
                 MAHIEU_PK = Save_Data(MAHIEU_PK);
                 GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
                 GRID_LENHSANXUAT.Enabled = true;
-                btn_THEMMOI.Focus();
+                btn_LAPKH.Focus();
             }
             catch { }
             GRID_DMMAY.AllowEdit = Janus.Windows.GridEX.InheritableBoolean.False;
         }
+        #endregion
 
         #region Validate
         private void txt_MASANPHAM_Validating(object sender, CancelEventArgs e)
@@ -1224,6 +1220,7 @@ namespace GD.BBPH.APP.IN
         }
         #endregion
 
+        #region Đóng form
         private void uiPanel0_Resize(object sender, EventArgs e)
         {
             if (uiPanel0.Width > 820)
@@ -1254,5 +1251,7 @@ namespace GD.BBPH.APP.IN
                 }
             }
         }
+        #endregion
+
     }
 }
