@@ -57,13 +57,13 @@ namespace GD.BBPH.APP.IN
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQIN");
-                        DT_KQIN = LIB.Procedures.Danhsachketquain(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // LIB.SESSION_START.DT_KQIN;
-                        DT_KQIN_CHITIET = LIB.SESSION_START.DT_KQIN;
+                        DT_KQIN = LIB.Procedures.Danhsachketquain(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // new KetquainManager().SelectAllRDT();
+                        DT_KQIN_CHITIET = new KetquainManager().SelectAllRDT();
 
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("IN");// LIB.SESSION_START.DT_DMMAY;
-                        DT_DMSP = LIB.SESSION_START.DM_HANG;
-                        DT_LENHSANXUAT = LIB.SESSION_START.DT_LENHSANXUAT;
-                        DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("IN");// new DmmayManager().SelectAllRDT();
+                        DT_DMSP = new DmhangManager().SelectAllRDT();
+                        DT_LENHSANXUAT = new LenhsanxuatManager().SelectAllRDT();
+                        DT_NHANVIEN =  new DmcongnhanManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate

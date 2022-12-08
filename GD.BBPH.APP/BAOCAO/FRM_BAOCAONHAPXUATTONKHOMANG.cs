@@ -54,8 +54,8 @@ namespace GD.BBPH.APP.BAOCAO
                         DateTime Ngaydauthang = LIB.SESSION_START.TS_NGAYDAUTHANG;
                         DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
                         
-                        DT_DMKHO = LIB.SESSION_START.DT_DMKHO;
-                        DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
+                        DT_DMKHO = new DmkhoManager().SelectAllRDT();
+                        DT_DMMANG = new DmmangManager().SelectAllRDT();
 
                     }
                 };

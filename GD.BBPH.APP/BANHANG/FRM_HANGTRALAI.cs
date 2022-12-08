@@ -55,10 +55,10 @@ namespace GD.BBPH.APP.BANHANG
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_HANGTRALAI");
-                        DT_HANGTRALAI = LIB.SESSION_START.DT_HANGTRALAI;
+                        DT_HANGTRALAI = new HangtralaiManager().SelectAllRDT();
 
-                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-                        DT_HANG = LIB.SESSION_START.DM_HANG;
+                        DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+                        DT_HANG = new DmhangManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate

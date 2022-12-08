@@ -49,7 +49,7 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMNHOMQUYCACH");
-                        DT_DMNHOMQUYCACH = LIB.SESSION_START.DT_DMNHOMQUYCACH;
+                        DT_DMNHOMQUYCACH = new DmnhomquycachManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate

@@ -63,8 +63,8 @@ namespace GD.BBPH.APP.BANHANG
                         DT_DONDATHANG_D = LIB.Procedures.Danhsachdonhangchitiet(LIB.SESSION_START.TS_NGAYDAUNAM, LIB.SESSION_START.TS_NGAYCUOINAM, MAHIEU_PK, SOBAOGIA, MAKHACHHANG, Masp);
                         DT_DONDATHANG_D_FILL = DT_DONDATHANG_D.Clone();
 
-                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-                        DT_DMHANG = LIB.SESSION_START.DM_HANG;
+                        DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+                        DT_DMHANG = new DmhangManager().SelectAllRDT();
                         DT_BAOGIA_H = new BaogiaHManager().SelectAllRDT();
                         //DT_BAOGIA_D = LIB.SESSION_START.DT_BAOGIA_D;
                         DT_NHANVIEN = new DmcongnhanManager().SelectByMabpRDT("KD");
@@ -693,8 +693,8 @@ namespace GD.BBPH.APP.BANHANG
 
         private void btn_LAMMOI_Click(object sender, EventArgs e)
         {
-            DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-            DT_DMHANG = LIB.SESSION_START.DM_HANG;
+            DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+            DT_DMHANG = new DmhangManager().SelectAllRDT();
             //DT_BAOGIA_H = LIB.SESSION_START.DT_BAOGIA_H;
             //DT_BAOGIA_D = LIB.SESSION_START.DT_BAOGIA_D;
             DT_NHANVIEN = new DmcongnhanManager().SelectPhongbanChuanghi(new string[] { "KD" }); /*LIB.SESSION_START.DT_NHANVIEN;*/
@@ -779,8 +779,8 @@ namespace GD.BBPH.APP.BANHANG
         //    FRM_TIMKIEM frm = new FRM_TIMKIEM();
         //    frm.ShowDialog();
         //    if (frm._DialogResult == DialogResult.No) return;
-        //    DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-        //    DT_DMHANG = LIB.SESSION_START.DM_HANG;
+        //    DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+        //    DT_DMHANG = new DmhangManager().SelectAllRDT();
         //    MAKHACHHANG = frm._Makhachhang;
         //    Masp = frm._Masp;
         //    SOBAOGIA = frm._Sobaogia;

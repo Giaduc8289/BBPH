@@ -55,13 +55,13 @@ namespace GD.BBPH.APP.TUA
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_TKKQTUA");
-                        DT_TKKQTUA = LIB.Procedures.Danhsachketquatua(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); //LIB.SESSION_START.DT_TKKQTUA;
-                        DT_TKKQTUA_CHITIET = LIB.SESSION_START.DT_TKKQTUA;
+                        DT_TKKQTUA = LIB.Procedures.Danhsachketquatua(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty); //new KetquatuaManager().SelectAllRDT();
+                        DT_TKKQTUA_CHITIET = new KetquatuaManager().SelectAllRDT();
 
-                        DT_HANG = LIB.SESSION_START.DM_HANG;
-                        DT_DMCONGNHAN = LIB.SESSION_START.DT_DMCONGNHAN;
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("KT");// LIB.SESSION_START.DT_DMMAY;
-                        DT_LENHSX = LIB.SESSION_START.DT_LENHSANXUAT;
+                        DT_HANG = new DmhangManager().SelectAllRDT();
+                        DT_DMCONGNHAN =  new DmcongnhanManager().SelectAllRDT();
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("KT");// new DmmayManager().SelectAllRDT();
+                        DT_LENHSX = new LenhsanxuatManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate

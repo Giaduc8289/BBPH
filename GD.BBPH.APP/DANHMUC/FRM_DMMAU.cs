@@ -56,8 +56,8 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMMAU");
-                        DT_DMMAU = LIB.SESSION_START.DT_DMMAU;
-                        DT_TPMAU = LIB.SESSION_START.DT_TPMAU;
+                        DT_DMMAU =new DmmauManager().SelectAllRDT();
+                        DT_TPMAU = new ThanhphanmauManager().SelectAllRDT();
 
                         DT_DMHANG = new DmhangManager().SelectAllRDT();
                     }

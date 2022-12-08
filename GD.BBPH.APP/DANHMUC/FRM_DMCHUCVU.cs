@@ -52,7 +52,7 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMCHUCVU");
-                        DT_DMCHUCVU = LIB.SESSION_START.DT_DMCHUCVU;
+                        DT_DMCHUCVU = new DmchucvuManager().SelectAllRDT();
 
                         //DT_DMPHONGBAN = LIB.SESSION_START.DT_DMPHONGBAN;
                     }

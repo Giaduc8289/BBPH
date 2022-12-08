@@ -49,7 +49,7 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_LYDONHAPXUAT");
-                        DT_DMLYDONHAPXUAT = LIB.SESSION_START.DT_DMLYDONHAPXUAT;
+                        DT_DMLYDONHAPXUAT =new DmlydonhapxuatManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate

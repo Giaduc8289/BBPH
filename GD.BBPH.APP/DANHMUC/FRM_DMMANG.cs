@@ -51,9 +51,9 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMMANG");
-                        DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
+                        DT_DMMANG = new DmmangManager().SelectAllRDT();
 
-                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+                        DT_DMKHACH = new DmkhachManager().SelectAllRDT();
                         DT_CTPT = LIB.Procedures.Danhsachctpt();
                         DT_QCMANG = new DmquycachManager().SelectByManhomRDT("N10");
                         DT_LOAIMANG = new DmquycachManager().SelectByManhomRDT("N09");
@@ -85,7 +85,7 @@ namespace GD.BBPH.APP.DANHMUC
 
         private void LoadDanhMuc()
         {
-            DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+            DT_DMKHACH = new DmkhachManager().SelectAllRDT();
             DT_CTPT = LIB.Procedures.Danhsachctpt();
             DT_QCMANG = new DmquycachManager().SelectByManhomRDT("N10");
             DT_LOAIMANG = new DmquycachManager().SelectByManhomRDT("N09");

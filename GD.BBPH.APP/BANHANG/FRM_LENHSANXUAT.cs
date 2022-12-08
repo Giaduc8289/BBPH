@@ -58,8 +58,8 @@ namespace GD.BBPH.APP.BANHANG
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_LENHSANXUAT");
                         DT_LENHSANXUAT = LIB.Procedures.Loclenhsanxuat(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG);
-                        DT_DONHANG_H = LIB.SESSION_START.DT_DONHANG_H;
-                        //DT_DONHANG_D = LIB.SESSION_START.DT_DONHANG_D; //new DonhangDManager().SelectByMadonRDT();
+                        DT_DONHANG_H = new DonhangHManager().SelectAllRDT();
+                        //DT_DONHANG_D = new DonhangDManager().SelectAllRDT(); //new DonhangDManager().SelectByMadonRDT();
 
                         //DT_DMPHONGBAN = LIB.SESSION_START.DT_DMPHONGBAN;
                     }

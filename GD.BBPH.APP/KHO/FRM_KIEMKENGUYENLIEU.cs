@@ -55,8 +55,8 @@ namespace GD.BBPH.APP.KHO
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KIEMKENGUYENLIEU");
                         DT_SODUNGUYENLIEU = LIB.Procedures.Danhsachkiemkenguyenlieu(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, string.Empty); //LIB.SESSION_START.DT_SODUNGUYENLIEU;
-                        DT_SODUNGUYENLIEU_CHITIET = LIB.SESSION_START.DT_SODUNGUYENLIEU;
-                        DT_DMKHO = LIB.SESSION_START.DT_DMKHO;
+                        DT_SODUNGUYENLIEU_CHITIET = new SodunguyenlieuManager().SelectAllRDT();
+                        DT_DMKHO = new DmkhoManager().SelectAllRDT();
                         DT_DMNGUYENLIEU = LIB.SESSION_START.DT_DMNGUYENLIEU;
                     }
                 };

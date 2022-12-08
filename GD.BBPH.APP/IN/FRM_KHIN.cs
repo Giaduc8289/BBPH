@@ -79,7 +79,7 @@ namespace GD.BBPH.APP.IN
 
                         //Socatrongngay = Convert.ToInt32((Convert.ToInt32(LIB.Procedures.Laygiatrithamso("Socongnhanin"))-4)/2);
                         DT_DMMAY = new DmmayManager().SelectByMadmRDT("IN"); 
-                        DT_HANG = LIB.SESSION_START.DM_HANG;
+                        DT_HANG = new DmhangManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate

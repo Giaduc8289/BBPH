@@ -49,7 +49,7 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMKHO");
-                        DT_DMKHO = LIB.SESSION_START.DT_DMKHO;
+                        DT_DMKHO = new DmkhoManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate

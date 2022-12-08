@@ -54,8 +54,8 @@ namespace GD.BBPH.APP.THOI
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_TKNLTHOI");
-                        DT_TKNLTHOI = LIB.Procedures.Danhsachthongkenguyenlieu(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, string.Empty); //LIB.SESSION_START.DT_TKNLTHOI;
-                        DT_TKNLTHOI_CHITIET = LIB.SESSION_START.DT_TKNLTHOI;
+                        DT_TKNLTHOI = LIB.Procedures.Danhsachthongkenguyenlieu(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, string.Empty); //new TknguyenlieuthoiManager().SelectAllRDT();
+                        DT_TKNLTHOI_CHITIET = new TknguyenlieuthoiManager().SelectAllRDT();
 
                         DT_DMNGUYENLIEU = LIB.SESSION_START.DT_DMNGUYENLIEU;
                     }
