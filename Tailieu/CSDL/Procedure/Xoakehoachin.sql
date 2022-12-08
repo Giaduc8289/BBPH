@@ -4,7 +4,7 @@ If Object_ID('dbo.Xoakehoachin','P') is not null
 Go
 
 Create Procedure dbo.Xoakehoachin
-	@Madonhangchitiet		NVARCHAR(20),
+	@Solenhsx		Nvarchar(50),
 	@Tungay			DATE,
 	@Denngay		DATE
 With Encryption As
@@ -12,13 +12,13 @@ With Encryption As
 	SET XACT_ABORT ON;
 	
 	Delete Kehoachin 
-	Where (Madonhangct = @Madonhangchitiet OR @Madonhangchitiet='')  
-		And Ngaychay Between @Tungay And @Denngay
+	Where Ngaychay Between @Tungay And @Denngay
+		And (Solenhsx=@Solenhsx Or @Solenhsx='')
 
 Go
 
 
-Exec Lapkehoachin '', 'DH015', '', '08/01/2020', '08/31/2020'
+Exec Xoakehoachin '112/2022', '12/01/2022', '12/31/2022'
 
 SELECT * FROM dbo.Kehoachin
 --DELETE  Kehoachin

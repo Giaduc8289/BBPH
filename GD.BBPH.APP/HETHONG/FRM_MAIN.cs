@@ -971,6 +971,16 @@ namespace GD.BBPH.APP.HETHONG
                 #endregion
 
                 #region Chia
+                case "FRM_KHCHIA":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KHCHIA") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    GD.BBPH.APP.DANHMUC.FRM_THOIGIANDCKH _FRM_THOIGIANDCKH_CHIA = new GD.BBPH.APP.DANHMUC.FRM_THOIGIANDCKH();
+                    _FRM_THOIGIANDCKH_CHIA.ShowDialog();
+                    if (_FRM_THOIGIANDCKH_CHIA._DialogResult == DialogResult.No) return;
+                    ShowAsMDIChildMax((new GD.BBPH.APP.CHIA.FRM_KHCHIA(_FRM_THOIGIANDCKH_CHIA.Tungay, _FRM_THOIGIANDCKH_CHIA.Denngay)), mmru.Text);
+                    break;
                 case "FRM_KQCHIA":
                     foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
                     {
