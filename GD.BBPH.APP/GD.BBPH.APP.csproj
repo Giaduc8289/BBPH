@@ -387,6 +387,12 @@
     <Compile Include="BAOCAO\FRM_REPORTVIEWER.designer.cs">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
     </Compile>
+    <Compile Include="CHIA\FRM_KHCHIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHIA\FRM_KHCHIA.designer.cs">
+      <DependentUpon>FRM_KHCHIA.cs</DependentUpon>
+    </Compile>
     <Compile Include="CHIA\FRM_KQCHIA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -934,6 +940,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CHIA\FRM_KHCHIA.resx">
+      <DependentUpon>FRM_KHCHIA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CHIA\FRM_KQCHIA.resx">
       <DependentUpon>FRM_KQCHIA.cs</DependentUpon>
