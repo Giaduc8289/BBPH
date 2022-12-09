@@ -34,7 +34,7 @@ namespace GD.BBPH.LIB
                  // DM màng
                 , "Doday", "Rong"
                  // DONHANG
-                ,"Soluong"
+                ,"Soluong", "Soluongconlai"
                  // HANGTRALAI
                 ,"Soluonggiao", "Soluongtralai"
                 //KQinchitiet
@@ -73,6 +73,7 @@ namespace GD.BBPH.LIB
                 ,"Tylesaihong", "Dauraghep", "Sometvao", "Sokgvao", "Phechia", "PhethoiNCC"
                 //KQhoanthienchitiet
                 ,"Chatluongtui", "Daurachiaghep", "Dauvaomet", "Dauvaokg", "Phebien", "Phechinhmay", "Phekhac"
+                ,"Sometquydoi", "Sometdain", "Sometdatua", "Sometconlai"
         };
 
         //-----Danh sách các cột ngày
