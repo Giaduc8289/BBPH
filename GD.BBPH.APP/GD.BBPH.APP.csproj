@@ -812,6 +812,12 @@
     <Compile Include="TUA\FRM_TKKQTUA.designer.cs">
       <DependentUpon>FRM_TKKQTUA.cs</DependentUpon>
     </Compile>
+    <Compile Include="TUA\FRM_VIEWKHTUA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TUA\FRM_VIEWKHTUA.Designer.cs">
+      <DependentUpon>FRM_VIEWKHTUA.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BANHANG\FRM_BAOGIA.resx">
       <DependentUpon>FRM_BAOGIA.cs</DependentUpon>
     </EmbeddedResource>
@@ -1154,6 +1160,9 @@
     <EmbeddedResource Include="TUA\FRM_TKKQTUA.resx">
       <DependentUpon>FRM_TKKQTUA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TUA\FRM_VIEWKHTUA.resx">
+      <DependentUpon>FRM_VIEWKHTUA.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="RDLC\DataBBPH.xsc">
       <DependentUpon>DataBBPH.xsd</DependentUpon>
@@ -1278,6 +1287,7 @@
     <Content Include="XMLCONFIG\FRM_DONHANG_H.xml" />
     <Content Include="XMLCONFIG\FRM_HANGTRALAI.xml" />
     <Content Include="XMLCONFIG\FRM_KEOCUAHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_KHTUA_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KHIN_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANG.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANGCHITIET.xml">

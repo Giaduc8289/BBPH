@@ -321,7 +321,7 @@ namespace GD.BBPH.APP.TUA
             }
             #endregion
 
-            //DT_KEHOACH_FULL = new KehoachtuaManager().SelectByCondition(Tungay, Denngay);
+            DT_KEHOACH_FULL = new KehoachtuaManager().SelectByCondition(Tungay, Denngay);
         }
 
         #region Event GRID_DMMAY
@@ -337,15 +337,15 @@ namespace GD.BBPH.APP.TUA
                 int _Ca = Convert.ToInt32(sCol.Substring(sCol.Length - 1));
                 string _May = GRID_DMMAY.CurrentRow.Cells[DmmayFields.Mamay.Name].Value.ToString();
 
-                //FRM_VIEWKHIN frm = new FRM_VIEWKHIN(_Ngay, _Ca, _May);
-                //frm.StartPosition = FormStartPosition.Manual;
-                //frm.Left = Cursor.Position.X + frm.Width + GRID_DMMAY.CurrentColumn.Width < Screen.PrimaryScreen.WorkingArea.Width
-                //    ? Cursor.Position.X + GRID_DMMAY.CurrentColumn.Width
-                //    : Cursor.Position.X - frm.Width - GRID_DMMAY.CurrentColumn.Width;
-                //frm.Top = Cursor.Position.Y + frm.Height < Screen.PrimaryScreen.WorkingArea.Height
-                //    ? Cursor.Position.Y
-                //    : Cursor.Position.Y - frm.Height;
-                //frm.ShowDialog();
+                FRM_VIEWKHTUA frm = new FRM_VIEWKHTUA(_Ngay, _Ca, _May);
+                frm.StartPosition = FormStartPosition.Manual;
+                frm.Left = Cursor.Position.X + frm.Width + GRID_DMMAY.CurrentColumn.Width < Screen.PrimaryScreen.WorkingArea.Width
+                    ? Cursor.Position.X + GRID_DMMAY.CurrentColumn.Width
+                    : Cursor.Position.X - frm.Width - GRID_DMMAY.CurrentColumn.Width;
+                frm.Top = Cursor.Position.Y + frm.Height < Screen.PrimaryScreen.WorkingArea.Height
+                    ? Cursor.Position.Y
+                    : Cursor.Position.Y - frm.Height;
+                frm.ShowDialog();
 
                 GRID_DMMAY.CurrentRow.Cells[GRID_DMMAY.CurrentColumn.Key].FormatStyle.BackColor = currentColor;
             }
@@ -773,11 +773,9 @@ namespace GD.BBPH.APP.TUA
         {
             try
             {
-                string sMay = ""; //sDongmay = "";
-                string sFillter = "";
+                string sMay = "", sFillter = "", sFilterNgay = "";
                 //sFillter = "(" + KehoachtuaFields.Ca.Name + "='" + ((int)(Ca / 2))*2 + "' Or " + KehoachtuaFields.Ca.Name + "='" + (((int)(Ca / 2))*2 + 1) + "') ";
                 sFillter = KehoachtuaFields.Ca.Name + "='" + Ca + "'";
-                string sFilterNgay = "";
                 sFilterNgay = KehoachtuaFields.Ca.Name + "<='" + Ca + "' And " + KehoachtuaFields.Ca.Name + ">='"
                     + (Ca - 3 < 0 ? "0" : (Ca - 3).ToString()) + "'";
                 sMay = DT_DMMAY_TEMP.Rows[May][DmmayFields.Mamay.Name].ToString();

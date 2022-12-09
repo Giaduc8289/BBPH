@@ -1075,6 +1075,18 @@ namespace GD.BBPH.APP.LIB
             parameters.CopyTo(myArr, 0);
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Kehoachintheocamay", "Kehoachintheocamay", myArr).Tables[0];
         }
+        public static DataTable Kehoachtuatheocamay(DateTime Ngay, int Ca, string May)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Ngay", SqlDbType.Date, 0), Ngay);
+            parameters.Add(new SqlParameter("@Ca", SqlDbType.Int, 0), Ca);
+            parameters.Add(new SqlParameter("@May", SqlDbType.NVarChar, 0), May);
+
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Kehoachtuatheocamay", "Kehoachtuatheocamay", myArr).Tables[0];
+        }
         public static DataTable Kehoachtrangtheocamay(DateTime Ngay, int Ca, string May)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);

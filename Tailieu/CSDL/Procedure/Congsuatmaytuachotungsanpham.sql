@@ -49,7 +49,7 @@ With Encryption As
 
 	SELECT Mamay, Madm As Madongmay
 		, Masanpham, Makhach, Madonhangchitiet, Solenhsx
-		, (dbo.fTinhtocdomay(Mamay,Masanpham,'')*60*12) As Congsuat
+		, dbo.fTinhtocdomay(Mamay,Masanpham,'') As Congsuat
 	INTO #CsMay_Lenhsx
 	FROM (Select * From Dmmay Where Mamay in ('G2', 'L1', 'L2', 'L3')) m 
 		,(Select DISTINCT Masanpham, Makhach, Madonhangchitiet, Solenhsx
