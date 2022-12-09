@@ -27,5 +27,22 @@ namespace GD.BBPH.BLL
 		{
 			// Nothing for now.
 		}
-	}
+        public DataTable SelectByCondition(DateTime Tungay, DateTime Denngay)
+        {
+            DataTable toReturn = new DataTable();
+            EntityCollection _KehoachtuaCollection = new EntityCollection(new KehoachtuaEntityFactory());
+            RelationPredicateBucket filter = new RelationPredicateBucket();
+
+            IPredicateExpression _PredicateExpression = new PredicateExpression();
+            _PredicateExpression.Add(KehoachtuaFields.Ngaychay >= Tungay);
+            _PredicateExpression.AddWithAnd(KehoachtuaFields.Ngaychay <= Denngay);
+            filter.PredicateExpression.Add(_PredicateExpression);
+
+            using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+            {
+                adapter.FetchTypedList(_KehoachtuaCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+            }
+            return toReturn;
+        }
+    }
 }

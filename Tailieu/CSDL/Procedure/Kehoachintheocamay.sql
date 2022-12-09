@@ -12,7 +12,7 @@ With Encryption As
 	
 	SELECT kh.Id, lsx.Solenhsx, Madon, Makhach, Tenkhach
 		, lsx.Masanpham, lsx.Ngaydat, lsx.Ngaygiao 
-		, Sldukien 
+		, Sldukien, Tgdukien 
 	FROM dbo.Kehoachin kh LEFT JOIN Lenhsanxuat lsx On lsx.Solenhsx=kh.Solenhsx
 	WHERE  Ngaychay = @Ngay
 		AND Ca = @Ca
@@ -20,7 +20,7 @@ With Encryption As
 	
 Go
 
-Exec Kehoachintheocamay '12/08/2022', 1, 'I1'
+Exec Kehoachintheocamay '12/09/2022', 1, 'I1'
 
 --SELECT * FROM dbo.Lenhsanxuat
 SELECT * FROM dbo.Kehoachin

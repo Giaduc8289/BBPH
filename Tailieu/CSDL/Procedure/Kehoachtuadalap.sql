@@ -11,7 +11,7 @@ With Encryption As
 	
 	SELECT kh.Id, Mamay, Ngaychay, Ca
 		, Madonhangchitiet, Makhach--, Madonhang, Tenkhachhang
-		, kh.Masanpham
+		, lsx.Masanpham
 		, kh.Solenhsx
 		--, Ngaydat, Ngaygiao 
 		, Sldukien 

@@ -11,7 +11,7 @@ With Encryption As
 	SET NOCOUNT ON;
 	SET XACT_ABORT ON;
 	
-	Delete Kehoachin 
+	Delete Kehoachtua
 	Where (Solenhsx = @Solenhsx OR @Solenhsx='')  
 		And Ngaychay Between @Tungay And @Denngay
 

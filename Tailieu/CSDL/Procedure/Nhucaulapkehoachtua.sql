@@ -25,7 +25,8 @@ With Encryption As
 		, Madon, Ngaydat, sp.Makhach, sp.Tenkhach
 		, Madonhangchitiet, lsx.Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
 		, Soluong
-		, IsNull((Select Sum(SoMetra) From Ketquatua Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdatua		
+		, IsNull((Select Sum(SoMetra) From Ketquatua Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdatua	
+		, sp.Sohinh, sp.Dai	
 	Into #Nhucau0
 	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 	Where Ngaydat<=@v_Ngaycuoithang
@@ -34,8 +35,7 @@ With Encryption As
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, Makhach, Tenkhach
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao 
-		--, Soluong - Sometin*1000/Dai*Sohinh As Soluong
-		, Soluong - Sometdatua As Somet
+		, Soluong/Sohinh*Dai/1000 - Sometdatua As Somet
 	Into #Nhucau
 	From #Nhucau0
 	
