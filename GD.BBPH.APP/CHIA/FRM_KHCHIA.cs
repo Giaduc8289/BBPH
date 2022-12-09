@@ -175,7 +175,7 @@ namespace GD.BBPH.APP.CHIA
         private void SHOWGRID(string MAHIEU_PK)
         {
             #region Tạo bảng dữ liệu
-            DT_DMMAY_TEMP = LIB.Procedures.Ngaysudungmay(Tungay, Denngay, "CHIA", "");
+            DT_DMMAY_TEMP = LIB.Procedures.Ngaysudungmay(Tungay, Denngay, "KT", "");
             DT_DMMAY_TEMP.Columns.Add("Congsuat", Type.GetType("System.Decimal"));
             //DT_DMMAY_TEMP.Columns.Add("Congsuattrong", Type.GetType("System.Decimal"));
             DT_DMMAY_TEMP.Columns.Add("Thoigiantrong", Type.GetType("System.Decimal"));
@@ -343,15 +343,15 @@ namespace GD.BBPH.APP.CHIA
                 int _Ca = Convert.ToInt32(sCol.Substring(sCol.Length - 1));
                 string _May = GRID_DMMAY.CurrentRow.Cells[DmmayFields.Mamay.Name].Value.ToString();
 
-                //FRM_VIEWKHIN frm = new FRM_VIEWKHIN(_Ngay, _Ca, _May);
-                //frm.StartPosition = FormStartPosition.Manual;
-                //frm.Left = Cursor.Position.X + frm.Width + GRID_DMMAY.CurrentColumn.Width < Screen.PrimaryScreen.WorkingArea.Width
-                //    ? Cursor.Position.X + GRID_DMMAY.CurrentColumn.Width
-                //    : Cursor.Position.X - frm.Width - GRID_DMMAY.CurrentColumn.Width;
-                //frm.Top = Cursor.Position.Y + frm.Height < Screen.PrimaryScreen.WorkingArea.Height
-                //    ? Cursor.Position.Y
-                //    : Cursor.Position.Y - frm.Height;
-                //frm.ShowDialog();
+                FRM_VIEWKHCHIA frm = new FRM_VIEWKHCHIA(_Ngay, _Ca, _May);
+                frm.StartPosition = FormStartPosition.Manual;
+                frm.Left = Cursor.Position.X + frm.Width + GRID_DMMAY.CurrentColumn.Width < Screen.PrimaryScreen.WorkingArea.Width
+                    ? Cursor.Position.X + GRID_DMMAY.CurrentColumn.Width
+                    : Cursor.Position.X - frm.Width - GRID_DMMAY.CurrentColumn.Width;
+                frm.Top = Cursor.Position.Y + frm.Height < Screen.PrimaryScreen.WorkingArea.Height
+                    ? Cursor.Position.Y
+                    : Cursor.Position.Y - frm.Height;
+                frm.ShowDialog();
 
                 GRID_DMMAY.CurrentRow.Cells[GRID_DMMAY.CurrentColumn.Key].FormatStyle.BackColor = currentColor;
             }
