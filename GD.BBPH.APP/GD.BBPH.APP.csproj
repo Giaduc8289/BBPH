@@ -549,11 +549,23 @@
     <Compile Include="DANHMUC\FRM_THOIGIANDCKH.Designer.cs">
       <DependentUpon>FRM_THOIGIANDCKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="GHEP\FRM_KHGHEP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GHEP\FRM_KHGHEP.designer.cs">
+      <DependentUpon>FRM_KHGHEP.cs</DependentUpon>
+    </Compile>
     <Compile Include="GHEP\FRM_KQGHEP.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GHEP\FRM_KQGHEP.designer.cs">
       <DependentUpon>FRM_KQGHEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GHEP\FRM_VIEWKHGHEP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GHEP\FRM_VIEWKHGHEP.Designer.cs">
+      <DependentUpon>FRM_VIEWKHGHEP.cs</DependentUpon>
     </Compile>
     <Compile Include="HETHONG\FRM_CHONNGAYLAMVIEC.cs">
       <SubType>Form</SubType>
@@ -1034,8 +1046,14 @@
     <EmbeddedResource Include="DANHMUC\FRM_THOIGIANDCKH.resx">
       <DependentUpon>FRM_THOIGIANDCKH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GHEP\FRM_KHGHEP.resx">
+      <DependentUpon>FRM_KHGHEP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GHEP\FRM_KQGHEP.resx">
       <DependentUpon>FRM_KQGHEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GHEP\FRM_VIEWKHGHEP.resx">
+      <DependentUpon>FRM_VIEWKHGHEP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HETHONG\FRM_CHONNGAYLAMVIEC.resx">
       <DependentUpon>FRM_CHONNGAYLAMVIEC.cs</DependentUpon>
@@ -1297,6 +1315,7 @@
     <Content Include="XMLCONFIG\FRM_HANGTRALAI.xml" />
     <Content Include="XMLCONFIG\FRM_KEOCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_KHTUA_EDIT.xml" />
+    <Content Include="XMLCONFIG\FRM_KHGHEP_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KHIN_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANG.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANGCHITIET.xml">
