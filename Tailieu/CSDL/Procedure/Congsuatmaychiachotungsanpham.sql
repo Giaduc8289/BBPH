@@ -1,4 +1,4 @@
-﻿------------------------Công suất máy in cho từng sản phẩm------------
+﻿------------------------Công suất máy chiacho từng sản phẩm------------
 If Object_ID('dbo.Congsuatmaychiachotungsanpham','P') is not null
 	Drop Procedure dbo.Congsuatmaychiachotungsanpham;
 Go
@@ -22,17 +22,15 @@ With Encryption As
 	SET @v_Ngaydauthang = DATEADD(DAY,-DAY(@Tungay)+1,@Tungay)
 	SET @v_Ngaycuoithang = DATEADD(DAY,-DAY(DATEADD(MONTH,1,@Denngay)),DATEADD(MONTH,1,@Denngay)) 
 			
-	-----Lệnh sản xuất với Ngày đặt <= Ngày cuối tháng, và kết quả in theo Lệnh		
+	-----Lệnh sản xuất với Ngày đặt <= Ngày cuối tháng, và kết quả chia theo Lệnh		
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, sp.Makhach, sp.Tenkhach
 		, Madonhangchitiet, lsx.Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
 		, Soluong
-		, IsNull((Select Sum(Sometra) From Ketquachia Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdachia
-		, sp.Sohinh, sp.Dai
+		, IsNull((Select Sum(SoMetra) From Ketquachia Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdachia
 	Into #Nhucau0
 	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 	Where Ngaydat<=@v_Ngaycuoithang
---SELECT * FROM #Nhucau0
 	 
 	-----Lấy số lượng trong đơn trừ đi kết quả đã chia
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
@@ -42,22 +40,21 @@ With Encryption As
 		, Soluong - Sometdachia As Somet
 	Into #Nhucau1
 	From #Nhucau0
---SELECT * FROM #Nhucau1
 	
+	--SELECT * FROM #Nhucau WHERE Soluong>0 ORDER BY Ngaygiao
 	SELECT * 
 	Into #Nhucau
 	FROM #Nhucau1 WHERE Somet>0 ORDER BY Ngaygiao
---SELECT * FROM #Nhucau
+
 
 	SELECT Mamay, Madm As Madongmay
-		, Masanpham, Makhach, Solenhsx
+		, Masanpham, Makhach, Madonhangchitiet, Solenhsx
 		, dbo.fTinhtocdomay(Mamay,Masanpham,'') As Congsuat
-	INTO #CsMay_Donchitiet
-	FROM (Select * From Dmmay Where Madm in ('G2', 'L1', 'L2', 'L3'))m 
-		,(Select DISTINCT Masanpham, Makhach, Madonhangchitiet
+	INTO #CsMay_Lenhsx
+	FROM (Select * From Dmmay Where Mamay in ('G2', 'L1', 'L2', 'L3')) m 
+		,(Select DISTINCT Masanpham, Makhach, Madonhangchitiet, Solenhsx
 					FROM #Nhucau) nc
 
-	
 	SET @v_columns = N''
 	SELECT @v_columns += N', ' + QUOTENAME(Solenhsx) FROM (SELECT Solenhsx FROM #CsMay_Lenhsx GROUP BY Solenhsx) AS x ORDER BY x.Solenhsx
 	SET	@v_sql = N'Select Mamay,' 
@@ -73,5 +70,5 @@ With Encryption As
 	
 Go
 
-Exec Congsuatmaychiachotungsanpham '12/01/2022', '12/31/2022'
+Exec Congsuatmaychiachotungsanpham '12/03/2022', '12/31/2022'
 
