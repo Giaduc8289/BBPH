@@ -25,18 +25,18 @@ With Encryption As
 		, Madon, Ngaydat, sp.Makhach, sp.Tenkhach
 		, Madonhangchitiet, lsx.Masp As Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
 		, Soluong
-		, IsNull((Select Sum(Thuctein) From Ketquain Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdain
+		, IsNull((Select Sum(Sometra) From Ketquachia Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdachia
 		, sp.Sohinh, sp.Dai
 	Into #Nhucau0
 	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masp
 	Where Ngaydat<=@v_Ngaycuoithang
 	 
-	-----Lấy số lượng trong đơn trừ đi kết quả đã in
+	-----Lấy số lượng trong đơn trừ đi kết quả đã chia
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, Makhach, Tenkhach
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao 
 		--, Soluong - Sometin*1000/Dai*Sohinh As Soluong
-		, Soluong/Sohinh*Dai/1000 - Sometdain As Somet
+		, Soluong - Sometdachia As Somet
 	Into #Nhucau
 	From #Nhucau0
 	

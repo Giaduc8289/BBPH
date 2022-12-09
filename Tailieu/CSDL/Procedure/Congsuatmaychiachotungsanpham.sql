@@ -27,18 +27,18 @@ With Encryption As
 		, Madon, Ngaydat, sp.Makhach, sp.Tenkhach
 		, Madonhangchitiet, lsx.Masp As Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
 		, Soluong
-		, IsNull((Select Sum(Thuctein) From Ketquachia Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdain
+		, IsNull((Select Sum(Sometra) From Ketquachia Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdachia
 		, sp.Sohinh, sp.Dai
 	Into #Nhucau0
 	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masp
 	Where Ngaydat<=@v_Ngaycuoithang
 	 
-	-----Lấy số lượng trong đơn trừ đi kết quả đã in
+	-----Lấy số lượng trong đơn trừ đi kết quả đã chia
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, Makhach, Tenkhach
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao 
 		--, Soluong - Sometin*1000/Dai*Sohinh As Soluong
-		, Soluong/Sohinh*Dai/1000 - Sometdain As Somet
+		, Soluong - Sometdachia As Somet
 	Into #Nhucau1
 	From #Nhucau0
 	
@@ -53,11 +53,11 @@ With Encryption As
 		, Masanpham, Makhach, Madonhangchitiet
 		, dbo.fTinhtocdomay(Mamay,Masanpham,'') As Congsuat
 	INTO #CsMay_Donchitiet
-	FROM (Select * From Dmmay Where Madm='IN')m 
+	FROM (Select * From Dmmay Where Madm in ('G2', 'L1', 'L2', 'L3'))m 
 		,(Select DISTINCT Masanpham, Makhach, Madonhangchitiet
 					FROM #Nhucau) nc
 
-
+	
 	SET @v_columns = N''
 	SELECT @v_columns += N', ' + QUOTENAME(Madonhangchitiet) FROM (SELECT Madonhangchitiet FROM #CsMay_Donchitiet GROUP BY Madonhangchitiet) AS x ORDER BY x.Madonhangchitiet
 	SET	@v_sql = N'Select Mamay,' 
