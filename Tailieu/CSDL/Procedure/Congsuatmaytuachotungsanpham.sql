@@ -25,11 +25,11 @@ With Encryption As
 	-----Lệnh sản xuất với Ngày đặt <= Ngày cuối tháng, và kết quả tua theo Lệnh		
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, sp.Makhach, sp.Tenkhach
-		, Madonhangchitiet, lsx.Masp As Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
+		, Madonhangchitiet, lsx.Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
 		, Soluong
 		, IsNull((Select Sum(SoMetra) From Ketquatua Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdatua
 	Into #Nhucau0
-	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masp
+	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 	Where Ngaydat<=@v_Ngaycuoithang
 	 
 	-----Lấy số lượng trong đơn trừ đi kết quả đã tua
@@ -48,20 +48,20 @@ With Encryption As
 
 
 	SELECT Mamay, Madm As Madongmay
-		, Masanpham, Makhach, Madonhangchitiet
+		, Masanpham, Makhach, Madonhangchitiet, Solenhsx
 		, dbo.fTinhtocdomay(Mamay,Masanpham,'') As Congsuat
-	INTO #CsMay_Donchitiet
+	INTO #CsMay_Lenhsx
 	FROM (Select * From Dmmay Where Mamay in ('G2', 'L1', 'L2', 'L3')) m 
-		,(Select DISTINCT Masanpham, Makhach, Madonhangchitiet
+		,(Select DISTINCT Masanpham, Makhach, Madonhangchitiet, Solenhsx
 					FROM #Nhucau) nc
 
 	SET @v_columns = N''
-	SELECT @v_columns += N', ' + QUOTENAME(Madonhangchitiet) FROM (SELECT Madonhangchitiet FROM #CsMay_Donchitiet GROUP BY Madonhangchitiet) AS x ORDER BY x.Madonhangchitiet
+	SELECT @v_columns += N', ' + QUOTENAME(Solenhsx) FROM (SELECT Solenhsx FROM #CsMay_Lenhsx GROUP BY Solenhsx) AS x ORDER BY x.Solenhsx
 	SET	@v_sql = N'Select Mamay,' 
 		+ STUFF(@v_columns,1, 2, '') 
-		+ ' From (Select Mamay, Madongmay, Madonhangchitiet, Congsuat From #CsMay_Donchitiet) As j '
+		+ ' From (Select Mamay, Madongmay, Solenhsx, Congsuat From #CsMay_Lenhsx) As j '
 		+ ' PIVOT ('
-		+ ' SUM(Congsuat) FOR Madonhangchitiet IN ('
+		+ ' SUM(Congsuat) FOR Solenhsx IN ('
 		+ STUFF(REPLACE(@v_columns,', [',',['),1,1,'')
 		+ ') 
 		) As p Order by Madongmay'

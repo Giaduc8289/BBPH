@@ -159,7 +159,7 @@ namespace GD.BBPH.APP.THOI
 
                     txt_MADONHANG.Text = _Rowview.Row[LenhsanxuatFields.Madon.Name].ToString();
                     txt_TENKHACH.Text = _Rowview.Row[LenhsanxuatFields.Tenkhach.Name].ToString();
-                    txt_MAHANG.Text = _Rowview.Row[LenhsanxuatFields.Masp.Name].ToString();
+                    txt_MAHANG.Text = _Rowview.Row[LenhsanxuatFields.Masanpham.Name].ToString();
                     //txt_MAUIN.Text = _Rowview.Row[LenhsanxuatFields.Mauin.Name].ToString();
                     //txt_MAMANH.Text = _Rowview.Row[LenhsanxuatFields.Mamanh.Name].ToString();
                     txt_NGAYGIAO.Text = _Rowview.Row[LenhsanxuatFields.Ngaygiao.Name].ToString();

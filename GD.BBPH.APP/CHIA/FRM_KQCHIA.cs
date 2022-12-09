@@ -56,12 +56,12 @@ namespace GD.BBPH.APP.CHIA
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQCHIA");
-                        DT_KQCHIA = LIB.Procedures.Danhsachketquachia(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // LIB.SESSION_START.DT_KQCHIA;
-                        DT_KQCHIA_CHITIET = LIB.SESSION_START.DT_KQCHIA;
+                        DT_KQCHIA = LIB.Procedures.Danhsachketquachia(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // new KetquachiaManager().SelectAllRDT();
+                        DT_KQCHIA_CHITIET = new KetquachiaManager().SelectAllRDT();
 
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("KT");// LIB.SESSION_START.DT_DMMAY;
-                        DT_DMHANG = LIB.SESSION_START.DM_HANG;
-                        DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("KT");// new DmmayManager().SelectAllRDT();
+                        DT_DMHANG = new DmhangManager().SelectAllRDT();
+                        DT_NHANVIEN =  new DmcongnhanManager().SelectAllRDT();
                         DT_LENHSANXUAT = new LenhsanxuatManager().SelectAllRDT();
                     }
                 };
@@ -659,13 +659,13 @@ namespace GD.BBPH.APP.CHIA
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_LENHSANXUAT.Text = _RowViewSelect[LenhsanxuatFields.Solenhsx.Name].ToString();
-                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
-                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tenhang.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tensanpham.Name].ToString();
                 //-----Lấy các thông tin về số lượng,... từ lệnh
                 //txt_TENMAY.Text = _RowViewSelect[DmmayFields.Tenmay.Name].ToString();
 
                 //string _masp = "";
-                //_masp = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                //_masp = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 //DataRow[] arrDr = new MangcuahangManager().SelectByMaspRDT(_masp).Select(MangcuahangFields.Tenloaimang.Name + "='PE'");
                 //if (arrDr.Length > 0)
                 //{
@@ -679,8 +679,8 @@ namespace GD.BBPH.APP.CHIA
                 //txt_TENMAY.Text = _RowViewSelect[DmmayFields.Tenmay.Name].ToString();
 
                 //-----Lấy mã sp, tên sp theo lệnh sản xuất
-                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
-                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tenhang.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tensanpham.Name].ToString();
             }
         }
 

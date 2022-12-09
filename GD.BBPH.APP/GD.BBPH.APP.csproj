@@ -387,12 +387,6 @@
     <Compile Include="BAOCAO\FRM_REPORTVIEWER.designer.cs">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
     </Compile>
-    <Compile Include="CHIA\FRM_KHCHIA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CHIA\FRM_KHCHIA.designer.cs">
-      <DependentUpon>FRM_KHCHIA.cs</DependentUpon>
-    </Compile>
     <Compile Include="CHIA\FRM_KQCHIA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -632,6 +626,12 @@
     </Compile>
     <Compile Include="IN\FRM_KQIN.designer.cs">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IN\FRM_VIEWKHIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IN\FRM_VIEWKHIN.Designer.cs">
+      <DependentUpon>FRM_VIEWKHIN.cs</DependentUpon>
     </Compile>
     <Compile Include="KHO\FRM_KIEMKENGUYENLIEU.cs">
       <SubType>Form</SubType>
@@ -941,9 +941,6 @@
     <EmbeddedResource Include="BAOCAO\FRM_REPORTVIEWER.resx">
       <DependentUpon>FRM_REPORTVIEWER.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CHIA\FRM_KHCHIA.resx">
-      <DependentUpon>FRM_KHCHIA.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CHIA\FRM_KQCHIA.resx">
       <DependentUpon>FRM_KQCHIA.cs</DependentUpon>
     </EmbeddedResource>
@@ -1063,6 +1060,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IN\FRM_KQIN.resx">
       <DependentUpon>FRM_KQIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IN\FRM_VIEWKHIN.resx">
+      <DependentUpon>FRM_VIEWKHIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KHO\FRM_KIEMKENGUYENLIEU.resx">
       <DependentUpon>FRM_KIEMKENGUYENLIEU.cs</DependentUpon>
@@ -1278,6 +1278,7 @@
     <Content Include="XMLCONFIG\FRM_DONHANG_H.xml" />
     <Content Include="XMLCONFIG\FRM_HANGTRALAI.xml" />
     <Content Include="XMLCONFIG\FRM_KEOCUAHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_KHIN_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANG.xml" />
     <Content Include="XMLCONFIG\FRM_KIEMKEMANGCHITIET.xml">
       <SubType>Designer</SubType>

@@ -25,12 +25,12 @@ With Encryption As
 	-----Lệnh sản xuất với Ngày đặt <= Ngày cuối tháng, và kết quả in theo Lệnh		
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, sp.Makhach, sp.Tenkhach
-		, Madonhangchitiet, lsx.Masp As Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
+		, Madonhangchitiet, lsx.Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
 		, Soluong
 		, IsNull((Select Sum(Thuctein) From Ketquain Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdain
 		, sp.Sohinh, sp.Dai
 	Into #Nhucau0
-	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masp
+	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 	Where Ngaydat<=@v_Ngaycuoithang
 	 
 	-----Lấy số lượng trong đơn trừ đi kết quả đã in
@@ -48,23 +48,22 @@ With Encryption As
 	FROM #Nhucau1 WHERE Somet>0 ORDER BY Ngaygiao
 
 
-
 	SELECT Mamay, Madm As Madongmay
-		, Masanpham, Makhach, Madonhangchitiet
-		, dbo.fTinhtocdomay(Mamay,Masanpham,'') As Congsuat
-	INTO #CsMay_Donchitiet
+		, Masanpham, Makhach, Solenhsx
+		, dbo.fTinhtocdomay(Mamay,Masanpham,'')*60*12 As Congsuat
+	INTO #CsMay_Lenhsx
 	FROM (Select * From Dmmay Where Madm='IN')m 
-		,(Select DISTINCT Masanpham, Makhach, Madonhangchitiet
+		,(Select DISTINCT Masanpham, Makhach, Solenhsx
 					FROM #Nhucau) nc
 
 
 	SET @v_columns = N''
-	SELECT @v_columns += N', ' + QUOTENAME(Madonhangchitiet) FROM (SELECT Madonhangchitiet FROM #CsMay_Donchitiet GROUP BY Madonhangchitiet) AS x ORDER BY x.Madonhangchitiet
+	SELECT @v_columns += N', ' + QUOTENAME(Solenhsx) FROM (SELECT Solenhsx FROM #CsMay_Lenhsx GROUP BY Solenhsx) AS x ORDER BY x.Solenhsx
 	SET	@v_sql = N'Select Mamay,' 
 		+ STUFF(@v_columns,1, 2, '') 
-		+ ' From (Select Mamay, Madongmay, Madonhangchitiet, Congsuat From #CsMay_Donchitiet) As j '
+		+ ' From (Select Mamay, Madongmay, Solenhsx, Congsuat From #CsMay_Lenhsx) As j '
 		+ ' PIVOT ('
-		+ ' SUM(Congsuat) FOR Madonhangchitiet IN ('
+		+ ' SUM(Congsuat) FOR Solenhsx IN ('
 		+ STUFF(REPLACE(@v_columns,', [',',['),1,1,'')
 		+ ') 
 		) As p Order by Madongmay'

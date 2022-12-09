@@ -59,12 +59,12 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMHANG");
-                        DT_DMHANGHOA = LIB.SESSION_START.DM_HANG;
+                        DT_DMHANGHOA = new DmhangManager().SelectAllRDT();
 
-                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-                        DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
-                        DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
-                        DT_DMMAU = LIB.SESSION_START.DT_DMMAU;
+                        DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+                        DT_DMCHUNGLOAI = new DmchungloaiManager().SelectAllRDT();
+                        DT_DMMANG = new DmmangManager().SelectAllRDT();
+                        DT_DMMAU =new DmmauManager().SelectAllRDT();
                         DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
                         DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
                         DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
@@ -104,10 +104,10 @@ namespace GD.BBPH.APP.DANHMUC
 
         private void LoadDanhMuc()
         {
-            DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-            DT_DMCHUNGLOAI = LIB.SESSION_START.DT_DMCHUNGLOAI;
-            DT_DMMANG = LIB.SESSION_START.DT_DMMANG;
-            DT_DMMAU = LIB.SESSION_START.DT_DMMAU;
+            DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+            DT_DMCHUNGLOAI = new DmchungloaiManager().SelectAllRDT();
+            DT_DMMANG = new DmmangManager().SelectAllRDT();
+            DT_DMMAU =new DmmauManager().SelectAllRDT();
             DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
             DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
             DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");

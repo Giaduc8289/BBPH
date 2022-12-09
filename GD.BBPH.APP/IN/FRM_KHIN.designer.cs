@@ -53,7 +53,7 @@
             this.btn_KHOIPHUC = new GD.BBPH.CONTROL.BUTTON();
             this.btn_LUULAI = new GD.BBPH.CONTROL.BUTTON();
             this.btn_XOA = new GD.BBPH.CONTROL.BUTTON();
-            this.btn_THEMMOI = new GD.BBPH.CONTROL.BUTTON();
+            this.btn_LAPKH = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
@@ -130,7 +130,7 @@
             this.uiPanel1Container.Controls.Add(this.btn_KHOIPHUC);
             this.uiPanel1Container.Controls.Add(this.btn_LUULAI);
             this.uiPanel1Container.Controls.Add(this.btn_XOA);
-            this.uiPanel1Container.Controls.Add(this.btn_THEMMOI);
+            this.uiPanel1Container.Controls.Add(this.btn_LAPKH);
             this.uiPanel1Container.Controls.Add(this.btn_SUA);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
@@ -281,11 +281,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(301, 128);
+            this.label2.Location = new System.Drawing.Point(308, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 179;
-            this.label2.Text = "Số lượng dự kiến";
+            this.label2.Text = "Số mét dự kiến";
             // 
             // pne_CHITIET
             // 
@@ -365,19 +365,19 @@
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
             // 
-            // btn_THEMMOI
+            // btn_LAPKH
             // 
-            this.btn_THEMMOI.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.btn_THEMMOI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_THEMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
-            this.btn_THEMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(14, 493);
-            this.btn_THEMMOI.Name = "btn_THEMMOI";
-            this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 8;
-            this.btn_THEMMOI.Text = "Lập KH";
-            this.btn_THEMMOI.UseVisualStyleBackColor = true;
-            this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
+            this.btn_LAPKH.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.btn_LAPKH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_LAPKH.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
+            this.btn_LAPKH.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
+            this.btn_LAPKH.Location = new System.Drawing.Point(14, 493);
+            this.btn_LAPKH.Name = "btn_LAPKH";
+            this.btn_LAPKH.Size = new System.Drawing.Size(75, 23);
+            this.btn_LAPKH.TabIndex = 8;
+            this.btn_LAPKH.Text = "Lập KH";
+            this.btn_LAPKH.UseVisualStyleBackColor = true;
+            this.btn_LAPKH.Click += new System.EventHandler(this.btn_LAPKH_Click);
             // 
             // btn_SUA
             // 
@@ -427,7 +427,7 @@
         private GD.BBPH.CONTROL.BUTTON btn_KHOIPHUC;
         private GD.BBPH.CONTROL.BUTTON btn_LUULAI;
         private GD.BBPH.CONTROL.BUTTON btn_XOA;
-        private GD.BBPH.CONTROL.BUTTON btn_THEMMOI;
+        private GD.BBPH.CONTROL.BUTTON btn_LAPKH;
         private GD.BBPH.CONTROL.BUTTON btn_SUA;
         private GD.BBPH.CONTROL.BUTTON btn_Thoat;
         private CONTROL.LABEL label8;

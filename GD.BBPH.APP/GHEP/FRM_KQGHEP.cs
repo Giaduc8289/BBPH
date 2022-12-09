@@ -56,13 +56,13 @@ namespace GD.BBPH.APP.GHEP
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KQGHEP");
-                        DT_KQGHEP = LIB.Procedures.Danhsachketquaghep(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // LIB.SESSION_START.DT_KQGHEP;
-                        DT_KQGHEP_CHITIET = LIB.SESSION_START.DT_KQGHEP;
+                        DT_KQGHEP = LIB.Procedures.Danhsachketquaghep(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, 0, string.Empty, string.Empty); // new KetquaghepManager().SelectAllRDT();
+                        DT_KQGHEP_CHITIET = new KetquaghepManager().SelectAllRDT();
 
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("GH");// LIB.SESSION_START.DT_DMMAY;
-                        DT_DMHANG = LIB.SESSION_START.DM_HANG;
-                        DT_NHANVIEN = LIB.SESSION_START.DT_DMCONGNHAN;
-                        DT_LENHSX = LIB.SESSION_START.DT_LENHSANXUAT;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("GH");// new DmmayManager().SelectAllRDT();
+                        DT_DMHANG = new DmhangManager().SelectAllRDT();
+                        DT_NHANVIEN =  new DmcongnhanManager().SelectAllRDT();
+                        DT_LENHSX = new LenhsanxuatManager().SelectAllRDT();
 
                     }
                 };
@@ -801,15 +801,15 @@ namespace GD.BBPH.APP.GHEP
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_SOLENHSX.Text = _RowViewSelect[LenhsanxuatFields.Solenhsx.Name].ToString();
-                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tenhang.Name].ToString();
-                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tensanpham.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 Tinhtocdodinhmuc();
                 Tinhthoigianchuanbi();
             }
             else
             {
-                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tenhang.Name].ToString();
-                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masp.Name].ToString();
+                txt_TENSANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Tensanpham.Name].ToString();
+                txt_MASANPHAM.Text = _RowViewSelect[LenhsanxuatFields.Masanpham.Name].ToString();
                 Tinhtocdodinhmuc();
                 Tinhthoigianchuanbi();
             }

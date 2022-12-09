@@ -23,11 +23,11 @@ With Encryption As
 	-----Lệnh sản xuất với Ngày đặt <= Ngày cuối tháng, và kết quả tua theo Lệnh		
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, sp.Makhach, sp.Tenkhach
-		, Madonhangchitiet, lsx.Masp As Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
+		, Madonhangchitiet, lsx.Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
 		, Soluong
 		, IsNull((Select Sum(SoMetra) From Ketquatua Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdatua		
 	Into #Nhucau0
-	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masp
+	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 	Where Ngaydat<=@v_Ngaycuoithang
 	 
 	-----Lấy số lượng trong đơn trừ đi kết quả đã tua

@@ -53,12 +53,12 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DMVATTUSAIHONG");
-                        DT_DMVATTUSAIHONG = LIB.SESSION_START.DT_DMVATTUSAIHONG;
-                        DT_DMNHOMDINHMUC = LIB.SESSION_START.DT_DMNHOMDINHMUC;
-                        DT_DMMAU = LIB.SESSION_START.DT_DMMAU;
-                        DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
-                        DT_DMDONGMAY = LIB.SESSION_START.DT_DMDONGMAY;
-                        DT_DMCONGDOAN = LIB.SESSION_START.DT_DMCONGDOAN;
+                        DT_DMVATTUSAIHONG =new DinhmucvattuManager().SelectAllRDT();
+                        DT_DMNHOMDINHMUC = new DmnhomdinhmucManager().SelectAllRDT();
+                        DT_DMMAU =new DmmauManager().SelectAllRDT();
+                        DT_DMMAY = new DmmayManager().SelectAllRDT();
+                        DT_DMDONGMAY = new DmdongmayManager().SelectAllRDT();
+                        DT_DMCONGDOAN =  new DmcongdoanManager().SelectAllRDT();
                         DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
                         DT_LOAIMUC = new DmquycachManager().SelectByManhomRDT("N04");
                         DT_LOAIMANG = new DmquycachManager().SelectByManhomRDT("N09");

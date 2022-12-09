@@ -54,18 +54,18 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_DINHMUCTHOIGIAN");
-                        DT_DINHMUCTHOIGIAN = LIB.SESSION_START.DT_DINHMUCTHOIGIAN;
-                        DT_DMMAY = LIB.SESSION_START.DT_DMMAY;
-                        DT_DMDONGMAY = LIB.SESSION_START.DT_DMDONGMAY;
-                        DT_DMCONGDOAN = LIB.SESSION_START.DT_DMCONGDOAN;
+                        DT_DINHMUCTHOIGIAN = new DinhmucthoigianManager().SelectAllRDT();
+                        DT_DMMAY = new DmmayManager().SelectAllRDT();
+                        DT_DMDONGMAY = new DmdongmayManager().SelectAllRDT();
+                        DT_DMCONGDOAN =  new DmcongdoanManager().SelectAllRDT();
 
                         DT_SOMAU = new DmquycachManager().SelectByManhomRDT("N01");
                         DT_SOHINH = new DmquycachManager().SelectByManhomRDT("N03");
                         //DT_CAUTRUCIN = new DmquycachManager().SelectByManhomRDT("N02");
                         DT_LOAIMANG = new DmquycachManager().SelectByManhomRDT("N09");
                         DT_QCTHANHPHAM = new DmquycachManager().SelectByManhomRDT("N06");
-                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-                        DT_DMHANG = LIB.SESSION_START.DM_HANG;
+                        DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+                        DT_DMHANG = new DmhangManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate

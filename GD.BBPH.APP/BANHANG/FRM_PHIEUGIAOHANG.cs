@@ -65,10 +65,10 @@ namespace GD.BBPH.APP.BANHANG
                         DT_PHIEUGIAOHANG_D_FILL = DT_PHIEUGIAOHANG_D.Clone();
 
                         //DT_BAOGIA_H = LIB.SESSION_START.DT_BAOGIA_H;
-                        DT_DONHANG_D = LIB.SESSION_START.DT_DONHANG_D;
+                        DT_DONHANG_D = new DonhangDManager().SelectAllRDT();
                         //DT_DONHANG_D = LIB.SESSION_START.DT_DONHANG_D_DCC;
-                        DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
-                        DT_DMHANGHOA = LIB.SESSION_START.DM_HANG;
+                        DT_DMKHACH = new DmkhachManager().SelectAllRDT();
+                        DT_DMHANGHOA = new DmhangManager().SelectAllRDT();
                         //DT_DMHANGHOA = LIB.SESSION_START.DT_DMHANGHOA;
                         //DT_DMXE = LIB.SESSION_START.DT_DMXE;
                         _Vat = LIB.ConvertString.NumbertoDB(LIB.Procedures.Laygiatrithamso("Vat"));
@@ -625,9 +625,9 @@ namespace GD.BBPH.APP.BANHANG
             if(btn_LUULAI.Enabled)
             {
                 //DT_BAOGIA_H = LIB.SESSION_START.DT_BAOGIA_H;
-                DT_DONHANG_H = LIB.SESSION_START.DT_DONHANG_H;
+                DT_DONHANG_H = new DonhangHManager().SelectAllRDT();
                 //DT_DONHANG_D = LIB.SESSION_START.DT_DONHANG_D_DCC;
-                DT_DMKHACH = LIB.SESSION_START.DT_DMKHACH;
+                DT_DMKHACH = new DmkhachManager().SelectAllRDT();
                 //DT_DMHANGHOA = LIB.SESSION_START.DT_DMHANGHOA;
                 //DT_DMXE = LIB.SESSION_START.DT_DMXE;
             }
@@ -858,7 +858,7 @@ namespace GD.BBPH.APP.BANHANG
             if (!btn_THEMMOI.Enabled && !btn_SUA.Enabled && string.IsNullOrEmpty(MACHITIET))
                 DT_DONHANG_D = LIB.Procedures.Danhsachdondathangchitietkhongton(txt_MAKHACH.Text, txt_MAHANG.Text);
             //else
-            //    DT_DONHANG_D = LIB.SESSION_START.DT_DONHANG_D;
+            //    DT_DONHANG_D = new DonhangDManager().SelectAllRDT();
 
             if (string.IsNullOrEmpty(txt_MADONHANG.Text.Trim()) || DT_DONHANG_D == null || DT_DONHANG_D.Rows.Count == 0) return;
             string _str_MACANTIM = txt_MADONHANG.Text.Trim().ToUpper();

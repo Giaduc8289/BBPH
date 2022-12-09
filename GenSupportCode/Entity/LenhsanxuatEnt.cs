@@ -49,14 +49,14 @@ namespace GD.BBPH.DAL.EntityClasses
 					txt_TENKHACH.Text = _Rowview.Row[LenhsanxuatFields.Tenkhach.Name].ToString();
 					txt_MADONHANGCHITIET.Text = _Rowview.Row[LenhsanxuatFields.Madonhangchitiet.Name].ToString();
 					txt_LOAIHANG.Text = _Rowview.Row[LenhsanxuatFields.Loaihang.Name].ToString();
-					txt_MASP.Text = _Rowview.Row[LenhsanxuatFields.Masp.Name].ToString();
-					txt_TENHANG.Text = _Rowview.Row[LenhsanxuatFields.Tenhang.Name].ToString();
 					txt_SOLUONG.Text = _Rowview.Row[LenhsanxuatFields.Soluong.Name].ToString();
 					txt_NGAYGIAO.Text = _Rowview.Row[LenhsanxuatFields.Ngaygiao.Name].ToString();
 					txt_NGAYTAO.Text = _Rowview.Row[LenhsanxuatFields.Ngaytao.Name].ToString();
 					txt_NGUOITAO.Text = _Rowview.Row[LenhsanxuatFields.Nguoitao.Name].ToString();
 					txt_NGAYSUA.Text = _Rowview.Row[LenhsanxuatFields.Ngaysua.Name].ToString();
 					txt_NGUOISUA.Text = _Rowview.Row[LenhsanxuatFields.Nguoisua.Name].ToString();
+					txt_MASANPHAM.Text = _Rowview.Row[LenhsanxuatFields.Masanpham.Name].ToString();
+					txt_TENSANPHAM.Text = _Rowview.Row[LenhsanxuatFields.Tensanpham.Name].ToString();
 				}
 			}
 			catch (Exception ex) { MessageBox.Show(ex.Message, "BS_LENHSANXUAT_CurrentChanged"); }
@@ -81,8 +81,6 @@ namespace GD.BBPH.DAL.EntityClasses
 			catch { }
 			try { _LenhsanxuatEntity.Loaihang = System.Int32.Parse(txt_LOAIHANG.Text.Trim()); } 
 			catch { }
-			_LenhsanxuatEntity.Masp = txt_MASP.Text.Trim();
-			_LenhsanxuatEntity.Tenhang = txt_TENHANG.Text.Trim();
 			try { _LenhsanxuatEntity.Soluong = System.Decimal.Parse(txt_SOLUONG.Text.Trim()); } 
 			catch { }
 			try { _LenhsanxuatEntity.Ngaygiao = System.DateTime.Parse(txt_NGAYGIAO.Text.Trim()); } 
@@ -93,6 +91,8 @@ namespace GD.BBPH.DAL.EntityClasses
 			try { _LenhsanxuatEntity.Ngaysua = System.DateTime.Parse(txt_NGAYSUA.Text.Trim()); } 
 			catch { }
 			_LenhsanxuatEntity.Nguoisua = txt_NGUOISUA.Text.Trim();
+			_LenhsanxuatEntity.Masanpham = txt_MASANPHAM.Text.Trim();
+			_LenhsanxuatEntity.Tensanpham = txt_TENSANPHAM.Text.Trim();
 			
 			
 			if (string.IsNullOrEmpty(_str_LENHSANXUAT_PK))
@@ -115,14 +115,14 @@ namespace GD.BBPH.DAL.EntityClasses
 				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Tenkhach.Name].Value = _LenhsanxuatEntity.Tenkhach;
 				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Madonhangchitiet.Name].Value = _LenhsanxuatEntity.Madonhangchitiet;
 				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Loaihang.Name].Value = _LenhsanxuatEntity.Loaihang;
-				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Masp.Name].Value = _LenhsanxuatEntity.Masp;
-				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Tenhang.Name].Value = _LenhsanxuatEntity.Tenhang;
 				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Soluong.Name].Value = _LenhsanxuatEntity.Soluong;
 				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Ngaygiao.Name].Value = _LenhsanxuatEntity.Ngaygiao;
 				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Ngaytao.Name].Value = _LenhsanxuatEntity.Ngaytao;
 				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Nguoitao.Name].Value = _LenhsanxuatEntity.Nguoitao;
 				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Ngaysua.Name].Value = _LenhsanxuatEntity.Ngaysua;
 				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Nguoisua.Name].Value = _LenhsanxuatEntity.Nguoisua;
+				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Masanpham.Name].Value = _LenhsanxuatEntity.Masanpham;
+				GRID_LENHSANXUAT.CurrentRow.Cells[LenhsanxuatFields.Tensanpham.Name].Value = _LenhsanxuatEntity.Tensanpham;
 				GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_LenhsanxuatManager.Convert(_LenhsanxuatEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
 			}
 			return _str_LENHSANXUAT_PK;

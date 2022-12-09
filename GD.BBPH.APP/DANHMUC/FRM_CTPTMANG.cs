@@ -56,8 +56,8 @@ namespace GD.BBPH.APP.DANHMUC
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_CTPTMANG");
-                        DT_CTPTMANG_H = LIB.SESSION_START.DT_CTPTMANG_H;// LIB.Procedures.DanhsachCTPTMANG();
-                        DT_CTPTMANG_D = LIB.SESSION_START.DT_CTPTMANG_D;
+                        DT_CTPTMANG_H = new CtptmangHManager().SelectAllRDT();// LIB.Procedures.DanhsachCTPTMANG();
+                        DT_CTPTMANG_D = new CtptmangDManager().SelectAllRDT();
                         DT_CTPTMANG_D_FILL = DT_CTPTMANG_D.Clone();
 
                         //DT_DMSOI = LIB.SESSION_START.DT_DMSOI;
