@@ -42,7 +42,7 @@ namespace GD.BBPH.APP.TUA
         Int32 phuongan = 0, Socatrongngay = 0;
         private DataTable DT_DMMANH = new DataTable(), DT_KEHOACH_FULL = new DataTable(), DT_KEHOACH_KQ = new DataTable();
         private DateTime start = new DateTime();
-        private DataTable DT_CSMAYIN = new DataTable();
+        private DataTable DT_CSMAYTUA = new DataTable(), DT_CBMAYTUA = new DataTable();
 
         private DataTable dtKehoachtua = new DataTable(), DT_DMHANGHOA = new DataTable(), DT_DONDATHANGCHITIET = new DataTable();
         private DataTable dtKehoachdalap = new DataTable();
@@ -70,7 +70,7 @@ namespace GD.BBPH.APP.TUA
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KHTUA");
-                        DT_LENHSANXUAT = LIB.Procedures.Loclenhsanxuat(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG); // LIB.Procedures.Nhucauintheodondathangchitiet(Tungay, Denngay);//.Nhucausoitheokehoachdet(Tungay, Denngay);
+                        DT_LENHSANXUAT = DT_LENHSANXUAT = LIB.Procedures.Nhucaulapkehoachtua(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, true);
                         for (DateTime date = Tungay; date <= Denngay; date = date.AddDays(1))
                         {
                             if (date.DayOfWeek == DayOfWeek.Sunday)
@@ -134,7 +134,7 @@ namespace GD.BBPH.APP.TUA
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_XOA, btn_XOA.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_KHOIPHUC, btn_KHOIPHUC.Name + ".xml");
             GD.BBPH.CONTROL.BUTTON.Loadimage(LIB.PATH.BBPH_PATH, btn_Thoat, btn_Thoat.Name + ".xml");
-            GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LENHSANXUAT.xml", GRID_LENHSANXUAT, uiPanel0Container);
+            GD.BBPH.LIB.GRID_COMM.LOAD_GRID_UIPanel(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LENHSANXUAT_DIEUDO _KHTUA.xml", GRID_LENHSANXUAT, uiPanel0Container);
             //GRID_LENHSANXUAT.RootTable.Groups.Add(GRID_LENHSANXUAT.Tables[0].Columns[KehoachtuaFields.Thang.Name]);
             FORM_PROCESS();
             DataView Source_View = new DataView(DT_LENHSANXUAT);
@@ -166,9 +166,14 @@ namespace GD.BBPH.APP.TUA
                     //txt_MAUIN.Text = _Rowview.Row[LenhsanxuatFields.Mauin.Name].ToString();
                     //txt_MAMANH.Text = _Rowview.Row[LenhsanxuatFields.Mamanh.Name].ToString();
                     txt_NGAYGIAO.Text = _Rowview.Row[LenhsanxuatFields.Ngaygiao.Name].ToString();
-                    try { txt_SOLUONG.Text = double.Parse(_Rowview.Row[LenhsanxuatFields.Soluong.Name].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN")); }
+                    try { txt_SOLUONG.Text = double.Parse(_Rowview.Row[LenhsanxuatFields.Soluong.Name].ToString()).ToString("#,##", new System.Globalization.CultureInfo("vi-VN")); }
                     catch { }
-
+                    try { txt_SOMQUYDOI.Text = double.Parse(_Rowview.Row["Sometquydoi"].ToString()).ToString("#,##", new System.Globalization.CultureInfo("vi-VN")); }
+                    catch { }
+                    try { txt_SOMDATUA.Text = double.Parse(_Rowview.Row["Sometdatua"].ToString()).ToString("#,##", new System.Globalization.CultureInfo("vi-VN")); }
+                    catch { }
+                    try { txt_SOMCONLAI.Text = double.Parse(_Rowview.Row["Somet"].ToString()).ToString("#,##", new System.Globalization.CultureInfo("vi-VN")); }
+                    catch { }
                     //txt_MAMANH_Validating(new object(), new CancelEventArgs());
                 }
                 else
@@ -215,8 +220,8 @@ namespace GD.BBPH.APP.TUA
                 {
                     Decimal _tocdo = 0, _congsuat = 0;
                     _tocdo = LIB.Procedures.fTinhtocdomay(dr[DmmayFields.Mamay.Name].ToString(), txt_MASP.Text);
-                    _congsuat = _tocdo * 60 * 12;   //-----Công suất của 1 ca (m/ca)
-                    dr["Congsuat"] = _congsuat;
+                    //_congsuat = _tocdo * 60 * 12;   //-----Công suất của 1 ca (m/ca)
+                    dr["Congsuat"] = _tocdo;//_congsuat;
                     //dr["Congsuattrong"] = _congsuat * Convert.ToDecimal(dr["Catrong"]);
                     dr["Thoigiantrong"] = Convert.ToDecimal(dr["Catrong"]) * 60 * 12;
                 }
@@ -503,7 +508,7 @@ namespace GD.BBPH.APP.TUA
                         catch { }
                     }
                 }
-                txt_SLDUKIEN.Text = double.Parse(_tongcongsuat.ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN"));
+                txt_SLDUKIEN.Text = double.Parse(_tongcongsuat.ToString()).ToString("#,##", new System.Globalization.CultureInfo("vi-VN"));
             }
             catch { }
         }
@@ -528,7 +533,8 @@ namespace GD.BBPH.APP.TUA
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
-        
+
+
         #region Lập kế hoạch tua cho đơn đặt hàng
         private bool Lapkehoach()
         {
@@ -543,6 +549,8 @@ namespace GD.BBPH.APP.TUA
                 dtKehoachtua.Columns.Add(KehoachtuaFields.Sldukien.Name, Type.GetType("System.Int32"));
                 dtKehoachtua.Columns.Add(KehoachtuaFields.Masanpham.Name, Type.GetType("System.String"));
                 dtKehoachtua.Columns.Add(DmhangFields.Makhach.Name, Type.GetType("System.String"));
+                dtKehoachtua.Columns.Add(KehoachtuaFields.Tgdukien.Name, Type.GetType("System.Decimal"));
+
 
                 DT_Nhucautua = LIB.Procedures.Nhucaulapkehoachtua(Tungay, Denngay, ncdaphatlenh);
                 DT_Nhucautua.Columns.Add("Dasanxuat", Type.GetType("System.Decimal"));
@@ -554,7 +562,10 @@ namespace GD.BBPH.APP.TUA
                 Tongsomay = DT_DMMAY_TEMP.Rows.Count;
                 Tongsoca = ((Denngay - Tungay).Days + 1) * 2;
                 //-----Tính công suất máy sợi cho từng loại sợi thuộc kế hoạch dệt
-                DT_CSMAYIN = LIB.Procedures.Congsuatmaytuachotungsanpham(Tungay, Denngay);
+                DT_CSMAYTUA = LIB.Procedures.Congsuatmaytuachotungsanpham(Tungay, Denngay);
+                //-----Tính thời gian chuẩn bị máy cho từng mã sản phẩm thuộc kế hoạch
+                DT_CBMAYTUA = LIB.Procedures.Thoigianchuanbimaytuachotungsanpham(Tungay, Denngay);
+
                 //-----Kế hoạch in đã lập
                 dtKehoachdalap = LIB.Procedures.Kehoachtuadalap(Tungay, Denngay);// new KehoachtuaManager().SelectByCondition(Tungay, Denngay);
                 foreach (DataRow dr in dtKehoachdalap.Rows)
@@ -567,6 +578,7 @@ namespace GD.BBPH.APP.TUA
                     drKhin[KehoachtuaFields.Sldukien.Name] = dr[KehoachtuaFields.Sldukien.Name];
                     drKhin[KehoachtuaFields.Masanpham.Name] = dr[KehoachtuaFields.Masanpham.Name];
                     drKhin[DmhangFields.Makhach.Name] = dr[DmhangFields.Makhach.Name];
+                    drKhin[KehoachtuaFields.Tgdukien.Name] = dr[KehoachtuaFields.Tgdukien.Name];
                     dtKehoachtua.Rows.Add(drKhin);
                 }
 
@@ -604,11 +616,9 @@ namespace GD.BBPH.APP.TUA
                                     _KehoachtuaEntity.Ngaychay = Tungay.AddDays(Convert.ToInt32(dr[KehoachtuaFields.Ca.Name].ToString()) / 2);
                                     _KehoachtuaEntity.Ca = Convert.ToInt32(Convert.ToInt32(dr[KehoachtuaFields.Ca.Name].ToString()) % 2 + 1);
                                     _KehoachtuaEntity.Mamay = dr[KehoachtuaFields.Mamay.Name].ToString();
-                                    //_KehoachtuaEntity.Mauin = DT_Nhucautua.Select(DonhangDFields.Id.Name + "='" + dr[KehoachtuaFields.Solenhsx.Name].ToString() + "'")[0][KehoachtuaFields.Mamang.Name].ToString();
-                                    //_KehoachtuaEntity.Mamanh = DT_Nhucautua.Select(DonhangDFields.Id.Name + "='" + dr[KehoachtuaFields.Solenhsx.Name].ToString() + "'")[0][KehoachtuaFields.Mamanh.Name].ToString();
-                                    //_KehoachtuaEntity.Madonhangct = Convert.ToInt64(dr[KehoachtuaFields.Solenhsx.Name].ToString());
                                     _KehoachtuaEntity.Sldukien = Convert.ToInt32(Convert.ToDecimal(dr[KehoachtuaFields.Sldukien.Name].ToString()));
                                     _KehoachtuaEntity.Solenhsx = dr[KehoachtuaFields.Solenhsx.Name].ToString();
+                                    _KehoachtuaEntity.Tgdukien = Convert.ToInt32(Convert.ToDecimal(dr[KehoachtuaFields.Tgdukien.Name].ToString()));
 
                                     new KehoachtuaManager().Insert(_KehoachtuaEntity);
                                 }
@@ -727,17 +737,31 @@ namespace GD.BBPH.APP.TUA
                     ktra = true;
                     foreach (DataRow dr in DT_Nhucautua.Rows)
                     {
-                        decimal _Csdabotri = 0;
-                        if (Ktradksapxep(dr, Ca, May, ref _Csdabotri))
+                        decimal _Thoigiandabotri = 0;
+                        if (Ktradksapxep(dr, Ca, May, ref _Thoigiandabotri))
                         {
                             ktra = false;
                             //-----Thông tin tính Kldukien
-                            Decimal _Congsuat = Convert.ToDecimal(DT_CSMAYIN.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString()) - _Csdabotri;// Convert.ToDecimal(DT_DMMAY_TEMP.Rows[May][CongsuatmaysoiFields.Congsuat.Name].ToString());
+                            //Decimal _Congsuat = Convert.ToDecimal(DT_CSMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString()) - _Thoigiandabotri;
+                            Decimal _Thoigiantrong = 720 - _Thoigiandabotri;
                             Decimal _Nhucauconlai = Convert.ToDecimal(dr["Somet"].ToString()) - Convert.ToDecimal(dr["Dasanxuat"].ToString());
-                            Decimal _Kldukien = 0;
+                            Decimal _Thoigianconlai = Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString())
+                                                    + _Nhucauconlai / Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
+                            Decimal _Kldukien = 0, _Tgdukien = 0;
 
-                            if (_Congsuat < _Nhucauconlai) _Kldukien = _Congsuat;
-                            else _Kldukien = _Nhucauconlai;
+                            //if (_Congsuat < _Nhucauconlai) _Kldukien = _Congsuat;
+                            //else _Kldukien = _Nhucauconlai;
+                            if (_Thoigiantrong < _Thoigianconlai)
+                            {
+                                _Kldukien = (_Thoigiantrong - Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString())) * Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
+                                _Tgdukien = _Thoigiantrong;
+                            }
+                            else
+                            {
+                                _Kldukien = _Nhucauconlai;
+                                _Tgdukien = _Thoigianconlai;
+                            }
+
 
                             DataRow drKehoachtua = dtKehoachtua.NewRow();
                             //drKehoachtua[KehoachtuaFields.Ngaychay.Name] = sNgay;
@@ -747,11 +771,13 @@ namespace GD.BBPH.APP.TUA
                             drKehoachtua[KehoachinFields.Masanpham.Name] = dr[KehoachinFields.Masanpham.Name];
                             drKehoachtua[DmhangFields.Makhach.Name] = dr[DmhangFields.Makhach.Name];
                             drKehoachtua[KehoachtuaFields.Sldukien.Name] = _Kldukien;
+                            drKehoachtua[KehoachinFields.Tgdukien.Name] = _Tgdukien;
+
                             dtKehoachtua.Rows.Add(drKehoachtua);
                             dr["Dasanxuat"] = Convert.ToDecimal(dr["Dasanxuat"].ToString()) + _Kldukien;
                             Tongnhucautua -= _Kldukien;
 
-                            if (_Kldukien == _Congsuat)
+                            if (_Tgdukien == _Thoigiantrong)
                                 Duyetkehoachtua(Ca, May + 1);
                             else
                                 Duyetkehoachtua(Ca, May);
@@ -767,9 +793,9 @@ namespace GD.BBPH.APP.TUA
                 else
                     Duyetkehoachtua(Ca, May + 1);
             }
-            catch (Exception ex) { MessageBox.Show("Lỗi duyệt kế hoạch in!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            catch (Exception ex) { MessageBox.Show("Lỗi duyệt kế hoạch tua!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
-        private bool Ktradksapxep(DataRow dr, int Ca, int May, ref decimal _Csdabotri)
+        private bool Ktradksapxep(DataRow dr, int Ca, int May, ref decimal _Thoigiandabotri)
         {
             try
             {
@@ -788,13 +814,13 @@ namespace GD.BBPH.APP.TUA
                 //----Đã sản xuất xong không sắp xếp chạy
                 if (_Nhucauconlai <= 0) return false;
                 //----Công suất = 0 không chạy
-                decimal _Congsuat = LIB.ConvertString.NumbertoDB(DT_CSMAYIN.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
+                decimal _Congsuat = LIB.ConvertString.NumbertoDB(DT_CSMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
                 if (_Congsuat == 0) return false;
                 else
                 {
                     //-----Đã bố trí hết công suất không chạy tiếp
-                    _Csdabotri = Csdabotri(Ca, sMay);
-                    if (_Csdabotri >= _Congsuat) return false;
+                    _Thoigiandabotri = Thoigiandabotri(Ca, sMay);
+                    if (_Thoigiandabotri >= 720) return false;
                 }
                 //----Cùng ca không sản xuất cùng mã hàng
                 //if (dtKehoachtua.Select(sFillter + " And " + DonhangDFields.Masp.Name + "='" + sMahang + "'").Length > 0) return false;
@@ -1010,11 +1036,11 @@ namespace GD.BBPH.APP.TUA
                 if (arrDr.Length > 0)
                 {
                     foreach (DataRow drx in arrDr)
-                        Csdabotri += LIB.ConvertString.NumbertoDB(drx[KehoachtuaFields.Sldukien.Name].ToString());
-                    //Tgdabotri += LIB.ConvertString.NumbertoDB(drx[KehoachtuaFields.Tgdukien.Name].ToString());
+                        //Csdabotri += LIB.ConvertString.NumbertoDB(drx[KehoachtuaFields.Sldukien.Name].ToString());
+                        Tgdabotri += LIB.ConvertString.NumbertoDB(drx[KehoachtuaFields.Tgdukien.Name].ToString());
                 }
-                if (Csdabotri >= _Congsuat) return false;
-                //if (Tgdabotri >= 720) return false;
+                //if (Csdabotri >= _Congsuat) return false;
+                if (Tgdabotri >= 720) return false;
 
 
                 //-----Số ca máy trong ngày không được vượt (Số công nhân in - 4)/2
@@ -1049,6 +1075,17 @@ namespace GD.BBPH.APP.TUA
                     _Congsuat += LIB.ConvertString.NumbertoDB(dr[KehoachtuaFields.Sldukien.Name].ToString());
             }
             return _Congsuat;
+        }
+        private decimal Thoigiandabotri(int Ca, string sMay)
+        {
+            decimal _Thoigian = 0;
+            foreach (DataRow dr in dtKehoachtua.Rows)
+            {
+                if (Convert.ToInt32(dr[KehoachinFields.Ca.Name].ToString()) == Ca
+                    && dr[KehoachinFields.Mamay.Name].ToString() == sMay)
+                    _Thoigian += LIB.ConvertString.NumbertoDB(dr[KehoachinFields.Tgdukien.Name].ToString());
+            }
+            return _Thoigian;
         }
         #endregion
 
