@@ -1,8 +1,8 @@
-﻿------------------------Công suất máy in cho từng sản phẩm------------
-If Object_ID('dbo.Congsuatmayinchotungsanpham','P') is not null
-	Drop Procedure dbo.Congsuatmayinchotungsanpham;
+﻿------------------------Thời gian chuẩn bị máy in cho từng sản phẩm------------
+If Object_ID('dbo.Thoigianchuanbimayinchotungsanpham','P') is not null
+	Drop Procedure dbo.Thoigianchuanbimayinchotungsanpham;
 Go
-Create Procedure dbo.Congsuatmayinchotungsanpham
+Create Procedure dbo.Thoigianchuanbimayinchotungsanpham
 	@Tungay		DATETIME,
 	@Denngay	DATETIME
 With Encryption As
@@ -51,20 +51,20 @@ With Encryption As
 
 	SELECT Mamay, Madm As Madongmay
 		, Masanpham, Makhach, Solenhsx
-		, dbo.fTinhtocdomay(Mamay,Masanpham,'') As Congsuat
-	INTO #CsMay_Lenhsx
-	FROM (Select * From Dmmay Where Madm='IN') m 
+		, dbo.fTinhdinhmucthoigian(Mamay,Masanpham,'Chuanbi') As Thoigianchuanbi
+	INTO #CbMay_Lenhsx
+	FROM (Select * From Dmmay Where Madm='IN')m 
 		,(Select DISTINCT Masanpham, Makhach, Solenhsx
 					FROM #Nhucau) nc
-
+--select * from Dinhmucthoigian
 
 	SET @v_columns = N''
-	SELECT @v_columns += N', ' + QUOTENAME(Solenhsx) FROM (SELECT Solenhsx FROM #CsMay_Lenhsx GROUP BY Solenhsx) AS x ORDER BY x.Solenhsx
+	SELECT @v_columns += N', ' + QUOTENAME(Solenhsx) FROM (SELECT Solenhsx FROM #CbMay_Lenhsx GROUP BY Solenhsx) AS x ORDER BY x.Solenhsx
 	SET	@v_sql = N'Select Mamay,' 
 		+ STUFF(@v_columns,1, 2, '') 
-		+ ' From (Select Mamay, Madongmay, Solenhsx, Congsuat From #CsMay_Lenhsx) As j '
+		+ ' From (Select Mamay, Madongmay, Solenhsx, Thoigianchuanbi From #CbMay_Lenhsx) As j '
 		+ ' PIVOT ('
-		+ ' SUM(Congsuat) FOR Solenhsx IN ('
+		+ ' SUM(Thoigianchuanbi) FOR Solenhsx IN ('
 		+ STUFF(REPLACE(@v_columns,', [',',['),1,1,'')
 		+ ') 
 		) As p Order by Madongmay'
@@ -73,5 +73,5 @@ With Encryption As
 	
 Go
 
-Exec Congsuatmayinchotungsanpham '12/03/2022', '12/31/2022'
+Exec Thoigianchuanbimayinchotungsanpham '12/03/2022', '12/31/2022'
 

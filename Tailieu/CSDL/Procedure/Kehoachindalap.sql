@@ -14,7 +14,7 @@ With Encryption As
 		, kh.Masanpham
 		, kh.Solenhsx
 		--, Ngaydat, Ngaygiao 
-		, Sldukien 
+		, Sldukien, Tgdukien 
 		--, ddh.Chieudaicat, dmm.Dorong
 		--, Daphatlenh
 	FROM dbo.Kehoachin kh LEFT JOIN Lenhsanxuat lsx ON lsx.Solenhsx = kh.Solenhsx

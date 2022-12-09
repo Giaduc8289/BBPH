@@ -35,16 +35,18 @@ With Encryption As
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, Makhach, Tenkhach
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao 
-		--, Soluong - Sometin*1000/Dai*Sohinh As Soluong
-		, Soluong/Sohinh*Dai/1000 - Sometdain As Somet
+		, Sometdain*1000/Dai*Sohinh As Soluongdain
+		, Soluong - Sometdain*1000/Dai*Sohinh As Soluongconlai
+		, Soluong/Sohinh*Dai/1000 As Sometquydoi
+		, Soluong/Sohinh*Dai/1000 - Sometdain As Sometconlai	--Số mét còn lại cần lập kế hoạch
 	Into #Nhucau
 	From #Nhucau0
 	
-	--SELECT * FROM #Nhucau WHERE Soluong>0 ORDER BY Ngaygiao
-	SELECT * FROM #Nhucau WHERE Somet>0 ORDER BY Ngaygiao
+	SELECT * FROM #Nhucau WHERE Sometconlai>0 ORDER BY Ngaygiao
 	
 Go
 
 Exec Nhucaulapkehoachin '12/01/2022', '12/30/2022', 'TRUE'
 
 
+--select * from Ketquain
