@@ -12,7 +12,7 @@ With Encryption As
 	
 	SELECT kh.Id, lsx.Solenhsx, Madon, Makhach, Tenkhach
 		, lsx.Masanpham, lsx.Ngaydat, lsx.Ngaygiao 
-		, Sldukien 
+		, Sldukien , Tgdukien
 	FROM dbo.Kehoachtua kh LEFT JOIN Lenhsanxuat lsx On lsx.Solenhsx=kh.Solenhsx
 	WHERE  Ngaychay = @Ngay
 		AND Ca = @Ca

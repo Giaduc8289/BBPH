@@ -1793,6 +1793,17 @@ namespace GD.BBPH.APP.LIB
             parameters.CopyTo(myArr, 0);
             return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Thoigianchuanbimayinchotungsanpham", "Thoigianchuanbimayinchotungsanpham", myArr).Tables[0];
         }
+        public static DataTable Thoigianchuanbimaytuachotungsanpham(DateTime Tungay, DateTime Denngay)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Tungay", SqlDbType.Date, 0), Tungay);
+            parameters.Add(new SqlParameter("@Denngay", SqlDbType.Date, 0), Denngay);
+
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Thoigianchuanbimaytuachotungsanpham", "Thoigianchuanbimaytuachotungsanpham", myArr).Tables[0];
+        }
         public static DataTable Congsuatmayghepchotungsanpham(DateTime Tungay, DateTime Denngay)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);

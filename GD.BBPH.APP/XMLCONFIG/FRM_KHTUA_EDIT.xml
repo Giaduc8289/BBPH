@@ -88,7 +88,16 @@
   <viewgrid>
     <value>1</value>
     <name>Sldukien</name>
-    <headerText>Số lượng</headerText>
+    <headerText>Số mét</headerText>
+    <BackColor>0</BackColor>
+    <SelectionBackColor>0</SelectionBackColor>
+    <Width>60</Width>
+    <Thutu>100</Thutu>
+  </viewgrid>
+  <viewgrid>
+    <value>1</value>
+    <name>Tgdukien</name>
+    <headerText>Thời gian dự kiến</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>60</Width>
