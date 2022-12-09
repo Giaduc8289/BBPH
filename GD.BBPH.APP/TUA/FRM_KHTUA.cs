@@ -564,7 +564,7 @@ namespace GD.BBPH.APP.TUA
                     drKhin[KehoachtuaFields.Ca.Name] = (Convert.ToDateTime(dr[KehoachtuaFields.Ngaychay.Name].ToString()) - Tungay).Days * 2 + Convert.ToInt32(dr[KehoachtuaFields.Ca.Name].ToString()) - 1;
                     drKhin[KehoachtuaFields.Mamay.Name] = dr[KehoachtuaFields.Mamay.Name];
                     drKhin[KehoachtuaFields.Solenhsx.Name] = dr[KehoachtuaFields.Solenhsx.Name];
-                    drKhin[KehoachtuaFields.Sldukien.Name] = dr[KehoachtuaFields.Sokg.Name];
+                    drKhin[KehoachtuaFields.Sldukien.Name] = dr[KehoachtuaFields.Sldukien.Name];
                     drKhin[KehoachtuaFields.Masanpham.Name] = dr[KehoachtuaFields.Masanpham.Name];
                     drKhin[DmhangFields.Makhach.Name] = dr[DmhangFields.Makhach.Name];
                     dtKehoachtua.Rows.Add(drKhin);
