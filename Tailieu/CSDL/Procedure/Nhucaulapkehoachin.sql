@@ -35,9 +35,9 @@ With Encryption As
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, Makhach, Tenkhach
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao 
-		, Sometdain*1000/Dai*Sohinh As Soluongdain
-		, Soluong - Sometdain*1000/Dai*Sohinh As Soluongconlai
+		, Soluong
 		, Soluong/Sohinh*Dai/1000 As Sometquydoi
+		, Sometdain
 		, Soluong/Sohinh*Dai/1000 - Sometdain As Sometconlai	--Số mét còn lại cần lập kế hoạch
 	Into #Nhucau
 	From #Nhucau0
