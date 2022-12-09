@@ -1277,6 +1277,18 @@ namespace GD.BBPH.APP.LIB
             parameters.CopyTo(myArr, 0);
             _SimpleStoredProcedure.ExecuteSPReader(timeout, "Xoakehoachin", "Xoakehoachin", myArr);
         }
+        public static void Xoakehoachchia(string Solenhsx, DateTime Tungay, DateTime Denngay)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Solenhsx", SqlDbType.NVarChar, 0), Solenhsx);
+            parameters.Add(new SqlParameter("@Tungay", SqlDbType.Date, 0), Tungay);
+            parameters.Add(new SqlParameter("@Denngay", SqlDbType.Date, 0), Denngay);
+
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            _SimpleStoredProcedure.ExecuteSPReader(timeout, "Xoakehoachchia", "Xoakehoachchia", myArr);
+        }
         public static void Xoakehoachtua(string Solenhsx, DateTime Tungay, DateTime Denngay)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);

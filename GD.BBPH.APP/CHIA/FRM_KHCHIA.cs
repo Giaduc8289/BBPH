@@ -212,12 +212,12 @@ namespace GD.BBPH.APP.CHIA
                         Decimal _tocdo = 0, _congsuat = 0, _daitui = 0;
                         int _sohinh = 0;
                         _tocdo = LIB.Procedures.fTinhtocdomay(dr[DmmayFields.Mamay.Name].ToString(), txt_MASANPHAM.Text);
-                        _congsuat = _tocdo * 60 * 12;   //-----Công suất của 1 ca (m/ca)
-                        DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(txt_MASANPHAM.Text);
-                        _sohinh = Convert.ToInt32(_DmhangEntity.Sohinh);
-                        _daitui = Convert.ToDecimal(_DmhangEntity.Dai);
-                        _congsuat = _congsuat * 1000 / _daitui * _sohinh;   //-----Công suất của 1 ca (túi/ca)
-                        dr["Congsuat"] = _congsuat;
+                        //_congsuat = _tocdo * 60 * 12;   //-----Công suất của 1 ca (m/ca)
+                        //DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(txt_MASANPHAM.Text);
+                        //_sohinh = Convert.ToInt32(_DmhangEntity.Sohinh);
+                        //_daitui = Convert.ToDecimal(_DmhangEntity.Dai);
+                        //_congsuat = _congsuat * 1000 / _daitui * _sohinh;   //-----Công suất của 1 ca (túi/ca)
+                        dr["Congsuat"] = _tocdo;
                         //dr["Congsuattrong"] = _congsuat * Convert.ToDecimal(dr["Catrong"]);
                         dr["Thoigiantrong"] = Convert.ToDecimal(dr["Catrong"]) * 60 * 12;
                     }
@@ -246,7 +246,7 @@ namespace GD.BBPH.APP.CHIA
                                 foreach (DataRow drMay in arrDrMay)
                                 {
                                     decimal kluong = 0;
-                                    try { kluong = Convert.ToDecimal(drMay[KehoachchiaFields.Sokg.Name].ToString()); }
+                                    try { kluong = Convert.ToDecimal(drMay[KehoachchiaFields.Sldukien.Name].ToString()); }
                                     catch { }
                                     dr[Convert.ToDateTime(drMay[KehoachchiaFields.Ngaychay.Name].ToString()).ToString("dd/MM")
                                         + (drMay[KehoachchiaFields.Ca.Name].ToString() == "1" ? "_K1" : "_K2")] = kluong;
@@ -327,7 +327,7 @@ namespace GD.BBPH.APP.CHIA
             }
             #endregion
 
-            //DT_KEHOACH_FULL = new KehoachchiaManager().SelectByCondition(Tungay, Denngay);
+            DT_KEHOACH_FULL = new KehoachchiaManager().SelectByCondition(Tungay, Denngay);
         }
 
         #region Event GRID_DMMAY
@@ -624,13 +624,13 @@ namespace GD.BBPH.APP.CHIA
                             GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Lưu lại thành công");
                             return true;
                         }
-                        catch (Exception ex) { MessageBox.Show("Lỗi ghi kế hoạch!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                        catch (Exception ex) { MessageBox.Show("Lỗi ghi kế hoạch!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                     }
                 }
                 #endregion
 
             }
-            catch (Exception ex) { MessageBox.Show("Lỗi lập kế hoạch in!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            catch (Exception ex) { MessageBox.Show("Lỗi lập kế hoạch chia!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             return false;
         }
         private void Danhgiaketqua()
@@ -737,7 +737,7 @@ namespace GD.BBPH.APP.CHIA
                         {
                             ktra = false;
                             //-----Thông tin tính Kldukien
-                            Decimal _Congsuat = Convert.ToDecimal(DT_CSMAYCHIA.Rows[May][dr[LenhsanxuatFields.Madonhangchitiet.Name].ToString()].ToString()) - _Csdabotri;// Convert.ToDecimal(DT_DMMAY_TEMP.Rows[May][CongsuatmaysoiFields.Congsuat.Name].ToString());
+                            Decimal _Congsuat = Convert.ToDecimal(DT_CSMAYCHIA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString()) - _Csdabotri;// Convert.ToDecimal(DT_DMMAY_TEMP.Rows[May][CongsuatmaysoiFields.Congsuat.Name].ToString());
                             Decimal _Nhucauconlai = Convert.ToDecimal(dr["Somet"].ToString()) - Convert.ToDecimal(dr["Dasanxuat"].ToString());
                             Decimal _Kldukien = 0;
 
@@ -795,7 +795,7 @@ namespace GD.BBPH.APP.CHIA
                 //----Đã sản xuất xong không sắp xếp chạy
                 if (_Nhucauconlai <= 0) return false;
                 //----Công suất = 0 không chạy
-                decimal _Congsuat = LIB.ConvertString.NumbertoDB(DT_CSMAYCHIA.Rows[May][dr[LenhsanxuatFields.Madonhangchitiet.Name].ToString()].ToString());//[dr[DonhangDFields.Masp.Name].ToString()].ToString());
+                decimal _Congsuat = LIB.ConvertString.NumbertoDB(DT_CSMAYCHIA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());//[dr[DonhangDFields.Masp.Name].ToString()].ToString());
                 if (_Congsuat == 0) return false;
                 else
                 {
@@ -1143,7 +1143,7 @@ namespace GD.BBPH.APP.CHIA
                 {
                     try
                     {
-                        LIB.Procedures.Xoakehoachin("", Tungay, Denngay);
+                        LIB.Procedures.Xoakehoachchia("", Tungay, Denngay);
                         BS_LENHSANXUAT_CurrentChanged(new object(), new EventArgs());
                         GD.BBPH.LIB.TrayPopup.PoupStringMessage("Thông báo", "Đã xóa thành công!");
                         GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_KehoachchiaManager.Convert(_KehoachchiaEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_DELETE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);

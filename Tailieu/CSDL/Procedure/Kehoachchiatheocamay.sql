@@ -20,7 +20,7 @@ With Encryption As
 	
 Go
 
-Exec Kehoachchiatheocamay '12/09/2022', 1, 'I1'
+Exec Kehoachchiatheocamay '12/09/2022', 1, 'L2'
 
 --SELECT * FROM dbo.Lenhsanxuat
 SELECT * FROM dbo.Kehoachchia
