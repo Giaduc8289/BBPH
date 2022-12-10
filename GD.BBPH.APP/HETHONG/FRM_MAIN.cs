@@ -1008,6 +1008,17 @@ namespace GD.BBPH.APP.HETHONG
                     }
                     ShowAsMDIChildMax((new GD.BBPH.APP.HOANTHIEN.FRM_KQHOANTHIEN()), mmru.Text);
                     break;
+
+                case "FRM_KHHOANTHIEN":
+                    foreach (GD.BBPH.CONTROL.FORM frm in this.MdiChildren)
+                    {
+                        if (frm.Name == "FRM_KHTUA") { frm.Activate(); frm.WindowState = FormWindowState.Maximized; return; }
+                    }
+                    GD.BBPH.APP.DANHMUC.FRM_THOIGIANDCKH _FRM_THOIGIANDCKH_2 = new GD.BBPH.APP.DANHMUC.FRM_THOIGIANDCKH();
+                    _FRM_THOIGIANDCKH_2.ShowDialog();
+                    if (_FRM_THOIGIANDCKH_2._DialogResult == DialogResult.No) return;
+                    ShowAsMDIChildMax((new GD.BBPH.APP.HOANTHIEN.FRM_KHHOANTHIEN(_FRM_THOIGIANDCKH_2.Tungay, _FRM_THOIGIANDCKH_2.Denngay)), mmru.Text);
+                    break;
                 #endregion
 
                 #region Kho
