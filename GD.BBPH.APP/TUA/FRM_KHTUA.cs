@@ -32,7 +32,7 @@ namespace GD.BBPH.APP.TUA
         private GD.BBPH.CONTROL.JGridEX GRID_DMMAY = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
 
-        private DataTable DT_KEHOACH = new DataTable(), DT_DMMAY = new DataTable(), DT_DMMAY_TEMP = new DataTable();
+        private DataTable DT_KEHOACH = new DataTable(), DT_DMMAY_TEMP = new DataTable();
         private DateTime Tungay = new DateTime(), Denngay = new DateTime();
         private int songaynghi = 0;
 
@@ -50,6 +50,8 @@ namespace GD.BBPH.APP.TUA
         private decimal luongphe = 0;
         private bool hetcongsuat = true;
         private bool ngaychuaphatlenh = false, ncdaphatlenh = false;
+        private decimal SOPHUTMOTCA = 0;
+
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -78,7 +80,8 @@ namespace GD.BBPH.APP.TUA
                         }
 
                         //Socatrongngay = Convert.ToInt32((Convert.ToInt32(LIB.Procedures.Laygiatrithamso("Socongnhanin"))-4)/2);
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("THOI"); // LIB.SESSION_START.DT_DMMAY.Select("",DmmayFields.Madm.Name).CopyToDataTable();
+                        SOPHUTMOTCA = LIB.SESSION_START.TS_GIOLAMVIEC / 2 * 60;
+                        //DT_DMMAY = new DmmayManager().SelectByMadmRDT("THOI"); // LIB.SESSION_START.DT_DMMAY.Select("",DmmayFields.Madm.Name).CopyToDataTable();
                         //DT_DMMANH = LIB.SESSION_START.DT_DMMANH;
                         ////GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(DT_LENHSANXUAT, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_KHTUA.xml");
 
@@ -223,7 +226,7 @@ namespace GD.BBPH.APP.TUA
                     //_congsuat = _tocdo * 60 * 12;   //-----Công suất của 1 ca (m/ca)
                     dr["Congsuat"] = _tocdo;//_congsuat;
                     //dr["Congsuattrong"] = _congsuat * Convert.ToDecimal(dr["Catrong"]);
-                    dr["Thoigiantrong"] = Convert.ToDecimal(dr["Catrong"]) * 60 * 12;
+                    dr["Thoigiantrong"] = Convert.ToDecimal(dr["Catrong"]) * SOPHUTMOTCA;
                 }
             }
             #endregion
@@ -743,7 +746,7 @@ namespace GD.BBPH.APP.TUA
                             ktra = false;
                             //-----Thông tin tính Kldukien
                             //Decimal _Congsuat = Convert.ToDecimal(DT_CSMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString()) - _Thoigiandabotri;
-                            Decimal _Thoigiantrong = 720 - _Thoigiandabotri;
+                            Decimal _Thoigiantrong = SOPHUTMOTCA - _Thoigiandabotri;
                             Decimal _Nhucauconlai = Convert.ToDecimal(dr["Somet"].ToString()) - Convert.ToDecimal(dr["Dasanxuat"].ToString());
                             Decimal _Thoigianconlai = Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString())
                                                     + _Nhucauconlai / Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
@@ -820,7 +823,7 @@ namespace GD.BBPH.APP.TUA
                 {
                     //-----Đã bố trí hết công suất không chạy tiếp
                     _Thoigiandabotri = Thoigiandabotri(Ca, sMay);
-                    if (_Thoigiandabotri >= 720) return false;
+                    if (_Thoigiandabotri >= SOPHUTMOTCA) return false;
                 }
                 //----Cùng ca không sản xuất cùng mã hàng
                 //if (dtKehoachtua.Select(sFillter + " And " + DonhangDFields.Masp.Name + "='" + sMahang + "'").Length > 0) return false;
@@ -1040,7 +1043,7 @@ namespace GD.BBPH.APP.TUA
                         Tgdabotri += LIB.ConvertString.NumbertoDB(drx[KehoachtuaFields.Tgdukien.Name].ToString());
                 }
                 //if (Csdabotri >= _Congsuat) return false;
-                if (Tgdabotri >= 720) return false;
+                if (Tgdabotri >= SOPHUTMOTCA) return false;
 
 
                 //-----Số ca máy trong ngày không được vượt (Số công nhân in - 4)/2

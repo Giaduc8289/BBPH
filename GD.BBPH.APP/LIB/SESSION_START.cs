@@ -104,17 +104,17 @@ namespace GD.BBPH.APP.LIB
         }
         #endregion
 
-        //#region GIOLAMVIEC
-        //private static Decimal _TS_GIOLAMVIEC = Convert.ToDecimal(Procedures.Laygiatrithamso("Sogiolamviec"));
-        //public static Decimal TS_GIOLAMVIEC
-        //{
-        //    get
-        //    {
-        //        return _TS_GIOLAMVIEC;
-        //    }
-        //    set { _TS_GIOLAMVIEC = value; }
-        //}
-        //#endregion
+        #region GIOLAMVIEC
+        private static Decimal _TS_GIOLAMVIEC = Convert.ToDecimal(Procedures.Laygiatrithamso("Sogiolamviec"));
+        public static Decimal TS_GIOLAMVIEC
+        {
+            get
+            {
+                return _TS_GIOLAMVIEC;
+            }
+            set { _TS_GIOLAMVIEC = value; }
+        }
+        #endregion
         #region PHUTLAPKH
         private static Decimal _TS_PHUTLAPKH = Convert.ToDecimal(Procedures.Laygiatrithamso("Sophutlapkh"));
         public static Decimal TS_PHUTLAPKH

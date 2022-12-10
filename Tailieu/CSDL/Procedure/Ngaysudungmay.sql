@@ -70,5 +70,5 @@ With Encryption As
 Go
 
 Exec Ngaysudungmay '12/09/2022', '12/31/2022', 'GH', ''
-Exec Ngaysudungmay '12/01/2022', '12/31/2022', '', 'C1,C2,'
+Exec Ngaysudungmay '12/01/2022', '12/31/2022', '', 'G2, L1, L2, L3,'
 

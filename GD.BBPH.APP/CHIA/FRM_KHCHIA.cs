@@ -50,6 +50,8 @@ namespace GD.BBPH.APP.CHIA
         private decimal luongphe = 0;
         private bool hetcongsuat = true;
         private bool ngaychuaphatlenh = false, ncdaphatlenh = false;
+        private decimal SOPHUTMOTCA = 0;
+
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(!_isbool, uiPanel1Container, new List<Control>(new Control[] { _Textbox }));
@@ -78,6 +80,7 @@ namespace GD.BBPH.APP.CHIA
                         }
 
                         //Socatrongngay = Convert.ToInt32((Convert.ToInt32(LIB.Procedures.Laygiatrithamso("Socongnhanin"))-4)/2);
+                        SOPHUTMOTCA = LIB.SESSION_START.TS_GIOLAMVIEC / 2 * 60;
                         DT_DMMAY = new DmmayManager().SelectByMadmRDT("CHIA"); 
                         //DT_HANG = LIB.SESSION_START.DM_HANG;
                     }
@@ -219,7 +222,7 @@ namespace GD.BBPH.APP.CHIA
                         //_congsuat = _congsuat * 1000 / _daitui * _sohinh;   //-----Công suất của 1 ca (túi/ca)
                         dr["Congsuat"] = _tocdo;
                         //dr["Congsuattrong"] = _congsuat * Convert.ToDecimal(dr["Catrong"]);
-                        dr["Thoigiantrong"] = Convert.ToDecimal(dr["Catrong"]) * 60 * 12;
+                        dr["Thoigiantrong"] = Convert.ToDecimal(dr["Catrong"]) * SOPHUTMOTCA;
                     }
                     catch { }
                 }
