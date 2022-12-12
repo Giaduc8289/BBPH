@@ -34,9 +34,10 @@ With Encryption As
 	-----Lấy số lượng trong đơn trừ đi kết quả đã chia
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, Makhach, Tenkhach
-		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao 
-		--, Soluong - Sometin*1000/Dai*Sohinh As Soluong
-		, Soluong - Sometdachia As Somet
+		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao, Soluong
+		, IsNull(Sometdachia,0) As Sometdatua
+		, Soluong/Sohinh*Dai/1000 As Sometquydoi
+		, Soluong/Sohinh*Dai/1000 - Sometdachia As Somet
 	Into #Nhucau
 	From #Nhucau0
 	
