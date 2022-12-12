@@ -53,9 +53,7 @@ With Encryption As
 		, Masanpham, Makhach, Solenhsx
 		, (dbo.fTinhdinhmucthoigian(Mamay,Masanpham,'Dauca')
 		 + dbo.fTinhdinhmucthoigian(Mamay,Masanpham,'Daucuon')
-		 + dbo.fTinhdinhmucthoigian(Mamay,Masanpham,'Doilenh')
-		 + dbo.fTinhdinhmucthoigian(Mamay,Masanpham,'Lencuon')
-		 + dbo.fTinhdinhmucthoigian(Mamay,Masanpham,'Xuongcuon'))
+		 + dbo.fTinhdinhmucthoigian(Mamay,Masanpham,'Doilenh'))
 		 As Thoigianchuanbi
 	INTO #CbMay_Lenhsx
 	FROM (Select * From Dmmay Where Madm = 'CA')m 
