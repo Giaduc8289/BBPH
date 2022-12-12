@@ -749,14 +749,14 @@ namespace GD.BBPH.APP.TUA
                             Decimal _Thoigiantrong = SOPHUTMOTCA - _Thoigiandabotri;
                             Decimal _Nhucauconlai = Convert.ToDecimal(dr["Somet"].ToString()) - Convert.ToDecimal(dr["Dasanxuat"].ToString());
                             Decimal _Thoigianconlai = Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString())
-                                                    + _Nhucauconlai / Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
+                                                    + _Nhucauconlai / Convert.ToDecimal(DT_CSMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
                             Decimal _Kldukien = 0, _Tgdukien = 0;
 
                             //if (_Congsuat < _Nhucauconlai) _Kldukien = _Congsuat;
                             //else _Kldukien = _Nhucauconlai;
                             if (_Thoigiantrong < _Thoigianconlai)
                             {
-                                _Kldukien = (_Thoigiantrong - Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString())) * Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
+                                _Kldukien = (_Thoigiantrong - Convert.ToDecimal(DT_CBMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString())) * Convert.ToDecimal(DT_CSMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
                                 _Tgdukien = _Thoigiantrong;
                             }
                             else
