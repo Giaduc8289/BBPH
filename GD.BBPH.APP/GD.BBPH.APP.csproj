@@ -633,11 +633,23 @@
     <Compile Include="HETHONG\FRM_USERS.designer.cs">
       <DependentUpon>FRM_USERS.cs</DependentUpon>
     </Compile>
+    <Compile Include="HOANTHIEN\FRM_KHHOANTHIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HOANTHIEN\FRM_KHHOANTHIEN.designer.cs">
+      <DependentUpon>FRM_KHHOANTHIEN.cs</DependentUpon>
+    </Compile>
     <Compile Include="HOANTHIEN\FRM_KQHOANTHIEN.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HOANTHIEN\FRM_KQHOANTHIEN.designer.cs">
       <DependentUpon>FRM_KQHOANTHIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HOANTHIEN\FRM_VIEWKHHOANTHIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HOANTHIEN\FRM_VIEWKHHOANTHIEN.Designer.cs">
+      <DependentUpon>FRM_VIEWKHHOANTHIEN.cs</DependentUpon>
     </Compile>
     <Compile Include="IN\FRM_KHIN.cs">
       <SubType>Form</SubType>
@@ -1094,8 +1106,14 @@
     <EmbeddedResource Include="HETHONG\FRM_USERS.resx">
       <DependentUpon>FRM_USERS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HOANTHIEN\FRM_KHHOANTHIEN.resx">
+      <DependentUpon>FRM_KHHOANTHIEN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HOANTHIEN\FRM_KQHOANTHIEN.resx">
       <DependentUpon>FRM_KQHOANTHIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HOANTHIEN\FRM_VIEWKHHOANTHIEN.resx">
+      <DependentUpon>FRM_VIEWKHHOANTHIEN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IN\FRM_KHIN.resx">
       <DependentUpon>FRM_KHIN.cs</DependentUpon>
@@ -1323,6 +1341,7 @@
     <Content Include="XMLCONFIG\FRM_DONHANG_H.xml" />
     <Content Include="XMLCONFIG\FRM_HANGTRALAI.xml" />
     <Content Include="XMLCONFIG\FRM_KEOCUAHANG.xml" />
+    <Content Include="XMLCONFIG\FRM_KHHOANTHIEN_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KHTUA_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KHGHEP_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KHCHIA_D_admin.xml" />
@@ -1347,6 +1366,7 @@
     <Content Include="XMLCONFIG\FRM_KQTHOICHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KHIN_NHUCAU.xml" />
     <Content Include="XMLCONFIG\FRM_LENHSANXUAT_DIEUDO _KHCHIA.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHSANXUAT_DIEUDO _KHHOANTHIEN.xml" />
     <Content Include="XMLCONFIG\FRM_LENHSANXUAT_DIEUDO _KHTUA.xml" />
     <Content Include="XMLCONFIG\FRM_LENHSANXUAT_DIEUDO.xml" />
     <Content Include="XMLCONFIG\FRM_LENHSANXUAT.xml" />
