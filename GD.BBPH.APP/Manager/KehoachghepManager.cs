@@ -31,17 +31,17 @@ namespace GD.BBPH.BLL
         public DataTable SelectByCondition(DateTime Tungay, DateTime Denngay)
         {
             DataTable toReturn = new DataTable();
-            EntityCollection _KehoachinCollection = new EntityCollection(new KehoachinEntityFactory());
+            EntityCollection _KehoachghepCollection = new EntityCollection(new KehoachghepEntityFactory());
             RelationPredicateBucket filter = new RelationPredicateBucket();
 
             IPredicateExpression _PredicateExpression = new PredicateExpression();
-            _PredicateExpression.Add(KehoachinFields.Ngaychay >= Tungay);
-            _PredicateExpression.AddWithAnd(KehoachinFields.Ngaychay <= Denngay);
+            _PredicateExpression.Add(KehoachghepFields.Ngaychay >= Tungay);
+            _PredicateExpression.AddWithAnd(KehoachghepFields.Ngaychay <= Denngay);
             filter.PredicateExpression.Add(_PredicateExpression);
 
             using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
             {
-                adapter.FetchTypedList(_KehoachinCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+                adapter.FetchTypedList(_KehoachghepCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
             }
             return toReturn;
         }

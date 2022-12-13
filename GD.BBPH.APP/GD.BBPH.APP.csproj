@@ -1365,6 +1365,7 @@
     <Content Include="XMLCONFIG\FRM_KQTHOI.xml" />
     <Content Include="XMLCONFIG\FRM_KQTHOICHITIET.xml" />
     <Content Include="XMLCONFIG\FRM_KHIN_NHUCAU.xml" />
+    <Content Include="XMLCONFIG\FRM_LENHSANXUAT_DIEUDO _KHCHIA.xml" />
     <Content Include="XMLCONFIG\FRM_LENHSANXUAT_DIEUDO _KHHOANTHIEN.xml" />
     <Content Include="XMLCONFIG\FRM_LENHSANXUAT_DIEUDO _KHTUA.xml" />
     <Content Include="XMLCONFIG\FRM_LENHSANXUAT_DIEUDO.xml" />

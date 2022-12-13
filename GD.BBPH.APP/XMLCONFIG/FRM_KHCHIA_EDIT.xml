@@ -97,7 +97,7 @@
   <viewgrid>
     <value>1</value>
     <name>Tgdukien</name>
-    <headerText>Thời gian</headerText>
+    <headerText>Thời gian dự kiến</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>60</Width>
