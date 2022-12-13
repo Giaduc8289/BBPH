@@ -18,6 +18,6 @@ With Encryption As
 Go
 
 
-Exec Xoakehoachhoanthien '113/2022', '12/01/2022', '12/31/2022'
+Exec Xoakehoachhoanthien '112/2022', '12/01/2022', '12/31/2022'
 
---select * from Kehoachchia
+--select * from Kehoachhoanthien
