@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, December 9, 2022 2:57:56 AM
+// Code is generated on: Tuesday, December 13, 2022 5:49:28 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -601,6 +601,7 @@ namespace GD.BBPH.DAL.HelperClasses
 			base.AddElementFieldInfo("DmquycachEntity", "Ngaysua", typeof(Nullable<System.DateTime>), false, false, false, true,  (int)DmquycachFieldIndex.Ngaysua, 0, 0, 0);
 			base.AddElementFieldInfo("DmquycachEntity", "Nguoisua", typeof(System.String), false, false, false, true,  (int)DmquycachFieldIndex.Nguoisua, 50, 0, 0);
 			base.AddElementFieldInfo("DmquycachEntity", "Hesorieng", typeof(Nullable<System.Decimal>), false, false, false, true,  (int)DmquycachFieldIndex.Hesorieng, 0, 3, 20);
+			base.AddElementFieldInfo("DmquycachEntity", "Nhomqcthanhpham", typeof(System.String), false, false, false, true,  (int)DmquycachFieldIndex.Nhomqcthanhpham, 2147483647, 0, 0);
 		}
 		/// <summary>Inits DmtaikhoanEntity's FieldInfo objects</summary>
 		private void InitDmtaikhoanEntityInfos()

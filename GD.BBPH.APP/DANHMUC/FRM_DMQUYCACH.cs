@@ -30,7 +30,7 @@ namespace GD.BBPH.APP.DANHMUC
         private GD.BBPH.CONTROL.JGridEX GRID_DMQUYCACH = new GD.BBPH.CONTROL.JGridEX();
         private string FUNCTION = "LOAD", MAHIEU_PK = "";
 
-        private DataTable DT_DMCONGDOAN = new DataTable(), DT_DMNHOMQUYCACH = new DataTable();
+        private DataTable DT_DMCONGDOAN = new DataTable(), DT_DMNHOMQUYCACH = new DataTable(), DT_DMQCTHANHPHAM = new DataTable();
 
         private void TEXTBOX_Only_Control(bool _isbool, GD.BBPH.CONTROL.TEXTBOX _Textbox)
         {
@@ -55,6 +55,7 @@ namespace GD.BBPH.APP.DANHMUC
                         DT_DMQUYCACH = new DmquycachManager().SelectAllRDT();
                         DT_DMCONGDOAN =  new DmcongdoanManager().SelectAllRDT();
                         DT_DMNHOMQUYCACH = new DmnhomquycachManager().SelectAllRDT();
+                        DT_DMQCTHANHPHAM = new DmnhomquycachManager().SelectByManhoms(new string[] { "N11", "N12", "N13", "N14", "N15", "N16" });
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -135,6 +136,7 @@ namespace GD.BBPH.APP.DANHMUC
                     txt_HESORIENG.Text = _Rowview.Row[DmquycachFields.Hesorieng.Name].ToString();
                     txt_MACD_Validating(new object(), new CancelEventArgs());
                     txt_MANHOMQC_Validating(new object(), new CancelEventArgs());
+                    txt_NHOMQCTHANHPHAM.Text = _Rowview.Row[DmquycachFields.Nhomqcthanhpham.Name].ToString();
 
                 }
             }
@@ -238,7 +240,6 @@ namespace GD.BBPH.APP.DANHMUC
         }
         #endregion
 
-
         #region Validate
         private void txt_MACD_Validating(object sender, CancelEventArgs e)
         {
@@ -297,6 +298,24 @@ namespace GD.BBPH.APP.DANHMUC
             }
             catch { return null; }
         }
+
+        private void txt_NHOMQCTHANHPHAM_Validating(object sender, CancelEventArgs e)
+        {
+            //if (ADDROW) return;
+            if (string.IsNullOrEmpty(txt_NHOMQCTHANHPHAM.Text) || !btn_LUULAI.Enabled) return;
+            ListviewJanusC _frm =
+                new ListviewJanusC(LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_DMNHOMQUYCACH_CHON.xml", DT_DMQCTHANHPHAM, DmnhomquycachFields.Manhom.Name, txt_NHOMQCTHANHPHAM.Text);
+            _frm.ShowDialog();
+            if (_frm._RowsViewSelect == null) return;
+
+            string strNhoms = "";
+            foreach (DataRowView drv in _frm._RowsViewSelect)
+            {
+                strNhoms += drv.Row[DmnhomquycachFields.Manhom.Name].ToString() + ",";
+            }
+
+            txt_NHOMQCTHANHPHAM.Text = strNhoms;
+        }
         #endregion
 
         #region shortcut
@@ -323,6 +342,7 @@ namespace GD.BBPH.APP.DANHMUC
             }
         }
         #endregion
+
         private string Save_Data(string _str_MAHIEU_PK)
         {
             DmquycachEntity _DmquycachEntity = new DmquycachEntity();
@@ -332,8 +352,9 @@ namespace GD.BBPH.APP.DANHMUC
             _DmquycachEntity.Manhom = txt_MANHOMQC.Text.Trim();
             _DmquycachEntity.Tencongdoan = txt_TENCD.Text.Trim();
             _DmquycachEntity.Tennhom = txt_TENNHOMQC.Text.Trim();
-            try { _DmquycachEntity.Hesorieng = System.Decimal.Parse(txt_HESORIENG.Text.Trim()); }
+            try { _DmquycachEntity.Hesorieng = LIB.ConvertString.NumbertoDB(txt_HESORIENG.Text.Trim()); }
             catch { }
+            _DmquycachEntity.Nhomqcthanhpham = txt_NHOMQCTHANHPHAM.Text.Trim();
 
             if (string.IsNullOrEmpty(_str_MAHIEU_PK))
             {
@@ -355,6 +376,7 @@ namespace GD.BBPH.APP.DANHMUC
                 GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Manhom.Name].Value = _DmquycachEntity.Manhom;
                 GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Tennhom.Name].Value = _DmquycachEntity.Tennhom;
                 GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Hesorieng.Name].Value = _DmquycachEntity.Hesorieng;
+                GRID_DMQUYCACH.CurrentRow.Cells[DmquycachFields.Nhomqcthanhpham.Name].Value = _DmquycachEntity.Nhomqcthanhpham;
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(_DmquycachManager.Convert(_DmquycachEntity), GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_UPDATE, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             }
             return _str_MAHIEU_PK;

@@ -27,5 +27,28 @@ namespace GD.BBPH.BLL
 		{
 			// Nothing for now.
 		}
-	}
+
+        public DataTable SelectByManhoms(string[] arrManhom)
+        {
+            DataTable toReturn = new DataTable();
+            EntityCollection _DmnhomquycachCollection = new EntityCollection(new DmnhomquycachEntityFactory());
+
+            RelationPredicateBucket filter = new RelationPredicateBucket();
+            IPredicateExpression _PredicateExpression = new PredicateExpression();
+            if (arrManhom.Length > 0)
+            {
+                _PredicateExpression.Add(DmnhomquycachFields.Manhom == arrManhom[0]);
+                for (int i = 1; i < arrManhom.Length; i++)
+                    _PredicateExpression.AddWithOr(DmnhomquycachFields.Manhom == arrManhom[i]);
+            }
+            filter.PredicateExpression.Add(_PredicateExpression);
+
+            using (DataAccessAdapterBase adapter = (new DataAccessAdapterFactory()).CreateAdapter())
+            {
+                adapter.FetchTypedList(_DmnhomquycachCollection.EntityFactoryToUse.CreateFields(), toReturn, filter, true);
+            }
+            return toReturn;
+        }
+
+    }
 }

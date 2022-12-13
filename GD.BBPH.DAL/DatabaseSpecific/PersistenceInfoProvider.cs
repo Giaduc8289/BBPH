@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, December 9, 2022 2:57:59 AM
+// Code is generated on: Tuesday, December 13, 2022 5:49:31 PM
 // Code is generated using templates: SD.TemplateBindings.SqlServerSpecific.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -615,7 +615,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 		/// <summary>Inits DmquycachEntity's mappings</summary>
 		private void InitDmquycachEntityMappings()
 		{
-			base.AddElementMapping( "DmquycachEntity", "BBPH", @"dbo", "Dmquycach", 11 );
+			base.AddElementMapping( "DmquycachEntity", "BBPH", @"dbo", "Dmquycach", 12 );
 			base.AddElementFieldMapping( "DmquycachEntity", "Maquycach", "Maquycach", false, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 0 );
 			base.AddElementFieldMapping( "DmquycachEntity", "Tenquycach", "Tenquycach", false, (int)SqlDbType.NVarChar, 250, 0, 0, false, "", null, typeof(System.String), 1 );
 			base.AddElementFieldMapping( "DmquycachEntity", "Macongdoan", "Macongdoan", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 2 );
@@ -627,6 +627,7 @@ namespace GD.BBPH.DAL.DatabaseSpecific
 			base.AddElementFieldMapping( "DmquycachEntity", "Ngaysua", "Ngaysua", true, (int)SqlDbType.DateTime, 0, 0, 0, false, "", null, typeof(System.DateTime), 8 );
 			base.AddElementFieldMapping( "DmquycachEntity", "Nguoisua", "Nguoisua", true, (int)SqlDbType.NVarChar, 50, 0, 0, false, "", null, typeof(System.String), 9 );
 			base.AddElementFieldMapping( "DmquycachEntity", "Hesorieng", "Hesorieng", true, (int)SqlDbType.Decimal, 0, 3, 20, false, "", null, typeof(System.Decimal), 10 );
+			base.AddElementFieldMapping( "DmquycachEntity", "Nhomqcthanhpham", "Nhomqcthanhpham", true, (int)SqlDbType.NVarChar, 2147483647, 0, 0, false, "", null, typeof(System.String), 11 );
 		}
 		/// <summary>Inits DmtaikhoanEntity's mappings</summary>
 		private void InitDmtaikhoanEntityMappings()

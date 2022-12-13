@@ -34,6 +34,10 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_NHOMQCTHANHPHAM = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label4 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_HESORIENG = new GD.BBPH.CONTROL.TEXTBOX();
+            this.label3 = new GD.BBPH.CONTROL.LABEL();
             this.txt_TENNHOMQC = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_TENCD = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MANHOMQC = new GD.BBPH.CONTROL.TEXTBOX();
@@ -50,8 +54,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_MAQC = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_HESORIENG = new GD.BBPH.CONTROL.TEXTBOX();
-            this.label3 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -71,8 +73,8 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(471, 542), true);
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(515, 542), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(545, 542), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), Janus.Windows.UI.Dock.PanelDockStyle.Fill, new System.Drawing.Size(516, 542), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("07a915f4-063b-4962-a538-f0e669e38ca3"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("43b1eac6-97d8-4025-b6ba-6cafc1f384ad"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
@@ -84,7 +86,7 @@
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(471, 542);
+            this.uiPanel0.Size = new System.Drawing.Size(545, 542);
             this.uiPanel0.TabIndex = 4;
             this.uiPanel0.Text = "Danh sách";
             this.uiPanel0.Resize += new System.EventHandler(this.uiPanel0_Resize);
@@ -93,7 +95,7 @@
             // 
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(465, 518);
+            this.uiPanel0Container.Size = new System.Drawing.Size(539, 518);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // uiPanel1
@@ -101,14 +103,16 @@
             this.uiPanel1.CloseButtonVisible = Janus.Windows.UI.InheritableBoolean.False;
             this.uiPanel1.InnerAreaStyle = Janus.Windows.UI.Dock.PanelInnerAreaStyle.ContainerPanel;
             this.uiPanel1.InnerContainer = this.uiPanel1Container;
-            this.uiPanel1.Location = new System.Drawing.Point(474, 3);
+            this.uiPanel1.Location = new System.Drawing.Point(548, 3);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(515, 542);
+            this.uiPanel1.Size = new System.Drawing.Size(516, 542);
             this.uiPanel1.TabIndex = 4;
             this.uiPanel1.Text = "Chi tiết";
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_NHOMQCTHANHPHAM);
+            this.uiPanel1Container.Controls.Add(this.label4);
             this.uiPanel1Container.Controls.Add(this.txt_HESORIENG);
             this.uiPanel1Container.Controls.Add(this.label3);
             this.uiPanel1Container.Controls.Add(this.txt_TENNHOMQC);
@@ -129,8 +133,55 @@
             this.uiPanel1Container.Controls.Add(this.label22);
             this.uiPanel1Container.Location = new System.Drawing.Point(1, 23);
             this.uiPanel1Container.Name = "uiPanel1Container";
-            this.uiPanel1Container.Size = new System.Drawing.Size(513, 518);
+            this.uiPanel1Container.Size = new System.Drawing.Size(514, 518);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_NHOMQCTHANHPHAM
+            // 
+            this.txt_NHOMQCTHANHPHAM.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NHOMQCTHANHPHAM.BannerText = null;
+            this.txt_NHOMQCTHANHPHAM.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_NHOMQCTHANHPHAM.FormNametoShow = "";
+            this.txt_NHOMQCTHANHPHAM.Is_DateTime = false;
+            this.txt_NHOMQCTHANHPHAM.IsShowForm = false;
+            this.txt_NHOMQCTHANHPHAM.Location = new System.Drawing.Point(136, 187);
+            this.txt_NHOMQCTHANHPHAM.Name = "txt_NHOMQCTHANHPHAM";
+            this.txt_NHOMQCTHANHPHAM.Regular_Expression = null;
+            this.txt_NHOMQCTHANHPHAM.Size = new System.Drawing.Size(361, 20);
+            this.txt_NHOMQCTHANHPHAM.TabIndex = 7;
+            this.txt_NHOMQCTHANHPHAM.Validating += new System.ComponentModel.CancelEventHandler(this.txt_NHOMQCTHANHPHAM_Validating);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 13);
+            this.label4.TabIndex = 131;
+            this.label4.Text = "Nhóm QC thành phẩm";
+            // 
+            // txt_HESORIENG
+            // 
+            this.txt_HESORIENG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_HESORIENG.BannerText = null;
+            this.txt_HESORIENG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_HESORIENG.FormNametoShow = "";
+            this.txt_HESORIENG.Is_DateTime = false;
+            this.txt_HESORIENG.IsShowForm = false;
+            this.txt_HESORIENG.Location = new System.Drawing.Point(136, 154);
+            this.txt_HESORIENG.Name = "txt_HESORIENG";
+            this.txt_HESORIENG.Regular_Expression = null;
+            this.txt_HESORIENG.Size = new System.Drawing.Size(114, 20);
+            this.txt_HESORIENG.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 157);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 129;
+            this.label3.Text = "Hệ số riêng";
             // 
             // txt_TENNHOMQC
             // 
@@ -144,7 +195,7 @@
             this.txt_TENNHOMQC.Name = "txt_TENNHOMQC";
             this.txt_TENNHOMQC.Regular_Expression = null;
             this.txt_TENNHOMQC.Size = new System.Drawing.Size(242, 20);
-            this.txt_TENNHOMQC.TabIndex = 127;
+            this.txt_TENNHOMQC.TabIndex = 3;
             // 
             // txt_TENCD
             // 
@@ -158,7 +209,7 @@
             this.txt_TENCD.Name = "txt_TENCD";
             this.txt_TENCD.Regular_Expression = null;
             this.txt_TENCD.Size = new System.Drawing.Size(242, 20);
-            this.txt_TENCD.TabIndex = 125;
+            this.txt_TENCD.TabIndex = 5;
             // 
             // txt_MANHOMQC
             // 
@@ -197,7 +248,7 @@
             this.txt_MACD.Name = "txt_MACD";
             this.txt_MACD.Regular_Expression = null;
             this.txt_MACD.Size = new System.Drawing.Size(114, 20);
-            this.txt_MACD.TabIndex = 3;
+            this.txt_MACD.TabIndex = 4;
             this.txt_MACD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_MACD_KeyDown);
             this.txt_MACD.Validating += new System.ComponentModel.CancelEventHandler(this.txt_MACD_Validating);
             // 
@@ -215,10 +266,10 @@
             this.btn_Thoat.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_Thoat.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_Thoat.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_Thoat.Location = new System.Drawing.Point(422, 190);
+            this.btn_Thoat.Location = new System.Drawing.Point(422, 233);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 9;
+            this.btn_Thoat.TabIndex = 13;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
@@ -228,10 +279,10 @@
             this.btn_KHOIPHUC.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_KHOIPHUC.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_KHOIPHUC.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_KHOIPHUC.Location = new System.Drawing.Point(175, 190);
+            this.btn_KHOIPHUC.Location = new System.Drawing.Point(175, 233);
             this.btn_KHOIPHUC.Name = "btn_KHOIPHUC";
             this.btn_KHOIPHUC.Size = new System.Drawing.Size(75, 23);
-            this.btn_KHOIPHUC.TabIndex = 6;
+            this.btn_KHOIPHUC.TabIndex = 10;
             this.btn_KHOIPHUC.Text = "&Khôi phục";
             this.btn_KHOIPHUC.UseVisualStyleBackColor = true;
             this.btn_KHOIPHUC.Click += new System.EventHandler(this.btn_KHOIPHUC_Click);
@@ -241,10 +292,10 @@
             this.btn_LUULAI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_LUULAI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_LUULAI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_LUULAI.Location = new System.Drawing.Point(15, 190);
+            this.btn_LUULAI.Location = new System.Drawing.Point(15, 233);
             this.btn_LUULAI.Name = "btn_LUULAI";
             this.btn_LUULAI.Size = new System.Drawing.Size(75, 23);
-            this.btn_LUULAI.TabIndex = 4;
+            this.btn_LUULAI.TabIndex = 8;
             this.btn_LUULAI.Text = "&Lưu lại";
             this.btn_LUULAI.UseVisualStyleBackColor = true;
             this.btn_LUULAI.Click += new System.EventHandler(this.btn_LUULAI_Click);
@@ -254,10 +305,10 @@
             this.btn_XOA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_XOA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_XOA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_XOA.Location = new System.Drawing.Point(94, 190);
+            this.btn_XOA.Location = new System.Drawing.Point(94, 233);
             this.btn_XOA.Name = "btn_XOA";
             this.btn_XOA.Size = new System.Drawing.Size(75, 23);
-            this.btn_XOA.TabIndex = 5;
+            this.btn_XOA.TabIndex = 9;
             this.btn_XOA.Text = "&Xóa";
             this.btn_XOA.UseVisualStyleBackColor = true;
             this.btn_XOA.Click += new System.EventHandler(this.btn_XOA_Click);
@@ -267,10 +318,10 @@
             this.btn_THEMMOI.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_THEMMOI.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_THEMMOI.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_THEMMOI.Location = new System.Drawing.Point(340, 190);
+            this.btn_THEMMOI.Location = new System.Drawing.Point(340, 233);
             this.btn_THEMMOI.Name = "btn_THEMMOI";
             this.btn_THEMMOI.Size = new System.Drawing.Size(75, 23);
-            this.btn_THEMMOI.TabIndex = 8;
+            this.btn_THEMMOI.TabIndex = 12;
             this.btn_THEMMOI.Text = "Thêm &mới";
             this.btn_THEMMOI.UseVisualStyleBackColor = true;
             this.btn_THEMMOI.Click += new System.EventHandler(this.btn_THEMMOI_Click);
@@ -280,10 +331,10 @@
             this.btn_SUA.AdjustImageLocation = new System.Drawing.Point(0, 0);
             this.btn_SUA.BtnShape = GD.BBPH.CONTROL.emunType.BtnShape.Rectangle;
             this.btn_SUA.BtnStyle = GD.BBPH.CONTROL.emunType.XPStyle.Default;
-            this.btn_SUA.Location = new System.Drawing.Point(259, 190);
+            this.btn_SUA.Location = new System.Drawing.Point(259, 233);
             this.btn_SUA.Name = "btn_SUA";
             this.btn_SUA.Size = new System.Drawing.Size(75, 23);
-            this.btn_SUA.TabIndex = 7;
+            this.btn_SUA.TabIndex = 11;
             this.btn_SUA.Text = "&Sửa";
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
@@ -334,34 +385,11 @@
             this.label22.TabIndex = 119;
             this.label22.Text = "Mã quy cách";
             // 
-            // txt_HESORIENG
-            // 
-            this.txt_HESORIENG.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_HESORIENG.BannerText = null;
-            this.txt_HESORIENG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_HESORIENG.FormNametoShow = "";
-            this.txt_HESORIENG.Is_DateTime = false;
-            this.txt_HESORIENG.IsShowForm = false;
-            this.txt_HESORIENG.Location = new System.Drawing.Point(136, 149);
-            this.txt_HESORIENG.Name = "txt_HESORIENG";
-            this.txt_HESORIENG.Regular_Expression = null;
-            this.txt_HESORIENG.Size = new System.Drawing.Size(114, 20);
-            this.txt_HESORIENG.TabIndex = 128;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 152);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 129;
-            this.label3.Text = "Hệ số riêng";
-            // 
             // FRM_DMQUYCACH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 548);
+            this.ClientSize = new System.Drawing.Size(1067, 548);
             this.Controls.Add(this.uiPanel1);
             this.Controls.Add(this.uiPanel0);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -404,5 +432,7 @@
         protected internal CONTROL.TEXTBOX txt_TENCD;
         protected internal CONTROL.TEXTBOX txt_HESORIENG;
         protected internal CONTROL.LABEL label3;
+        protected internal CONTROL.TEXTBOX txt_NHOMQCTHANHPHAM;
+        protected internal CONTROL.LABEL label4;
     }
 }

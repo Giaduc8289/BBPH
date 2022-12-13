@@ -1333,6 +1333,7 @@
     <Content Include="XMLCONFIG\FRM_DMNHOMNGUYENLIEU.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="XMLCONFIG\FRM_DMNHOMQUYCACH_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMNHOMQUYCACH.xml" />
     <Content Include="XMLCONFIG\FRM_DMQUYCACH_CHON.xml" />
     <Content Include="XMLCONFIG\FRM_DMQUYCACH.xml" />

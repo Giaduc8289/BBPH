@@ -2,7 +2,7 @@
 // This is generated code. 
 //////////////////////////////////////////////////////////////
 // Code is generated using LLBLGen Pro version: 2.6
-// Code is generated on: Friday, December 9, 2022 2:57:58 AM
+// Code is generated on: Tuesday, December 13, 2022 5:49:30 PM
 // Code is generated using templates: SD.TemplateBindings.SharedTemplates.NET20
 // Templates vendor: Solutions Design.
 // Templates version: 
@@ -464,6 +464,9 @@ namespace GD.BBPH.DAL.EntityClasses
 			fieldHashtable = new Dictionary<string, string>();
 
 			_fieldsCustomProperties.Add("Hesorieng", fieldHashtable);
+			fieldHashtable = new Dictionary<string, string>();
+
+			_fieldsCustomProperties.Add("Nhomqcthanhpham", fieldHashtable);
 		}
 		#endregion
 
@@ -648,6 +651,17 @@ namespace GD.BBPH.DAL.EntityClasses
 		{
 			get { return (Nullable<System.Decimal>)GetValue((int)DmquycachFieldIndex.Hesorieng, false); }
 			set	{ SetValue((int)DmquycachFieldIndex.Hesorieng, value); }
+		}
+
+		/// <summary> The Nhomqcthanhpham property of the Entity Dmquycach<br/><br/>
+		/// </summary>
+		/// <remarks>Mapped on  table field: "Dmquycach"."Nhomqcthanhpham"<br/>
+		/// Table field type characteristics (type, precision, scale, length): NVarChar, 0, 0, 2147483647<br/>
+		/// Table field behavior characteristics (is nullable, is PK, is identity): true, false, false</remarks>
+		public virtual System.String Nhomqcthanhpham
+		{
+			get { return (System.String)GetValue((int)DmquycachFieldIndex.Nhomqcthanhpham, true); }
+			set	{ SetValue((int)DmquycachFieldIndex.Nhomqcthanhpham, value); }
 		}
 
 

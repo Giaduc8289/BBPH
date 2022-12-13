@@ -29,64 +29,29 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
+  
   <viewgrid>
     <value>1</value>
-    <name>Maquycach</name>
-    <headerText>Mã quy cách</headerText>
+    <name>C</name>
+    <headerText>Chọn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>80</Width>
+    <Width>60</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Tenquycach</name>
-    <headerText>Tên quy cách</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>120</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
     <name>Manhom</name>
-    <headerText>Mã nhóm QC</headerText>
+    <headerText>Mã nhóm</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>60</Width>
+    <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
-    <value>2</value>
+    <value>1</value>
     <name>Tennhom</name>
-    <headerText>Nhóm</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
-    <name>Macongdoan</name>
-    <headerText>Mã CĐ</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>60</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>2</value>
-    <name>Tencongdoan</name>
-    <headerText>Tên CĐ</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>Hesorieng</name>
-    <headerText>Hệ số riêng</headerText>
+    <headerText>Tên nhóm</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>120</Width>
@@ -94,11 +59,11 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Nhomqcthanhpham</name>
-    <headerText>Nhóm QC thành phẩm</headerText>
+    <name>Tenrutgon</name>
+    <headerText>Tên rút gọn</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
-    <Width>120</Width>
+    <Width>100</Width>
     <Thutu>100</Thutu>
   </viewgrid>
   <viewgrid>
@@ -138,7 +103,7 @@
     <Thutu>100</Thutu>
   </viewgrid>
   <tablename>
-    <name>Dmquycach</name>
-    <headerText>Danh sách quy cách</headerText>
+    <name>Dmnhomquycach</name>
+    <headerText>Danh sách nhóm quy cách</headerText>
   </tablename>
 </NewDataSet>
