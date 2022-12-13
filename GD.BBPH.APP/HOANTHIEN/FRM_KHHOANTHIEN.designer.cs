@@ -35,8 +35,12 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_SOTUIDUKIEN = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label5 = new GD.BBPH.CONTROL.LABEL();
             this.txt_SOTUICONLAI = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label2 = new GD.BBPH.CONTROL.LABEL();
             this.label6 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_SLDUKIEN = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.txt_SOTUIDAHOANTHIEN = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.label7 = new GD.BBPH.CONTROL.LABEL();
             this.txt_NGAYGIAO = new System.Windows.Forms.MaskedTextBox();
@@ -45,9 +49,7 @@
             this.txt_MADONHANG = new GD.BBPH.CONTROL.TEXTBOX();
             this.label4 = new GD.BBPH.CONTROL.LABEL();
             this.txt_SOLUONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.txt_SLDUKIEN = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.label1 = new GD.BBPH.CONTROL.LABEL();
-            this.label2 = new GD.BBPH.CONTROL.LABEL();
             this.pne_CHITIET = new System.Windows.Forms.Panel();
             this.label8 = new GD.BBPH.CONTROL.LABEL();
             this.btn_Thoat = new GD.BBPH.CONTROL.BUTTON();
@@ -116,8 +118,12 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_SOTUIDUKIEN);
+            this.uiPanel1Container.Controls.Add(this.label5);
             this.uiPanel1Container.Controls.Add(this.txt_SOTUICONLAI);
+            this.uiPanel1Container.Controls.Add(this.label2);
             this.uiPanel1Container.Controls.Add(this.label6);
+            this.uiPanel1Container.Controls.Add(this.txt_SLDUKIEN);
             this.uiPanel1Container.Controls.Add(this.txt_SOTUIDAHOANTHIEN);
             this.uiPanel1Container.Controls.Add(this.label7);
             this.uiPanel1Container.Controls.Add(this.txt_NGAYGIAO);
@@ -126,9 +132,7 @@
             this.uiPanel1Container.Controls.Add(this.txt_MADONHANG);
             this.uiPanel1Container.Controls.Add(this.label4);
             this.uiPanel1Container.Controls.Add(this.txt_SOLUONG);
-            this.uiPanel1Container.Controls.Add(this.txt_SLDUKIEN);
             this.uiPanel1Container.Controls.Add(this.label1);
-            this.uiPanel1Container.Controls.Add(this.label2);
             this.uiPanel1Container.Controls.Add(this.pne_CHITIET);
             this.uiPanel1Container.Controls.Add(this.label8);
             this.uiPanel1Container.Controls.Add(this.btn_Thoat);
@@ -145,6 +149,31 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(752, 535);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // txt_SOTUIDUKIEN
+            // 
+            this.txt_SOTUIDUKIEN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOTUIDUKIEN.BannerText = null;
+            this.txt_SOTUIDUKIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOTUIDUKIEN.Giatrithapphan = 0;
+            this.txt_SOTUIDUKIEN.IsSoNguyen = false;
+            this.txt_SOTUIDUKIEN.Location = new System.Drawing.Point(331, 159);
+            this.txt_SOTUIDUKIEN.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_SOTUIDUKIEN.Name = "txt_SOTUIDUKIEN";
+            this.txt_SOTUIDUKIEN.ReadOnly = true;
+            this.txt_SOTUIDUKIEN.Regular_Expression = "";
+            this.txt_SOTUIDUKIEN.Size = new System.Drawing.Size(138, 20);
+            this.txt_SOTUIDUKIEN.TabIndex = 180;
+            this.txt_SOTUIDUKIEN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(251, 160);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 13);
+            this.label5.TabIndex = 181;
+            this.label5.Text = "Số túi dự kiến";
+            // 
             // txt_SOTUICONLAI
             // 
             this.txt_SOTUICONLAI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,7 +181,7 @@
             this.txt_SOTUICONLAI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SOTUICONLAI.Giatrithapphan = 0;
             this.txt_SOTUICONLAI.IsSoNguyen = false;
-            this.txt_SOTUICONLAI.Location = new System.Drawing.Point(349, 159);
+            this.txt_SOTUICONLAI.Location = new System.Drawing.Point(567, 130);
             this.txt_SOTUICONLAI.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SOTUICONLAI.Name = "txt_SOTUICONLAI";
             this.txt_SOTUICONLAI.ReadOnly = true;
@@ -161,14 +190,39 @@
             this.txt_SOTUICONLAI.TabIndex = 189;
             this.txt_SOTUICONLAI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(-1, 160);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 179;
+            this.label2.Text = "Số lượng dự kiến";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(262, 162);
+            this.label6.Location = new System.Drawing.Point(480, 134);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 13);
             this.label6.TabIndex = 190;
             this.label6.Text = "Số túi còn lại";
+            // 
+            // txt_SLDUKIEN
+            // 
+            this.txt_SLDUKIEN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SLDUKIEN.BannerText = null;
+            this.txt_SLDUKIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SLDUKIEN.Giatrithapphan = 0;
+            this.txt_SLDUKIEN.IsSoNguyen = false;
+            this.txt_SLDUKIEN.Location = new System.Drawing.Point(88, 159);
+            this.txt_SLDUKIEN.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_SLDUKIEN.Name = "txt_SLDUKIEN";
+            this.txt_SLDUKIEN.ReadOnly = true;
+            this.txt_SLDUKIEN.Regular_Expression = "";
+            this.txt_SLDUKIEN.Size = new System.Drawing.Size(138, 20);
+            this.txt_SLDUKIEN.TabIndex = 8;
+            this.txt_SLDUKIEN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_SOTUIDAHOANTHIEN
             // 
@@ -177,7 +231,7 @@
             this.txt_SOTUIDAHOANTHIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SOTUIDAHOANTHIEN.Giatrithapphan = 0;
             this.txt_SOTUIDAHOANTHIEN.IsSoNguyen = false;
-            this.txt_SOTUIDAHOANTHIEN.Location = new System.Drawing.Point(107, 159);
+            this.txt_SOTUIDAHOANTHIEN.Location = new System.Drawing.Point(331, 130);
             this.txt_SOTUIDAHOANTHIEN.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SOTUIDAHOANTHIEN.Name = "txt_SOTUIDAHOANTHIEN";
             this.txt_SOTUIDAHOANTHIEN.ReadOnly = true;
@@ -189,7 +243,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 162);
+            this.label7.Location = new System.Drawing.Point(230, 134);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 13);
             this.label7.TabIndex = 192;
@@ -261,7 +315,7 @@
             this.txt_SOLUONG.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SOLUONG.Giatrithapphan = 0;
             this.txt_SOLUONG.IsSoNguyen = false;
-            this.txt_SOLUONG.Location = new System.Drawing.Point(107, 130);
+            this.txt_SOLUONG.Location = new System.Drawing.Point(88, 130);
             this.txt_SOLUONG.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SOLUONG.Name = "txt_SOLUONG";
             this.txt_SOLUONG.ReadOnly = true;
@@ -269,22 +323,6 @@
             this.txt_SOLUONG.Size = new System.Drawing.Size(138, 20);
             this.txt_SOLUONG.TabIndex = 7;
             this.txt_SOLUONG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_SLDUKIEN
-            // 
-            this.txt_SLDUKIEN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SLDUKIEN.BannerText = null;
-            this.txt_SLDUKIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SLDUKIEN.Giatrithapphan = 0;
-            this.txt_SLDUKIEN.IsSoNguyen = false;
-            this.txt_SLDUKIEN.Location = new System.Drawing.Point(350, 131);
-            this.txt_SLDUKIEN.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_SLDUKIEN.Name = "txt_SLDUKIEN";
-            this.txt_SLDUKIEN.ReadOnly = true;
-            this.txt_SLDUKIEN.Regular_Expression = "";
-            this.txt_SLDUKIEN.Size = new System.Drawing.Size(138, 20);
-            this.txt_SLDUKIEN.TabIndex = 8;
-            this.txt_SLDUKIEN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -294,15 +332,6 @@
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 181;
             this.label1.Text = "Ngày giao";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(262, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
-            this.label2.TabIndex = 179;
-            this.label2.Text = "Số lượng dự kiến";
             // 
             // pne_CHITIET
             // 
@@ -506,5 +535,7 @@
         private CONTROL.LABEL label6;
         private CONTROL.TEXTBOXNUMBER txt_SOTUIDAHOANTHIEN;
         private CONTROL.LABEL label7;
+        private CONTROL.TEXTBOXNUMBER txt_SOTUIDUKIEN;
+        private CONTROL.LABEL label5;
     }
 }
