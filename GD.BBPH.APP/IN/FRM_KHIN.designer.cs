@@ -35,6 +35,10 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_SOMETDAIN = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label7 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_SOMETQUYDOI = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label6 = new GD.BBPH.CONTROL.LABEL();
             this.txt_TENSANPHAM = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_NGAYGIAO = new System.Windows.Forms.MaskedTextBox();
             this.txt_MASANPHAM = new GD.BBPH.CONTROL.TEXTBOX();
@@ -55,10 +59,8 @@
             this.btn_XOA = new GD.BBPH.CONTROL.BUTTON();
             this.btn_LAPKH = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
-            this.txt_SOMETQUYDOI = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.label6 = new GD.BBPH.CONTROL.LABEL();
-            this.txt_SOMETDAIN = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.label7 = new GD.BBPH.CONTROL.LABEL();
+            this.txt_SOMETCONLAI = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label9 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -116,6 +118,8 @@
             // 
             // uiPanel1Container
             // 
+            this.uiPanel1Container.Controls.Add(this.txt_SOMETCONLAI);
+            this.uiPanel1Container.Controls.Add(this.label9);
             this.uiPanel1Container.Controls.Add(this.txt_SOMETDAIN);
             this.uiPanel1Container.Controls.Add(this.label7);
             this.uiPanel1Container.Controls.Add(this.txt_SOMETQUYDOI);
@@ -144,6 +148,56 @@
             this.uiPanel1Container.Name = "uiPanel1Container";
             this.uiPanel1Container.Size = new System.Drawing.Size(1088, 535);
             this.uiPanel1Container.TabIndex = 0;
+            // 
+            // txt_SOMETDAIN
+            // 
+            this.txt_SOMETDAIN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOMETDAIN.BannerText = null;
+            this.txt_SOMETDAIN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOMETDAIN.Giatrithapphan = 0;
+            this.txt_SOMETDAIN.IsSoNguyen = false;
+            this.txt_SOMETDAIN.Location = new System.Drawing.Point(88, 155);
+            this.txt_SOMETDAIN.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_SOMETDAIN.Name = "txt_SOMETDAIN";
+            this.txt_SOMETDAIN.ReadOnly = true;
+            this.txt_SOMETDAIN.Regular_Expression = "";
+            this.txt_SOMETDAIN.Size = new System.Drawing.Size(138, 20);
+            this.txt_SOMETDAIN.TabIndex = 192;
+            this.txt_SOMETDAIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 159);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.TabIndex = 193;
+            this.label7.Text = "Số mét đã in";
+            // 
+            // txt_SOMETQUYDOI
+            // 
+            this.txt_SOMETQUYDOI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOMETQUYDOI.BannerText = null;
+            this.txt_SOMETQUYDOI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOMETQUYDOI.Giatrithapphan = 0;
+            this.txt_SOMETQUYDOI.IsSoNguyen = false;
+            this.txt_SOMETQUYDOI.Location = new System.Drawing.Point(389, 124);
+            this.txt_SOMETQUYDOI.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_SOMETQUYDOI.Name = "txt_SOMETQUYDOI";
+            this.txt_SOMETQUYDOI.ReadOnly = true;
+            this.txt_SOMETQUYDOI.Regular_Expression = "";
+            this.txt_SOMETQUYDOI.Size = new System.Drawing.Size(138, 20);
+            this.txt_SOMETQUYDOI.TabIndex = 190;
+            this.txt_SOMETQUYDOI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(308, 128);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 13);
+            this.label6.TabIndex = 191;
+            this.label6.Text = "Số mét quy đổi";
             // 
             // txt_TENSANPHAM
             // 
@@ -268,7 +322,7 @@
             this.txt_SLDUKIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SLDUKIEN.Giatrithapphan = 0;
             this.txt_SLDUKIEN.IsSoNguyen = false;
-            this.txt_SLDUKIEN.Location = new System.Drawing.Point(389, 155);
+            this.txt_SLDUKIEN.Location = new System.Drawing.Point(645, 155);
             this.txt_SLDUKIEN.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SLDUKIEN.Name = "txt_SLDUKIEN";
             this.txt_SLDUKIEN.ReadOnly = true;
@@ -289,7 +343,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(308, 159);
+            this.label2.Location = new System.Drawing.Point(564, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 179;
@@ -402,55 +456,30 @@
             this.btn_SUA.Visible = false;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
             // 
-            // txt_SOMETQUYDOI
+            // txt_SOMETCONLAI
             // 
-            this.txt_SOMETQUYDOI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOMETQUYDOI.BannerText = null;
-            this.txt_SOMETQUYDOI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOMETQUYDOI.Giatrithapphan = 0;
-            this.txt_SOMETQUYDOI.IsSoNguyen = false;
-            this.txt_SOMETQUYDOI.Location = new System.Drawing.Point(389, 124);
-            this.txt_SOMETQUYDOI.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_SOMETQUYDOI.Name = "txt_SOMETQUYDOI";
-            this.txt_SOMETQUYDOI.ReadOnly = true;
-            this.txt_SOMETQUYDOI.Regular_Expression = "";
-            this.txt_SOMETQUYDOI.Size = new System.Drawing.Size(138, 20);
-            this.txt_SOMETQUYDOI.TabIndex = 190;
-            this.txt_SOMETQUYDOI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_SOMETCONLAI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOMETCONLAI.BannerText = null;
+            this.txt_SOMETCONLAI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOMETCONLAI.Giatrithapphan = 0;
+            this.txt_SOMETCONLAI.IsSoNguyen = false;
+            this.txt_SOMETCONLAI.Location = new System.Drawing.Point(389, 155);
+            this.txt_SOMETCONLAI.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_SOMETCONLAI.Name = "txt_SOMETCONLAI";
+            this.txt_SOMETCONLAI.ReadOnly = true;
+            this.txt_SOMETCONLAI.Regular_Expression = "";
+            this.txt_SOMETCONLAI.Size = new System.Drawing.Size(138, 20);
+            this.txt_SOMETCONLAI.TabIndex = 194;
+            this.txt_SOMETCONLAI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label6
+            // label9
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(308, 128);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 13);
-            this.label6.TabIndex = 191;
-            this.label6.Text = "Số mét quy đổi";
-            // 
-            // txt_SOMETDAIN
-            // 
-            this.txt_SOMETDAIN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOMETDAIN.BannerText = null;
-            this.txt_SOMETDAIN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOMETDAIN.Giatrithapphan = 0;
-            this.txt_SOMETDAIN.IsSoNguyen = false;
-            this.txt_SOMETDAIN.Location = new System.Drawing.Point(88, 155);
-            this.txt_SOMETDAIN.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_SOMETDAIN.Name = "txt_SOMETDAIN";
-            this.txt_SOMETDAIN.ReadOnly = true;
-            this.txt_SOMETDAIN.Regular_Expression = "";
-            this.txt_SOMETDAIN.Size = new System.Drawing.Size(138, 20);
-            this.txt_SOMETDAIN.TabIndex = 192;
-            this.txt_SOMETDAIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 159);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 13);
-            this.label7.TabIndex = 193;
-            this.label7.Text = "Số mét đã in";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(312, 159);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 13);
+            this.label9.TabIndex = 195;
+            this.label9.Text = "Số mét còn lại";
             // 
             // FRM_KHIN
             // 
@@ -506,5 +535,7 @@
         private CONTROL.LABEL label7;
         private CONTROL.TEXTBOXNUMBER txt_SOMETQUYDOI;
         private CONTROL.LABEL label6;
+        private CONTROL.TEXTBOXNUMBER txt_SOMETCONLAI;
+        private CONTROL.LABEL label9;
     }
 }

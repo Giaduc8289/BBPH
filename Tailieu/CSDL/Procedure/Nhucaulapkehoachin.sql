@@ -27,6 +27,7 @@ With Encryption As
 		, Soluong
 		, IsNull((Select Sum(Thuctein) From Ketquain Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdain
 		, sp.Sohinh, sp.Dai
+		, IsNull((SELECT SUM(ISNULL(Sldukien,0)) FROM dbo.Kehoachin Where Solenhsx=lsx.Solenhsx AND Ngaychay >= @Tungay),0) AS Dalapkh
 	Into #Nhucau0
 	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 	Where Ngaydat<=@v_Ngaycuoithang
@@ -38,7 +39,7 @@ With Encryption As
 		, Soluong
 		, Soluong/Sohinh*Dai/1000 As Sometquydoi
 		, Sometdain
-		, Soluong/Sohinh*Dai/1000 - Sometdain As Sometconlai	--Số mét còn lại cần lập kế hoạch
+		, Round((Soluong/Sohinh*Dai/1000 - Sometdain - Dalapkh),0) As Sometconlai	--Số mét còn lại cần lập kế hoạch
 	Into #Nhucau
 	From #Nhucau0
 	
@@ -46,7 +47,8 @@ With Encryption As
 	
 Go
 
-Exec Nhucaulapkehoachin '12/01/2022', '12/30/2022', 'TRUE'
+Exec Nhucaulapkehoachin '12/13/2022', '12/30/2022', 'TRUE'
 
 
 --select * from Ketquain
+--select * from Kehoachin

@@ -72,7 +72,7 @@ namespace GD.BBPH.APP.IN
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KHIN");
-                        DT_LENHSANXUAT = LIB.Procedures.Nhucaulapkehoachin(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, true);
+                        DT_LENHSANXUAT = LIB.Procedures.Nhucaulapkehoachin(Tungay, Denngay, true);
                         for (DateTime date = Tungay; date <= Denngay; date = date.AddDays(1))
                         {
                             if (date.DayOfWeek == DayOfWeek.Sunday)
@@ -165,6 +165,8 @@ namespace GD.BBPH.APP.IN
                     try { txt_SOMETQUYDOI.Text = double.Parse(_Rowview.Row["Sometquydoi"].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN")); }
                     catch { }
                     try { txt_SOMETDAIN.Text = double.Parse(_Rowview.Row["Sometdain"].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN")); }
+                    catch { }
+                    try { txt_SOMETCONLAI.Text = double.Parse(_Rowview.Row["Sometconlai"].ToString()).ToString("#,###", new System.Globalization.CultureInfo("vi-VN")); }
                     catch { }
 
                     txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
