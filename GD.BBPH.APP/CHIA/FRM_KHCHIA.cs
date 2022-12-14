@@ -38,6 +38,9 @@ namespace GD.BBPH.APP.CHIA
 
         private int Tongsoca = 0, Tongsomay = 0;
         private decimal Tongnhucauchia = 0, LuuTongnhucauchia = 0, Tongsongayvuot = 0;
+        //private int Tongsoca = 0, Tongsomay = 0, SOLANTHAYHEMUC = 0, SOLANTHAYLO = 0, SOLANTHAYMAU = 0, SOLANTHAYTRUC = 0;
+        //private decimal Tongnhucauin = 0, LuuTongnhucauin = 0, SONGAYVUOTYEUCAUGIAO = 0;
+
         private DataTable DT_Nhucauchia = new DataTable(), DT_DGKQ = new DataTable(), DT_DGKQ_CX = new DataTable();
         Int32 phuongan = 0, Socatrongngay = 0;
         private DataTable DT_HANG = new DataTable(), DT_KEHOACH_FULL = new DataTable(), DT_KEHOACH_KQ = new DataTable();
@@ -81,8 +84,8 @@ namespace GD.BBPH.APP.CHIA
 
                         //Socatrongngay = Convert.ToInt32((Convert.ToInt32(LIB.Procedures.Laygiatrithamso("Socongnhanin"))-4)/2);
                         SOPHUTMOTCA = LIB.SESSION_START.TS_GIOLAMVIEC / 2 * 60;
-                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("CHIA"); 
-                        //DT_HANG = LIB.SESSION_START.DM_HANG;
+                        DT_DMMAY = new DmmayManager().SelectByMadmRDT("CHIA");
+                        DT_HANG = new DmhangManager().SelectAllRDT();
                     }
                 };
                 worker.RunWorkerCompleted += delegate
@@ -592,6 +595,8 @@ namespace GD.BBPH.APP.CHIA
 
                 //-----Phục vụ đánh giá kết quả----------------------
                 Tongsongayvuot = decimal.MaxValue;
+                //SONGAYVUOTYEUCAUGIAO = decimal.MaxValue;
+
                 LuuTongnhucauchia = Tongnhucauchia;
                 DT_DGKQ = DT_Nhucauchia.Copy();
                 DT_DGKQ.Columns.Add("Ngayht", Type.GetType("System.DateTime"));
@@ -610,8 +615,19 @@ namespace GD.BBPH.APP.CHIA
                         //+ "Lượng phế là: " + Convert.ToInt32(luongphe).ToString() + " (kg)." + '\n'
                         + "Là phương án tối ưu trong " + phuongan.ToString() + " phương án.", "Lưu kế hoạch in", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                            System.Windows.Forms.DialogResult.Yes)
-                    {
-                        try
+                //if (SONGAYVUOTYEUCAUGIAO < Int32.MaxValue)
+                //{
+                //    if (MessageBox.Show((hetcongsuat ? "Toàn bộ công suất các máy đã được bố trí.\n" : "")
+                //        + "Số ngày vượt kế hoạch giao hàng là: " + Convert.ToInt32(SONGAYVUOTYEUCAUGIAO).ToString() + " (ngày)." + '\n'
+                //        + "Số lần thay hệ mực là: " + SOLANTHAYHEMUC.ToString() + " (kg)." + '\n'
+                //        + "Số lần thay lô là: " + SOLANTHAYLO.ToString() + " (kg)." + '\n'
+                //        + "Số lần thay màu là: " + SOLANTHAYMAU.ToString() + " (kg)." + '\n'
+                //        + "Số lần thay trục là: " + SOLANTHAYTRUC.ToString() + " (kg)." + '\n'
+                //        + "Là phương án tối ưu trong " + phuongan.ToString() + " phương án.", "Lưu kế hoạch in", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                //            System.Windows.Forms.DialogResult.Yes)
+
+                            {
+                                try
                         {
                             foreach (DataRow dr in DT_KEHOACH_KQ.Rows)
                             {
@@ -676,9 +692,41 @@ namespace GD.BBPH.APP.CHIA
                     Tongsongayvuot = songayvuot;
                     DT_KEHOACH_KQ = dtKehoachchia.Copy();
                 }
+                //if (songayvuot < SONGAYVUOTYEUCAUGIAO)
+                //{
+                //    SONGAYVUOTYEUCAUGIAO = songayvuot;
+                //    DT_KEHOACH_KQ = dtKehoachin.Copy();
+                //    int _Solanthayhemuc = 0, _Solanthaylo = 0, _Solanthaymau = 0, _Solanthaytruc = 0;
+                //    Danhgiathutuuutien(dtKehoachin.Copy(), ref _Solanthayhemuc, ref _Solanthaylo, ref _Solanthaymau, ref _Solanthaytruc);
+                //    SOLANTHAYHEMUC = _Solanthayhemuc;
+                //    SOLANTHAYLO = _Solanthaylo;
+                //    SOLANTHAYMAU = _Solanthaymau;
+                //    SOLANTHAYTRUC = _Solanthaytruc;
+                //}
+                //else if (songayvuot == SONGAYVUOTYEUCAUGIAO)
+                //{
+                //    int _Solanthayhemuc = 0, _Solanthaylo = 0, _Solanthaymau = 0, _Solanthaytruc = 0;
+                //    Danhgiathutuuutien(dtKehoachin.Copy(), ref _Solanthayhemuc, ref _Solanthaylo, ref _Solanthaymau, ref _Solanthaytruc);
+                //    if (SOLANTHAYHEMUC > _Solanthayhemuc || (SOLANTHAYHEMUC == _Solanthayhemuc && SOLANTHAYLO > _Solanthaylo)
+                //        || (SOLANTHAYHEMUC == _Solanthayhemuc && SOLANTHAYLO == _Solanthaylo && SOLANTHAYMAU > _Solanthaymau)
+                //        || (SOLANTHAYHEMUC == _Solanthayhemuc && SOLANTHAYLO == _Solanthaylo && SOLANTHAYMAU == _Solanthaymau && SOLANTHAYTRUC > _Solanthaytruc))
+                //    {
+                //        DT_KEHOACH_KQ = dtKehoachin.Copy();
+                //        SOLANTHAYHEMUC = _Solanthayhemuc;
+                //        SOLANTHAYLO = _Solanthaylo;
+                //        SOLANTHAYMAU = _Solanthaymau;
+                //        SOLANTHAYTRUC = _Solanthaytruc;
+                //    }
+                //}
+
             }
             catch (Exception ex) { MessageBox.Show("Lỗi đánh giá kết quả!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
+
+        //private void Danhgiathutuuutien(DataTable dtKehoach, ref int Solanthayhemuc, ref int Solanthaylo, ref int Solanthaymau, ref int Solanthaytruc)
+        //{
+
+        //}
         private decimal Tinhluongphe()
         {
             try
@@ -714,6 +762,8 @@ namespace GD.BBPH.APP.CHIA
             try
             {
                 if (Tongsongayvuot == 0 || (DateTime.Now - start).Minutes >= LIB.SESSION_START.TS_PHUTLAPKH) return;
+
+                //if (SONGAYVUOTYEUCAUGIAO == 0 || (DateTime.Now - start).Minutes >= LIB.SESSION_START.TS_PHUTLAPKH) return;
 
                 string sMay = "";
                 bool ktra = true;

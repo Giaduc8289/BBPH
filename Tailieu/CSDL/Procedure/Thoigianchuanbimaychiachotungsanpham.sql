@@ -1,8 +1,8 @@
-﻿------------------------Thời gian chuẩn bị máy tua cho từng sản phẩm------------
-If Object_ID('dbo.Thoigianchuanbimaytuachotungsanpham','P') is not null
-	Drop Procedure dbo.Thoigianchuanbimaytuachotungsanpham;
+﻿------------------------Thời gian chuẩn bị máy chia cho từng sản phẩm------------
+If Object_ID('dbo.Thoigianchuanbimaychiachotungsanpham','P') is not null
+	Drop Procedure dbo.Thoigianchuanbimaychiachotungsanpham;
 Go
-Create Procedure dbo.Thoigianchuanbimaytuachotungsanpham
+Create Procedure dbo.Thoigianchuanbimaychiachotungsanpham
 	@Tungay		DATETIME,
 	@Denngay	DATETIME
 With Encryption As
@@ -22,25 +22,25 @@ With Encryption As
 	SET @v_Ngaydauthang = DATEADD(DAY,-DAY(@Tungay)+1,@Tungay)
 	SET @v_Ngaycuoithang = DATEADD(DAY,-DAY(DATEADD(MONTH,1,@Denngay)),DATEADD(MONTH,1,@Denngay)) 
 			
-	-----Lệnh sản xuất với Ngày đặt <= Ngày cuối tháng, và kết quả tua theo Lệnh		
+	-----Lệnh sản xuất với Ngày đặt <= Ngày cuối tháng, và kết quả chia theo Lệnh		
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, sp.Makhach, sp.Tenkhach
 		, Madonhangchitiet, lsx.Masanpham, sp.Tensp As Tensanpham, Ngaygiao 
 		, Soluong
-		, IsNull((Select Sum(SoMetra) From Ketquatua Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdatua
+		, IsNull((Select Sum(SoMetra) From Ketquachia Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdachia
 		, sp.Sohinh, sp.Dai
 	Into #Nhucau0
 	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 	Where Ngaydat<=@v_Ngaycuoithang
 	 
-	-----Lấy số lượng trong đơn trừ đi kết quả đã tua
+	-----Lấy số lượng trong đơn trừ đi kết quả đã chia
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, Makhach, Tenkhach
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao 
-		, Sometdatua*1000/Dai*Sohinh As Soluongdatua
-		, Soluong - Sometdatua*1000/Dai*Sohinh As Soluongconlai
+		, Sometdachia*1000/Dai*Sohinh As Soluongdachia
+		, Soluong - Sometdachia*1000/Dai*Sohinh As Soluongconlai
 		, Soluong/Sohinh*Dai/1000 As Sometquydoi
-		, Soluong/Sohinh*Dai/1000 - Sometdatua As Sometconlai	--Số mét còn lại cần lập kế hoạch
+		, Soluong/Sohinh*Dai/1000 - Sometdachia As Sometconlai	--Số mét còn lại cần lập kế hoạch
 	Into #Nhucau1
 	From #Nhucau0
 	
@@ -78,5 +78,5 @@ With Encryption As
 	
 Go
 
-Exec Thoigianchuanbimaytuachotungsanpham '12/03/2022', '12/31/2022'
+Exec Thoigianchuanbimaychiachotungsanpham '12/03/2022', '12/31/2022'
 

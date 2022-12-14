@@ -27,17 +27,22 @@ With Encryption As
 		, Soluong
 		, IsNull((Select Sum(Sometra) From Ketquachia Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdachia
 		, sp.Sohinh, sp.Dai
+		, IsNull((SELECT SUM(ISNULL(Sldukien,0)) FROM dbo.Kehoachchia Where Solenhsx=lsx.Solenhsx AND Ngaychay >= @Tungay),0) AS Dalapkh
 	Into #Nhucau0
 	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
+		Left Join Dmquycach qc On sp.Maqcthanhpham=qc.Maquycach
 	Where Ngaydat<=@v_Ngaycuoithang
-	 
+		And (CharIndex('N11,',qc.Nhomqcthanhpham)<0)
+		And (CharIndex('N12,',qc.Nhomqcthanhpham)>0 And sp.Sohinh>=2)
+		And ((CharIndex('N15,',qc.Nhomqcthanhpham)>0) And (CharIndex('N16,',qc.Nhomqcthanhpham)>0))
+
 	-----Lấy số lượng trong đơn trừ đi kết quả đã chia
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
 		, Madon, Ngaydat, Makhach, Tenkhach
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao, Soluong
 		, IsNull(Sometdachia,0) As Sometdatua
 		, Soluong/Sohinh*Dai/1000 As Sometquydoi
-		, Soluong/Sohinh*Dai/1000 - Sometdachia As Somet
+		, Round((Soluong/Sohinh*Dai/1000 - Sometdachia - Dalapkh),0) As Somet
 	Into #Nhucau
 	From #Nhucau0
 	
@@ -46,6 +51,6 @@ With Encryption As
 	
 Go
 
-Exec Nhucaulapkehoachchia '12/01/2022', '12/30/2022', 'TRUE'
+Exec Nhucaulapkehoachchia '12/14/2022', '12/30/2022', 'TRUE'
 
 
