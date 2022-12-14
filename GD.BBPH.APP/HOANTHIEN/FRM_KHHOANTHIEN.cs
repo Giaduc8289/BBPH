@@ -793,7 +793,7 @@ namespace GD.BBPH.APP.HOANTHIEN
                                 _rong1 = Convert.ToDecimal(_DmhangEntity1.Rong);
                                 _maquycach1 = _DmhangEntity1.Maqcthanhpham;
                                 
-                                if((sMay == "C3" && sNhomquycachtp == "N12") || (sNhomquycachtp != "N15" && sNhomquycachtp != "N12" && sNhomquycachtp != "N15,N16"))
+                                if((sMay == "C3" && sNhomquycachtp.Contains("N12")) || (! sNhomquycachtp.Contains("N15") && ! sNhomquycachtp.Contains("N12")))
                                 {
                                     if (_dai == _dai1 && _rong == _rong1)
                                     {
@@ -943,16 +943,16 @@ namespace GD.BBPH.APP.HOANTHIEN
                 }
 
                 //----Máy chạy 3 biên (4,5,6)
-                if ((sMay == "C1" || sMay == "C2" || sMay == "C3") &&  sNhomquycachtp == "N11" ) return false;
+                if ((sMay == "C1" || sMay == "C2" || sMay == "C3") &&  sNhomquycachtp.Contains("N11,") ) return false;
 
-                //--- Máy 1 ,2 ,3 chạy hàn lưng xếp hông
-                if ((sMay == "C4" || sMay == "C5" || sMay == "C6") && sNhomquycachtp == "N15,N16")
+                //--- Máy 1 ,2 ,3 chạy hàn lưng xếp hông, máy 6 có thể chạy hàn lưng xếp hông zipper
+                if ((sMay == "C4" || sMay == "C5" ) && sNhomquycachtp.Contains("N15,N16,"))
                 {
-                    if (sMay == "C6" && sNhomquycachtp != "N13,N15,N16") return false;
+                    if (sMay == "C6" && ! sNhomquycachtp.Contains("N13,N15,N16,")) return false;
                 }
 
                 //--- Máy 3,4 chạy 4 biên
-                if ((sMay == "C1" || sMay == "C2" || sMay == "C5" || sMay == "C6") && sNhomquycachtp == "N12") return false;
+                if ((sMay == "C1" || sMay == "C2" || sMay == "C5" || sMay == "C6") && sNhomquycachtp.Contains("N12,")) return false;
 
 
                 ////----Cùng ca không sản xuất cùng mã hàng
