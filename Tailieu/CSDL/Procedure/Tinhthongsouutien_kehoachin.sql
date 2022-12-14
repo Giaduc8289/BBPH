@@ -52,8 +52,11 @@ Go
 Exec Tinhthongsouutien_kehoachin 'Sp 1450', ''
 Exec Tinhthongsouutien_kehoachin 'Sp 1566', ''
 Exec Tinhthongsouutien_kehoachin 'Sp 1450', 'Sp 1566'
+Exec Tinhthongsouutien_kehoachin 'Sp 1566', 'Sp 1450'
 Exec Tinhthongsouutien_kehoachin 'Sp 1450', 'Sp 1450'
 Exec Tinhthongsouutien_kehoachin 'Sp 1566', 'Sp 1566'
 
-Select * from dmhang where masp in ('Sp 1450', 'Sp 1566')
+--Select * from dmhang where masp in ('Sp 1450', 'Sp 1566')
+--select * from maucuahang where Masp='Sp 1450'
+--select * from maucuahang where Masp='Sp 1566'
 --Select * from truccuahang
