@@ -696,7 +696,36 @@ namespace GD.BBPH.APP.IN
         }
         private void Danhgiathutuuutien(DataTable dtKehoach, ref int Solanthayhemuc, ref int Solanthaylo, ref int Solanthaymau, ref int Solanthaytruc)
         {
-            
+            string sHemuctruoc = "", sLotruoc = "", sMautruoc = "", sTructruoc = "", sMasptruoc = "";
+            foreach(DataRow dr in dtKehoach.Rows)
+            {
+                string sHemuc = "", sLo = "", sMau = "", sTruc = "", sMasp = "";
+                //-----Lấy thông tin hệ mực, lô, màu, trục của sản phẩm đang duyệt (dr)
+                DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(dr[KehoachinFields.Masanpham.Name].ToString());
+                sHemuc = _DmhangEntity.Maloaimuc;
+
+                //-----So sánh hệ mực, lô, màu, trục của sản phẩm đang duyệt (dr) với sản phẩm chạy trước đó
+                if (sHemuc != sHemuctruoc)
+                {
+                    sHemuctruoc = sHemuc;
+                    Solanthayhemuc++;
+                }
+                if (sLo != sLotruoc)
+                {
+                    sLotruoc = sLo;
+                    Solanthaylo++;
+                }
+                if (sMau != sMautruoc)
+                {
+                    sMautruoc = sMau;
+                    Solanthaymau++;
+                }
+                if (sTruc != sTructruoc)
+                {
+                    sTructruoc = sTruc;
+                    Solanthaytruc++;
+                }
+            }
         }
         private decimal Tinhluongphe()
         {
