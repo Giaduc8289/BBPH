@@ -723,8 +723,8 @@ namespace GD.BBPH.APP.GHEP
                     else
                     {
                         //-----Duyệt ca tiếp, nếu không thỏa mãn thì sao?
-                        //if (Ktradkuutien(dtKehoachghep, Ca))
-                        Duyetkehoachghep(Ca + 1, 0);
+                        if (Ktradkuutien(dtKehoachghep, Ca))
+                            Duyetkehoachghep(Ca + 1, 0);
                     }
                 }
                 else if (Ktradkmaychay(Ca, sMay, May))
@@ -784,6 +784,50 @@ namespace GD.BBPH.APP.GHEP
                     Duyetkehoachghep(Ca, May + 1);
             }
             catch (Exception ex) { MessageBox.Show("Lỗi duyệt kế hoạch in!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+        }
+        private bool Ktradkuutien(DataTable dtKehoachghep, int Ca)
+        {
+            try
+            {
+                DataRow[] arrDr = dtKehoachghep.Select(KehoachghepFields.Ca.Name + "<='" + Ca + "' And " + KehoachghepFields.Ca.Name + ">='"
+                    + (Ca - 3 < 0 ? "0" : (Ca - 3).ToString()) + "'");
+                if (arrDr.Length == 0) return true;
+
+                bool uutien = false, khonguutien = false;
+
+                //-----Uu tiên sản phẩm cùng kích thước
+                foreach (DataRow dr in arrDr)
+                {
+                    string sMay = "", _sp = "", _sptruoc = "", _maycatruoc = "";
+                    // Tìm sản phẩm ca trước 
+                    if (Ca > 0)
+                    {
+                        DataRow[] arrDr1 = dtKehoachghep.Select(KehoachghepFields.Ca.Name + "='" + (Ca - 1) + "'");
+                        if (arrDr1.Length > 0)
+                        {
+                            _sptruoc = arrDr1[0][KehoachghepFields.Masanpham.Name].ToString();
+                            _maycatruoc = arrDr1[0][KehoachghepFields.Mamay.Name].ToString();
+                        }
+                        sMay = dr[KehoachghepFields.Mamay.Name].ToString();
+                        _sp = dr[KehoachghepFields.Masanpham.Name].ToString();
+                        decimal _Solopghep1 = Convert.ToDecimal(DT_DMHANGHOA.Select(DmhangFields.Solopghep.Name + "='" + _sp + "'")[0]);
+                        decimal _Solopghep2 = Convert.ToDecimal(DT_DMHANGHOA.Select(DmhangFields.Solopghep.Name + "='" + _sptruoc + "'")[0]);
+                        DataRow _khomang1 = DT_DMHANGHOA.Select(DmhangFields.Khomang.Name + "='" + _sp + "'")[0];
+                        DataRow _khomang2 = DT_DMHANGHOA.Select(DmhangFields.Khomang.Name + "='" + _sptruoc + "'")[0];
+
+                        //----Số lớp ghép lớn hơn 2 thì chỉ dùng máy ghép có dung môi: uutien=true
+                        if ((sMay == _maycatruoc) && (_Solopghep1 >= 3 && sMay == "G2") || (_Solopghep2 >= 3 && sMay == "G2")) uutien = true;
+                        //----Khổ màng nếu khác nhau thì sẽ ưu tiên
+                        if (sMay == _maycatruoc && (_khomang1 != _khomang2)) uutien = true;
+                        //----Khổ màng giống nhau thì không: khonguutien=true
+                        if (sMay != _maycatruoc && (_khomang1 == _khomang2)) khonguutien = true;
+                    }
+                }
+                if (uutien && khonguutien) return false;
+
+            }
+            catch { MessageBox.Show("Lỗi kiểm tra điều kiện ưu tiên!"); return false; }
+            return true;
         }
         private bool Ktradksapxep(DataRow dr, int Ca, int May, ref decimal _Thoigiandabotri)//, ref decimal _Csdabotri)
         {
