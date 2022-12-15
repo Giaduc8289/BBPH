@@ -1343,6 +1343,7 @@
     <Content Include="XMLCONFIG\FRM_HANGTRALAI.xml" />
     <Content Include="XMLCONFIG\FRM_KEOCUAHANG.xml" />
     <Content Include="XMLCONFIG\FRM_KHHOANTHIEN_EDIT.xml" />
+    <Content Include="XMLCONFIG\FRM_KHTHOI_NHUCAU.xml" />
     <Content Include="XMLCONFIG\FRM_KHTUA_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KHGHEP_EDIT.xml" />
     <Content Include="XMLCONFIG\FRM_KHCHIA_D_admin.xml" />
