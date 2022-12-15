@@ -1751,6 +1751,17 @@ namespace GD.BBPH.APP.LIB
         #region BBPH
 
         #region Hàm trả về bảng dữ liệu
+        public static DataTable Tinhthongsouutien_kehoachin(string Masanpham, string Masanphamtruoc)
+        {
+            SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);
+            ListDictionary parameters = new ListDictionary();
+            parameters.Add(new SqlParameter("@Masanpham", SqlDbType.NVarChar, 0), Masanpham);
+            parameters.Add(new SqlParameter("@Masanphamtruoc", SqlDbType.NVarChar, 0), Masanphamtruoc);
+
+            DictionaryEntry[] myArr = new DictionaryEntry[parameters.Count];
+            parameters.CopyTo(myArr, 0);
+            return _SimpleStoredProcedure.ExecuteSPReader(timeout, "Tinhthongsouutien_kehoachin", "Tinhthongsouutien_kehoachin", myArr).Tables[0];
+        }
         public static DataTable Kehoachindalap(DateTime Tungay, DateTime Denngay)
         {
             SimpleStoredProcedure _SimpleStoredProcedure = new SimpleStoredProcedure(ConnectionStringKeyName);

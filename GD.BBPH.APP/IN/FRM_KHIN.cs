@@ -600,10 +600,10 @@ namespace GD.BBPH.APP.IN
                 {
                     if (MessageBox.Show((hetcongsuat ? "Toàn bộ công suất các máy đã được bố trí.\n" : "")
                         + "Số ngày vượt kế hoạch giao hàng là: " + Convert.ToInt32(SONGAYVUOTYEUCAUGIAO).ToString() + " (ngày)." + '\n'
-                        + "Số lần thay hệ mực là: " + SOLANTHAYHEMUC.ToString() + " (kg)." + '\n'
-                        + "Số lần thay lô là: " + SOLANTHAYLO.ToString() + " (kg)." + '\n'
-                        + "Số lần thay màu là: " + SOLANTHAYMAU.ToString() + " (kg)." + '\n'
-                        + "Số lần thay trục là: " + SOLANTHAYTRUC.ToString() + " (kg)." + '\n'
+                        + "Số lần thay hệ mực là: " + SOLANTHAYHEMUC.ToString() + '\n'
+                        + "Số lần thay lô là: " + SOLANTHAYLO.ToString() + '\n'
+                        + "Số lần thay màu là: " + SOLANTHAYMAU.ToString() + '\n'
+                        + "Số lần thay trục là: " + SOLANTHAYTRUC.ToString() + '\n'
                         + "Là phương án tối ưu trong " + phuongan.ToString() + " phương án.", "Lưu kế hoạch in", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                            System.Windows.Forms.DialogResult.Yes)
                     {
@@ -696,7 +696,18 @@ namespace GD.BBPH.APP.IN
         }
         private void Danhgiathutuuutien(DataTable dtKehoach, ref int Solanthayhemuc, ref int Solanthaylo, ref int Solanthaymau, ref int Solanthaytruc)
         {
-            
+            string sMasp = "", sMasptruoc = "";
+            foreach(DataRow dr in dtKehoach.Rows)
+            {
+                sMasp = dr[KehoachinFields.Masanpham.Name].ToString();
+                DataTable dt = LIB.Procedures.Tinhthongsouutien_kehoachin(sMasp, sMasptruoc);
+                DataRow drkqua = dt.Rows[0];
+                Solanthayhemuc += Convert.ToInt32(drkqua["Solanthayhemuc"].ToString());
+                Solanthaylo += Convert.ToInt32(drkqua["Solanthaylo"].ToString());
+                Solanthaymau += Convert.ToInt32(drkqua["Solanthaymau"].ToString());
+                Solanthaytruc += Convert.ToInt32(drkqua["Solanthaytruc"].ToString());
+                sMasptruoc = sMasp;
+            }
         }
         private decimal Tinhluongphe()
         {
@@ -1191,7 +1202,7 @@ namespace GD.BBPH.APP.IN
             try
             {
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
-                if (string.IsNullOrEmpty(MAHIEU_PK)) return;
+                //if (string.IsNullOrEmpty(MAHIEU_PK)) return;
                 if (_KehoachinEntity != null && MessageBox.Show("Xóa kế hoạch in: từ ngày " + Tungay.ToString("dd/MM/yyyy")+" đến ngày " + Denngay.ToString("dd/MM/yyyy"), "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                        System.Windows.Forms.DialogResult.Yes)
                 {

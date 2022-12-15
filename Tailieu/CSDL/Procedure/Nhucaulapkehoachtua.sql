@@ -27,6 +27,7 @@ With Encryption As
 		, Soluong
 		, IsNull((Select Sum(SoMetra) From Ketquatua Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdatua	
 		, sp.Sohinh, sp.Dai	
+		, IsNull((SELECT SUM(ISNULL(Sldukien,0)) FROM dbo.Kehoachin Where Solenhsx=lsx.Solenhsx AND Ngaychay >= @Tungay),0) AS Dalapkh
 	Into #Nhucau0
 	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 	Where Ngaydat<=@v_Ngaycuoithang
@@ -37,7 +38,7 @@ With Encryption As
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao, Soluong
 		, IsNull(Sometdatua,0) As Sometdatua
 		, Soluong/Sohinh*Dai/1000 As Sometquydoi
-		, Soluong/Sohinh*Dai/1000 - Sometdatua As Somet
+		, Round((Soluong/Sohinh*Dai/1000 - Sometdatua -Dalapkh),0) As Somet
 	Into #Nhucau
 	From #Nhucau0
 	
