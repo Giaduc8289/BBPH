@@ -75,7 +75,7 @@ namespace GD.BBPH.APP.CHIA
                     if (FUNCTION == "LOAD")
                     {
                         _MenuroleEntity = MenuroleManager.Return_Current_Menurole("FRM_KHCHIA");
-                        DT_LENHSANXUAT = DT_LENHSANXUAT = LIB.Procedures.Nhucaulapkehoachchia(LIB.SESSION_START.TS_NGAYDAUTHANG, LIB.SESSION_START.TS_NGAYCUOITHANG, true);
+                        DT_LENHSANXUAT = LIB.Procedures.Nhucaulapkehoachchia(Tungay, Denngay, true);
                         for (DateTime date = Tungay; date <= Denngay; date = date.AddDays(1))
                         {
                             if (date.DayOfWeek == DayOfWeek.Sunday)
@@ -1228,7 +1228,7 @@ namespace GD.BBPH.APP.CHIA
             try
             {
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
-                if (string.IsNullOrEmpty(MAHIEU_PK)) return;
+                //if (string.IsNullOrEmpty(MAHIEU_PK)) return;
                 if (_KehoachchiaEntity != null && MessageBox.Show("Xóa kế hoạch in: từ ngày " + Tungay.ToString("dd/MM/yyyy")+" đến ngày " + Denngay.ToString("dd/MM/yyyy"), "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                        System.Windows.Forms.DialogResult.Yes)
                 {

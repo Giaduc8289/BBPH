@@ -27,7 +27,7 @@ With Encryption As
 		, Soluong
 		, IsNull((Select Sum(SoMetra) From Ketquatua Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdatua	
 		, sp.Sohinh, sp.Dai	
-		, IsNull((SELECT SUM(ISNULL(Sldukien,0)) FROM dbo.Kehoachin Where Solenhsx=lsx.Solenhsx AND Ngaychay >= @Tungay),0) AS Dalapkh
+		, IsNull((SELECT SUM(ISNULL(Sldukien,0)) FROM dbo.Kehoachtua Where Solenhsx=lsx.Solenhsx AND Ngaychay >= @Tungay),0) AS Dalapkh
 	Into #Nhucau0
 	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 	Where Ngaydat<=@v_Ngaycuoithang
@@ -47,6 +47,6 @@ With Encryption As
 	
 Go
 
-Exec Nhucaulapkehoachtua '12/01/2022', '12/30/2022', 'TRUE'
+Exec Nhucaulapkehoachtua '12/15/2022', '12/30/2022', 'TRUE'
 
 

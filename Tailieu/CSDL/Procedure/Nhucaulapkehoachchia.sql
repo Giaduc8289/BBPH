@@ -28,13 +28,16 @@ With Encryption As
 		, IsNull((Select Sum(Sometra) From Ketquachia Where Solenhsx=lsx.Solenhsx), CONVERT(Decimal(20,2),0.00)) As Sometdachia
 		, sp.Sohinh, sp.Dai
 		, IsNull((SELECT SUM(ISNULL(Sldukien,0)) FROM dbo.Kehoachchia Where Solenhsx=lsx.Solenhsx AND Ngaychay >= @Tungay),0) AS Dalapkh
+		--, qc.Nhomqcthanhpham, CharIndex('N11,',qc.Nhomqcthanhpham)
 	Into #Nhucau0
 	From Lenhsanxuat lsx Left Join dmhang sp On sp.Masp=lsx.Masanpham
 		Left Join Dmquycach qc On sp.Maqcthanhpham=qc.Maquycach
 	Where Ngaydat<=@v_Ngaycuoithang
-		And (CharIndex('N11,',qc.Nhomqcthanhpham)<0)
-		And (CharIndex('N12,',qc.Nhomqcthanhpham)>0 And sp.Sohinh>=2)
-		And ((CharIndex('N15,',qc.Nhomqcthanhpham)>0) And (CharIndex('N16,',qc.Nhomqcthanhpham)>0))
+		And (CharIndex('N11,',qc.Nhomqcthanhpham)=0)				-----Túi 3 biên không cần chia
+		And ((CharIndex('N12,',qc.Nhomqcthanhpham)>0 And sp.Sohinh>=2)	-----Túi 4 biên (số hình>=2) cần chia
+			Or (CharIndex('N15,',qc.Nhomqcthanhpham)>0)					-----Túi hàn lưng cần chia
+			Or (CharIndex('N16,',qc.Nhomqcthanhpham)>0))				-----Túi xếp hông cần chia
+--select * from #Nhucau0
 
 	-----Lấy số lượng trong đơn trừ đi kết quả đã chia
 	Select Solenhsx, Ngayphatlenh, Ngaybatdausx, Ngayhoanthanhsx
@@ -51,6 +54,6 @@ With Encryption As
 	
 Go
 
-Exec Nhucaulapkehoachchia '12/14/2022', '12/30/2022', 'TRUE'
+Exec Nhucaulapkehoachchia '12/15/2022', '12/30/2022', 'TRUE'
 
 
