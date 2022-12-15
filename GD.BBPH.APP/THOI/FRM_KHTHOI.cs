@@ -538,7 +538,7 @@ namespace GD.BBPH.APP.THOI
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
         
-        #region Lập kế hoạch in cho đơn đặt hàng
+        #region Lập kế hoạch thổi cho đơn đặt hàng
         private bool Lapkehoach()
         {
             try
@@ -567,7 +567,7 @@ namespace GD.BBPH.APP.THOI
                 DT_CSMAYTHOI = LIB.Procedures.Congsuatmayinchotungsanpham(Tungay, Denngay);
                 //-----Tính thời gian chuẩn bị máy cho từng mã sản phẩm thuộc kế hoạch
                 DT_CBMAYTHOI = LIB.Procedures.Thoigianchuanbimayinchotungsanpham(Tungay, Denngay);
-                //-----Kế hoạch in đã lập
+                //-----Kế hoạch thổi đã lập
                 dtKehoachdalap = LIB.Procedures.Kehoachthoidalap(Tungay, Denngay);// new KehoachthoiManager().SelectByCondition(Tungay, Denngay);
                 foreach (DataRow dr in dtKehoachdalap.Rows)
                 {
@@ -600,11 +600,8 @@ namespace GD.BBPH.APP.THOI
                 {
                     if (MessageBox.Show((hetcongsuat ? "Toàn bộ công suất các máy đã được bố trí.\n" : "")
                         + "Số ngày vượt kế hoạch giao hàng là: " + Convert.ToInt32(SONGAYVUOTYEUCAUGIAO).ToString() + " (ngày)." + '\n'
-                        + "Số lần thay hệ mực là: " + SOLANTHAYHEMUC.ToString() + '\n'
-                        + "Số lần thay lô là: " + SOLANTHAYLO.ToString() + '\n'
-                        + "Số lần thay màu là: " + SOLANTHAYMAU.ToString() + '\n'
-                        + "Số lần thay trục là: " + SOLANTHAYTRUC.ToString() + '\n'
-                        + "Là phương án tối ưu trong " + phuongan.ToString() + " phương án.", "Lưu kế hoạch in", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                        //+ "Lượng phế là: " + Convert.ToInt32(luongphe).ToString() + " (kg)." + '\n'
+                        + "Là phương án tối ưu trong " + phuongan.ToString() + " phương án.", "Lưu kế hoạch hoàn thiện", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                            System.Windows.Forms.DialogResult.Yes)
                     {
                         try
@@ -639,7 +636,7 @@ namespace GD.BBPH.APP.THOI
                 #endregion
 
             }
-            catch (Exception ex) { MessageBox.Show("Lỗi lập kế hoạch in!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            catch (Exception ex) { MessageBox.Show("Lỗi lập kế hoạch thổi!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             return false;
         }
         private void Danhgiaketqua()
@@ -669,46 +666,11 @@ namespace GD.BBPH.APP.THOI
                 {
                     SONGAYVUOTYEUCAUGIAO = songayvuot;
                     DT_KEHOACH_KQ = dtKehoachthoi.Copy();
-                    int _Solanthayhemuc = 0, _Solanthaylo = 0, _Solanthaymau = 0, _Solanthaytruc = 0;
-                    Danhgiathutuuutien(dtKehoachthoi.Copy(), ref _Solanthayhemuc, ref _Solanthaylo, ref _Solanthaymau, ref _Solanthaytruc);
-                    SOLANTHAYHEMUC = _Solanthayhemuc;
-                    SOLANTHAYLO = _Solanthaylo;
-                    SOLANTHAYMAU = _Solanthaymau;
-                    SOLANTHAYTRUC = _Solanthaytruc;
-                }
-                else if (songayvuot == SONGAYVUOTYEUCAUGIAO)
-                {
-                    int _Solanthayhemuc = 0, _Solanthaylo = 0, _Solanthaymau = 0, _Solanthaytruc = 0;
-                    Danhgiathutuuutien(dtKehoachthoi.Copy(), ref _Solanthayhemuc, ref _Solanthaylo, ref _Solanthaymau, ref _Solanthaytruc);
-                    if (SOLANTHAYHEMUC > _Solanthayhemuc || (SOLANTHAYHEMUC == _Solanthayhemuc && SOLANTHAYLO > _Solanthaylo)
-                        || (SOLANTHAYHEMUC == _Solanthayhemuc && SOLANTHAYLO == _Solanthaylo && SOLANTHAYMAU > _Solanthaymau)
-                        || (SOLANTHAYHEMUC == _Solanthayhemuc && SOLANTHAYLO == _Solanthaylo && SOLANTHAYMAU == _Solanthaymau && SOLANTHAYTRUC > _Solanthaytruc))
-                    {
-                        DT_KEHOACH_KQ = dtKehoachthoi.Copy();
-                        SOLANTHAYHEMUC = _Solanthayhemuc;
-                        SOLANTHAYLO = _Solanthaylo;
-                        SOLANTHAYMAU = _Solanthaymau;
-                        SOLANTHAYTRUC = _Solanthaytruc;
-                    }
                 }
             }
             catch (Exception ex) { MessageBox.Show("Lỗi đánh giá kết quả!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
-        private void Danhgiathutuuutien(DataTable dtKehoach, ref int Solanthayhemuc, ref int Solanthaylo, ref int Solanthaymau, ref int Solanthaytruc)
-        {
-            string sMasp = "", sMasptruoc = "";
-            foreach(DataRow dr in dtKehoach.Rows)
-            {
-                sMasp = dr[KehoachthoiFields.Mamang.Name].ToString();
-                DataTable dt = LIB.Procedures.Tinhthongsouutien_kehoachin(sMasp, sMasptruoc);
-                DataRow drkqua = dt.Rows[0];
-                Solanthayhemuc += Convert.ToInt32(drkqua["Solanthayhemuc"].ToString());
-                Solanthaylo += Convert.ToInt32(drkqua["Solanthaylo"].ToString());
-                Solanthaymau += Convert.ToInt32(drkqua["Solanthaymau"].ToString());
-                Solanthaytruc += Convert.ToInt32(drkqua["Solanthaytruc"].ToString());
-                sMasptruoc = sMasp;
-            }
-        }
+
         private decimal Tinhluongphe()
         {
             try
@@ -828,7 +790,7 @@ namespace GD.BBPH.APP.THOI
                 else
                     Duyetkehoachin(Ca, May + 1);
             }
-            catch (Exception ex) { MessageBox.Show("Lỗi duyệt kế hoạch in!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            catch (Exception ex) { MessageBox.Show("Lỗi duyệt kế hoạch thổi!" + '\n' + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
         private bool Ktradksapxep(DataRow dr, int Ca, int May, ref decimal _Thoigiandabotri)//, ref decimal _Csdabotri)
         {
@@ -858,8 +820,8 @@ namespace GD.BBPH.APP.THOI
 
                 //----Cùng ca không sản xuất cùng mã hàng
                 //if (dtKehoachthoi.Select(sFillter + " And " + DonhangDFields.Masp.Name + "='" + sMahang + "'").Length > 0) return false;
-                if (dtKehoachthoi.Select(sFilterNgay + " And " + KehoachthoiFields.Mamang.Name + "='" + sMahang + "' And "
-                     + KehoachthoiFields.Mamay.Name + "<>'" + sMay + "'").Length > 0) return false;
+                //if (dtKehoachthoi.Select(sFilterNgay + " And " + KehoachthoiFields.Mamang.Name + "='" + sMahang + "' And "
+                //     + KehoachthoiFields.Mamay.Name + "<>'" + sMay + "'").Length > 0) return false;
 
                 #region Các điều kiện khác
                 ////string sMahang = DT_DONDATHANGCHITIET.Select(DonhangDFields.Id.Name + "='" + dr[DonhangDFields.Id.Name].ToString() + "'")[0][DonhangDFields.Masp.Name].ToString();
@@ -1203,7 +1165,7 @@ namespace GD.BBPH.APP.THOI
             {
                 GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(false, uiPanel1Container, null);
                 //if (string.IsNullOrEmpty(MAHIEU_PK)) return;
-                if (_KehoachthoiEntity != null && MessageBox.Show("Xóa kế hoạch in: từ ngày " + Tungay.ToString("dd/MM/yyyy")+" đến ngày " + Denngay.ToString("dd/MM/yyyy"), "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
+                if (_KehoachthoiEntity != null && MessageBox.Show("Xóa kế hoạch thổi: từ ngày " + Tungay.ToString("dd/MM/yyyy")+" đến ngày " + Denngay.ToString("dd/MM/yyyy"), "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) ==
                        System.Windows.Forms.DialogResult.Yes)
                 {
                     try
@@ -1215,7 +1177,7 @@ namespace GD.BBPH.APP.THOI
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Không thể xóa kế hoạch in từ ngày " + Tungay.ToString("dd/MM/yyyy") + " đến ngày " + Denngay.ToString("dd/MM/yyyy") + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Không thể xóa kế hoạch thổi từ ngày " + Tungay.ToString("dd/MM/yyyy") + " đến ngày " + Denngay.ToString("dd/MM/yyyy") + "!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 GRID_LENHSANXUAT.Enabled = true;
