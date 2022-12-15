@@ -787,6 +787,7 @@ namespace GD.BBPH.APP.GHEP
         }
         private bool Ktradkuutien(DataTable dtKehoachghep, int Ca)
         {
+            string sMay = "", _sp = "", _sptruoc = "", _maycatruoc = "";
             try
             {
                 DataRow[] arrDr = dtKehoachghep.Select(KehoachghepFields.Ca.Name + "<='" + Ca + "' And " + KehoachghepFields.Ca.Name + ">='"
@@ -798,7 +799,6 @@ namespace GD.BBPH.APP.GHEP
                 //-----Uu tiên sản phẩm cùng kích thước
                 foreach (DataRow dr in arrDr)
                 {
-                    string sMay = "", _sp = "", _sptruoc = "", _maycatruoc = "";
                     // Tìm sản phẩm ca trước 
                     if (Ca > 0)
                     {
@@ -810,10 +810,16 @@ namespace GD.BBPH.APP.GHEP
                         }
                         sMay = dr[KehoachghepFields.Mamay.Name].ToString();
                         _sp = dr[KehoachghepFields.Masanpham.Name].ToString();
-                        decimal _Solopghep1 = Convert.ToDecimal(DT_DMHANGHOA.Select(DmhangFields.Solopghep.Name + "='" + _sp + "'")[0]);
-                        decimal _Solopghep2 = Convert.ToDecimal(DT_DMHANGHOA.Select(DmhangFields.Solopghep.Name + "='" + _sptruoc + "'")[0]);
-                        DataRow _khomang1 = DT_DMHANGHOA.Select(DmhangFields.Khomang.Name + "='" + _sp + "'")[0];
-                        DataRow _khomang2 = DT_DMHANGHOA.Select(DmhangFields.Khomang.Name + "='" + _sptruoc + "'")[0];
+
+                        decimal _Solopghep1=0, _Solopghep2=0, _khomang1=0, _khomang2=0;
+                        try { _Solopghep1 = Convert.ToDecimal(DT_HANG.Select(DmhangFields.Masp.Name + "='" + _sp + "'")[0][DmhangFields.Solopghep.Name]); }
+                        catch { }
+                        try { _Solopghep2 = Convert.ToDecimal(DT_HANG.Select(DmhangFields.Masp.Name + "='" + _sptruoc + "'")[0][DmhangFields.Solopghep.Name]); }
+                        catch { }
+                        try { _khomang1 = Convert.ToDecimal(DT_HANG.Select(DmhangFields.Masp.Name + "='" + _sp + "'")[0][DmhangFields.Khomang.Name]); }
+                        catch { }
+                        try { _khomang2 = Convert.ToDecimal(DT_HANG.Select(DmhangFields.Masp.Name + "='" + _sptruoc + "'")[0][DmhangFields.Khomang.Name]); }
+                        catch { }
 
                         //----Số lớp ghép lớn hơn 2 thì chỉ dùng máy ghép có dung môi: uutien=true
                         if ((sMay == _maycatruoc) && (_Solopghep1 >= 3 && sMay == "G2") || (_Solopghep2 >= 3 && sMay == "G2")) uutien = true;
@@ -826,7 +832,7 @@ namespace GD.BBPH.APP.GHEP
                 if (uutien && khonguutien) return false;
 
             }
-            catch { MessageBox.Show("Lỗi kiểm tra điều kiện ưu tiên!"); return false; }
+            catch (Exception ex) { MessageBox.Show("Lỗi kiểm tra điều kiện ưu tiên!" + _sptruoc + " " + _sp + '\n' + ex.ToString()); return false; }
             return true;
         }
         private bool Ktradksapxep(DataRow dr, int Ca, int May, ref decimal _Thoigiandabotri)//, ref decimal _Csdabotri)
