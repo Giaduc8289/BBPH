@@ -216,7 +216,7 @@ namespace GD.BBPH.APP.BANHANG
                 {
                     DataRowView _Rowview = (DataRowView)this.BS_MANGTUONGTU.Current;
                     if (_Rowview != null)
-                        MAMANGTUONGTU = _Rowview.Row[MangtheolenhFields.Mamangquydinh.Name].ToString();
+                        MAMANGTUONGTU = _Rowview.Row[MangcuahangFields.Mamang.Name].ToString();
                 }
             }
             catch
@@ -494,6 +494,10 @@ namespace GD.BBPH.APP.BANHANG
             GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAYDAT, txt_MAKHACH, txt_TENKHACH, txt_TENSP, txt_SOLUONG, txt_NGAYGIAO }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_LENHSANXUAT.Enabled = false;
+            txt_NGAYBATDAU.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
+            txt_NGAYPHATLENH.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
+            txt_NGAYHOANTHANH.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
+
         }
         private void btn_SUA_Click(object sender, EventArgs e)
         {
