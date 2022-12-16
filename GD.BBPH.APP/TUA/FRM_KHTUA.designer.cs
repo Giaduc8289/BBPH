@@ -168,7 +168,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(234, 162);
+            this.label6.Location = new System.Drawing.Point(234, 163);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 13);
             this.label6.TabIndex = 190;
@@ -193,7 +193,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 162);
+            this.label7.Location = new System.Drawing.Point(11, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 192;
@@ -218,7 +218,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(234, 133);
+            this.label5.Location = new System.Drawing.Point(234, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 188;
@@ -253,7 +253,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 41);
+            this.label3.Location = new System.Drawing.Point(11, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 186;
@@ -277,7 +277,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 15);
+            this.label4.Location = new System.Drawing.Point(11, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 185;
@@ -306,7 +306,7 @@
             this.txt_SLDUKIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SLDUKIEN.Giatrithapphan = 0;
             this.txt_SLDUKIEN.IsSoNguyen = false;
-            this.txt_SLDUKIEN.Location = new System.Drawing.Point(561, 131);
+            this.txt_SLDUKIEN.Location = new System.Drawing.Point(561, 159);
             this.txt_SLDUKIEN.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SLDUKIEN.Name = "txt_SLDUKIEN";
             this.txt_SLDUKIEN.ReadOnly = true;
@@ -318,7 +318,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 101);
+            this.label1.Location = new System.Drawing.Point(11, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 181;
@@ -327,7 +327,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(473, 132);
+            this.label2.Location = new System.Drawing.Point(473, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 179;
@@ -338,16 +338,16 @@
             this.pne_CHITIET.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_CHITIET.Location = new System.Drawing.Point(7, 183);
+            this.pne_CHITIET.Location = new System.Drawing.Point(7, 197);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(739, 285);
+            this.pne_CHITIET.Size = new System.Drawing.Size(739, 271);
             this.pne_CHITIET.TabIndex = 10;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 134);
+            this.label8.Location = new System.Drawing.Point(11, 134);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 176;
@@ -475,7 +475,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(13, 71);
+            this.label22.Location = new System.Drawing.Point(11, 71);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(71, 13);
             this.label22.TabIndex = 119;

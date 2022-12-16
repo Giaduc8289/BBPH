@@ -554,13 +554,17 @@ namespace GD.BBPH.APP.TUA
                 dtKehoachtua.Columns.Add(DmhangFields.Makhach.Name, Type.GetType("System.String"));
                 dtKehoachtua.Columns.Add(KehoachtuaFields.Tgdukien.Name, Type.GetType("System.Decimal"));
 
-
                 DT_Nhucautua = LIB.Procedures.Nhucaulapkehoachtua(Tungay, Denngay, ncdaphatlenh);
                 DT_Nhucautua.Columns.Add("Dasanxuat", Type.GetType("System.Decimal"));
                 foreach (DataRow dr in DT_Nhucautua.Rows)
                 {
                     dr["Dasanxuat"] = 0;
                     Tongnhucautua += Convert.ToDecimal(dr["Sometcanlap"].ToString()) > 0 ? Convert.ToDecimal(dr["Sometcanlap"].ToString()) : 0;
+                }
+                if (Tongnhucautua <= 0)
+                {
+                    MessageBox.Show("Kế hoạch đã lập đủ nhu cầu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
                 }
                 Tongsomay = DT_DMMAY_TEMP.Rows.Count;
                 Tongsoca = ((Denngay - Tungay).Days + 1) * 2;

@@ -35,6 +35,8 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.txt_SOMETCONLAI = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
+            this.label9 = new GD.BBPH.CONTROL.LABEL();
             this.txt_SOMETDAIN = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.label7 = new GD.BBPH.CONTROL.LABEL();
             this.txt_SOMETQUYDOI = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
@@ -59,8 +61,6 @@
             this.btn_XOA = new GD.BBPH.CONTROL.BUTTON();
             this.btn_LAPKH = new GD.BBPH.CONTROL.BUTTON();
             this.btn_SUA = new GD.BBPH.CONTROL.BUTTON();
-            this.txt_SOMETCONLAI = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
-            this.label9 = new GD.BBPH.CONTROL.LABEL();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -149,6 +149,31 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(1088, 535);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // txt_SOMETCONLAI
+            // 
+            this.txt_SOMETCONLAI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SOMETCONLAI.BannerText = null;
+            this.txt_SOMETCONLAI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
+            this.txt_SOMETCONLAI.Giatrithapphan = 0;
+            this.txt_SOMETCONLAI.IsSoNguyen = false;
+            this.txt_SOMETCONLAI.Location = new System.Drawing.Point(389, 155);
+            this.txt_SOMETCONLAI.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_SOMETCONLAI.Name = "txt_SOMETCONLAI";
+            this.txt_SOMETCONLAI.ReadOnly = true;
+            this.txt_SOMETCONLAI.Regular_Expression = "";
+            this.txt_SOMETCONLAI.Size = new System.Drawing.Size(138, 20);
+            this.txt_SOMETCONLAI.TabIndex = 194;
+            this.txt_SOMETCONLAI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(312, 159);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 13);
+            this.label9.TabIndex = 195;
+            this.label9.Text = "Số mét còn lại";
+            // 
             // txt_SOMETDAIN
             // 
             this.txt_SOMETDAIN.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,11 +193,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 159);
+            this.label7.Location = new System.Drawing.Point(10, 159);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.Size = new System.Drawing.Size(76, 13);
             this.label7.TabIndex = 193;
-            this.label7.Text = "Số mét đã in";
+            this.label7.Text = "Số mét đã thổi";
             // 
             // txt_SOMETQUYDOI
             // 
@@ -245,7 +270,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 72);
+            this.label5.Location = new System.Drawing.Point(10, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 189;
@@ -269,7 +294,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 44);
+            this.label3.Location = new System.Drawing.Point(10, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 186;
@@ -293,7 +318,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 16);
+            this.label4.Location = new System.Drawing.Point(10, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 185;
@@ -334,7 +359,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 100);
+            this.label1.Location = new System.Drawing.Point(10, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 181;
@@ -354,16 +379,16 @@
             this.pne_CHITIET.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_CHITIET.Location = new System.Drawing.Point(7, 195);
+            this.pne_CHITIET.Location = new System.Drawing.Point(7, 191);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(1075, 273);
+            this.pne_CHITIET.Size = new System.Drawing.Size(1075, 277);
             this.pne_CHITIET.TabIndex = 7;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 128);
+            this.label8.Location = new System.Drawing.Point(10, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 176;
@@ -455,31 +480,6 @@
             this.btn_SUA.UseVisualStyleBackColor = true;
             this.btn_SUA.Visible = false;
             this.btn_SUA.Click += new System.EventHandler(this.btn_SUA_Click);
-            // 
-            // txt_SOMETCONLAI
-            // 
-            this.txt_SOMETCONLAI.BannerFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SOMETCONLAI.BannerText = null;
-            this.txt_SOMETCONLAI.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
-            this.txt_SOMETCONLAI.Giatrithapphan = 0;
-            this.txt_SOMETCONLAI.IsSoNguyen = false;
-            this.txt_SOMETCONLAI.Location = new System.Drawing.Point(389, 155);
-            this.txt_SOMETCONLAI.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_SOMETCONLAI.Name = "txt_SOMETCONLAI";
-            this.txt_SOMETCONLAI.ReadOnly = true;
-            this.txt_SOMETCONLAI.Regular_Expression = "";
-            this.txt_SOMETCONLAI.Size = new System.Drawing.Size(138, 20);
-            this.txt_SOMETCONLAI.TabIndex = 194;
-            this.txt_SOMETCONLAI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(312, 159);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 13);
-            this.label9.TabIndex = 195;
-            this.label9.Text = "Số mét còn lại";
             // 
             // FRM_KHTHOI
             // 

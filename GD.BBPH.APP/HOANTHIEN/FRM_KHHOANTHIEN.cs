@@ -580,6 +580,11 @@ namespace GD.BBPH.APP.HOANTHIEN
                     dr["Dalap"] = 0;
                     Tongnhucauhoanthien += Convert.ToDecimal(dr["Sometcanlap"].ToString()) > 0 ? Convert.ToDecimal(dr["Sometcanlap"].ToString()) : 0;
                 }
+                if (Tongnhucauhoanthien <= 0)
+                {
+                    MessageBox.Show("Kế hoạch đã lập đủ nhu cầu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
                 Tongsomay = DT_DMMAY_TEMP.Rows.Count;
                 Tongsoca = ((Denngay - Tungay).Days + 1) * 2;
                 //-----Tính công suất máy sợi cho từng loại sợi thuộc kế hoạch dệt

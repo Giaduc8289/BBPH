@@ -156,7 +156,7 @@
             this.txt_SOTUIDUKIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SOTUIDUKIEN.Giatrithapphan = 0;
             this.txt_SOTUIDUKIEN.IsSoNguyen = false;
-            this.txt_SOTUIDUKIEN.Location = new System.Drawing.Point(331, 159);
+            this.txt_SOTUIDUKIEN.Location = new System.Drawing.Point(567, 159);
             this.txt_SOTUIDUKIEN.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SOTUIDUKIEN.Name = "txt_SOTUIDUKIEN";
             this.txt_SOTUIDUKIEN.ReadOnly = true;
@@ -168,7 +168,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(251, 160);
+            this.label5.Location = new System.Drawing.Point(492, 163);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 181;
@@ -193,16 +193,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-1, 160);
+            this.label2.Location = new System.Drawing.Point(258, 163);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 179;
-            this.label2.Text = "Số lượng dự kiến";
+            this.label2.Text = "Số mét dự kiến";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(480, 134);
+            this.label6.Location = new System.Drawing.Point(496, 134);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 13);
             this.label6.TabIndex = 190;
@@ -215,7 +215,7 @@
             this.txt_SLDUKIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SLDUKIEN.Giatrithapphan = 0;
             this.txt_SLDUKIEN.IsSoNguyen = false;
-            this.txt_SLDUKIEN.Location = new System.Drawing.Point(88, 159);
+            this.txt_SLDUKIEN.Location = new System.Drawing.Point(339, 159);
             this.txt_SLDUKIEN.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SLDUKIEN.Name = "txt_SLDUKIEN";
             this.txt_SLDUKIEN.ReadOnly = true;
@@ -231,7 +231,7 @@
             this.txt_SOTUIDAHOANTHIEN.FixedSingleLineColor = System.Drawing.Color.CadetBlue;
             this.txt_SOTUIDAHOANTHIEN.Giatrithapphan = 0;
             this.txt_SOTUIDAHOANTHIEN.IsSoNguyen = false;
-            this.txt_SOTUIDAHOANTHIEN.Location = new System.Drawing.Point(331, 130);
+            this.txt_SOTUIDAHOANTHIEN.Location = new System.Drawing.Point(339, 130);
             this.txt_SOTUIDAHOANTHIEN.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SOTUIDAHOANTHIEN.Name = "txt_SOTUIDAHOANTHIEN";
             this.txt_SOTUIDAHOANTHIEN.ReadOnly = true;
@@ -243,7 +243,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(230, 134);
+            this.label7.Location = new System.Drawing.Point(233, 134);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 13);
             this.label7.TabIndex = 192;
@@ -272,7 +272,7 @@
             this.txt_TENKHACH.Name = "txt_TENKHACH";
             this.txt_TENKHACH.ReadOnly = true;
             this.txt_TENKHACH.Regular_Expression = null;
-            this.txt_TENKHACH.Size = new System.Drawing.Size(381, 20);
+            this.txt_TENKHACH.Size = new System.Drawing.Size(389, 20);
             this.txt_TENKHACH.TabIndex = 1;
             // 
             // label3
@@ -338,10 +338,10 @@
             this.pne_CHITIET.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_CHITIET.Location = new System.Drawing.Point(7, 183);
+            this.pne_CHITIET.Location = new System.Drawing.Point(7, 194);
             this.pne_CHITIET.Margin = new System.Windows.Forms.Padding(2);
             this.pne_CHITIET.Name = "pne_CHITIET";
-            this.pne_CHITIET.Size = new System.Drawing.Size(739, 285);
+            this.pne_CHITIET.Size = new System.Drawing.Size(739, 274);
             this.pne_CHITIET.TabIndex = 10;
             // 
             // label8
@@ -452,7 +452,7 @@
             this.txt_TENSP.Name = "txt_TENSP";
             this.txt_TENSP.ReadOnly = true;
             this.txt_TENSP.Regular_Expression = null;
-            this.txt_TENSP.Size = new System.Drawing.Size(238, 20);
+            this.txt_TENSP.Size = new System.Drawing.Size(246, 20);
             this.txt_TENSP.TabIndex = 6;
             this.txt_TENSP.TabStop = false;
             // 

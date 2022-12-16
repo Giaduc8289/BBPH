@@ -149,7 +149,7 @@
   <viewgrid>
     <value>1</value>
     <name>Sometquydoi</name>
-    <headerText>Số m quy dổi</headerText>
+    <headerText>Số m quy đổi</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>
     <Width>60</Width>
@@ -166,7 +166,7 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>Somet</name>
+    <name>Sometconlai</name>
     <headerText>Số m còn lại</headerText>
     <BackColor>0</BackColor>
     <SelectionBackColor>0</SelectionBackColor>

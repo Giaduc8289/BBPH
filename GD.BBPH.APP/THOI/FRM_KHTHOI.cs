@@ -561,6 +561,11 @@ namespace GD.BBPH.APP.THOI
                     dr["Danglap"] = 0;
                     Tongnhucauthoi += Convert.ToDecimal(dr["Sometcanlap"].ToString()) > 0 ? Convert.ToDecimal(dr["Sometcanlap"].ToString()) : 0;
                 }
+                if (Tongnhucauthoi <= 0)
+                {
+                    MessageBox.Show("Kế hoạch đã lập đủ nhu cầu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
                 Tongsomay = DT_DMMAY_TEMP.Rows.Count;
                 Tongsoca = ((Denngay - Tungay).Days + 1) * 2;
                 //-----Tính công suất máy cho từng mã sản phẩm thuộc kế hoạch
