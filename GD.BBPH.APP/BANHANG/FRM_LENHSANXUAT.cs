@@ -98,8 +98,7 @@ namespace GD.BBPH.APP.BANHANG
             DateTime Ngaydauthang = LIB.SESSION_START.TS_NGAYDAUTHANG;
             DateTime Ngaycuoithang = LIB.SESSION_START.TS_NGAYCUOITHANG;
             InitializeComponent();
-            LenhsanxuatManager _LenhsanxuatManager = new LenhsanxuatManager();
-            DataTable dt111 = LIB.Procedures.Loclenhsanxuat(Ngaydauthang, Ngaycuoithang);
+            //DataTable dt111 = LIB.Procedures.Loclenhsanxuat(Ngaydauthang, Ngaycuoithang);
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_LENHSANXUAT.xml");
             //dt111 = LIB.Procedures.Danhsachlocmangtheosp(LIB.SESSION_START.TS_NGAYCUOITHANG, string.Empty);
             //GD.BBPH.LIB.GRID_COMM.Create_GRID_CONIG(dt111, LIB.PATH.BBPH_PATH + @"\XMLCONFIG\FRM_MANGTHEOLENH.xml");
@@ -279,6 +278,25 @@ namespace GD.BBPH.APP.BANHANG
 
             BS_MANGCUAHANG.CurrentChanged += new EventHandler(BS_MANGCUAHANG_CurrentChanged);
             BS_MANGCUAHANG_CurrentChanged((new object()), (new EventArgs()));
+        }
+        private void txt_SOLUONG_Validated(object sender, EventArgs e)
+        {
+            //-----Cập nhật nhu cầu màng (SoMnhucau) trong bảng DT_MANGCUAHANG theo công thức ((Floor(@Soluong/@Sohinh)+1)*@Dai/1000)
+            DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(txt_MASP.Text);
+            Decimal _sohinh = 0, _dai = 0, _soluong=0, _nhucaumet=0, _nhucaukg=0, _hesoquydoi = 0;
+            _sohinh = Convert.ToDecimal(_DmhangEntity.Sohinh);
+            _dai = Convert.ToDecimal(_DmhangEntity.Dai);
+            _soluong = Convert.ToDecimal(txt_SOLUONG.Text);
+            _nhucaumet = (Math.Floor(_soluong / _sohinh) + 1) * _dai / 1000;
+            foreach (DataRow dr in DT_MANGCUAHANG.Rows)
+            {
+                dr["SoMnhucau"] = _nhucaumet;
+                DmmangEntity _DmmangEntity = new DmmangManager().SelectOne(dr[MangcuahangFields.Mamang.Name].ToString());
+                try { _hesoquydoi = Convert.ToDecimal(_DmmangEntity.Hesoquydoi); }
+                catch { }
+                _nhucaukg = _nhucaumet * _hesoquydoi;
+                dr["Sokgnhucau"] = _nhucaukg;
+            }
         }
 
         private string Save_Data(string _str_MAHIEU_PK)
@@ -491,7 +509,7 @@ namespace GD.BBPH.APP.BANHANG
             MAHIEU_PK = "";
             txt_SOLSX.Focus();
             TEXTBOX_Only_Control(false, null);
-            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAYDAT, txt_MAKHACH, txt_TENKHACH, txt_TENSP, txt_SOLUONG, txt_NGAYGIAO }));
+            GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_NGAYDAT, txt_MAKHACH, txt_TENKHACH, txt_TENSP, txt_NGAYGIAO }));
             GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_THEMMOI, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
             GRID_LENHSANXUAT.Enabled = false;
             txt_NGAYBATDAU.Text = LIB.SESSION_START.TS_NGAYLAMVIEC.ToString("dd/MM/yyyy");
@@ -505,7 +523,7 @@ namespace GD.BBPH.APP.BANHANG
             else
             {
                 GD.BBPH.BLL.MenuroleManager.set_Enable_controls(GD.BBPH.LIB.BUTTONACTION.BUTTONACTION_SUA, _MenuroleEntity, ref btn_THEMMOI, ref btn_SUA, ref btn_LUULAI, ref btn_XOA, ref btn_KHOIPHUC);
-                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_SOLSX, txt_NGAYDAT, txt_MAKHACH, txt_TENKHACH, txt_TENSP, txt_SOLUONG, txt_NGAYGIAO }));
+                GD.BBPH.LIB.FORM_PROCESS_UTIL.enableControls(true, uiPanel1Container, new List<Control>(new Control[] { txt_SOLSX, txt_NGAYDAT, txt_MAKHACH, txt_TENKHACH, txt_TENSP, txt_NGAYGIAO }));
                 txt_MADON.Focus();
             }
             GRID_LENHSANXUAT.Enabled = false;
@@ -521,6 +539,7 @@ namespace GD.BBPH.APP.BANHANG
             GRID_MANGTUONGTU.AllowDelete = Janus.Windows.GridEX.InheritableBoolean.True;
             GRID_MANGTUONGTU.Enabled = true;
         }
+
         private void btn_KHOIPHUC_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(MAHIEU_PK) && r_Insert != null)

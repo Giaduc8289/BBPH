@@ -34,6 +34,7 @@
             this.uiPanel0Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
             this.uiPanel1 = new Janus.Windows.UI.Dock.UIPanel();
             this.uiPanel1Container = new Janus.Windows.UI.Dock.UIPanelInnerContainer();
+            this.pne_DSMANGTUONGTU = new System.Windows.Forms.Panel();
             this.pne_DSMANG = new System.Windows.Forms.Panel();
             this.txt_TENKHACH = new GD.BBPH.CONTROL.TEXTBOX();
             this.txt_MADONCHITIET = new GD.BBPH.CONTROL.TEXTBOX();
@@ -44,10 +45,8 @@
             this.txt_NGAYGIAO = new System.Windows.Forms.MaskedTextBox();
             this.txt_SOLUONG = new GD.BBPH.CONTROL.TEXTBOXNUMBER();
             this.label20 = new GD.BBPH.CONTROL.LABEL();
-            this.label9 = new GD.BBPH.CONTROL.LABEL();
             this.label7 = new GD.BBPH.CONTROL.LABEL();
             this.label8 = new GD.BBPH.CONTROL.LABEL();
-            this.label6 = new GD.BBPH.CONTROL.LABEL();
             this.label5 = new GD.BBPH.CONTROL.LABEL();
             this.txt_NGAYDAT = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new GD.BBPH.CONTROL.LABEL();
@@ -67,7 +66,6 @@
             this.label21 = new GD.BBPH.CONTROL.LABEL();
             this.txt_SOLSX = new GD.BBPH.CONTROL.TEXTBOX();
             this.label22 = new GD.BBPH.CONTROL.LABEL();
-            this.pne_DSMANGTUONGTU = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanelManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiPanel0)).BeginInit();
             this.uiPanel0.SuspendLayout();
@@ -136,10 +134,8 @@
             this.uiPanel1Container.Controls.Add(this.txt_NGAYGIAO);
             this.uiPanel1Container.Controls.Add(this.txt_SOLUONG);
             this.uiPanel1Container.Controls.Add(this.label20);
-            this.uiPanel1Container.Controls.Add(this.label9);
             this.uiPanel1Container.Controls.Add(this.label7);
             this.uiPanel1Container.Controls.Add(this.label8);
-            this.uiPanel1Container.Controls.Add(this.label6);
             this.uiPanel1Container.Controls.Add(this.label5);
             this.uiPanel1Container.Controls.Add(this.txt_NGAYDAT);
             this.uiPanel1Container.Controls.Add(this.label4);
@@ -164,6 +160,17 @@
             this.uiPanel1Container.Size = new System.Drawing.Size(685, 615);
             this.uiPanel1Container.TabIndex = 0;
             // 
+            // pne_DSMANGTUONGTU
+            // 
+            this.pne_DSMANGTUONGTU.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pne_DSMANGTUONGTU.Location = new System.Drawing.Point(17, 414);
+            this.pne_DSMANGTUONGTU.Margin = new System.Windows.Forms.Padding(2);
+            this.pne_DSMANGTUONGTU.Name = "pne_DSMANGTUONGTU";
+            this.pne_DSMANGTUONGTU.Size = new System.Drawing.Size(481, 139);
+            this.pne_DSMANGTUONGTU.TabIndex = 199;
+            // 
             // pne_DSMANG
             // 
             this.pne_DSMANG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -183,11 +190,11 @@
             this.txt_TENKHACH.FormNametoShow = "";
             this.txt_TENKHACH.Is_DateTime = false;
             this.txt_TENKHACH.IsShowForm = false;
-            this.txt_TENKHACH.Location = new System.Drawing.Point(290, 111);
+            this.txt_TENKHACH.Location = new System.Drawing.Point(199, 111);
             this.txt_TENKHACH.Name = "txt_TENKHACH";
             this.txt_TENKHACH.ReadOnly = true;
             this.txt_TENKHACH.Regular_Expression = null;
-            this.txt_TENKHACH.Size = new System.Drawing.Size(208, 20);
+            this.txt_TENKHACH.Size = new System.Drawing.Size(201, 20);
             this.txt_TENKHACH.TabIndex = 7;
             this.txt_TENKHACH.TabStop = false;
             // 
@@ -199,7 +206,7 @@
             this.txt_MADONCHITIET.FormNametoShow = "";
             this.txt_MADONCHITIET.Is_DateTime = false;
             this.txt_MADONCHITIET.IsShowForm = false;
-            this.txt_MADONCHITIET.Location = new System.Drawing.Point(504, 183);
+            this.txt_MADONCHITIET.Location = new System.Drawing.Point(504, 180);
             this.txt_MADONCHITIET.Name = "txt_MADONCHITIET";
             this.txt_MADONCHITIET.Regular_Expression = null;
             this.txt_MADONCHITIET.Size = new System.Drawing.Size(98, 20);
@@ -230,11 +237,11 @@
             this.txt_TENSP.FormNametoShow = "";
             this.txt_TENSP.Is_DateTime = false;
             this.txt_TENSP.IsShowForm = false;
-            this.txt_TENSP.Location = new System.Drawing.Point(290, 146);
+            this.txt_TENSP.Location = new System.Drawing.Point(199, 146);
             this.txt_TENSP.Name = "txt_TENSP";
             this.txt_TENSP.ReadOnly = true;
             this.txt_TENSP.Regular_Expression = null;
-            this.txt_TENSP.Size = new System.Drawing.Size(208, 20);
+            this.txt_TENSP.Size = new System.Drawing.Size(201, 20);
             this.txt_TENSP.TabIndex = 9;
             this.txt_TENSP.TabStop = false;
             // 
@@ -257,7 +264,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(225, 183);
+            this.label10.Location = new System.Drawing.Point(233, 184);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 13);
             this.label10.TabIndex = 197;
@@ -286,29 +293,21 @@
             this.txt_SOLUONG.Regular_Expression = "";
             this.txt_SOLUONG.Size = new System.Drawing.Size(98, 20);
             this.txt_SOLUONG.TabIndex = 10;
+            this.txt_SOLUONG.Validated += new System.EventHandler(this.txt_SOLUONG_Validated);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(11, 183);
+            this.label20.Location = new System.Drawing.Point(14, 184);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(49, 13);
             this.label20.TabIndex = 195;
             this.label20.Text = "Số lượng";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(213, 149);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 13);
-            this.label9.TabIndex = 176;
-            this.label9.Text = "Tên sản phẩm";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 149);
+            this.label7.Location = new System.Drawing.Point(14, 150);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
             this.label7.TabIndex = 174;
@@ -317,26 +316,17 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(423, 187);
+            this.label8.Location = new System.Drawing.Point(423, 184);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 13);
             this.label8.TabIndex = 172;
             this.label8.Text = "Mã đơn chi tiết";
             this.label8.Visible = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(225, 114);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
-            this.label6.TabIndex = 170;
-            this.label6.Text = "Tên khách";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(225, 80);
+            this.label5.Location = new System.Drawing.Point(237, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 168;
@@ -357,7 +347,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 47);
+            this.label4.Location = new System.Drawing.Point(14, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 166;
@@ -376,7 +366,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(206, 47);
+            this.label3.Location = new System.Drawing.Point(216, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 164;
@@ -395,7 +385,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(409, 47);
+            this.label2.Location = new System.Drawing.Point(412, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
             this.label2.TabIndex = 162;
@@ -414,7 +404,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 114);
+            this.label1.Location = new System.Drawing.Point(14, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 124;
@@ -545,22 +535,11 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(14, 17);
+            this.label22.Location = new System.Drawing.Point(14, 18);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(43, 13);
             this.label22.TabIndex = 119;
             this.label22.Text = "Số LSX";
-            // 
-            // pne_DSMANGTUONGTU
-            // 
-            this.pne_DSMANGTUONGTU.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pne_DSMANGTUONGTU.Location = new System.Drawing.Point(17, 414);
-            this.pne_DSMANGTUONGTU.Margin = new System.Windows.Forms.Padding(2);
-            this.pne_DSMANGTUONGTU.Name = "pne_DSMANGTUONGTU";
-            this.pne_DSMANGTUONGTU.Size = new System.Drawing.Size(481, 139);
-            this.pne_DSMANGTUONGTU.TabIndex = 199;
             // 
             // FRM_LENHSANXUAT
             // 
@@ -610,8 +589,6 @@
         private System.Windows.Forms.MaskedTextBox txt_NGAYHOANTHANH;
         private CONTROL.LABEL label5;
         private System.Windows.Forms.MaskedTextBox txt_NGAYDAT;
-        protected internal CONTROL.LABEL label6;
-        protected internal CONTROL.LABEL label9;
         protected internal CONTROL.LABEL label7;
         private CONTROL.LABEL label10;
         private System.Windows.Forms.MaskedTextBox txt_NGAYGIAO;

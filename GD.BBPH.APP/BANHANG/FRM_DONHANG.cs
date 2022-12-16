@@ -909,11 +909,11 @@ namespace GD.BBPH.APP.BANHANG
                 if (_frm_SingerRows_Select._RowViewSelect == null) return;
                 _RowViewSelect = _frm_SingerRows_Select._RowViewSelect.Row;
                 txt_MANHANVIEN.Text = _RowViewSelect[DmcongnhanFields.Macn.Name].ToString();
-                txt_HOTEN.Text = _RowViewSelect[DmcongnhanFields.Tencongnhan.Name].ToString();
+                txt_HOTEN.Text = _RowViewSelect[DmcongnhanFields.Hovatencongnhan.Name].ToString();
             }
             else
             {
-                txt_HOTEN.Text = _RowViewSelect[DmcongnhanFields.Tencongnhan.Name].ToString();
+                txt_HOTEN.Text = _RowViewSelect[DmcongnhanFields.Hovatencongnhan.Name].ToString();
             }
         }
         private DataRow checkmaNhanvien(string macantim, DataTable dt)

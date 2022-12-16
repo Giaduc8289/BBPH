@@ -73,7 +73,7 @@ namespace GD.BBPH.LIB
                 ,"Tylesaihong", "Dauraghep", "Sometvao", "Sokgvao", "Phechia", "PhethoiNCC"
                 //KQhoanthienchitiet
                 ,"Chatluongtui", "Daurachiaghep", "Dauvaomet", "Dauvaokg", "Phebien", "Phechinhmay", "Phekhac"
-                ,"Sometquydoi", "Sometdain", "Sometdatua", "Sometconlai"
+                ,"Sometquydoi", "Sometdain", "Sometdatua", "Sometconlai", "SoMnhucau", "Sokgnhucau", "Sokgsudung"
         };
 
         //-----Danh sách các cột ngày
