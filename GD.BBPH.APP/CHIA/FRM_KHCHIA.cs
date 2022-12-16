@@ -169,7 +169,7 @@ namespace GD.BBPH.APP.CHIA
                     catch { }
                     try { txt_SOMDACHIA.Text = double.Parse(_Rowview.Row["Sometdachia"].ToString()).ToString("#,##", new System.Globalization.CultureInfo("vi-VN")); }
                     catch { }
-                    try { txt_SOMCONLAI.Text = double.Parse(_Rowview.Row["Somet"].ToString()).ToString("#,##", new System.Globalization.CultureInfo("vi-VN")); }
+                    try { txt_SOMCONLAI.Text = double.Parse(_Rowview.Row["Sometconlai"].ToString()).ToString("#,##", new System.Globalization.CultureInfo("vi-VN")); }
                     catch { }
 
                     txt_MASANPHAM_Validating(new object(), new CancelEventArgs());
@@ -565,11 +565,11 @@ namespace GD.BBPH.APP.CHIA
 
 
                 DT_Nhucauchia = LIB.Procedures.Nhucaulapkehoachchia(Tungay, Denngay, ncdaphatlenh);
-                DT_Nhucauchia.Columns.Add("Dasanxuat", Type.GetType("System.Decimal"));
+                DT_Nhucauchia.Columns.Add("Danglap", Type.GetType("System.Decimal"));
                 foreach (DataRow dr in DT_Nhucauchia.Rows)
                 {
-                    dr["Dasanxuat"] = 0;
-                    Tongnhucauchia += Convert.ToDecimal(dr["Somet"].ToString()) > 0 ? Convert.ToDecimal(dr["Somet"].ToString()) : 0;
+                    dr["Danglap"] = 0;
+                    Tongnhucauchia += Convert.ToDecimal(dr["Sometcanlap"].ToString()) > 0 ? Convert.ToDecimal(dr["Sometcanlap"].ToString()) : 0;
                 }
                 Tongsomay = DT_DMMAY_TEMP.Rows.Count;
                 Tongsoca = ((Denngay - Tungay).Days + 1) * 2;
@@ -683,7 +683,7 @@ namespace GD.BBPH.APP.CHIA
                     {
                         DateTime _Ngayht = Tungay.AddDays(Convert.ToInt32(arrDr[0][KehoachchiaFields.Ca.Name].ToString())/2);
                         dr["Ngayht"] = _Ngayht;
-                        songayvuot += _Ngayht > _Ngaygiao ? (_Ngayht-_Ngaygiao).Days * Convert.ToDecimal(dr["Somet"].ToString())/LuuTongnhucauchia : 0;
+                        songayvuot += _Ngayht > _Ngaygiao ? (_Ngayht-_Ngaygiao).Days * Convert.ToDecimal(dr["Sometcanlap"].ToString())/LuuTongnhucauchia : 0;
                     }
                 }
 
@@ -805,7 +805,7 @@ namespace GD.BBPH.APP.CHIA
                             //Decimal _Congsuat = Convert.ToDecimal(DT_CSMAYCHIA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString()) - _Csdabotri;// Convert.ToDecimal(DT_DMMAY_TEMP.Rows[May][CongsuatmaysoiFields.Congsuat.Name].ToString());
                             //Decimal _Congsuat = Convert.ToDecimal(DT_CSMAYTUA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString()) - _Thoigiandabotri;
                             Decimal _Thoigiantrong = SOPHUTMOTCA - _Thoigiandabotri;
-                            Decimal _Nhucauconlai = Convert.ToDecimal(dr["Somet"].ToString()) - Convert.ToDecimal(dr["Dasanxuat"].ToString());
+                            Decimal _Nhucauconlai = Convert.ToDecimal(dr["Sometcanlap"].ToString()) - Convert.ToDecimal(dr["Danglap"].ToString());
                             Decimal _Thoigianconlai = Convert.ToDecimal(DT_CBMAYCHIA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString())
                                                     + _Nhucauconlai / Convert.ToDecimal(DT_CSMAYCHIA.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
                             Decimal _Kldukien = 0, _Tgdukien = 0;
@@ -832,7 +832,7 @@ namespace GD.BBPH.APP.CHIA
                             drKehoachchia[KehoachchiaFields.Sldukien.Name] = _Kldukien;//drKehoachchia[KehoachchiaFields.Sldukien.Name] = _Kldukien;
                             drKehoachchia[KehoachchiaFields.Tgdukien.Name] = _Tgdukien;
                             dtKehoachchia.Rows.Add(drKehoachchia);
-                            dr["Dasanxuat"] = Convert.ToDecimal(dr["Dasanxuat"].ToString()) + _Kldukien;
+                            dr["Danglap"] = Convert.ToDecimal(dr["Danglap"].ToString()) + _Kldukien;
                             Tongnhucauchia -= _Kldukien;
 
                             if (_Tgdukien == _Thoigiantrong)
@@ -841,7 +841,7 @@ namespace GD.BBPH.APP.CHIA
                                 Duyetkehoachchia(Ca, May);
 
                             Tongnhucauchia += _Kldukien;
-                            dr["Dasanxuat"] = Convert.ToDecimal(dr["Dasanxuat"].ToString()) - _Kldukien;
+                            dr["Danglap"] = Convert.ToDecimal(dr["Danglap"].ToString()) - _Kldukien;
                             dtKehoachchia.Rows.Remove(dtKehoachchia.Select(KehoachchiaFields.Ca.Name + "='" + Ca + "' And " + KehoachchiaFields.Mamay.Name + "='" + sMay + "' And "
                                 + KehoachchiaFields.Solenhsx.Name + "='" + dr[KehoachchiaFields.Solenhsx.Name].ToString() + "'")[0]);
                         }
@@ -867,7 +867,7 @@ namespace GD.BBPH.APP.CHIA
                 sMay = DT_DMMAY_TEMP.Rows[May][DmmayFields.Mamay.Name].ToString();
                 //sDongmay = DT_DMMAY_TEMP.Rows[May][DmmayFields.Madm.Name].ToString();
 
-                Decimal _Nhucauconlai = Convert.ToDecimal(dr["Somet"].ToString()) - Convert.ToDecimal(dr["Dasanxuat"].ToString());
+                Decimal _Nhucauconlai = Convert.ToDecimal(dr["Sometcanlap"].ToString()) - Convert.ToDecimal(dr["Danglap"].ToString());
                 string sMadonhangct = dr[LenhsanxuatFields.Madonhangchitiet.Name].ToString(); //dr[DonhangDFields.Id.Name].ToString();
                 string sMahang = dr[KehoachchiaFields.Masanpham.Name].ToString(); //dr[DonhangDFields.Masp.Name].ToString();
 

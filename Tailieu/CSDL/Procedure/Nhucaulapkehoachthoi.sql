@@ -41,7 +41,8 @@ With Encryption As
 		, Soluong
 		, Soluong/Sohinh*Dai/1000 As Sometquydoi
 		, Sometdathoi
-		, Round((Soluong/Sohinh*Dai/1000 - Sometdathoi - Dalapkh),0) As Sometconlai	--Số mét còn lại cần lập kế hoạch
+		, Soluong/Sohinh*Dai/1000 - Sometdathoi As Sometconlai	--Số mét còn lại
+		, Round((Soluong/Sohinh*Dai/1000 - Sometdathoi - Dalapkh),0) As Sometcanlap	--Số mét cần lập kế hoạch
 	Into #Nhucau
 	From #Nhucau0
 	

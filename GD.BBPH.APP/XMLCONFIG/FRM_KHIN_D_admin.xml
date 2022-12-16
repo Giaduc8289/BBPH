@@ -85,24 +85,6 @@
   </viewgrid>
   <viewgrid>
     <value>1</value>
-    <name>15/12_K1</name>
-    <headerText>15/12_K1</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
-    <name>15/12_K2</name>
-    <headerText>15/12_K2</headerText>
-    <BackColor>0</BackColor>
-    <SelectionBackColor>0</SelectionBackColor>
-    <Width>100</Width>
-    <Thutu>100</Thutu>
-  </viewgrid>
-  <viewgrid>
-    <value>1</value>
     <name>16/12_K1</name>
     <headerText>16/12_K1</headerText>
     <BackColor>0</BackColor>

@@ -45,12 +45,13 @@ With Encryption As
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao, Soluong
 		, IsNull(Sometdachia,0) As Sometdatua
 		, Soluong/Sohinh*Dai/1000 As Sometquydoi
-		, Round((Soluong/Sohinh*Dai/1000 - Sometdachia - Dalapkh),0) As Somet
+		, Soluong/Sohinh*Dai/1000 - Sometdachia As Sometconlai
+		, Round((Soluong/Sohinh*Dai/1000 - Sometdachia - Dalapkh),0) As Sometcanlap
 	Into #Nhucau
 	From #Nhucau0
 	
 	--SELECT * FROM #Nhucau WHERE Soluong>0 ORDER BY Ngaygiao
-	SELECT * FROM #Nhucau WHERE Somet>0 ORDER BY Ngaygiao
+	SELECT * FROM #Nhucau WHERE Sometconlai>0 ORDER BY Ngaygiao
 	
 Go
 

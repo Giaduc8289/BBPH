@@ -578,7 +578,7 @@ namespace GD.BBPH.APP.HOANTHIEN
                 foreach (DataRow dr in DT_Nhucauhoanthien.Rows)
                 {
                     dr["Dalap"] = 0;
-                    Tongnhucauhoanthien += Convert.ToDecimal(dr["Somet"].ToString()) > 0 ? Convert.ToDecimal(dr["Somet"].ToString()) : 0;
+                    Tongnhucauhoanthien += Convert.ToDecimal(dr["Sometcanlap"].ToString()) > 0 ? Convert.ToDecimal(dr["Sometcanlap"].ToString()) : 0;
                 }
                 Tongsomay = DT_DMMAY_TEMP.Rows.Count;
                 Tongsoca = ((Denngay - Tungay).Days + 1) * 2;
@@ -679,7 +679,7 @@ namespace GD.BBPH.APP.HOANTHIEN
                     {
                         DateTime _Ngayht = Tungay.AddDays(Convert.ToInt32(arrDr[0][KehoachhoanthienFields.Ca.Name].ToString())/2);
                         dr["Ngayht"] = _Ngayht;
-                        songayvuot += _Ngayht > _Ngaygiao ? (_Ngayht-_Ngaygiao).Days * Convert.ToDecimal(dr["Somet"].ToString())/LuuTongnhucauhoanthien : 0;
+                        songayvuot += _Ngayht > _Ngaygiao ? (_Ngayht-_Ngaygiao).Days * Convert.ToDecimal(dr["Sometcanlap"].ToString())/LuuTongnhucauhoanthien : 0;
                     }
                 }
 
@@ -819,7 +819,7 @@ namespace GD.BBPH.APP.HOANTHIEN
                             //-----Thông tin tính Kldukien
                             //Decimal _Congsuat = Convert.ToDecimal(DT_CSMAYHOANTHIEN.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString()) - _Thoigiandabotri;
                             Decimal _Thoigiantrong = 720 - _Thoigiandabotri;
-                            Decimal _Nhucauconlai = Convert.ToDecimal(dr["Somet"].ToString()) - Convert.ToDecimal(dr["Dalap"].ToString());
+                            Decimal _Nhucauconlai = Convert.ToDecimal(dr["Sometcanlap"].ToString()) - Convert.ToDecimal(dr["Dalap"].ToString());
                             Decimal _Thoigianconlai = (Convert.ToDecimal(DT_CBMAYHOANTHIEN.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString()) +_thoigiandoiquycach)
                                                     + _Nhucauconlai / Convert.ToDecimal(DT_CSMAYHOANTHIEN.Rows[May][dr[LenhsanxuatFields.Solenhsx.Name].ToString()].ToString());
                             Decimal _Kldukien = 0, _Tgdukien = 0;
@@ -921,7 +921,7 @@ namespace GD.BBPH.APP.HOANTHIEN
                 sMay = DT_DMMAY_TEMP.Rows[May][DmmayFields.Mamay.Name].ToString();
                 //sDongmay = DT_DMMAY_TEMP.Rows[May][DmmayFields.Madm.Name].ToString();
 
-                Decimal _Nhucauconlai = Convert.ToDecimal(dr["Somet"].ToString()) - Convert.ToDecimal(dr["Dalap"].ToString());
+                Decimal _Nhucauconlai = Convert.ToDecimal(dr["Sometcanlap"].ToString()) - Convert.ToDecimal(dr["Dalap"].ToString());
                 string sMadonhangct = dr[LenhsanxuatFields.Madonhangchitiet.Name].ToString(); //dr[DonhangDFields.Id.Name].ToString();
                 string sMahang = dr[KehoachhoanthienFields.Masanpham.Name].ToString();
                 DmhangEntity _DmhangEntity = new DmhangManager().SelectOne(sMahang);

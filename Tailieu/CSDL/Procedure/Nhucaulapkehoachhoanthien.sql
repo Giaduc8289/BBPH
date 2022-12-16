@@ -39,13 +39,13 @@ With Encryption As
 		, Madonhangchitiet, Masanpham, Tensanpham, Ngaygiao, Soluong
 		, Sotuidahoanthien
 		, Soluong - Sotuidahoanthien As Sotuiconlai
-		, Round(((Soluong - Sotuidahoanthien)/Sohinh*Dai/1000 - Dalapkh),0 )As Somet  -- số mét còn lại cần làm
-
+		, Round(((Soluong - Sotuidahoanthien)/Sohinh*Dai/1000),0) As Sometconlai  -- số mét còn lại
+		, Round(((Soluong - Sotuidahoanthien)/Sohinh*Dai/1000 - Dalapkh),0) As Sometcanlap  -- số mét cần lập kế hoạch
 	Into #Nhucau
 	From #Nhucau0
 	
 	--SELECT * FROM #Nhucau WHERE Soluong>0 ORDER BY Ngaygiao
-	SELECT * FROM #Nhucau WHERE Sotuiconlai>0 ORDER BY Ngaygiao
+	SELECT * FROM #Nhucau WHERE Sometconlai>0 ORDER BY Ngaygiao
 	
 Go
 
